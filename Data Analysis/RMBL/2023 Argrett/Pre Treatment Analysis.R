@@ -9,7 +9,7 @@
 ##################### - 
 
 # Set working directory
-setwd("C:/Users/jargr/Dropbox/PC/Desktop/Data Analysis/RMBL/2023 Argrett")
+setwd("/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL/2023 Argrett")
 
 # Load-in packages
 library(tidyverse) # for data working
@@ -49,7 +49,7 @@ pre.rich <- specnumber(plant.count)
 pre.div <- diversity(plant.count, index = "shannon")
 
 #combined data set with Plot Data File and calculated values
-plot.data <- read.csv("Plot Data.csv") #importing metadata
+plot.data <- read.csv("Emerald Lake Plot Data.csv") #importing metadata
 p.data <- plot.data %>% select_if(~ !any(is.na(.))) #removing NA Columns
 plant.div <- cbind(p.data, pre.rich, pre.div) #final datset
 
@@ -61,11 +61,11 @@ plot(pre.rich.glm)#seems okay
 # We can get a summary of the model:
 summary(pre.rich.glm) 
 
-pre.rich.plot <- ggplot(plant.div, aes(x = Elevation, y = pre.rich)) +
+ggplot(plant.div, aes(x = Elevation, y = pre.rich)) +
   geom_point() +
   labs(x = "Elevation", y = "Species Richness") +
   theme_bw()
-pre.rich.plot
+
 
 
 #---------------------Nearest Neighbor Analysis---------------------#

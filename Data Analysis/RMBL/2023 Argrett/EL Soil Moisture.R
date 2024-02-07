@@ -2,7 +2,7 @@
 # Initiated: 8/23/2023
 # Complted:
 
-setwd("C:/Users/jargr/Dropbox/PC/Desktop/Data Analysis/RMBL/2023 Argrett")
+setwd("/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL/2023 Argrett")
 
 # Load-in packages
 library(tidyverse) # for data working
