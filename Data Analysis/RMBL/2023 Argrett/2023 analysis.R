@@ -8,7 +8,7 @@
 #                   # - NN analysis and richness
 ##################### - 
 
-setwd("C:/Users/jargr/Dropbox/PC/Desktop/Data Analysis/RMBL/2023 Argrett")
+
 
 # Load-in packages
 library(tidyverse) # for data working
@@ -21,9 +21,8 @@ library(emmeans) # for comparison of means
 library(rstatix) # for comparison of means
 library(labdsv)
 
-plants <- read.csv("Plant Data - Emerald Lake.csv")
-
-# visualize
-ggplot(data=plants, aes(x= Code, y= Cover)) +
-  geom_bar(stat="identity")
+el.plants <- read.csv("Plant Data - Emerald Lake.csv")
+sp.plants <- read.csv("Plant Data - Schofield Park.csv")
+el.plot <- read.csv("")
+sp.plot <- read.csv("")
 

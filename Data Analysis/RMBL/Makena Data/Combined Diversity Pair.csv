@@ -1,0 +1,161 @@
+Site,species,Plot,Pair,Castilleja,div,even,rich
+Avery,Castilleja septentrionalis,1,1,Present,1.756226537,0.844566438,8
+Avery,Castilleja septentrionalis,2,1,Absent,1.58405176,0.814041574,7
+Avery,Castilleja septentrionalis,3,2,Present,1.57508862,0.879073697,6
+Avery,Castilleja septentrionalis,4,2,Absent,1.446365509,0.80723196,6
+Avery,Castilleja septentrionalis,5,3,Present,1.611001316,0.899116954,6
+Avery,Castilleja septentrionalis,6,3,Absent,1.471359916,0.756129422,7
+Avery,Castilleja septentrionalis,7,4,Present,1.715051457,0.82476541,8
+Avery,Castilleja septentrionalis,8,4,Absent,1.551213365,0.963823055,5
+Avery,Castilleja septentrionalis,9,5,Present,1.203788426,0.671847112,6
+Avery,Castilleja septentrionalis,10,5,Absent,1.039251703,0.749661639,4
+Avery,Castilleja septentrionalis,11,6,Present,1.602047477,0.823289543,7
+Avery,Castilleja septentrionalis,12,6,Absent,1.529339118,0.853540413,6
+Avery,Castilleja septentrionalis,13,7,Present,1.667631306,0.856992964,7
+Avery,Castilleja septentrionalis,14,7,Absent,1.834849745,0.942926242,7
+Avery,Castilleja septentrionalis,15,8,Present,1.622702204,0.780354808,8
+Avery,Castilleja septentrionalis,16,8,Absent,1.157275083,0.834797512,4
+Avery,Castilleja septentrionalis,17,9,Present,1.455242107,0.747846506,7
+Avery,Castilleja septentrionalis,18,9,Absent,1.563590125,0.803526373,7
+Avery,Castilleja septentrionalis,19,10,Present,2.154594255,0.935728396,10
+Avery,Castilleja septentrionalis,20,10,Absent,1.637422048,0.913862645,6
+Avery,Castilleja septentrionalis,21,11,Present,1.816577544,0.933536189,7
+Avery,Castilleja septentrionalis,22,11,Absent,1.535397885,0.789038428,7
+Avery,Castilleja septentrionalis,23,12,Present,1.651239378,0.794078287,8
+Avery,Castilleja septentrionalis,24,12,Absent,1.415189827,0.727263706,7
+Avery,Castilleja septentrionalis,25,13,Present,1.614324674,0.776326067,8
+Avery,Castilleja septentrionalis,26,13,Absent,1.699007453,0.817049876,8
+Avery,Castilleja septentrionalis,27,14,Present,1.914533639,0.87134181,9
+Avery,Castilleja septentrionalis,28,14,Absent,1.273099619,0.791021268,5
+Avery,Castilleja septentrionalis,29,15,Present,1.982624419,0.902331259,9
+Avery,Castilleja septentrionalis,30,15,Absent,1.395737415,0.778975883,6
+Avery,Castilleja septentrionalis,31,16,Present,1.708101699,0.821423284,8
+Avery,Castilleja septentrionalis,32,16,Absent,1.282606493,0.796928222,5
+Avery,Castilleja septentrionalis,33,17,Present,1.7034382,0.775268135,9
+Avery,Castilleja septentrionalis,34,17,Absent,1.621830663,0.833456089,7
+Avery,Castilleja septentrionalis,35,18,Present,1.286349644,0.717925406,6
+Avery,Castilleja septentrionalis,36,18,Absent,1.654698485,0.850346808,7
+Avery,Castilleja septentrionalis,37,19,Present,1.657164583,0.851614132,7
+Avery,Castilleja septentrionalis,38,19,Absent,1.549812773,0.864966978,6
+Avery,Castilleja septentrionalis,39,20,Present,1.102458369,0.615293731,6
+Avery,Castilleja septentrionalis,40,20,Absent,1.134747411,0.705058208,5
+Emerald Lake,Castilleja septentrionalis,41,21,Present,1.903939756,0.915601481,8
+Emerald Lake,Castilleja septentrionalis,42,21,Absent,1.990498174,0.864462373,10
+Emerald Lake,Castilleja septentrionalis,43,22,Present,2.409510474,0.939398849,13
+Emerald Lake,Castilleja septentrionalis,44,22,Absent,2.07465494,0.834902567,12
+Emerald Lake,Castilleja septentrionalis,45,23,Present,2.128950786,0.856752823,12
+Emerald Lake,Castilleja septentrionalis,46,23,Absent,2.219503666,0.893193982,12
+Emerald Lake,Castilleja septentrionalis,47,24,Present,2.170564848,0.873499553,12
+Emerald Lake,Castilleja septentrionalis,48,24,Absent,2.019782589,0.877180433,10
+Emerald Lake,Castilleja septentrionalis,49,25,Present,2.050373892,0.855072328,11
+Emerald Lake,Castilleja septentrionalis,50,25,Absent,2.12359812,0.885609202,11
+Emerald Lake,Castilleja septentrionalis,51,26,Present,2.438209836,0.923894229,14
+Emerald Lake,Castilleja septentrionalis,52,26,Absent,2.062479801,0.860120884,11
+Emerald Lake,Castilleja septentrionalis,53,27,Present,2.173702029,0.906504155,11
+Emerald Lake,Castilleja septentrionalis,54,27,Absent,1.673670623,0.761720327,9
+Emerald Lake,Castilleja septentrionalis,55,28,Present,2.20638362,0.860205529,13
+Emerald Lake,Castilleja septentrionalis,56,28,Absent,1.885535941,0.858144388,9
+Emerald Lake,Castilleja septentrionalis,57,29,Present,2.201539868,0.918113436,11
+Emerald Lake,Castilleja septentrionalis,58,29,Absent,1.847060796,0.888248483,8
+Emerald Lake,Castilleja septentrionalis,59,30,Present,1.971146328,0.897107354,9
+Emerald Lake,Castilleja septentrionalis,60,30,Absent,1.4885975,0.764987788,7
+Emerald Lake,Castilleja septentrionalis,61,31,Present,1.852168688,0.890704861,8
+Emerald Lake,Castilleja septentrionalis,62,31,Absent,1.556270177,0.799764664,7
+Emerald Lake,Castilleja septentrionalis,63,32,Present,1.761356649,0.905158262,7
+Emerald Lake,Castilleja septentrionalis,64,32,Absent,1.412753733,0.877793248,5
+Emerald Lake,Castilleja septentrionalis,65,33,Present,2.172029859,0.905806806,11
+Emerald Lake,Castilleja septentrionalis,66,33,Absent,2.08940859,0.907418621,10
+Emerald Lake,Castilleja septentrionalis,67,34,Present,2.457221835,0.907376766,15
+Emerald Lake,Castilleja septentrionalis,68,34,Absent,2.106478091,0.914831811,10
+Emerald Lake,Castilleja septentrionalis,69,35,Present,2.395314372,0.933864197,13
+Emerald Lake,Castilleja septentrionalis,70,35,Absent,1.864723479,0.848672229,9
+Emerald Lake,Castilleja septentrionalis,71,36,Present,2.051958198,0.933886421,9
+Emerald Lake,Castilleja septentrionalis,72,36,Absent,1.837541453,0.836301156,9
+Emerald Lake,Castilleja septentrionalis,73,37,Present,1.950017743,0.846881946,10
+Emerald Lake,Castilleja septentrionalis,74,37,Absent,1.60978664,0.827266686,7
+Emerald Lake,Castilleja septentrionalis,75,38,Present,1.859087401,0.846107139,9
+Emerald Lake,Castilleja septentrionalis,76,38,Absent,1.506759834,0.936202523,5
+Emerald Lake,Castilleja septentrionalis,77,39,Present,2.330523296,0.937871568,12
+Emerald Lake,Castilleja septentrionalis,78,39,Absent,2.077247463,0.902137111,10
+Emerald Lake,Castilleja septentrionalis,79,40,Present,2.171759144,0.905693909,11
+Emerald Lake,Castilleja septentrionalis,80,40,Absent,1.814148496,0.872421013,8
+Deer Creek 1,Castilleja linarifolia,1,41,Present,0.594390887,0.285841595,8
+Deer Creek 1,Castilleja linarifolia,2,41,Absent,0.266625924,0.165664001,5
+Deer Creek 1,Castilleja linarifolia,3,42,Present,1.322246661,0.601780389,9
+Deer Creek 1,Castilleja linarifolia,4,42,Absent,1.293516868,0.721925509,6
+Deer Creek 1,Castilleja linarifolia,5,43,Present,1.603541851,0.696409377,10
+Deer Creek 1,Castilleja linarifolia,6,43,Absent,0.59978332,0.334745444,6
+Deer Creek 1,Castilleja linarifolia,7,44,Present,1.005827133,0.624955536,5
+Deer Creek 1,Castilleja linarifolia,8,44,Absent,1.213007566,0.676992413,6
+Deer Creek 1,Castilleja linarifolia,9,45,Present,1.190068428,0.664189836,6
+Deer Creek 1,Castilleja linarifolia,10,45,Absent,1.111052301,0.801454822,4
+Deer Creek 1,Castilleja linarifolia,11,46,Present,1.494524066,0.718714153,8
+Deer Creek 1,Castilleja linarifolia,12,46,Absent,0.927343479,0.5761909,5
+Deer Creek 1,Castilleja linarifolia,13,47,Present,1.140905462,0.636751462,6
+Deer Creek 1,Castilleja linarifolia,14,47,Absent,1.18741577,0.662709359,6
+Deer Creek 1,Castilleja linarifolia,15,48,Present,1.288554846,0.719156153,6
+Deer Creek 1,Castilleja linarifolia,16,48,Absent,1.446609584,0.898829071,5
+Deer Creek 1,Castilleja linarifolia,17,49,Present,2.052029915,0.891185269,10
+Deer Creek 1,Castilleja linarifolia,18,49,Absent,1.442618455,0.656563954,9
+Deer Creek 1,Castilleja linarifolia,19,50,Present,1.697402257,0.737172434,10
+Deer Creek 1,Castilleja linarifolia,20,50,Absent,1.629521366,0.741627134,9
+Deer Creek 1,Castilleja linarifolia,21,51,Present,1.426133741,0.886106715,5
+Deer Creek 1,Castilleja linarifolia,22,51,Absent,1.555751192,0.748158177,8
+Deer Creek 1,Castilleja linarifolia,23,52,Present,1.798410033,0.781039553,10
+Deer Creek 1,Castilleja linarifolia,24,52,Absent,1.580818536,0.812380025,7
+Deer Creek 1,Castilleja linarifolia,25,53,Present,1.505772603,0.724123556,8
+Deer Creek 1,Castilleja linarifolia,26,53,Absent,1.265530292,0.650353919,7
+Deer Creek 1,Castilleja linarifolia,27,54,Present,1.242314934,0.693349166,6
+Deer Creek 1,Castilleja linarifolia,28,54,Absent,1.366425495,0.702203797,7
+Deer Creek 1,Castilleja linarifolia,29,55,Present,1.072016969,0.773296782,4
+Deer Creek 1,Castilleja linarifolia,30,55,Absent,1.136916592,0.706405996,5
+Deer Creek 1,Castilleja linarifolia,31,56,Present,0.98882525,0.55187388,6
+Deer Creek 1,Castilleja linarifolia,32,56,Absent,0.817412316,0.420066834,7
+Deer Creek 1,Castilleja linarifolia,33,57,Present,1.096173996,0.611786356,6
+Deer Creek 1,Castilleja linarifolia,34,57,Absent,0,0,3
+Deer Creek 1,Castilleja linarifolia,35,58,Present,1.228942062,0.685885624,6
+Deer Creek 1,Castilleja linarifolia,36,58,Absent,0.773188696,0.557737749,4
+Deer Creek 1,Castilleja linarifolia,37,59,Present,0.725625433,0.348952071,8
+Deer Creek 1,Castilleja linarifolia,38,59,Absent,1.170158073,0.653077655,6
+Deer Creek 1,Castilleja linarifolia,39,60,Present,1.049369467,0.539269229,7
+Deer Creek 1,Castilleja linarifolia,40,60,Absent,1.256880629,0.701478436,6
+Deer Creek 2,Castilleja linarifolia,41,61,Present,1.617764284,0.77798017,8
+Deer Creek 2,Castilleja linarifolia,42,61,Absent,1.201470654,0.67055354,6
+Deer Creek 2,Castilleja linarifolia,43,62,Present,1.170158073,0.562727083,8
+Deer Creek 2,Castilleja linarifolia,44,62,Absent,1.389374722,0.668148007,8
+Deer Creek 2,Castilleja linarifolia,45,63,Present,1.481896136,0.712641402,8
+Deer Creek 2,Castilleja linarifolia,46,63,Absent,0.988154224,0.507810818,7
+Deer Creek 2,Castilleja linarifolia,47,64,Present,1.161881088,0.504598545,10
+Deer Creek 2,Castilleja linarifolia,48,64,Absent,1.839449635,0.837169606,9
+Deer Creek 2,Castilleja linarifolia,49,65,Present,1.67584261,0.698880651,11
+Deer Creek 2,Castilleja linarifolia,50,65,Absent,0.776214104,0.398895141,7
+Deer Creek 2,Castilleja linarifolia,51,66,Present,1.631909321,0.656728622,12
+Deer Creek 2,Castilleja linarifolia,52,66,Absent,1.399982871,0.719448877,7
+Deer Creek 2,Castilleja linarifolia,53,67,Present,1.610140381,0.699275082,10
+Deer Creek 2,Castilleja linarifolia,54,67,Absent,0.923036288,0.573514691,5
+Deer Creek 2,Castilleja linarifolia,55,68,Present,1.226126303,0.761835106,5
+Deer Creek 2,Castilleja linarifolia,56,68,Absent,1.796091448,0.817436445,9
+Deer Creek 2,Castilleja linarifolia,57,69,Present,1.449070469,0.744674912,7
+Deer Creek 2,Castilleja linarifolia,58,69,Absent,1.293211448,0.588565894,9
+Deer Creek 2,Castilleja linarifolia,59,70,Present,1.79894174,0.781270471,10
+Deer Creek 2,Castilleja linarifolia,60,70,Absent,0.972439912,0.499735259,7
+Deer Creek 2,Castilleja linarifolia,61,71,Present,2.037157991,0.849560869,11
+Deer Creek 2,Castilleja linarifolia,62,71,Absent,0.627705257,0.571361948,3
+Deer Creek 2,Castilleja linarifolia,63,72,Present,1.195611957,0.574967814,8
+Deer Creek 2,Castilleja linarifolia,64,72,Absent,0,0,5
+Deer Creek 2,Castilleja linarifolia,65,73,Present,1.621516541,0.737983981,9
+Deer Creek 2,Castilleja linarifolia,66,73,Absent,1.043099125,0.536046911,7
+Deer Creek 2,Castilleja linarifolia,67,74,Present,1.640254592,0.788795722,8
+Deer Creek 2,Castilleja linarifolia,68,74,Absent,0.514653165,0.319771991,5
+Deer Creek 2,Castilleja linarifolia,69,75,Present,1.888770297,0.787678394,11
+Deer Creek 2,Castilleja linarifolia,70,75,Absent,0.223718076,0.322756959,2
+Deer Creek 2,Castilleja linarifolia,71,76,Present,1.002612703,0.622958298,5
+Deer Creek 2,Castilleja linarifolia,72,76,Absent,1.193549604,0.860964047,4
+Deer Creek 2,Castilleja linarifolia,73,77,Present,1.230639322,0.632423508,7
+Deer Creek 2,Castilleja linarifolia,74,77,Absent,1.402566843,0.720776776,7
+Deer Creek 2,Castilleja linarifolia,75,78,Present,1.968722958,0.767548471,13
+Deer Creek 2,Castilleja linarifolia,76,78,Absent,1.458007791,0.813729642,6
+Deer Creek 2,Castilleja linarifolia,77,79,Present,1.704972308,0.775966337,9
+Deer Creek 2,Castilleja linarifolia,78,79,Absent,1.343752133,0.611567951,9
+Deer Creek 2,Castilleja linarifolia,79,80,Present,1.582743431,0.687376738,10
+Deer Creek 2,Castilleja linarifolia,80,80,Absent,1.58176267,0.719891215,9
