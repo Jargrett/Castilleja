@@ -84,6 +84,25 @@ cali.div.plot <- ggplot(subset(cd.pair, species %in% "Castilleja linarifolia"), 
   ylim(0,2.5)
 cali.div.plot
 
+cd.pair %>% filter(species=="Castilleja linarifolia") %>%
+  mutate(population=paste(Site,Castilleja,sep="_")) %>%
+  ggplot(aes(x=population,y=div,fill=Castilleja)) +
+  geom_point() +
+  theme_classic() 
+  
+cd_sum <- cd.pair %>% group_by(Site,Castilleja,species) %>%
+  summarize(mean_div = mean(div),
+            mean_rich = mean(rich),
+            mean_even = mean(even))
+
+cd.pair %>% filter(species=="Castilleja linarifolia") %>%
+  mutate(population=paste(Site,Castilleja,sep="_")) %>%
+  ggplot(aes(x=population,y=div,fill=Castilleja)) +
+  geom_jitter(width = 0.1) +
+  stat_summary(fun="mean",color="lightblue",size=8,geom="point") +
+  theme_classic() +
+  theme(legend.position = "none")
+
 case.div.plot <- ggplot(subset(cd.pair, species %in% "Castilleja septentrionalis"), aes(x = Site, y = div, fill = Castilleja)) +
   geom_boxplot() +
   labs(x = "Population", y = "Shannon Diversity") +
