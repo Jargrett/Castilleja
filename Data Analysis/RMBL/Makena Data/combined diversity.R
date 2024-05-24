@@ -153,3 +153,6 @@ case.even.plot
 even.plot <- ggarrange(cali.even.plot, case.even.plot, labels = c("A", "B"), common.legend = TRUE, legend = "bottom")
 even.plot
 
+
+#---------------error plots--------#
+
