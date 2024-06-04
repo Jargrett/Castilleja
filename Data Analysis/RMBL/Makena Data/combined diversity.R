@@ -15,6 +15,7 @@ library(ggpubr)
 library(emmeans) # for comparison of means
 library(rstatix) # for comparison of means
 library(labdsv)
+library(ggthemes)
 
 #import files
 case <- read.csv("CASE Diversity.csv")
@@ -74,10 +75,52 @@ case.even <- lmer(even ~ Castilleja*Site + (1|Pair), data=subset(cd.pair, specie
 summary(case.even)
 Anova(case.even)
 
+#----BSA Graphs-----#
+bsa.div <- ggplot(subset(cd.pair, species %in% "Castilleja septentrionalis"), aes(x = Castilleja, y = div)) +
+  stat_summary(aes(group = Pair), geom = "line", fun.y = mean, col ="ivory3") +
+  geom_point(aes(color = (Castilleja), size = 1, alpha = 2), show.legend = FALSE) + 
+  #stat_summary(fun.y=mean, position = position_dodge(1), size = 2, col = "grey34") +
+  stat_summary(fun.y=mean, geom = "crossbar", position = position_dodge(1), size = 1, width = 0.25, col = "grey34") +
+  facet_wrap(~Site) +
+  theme_pubr() +
+  scale_color_manual(values=c("burlywood4", "khaki3")) +
+  labs(x = "Castilleja septentrionalis", y = "Shannon Diversity") +
+  ylim(1,2.5)
+
+bsa.div
+
+bsa.rich <- ggplot(subset(cd.pair, species %in% "Castilleja septentrionalis"), aes(x = Castilleja, y = rich)) +
+  stat_summary(aes(group = Pair), geom = "line", fun.y = mean, col ="ivory3") +
+  geom_point(aes(color = (Castilleja), size = 1, alpha = 2), show.legend = FALSE) + 
+  #stat_summary(fun.y=mean, position = position_dodge(1), size = 2, col = "grey34") +
+  stat_summary(fun.y=mean, geom = "crossbar", position = position_dodge(1), size = 1, width = 0.25, col = "grey34") +
+  facet_wrap(~Site) +
+  theme_pubr() +
+  scale_color_manual(values=c("burlywood4", "khaki3")) +
+  labs(x = "Castilleja septentrionalis", y = "Species Richness") +
+  ylim(3,16)
+
+bsa.rich
+
+bsa.even <- ggplot(subset(cd.pair, species %in% "Castilleja septentrionalis"), aes(x = Castilleja, y = even)) +
+  stat_summary(aes(group = Pair), geom = "line", fun.y = mean, col ="ivory3") +
+  geom_point(aes(color = (Castilleja), size = 1, alpha = 2), show.legend = FALSE) + 
+  #stat_summary(fun.y=mean, position = position_dodge(1), size = 2, col = "grey34") +
+  stat_summary(fun.y=mean, geom = "crossbar", position = position_dodge(1), size = 1, width = 0.25, col = "grey34") +
+  facet_wrap(~Site) +
+  theme_pubr() +
+  scale_color_manual(values=c("burlywood4", "khaki3")) +
+  labs(x = "Castilleja septentrionalis", y = "Species Evenness") +
+  ylim(0.6,1)
+
+bsa.even
+
+bsa.plot <- ggarrange(bsa.div, bsa.rich, bsa.even, labels = c("A", "B","C"),nrow = 1, common.legend = TRUE, legend = "bottom")
+bsa.plot
 #--------------------graphs--------------------#
 #Diversity
 cali.div.plot <- ggplot(subset(cd.pair, species %in% "Castilleja linarifolia"), aes(x = Site, y = div, fill = Castilleja)) +
-  geom_boxplot() +
+  geom_point() +
   labs(x = "Population", y = "Shannon Diversity") +
   facet_wrap(~species) +
   theme_classic2()+
@@ -105,14 +148,20 @@ cd.pair %>% filter(species=="Castilleja linarifolia") %>%
 
 case.div.plot <- ggplot(subset(cd.pair, species %in% "Castilleja septentrionalis"), aes(x = Site, y = div, fill = Castilleja)) +
   geom_boxplot() +
+  geom_point(size = 2, alpha = .3, position = position_jitter(seed = 1, width = .2)) +
   labs(x = "Population", y = "Shannon Diversity") +
   facet_wrap(~species) +
   theme_classic2()+
   ylim(0,2.5)
 case.div.plot
 
+
+
 div.plot <- ggarrange(cali.div.plot, case.div.plot, labels = c("A", "B"), common.legend = TRUE, legend = "bottom")
 div.plot
+
+
+
 
 #richness
 cali.rich.plot <- ggplot(subset(cd.pair, species %in% "Castilleja linarifolia"), aes(x = Site, y = rich, fill = Castilleja)) +
