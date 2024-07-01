@@ -16,3 +16,12 @@ gap<- read.csv("Georgia's Parasitic Plants Copy.csv")
 
 #-----------------Checking data structure-----------------#
 str(gap)
+
+#change all to factors
+gap[sapply(gap, is.character)] <- lapply(gap[sapply(gap, is.character)], as.factor)
+#-----------------Basic plotting-----------------#
+ggplot(gap, aes(x=Georgia.Status..DNR., y = INat.Observations)) + 
+  geom_point() +
+
+
+

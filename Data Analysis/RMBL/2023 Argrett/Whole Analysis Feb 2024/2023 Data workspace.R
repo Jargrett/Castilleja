@@ -55,4 +55,7 @@ div <- diversity(comb.count, index = "shannon")
 even <- diversity(comb.count, index = "shannon") / log(specnumber(comb.count))  
 comb.div <- cbind(comb.plot,div,rich,even)
 
+#------------Cover Analysis---------------#
+
+
 

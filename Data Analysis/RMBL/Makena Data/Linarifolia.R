@@ -14,7 +14,6 @@ setwd("C:/Users/jargr/Dropbox/PC/Desktop/Data Analysis/RMBL/Makena Data")
 
 # Load-in packages
 # I will explain these if needed
-# install_github("pmartinezarbizu/pairwiseAdonis/pairwiseAdonis")
 library(tidyverse) # for data working
 library(vegan) # for diversity
 library(ggplot2) # plotting
