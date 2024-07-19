@@ -24,12 +24,10 @@ CASE.24.Avery <- read.csv("Case 2024 Avery Count.csv")
 #merging dataframes by pivot longer then rbind
 cali <- rbind.fill(CALI.23,CALI.24,CALI.24.Johnson)
 case <- rbind.fill(CASE.23,CASE.24.Avery)
-combined <- rbind.fill(cali,case)
 
 #changing NA to 0
 cali[is.na(cali)] <- 0
 case[is.na(case)] <- 0
-combined[is.na(combined)] <- 0
 
 #sperating the species matrix from the environmental data
 cali.env <- subset(cali, select=c(1:3,5:7)) #gathering enviornmental data
@@ -45,7 +43,7 @@ nocali.matrix <- cali[ -c(1:7,17)]
 #--------------------Diversity Analysis--------------------#
 # calculating diversity metrics for our linariifolia sites
 
-# Calculating Shannon diversity,richness, and evenness for 2023 plots
+# Calculating Shannon diversity, richness, and evenness for 2023 plots
 #linariifolia
 cali.div <- diversity(cali.matrix, index = "shannon")
 cali.rich <- specnumber(cali.matrix)
