@@ -5,6 +5,7 @@ setwd("/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL/Observational REU")
 
 #load in packages
 library(tidyverse)#for data wrangling and restructuring
+library(plyr)#for data wrangling and restructuring
 library(lme4)#for modeling linear mixed effect models
 library(nlme)#alternative for modeling linear mixed effect models
 library(ggplot2)#for plotting
@@ -15,113 +16,91 @@ library(emmeans)#post-hoc analysis
 
 #Load in 2023 + 2024 datasets (For diversity analysis we will use species counts)
 CALI.24 <- read.csv("Cali 2024 Count.csv")
+CALI.24.Johnson <- read.csv("Cali 2024 Johnson Hill Count.csv")
 CALI.23 <- read.csv("Cali 2023 Count.csv")
 CASE.23 <- read.csv("Case 2023 Count.csv")
-CASE.24 <- read.csv("Partial Case 2024 Count.csv")
-#Adding a Column for year (2023)
-CALI.23 <- CALI.23 %>%
-  mutate(Year = 2023)
-CASE.23 <- CASE.23 %>%
-  mutate(Year = 2023)
-#Adding a Column for year (2024)
-CALI.24 <- CALI.24 %>%
-  mutate(Year = 2024)
-CASE.24 <- CASE.24 %>%
-  mutate(Year = 2024)
+CASE.24.Avery <- read.csv("Case 2024 Avery Count.csv")
+
+#merging dataframes by pivot longer then rbind
+cali <- rbind.fill(CALI.23,CALI.24,CALI.24.Johnson)
+case <- rbind.fill(CASE.23,CASE.24.Avery)
+combined <- rbind.fill(cali,case)
+
+#changing NA to 0
+cali[is.na(cali)] <- 0
+case[is.na(case)] <- 0
+combined[is.na(combined)] <- 0
+
+# str(CASE.24.Avery)
+# cali.24.long<- pivot_longer(CALI.24, cols = Achratherum.lettermanii:Wyethia.amplexicaulis,
+#                          names_to = "species",
+#                          values_to = "count")
+# cali.24.johnson.long<- pivot_longer(CALI.24.Johnson, cols = Achnatherum.sp.:Viola.praemorsa,
+#                             names_to = "species",
+#                             values_to = "count")
+# cali.23.long<- pivot_longer(CALI.23, cols = Agastache.urticifolia:Wyethia.amplexicaulis,
+#                                     names_to = "species",
+#                                     values_to = "count")
+# case.23.long<- pivot_longer(CASE.23, cols = Agoseris.glauca.leaves:Viola.adunca,
+#                             names_to = "species",
+#                             values_to = "count")
+# case.24.Avery.long<- pivot_longer(CASE.24.Avery, cols = Achillea.millefolium:Viola.adunca,
+#                             names_to = "species",
+#                             values_to = "count")
+# 
+# combined.counts <- rbind(cali.23.long,cali.24.long, DF3)
+
 #sperating the species matrix from the environmental data
-CALI.23.env <- subset(CALI.23, select=c(1,2,4:6,50)) #gathering enviornmental data
-CALI.24.env <- subset(CALI.24, select=c(1,2,4:6,70))
-CASE.23.env <- subset(CASE.23, select=c(1,2,4:6,41))
-CASE.24.env <- subset(CASE.24, select=c(1,2,4:6,36))
+cali.env <- subset(cali, select=c(1:3,5:7)) #gathering enviornmental data
+case.env <- subset(case, select=c(1:3,5:7))
 #Isolating the species matrix without castilleja included in the analysis
 #CALI.23.species <- CALI.23[ -c(1:6,16, 50)] 
 #CALI.24.species <- CALI.24[ -c(1:6,20,70)]
 
 #Isolating the species matric with castilleja included 
-CALI.23.species <- CALI.23[ -c(1:6, 50)] 
-CALI.24.species <- CALI.24[ -c(1:6,70)]
-CASE.23.species <- CASE.23[ -c(1:6, 41)] 
-CASE.24.species <- CASE.24[ -c(1:6,36)]
+case.matrix <- case[ -c(1:7)] 
+cali.matrix <- cali[ -c(1:7)]
+
 #--------------------Diversity Analysis--------------------#
 # calculating diversity metrics for our linariifolia sites
 
 # Calculating Shannon diversity,richness, and evenness for 2023 plots
 #linariifolia
-cali.div.23 <- diversity(CALI.23.species, index = "shannon")
-cali.rich.23 <- specnumber(CALI.23.species)
-cali.even.23 <- diversity(CALI.23.species, index = "shannon") / log(specnumber(CASE.23.species)) 
+cali.div <- diversity(cali.matrix, index = "shannon")
+cali.rich <- specnumber(cali.matrix)
+cali.even <- diversity(cali.matrix, index = "shannon") / log(specnumber(cali.matrix)) 
 #septentrionalis
-case.div.23 <- diversity(CASE.23.species, index = "shannon")
-case.rich.23 <- specnumber(CASE.23.species)
-case.even.23 <- diversity(CASE.23.species, index = "shannon") / log(specnumber(CASE.23.species)) 
+case.div <- diversity(case.matrix, index = "shannon")
+case.rich <- specnumber(case.matrix)
+case.even <- diversity(case.matrix, index = "shannon") / log(specnumber(case.matrix)) 
 
-# Calculating Shannon diversity,richness, and evenness for 2024 plots
-#linariifolia
-cali.div.24 <- diversity(CALI.24.species, index = "shannon")
-cali.rich.24 <- specnumber(CALI.24.species)
-cali.even.24 <- diversity(CALI.24.species, index = "shannon") / log(specnumber(CALI.24.species)) 
-#septentrionalis
-case.div.24 <- diversity(CASE.24.species, index = "shannon")
-case.rich.24 <- specnumber(CASE.24.species)
-case.even.24 <- diversity(CASE.24.species, index = "shannon") / log(specnumber(CASE.24.species)) 
 
 #combined data set with environmental and calculated values
 #linariifolia
-CALI.23.div <- cbind(CALI.23.env,cali.div.23,cali.rich.23,cali.even.23)
-CALI.24.div <- cbind(CALI.24.env,cali.div.24,cali.rich.24,cali.even.24)
+cali.diversity <- cbind(cali.env,cali.div,cali.rich,cali.even)
+
 #septentrionalis
-CASE.23.div <- cbind(CASE.23.env,case.div.23,case.rich.23,case.even.23)
-CASE.24.div <- cbind(CASE.24.env,case.div.24,case.rich.24,case.even.24)
+case.diversity <- cbind(case.env,case.div,case.rich,case.even)
 
-CALI.23.div <- CALI.23.div %>% #renaming columns to prepare for merging
-  rename("div" = "cali.div.23",
-         "even" = "cali.even.23",
-         "rich" = "cali.rich.23")
 
-CASE.23.div <- CASE.23.div %>% #renaming columns to prepare for merging
-  rename("div" = "case.div.23",
-         "even" = "case.even.23",
-         "rich" = "case.rich.23")
+#renaming columns
+case.diversity <- plyr::rename(case.diversity, c("case.div" = "div",
+                                                 "case.even" = "even",
+                                                 "case.rich" = "rich",
+                                                 "Treatment" = "Castilleja"))
 
-CALI.24.div <- CALI.24.div %>% #renaming columns to prepare for merging
-  rename("div" = "cali.div.24",
-         "even" = "cali.even.24",
-         "rich" = "cali.rich.24")
+cali.diversity <- plyr::rename(cali.diversity, c("cali.div" = "div",
+                                                 "cali.even" = "even",
+                                                 "cali.rich" = "rich",
+                                                 "Treatment" = "Castilleja"))
 
-CASE.24.div <- CASE.24.div %>% #renaming columns to prepare for merging
-  rename("div" = "case.div.24",
-         "even" = "case.even.24",
-         "rich" = "case.rich.24")
-
-#merging dataframes
-cali <- rbind(CALI.23.div,CALI.24.div)
-cali <- cali %>%
-  relocate(Year)
-cali <- cali %>% 
-  rename("Castilleja" = "Treatment")
-
-case <- rbind(CASE.23.div,CASE.24.div)
-case <- case %>%
-  relocate(Year)
-case <- case %>% 
-  rename("Castilleja" = "Treatment")
-
-castilleja <- rbind(case,cali)
-
-castilleja <- castilleja %>%
-  mutate(species = case_when(
-    (Site == "Deer Creek 1") ~ "Castilleja linarifolia",
-    (Site == "Deer Creek 2") ~ "Castilleja linarifolia",
-    (Site == "Avery") ~ "Castilleja septentrionalis",
-    (Site == "Emerald Lake") ~ "Castilleja septentrionalis",
-  ))
 #creating a new csv for later use and sharing
-write.csv(cali, "/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL/Observational REU/Combined linariifolia Diversity.csv", row.names=FALSE)
+write.csv(cali.diversity, "/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL/Observational REU/Combined linariifolia Diversity.csv", row.names=FALSE)
 cali.comb.div <- read.csv("Combined linariifolia Diversity.csv")
-write.csv(cali, "/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL/Observational REU/Combined septentrionalis Diversity.csv", row.names=FALSE)
+write.csv(case.diversity, "/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL/Observational REU/Combined septentrionalis Diversity.csv", row.names=FALSE)
 case.comb.div <- read.csv("Combined septentrionalis Diversity.csv")
-write.csv(cali, "/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL/Observational REU/Combined Castilleja Diversity.csv", row.names=FALSE)
-case.comb.div <- read.csv("Combined Castilleja Diversity.csv")
+
+#-----------------linariifolia-----------------#
 #-----------------Checking data structure-----------------#
 str(cali.comb.div)
 cali.comb.div$Site <- as.factor(cali.comb.div$Site)
@@ -129,26 +108,26 @@ cali.comb.div$Year <- as.factor(cali.comb.div$Year)
 cali.comb.div$Castilleja <- as.factor(cali.comb.div$Castilleja)
 
 #--------Models------#
-cali.div <- lmer(div ~ Castilleja*Site*Year + (1|Pair) + (1|Date), data = cali.comb.div)
+cali.div <- lmer(div ~ Castilleja*Site + (1|Year) + (1|Pair), data = cali.comb.div)
 summary(cali.div)
 Anova(cali.div)
-emmip(cali.div, Castilleja|Year ~ Site)
+emmip(cali.div, Castilleja ~ Site)
 emmeans(cali.div, pairwise ~ Castilleja|Site)
 
-cali.rich <- lmer(rich ~ Castilleja*Site*Year + (1|Pair)+ (1|Date), data = cali.comb.div)
+cali.rich <- lmer(rich ~ Castilleja*Site + (1|Year) + (1|Pair), data = cali.comb.div)
 summary(cali.rich)
 Anova(cali.rich)
 emmip(cali.rich, Castilleja ~ Site)
 emmeans(cali.rich, pairwise ~ Castilleja|Site)
 
-cali.even <- lmer(even ~ Castilleja*Site*Year + (1|Pair)+ (1|Date), data = cali.comb.div)
+cali.even <- lmer(even ~ Castilleja*Site + (1|Year) + (1|Pair), data = cali.comb.div)
 summary(cali.even)
 Anova(cali.even)
-emmip(cali.even, Castilleja/Year ~ Site)
+emmip(cali.even, Castilleja ~ Site)
 emmeans(cali.even, pairwise ~ Castilleja|Site)
 
 #-------plotting------#
-cali.diversity <- ggplot(cali.comb.div, aes(x = Castilleja, y = div)) +
+cali.diversity.plot <- ggplot(cali.comb.div, aes(x = Castilleja, y = div)) +
   stat_summary(aes(group = Pair), geom = "line", fun.y = mean, col ="ivory3") +
   geom_point(aes(color = (Castilleja), size = 1, alpha = 2), show.legend = FALSE) + 
   stat_summary(fun=mean, geom = "crossbar", position = position_dodge(1), linewidth = 1, width = 0.25, col = "grey34") +
@@ -158,9 +137,9 @@ cali.diversity <- ggplot(cali.comb.div, aes(x = Castilleja, y = div)) +
   labs(x = "Castilleja linariifolia", y = "Shannon Diversity") +
   ylim(0,3)
 
-cali.diversity
+cali.diversity.plot
 
-cali.richness <- ggplot(cali.comb.div, aes(x = Castilleja, y = rich)) +
+cali.richness.plot <- ggplot(cali.comb.div, aes(x = Castilleja, y = rich)) +
   stat_summary(aes(group = Pair), geom = "line", fun.y = mean, col ="ivory3") +
   geom_point(aes(color = (Castilleja), size = 1, alpha = 2), show.legend = FALSE) + 
   #stat_summary(fun.y=mean, position = position_dodge(1), size = 2, col = "grey34") +
@@ -169,11 +148,11 @@ cali.richness <- ggplot(cali.comb.div, aes(x = Castilleja, y = rich)) +
   facet_wrap(~Site) +
   scale_color_manual(values=c( "coral", "burlywood4")) +
   labs(x = "Castilleja linariifolia", y = "Species Richness") +
-  ylim(0,20)
+  ylim(3,18)
 
-cali.richness
+cali.richness.plot
 
-cali.evenness <- ggplot(cali.comb.div, aes(x = Castilleja, y = even)) +
+cali.evenness.plot <- ggplot(cali.comb.div, aes(x = Castilleja, y = even)) +
   stat_summary(aes(group = Pair), geom = "line", fun.y = mean, col ="ivory3") +
   geom_point(aes(color = (Castilleja), size = 1, alpha = 2), show.legend = FALSE) + 
   #stat_summary(fun.y=mean, position = position_dodge(1), size = 2, col = "grey34") +
@@ -184,12 +163,83 @@ cali.evenness <- ggplot(cali.comb.div, aes(x = Castilleja, y = even)) +
   labs(x = "Castilleja linariifolia", y = "Species Evenness") +
   ylim(.4,1)
 
-cali.evenness
+cali.evenness.plot
 
-linariifolia.plot <- ggarrange(cali.diversity, cali.richness, cali.evenness,
+linariifolia.plot <- ggarrange(cali.diversity.plot, cali.richness.plot, cali.evenness.plot,
                          labels = c("A", "B","C"), 
                          nrow = 1, common.legend = TRUE, legend = "bottom")
 linariifolia.plot
+
+#-----------------septentrionalis-----------------#
+#-----------------Checking data structure-----------------#
+str(case.comb.div)
+case.comb.div$Site <- as.factor(case.comb.div$Site)
+case.comb.div$Year <- as.factor(case.comb.div$Year)
+case.comb.div$Castilleja <- as.factor(case.comb.div$Castilleja)
+
+#--------Models------#
+case.div <- lmer(div ~ Castilleja*Site + (1|Year) + (1|Pair), data = case.comb.div)
+summary(case.div)
+Anova(case.div)
+emmip(case.div, Castilleja ~ Site)
+emmeans(case.div, pairwise ~ Castilleja|Site)
+
+case.rich <- lmer(rich ~ Castilleja*Site + (1|Year) + (1|Pair), data = case.comb.div)
+summary(case.rich)
+Anova(case.rich)
+emmip(case.rich, Castilleja ~ Site)
+emmeans(case.rich, pairwise ~ Castilleja|Site)
+
+case.even <- lmer(even ~ Castilleja*Site + (1|Year) + (1|Pair), data = case.comb.div)
+summary(case.even)
+Anova(case.even)
+emmip(case.even, Castilleja ~ Site)
+emmeans(case.even, pairwise ~ Castilleja|Site)
+
+#-------plotting------#
+case.diversity.plot <- ggplot(case.comb.div, aes(x = Castilleja, y = div)) +
+  stat_summary(aes(group = Pair), geom = "line", fun.y = mean, col ="ivory3") +
+  geom_point(aes(color = (Castilleja), size = 1, alpha = 2), show.legend = FALSE) + 
+  stat_summary(fun=mean, geom = "crossbar", position = position_dodge(1), linewidth = 1, width = 0.25, col = "grey34") +
+  theme_pubr() +
+  facet_wrap(~Site) +
+  scale_color_manual(values=c( "khaki3", "burlywood4")) +
+  labs(x = "Castilleja septentrionalis", y = "Shannon Diversity") +
+  ylim(1,2.7)
+
+case.diversity.plot
+
+case.richness.plot <- ggplot(case.comb.div, aes(x = Castilleja, y = rich)) +
+  stat_summary(aes(group = Pair), geom = "line", fun.y = mean, col ="ivory3") +
+  geom_point(aes(color = (Castilleja), size = 1, alpha = 2), show.legend = FALSE) + 
+  #stat_summary(fun.y=mean, position = position_dodge(1), size = 2, col = "grey34") +
+  stat_summary(fun=mean, geom = "crossbar", position = position_dodge(1), linewidth = 1, width = 0.25, col = "grey34") +
+  theme_pubr() +
+  facet_wrap(~Site) +
+  scale_color_manual(values=c( "khaki3", "burlywood4")) +
+  labs(x = "Castilleja septentrionalis", y = "Species Richness") +
+  ylim(3,16)
+
+case.richness.plot
+
+case.evenness.plot <- ggplot(case.comb.div, aes(x = Castilleja, y = even)) +
+  stat_summary(aes(group = Pair), geom = "line", fun.y = mean, col ="ivory3") +
+  geom_point(aes(color = (Castilleja), size = 1, alpha = 2), show.legend = FALSE) + 
+  #stat_summary(fun.y=mean, position = position_dodge(1), size = 2, col = "grey34") +
+  stat_summary(fun=mean, geom = "crossbar", position = position_dodge(1), linewidth = 1, width = 0.25, col = "grey34") +
+  theme_pubr() +
+  facet_wrap(~Site) +
+  scale_color_manual(values=c( "khaki3", "burlywood4")) +
+  labs(x = "Castilleja septentrionalis", y = "Species Evenness") +
+  ylim(.5,1)
+
+case.evenness.plot
+
+septentrionalis.plot <- ggarrange(case.diversity.plot, case.richness.plot, case.evenness.plot,
+                               labels = c("A", "B","C"), 
+                               nrow = 1, common.legend = TRUE, legend = "bottom")
+septentrionalis.plot
+
 
 
 
