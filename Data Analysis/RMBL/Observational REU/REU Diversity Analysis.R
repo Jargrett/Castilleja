@@ -1,4 +1,4 @@
-#Castilleja Diversity Project
+#Castilleja Diversity Analysis
 
 #Set the working directory
 setwd("/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL/Observational REU")
@@ -31,36 +31,17 @@ cali[is.na(cali)] <- 0
 case[is.na(case)] <- 0
 combined[is.na(combined)] <- 0
 
-# str(CASE.24.Avery)
-# cali.24.long<- pivot_longer(CALI.24, cols = Achratherum.lettermanii:Wyethia.amplexicaulis,
-#                          names_to = "species",
-#                          values_to = "count")
-# cali.24.johnson.long<- pivot_longer(CALI.24.Johnson, cols = Achnatherum.sp.:Viola.praemorsa,
-#                             names_to = "species",
-#                             values_to = "count")
-# cali.23.long<- pivot_longer(CALI.23, cols = Agastache.urticifolia:Wyethia.amplexicaulis,
-#                                     names_to = "species",
-#                                     values_to = "count")
-# case.23.long<- pivot_longer(CASE.23, cols = Agoseris.glauca.leaves:Viola.adunca,
-#                             names_to = "species",
-#                             values_to = "count")
-# case.24.Avery.long<- pivot_longer(CASE.24.Avery, cols = Achillea.millefolium:Viola.adunca,
-#                             names_to = "species",
-#                             values_to = "count")
-# 
-# combined.counts <- rbind(cali.23.long,cali.24.long, DF3)
-
 #sperating the species matrix from the environmental data
 cali.env <- subset(cali, select=c(1:3,5:7)) #gathering enviornmental data
 case.env <- subset(case, select=c(1:3,5:7))
-#Isolating the species matrix without castilleja included in the analysis
-#CALI.23.species <- CALI.23[ -c(1:6,16, 50)] 
-#CALI.24.species <- CALI.24[ -c(1:6,20,70)]
 
 #Isolating the species matric with castilleja included 
 case.matrix <- case[ -c(1:7)] 
 cali.matrix <- cali[ -c(1:7)]
 
+#Isolating the species matrix without castilleja included in the analysis
+nocase.matrix <- case[ -c(1:7,9)]
+nocali.matrix <- cali[ -c(1:7,17)]
 #--------------------Diversity Analysis--------------------#
 # calculating diversity metrics for our linariifolia sites
 
@@ -73,7 +54,6 @@ cali.even <- diversity(cali.matrix, index = "shannon") / log(specnumber(cali.mat
 case.div <- diversity(case.matrix, index = "shannon")
 case.rich <- specnumber(case.matrix)
 case.even <- diversity(case.matrix, index = "shannon") / log(specnumber(case.matrix)) 
-
 
 #combined data set with environmental and calculated values
 #linariifolia
@@ -239,7 +219,3 @@ septentrionalis.plot <- ggarrange(case.diversity.plot, case.richness.plot, case.
                                labels = c("A", "B","C"), 
                                nrow = 1, common.legend = TRUE, legend = "bottom")
 septentrionalis.plot
-
-
-
-
