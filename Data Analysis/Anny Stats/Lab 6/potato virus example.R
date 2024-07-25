@@ -6,7 +6,7 @@
 #Make sure clean environment
 
 #Set working directory
-setwd("C:/Users/jargr/Dropbox/PC/Desktop/Anny Stats/Lab 6")
+setwd("/Users/jargrett/Desktop/Castilleja/Data Analysis/Anny Stats/Lab 6")
 
 #Load packages
 library(tidyverse)
