@@ -1,0 +1,2350 @@
+Year,Date,Site,Field.Plot,Pair,Plot,Treatment,total.cover,plant.cover,species,cover
+2023,7/25/23,Avery,E1,1,1,Castilleja,1.1,0.95,Bare.ground,0.15
+2023,7/25/23,Avery,E1,1,1,Castilleja,1.1,0.95,Agoseris.sp.,0.15
+2023,7/25/23,Avery,E1,1,1,Castilleja,1.1,0.95,Castilleja.septentrionalis,0.03
+2023,7/25/23,Avery,E1,1,1,Castilleja,1.1,0.95,Taraxacum.officinale,0.35
+2023,7/25/23,Avery,E1,1,1,Castilleja,1.1,0.95,Elymus.lanceolatus,0.01
+2023,7/25/23,Avery,E1,1,1,Castilleja,1.1,0.95,Erigeron.subtrinervis,0.1
+2023,7/25/23,Avery,E1,1,1,Castilleja,1.1,0.95,Lathyrus.lanszwertii,0.1
+2023,7/25/23,Avery,E1,1,1,Castilleja,1.1,0.95,Poa.pratensis,0.06
+2023,7/25/23,Avery,E1,1,1,Castilleja,1.1,0.95,Potentilla.pulcherrima,0.15
+2023,7/25/23,Avery,E1C,1,2,Control,1.04,0.54,Bare.ground,0.5
+2023,7/25/23,Avery,E1C,1,2,Control,1.04,0.54,Agoseris.sp.,0.05
+2023,7/25/23,Avery,E1C,1,2,Control,1.04,0.54,Taraxacum.officinale,0.25
+2023,7/25/23,Avery,E1C,1,2,Control,1.04,0.54,Elymus.lanceolatus,0.01
+2023,7/25/23,Avery,E1C,1,2,Control,1.04,0.54,Erigeron.subtrinervis,0.04
+2023,7/25/23,Avery,E1C,1,2,Control,1.04,0.54,Lathyrus.lanszwertii,0.08
+2023,7/25/23,Avery,E1C,1,2,Control,1.04,0.54,Poa.pratensis,0.07
+2023,7/25/23,Avery,E1C,1,2,Control,1.04,0.54,Potentilla.pulcherrima,0.04
+2023,7/25/23,Avery,E2,2,3,Castilleja,1.06,0.86,Bare.ground,0.2
+2023,7/25/23,Avery,E2,2,3,Castilleja,1.06,0.86,Castilleja.septentrionalis,0.1
+2023,7/25/23,Avery,E2,2,3,Castilleja,1.06,0.86,Taraxacum.officinale,0.25
+2023,7/25/23,Avery,E2,2,3,Castilleja,1.06,0.86,Erigeron.subtrinervis,0.15
+2023,7/25/23,Avery,E2,2,3,Castilleja,1.06,0.86,Hesperostipa.comata,0.01
+2023,7/25/23,Avery,E2,2,3,Castilleja,1.06,0.86,Poa.pratensis,0.25
+2023,7/25/23,Avery,E2,2,3,Castilleja,1.06,0.86,Potentilla.pulcherrima,0.1
+2023,7/25/23,Avery,E2C,2,4,Control,1.12,0.87,Bare.ground,0.25
+2023,7/25/23,Avery,E2C,2,4,Control,1.12,0.87,Taraxacum.officinale,0.2
+2023,7/25/23,Avery,E2C,2,4,Control,1.12,0.87,Elymus.lanceolatus,0.01
+2023,7/25/23,Avery,E2C,2,4,Control,1.12,0.87,Erigeron.subtrinervis,0.1
+2023,7/25/23,Avery,E2C,2,4,Control,1.12,0.87,Hesperostipa.comata,0.03
+2023,7/25/23,Avery,E2C,2,4,Control,1.12,0.87,Poa.pratensis,0.18
+2023,7/25/23,Avery,E2C,2,4,Control,1.12,0.87,Potentilla.pulcherrima,0.35
+2023,7/26/23,Avery,E3,3,5,Castilleja,1.005,0.675,Bare.ground,0.33
+2023,7/26/23,Avery,E3,3,5,Castilleja,1.005,0.675,Castilleja.septentrionalis,0.1
+2023,7/26/23,Avery,E3,3,5,Castilleja,1.005,0.675,Taraxacum.officinale,0.12
+2023,7/26/23,Avery,E3,3,5,Castilleja,1.005,0.675,Elymus.lanceolatus,0.005
+2023,7/26/23,Avery,E3,3,5,Castilleja,1.005,0.675,Erigeron.subtrinervis,0.13
+2023,7/26/23,Avery,E3,3,5,Castilleja,1.005,0.675,Poa.pratensis,0.12
+2023,7/26/23,Avery,E3,3,5,Castilleja,1.005,0.675,Potentilla.pulcherrima,0.2
+2023,7/26/23,Avery,E3C,3,6,Control,1.09,0.69,Bare.ground,0.4
+2023,7/26/23,Avery,E3C,3,6,Control,1.09,0.69,Agoseris.sp.,0.03
+2023,7/26/23,Avery,E3C,3,6,Control,1.09,0.69,Taraxacum.officinale,0.3
+2023,7/26/23,Avery,E3C,3,6,Control,1.09,0.69,Erigeron.subtrinervis,0.08
+2023,7/26/23,Avery,E3C,3,6,Control,1.09,0.69,Lathyrus.lanszwertii,0.01
+2023,7/26/23,Avery,E3C,3,6,Control,1.09,0.69,Poa.pratensis,0.18
+2023,7/26/23,Avery,E3C,3,6,Control,1.09,0.69,Potentilla.pulcherrima,0.08
+2023,7/26/23,Avery,E3C,3,6,Control,1.09,0.69,Elymus.trachycaulus,0.01
+2023,7/26/23,Avery,E4,4,7,Castilleja,1.075,0.875,Bare.ground,0.2
+2023,7/26/23,Avery,E4,4,7,Castilleja,1.075,0.875,Agoseris.sp.,0.08
+2023,7/26/23,Avery,E4,4,7,Castilleja,1.075,0.875,Castilleja.septentrionalis,0.03
+2023,7/26/23,Avery,E4,4,7,Castilleja,1.075,0.875,Taraxacum.officinale,0.3
+2023,7/26/23,Avery,E4,4,7,Castilleja,1.075,0.875,Elymus.lanceolatus,0.005
+2023,7/26/23,Avery,E4,4,7,Castilleja,1.075,0.875,Erigeron.subtrinervis,0.1
+2023,7/26/23,Avery,E4,4,7,Castilleja,1.075,0.875,Poa.pratensis,0.13
+2023,7/26/23,Avery,E4,4,7,Castilleja,1.075,0.875,Potentilla.pulcherrima,0.2
+2023,7/26/23,Avery,E4,4,7,Castilleja,1.075,0.875,Thalictrum.fendleri,0.03
+2023,7/26/23,Avery,E4C,4,8,Control,1.11,0.86,Bare.ground,0.25
+2023,7/26/23,Avery,E4C,4,8,Control,1.11,0.86,Agoseris.sp.,0.08
+2023,7/26/23,Avery,E4C,4,8,Control,1.11,0.86,Taraxacum.officinale,0.2
+2023,7/26/23,Avery,E4C,4,8,Control,1.11,0.86,Erigeron.subtrinervis,0.15
+2023,7/26/23,Avery,E4C,4,8,Control,1.11,0.86,Poa.pratensis,0.18
+2023,7/26/23,Avery,E4C,4,8,Control,1.11,0.86,Potentilla.pulcherrima,0.25
+2023,7/26/23,Avery,E5,5,9,Castilleja,1.115,0.665,Bare.ground,0.45
+2023,7/26/23,Avery,E5,5,9,Castilleja,1.115,0.665,Agoseris.sp.,0.03
+2023,7/26/23,Avery,E5,5,9,Castilleja,1.115,0.665,Castilleja.septentrionalis,0.04
+2023,7/26/23,Avery,E5,5,9,Castilleja,1.115,0.665,Taraxacum.officinale,0.4
+2023,7/26/23,Avery,E5,5,9,Castilleja,1.115,0.665,Elymus.lanceolatus,0.005
+2023,7/26/23,Avery,E5,5,9,Castilleja,1.115,0.665,Poa.pratensis,0.11
+2023,7/26/23,Avery,E5,5,9,Castilleja,1.115,0.665,Potentilla.pulcherrima,0.08
+2023,7/26/23,Avery,E5C,5,10,Control,1.005,0.355,Bare.ground,0.65
+2023,7/26/23,Avery,E5C,5,10,Control,1.005,0.355,Taraxacum.officinale,0.2
+2023,7/26/23,Avery,E5C,5,10,Control,1.005,0.355,Elymus.lanceolatus,0.005
+2023,7/26/23,Avery,E5C,5,10,Control,1.005,0.355,Poa.pratensis,0.07
+2023,7/26/23,Avery,E5C,5,10,Control,1.005,0.355,Achillea.millefolium,0.08
+2023,7/26/23,Avery,E6,6,11,Castilleja,1.21,0.91,Bare.ground,0.3
+2023,7/26/23,Avery,E6,6,11,Castilleja,1.21,0.91,Castilleja.septentrionalis,0.12
+2023,7/26/23,Avery,E6,6,11,Castilleja,1.21,0.91,Taraxacum.officinale,0.4
+2023,7/26/23,Avery,E6,6,11,Castilleja,1.21,0.91,Elymus.lanceolatus,0.04
+2023,7/26/23,Avery,E6,6,11,Castilleja,1.21,0.91,Hesperostipa.comata,0.05
+2023,7/26/23,Avery,E6,6,11,Castilleja,1.21,0.91,Poa.pratensis,0.15
+2023,7/26/23,Avery,E6,6,11,Castilleja,1.21,0.91,Potentilla.pulcherrima,0.03
+2023,7/26/23,Avery,E6,6,11,Castilleja,1.21,0.91,Thalictrum.fendleri,0.12
+2023,7/26/23,Avery,E6C,6,12,Control,1.2,0.9,Bare.ground,0.3
+2023,7/26/23,Avery,E6C,6,12,Control,1.2,0.9,Agoseris.sp.,0.03
+2023,7/26/23,Avery,E6C,6,12,Control,1.2,0.9,Taraxacum.officinale,0.15
+2023,7/26/23,Avery,E6C,6,12,Control,1.2,0.9,Erigeron.subtrinervis,0.12
+2023,7/26/23,Avery,E6C,6,12,Control,1.2,0.9,Hesperostipa.comata,0.1
+2023,7/26/23,Avery,E6C,6,12,Control,1.2,0.9,Poa.pratensis,0.1
+2023,7/26/23,Avery,E6C,6,12,Control,1.2,0.9,Potentilla.pulcherrima,0.4
+2023,7/26/23,Avery,E7,7,13,Castilleja,1.21,0.61,Bare.ground,0.6
+2023,7/26/23,Avery,E7,7,13,Castilleja,1.21,0.61,Agoseris.sp.,0.04
+2023,7/26/23,Avery,E7,7,13,Castilleja,1.21,0.61,Castilleja.septentrionalis,0.08
+2023,7/26/23,Avery,E7,7,13,Castilleja,1.21,0.61,Taraxacum.officinale,0.2
+2023,7/26/23,Avery,E7,7,13,Castilleja,1.21,0.61,Erigeron.subtrinervis,0.15
+2023,7/26/23,Avery,E7,7,13,Castilleja,1.21,0.61,Hesperostipa.comata,0.03
+2023,7/26/23,Avery,E7,7,13,Castilleja,1.21,0.61,Poa.pratensis,0.1
+2023,7/26/23,Avery,E7,7,13,Castilleja,1.21,0.61,Potentilla.pulcherrima,0.01
+2023,7/26/23,Avery,E7C,7,14,Control,1.09,0.64,Bare.ground,0.45
+2023,7/26/23,Avery,E7C,7,14,Control,1.09,0.64,Taraxacum.officinale,0.12
+2023,7/26/23,Avery,E7C,7,14,Control,1.09,0.64,Elymus.lanceolatus,0.04
+2023,7/26/23,Avery,E7C,7,14,Control,1.09,0.64,Hesperostipa.comata,0.05
+2023,7/26/23,Avery,E7C,7,14,Control,1.09,0.64,Poa.pratensis,0.13
+2023,7/26/23,Avery,E7C,7,14,Control,1.09,0.64,Potentilla.pulcherrima,0.2
+2023,7/26/23,Avery,E7C,7,14,Control,1.09,0.64,Thalictrum.fendleri,0.1
+2023,7/27/23,Avery,E8,8,15,Castilleja,1.03,0.73,Bare.ground,0.3
+2023,7/27/23,Avery,E8,8,15,Castilleja,1.03,0.73,Agoseris.sp.,0.03
+2023,7/27/23,Avery,E8,8,15,Castilleja,1.03,0.73,Castilleja.septentrionalis,0.12
+2023,7/27/23,Avery,E8,8,15,Castilleja,1.03,0.73,Taraxacum.officinale,0.2
+2023,7/27/23,Avery,E8,8,15,Castilleja,1.03,0.73,Elymus.lanceolatus,0.05
+2023,7/27/23,Avery,E8,8,15,Castilleja,1.03,0.73,Poa.pratensis,0.27
+2023,7/27/23,Avery,E8,8,15,Castilleja,1.03,0.73,Potentilla.pulcherrima,0.02
+2023,7/27/23,Avery,E8,8,15,Castilleja,1.03,0.73,Achillea.millefolium,0.01
+2023,7/27/23,Avery,E8,8,15,Castilleja,1.03,0.73,Solidago.sp.,0.03
+2023,7/27/23,Avery,E8C,8,16,Control,1.06,0.31,Bare.ground,0.75
+2023,7/27/23,Avery,E8C,8,16,Control,1.06,0.31,Taraxacum.officinale,0.1
+2023,7/27/23,Avery,E8C,8,16,Control,1.06,0.31,Erigeron.subtrinervis,0.04
+2023,7/27/23,Avery,E8C,8,16,Control,1.06,0.31,Poa.pratensis,0.15
+2023,7/27/23,Avery,E8C,8,16,Control,1.06,0.31,Solidago.sp.,0.02
+2023,7/27/23,Avery,E9,9,17,Castilleja,1.025,0.625,Bare.ground,0.4
+2023,7/27/23,Avery,E9,9,17,Castilleja,1.025,0.625,Castilleja.septentrionalis,0.02
+2023,7/27/23,Avery,E9,9,17,Castilleja,1.025,0.625,Taraxacum.officinale,0.25
+2023,7/27/23,Avery,E9,9,17,Castilleja,1.025,0.625,Erigeron.subtrinervis,0.2
+2023,7/27/23,Avery,E9,9,17,Castilleja,1.025,0.625,Lathyrus.lanszwertii,0.08
+2023,7/27/23,Avery,E9,9,17,Castilleja,1.025,0.625,Poa.pratensis,0.05
+2023,7/27/23,Avery,E9,9,17,Castilleja,1.025,0.625,Potentilla.pulcherrima,0.02
+2023,7/27/23,Avery,E9,9,17,Castilleja,1.025,0.625,Boechera.stricta,0.005
+2023,7/27/23,Avery,E9C,9,18,Control,1.01,0.86,Bare.ground,0.15
+2023,7/27/23,Avery,E9C,9,18,Control,1.01,0.86,Agoseris.sp.,0.15
+2023,7/27/23,Avery,E9C,9,18,Control,1.01,0.86,Taraxacum.officinale,0.3
+2023,7/27/23,Avery,E9C,9,18,Control,1.01,0.86,Erigeron.subtrinervis,0.25
+2023,7/27/23,Avery,E9C,9,18,Control,1.01,0.86,Lathyrus.lanszwertii,0.03
+2023,7/27/23,Avery,E9C,9,18,Control,1.01,0.86,Poa.pratensis,0.08
+2023,7/27/23,Avery,E9C,9,18,Control,1.01,0.86,Potentilla.pulcherrima,0.01
+2023,7/27/23,Avery,E9C,9,18,Control,1.01,0.86,Achillea.millefolium,0.04
+2023,7/27/23,Avery,E10,10,19,Castilleja,1.2,0.65,Bare.ground,0.55
+2023,7/27/23,Avery,E10,10,19,Castilleja,1.2,0.65,Castilleja.septentrionalis,0.03
+2023,7/27/23,Avery,E10,10,19,Castilleja,1.2,0.65,Taraxacum.officinale,0.1
+2023,7/27/23,Avery,E10,10,19,Castilleja,1.2,0.65,Elymus.lanceolatus,0.05
+2023,7/27/23,Avery,E10,10,19,Castilleja,1.2,0.65,Erigeron.subtrinervis,0.05
+2023,7/27/23,Avery,E10,10,19,Castilleja,1.2,0.65,Hesperostipa.comata,0.04
+2023,7/27/23,Avery,E10,10,19,Castilleja,1.2,0.65,Poa.pratensis,0.08
+2023,7/27/23,Avery,E10,10,19,Castilleja,1.2,0.65,Potentilla.pulcherrima,0.05
+2023,7/27/23,Avery,E10,10,19,Castilleja,1.2,0.65,Thalictrum.fendleri,0.08
+2023,7/27/23,Avery,E10,10,19,Castilleja,1.2,0.65,Ipomopsis.aggregata,0.02
+2023,7/27/23,Avery,E10,10,19,Castilleja,1.2,0.65,Artemisia.dracunculus,0.15
+2023,7/27/23,Avery,E10C,10,20,Control,1.21,0.51,Bare.ground,0.7
+2023,7/27/23,Avery,E10C,10,20,Control,1.21,0.51,Taraxacum.officinale,0.15
+2023,7/27/23,Avery,E10C,10,20,Control,1.21,0.51,Elymus.lanceolatus,0.08
+2023,7/27/23,Avery,E10C,10,20,Control,1.21,0.51,Poa.pratensis,0.05
+2023,7/27/23,Avery,E10C,10,20,Control,1.21,0.51,Potentilla.pulcherrima,0.04
+2023,7/27/23,Avery,E10C,10,20,Control,1.21,0.51,Thalictrum.fendleri,0.15
+2023,7/27/23,Avery,E10C,10,20,Control,1.21,0.51,Achillea.millefolium,0.04
+2023,7/27/23,Avery,E11,11,21,Castilleja,1.43,0.88,Bare.ground,0.55
+2023,7/27/23,Avery,E11,11,21,Castilleja,1.43,0.88,Castilleja.septentrionalis,0.25
+2023,7/27/23,Avery,E11,11,21,Castilleja,1.43,0.88,Taraxacum.officinale,0.2
+2023,7/27/23,Avery,E11,11,21,Castilleja,1.43,0.88,Elymus.lanceolatus,0.05
+2023,7/27/23,Avery,E11,11,21,Castilleja,1.43,0.88,Erigeron.subtrinervis,0.1
+2023,7/27/23,Avery,E11,11,21,Castilleja,1.43,0.88,Poa.pratensis,0.1
+2023,7/27/23,Avery,E11,11,21,Castilleja,1.43,0.88,Thalictrum.fendleri,0.08
+2023,7/27/23,Avery,E11,11,21,Castilleja,1.43,0.88,Achillea.millefolium,0.1
+2023,7/27/23,Avery,E11C,11,22,Control,1.08,0.73,Bare.ground,0.35
+2023,7/27/23,Avery,E11C,11,22,Control,1.08,0.73,Taraxacum.officinale,0.35
+2023,7/27/23,Avery,E11C,11,22,Control,1.08,0.73,Elymus.lanceolatus,0.04
+2023,7/27/23,Avery,E11C,11,22,Control,1.08,0.73,Erigeron.subtrinervis,0.08
+2023,7/27/23,Avery,E11C,11,22,Control,1.08,0.73,Poa.pratensis,0.05
+2023,7/27/23,Avery,E11C,11,22,Control,1.08,0.73,Potentilla.pulcherrima,0.01
+2023,7/27/23,Avery,E11C,11,22,Control,1.08,0.73,Thalictrum.fendleri,0.12
+2023,7/27/23,Avery,E11C,11,22,Control,1.08,0.73,Ipomopsis.aggregata,0.08
+2023,7/27/23,Avery,E12,12,23,Castilleja,1.16,0.81,Bare.ground,0.35
+2023,7/27/23,Avery,E12,12,23,Castilleja,1.16,0.81,Castilleja.septentrionalis,0.05
+2023,7/27/23,Avery,E12,12,23,Castilleja,1.16,0.81,Taraxacum.officinale,0.35
+2023,7/27/23,Avery,E12,12,23,Castilleja,1.16,0.81,Erigeron.subtrinervis,0.1
+2023,7/27/23,Avery,E12,12,23,Castilleja,1.16,0.81,Poa.pratensis,0.05
+2023,7/27/23,Avery,E12,12,23,Castilleja,1.16,0.81,Potentilla.pulcherrima,0.08
+2023,7/27/23,Avery,E12,12,23,Castilleja,1.16,0.81,Thalictrum.fendleri,0.15
+2023,7/27/23,Avery,E12,12,23,Castilleja,1.16,0.81,Ipomopsis.aggregata,0.02
+2023,7/27/23,Avery,E12,12,23,Castilleja,1.16,0.81,Boechera.stricta,0.01
+2023,7/27/23,Avery,E12C,12,24,Control,1.16,0.96,Bare.ground,0.2
+2023,7/27/23,Avery,E12C,12,24,Control,1.16,0.96,Taraxacum.officinale,0.5
+2023,7/27/23,Avery,E12C,12,24,Control,1.16,0.96,Elymus.lanceolatus,0.03
+2023,7/27/23,Avery,E12C,12,24,Control,1.16,0.96,Erigeron.subtrinervis,0.15
+2023,7/27/23,Avery,E12C,12,24,Control,1.16,0.96,Poa.pratensis,0.08
+2023,7/27/23,Avery,E12C,12,24,Control,1.16,0.96,Potentilla.pulcherrima,0.04
+2023,7/27/23,Avery,E12C,12,24,Control,1.16,0.96,Thalictrum.fendleri,0.15
+2023,7/27/23,Avery,E12C,12,24,Control,1.16,0.96,Ipomopsis.aggregata,0.01
+2023,7/28/23,Avery,E13,13,25,Castilleja,1.035,0.585,Bare.ground,0.45
+2023,7/28/23,Avery,E13,13,25,Castilleja,1.035,0.585,Castilleja.septentrionalis,0.04
+2023,7/28/23,Avery,E13,13,25,Castilleja,1.035,0.585,Taraxacum.officinale,0.2
+2023,7/28/23,Avery,E13,13,25,Castilleja,1.035,0.585,Erigeron.subtrinervis,0.15
+2023,7/28/23,Avery,E13,13,25,Castilleja,1.035,0.585,Lathyrus.lanszwertii,0.01
+2023,7/28/23,Avery,E13,13,25,Castilleja,1.035,0.585,Poa.pratensis,0.05
+2023,7/28/23,Avery,E13,13,25,Castilleja,1.035,0.585,Potentilla.pulcherrima,0.12
+2023,7/28/23,Avery,E13,13,25,Castilleja,1.035,0.585,Achillea.millefolium,0.01
+2023,7/28/23,Avery,E13,13,25,Castilleja,1.035,0.585,Boechera.stricta,0.005
+2023,7/28/23,Avery,E13C,13,26,Control,1.19,0.59,Bare.ground,0.6
+2023,7/28/23,Avery,E13C,13,26,Control,1.19,0.59,Taraxacum.officinale,0.12
+2023,7/28/23,Avery,E13C,13,26,Control,1.19,0.59,Erigeron.subtrinervis,0.08
+2023,7/28/23,Avery,E13C,13,26,Control,1.19,0.59,Hesperostipa.comata,0.02
+2023,7/28/23,Avery,E13C,13,26,Control,1.19,0.59,Poa.pratensis,0.08
+2023,7/28/23,Avery,E13C,13,26,Control,1.19,0.59,Potentilla.pulcherrima,0.2
+2023,7/28/23,Avery,E13C,13,26,Control,1.19,0.59,Thalictrum.fendleri,0.08
+2023,7/28/23,Avery,E13C,13,26,Control,1.19,0.59,Achillea.millefolium,0.005
+2023,7/28/23,Avery,E13C,13,26,Control,1.19,0.59,Boechera.stricta,0.005
+2023,7/28/23,Avery,E14,14,27,Castilleja,1.02,0.87,Bare.ground,0.15
+2023,7/28/23,Avery,E14,14,27,Castilleja,1.02,0.87,Castilleja.septentrionalis,0.04
+2023,7/28/23,Avery,E14,14,27,Castilleja,1.02,0.87,Taraxacum.officinale,0.35
+2023,7/28/23,Avery,E14,14,27,Castilleja,1.02,0.87,Erigeron.subtrinervis,0.08
+2023,7/28/23,Avery,E14,14,27,Castilleja,1.02,0.87,Hesperostipa.comata,0.04
+2023,7/28/23,Avery,E14,14,27,Castilleja,1.02,0.87,Poa.pratensis,0.15
+2023,7/28/23,Avery,E14,14,27,Castilleja,1.02,0.87,Potentilla.pulcherrima,0.08
+2023,7/28/23,Avery,E14,14,27,Castilleja,1.02,0.87,Thalictrum.fendleri,0.08
+2023,7/28/23,Avery,E14,14,27,Castilleja,1.02,0.87,Ipomopsis.aggregata,0.05
+2023,7/28/23,Avery,E14C,14,28,Control,1.135,0.485,Bare.ground,0.65
+2023,7/28/23,Avery,E14C,14,28,Control,1.135,0.485,Agoseris.sp.,0.03
+2023,7/28/23,Avery,E14C,14,28,Control,1.135,0.485,Taraxacum.officinale,0.15
+2023,7/28/23,Avery,E14C,14,28,Control,1.135,0.485,Poa.pratensis,0.2
+2023,7/28/23,Avery,E14C,14,28,Control,1.135,0.485,Thalictrum.fendleri,0.1
+2023,7/28/23,Avery,E14C,14,28,Control,1.135,0.485,Boechera.stricta,0.005
+2023,7/28/23,Avery,E15,15,29,Castilleja,1.18,0.68,Bare.ground,0.5
+2023,7/28/23,Avery,E15,15,29,Castilleja,1.18,0.68,Agoseris.sp.,0.02
+2023,7/28/23,Avery,E15,15,29,Castilleja,1.18,0.68,Castilleja.septentrionalis,0.12
+2023,7/28/23,Avery,E15,15,29,Castilleja,1.18,0.68,Taraxacum.officinale,0.15
+2023,7/28/23,Avery,E15,15,29,Castilleja,1.18,0.68,Elymus.lanceolatus,0.02
+2023,7/28/23,Avery,E15,15,29,Castilleja,1.18,0.68,Erigeron.subtrinervis,0.15
+2023,7/28/23,Avery,E15,15,29,Castilleja,1.18,0.68,Lathyrus.lanszwertii,0.04
+2023,7/28/23,Avery,E15,15,29,Castilleja,1.18,0.68,Poa.pratensis,0.05
+2023,7/28/23,Avery,E15,15,29,Castilleja,1.18,0.68,Potentilla.pulcherrima,0.08
+2023,7/28/23,Avery,E15,15,29,Castilleja,1.18,0.68,Achillea.millefolium,0.05
+2023,7/28/23,Avery,E15C,15,30,Control,1.055,0.505,Bare.ground,0.55
+2023,7/28/23,Avery,E15C,15,30,Control,1.055,0.505,Taraxacum.officinale,0.08
+2023,7/28/23,Avery,E15C,15,30,Control,1.055,0.505,Elymus.lanceolatus,0.15
+2023,7/28/23,Avery,E15C,15,30,Control,1.055,0.505,Lathyrus.lanszwertii,0.005
+2023,7/28/23,Avery,E15C,15,30,Control,1.055,0.505,Poa.pratensis,0.2
+2023,7/28/23,Avery,E15C,15,30,Control,1.055,0.505,Thalictrum.fendleri,0.01
+2023,7/28/23,Avery,E15C,15,30,Control,1.055,0.505,Achillea.millefolium,0.06
+2023,7/28/23,Avery,E16,16,31,Castilleja,1.02,0.87,Bare.ground,0.15
+2023,7/28/23,Avery,E16,16,31,Castilleja,1.02,0.87,Castilleja.septentrionalis,0.08
+2023,7/28/23,Avery,E16,16,31,Castilleja,1.02,0.87,Taraxacum.officinale,0.4
+2023,7/28/23,Avery,E16,16,31,Castilleja,1.02,0.87,Elymus.lanceolatus,0.1
+2023,7/28/23,Avery,E16,16,31,Castilleja,1.02,0.87,Hesperostipa.comata,0.05
+2023,7/28/23,Avery,E16,16,31,Castilleja,1.02,0.87,Poa.pratensis,0.05
+2023,7/28/23,Avery,E16,16,31,Castilleja,1.02,0.87,Potentilla.pulcherrima,0.1
+2023,7/28/23,Avery,E16,16,31,Castilleja,1.02,0.87,Achillea.millefolium,0.04
+2023,7/28/23,Avery,E16,16,31,Castilleja,1.02,0.87,Ipomopsis.aggregata,0.05
+2023,7/28/23,Avery,E16C,16,32,Control,1.07,0.47,Bare.ground,0.6
+2023,7/28/23,Avery,E16C,16,32,Control,1.07,0.47,Taraxacum.officinale,0.25
+2023,7/28/23,Avery,E16C,16,32,Control,1.07,0.47,Elymus.lanceolatus,0.08
+2023,7/28/23,Avery,E16C,16,32,Control,1.07,0.47,Hesperostipa.comata,0.02
+2023,7/28/23,Avery,E16C,16,32,Control,1.07,0.47,Poa.pratensis,0.08
+2023,7/28/23,Avery,E16C,16,32,Control,1.07,0.47,Potentilla.pulcherrima,0.04
+2023,7/28/23,Avery,E17,17,33,Castilleja,1.11,0.81,Bare.ground,0.3
+2023,7/28/23,Avery,E17,17,33,Castilleja,1.11,0.81,Agoseris.sp.,0.04
+2023,7/28/23,Avery,E17,17,33,Castilleja,1.11,0.81,Castilleja.septentrionalis,0.01
+2023,7/28/23,Avery,E17,17,33,Castilleja,1.11,0.81,Taraxacum.officinale,0.15
+2023,7/28/23,Avery,E17,17,33,Castilleja,1.11,0.81,Elymus.lanceolatus,0.01
+2023,7/28/23,Avery,E17,17,33,Castilleja,1.11,0.81,Erigeron.subtrinervis,0.1
+2023,7/28/23,Avery,E17,17,33,Castilleja,1.11,0.81,Hesperostipa.comata,0.05
+2023,7/28/23,Avery,E17,17,33,Castilleja,1.11,0.81,Poa.pratensis,0.06
+2023,7/28/23,Avery,E17,17,33,Castilleja,1.11,0.81,Potentilla.pulcherrima,0.35
+2023,7/28/23,Avery,E17,17,33,Castilleja,1.11,0.81,Ipomopsis.aggregata,0.04
+2023,7/28/23,Avery,E17C,17,34,Control,1.14,0.74,Bare.ground,0.4
+2023,7/28/23,Avery,E17C,17,34,Control,1.14,0.74,Taraxacum.officinale,0.08
+2023,7/28/23,Avery,E17C,17,34,Control,1.14,0.74,Elymus.lanceolatus,0.08
+2023,7/28/23,Avery,E17C,17,34,Control,1.14,0.74,Hesperostipa.comata,0.08
+2023,7/28/23,Avery,E17C,17,34,Control,1.14,0.74,Poa.pratensis,0.05
+2023,7/28/23,Avery,E17C,17,34,Control,1.14,0.74,Potentilla.pulcherrima,0.35
+2023,7/28/23,Avery,E17C,17,34,Control,1.14,0.74,Achillea.millefolium,0.05
+2023,7/28/23,Avery,E17C,17,34,Control,1.14,0.74,Ipomopsis.aggregata,0.05
+2023,7/28/23,Avery,E18,18,35,Castilleja,1.025,0.625,Bare.ground,0.4
+2023,7/28/23,Avery,E18,18,35,Castilleja,1.025,0.625,Agoseris.sp.,0.005
+2023,7/28/23,Avery,E18,18,35,Castilleja,1.025,0.625,Castilleja.septentrionalis,0.05
+2023,7/28/23,Avery,E18,18,35,Castilleja,1.025,0.625,Taraxacum.officinale,0.35
+2023,7/28/23,Avery,E18,18,35,Castilleja,1.025,0.625,Poa.pratensis,0.05
+2023,7/28/23,Avery,E18,18,35,Castilleja,1.025,0.625,Potentilla.pulcherrima,0.12
+2023,7/28/23,Avery,E18,18,35,Castilleja,1.025,0.625,Ipomopsis.aggregata,0.05
+2023,7/28/23,Avery,E18C,18,36,Control,1,0.55,Bare.ground,0.45
+2023,7/28/23,Avery,E18C,18,36,Control,1,0.55,Agoseris.sp.,0.01
+2023,7/28/23,Avery,E18C,18,36,Control,1,0.55,Taraxacum.officinale,0.2
+2023,7/28/23,Avery,E18C,18,36,Control,1,0.55,Erigeron.subtrinervis,0.1
+2023,7/28/23,Avery,E18C,18,36,Control,1,0.55,Hesperostipa.comata,0.04
+2023,7/28/23,Avery,E18C,18,36,Control,1,0.55,Poa.pratensis,0.04
+2023,7/28/23,Avery,E18C,18,36,Control,1,0.55,Potentilla.pulcherrima,0.12
+2023,7/28/23,Avery,E18C,18,36,Control,1,0.55,Ipomopsis.aggregata,0.04
+2023,7/28/23,Avery,E19,19,37,Castilleja,1.01,0.66,Bare.ground,0.35
+2023,7/28/23,Avery,E19,19,37,Castilleja,1.01,0.66,Castilleja.septentrionalis,0.05
+2023,7/28/23,Avery,E19,19,37,Castilleja,1.01,0.66,Taraxacum.officinale,0.25
+2023,7/28/23,Avery,E19,19,37,Castilleja,1.01,0.66,Erigeron.subtrinervis,0.1
+2023,7/28/23,Avery,E19,19,37,Castilleja,1.01,0.66,Poa.pratensis,0.05
+2023,7/28/23,Avery,E19,19,37,Castilleja,1.01,0.66,Potentilla.pulcherrima,0.04
+2023,7/28/23,Avery,E19,19,37,Castilleja,1.01,0.66,Achillea.millefolium,0.15
+2023,7/28/23,Avery,E19,19,37,Castilleja,1.01,0.66,Ipomopsis.aggregata,0.02
+2023,7/28/23,Avery,E19C,19,38,Control,1,0.41,Bare.ground,0.59
+2023,7/28/23,Avery,E19C,19,38,Control,1,0.41,Taraxacum.officinale,0.15
+2023,7/28/23,Avery,E19C,19,38,Control,1,0.41,Elymus.lanceolatus,0.12
+2023,7/28/23,Avery,E19C,19,38,Control,1,0.41,Poa.pratensis,0.05
+2023,7/28/23,Avery,E19C,19,38,Control,1,0.41,Potentilla.pulcherrima,0.02
+2023,7/28/23,Avery,E19C,19,38,Control,1,0.41,Thalictrum.fendleri,0.03
+2023,7/28/23,Avery,E19C,19,38,Control,1,0.41,Achillea.millefolium,0.04
+2023,7/28/23,Avery,E20,20,39,Castilleja,1.15,0.95,Bare.ground,0.2
+2023,7/28/23,Avery,E20,20,39,Castilleja,1.15,0.95,Castilleja.septentrionalis,0.03
+2023,7/28/23,Avery,E20,20,39,Castilleja,1.15,0.95,Taraxacum.officinale,0.1
+2023,7/28/23,Avery,E20,20,39,Castilleja,1.15,0.95,Elymus.lanceolatus,0.04
+2023,7/28/23,Avery,E20,20,39,Castilleja,1.15,0.95,Erigeron.subtrinervis,0.05
+2023,7/28/23,Avery,E20,20,39,Castilleja,1.15,0.95,Poa.pratensis,0.08
+2023,7/28/23,Avery,E20,20,39,Castilleja,1.15,0.95,Potentilla.pulcherrima,0.65
+2023,7/28/23,Avery,E20C,20,40,Control,1.005,0.705,Bare.ground,0.3
+2023,7/28/23,Avery,E20C,20,40,Control,1.005,0.705,Taraxacum.officinale,0.3
+2023,7/28/23,Avery,E20C,20,40,Control,1.005,0.705,Erigeron.subtrinervis,0.06
+2023,7/28/23,Avery,E20C,20,40,Control,1.005,0.705,Poa.pratensis,0.04
+2023,7/28/23,Avery,E20C,20,40,Control,1.005,0.705,Potentilla.pulcherrima,0.3
+2023,7/28/23,Avery,E20C,20,40,Control,1.005,0.705,Ipomopsis.aggregata,0.005
+2023,7/31/23,Emerald Lake,F1,21,41,Castilleja,1.05,0.85,Bare.ground,0.2
+2023,7/31/23,Emerald Lake,F1,21,41,Castilleja,1.05,0.85,Castilleja.septentrionalis,0.02
+2023,7/31/23,Emerald Lake,F1,21,41,Castilleja,1.05,0.85,Taraxacum.officinale,0.15
+2023,7/31/23,Emerald Lake,F1,21,41,Castilleja,1.05,0.85,Poa.pratensis,0.1
+2023,7/31/23,Emerald Lake,F1,21,41,Castilleja,1.05,0.85,Potentilla.pulcherrima,0.2
+2023,7/31/23,Emerald Lake,F1,21,41,Castilleja,1.05,0.85,Achillea.millefolium,0.04
+2023,7/31/23,Emerald Lake,F1,21,41,Castilleja,1.05,0.85,Fragaria.virginiana,0.18
+2023,7/31/23,Emerald Lake,F1,21,41,Castilleja,1.05,0.85,Anemone.multifida,0.08
+2023,7/31/23,Emerald Lake,F1,21,41,Castilleja,1.05,0.85,Senecio.crassulus,0.08
+2023,7/31/23,Emerald Lake,F1C,21,42,Control,1.02,0.87,Bare.ground,0.15
+2023,7/31/23,Emerald Lake,F1C,21,42,Control,1.02,0.87,Agoseris.sp.,0.05
+2023,7/31/23,Emerald Lake,F1C,21,42,Control,1.02,0.87,Taraxacum.officinale,0.08
+2023,7/31/23,Emerald Lake,F1C,21,42,Control,1.02,0.87,Poa.pratensis,0.15
+2023,7/31/23,Emerald Lake,F1C,21,42,Control,1.02,0.87,Potentilla.pulcherrima,0.2
+2023,7/31/23,Emerald Lake,F1C,21,42,Control,1.02,0.87,Elymus.trachycaulus,0.01
+2023,7/31/23,Emerald Lake,F1C,21,42,Control,1.02,0.87,Achillea.millefolium,0.08
+2023,7/31/23,Emerald Lake,F1C,21,42,Control,1.02,0.87,Carex.ebenea,0.04
+2023,7/31/23,Emerald Lake,F1C,21,42,Control,1.02,0.87,Fragaria.virginiana,0.2
+2023,7/31/23,Emerald Lake,F1C,21,42,Control,1.02,0.87,Anemone.multifida,0.01
+2023,7/31/23,Emerald Lake,F1C,21,42,Control,1.02,0.87,Senecio.crassulus,0.05
+2023,7/31/23,Emerald Lake,F2,22,43,Castilleja,1.26,0.71,Bare.ground,0.55
+2023,7/31/23,Emerald Lake,F2,22,43,Castilleja,1.26,0.71,Agoseris.sp.,0.01
+2023,7/31/23,Emerald Lake,F2,22,43,Castilleja,1.26,0.71,Castilleja.septentrionalis,0.04
+2023,7/31/23,Emerald Lake,F2,22,43,Castilleja,1.26,0.71,Taraxacum.officinale,0.03
+2023,7/31/23,Emerald Lake,F2,22,43,Castilleja,1.26,0.71,Poa.pratensis,0.02
+2023,7/31/23,Emerald Lake,F2,22,43,Castilleja,1.26,0.71,Potentilla.pulcherrima,0.12
+2023,7/31/23,Emerald Lake,F2,22,43,Castilleja,1.26,0.71,Thalictrum.fendleri,0.05
+2023,7/31/23,Emerald Lake,F2,22,43,Castilleja,1.26,0.71,Achillea.millefolium,0.05
+2023,7/31/23,Emerald Lake,F2,22,43,Castilleja,1.26,0.71,Fragaria.virginiana,0.08
+2023,7/31/23,Emerald Lake,F2,22,43,Castilleja,1.26,0.71,Anemone.multifida,0.1
+2023,7/31/23,Emerald Lake,F2,22,43,Castilleja,1.26,0.71,Hymenoxys.hoopesii,0.08
+2023,7/31/23,Emerald Lake,F2,22,43,Castilleja,1.26,0.71,Senecio.crassulus,0.05
+2023,7/31/23,Emerald Lake,F2,22,43,Castilleja,1.26,0.71,Cirsium.parryi,0.04
+2023,7/31/23,Emerald Lake,F2,22,43,Castilleja,1.26,0.71,Pyrrocoma.crocea,0.04
+2023,7/31/23,Emerald Lake,F2C,22,44,Control,1.165,0.665,Bare.ground,0.5
+2023,7/31/23,Emerald Lake,F2C,22,44,Control,1.165,0.665,Agoseris.sp.,0.02
+2023,7/31/23,Emerald Lake,F2C,22,44,Control,1.165,0.665,Taraxacum.officinale,0.05
+2023,7/31/23,Emerald Lake,F2C,22,44,Control,1.165,0.665,Poa.pratensis,0.04
+2023,7/31/23,Emerald Lake,F2C,22,44,Control,1.165,0.665,Potentilla.pulcherrima,0.2
+2023,7/31/23,Emerald Lake,F2C,22,44,Control,1.165,0.665,Elymus.trachycaulus,0.005
+2023,7/31/23,Emerald Lake,F2C,22,44,Control,1.165,0.665,Thalictrum.fendleri,0.03
+2023,7/31/23,Emerald Lake,F2C,22,44,Control,1.165,0.665,Achillea.millefolium,0.03
+2023,7/31/23,Emerald Lake,F2C,22,44,Control,1.165,0.665,Fragaria.virginiana,0.05
+2023,7/31/23,Emerald Lake,F2C,22,44,Control,1.165,0.665,Anemone.multifida,0.15
+2023,7/31/23,Emerald Lake,F2C,22,44,Control,1.165,0.665,Hymenoxys.hoopesii,0.01
+2023,7/31/23,Emerald Lake,F2C,22,44,Control,1.165,0.665,Senecio.crassulus,0.03
+2023,7/31/23,Emerald Lake,F2C,22,44,Control,1.165,0.665,Pyrrocoma.crocea,0.05
+2023,7/31/23,Emerald Lake,F3,23,45,Castilleja,1.225,0.625,Bare.ground,0.6
+2023,7/31/23,Emerald Lake,F3,23,45,Castilleja,1.225,0.625,Agoseris.sp.,0.02
+2023,7/31/23,Emerald Lake,F3,23,45,Castilleja,1.225,0.625,Castilleja.septentrionalis,0.02
+2023,7/31/23,Emerald Lake,F3,23,45,Castilleja,1.225,0.625,Taraxacum.officinale,0.05
+2023,7/31/23,Emerald Lake,F3,23,45,Castilleja,1.225,0.625,Poa.pratensis,0.1
+2023,7/31/23,Emerald Lake,F3,23,45,Castilleja,1.225,0.625,Potentilla.pulcherrima,0.18
+2023,7/31/23,Emerald Lake,F3,23,45,Castilleja,1.225,0.625,Elymus.trachycaulus,0.01
+2023,7/31/23,Emerald Lake,F3,23,45,Castilleja,1.225,0.625,Achillea.millefolium,0.08
+2023,7/31/23,Emerald Lake,F3,23,45,Castilleja,1.225,0.625,Fragaria.virginiana,0.04
+2023,7/31/23,Emerald Lake,F3,23,45,Castilleja,1.225,0.625,Anemone.multifida,0.04
+2023,7/31/23,Emerald Lake,F3,23,45,Castilleja,1.225,0.625,Senecio.crassulus,0.06
+2023,7/31/23,Emerald Lake,F3,23,45,Castilleja,1.225,0.625,Phleum.alpinum,0.005
+2023,7/31/23,Emerald Lake,F3,23,45,Castilleja,1.225,0.625,Draba.aurea,0.02
+2023,7/31/23,Emerald Lake,F3C,23,46,Control,1.365,0.665,Bare.ground,0.7
+2023,7/31/23,Emerald Lake,F3C,23,46,Control,1.365,0.665,Agoseris.sp.,0.01
+2023,7/31/23,Emerald Lake,F3C,23,46,Control,1.365,0.665,Poa.pratensis,0.08
+2023,7/31/23,Emerald Lake,F3C,23,46,Control,1.365,0.665,Potentilla.pulcherrima,0.12
+2023,7/31/23,Emerald Lake,F3C,23,46,Control,1.365,0.665,Thalictrum.fendleri,0.08
+2023,7/31/23,Emerald Lake,F3C,23,46,Control,1.365,0.665,Achillea.millefolium,0.04
+2023,7/31/23,Emerald Lake,F3C,23,46,Control,1.365,0.665,Carex.ebenea,0.01
+2023,7/31/23,Emerald Lake,F3C,23,46,Control,1.365,0.665,Fragaria.virginiana,0.08
+2023,7/31/23,Emerald Lake,F3C,23,46,Control,1.365,0.665,Anemone.multifida,0.08
+2023,7/31/23,Emerald Lake,F3C,23,46,Control,1.365,0.665,Senecio.crassulus,0.005
+2023,7/31/23,Emerald Lake,F3C,23,46,Control,1.365,0.665,Pyrrocoma.crocea,0.1
+2023,7/31/23,Emerald Lake,F3C,23,46,Control,1.365,0.665,Draba.aurea,0.02
+2023,7/31/23,Emerald Lake,F3C,23,46,Control,1.365,0.665,Poa.alpina,0.04
+2023,7/31/23,Emerald Lake,F4,24,47,Castilleja,1.11,0.76,Bare.ground,0.35
+2023,7/31/23,Emerald Lake,F4,24,47,Castilleja,1.11,0.76,Agoseris.sp.,0.01
+2023,7/31/23,Emerald Lake,F4,24,47,Castilleja,1.11,0.76,Castilleja.septentrionalis,0.08
+2023,7/31/23,Emerald Lake,F4,24,47,Castilleja,1.11,0.76,Poa.pratensis,0.08
+2023,7/31/23,Emerald Lake,F4,24,47,Castilleja,1.11,0.76,Potentilla.pulcherrima,0.2
+2023,7/31/23,Emerald Lake,F4,24,47,Castilleja,1.11,0.76,Elymus.trachycaulus,0.01
+2023,7/31/23,Emerald Lake,F4,24,47,Castilleja,1.11,0.76,Achillea.millefolium,0.05
+2023,7/31/23,Emerald Lake,F4,24,47,Castilleja,1.11,0.76,Carex.ebenea,0.05
+2023,7/31/23,Emerald Lake,F4,24,47,Castilleja,1.11,0.76,Fragaria.virginiana,0.1
+2023,7/31/23,Emerald Lake,F4,24,47,Castilleja,1.11,0.76,Anemone.multifida,0.04
+2023,7/31/23,Emerald Lake,F4,24,47,Castilleja,1.11,0.76,Hymenoxys.hoopesii,0.03
+2023,7/31/23,Emerald Lake,F4,24,47,Castilleja,1.11,0.76,Senecio.crassulus,0.1
+2023,7/31/23,Emerald Lake,F4,24,47,Castilleja,1.11,0.76,Draba.aurea,0.01
+2023,7/31/23,Emerald Lake,F4C,24,48,Control,1.05,0.75,Bare.ground,0.3
+2023,7/31/23,Emerald Lake,F4C,24,48,Control,1.05,0.75,Agoseris.sp.,0.03
+2023,7/31/23,Emerald Lake,F4C,24,48,Control,1.05,0.75,Poa.pratensis,0.04
+2023,7/31/23,Emerald Lake,F4C,24,48,Control,1.05,0.75,Potentilla.pulcherrima,0.2
+2023,7/31/23,Emerald Lake,F4C,24,48,Control,1.05,0.75,Elymus.trachycaulus,0.05
+2023,7/31/23,Emerald Lake,F4C,24,48,Control,1.05,0.75,Achillea.millefolium,0.03
+2023,7/31/23,Emerald Lake,F4C,24,48,Control,1.05,0.75,Carex.ebenea,0.04
+2023,7/31/23,Emerald Lake,F4C,24,48,Control,1.05,0.75,Fragaria.virginiana,0.08
+2023,7/31/23,Emerald Lake,F4C,24,48,Control,1.05,0.75,Anemone.multifida,0.08
+2023,7/31/23,Emerald Lake,F4C,24,48,Control,1.05,0.75,Senecio.crassulus,0.18
+2023,7/31/23,Emerald Lake,F4C,24,48,Control,1.05,0.75,Draba.aurea,0.02
+2023,8/1/23,Emerald Lake,F5,25,49,Castilleja,1.15,0.75,Bare.ground,0.4
+2023,8/1/23,Emerald Lake,F5,25,49,Castilleja,1.15,0.75,Agoseris.sp.,0.03
+2023,8/1/23,Emerald Lake,F5,25,49,Castilleja,1.15,0.75,Castilleja.septentrionalis,0.01
+2023,8/1/23,Emerald Lake,F5,25,49,Castilleja,1.15,0.75,Taraxacum.officinale,0.08
+2023,8/1/23,Emerald Lake,F5,25,49,Castilleja,1.15,0.75,Poa.pratensis,0.08
+2023,8/1/23,Emerald Lake,F5,25,49,Castilleja,1.15,0.75,Potentilla.pulcherrima,0.2
+2023,8/1/23,Emerald Lake,F5,25,49,Castilleja,1.15,0.75,Achillea.millefolium,0.06
+2023,8/1/23,Emerald Lake,F5,25,49,Castilleja,1.15,0.75,Fragaria.virginiana,0.08
+2023,8/1/23,Emerald Lake,F5,25,49,Castilleja,1.15,0.75,Anemone.multifida,0.01
+2023,8/1/23,Emerald Lake,F5,25,49,Castilleja,1.15,0.75,Senecio.crassulus,0.04
+2023,8/1/23,Emerald Lake,F5,25,49,Castilleja,1.15,0.75,Cirsium.parryi,0.01
+2023,8/1/23,Emerald Lake,F5,25,49,Castilleja,1.15,0.75,Erigeron.coulteri,0.15
+2023,8/1/23,Emerald Lake,F5C,25,50,Control,1.28,0.88,Bare.ground,0.4
+2023,8/1/23,Emerald Lake,F5C,25,50,Control,1.28,0.88,Agoseris.sp.,0.02
+2023,8/1/23,Emerald Lake,F5C,25,50,Control,1.28,0.88,Taraxacum.officinale,0.1
+2023,8/1/23,Emerald Lake,F5C,25,50,Control,1.28,0.88,Poa.pratensis,0.04
+2023,8/1/23,Emerald Lake,F5C,25,50,Control,1.28,0.88,Potentilla.pulcherrima,0.12
+2023,8/1/23,Emerald Lake,F5C,25,50,Control,1.28,0.88,Thalictrum.fendleri,0.22
+2023,8/1/23,Emerald Lake,F5C,25,50,Control,1.28,0.88,Achillea.millefolium,0.08
+2023,8/1/23,Emerald Lake,F5C,25,50,Control,1.28,0.88,Carex.ebenea,0.03
+2023,8/1/23,Emerald Lake,F5C,25,50,Control,1.28,0.88,Fragaria.virginiana,0.15
+2023,8/1/23,Emerald Lake,F5C,25,50,Control,1.28,0.88,Senecio.crassulus,0.06
+2023,8/1/23,Emerald Lake,F5C,25,50,Control,1.28,0.88,Phleum.alpinum,0.05
+2023,8/1/23,Emerald Lake,F5C,25,50,Control,1.28,0.88,Erigeron.coulteri,0.01
+2023,8/1/23,Emerald Lake,F6,26,51,Castilleja,1.07,0.72,Bare.ground,0.35
+2023,8/1/23,Emerald Lake,F6,26,51,Castilleja,1.07,0.72,Agoseris.sp.,0.02
+2023,8/1/23,Emerald Lake,F6,26,51,Castilleja,1.07,0.72,Castilleja.septentrionalis,0.04
+2023,8/1/23,Emerald Lake,F6,26,51,Castilleja,1.07,0.72,Taraxacum.officinale,0.04
+2023,8/1/23,Emerald Lake,F6,26,51,Castilleja,1.07,0.72,Elymus.lanceolatus,0.08
+2023,8/1/23,Emerald Lake,F6,26,51,Castilleja,1.07,0.72,Poa.pratensis,0.05
+2023,8/1/23,Emerald Lake,F6,26,51,Castilleja,1.07,0.72,Potentilla.pulcherrima,0.15
+2023,8/1/23,Emerald Lake,F6,26,51,Castilleja,1.07,0.72,Thalictrum.fendleri,0.02
+2023,8/1/23,Emerald Lake,F6,26,51,Castilleja,1.07,0.72,Achillea.millefolium,0.08
+2023,8/1/23,Emerald Lake,F6,26,51,Castilleja,1.07,0.72,Fragaria.virginiana,0.03
+2023,8/1/23,Emerald Lake,F6,26,51,Castilleja,1.07,0.72,Anemone.multifida,0.04
+2023,8/1/23,Emerald Lake,F6,26,51,Castilleja,1.07,0.72,Senecio.crassulus,0.04
+2023,8/1/23,Emerald Lake,F6,26,51,Castilleja,1.07,0.72,Poa.alpina,0.01
+2023,8/1/23,Emerald Lake,F6,26,51,Castilleja,1.07,0.72,Erigeron.coulteri,0.08
+2023,8/1/23,Emerald Lake,F6,26,51,Castilleja,1.07,0.72,Eremogone.congesta,0.04
+2023,8/1/23,Emerald Lake,F6C,26,52,Control,1.035,0.535,Bare.ground,0.5
+2023,8/1/23,Emerald Lake,F6C,26,52,Control,1.035,0.535,Taraxacum.officinale,0.04
+2023,8/1/23,Emerald Lake,F6C,26,52,Control,1.035,0.535,Poa.pratensis,0.08
+2023,8/1/23,Emerald Lake,F6C,26,52,Control,1.035,0.535,Potentilla.pulcherrima,0.08
+2023,8/1/23,Emerald Lake,F6C,26,52,Control,1.035,0.535,Elymus.trachycaulus,0.06
+2023,8/1/23,Emerald Lake,F6C,26,52,Control,1.035,0.535,Achillea.millefolium,0.15
+2023,8/1/23,Emerald Lake,F6C,26,52,Control,1.035,0.535,Fragaria.virginiana,0.05
+2023,8/1/23,Emerald Lake,F6C,26,52,Control,1.035,0.535,Anemone.multifida,0.01
+2023,8/1/23,Emerald Lake,F6C,26,52,Control,1.035,0.535,Senecio.crassulus,0.005
+2023,8/1/23,Emerald Lake,F6C,26,52,Control,1.035,0.535,Draba.aurea,0.01
+2023,8/1/23,Emerald Lake,F6C,26,52,Control,1.035,0.535,Poa.alpina,0.02
+2023,8/1/23,Emerald Lake,F6C,26,52,Control,1.035,0.535,Eremogone.congesta,0.03
+2023,8/1/23,Emerald Lake,F7,27,53,Castilleja,1.01,0.51,Bare.ground,0.5
+2023,8/1/23,Emerald Lake,F7,27,53,Castilleja,1.01,0.51,Agoseris.sp.,0.04
+2023,8/1/23,Emerald Lake,F7,27,53,Castilleja,1.01,0.51,Castilleja.septentrionalis,0.05
+2023,8/1/23,Emerald Lake,F7,27,53,Castilleja,1.01,0.51,Taraxacum.officinale,0.04
+2023,8/1/23,Emerald Lake,F7,27,53,Castilleja,1.01,0.51,Poa.pratensis,0.03
+2023,8/1/23,Emerald Lake,F7,27,53,Castilleja,1.01,0.51,Potentilla.pulcherrima,0.12
+2023,8/1/23,Emerald Lake,F7,27,53,Castilleja,1.01,0.51,Elymus.trachycaulus,0.01
+2023,8/1/23,Emerald Lake,F7,27,53,Castilleja,1.01,0.51,Achillea.millefolium,0.04
+2023,8/1/23,Emerald Lake,F7,27,53,Castilleja,1.01,0.51,Fragaria.virginiana,0.04
+2023,8/1/23,Emerald Lake,F7,27,53,Castilleja,1.01,0.51,Anemone.multifida,0.1
+2023,8/1/23,Emerald Lake,F7,27,53,Castilleja,1.01,0.51,Senecio.crassulus,0.03
+2023,8/1/23,Emerald Lake,F7,27,53,Castilleja,1.01,0.51,Draba.aurea,0.01
+2023,8/1/23,Emerald Lake,F7C,27,54,Control,1.08,0.53,Bare.ground,0.55
+2023,8/1/23,Emerald Lake,F7C,27,54,Control,1.08,0.53,Agoseris.sp.,0.02
+2023,8/1/23,Emerald Lake,F7C,27,54,Control,1.08,0.53,Poa.pratensis,0.04
+2023,8/1/23,Emerald Lake,F7C,27,54,Control,1.08,0.53,Potentilla.pulcherrima,0.25
+2023,8/1/23,Emerald Lake,F7C,27,54,Control,1.08,0.53,Achillea.millefolium,0.08
+2023,8/1/23,Emerald Lake,F7C,27,54,Control,1.08,0.53,Fragaria.virginiana,0.04
+2023,8/1/23,Emerald Lake,F7C,27,54,Control,1.08,0.53,Anemone.multifida,0.06
+2023,8/1/23,Emerald Lake,F7C,27,54,Control,1.08,0.53,Senecio.crassulus,0.01
+2023,8/1/23,Emerald Lake,F7C,27,54,Control,1.08,0.53,Phleum.alpinum,0.02
+2023,8/1/23,Emerald Lake,F7C,27,54,Control,1.08,0.53,Draba.aurea,0.01
+2023,8/1/23,Emerald Lake,F8,28,55,Castilleja,1.05,0.75,Bare.ground,0.3
+2023,8/1/23,Emerald Lake,F8,28,55,Castilleja,1.05,0.75,Agoseris.sp.,0.01
+2023,8/1/23,Emerald Lake,F8,28,55,Castilleja,1.05,0.75,Castilleja.septentrionalis,0.01
+2023,8/1/23,Emerald Lake,F8,28,55,Castilleja,1.05,0.75,Taraxacum.officinale,0.03
+2023,8/1/23,Emerald Lake,F8,28,55,Castilleja,1.05,0.75,Poa.pratensis,0.05
+2023,8/1/23,Emerald Lake,F8,28,55,Castilleja,1.05,0.75,Potentilla.pulcherrima,0.2
+2023,8/1/23,Emerald Lake,F8,28,55,Castilleja,1.05,0.75,Elymus.trachycaulus,0.03
+2023,8/1/23,Emerald Lake,F8,28,55,Castilleja,1.05,0.75,Achillea.millefolium,0.06
+2023,8/1/23,Emerald Lake,F8,28,55,Castilleja,1.05,0.75,Carex.ebenea,0.02
+2023,8/1/23,Emerald Lake,F8,28,55,Castilleja,1.05,0.75,Fragaria.virginiana,0.05
+2023,8/1/23,Emerald Lake,F8,28,55,Castilleja,1.05,0.75,Anemone.multifida,0.1
+2023,8/1/23,Emerald Lake,F8,28,55,Castilleja,1.05,0.75,Senecio.crassulus,0.12
+2023,8/1/23,Emerald Lake,F8,28,55,Castilleja,1.05,0.75,Draba.aurea,0.01
+2023,8/1/23,Emerald Lake,F8,28,55,Castilleja,1.05,0.75,Poa.alpina,0.06
+2023,8/1/23,Emerald Lake,F8C,28,56,Control,1.175,0.625,Bare.ground,0.55
+2023,8/1/23,Emerald Lake,F8C,28,56,Control,1.175,0.625,Agoseris.sp.,0.04
+2023,8/1/23,Emerald Lake,F8C,28,56,Control,1.175,0.625,Poa.pratensis,0.15
+2023,8/1/23,Emerald Lake,F8C,28,56,Control,1.175,0.625,Potentilla.pulcherrima,0.15
+2023,8/1/23,Emerald Lake,F8C,28,56,Control,1.175,0.625,Carex.ebenea,0.01
+2023,8/1/23,Emerald Lake,F8C,28,56,Control,1.175,0.625,Fragaria.virginiana,0.05
+2023,8/1/23,Emerald Lake,F8C,28,56,Control,1.175,0.625,Anemone.multifida,0.12
+2023,8/1/23,Emerald Lake,F8C,28,56,Control,1.175,0.625,Senecio.crassulus,0.06
+2023,8/1/23,Emerald Lake,F8C,28,56,Control,1.175,0.625,Cirsium.parryi,0.04
+2023,8/1/23,Emerald Lake,F8C,28,56,Control,1.175,0.625,Erigeron.coulteri,0.005
+2023,8/1/23,Emerald Lake,F9,29,57,Castilleja,1.17,0.62,Bare.ground,0.55
+2023,8/1/23,Emerald Lake,F9,29,57,Castilleja,1.17,0.62,Agoseris.sp.,0.01
+2023,8/1/23,Emerald Lake,F9,29,57,Castilleja,1.17,0.62,Castilleja.septentrionalis,0.08
+2023,8/1/23,Emerald Lake,F9,29,57,Castilleja,1.17,0.62,Poa.pratensis,0.04
+2023,8/1/23,Emerald Lake,F9,29,57,Castilleja,1.17,0.62,Potentilla.pulcherrima,0.12
+2023,8/1/23,Emerald Lake,F9,29,57,Castilleja,1.17,0.62,Elymus.trachycaulus,0.05
+2023,8/1/23,Emerald Lake,F9,29,57,Castilleja,1.17,0.62,Fragaria.virginiana,0.08
+2023,8/1/23,Emerald Lake,F9,29,57,Castilleja,1.17,0.62,Anemone.multifida,0.05
+2023,8/1/23,Emerald Lake,F9,29,57,Castilleja,1.17,0.62,Senecio.crassulus,0.08
+2023,8/1/23,Emerald Lake,F9,29,57,Castilleja,1.17,0.62,Pyrrocoma.crocea,0.08
+2023,8/1/23,Emerald Lake,F9,29,57,Castilleja,1.17,0.62,Draba.aurea,0.01
+2023,8/1/23,Emerald Lake,F9,29,57,Castilleja,1.17,0.62,Poa.alpina,0.02
+2023,8/1/23,Emerald Lake,F9C,29,58,Control,1.07,0.47,Bare.ground,0.6
+2023,8/1/23,Emerald Lake,F9C,29,58,Control,1.07,0.47,Poa.pratensis,0.05
+2023,8/1/23,Emerald Lake,F9C,29,58,Control,1.07,0.47,Potentilla.pulcherrima,0.12
+2023,8/1/23,Emerald Lake,F9C,29,58,Control,1.07,0.47,Elymus.trachycaulus,0.02
+2023,8/1/23,Emerald Lake,F9C,29,58,Control,1.07,0.47,Achillea.millefolium,0.03
+2023,8/1/23,Emerald Lake,F9C,29,58,Control,1.07,0.47,Fragaria.virginiana,0.04
+2023,8/1/23,Emerald Lake,F9C,29,58,Control,1.07,0.47,Anemone.multifida,0.1
+2023,8/1/23,Emerald Lake,F9C,29,58,Control,1.07,0.47,Senecio.crassulus,0.1
+2023,8/1/23,Emerald Lake,F9C,29,58,Control,1.07,0.47,Draba.aurea,0.01
+2023,8/1/23,Emerald Lake,F10,30,59,Castilleja,1.01,0.66,Bare.ground,0.35
+2023,8/1/23,Emerald Lake,F10,30,59,Castilleja,1.01,0.66,Castilleja.septentrionalis,0.04
+2023,8/1/23,Emerald Lake,F10,30,59,Castilleja,1.01,0.66,Poa.pratensis,0.04
+2023,8/1/23,Emerald Lake,F10,30,59,Castilleja,1.01,0.66,Potentilla.pulcherrima,0.2
+2023,8/1/23,Emerald Lake,F10,30,59,Castilleja,1.01,0.66,Achillea.millefolium,0.02
+2023,8/1/23,Emerald Lake,F10,30,59,Castilleja,1.01,0.66,Carex.ebenea,0.1
+2023,8/1/23,Emerald Lake,F10,30,59,Castilleja,1.01,0.66,Fragaria.virginiana,0.08
+2023,8/1/23,Emerald Lake,F10,30,59,Castilleja,1.01,0.66,Anemone.multifida,0.03
+2023,8/1/23,Emerald Lake,F10,30,59,Castilleja,1.01,0.66,Senecio.crassulus,0.1
+2023,8/1/23,Emerald Lake,F10,30,59,Castilleja,1.01,0.66,Erigeron.coulteri,0.05
+2023,8/1/23,Emerald Lake,F10C,30,60,Control,1.2,0.7,Bare.ground,0.5
+2023,8/1/23,Emerald Lake,F10C,30,60,Control,1.2,0.7,Poa.pratensis,0.03
+2023,8/1/23,Emerald Lake,F10C,30,60,Control,1.2,0.7,Potentilla.pulcherrima,0.35
+2023,8/1/23,Emerald Lake,F10C,30,60,Control,1.2,0.7,Elymus.trachycaulus,0.08
+2023,8/1/23,Emerald Lake,F10C,30,60,Control,1.2,0.7,Achillea.millefolium,0.02
+2023,8/1/23,Emerald Lake,F10C,30,60,Control,1.2,0.7,Carex.ebenea,0.1
+2023,8/1/23,Emerald Lake,F10C,30,60,Control,1.2,0.7,Fragaria.virginiana,0.02
+2023,8/1/23,Emerald Lake,F10C,30,60,Control,1.2,0.7,Senecio.crassulus,0.1
+2023,8/1/23,Emerald Lake,F11,31,61,Castilleja,1.14,0.49,Bare.ground,0.65
+2023,8/1/23,Emerald Lake,F11,31,61,Castilleja,1.14,0.49,Castilleja.septentrionalis,0.05
+2023,8/1/23,Emerald Lake,F11,31,61,Castilleja,1.14,0.49,Poa.pratensis,0.02
+2023,8/1/23,Emerald Lake,F11,31,61,Castilleja,1.14,0.49,Potentilla.pulcherrima,0.15
+2023,8/1/23,Emerald Lake,F11,31,61,Castilleja,1.14,0.49,Elymus.trachycaulus,0.03
+2023,8/1/23,Emerald Lake,F11,31,61,Castilleja,1.14,0.49,Fragaria.virginiana,0.08
+2023,8/1/23,Emerald Lake,F11,31,61,Castilleja,1.14,0.49,Anemone.multifida,0.02
+2023,8/1/23,Emerald Lake,F11,31,61,Castilleja,1.14,0.49,Senecio.crassulus,0.04
+2023,8/1/23,Emerald Lake,F11,31,61,Castilleja,1.14,0.49,Valeriana.edulis,0.1
+2023,8/1/23,Emerald Lake,F11C,31,62,Control,1.01,0.61,Bare.ground,0.4
+2023,8/1/23,Emerald Lake,F11C,31,62,Control,1.01,0.61,Taraxacum.officinale,0.02
+2023,8/1/23,Emerald Lake,F11C,31,62,Control,1.01,0.61,Poa.pratensis,0.08
+2023,8/1/23,Emerald Lake,F11C,31,62,Control,1.01,0.61,Potentilla.pulcherrima,0.3
+2023,8/1/23,Emerald Lake,F11C,31,62,Control,1.01,0.61,Elymus.trachycaulus,0.04
+2023,8/1/23,Emerald Lake,F11C,31,62,Control,1.01,0.61,Thalictrum.fendleri,0.08
+2023,8/1/23,Emerald Lake,F11C,31,62,Control,1.01,0.61,Fragaria.virginiana,0.04
+2023,8/1/23,Emerald Lake,F11C,31,62,Control,1.01,0.61,Senecio.crassulus,0.05
+2023,8/1/23,Emerald Lake,F12,32,63,Castilleja,1.12,0.37,Bare.ground,0.75
+2023,8/1/23,Emerald Lake,F12,32,63,Castilleja,1.12,0.37,Castilleja.septentrionalis,0.08
+2023,8/1/23,Emerald Lake,F12,32,63,Castilleja,1.12,0.37,Poa.pratensis,0.03
+2023,8/1/23,Emerald Lake,F12,32,63,Castilleja,1.12,0.37,Potentilla.pulcherrima,0.1
+2023,8/1/23,Emerald Lake,F12,32,63,Castilleja,1.12,0.37,Achillea.millefolium,0.03
+2023,8/1/23,Emerald Lake,F12,32,63,Castilleja,1.12,0.37,Fragaria.virginiana,0.01
+2023,8/1/23,Emerald Lake,F12,32,63,Castilleja,1.12,0.37,Senecio.crassulus,0.08
+2023,8/1/23,Emerald Lake,F12,32,63,Castilleja,1.12,0.37,Delphinium.barbeyi,0.04
+2023,8/1/23,Emerald Lake,F12C,32,64,Control,1.09,0.29,Bare.ground,0.8
+2023,8/1/23,Emerald Lake,F12C,32,64,Control,1.09,0.29,Poa.pratensis,0.02
+2023,8/1/23,Emerald Lake,F12C,32,64,Control,1.09,0.29,Potentilla.pulcherrima,0.08
+2023,8/1/23,Emerald Lake,F12C,32,64,Control,1.09,0.29,Fragaria.virginiana,0.03
+2023,8/1/23,Emerald Lake,F12C,32,64,Control,1.09,0.29,Senecio.crassulus,0.12
+2023,8/1/23,Emerald Lake,F12C,32,64,Control,1.09,0.29,Cirsium.parryi,0.04
+2023,8/3/23,Emerald Lake,F13,33,65,Castilleja,1.11,0.76,Bare.ground,0.35
+2023,8/3/23,Emerald Lake,F13,33,65,Castilleja,1.11,0.76,Agoseris.sp.,0.04
+2023,8/3/23,Emerald Lake,F13,33,65,Castilleja,1.11,0.76,Castilleja.septentrionalis,0.02
+2023,8/3/23,Emerald Lake,F13,33,65,Castilleja,1.11,0.76,Taraxacum.officinale,0.06
+2023,8/3/23,Emerald Lake,F13,33,65,Castilleja,1.11,0.76,Poa.pratensis,0.1
+2023,8/3/23,Emerald Lake,F13,33,65,Castilleja,1.11,0.76,Potentilla.pulcherrima,0.15
+2023,8/3/23,Emerald Lake,F13,33,65,Castilleja,1.11,0.76,Elymus.trachycaulus,0.04
+2023,8/3/23,Emerald Lake,F13,33,65,Castilleja,1.11,0.76,Achillea.millefolium,0.01
+2023,8/3/23,Emerald Lake,F13,33,65,Castilleja,1.11,0.76,Carex.ebenea,0.03
+2023,8/3/23,Emerald Lake,F13,33,65,Castilleja,1.11,0.76,Fragaria.virginiana,0.15
+2023,8/3/23,Emerald Lake,F13,33,65,Castilleja,1.11,0.76,Senecio.crassulus,0.08
+2023,8/3/23,Emerald Lake,F13,33,65,Castilleja,1.11,0.76,Erigeron.coulteri,0.08
+2023,8/3/23,Emerald Lake,F13C,33,66,Control,1.29,0.54,Bare.ground,0.75
+2023,8/3/23,Emerald Lake,F13C,33,66,Control,1.29,0.54,Taraxacum.officinale,0.08
+2023,8/3/23,Emerald Lake,F13C,33,66,Control,1.29,0.54,Poa.pratensis,0.04
+2023,8/3/23,Emerald Lake,F13C,33,66,Control,1.29,0.54,Potentilla.pulcherrima,0.15
+2023,8/3/23,Emerald Lake,F13C,33,66,Control,1.29,0.54,Achillea.millefolium,0.04
+2023,8/3/23,Emerald Lake,F13C,33,66,Control,1.29,0.54,Carex.ebenea,0.02
+2023,8/3/23,Emerald Lake,F13C,33,66,Control,1.29,0.54,Fragaria.virginiana,0.06
+2023,8/3/23,Emerald Lake,F13C,33,66,Control,1.29,0.54,Senecio.crassulus,0.06
+2023,8/3/23,Emerald Lake,F13C,33,66,Control,1.29,0.54,Draba.aurea,0.01
+2023,8/3/23,Emerald Lake,F13C,33,66,Control,1.29,0.54,Erigeron.coulteri,0.05
+2023,8/3/23,Emerald Lake,F13C,33,66,Control,1.29,0.54,Valeriana.edulis,0.03
+2023,8/3/23,Emerald Lake,F14,34,67,Castilleja,1.15,0.85,Bare.ground,0.3
+2023,8/3/23,Emerald Lake,F14,34,67,Castilleja,1.15,0.85,Agoseris.sp.,0.03
+2023,8/3/23,Emerald Lake,F14,34,67,Castilleja,1.15,0.85,Castilleja.septentrionalis,0.04
+2023,8/3/23,Emerald Lake,F14,34,67,Castilleja,1.15,0.85,Poa.pratensis,0.04
+2023,8/3/23,Emerald Lake,F14,34,67,Castilleja,1.15,0.85,Potentilla.pulcherrima,0.15
+2023,8/3/23,Emerald Lake,F14,34,67,Castilleja,1.15,0.85,Elymus.trachycaulus,0.04
+2023,8/3/23,Emerald Lake,F14,34,67,Castilleja,1.15,0.85,Thalictrum.fendleri,0.06
+2023,8/3/23,Emerald Lake,F14,34,67,Castilleja,1.15,0.85,Achillea.millefolium,0.01
+2023,8/3/23,Emerald Lake,F14,34,67,Castilleja,1.15,0.85,Boechera.stricta,0.03
+2023,8/3/23,Emerald Lake,F14,34,67,Castilleja,1.15,0.85,Carex.ebenea,0.1
+2023,8/3/23,Emerald Lake,F14,34,67,Castilleja,1.15,0.85,Fragaria.virginiana,0.08
+2023,8/3/23,Emerald Lake,F14,34,67,Castilleja,1.15,0.85,Anemone.multifida,0.01
+2023,8/3/23,Emerald Lake,F14,34,67,Castilleja,1.15,0.85,Senecio.crassulus,0.05
+2023,8/3/23,Emerald Lake,F14,34,67,Castilleja,1.15,0.85,Cirsium.parryi,0.12
+2023,8/3/23,Emerald Lake,F14,34,67,Castilleja,1.15,0.85,Draba.aurea,0.01
+2023,8/3/23,Emerald Lake,F14,34,67,Castilleja,1.15,0.85,Erigeron.coulteri,0.08
+2023,8/3/23,Emerald Lake,F14C,34,68,Control,1,0.69,Bare.ground,0.31
+2023,8/3/23,Emerald Lake,F14C,34,68,Control,1,0.69,Agoseris.sp.,0.04
+2023,8/3/23,Emerald Lake,F14C,34,68,Control,1,0.69,Taraxacum.officinale,0.08
+2023,8/3/23,Emerald Lake,F14C,34,68,Control,1,0.69,Poa.pratensis,0.08
+2023,8/3/23,Emerald Lake,F14C,34,68,Control,1,0.69,Potentilla.pulcherrima,0.15
+2023,8/3/23,Emerald Lake,F14C,34,68,Control,1,0.69,Elymus.trachycaulus,0.03
+2023,8/3/23,Emerald Lake,F14C,34,68,Control,1,0.69,Thalictrum.fendleri,0.1
+2023,8/3/23,Emerald Lake,F14C,34,68,Control,1,0.69,Achillea.millefolium,0.02
+2023,8/3/23,Emerald Lake,F14C,34,68,Control,1,0.69,Fragaria.virginiana,0.08
+2023,8/3/23,Emerald Lake,F14C,34,68,Control,1,0.69,Anemone.multifida,0.01
+2023,8/3/23,Emerald Lake,F14C,34,68,Control,1,0.69,Senecio.crassulus,0.1
+2023,8/3/23,Emerald Lake,F15,35,69,Castilleja,1.245,0.745,Bare.ground,0.5
+2023,8/3/23,Emerald Lake,F15,35,69,Castilleja,1.245,0.745,Agoseris.sp.,0.05
+2023,8/3/23,Emerald Lake,F15,35,69,Castilleja,1.245,0.745,Castilleja.septentrionalis,0.04
+2023,8/3/23,Emerald Lake,F15,35,69,Castilleja,1.245,0.745,Taraxacum.officinale,0.06
+2023,8/3/23,Emerald Lake,F15,35,69,Castilleja,1.245,0.745,Poa.pratensis,0.08
+2023,8/3/23,Emerald Lake,F15,35,69,Castilleja,1.245,0.745,Potentilla.pulcherrima,0.12
+2023,8/3/23,Emerald Lake,F15,35,69,Castilleja,1.245,0.745,Elymus.trachycaulus,0.06
+2023,8/3/23,Emerald Lake,F15,35,69,Castilleja,1.245,0.745,Achillea.millefolium,0.005
+2023,8/3/23,Emerald Lake,F15,35,69,Castilleja,1.245,0.745,Fragaria.virginiana,0.1
+2023,8/3/23,Emerald Lake,F15,35,69,Castilleja,1.245,0.745,Anemone.multifida,0.04
+2023,8/3/23,Emerald Lake,F15,35,69,Castilleja,1.245,0.745,Senecio.crassulus,0.06
+2023,8/3/23,Emerald Lake,F15,35,69,Castilleja,1.245,0.745,Draba.aurea,0.01
+2023,8/3/23,Emerald Lake,F15,35,69,Castilleja,1.245,0.745,Erigeron.leiomerus,0.08
+2023,8/3/23,Emerald Lake,F15,35,69,Castilleja,1.245,0.745,Erigeron.coulteri,0.04
+2023,8/3/23,Emerald Lake,F15C,35,70,Control,1.11,0.61,Bare.ground,0.5
+2023,8/3/23,Emerald Lake,F15C,35,70,Control,1.11,0.61,Agoseris.sp.,0.03
+2023,8/3/23,Emerald Lake,F15C,35,70,Control,1.11,0.61,Taraxacum.officinale,0.06
+2023,8/3/23,Emerald Lake,F15C,35,70,Control,1.11,0.61,Poa.pratensis,0.04
+2023,8/3/23,Emerald Lake,F15C,35,70,Control,1.11,0.61,Potentilla.pulcherrima,0.15
+2023,8/3/23,Emerald Lake,F15C,35,70,Control,1.11,0.61,Fragaria.virginiana,0.05
+2023,8/3/23,Emerald Lake,F15C,35,70,Control,1.11,0.61,Anemone.multifida,0.03
+2023,8/3/23,Emerald Lake,F15C,35,70,Control,1.11,0.61,Senecio.crassulus,0.04
+2023,8/3/23,Emerald Lake,F15C,35,70,Control,1.11,0.61,Draba.aurea,0.01
+2023,8/3/23,Emerald Lake,F15C,35,70,Control,1.11,0.61,Erigeron.leiomerus,0.2
+2023,8/3/23,Emerald Lake,F16,36,71,Castilleja,1.06,0.56,Bare.ground,0.5
+2023,8/3/23,Emerald Lake,F16,36,71,Castilleja,1.06,0.56,Castilleja.septentrionalis,0.04
+2023,8/3/23,Emerald Lake,F16,36,71,Castilleja,1.06,0.56,Taraxacum.officinale,0.02
+2023,8/3/23,Emerald Lake,F16,36,71,Castilleja,1.06,0.56,Poa.pratensis,0.05
+2023,8/3/23,Emerald Lake,F16,36,71,Castilleja,1.06,0.56,Potentilla.pulcherrima,0.15
+2023,8/3/23,Emerald Lake,F16,36,71,Castilleja,1.06,0.56,Elymus.trachycaulus,0.04
+2023,8/3/23,Emerald Lake,F16,36,71,Castilleja,1.06,0.56,Fragaria.virginiana,0.08
+2023,8/3/23,Emerald Lake,F16,36,71,Castilleja,1.06,0.56,Anemone.multifida,0.05
+2023,8/3/23,Emerald Lake,F16,36,71,Castilleja,1.06,0.56,Senecio.crassulus,0.05
+2023,8/3/23,Emerald Lake,F16,36,71,Castilleja,1.06,0.56,Viola.adunca,0.08
+2023,8/3/23,Emerald Lake,F16C,36,72,Control,1,0.64,Bare.ground,0.36
+2023,8/3/23,Emerald Lake,F16C,36,72,Control,1,0.64,Agoseris.sp.,0.04
+2023,8/3/23,Emerald Lake,F16C,36,72,Control,1,0.64,Poa.pratensis,0.1
+2023,8/3/23,Emerald Lake,F16C,36,72,Control,1,0.64,Potentilla.pulcherrima,0.25
+2023,8/3/23,Emerald Lake,F16C,36,72,Control,1,0.64,Elymus.trachycaulus,0.01
+2023,8/3/23,Emerald Lake,F16C,36,72,Control,1,0.64,Thalictrum.fendleri,0.08
+2023,8/3/23,Emerald Lake,F16C,36,72,Control,1,0.64,Achillea.millefolium,0.04
+2023,8/3/23,Emerald Lake,F16C,36,72,Control,1,0.64,Fragaria.virginiana,0.06
+2023,8/3/23,Emerald Lake,F16C,36,72,Control,1,0.64,Anemone.multifida,0.03
+2023,8/3/23,Emerald Lake,F16C,36,72,Control,1,0.64,Senecio.crassulus,0.03
+2023,8/3/23,Emerald Lake,F17,37,73,Castilleja,1.03,0.78,Bare.ground,0.25
+2023,8/3/23,Emerald Lake,F17,37,73,Castilleja,1.03,0.78,Agoseris.sp.,0.01
+2023,8/3/23,Emerald Lake,F17,37,73,Castilleja,1.03,0.78,Castilleja.septentrionalis,0.05
+2023,8/3/23,Emerald Lake,F17,37,73,Castilleja,1.03,0.78,Poa.pratensis,0.05
+2023,8/3/23,Emerald Lake,F17,37,73,Castilleja,1.03,0.78,Potentilla.pulcherrima,0.2
+2023,8/3/23,Emerald Lake,F17,37,73,Castilleja,1.03,0.78,Carex.ebenea,0.1
+2023,8/3/23,Emerald Lake,F17,37,73,Castilleja,1.03,0.78,Fragaria.virginiana,0.2
+2023,8/3/23,Emerald Lake,F17,37,73,Castilleja,1.03,0.78,Anemone.multifida,0.06
+2023,8/3/23,Emerald Lake,F17,37,73,Castilleja,1.03,0.78,Senecio.crassulus,0.08
+2023,8/3/23,Emerald Lake,F17,37,73,Castilleja,1.03,0.78,Draba.aurea,0.01
+2023,8/3/23,Emerald Lake,F17,37,73,Castilleja,1.03,0.78,Viola.adunca,0.02
+2023,8/3/23,Emerald Lake,F17C,37,74,Control,1,0.53,Bare.ground,0.47
+2023,8/3/23,Emerald Lake,F17C,37,74,Control,1,0.53,Poa.pratensis,0.15
+2023,8/3/23,Emerald Lake,F17C,37,74,Control,1,0.53,Potentilla.pulcherrima,0.15
+2023,8/3/23,Emerald Lake,F17C,37,74,Control,1,0.53,Fragaria.virginiana,0.06
+2023,8/3/23,Emerald Lake,F17C,37,74,Control,1,0.53,Anemone.multifida,0.03
+2023,8/3/23,Emerald Lake,F17C,37,74,Control,1,0.53,Senecio.crassulus,0.12
+2023,8/3/23,Emerald Lake,F17C,37,74,Control,1,0.53,Cirsium.parryi,0.01
+2023,8/3/23,Emerald Lake,F17C,37,74,Control,1,0.53,Draba.aurea,0.01
+2023,8/3/23,Emerald Lake,F18,38,75,Castilleja,1.075,0.525,Bare.ground,0.55
+2023,8/3/23,Emerald Lake,F18,38,75,Castilleja,1.075,0.525,Castilleja.septentrionalis,0.08
+2023,8/3/23,Emerald Lake,F18,38,75,Castilleja,1.075,0.525,Poa.pratensis,0.03
+2023,8/3/23,Emerald Lake,F18,38,75,Castilleja,1.075,0.525,Potentilla.pulcherrima,0.03
+2023,8/3/23,Emerald Lake,F18,38,75,Castilleja,1.075,0.525,Achillea.millefolium,0.005
+2023,8/3/23,Emerald Lake,F18,38,75,Castilleja,1.075,0.525,Fragaria.virginiana,0.05
+2023,8/3/23,Emerald Lake,F18,38,75,Castilleja,1.075,0.525,Anemone.multifida,0.08
+2023,8/3/23,Emerald Lake,F18,38,75,Castilleja,1.075,0.525,Senecio.crassulus,0.06
+2023,8/3/23,Emerald Lake,F18,38,75,Castilleja,1.075,0.525,Cirsium.parryi,0.18
+2023,8/3/23,Emerald Lake,F18,38,75,Castilleja,1.075,0.525,Draba.aurea,0.01
+2023,8/3/23,Emerald Lake,F18C,38,76,Control,1.07,0.32,Bare.ground,0.75
+2023,8/3/23,Emerald Lake,F18C,38,76,Control,1.07,0.32,Poa.pratensis,0.04
+2023,8/3/23,Emerald Lake,F18C,38,76,Control,1.07,0.32,Potentilla.pulcherrima,0.04
+2023,8/3/23,Emerald Lake,F18C,38,76,Control,1.07,0.32,Fragaria.virginiana,0.04
+2023,8/3/23,Emerald Lake,F18C,38,76,Control,1.07,0.32,Senecio.crassulus,0.1
+2023,8/3/23,Emerald Lake,F18C,38,76,Control,1.07,0.32,Cirsium.parryi,0.1
+2023,8/3/23,Emerald Lake,F19,39,77,Castilleja,1.06,0.71,Bare.ground,0.35
+2023,8/3/23,Emerald Lake,F19,39,77,Castilleja,1.06,0.71,Agoseris.sp.,0.03
+2023,8/3/23,Emerald Lake,F19,39,77,Castilleja,1.06,0.71,Castilleja.septentrionalis,0.12
+2023,8/3/23,Emerald Lake,F19,39,77,Castilleja,1.06,0.71,Taraxacum.officinale,0.06
+2023,8/3/23,Emerald Lake,F19,39,77,Castilleja,1.06,0.71,Poa.pratensis,0.08
+2023,8/3/23,Emerald Lake,F19,39,77,Castilleja,1.06,0.71,Potentilla.pulcherrima,0.08
+2023,8/3/23,Emerald Lake,F19,39,77,Castilleja,1.06,0.71,Achillea.millefolium,0.04
+2023,8/3/23,Emerald Lake,F19,39,77,Castilleja,1.06,0.71,Carex.ebenea,0.05
+2023,8/3/23,Emerald Lake,F19,39,77,Castilleja,1.06,0.71,Fragaria.virginiana,0.12
+2023,8/3/23,Emerald Lake,F19,39,77,Castilleja,1.06,0.71,Anemone.multifida,0.04
+2023,8/3/23,Emerald Lake,F19,39,77,Castilleja,1.06,0.71,Senecio.crassulus,0.04
+2023,8/3/23,Emerald Lake,F19,39,77,Castilleja,1.06,0.71,Draba.aurea,0.01
+2023,8/3/23,Emerald Lake,F19,39,77,Castilleja,1.06,0.71,Erigeron.coulteri,0.04
+2023,8/3/23,Emerald Lake,F19C,39,78,Control,1,0.6,Bare.ground,0.4
+2023,8/3/23,Emerald Lake,F19C,39,78,Control,1,0.6,Agoseris.sp.,0.08
+2023,8/3/23,Emerald Lake,F19C,39,78,Control,1,0.6,Taraxacum.officinale,0.02
+2023,8/3/23,Emerald Lake,F19C,39,78,Control,1,0.6,Poa.pratensis,0.08
+2023,8/3/23,Emerald Lake,F19C,39,78,Control,1,0.6,Potentilla.pulcherrima,0.08
+2023,8/3/23,Emerald Lake,F19C,39,78,Control,1,0.6,Achillea.millefolium,0.04
+2023,8/3/23,Emerald Lake,F19C,39,78,Control,1,0.6,Fragaria.virginiana,0.08
+2023,8/3/23,Emerald Lake,F19C,39,78,Control,1,0.6,Anemone.multifida,0.04
+2023,8/3/23,Emerald Lake,F19C,39,78,Control,1,0.6,Senecio.crassulus,0.15
+2023,8/3/23,Emerald Lake,F19C,39,78,Control,1,0.6,Draba.aurea,0.01
+2023,8/3/23,Emerald Lake,F19C,39,78,Control,1,0.6,Erigeron.coulteri,0.02
+2023,8/3/23,Emerald Lake,F20,40,79,Castilleja,1.15,0.65,Bare.ground,0.5
+2023,8/3/23,Emerald Lake,F20,40,79,Castilleja,1.15,0.65,Agoseris.sp.,0.01
+2023,8/3/23,Emerald Lake,F20,40,79,Castilleja,1.15,0.65,Castilleja.septentrionalis,0.04
+2023,8/3/23,Emerald Lake,F20,40,79,Castilleja,1.15,0.65,Poa.pratensis,0.1
+2023,8/3/23,Emerald Lake,F20,40,79,Castilleja,1.15,0.65,Potentilla.pulcherrima,0.1
+2023,8/3/23,Emerald Lake,F20,40,79,Castilleja,1.15,0.65,Elymus.trachycaulus,0.04
+2023,8/3/23,Emerald Lake,F20,40,79,Castilleja,1.15,0.65,Achillea.millefolium,0.06
+2023,8/3/23,Emerald Lake,F20,40,79,Castilleja,1.15,0.65,Fragaria.virginiana,0.12
+2023,8/3/23,Emerald Lake,F20,40,79,Castilleja,1.15,0.65,Anemone.multifida,0.05
+2023,8/3/23,Emerald Lake,F20,40,79,Castilleja,1.15,0.65,Senecio.crassulus,0.1
+2023,8/3/23,Emerald Lake,F20,40,79,Castilleja,1.15,0.65,Draba.aurea,0.01
+2023,8/3/23,Emerald Lake,F20,40,79,Castilleja,1.15,0.65,Viola.adunca,0.02
+2023,8/3/23,Emerald Lake,F20C,40,80,Control,1.035,0.485,Bare.ground,0.55
+2023,8/3/23,Emerald Lake,F20C,40,80,Control,1.035,0.485,Taraxacum.officinale,0.04
+2023,8/3/23,Emerald Lake,F20C,40,80,Control,1.035,0.485,Poa.pratensis,0.12
+2023,8/3/23,Emerald Lake,F20C,40,80,Control,1.035,0.485,Potentilla.pulcherrima,0.12
+2023,8/3/23,Emerald Lake,F20C,40,80,Control,1.035,0.485,Achillea.millefolium,0.01
+2023,8/3/23,Emerald Lake,F20C,40,80,Control,1.035,0.485,Fragaria.virginiana,0.05
+2023,8/3/23,Emerald Lake,F20C,40,80,Control,1.035,0.485,Anemone.multifida,0.08
+2023,8/3/23,Emerald Lake,F20C,40,80,Control,1.035,0.485,Senecio.crassulus,0.06
+2023,8/3/23,Emerald Lake,F20C,40,80,Control,1.035,0.485,Phleum.alpinum,0.005
+2024,10-Jul,Avery,C1,1,1,Castilleja,1.11,0.86,Bare.ground,0.25
+2024,10-Jul,Avery,C1,1,1,Castilleja,1.11,0.86,Achillea.millefolium,0.09
+2024,10-Jul,Avery,C1,1,1,Castilleja,1.11,0.86,Bromus.inermis,0.08
+2024,10-Jul,Avery,C1,1,1,Castilleja,1.11,0.86,Castilleja.septentrionalis,0.12
+2024,10-Jul,Avery,C1,1,1,Castilleja,1.11,0.86,Elymus.lanceolatus,0.03
+2024,10-Jul,Avery,C1,1,1,Castilleja,1.11,0.86,Erigeron.speciosus,0.15
+2024,10-Jul,Avery,C1,1,1,Castilleja,1.11,0.86,Ipomopsis.aggregata,0.04
+2024,10-Jul,Avery,C1,1,1,Castilleja,1.11,0.86,Poa.pratensis,0.08
+2024,10-Jul,Avery,C1,1,1,Castilleja,1.11,0.86,Potentilla.pulcherrima,0.07
+2024,10-Jul,Avery,C1,1,1,Castilleja,1.11,0.86,Taraxacum.officinale,0.2
+2024,10-Jul,Avery,C1C,1,2,Control,1.39,1.29,Bare.ground,0.1
+2024,10-Jul,Avery,C1C,1,2,Control,1.39,1.29,Achillea.millefolium,0.01
+2024,10-Jul,Avery,C1C,1,2,Control,1.39,1.29,Achnatherum.nelsonii,0.03
+2024,10-Jul,Avery,C1C,1,2,Control,1.39,1.29,Agoseris.sp.,0.01
+2024,10-Jul,Avery,C1C,1,2,Control,1.39,1.29,Boechera.stricta,0.005
+2024,10-Jul,Avery,C1C,1,2,Control,1.39,1.29,Erigeron.speciosus,0.05
+2024,10-Jul,Avery,C1C,1,2,Control,1.39,1.29,Fragaria.virginiana,0.15
+2024,10-Jul,Avery,C1C,1,2,Control,1.39,1.29,Ipomopsis.aggregata,0.25
+2024,10-Jul,Avery,C1C,1,2,Control,1.39,1.29,Poa.pratensis,0.25
+2024,10-Jul,Avery,C1C,1,2,Control,1.39,1.29,Potentilla.pulcherrima,0.01
+2024,10-Jul,Avery,C1C,1,2,Control,1.39,1.29,Taraxacum.officinale,0.45
+2024,10-Jul,Avery,C1C,1,2,Control,1.39,1.29,Thalictrum.fendleri,0.07
+2024,10-Jul,Avery,C1C,1,2,Control,1.39,1.29,Viola.adunca,0.005
+2024,10-Jul,Avery,C2,2,3,Castilleja,1.22,1.17,Bare.ground,0.05
+2024,10-Jul,Avery,C2,2,3,Castilleja,1.22,1.17,Agoseris.sp.,0.02
+2024,10-Jul,Avery,C2,2,3,Castilleja,1.22,1.17,Castilleja.septentrionalis,0.05
+2024,10-Jul,Avery,C2,2,3,Castilleja,1.22,1.17,Dactylis.glomerata,0.22
+2024,10-Jul,Avery,C2,2,3,Castilleja,1.22,1.17,Ipomopsis.aggregata,0.02
+2024,10-Jul,Avery,C2,2,3,Castilleja,1.22,1.17,Poa.pratensis,0.04
+2024,10-Jul,Avery,C2,2,3,Castilleja,1.22,1.17,Potentilla.pulcherrima,0.3
+2024,10-Jul,Avery,C2,2,3,Castilleja,1.22,1.17,Taraxacum.officinale,0.45
+2024,10-Jul,Avery,C2,2,3,Castilleja,1.22,1.17,Thalictrum.fendleri,0.02
+2024,10-Jul,Avery,C2,2,3,Castilleja,1.22,1.17,Valeriana.occidentalis,0.05
+2024,10-Jul,Avery,C2C,2,4,Control,1.02,0.92,Bare.ground,0.1
+2024,10-Jul,Avery,C2C,2,4,Control,1.02,0.92,Dactylis.glomerata,0.25
+2024,10-Jul,Avery,C2C,2,4,Control,1.02,0.92,Erigeron.coulteri,0.03
+2024,10-Jul,Avery,C2C,2,4,Control,1.02,0.92,Ipomopsis.aggregata,0.01
+2024,10-Jul,Avery,C2C,2,4,Control,1.02,0.92,Poa.pratensis,0.02
+2024,10-Jul,Avery,C2C,2,4,Control,1.02,0.92,Potentilla.pulcherrima,0.1
+2024,10-Jul,Avery,C2C,2,4,Control,1.02,0.92,Taraxacum.officinale,0.5
+2024,10-Jul,Avery,C2C,2,4,Control,1.02,0.92,Viola.adunca,0.01
+2024,10-Jul,Avery,C3,3,5,Castilleja,1.055,1.005,Bare.ground,0.05
+2024,10-Jul,Avery,C3,3,5,Castilleja,1.055,1.005,Achillea.millefolium,0.03
+2024,10-Jul,Avery,C3,3,5,Castilleja,1.055,1.005,Achnatherum.nelsonii,0.005
+2024,10-Jul,Avery,C3,3,5,Castilleja,1.055,1.005,Agoseris.sp.,0.03
+2024,10-Jul,Avery,C3,3,5,Castilleja,1.055,1.005,Carex.obtusata,0.02
+2024,10-Jul,Avery,C3,3,5,Castilleja,1.055,1.005,Castilleja.septentrionalis,0.02
+2024,10-Jul,Avery,C3,3,5,Castilleja,1.055,1.005,Dactylis.glomerata,0.23
+2024,10-Jul,Avery,C3,3,5,Castilleja,1.055,1.005,Erigeron.coulteri,0.03
+2024,10-Jul,Avery,C3,3,5,Castilleja,1.055,1.005,Ipomopsis.aggregata,0.02
+2024,10-Jul,Avery,C3,3,5,Castilleja,1.055,1.005,Poa.compressa,0.005
+2024,10-Jul,Avery,C3,3,5,Castilleja,1.055,1.005,Poa.pratensis,0.02
+2024,10-Jul,Avery,C3,3,5,Castilleja,1.055,1.005,Potentilla.pulcherrima,0.04
+2024,10-Jul,Avery,C3,3,5,Castilleja,1.055,1.005,Taraxacum.officinale,0.55
+2024,10-Jul,Avery,C3,3,5,Castilleja,1.055,1.005,Viola.adunca,0.005
+2024,10-Jul,Avery,C3C,3,6,Control,1.045,0.895,Bare.ground,0.15
+2024,10-Jul,Avery,C3C,3,6,Control,1.045,0.895,Achnatherum.nelsonii,0.02
+2024,10-Jul,Avery,C3C,3,6,Control,1.045,0.895,Agoseris.sp.,0.01
+2024,10-Jul,Avery,C3C,3,6,Control,1.045,0.895,Elymus.lanceolatus,0.005
+2024,10-Jul,Avery,C3C,3,6,Control,1.045,0.895,Ipomopsis.aggregata,0.01
+2024,10-Jul,Avery,C3C,3,6,Control,1.045,0.895,Poa.compressa,0.01
+2024,10-Jul,Avery,C3C,3,6,Control,1.045,0.895,Poa.pratensis,0.05
+2024,10-Jul,Avery,C3C,3,6,Control,1.045,0.895,Potentilla.pulcherrima,0.03
+2024,10-Jul,Avery,C3C,3,6,Control,1.045,0.895,Taraxacum.officinale,0.75
+2024,10-Jul,Avery,C3C,3,6,Control,1.045,0.895,Viola.adunca,0.01
+2024,10-Jul,Avery,C4,4,7,Castilleja,1.24,1.14,Bare.ground,0.1
+2024,10-Jul,Avery,C4,4,7,Castilleja,1.24,1.14,Achillea.millefolium,0.06
+2024,10-Jul,Avery,C4,4,7,Castilleja,1.24,1.14,Agoseris.sp.,0.02
+2024,10-Jul,Avery,C4,4,7,Castilleja,1.24,1.14,Castilleja.septentrionalis,0.08
+2024,10-Jul,Avery,C4,4,7,Castilleja,1.24,1.14,Elymus.lanceolatus,0.01
+2024,10-Jul,Avery,C4,4,7,Castilleja,1.24,1.14,Erigeron.coulteri,0.03
+2024,10-Jul,Avery,C4,4,7,Castilleja,1.24,1.14,Fragaria.virginiana,0.04
+2024,10-Jul,Avery,C4,4,7,Castilleja,1.24,1.14,Poa.pratensis,0.03
+2024,10-Jul,Avery,C4,4,7,Castilleja,1.24,1.14,Potentilla.pulcherrima,0.07
+2024,10-Jul,Avery,C4,4,7,Castilleja,1.24,1.14,Taraxacum.officinale,0.8
+2024,10-Jul,Avery,C4C,4,8,Control,1,0.75,Bare.ground,0.25
+2024,10-Jul,Avery,C4C,4,8,Control,1,0.75,Achnatherum.nelsonii,0.01
+2024,10-Jul,Avery,C4C,4,8,Control,1,0.75,Agoseris.sp.,0.02
+2024,10-Jul,Avery,C4C,4,8,Control,1,0.75,Dactylis.glomerata,0.12
+2024,10-Jul,Avery,C4C,4,8,Control,1,0.75,Erigeron.coulteri,0.03
+2024,10-Jul,Avery,C4C,4,8,Control,1,0.75,Fragaria.virginiana,0.06
+2024,10-Jul,Avery,C4C,4,8,Control,1,0.75,Ipomopsis.aggregata,0.04
+2024,10-Jul,Avery,C4C,4,8,Control,1,0.75,Lathyrus.lanszwertii,0.03
+2024,10-Jul,Avery,C4C,4,8,Control,1,0.75,Poa.compressa,0.02
+2024,10-Jul,Avery,C4C,4,8,Control,1,0.75,Potentilla.pulcherrima,0.07
+2024,10-Jul,Avery,C4C,4,8,Control,1,0.75,Taraxacum.officinale,0.35
+2024,10-Jul,Avery,C5,5,9,Castilleja,1.35,1.3,Bare.ground,0.05
+2024,10-Jul,Avery,C5,5,9,Castilleja,1.35,1.3,Achnatherum.nelsonii,0.02
+2024,10-Jul,Avery,C5,5,9,Castilleja,1.35,1.3,Agoseris.sp.,0.03
+2024,10-Jul,Avery,C5,5,9,Castilleja,1.35,1.3,Castilleja.septentrionalis,0.02
+2024,10-Jul,Avery,C5,5,9,Castilleja,1.35,1.3,Dactylis.glomerata,0.04
+2024,10-Jul,Avery,C5,5,9,Castilleja,1.35,1.3,Erigeron.coulteri,0.1
+2024,10-Jul,Avery,C5,5,9,Castilleja,1.35,1.3,Fragaria.virginiana,0.02
+2024,10-Jul,Avery,C5,5,9,Castilleja,1.35,1.3,Ipomopsis.aggregata,0.03
+2024,10-Jul,Avery,C5,5,9,Castilleja,1.35,1.3,Poa.compressa,0.03
+2024,10-Jul,Avery,C5,5,9,Castilleja,1.35,1.3,Poa.pratensis,0.03
+2024,10-Jul,Avery,C5,5,9,Castilleja,1.35,1.3,Potentilla.pulcherrima,0.08
+2024,10-Jul,Avery,C5,5,9,Castilleja,1.35,1.3,Taraxacum.officinale,0.9
+2024,10-Jul,Avery,C5C,5,10,Control,1.065,0.965,Bare.ground,0.1
+2024,10-Jul,Avery,C5C,5,10,Control,1.065,0.965,Agoseris.sp.,0.04
+2024,10-Jul,Avery,C5C,5,10,Control,1.065,0.965,Elymus.lanceolatus,0.06
+2024,10-Jul,Avery,C5C,5,10,Control,1.065,0.965,Erigeron.coulteri,0.16
+2024,10-Jul,Avery,C5C,5,10,Control,1.065,0.965,Fragaria.virginiana,0.005
+2024,10-Jul,Avery,C5C,5,10,Control,1.065,0.965,Ipomopsis.aggregata,0.02
+2024,10-Jul,Avery,C5C,5,10,Control,1.065,0.965,Poa.pratensis,0.03
+2024,10-Jul,Avery,C5C,5,10,Control,1.065,0.965,Potentilla.pulcherrima,0.25
+2024,10-Jul,Avery,C5C,5,10,Control,1.065,0.965,Taraxacum.officinale,0.4
+2024,10-Jul,Avery,C6,6,11,Castilleja,1,0.84,Bare.ground,0.16
+2024,10-Jul,Avery,C6,6,11,Castilleja,1,0.84,Achnatherum.nelsonii,0.02
+2024,10-Jul,Avery,C6,6,11,Castilleja,1,0.84,Agoseris.sp.,0.04
+2024,10-Jul,Avery,C6,6,11,Castilleja,1,0.84,Castilleja.septentrionalis,0.01
+2024,10-Jul,Avery,C6,6,11,Castilleja,1,0.84,Erigeron.coulteri,0.25
+2024,10-Jul,Avery,C6,6,11,Castilleja,1,0.84,Ipomopsis.aggregata,0.01
+2024,10-Jul,Avery,C6,6,11,Castilleja,1,0.84,Poa.compressa,0.08
+2024,10-Jul,Avery,C6,6,11,Castilleja,1,0.84,Potentilla.pulcherrima,0.13
+2024,10-Jul,Avery,C6,6,11,Castilleja,1,0.84,Taraxacum.officinale,0.3
+2024,10-Jul,Avery,C6C,6,12,Control,1.3,1.22,Bare.ground,0.08
+2024,10-Jul,Avery,C6C,6,12,Control,1.3,1.22,Achnatherum.nelsonii,0.02
+2024,10-Jul,Avery,C6C,6,12,Control,1.3,1.22,Agoseris.sp.,0.03
+2024,10-Jul,Avery,C6C,6,12,Control,1.3,1.22,Erigeron.coulteri,0.06
+2024,10-Jul,Avery,C6C,6,12,Control,1.3,1.22,Erigeron.speciosus,0.02
+2024,10-Jul,Avery,C6C,6,12,Control,1.3,1.22,Ipomopsis.aggregata,0.04
+2024,10-Jul,Avery,C6C,6,12,Control,1.3,1.22,Poa.compressa,0.05
+2024,10-Jul,Avery,C6C,6,12,Control,1.3,1.22,Potentilla.pulcherrima,0.08
+2024,10-Jul,Avery,C6C,6,12,Control,1.3,1.22,Taraxacum.officinale,0.9
+2024,10-Jul,Avery,C6C,6,12,Control,1.3,1.22,Viola.adunca,0.02
+2024,10-Jul,Avery,C7,7,13,Castilleja,1.345,1.265,Bare.ground,0.08
+2024,10-Jul,Avery,C7,7,13,Castilleja,1.345,1.265,Agoseris.sp.,0.03
+2024,10-Jul,Avery,C7,7,13,Castilleja,1.345,1.265,Botrychium.sp.,0.005
+2024,10-Jul,Avery,C7,7,13,Castilleja,1.345,1.265,Castilleja.septentrionalis,0.15
+2024,10-Jul,Avery,C7,7,13,Castilleja,1.345,1.265,Erigeron.speciosus,0.07
+2024,10-Jul,Avery,C7,7,13,Castilleja,1.345,1.265,Fragaria.virginiana,0.03
+2024,10-Jul,Avery,C7,7,13,Castilleja,1.345,1.265,Ipomopsis.aggregata,0.03
+2024,10-Jul,Avery,C7,7,13,Castilleja,1.345,1.265,Poa.compressa,0.01
+2024,10-Jul,Avery,C7,7,13,Castilleja,1.345,1.265,Potentilla.pulcherrima,0.12
+2024,10-Jul,Avery,C7,7,13,Castilleja,1.345,1.265,Taraxacum.officinale,0.8
+2024,10-Jul,Avery,C7,7,13,Castilleja,1.345,1.265,Viola.adunca,0.02
+2024,10-Jul,Avery,C7C,7,14,Control,1.245,1.195,Bare.ground,0.05
+2024,10-Jul,Avery,C7C,7,14,Control,1.245,1.195,Elymus.lanceolatus,0.03
+2024,10-Jul,Avery,C7C,7,14,Control,1.245,1.195,Erigeron.coulteri,0.04
+2024,10-Jul,Avery,C7C,7,14,Control,1.245,1.195,Fragaria.virginiana,0.03
+2024,10-Jul,Avery,C7C,7,14,Control,1.245,1.195,Ipomopsis.aggregata,0.03
+2024,10-Jul,Avery,C7C,7,14,Control,1.245,1.195,Mertensia.brevistyla,0.005
+2024,10-Jul,Avery,C7C,7,14,Control,1.245,1.195,Poa.compressa,0.03
+2024,10-Jul,Avery,C7C,7,14,Control,1.245,1.195,Potentilla.pulcherrima,0.2
+2024,10-Jul,Avery,C7C,7,14,Control,1.245,1.195,Taraxacum.officinale,0.6
+2024,10-Jul,Avery,C7C,7,14,Control,1.245,1.195,Valeriana.occidentalis,0.17
+2024,10-Jul,Avery,C7C,7,14,Control,1.245,1.195,Viola.adunca,0.06
+2024,10-Jul,Avery,C8,8,15,Castilleja,1.4,1.4,Agoseris.sp.,0.01
+2024,10-Jul,Avery,C8,8,15,Castilleja,1.4,1.4,Castilleja.septentrionalis,0.02
+2024,10-Jul,Avery,C8,8,15,Castilleja,1.4,1.4,Elymus.lanceolatus,0.01
+2024,10-Jul,Avery,C8,8,15,Castilleja,1.4,1.4,Erigeron.speciosus,0.15
+2024,10-Jul,Avery,C8,8,15,Castilleja,1.4,1.4,Fragaria.virginiana,0.03
+2024,10-Jul,Avery,C8,8,15,Castilleja,1.4,1.4,Poa.pratensis,0.06
+2024,10-Jul,Avery,C8,8,15,Castilleja,1.4,1.4,Potentilla.pulcherrima,0.6
+2024,10-Jul,Avery,C8,8,15,Castilleja,1.4,1.4,Taraxacum.officinale,0.35
+2024,10-Jul,Avery,C8,8,15,Castilleja,1.4,1.4,Valeriana.occidentalis,0.07
+2024,10-Jul,Avery,C8,8,15,Castilleja,1.4,1.4,Viola.adunca,0.1
+2024,10-Jul,Avery,C8C,8,16,Control,1,0.94,Bare.ground,0.06
+2024,10-Jul,Avery,C8C,8,16,Control,1,0.94,Agoseris.sp.,0.02
+2024,10-Jul,Avery,C8C,8,16,Control,1,0.94,Elymus.lanceolatus,0.04
+2024,10-Jul,Avery,C8C,8,16,Control,1,0.94,Erigeron.speciosus,0.06
+2024,10-Jul,Avery,C8C,8,16,Control,1,0.94,Poa.compressa,0.04
+2024,10-Jul,Avery,C8C,8,16,Control,1,0.94,Potentilla.pulcherrima,0.3
+2024,10-Jul,Avery,C8C,8,16,Control,1,0.94,Taraxacum.officinale,0.45
+2024,10-Jul,Avery,C8C,8,16,Control,1,0.94,Valeriana.occidentalis,0.03
+2024,7/11/24,Avery,C9,9,17,Castilleja,1.34,1.34,Achillea.millefolium,0.04
+2024,7/11/24,Avery,C9,9,17,Castilleja,1.34,1.34,Agoseris.sp.,0.02
+2024,7/11/24,Avery,C9,9,17,Castilleja,1.34,1.34,Carex.obtusata,0.06
+2024,7/11/24,Avery,C9,9,17,Castilleja,1.34,1.34,Castilleja.septentrionalis,0.07
+2024,7/11/24,Avery,C9,9,17,Castilleja,1.34,1.34,Erigeron.subtrinervis,0.06
+2024,7/11/24,Avery,C9,9,17,Castilleja,1.34,1.34,Fragaria.virginiana,0.07
+2024,7/11/24,Avery,C9,9,17,Castilleja,1.34,1.34,Hymenoxys.hoopesii,0.05
+2024,7/11/24,Avery,C9,9,17,Castilleja,1.34,1.34,Poa.compressa,0.03
+2024,7/11/24,Avery,C9,9,17,Castilleja,1.34,1.34,Potentilla.pulcherrima,0.12
+2024,7/11/24,Avery,C9,9,17,Castilleja,1.34,1.34,Taraxacum.officinale,0.7
+2024,7/11/24,Avery,C9,9,17,Castilleja,1.34,1.34,Valeriana.occidentalis,0.12
+2024,7/11/24,Avery,C9C,9,18,Control,1.11,1.06,Bare.ground,0.05
+2024,7/11/24,Avery,C9C,9,18,Control,1.11,1.06,Agoseris.sp.,0.1
+2024,7/11/24,Avery,C9C,9,18,Control,1.11,1.06,Erigeron.subtrinervis,0.15
+2024,7/11/24,Avery,C9C,9,18,Control,1.11,1.06,Ipomopsis.aggregata,0.01
+2024,7/11/24,Avery,C9C,9,18,Control,1.11,1.06,Poa.compressa,0.02
+2024,7/11/24,Avery,C9C,9,18,Control,1.11,1.06,Poa.pratensis,0.04
+2024,7/11/24,Avery,C9C,9,18,Control,1.11,1.06,Potentilla.pulcherrima,0.2
+2024,7/11/24,Avery,C9C,9,18,Control,1.11,1.06,Taraxacum.officinale,0.45
+2024,7/11/24,Avery,C9C,9,18,Control,1.11,1.06,Valeriana.occidentalis,0.09
+2024,7/11/24,Avery,C10,10,19,Castilleja,1.2,1.2,Achnatherum.nelsonii,0.02
+2024,7/11/24,Avery,C10,10,19,Castilleja,1.2,1.2,Agoseris.sp.,0.02
+2024,7/11/24,Avery,C10,10,19,Castilleja,1.2,1.2,Carex.obtusata,0.04
+2024,7/11/24,Avery,C10,10,19,Castilleja,1.2,1.2,Castilleja.septentrionalis,0.04
+2024,7/11/24,Avery,C10,10,19,Castilleja,1.2,1.2,Dactylis.glomerata,0.12
+2024,7/11/24,Avery,C10,10,19,Castilleja,1.2,1.2,Erigeron.coulteri,0.02
+2024,7/11/24,Avery,C10,10,19,Castilleja,1.2,1.2,Ipomopsis.aggregata,0.05
+2024,7/11/24,Avery,C10,10,19,Castilleja,1.2,1.2,Poa.compressa,0.01
+2024,7/11/24,Avery,C10,10,19,Castilleja,1.2,1.2,Potentilla.pulcherrima,0.3
+2024,7/11/24,Avery,C10,10,19,Castilleja,1.2,1.2,Taraxacum.officinale,0.5
+2024,7/11/24,Avery,C10,10,19,Castilleja,1.2,1.2,Viola.adunca,0.08
+2024,7/11/24,Avery,C10C,10,20,Control,1.1,1.1,Dactylis.glomerata,0.1
+2024,7/11/24,Avery,C10C,10,20,Control,1.1,1.1,Erigeron.subtrinervis,0.12
+2024,7/11/24,Avery,C10C,10,20,Control,1.1,1.1,Hymenoxys.hoopesii,0.04
+2024,7/11/24,Avery,C10C,10,20,Control,1.1,1.1,Ipomopsis.aggregata,0.06
+2024,7/11/24,Avery,C10C,10,20,Control,1.1,1.1,Poa.compressa,0.02
+2024,7/11/24,Avery,C10C,10,20,Control,1.1,1.1,Potentilla.pulcherrima,0.18
+2024,7/11/24,Avery,C10C,10,20,Control,1.1,1.1,Taraxacum.officinale,0.5
+2024,7/11/24,Avery,C10C,10,20,Control,1.1,1.1,Viola.adunca,0.08
+2024,7/11/24,Avery,C11,11,21,Castilleja,1.34,1.29,Bare.ground,0.05
+2024,7/11/24,Avery,C11,11,21,Castilleja,1.34,1.29,Achnatherum.nelsonii,0.01
+2024,7/11/24,Avery,C11,11,21,Castilleja,1.34,1.29,Castilleja.septentrionalis,0.06
+2024,7/11/24,Avery,C11,11,21,Castilleja,1.34,1.29,Dactylis.glomerata,0.01
+2024,7/11/24,Avery,C11,11,21,Castilleja,1.34,1.29,Elymus.lanceolatus,0.01
+2024,7/11/24,Avery,C11,11,21,Castilleja,1.34,1.29,Erigeron.coulteri,0.2
+2024,7/11/24,Avery,C11,11,21,Castilleja,1.34,1.29,Erigeron.subtrinervis,0.06
+2024,7/11/24,Avery,C11,11,21,Castilleja,1.34,1.29,Ipomopsis.aggregata,0.11
+2024,7/11/24,Avery,C11,11,21,Castilleja,1.34,1.29,Poa.pratensis,0.15
+2024,7/11/24,Avery,C11,11,21,Castilleja,1.34,1.29,Potentilla.pulcherrima,0.06
+2024,7/11/24,Avery,C11,11,21,Castilleja,1.34,1.29,Taraxacum.officinale,0.6
+2024,7/11/24,Avery,C11,11,21,Castilleja,1.34,1.29,Valeriana.occidentalis,0.02
+2024,7/11/24,Avery,C11C,11,22,Control,1,0.78,Bare.ground,0.22
+2024,7/11/24,Avery,C11C,11,22,Control,1,0.78,Dactylis.glomerata,0.03
+2024,7/11/24,Avery,C11C,11,22,Control,1,0.78,Erigeron.coulteri,0.03
+2024,7/11/24,Avery,C11C,11,22,Control,1,0.78,Erigeron.subtrinervis,0.04
+2024,7/11/24,Avery,C11C,11,22,Control,1,0.78,Ipomopsis.aggregata,0.04
+2024,7/11/24,Avery,C11C,11,22,Control,1,0.78,Mertensia.brevistyla,0.01
+2024,7/11/24,Avery,C11C,11,22,Control,1,0.78,Poa.pratensis,0.1
+2024,7/11/24,Avery,C11C,11,22,Control,1,0.78,Potentilla.pulcherrima,0.12
+2024,7/11/24,Avery,C11C,11,22,Control,1,0.78,Taraxacum.officinale,0.25
+2024,7/11/24,Avery,C11C,11,22,Control,1,0.78,Thalictrum.fendleri,0.06
+2024,7/11/24,Avery,C11C,11,22,Control,1,0.78,Valeriana.occidentalis,0.1
+2024,7/11/24,Avery,C12,12,23,Castilleja,1.355,1.325,Bare.ground,0.03
+2024,7/11/24,Avery,C12,12,23,Castilleja,1.355,1.325,Achnatherum.nelsonii,0.01
+2024,7/11/24,Avery,C12,12,23,Castilleja,1.355,1.325,Botrychium.sp.,0.005
+2024,7/11/24,Avery,C12,12,23,Castilleja,1.355,1.325,Castilleja.septentrionalis,0.1
+2024,7/11/24,Avery,C12,12,23,Castilleja,1.355,1.325,Dactylis.glomerata,0.04
+2024,7/11/24,Avery,C12,12,23,Castilleja,1.355,1.325,Erigeron.coulteri,0.09
+2024,7/11/24,Avery,C12,12,23,Castilleja,1.355,1.325,Erigeron.subtrinervis,0.11
+2024,7/11/24,Avery,C12,12,23,Castilleja,1.355,1.325,Ipomopsis.aggregata,0.08
+2024,7/11/24,Avery,C12,12,23,Castilleja,1.355,1.325,Poa.compressa,0.02
+2024,7/11/24,Avery,C12,12,23,Castilleja,1.355,1.325,Poa.pratensis,0.15
+2024,7/11/24,Avery,C12,12,23,Castilleja,1.355,1.325,Potentilla.pulcherrima,0.06
+2024,7/11/24,Avery,C12,12,23,Castilleja,1.355,1.325,Solidago.multiradiata,0.02
+2024,7/11/24,Avery,C12,12,23,Castilleja,1.355,1.325,Taraxacum.officinale,0.6
+2024,7/11/24,Avery,C12,12,23,Castilleja,1.355,1.325,Trisetum.spicatum,0.03
+2024,7/11/24,Avery,C12,12,23,Castilleja,1.355,1.325,Valeriana.occidentalis,0.01
+2024,7/11/24,Avery,C12C,12,24,Control,1.11,0.96,Bare.ground,0.15
+2024,7/11/24,Avery,C12C,12,24,Control,1.11,0.96,Achnatherum.nelsonii,0.04
+2024,7/11/24,Avery,C12C,12,24,Control,1.11,0.96,Agoseris.sp.,0.01
+2024,7/11/24,Avery,C12C,12,24,Control,1.11,0.96,Bromus.inermis,0.08
+2024,7/11/24,Avery,C12C,12,24,Control,1.11,0.96,Dactylis.glomerata,0.04
+2024,7/11/24,Avery,C12C,12,24,Control,1.11,0.96,Erigeron.subtrinervis,0.02
+2024,7/11/24,Avery,C12C,12,24,Control,1.11,0.96,Lathyrus.lanszwertii,0.02
+2024,7/11/24,Avery,C12C,12,24,Control,1.11,0.96,Poa.pratensis,0.1
+2024,7/11/24,Avery,C12C,12,24,Control,1.11,0.96,Potentilla.pulcherrima,0.08
+2024,7/11/24,Avery,C12C,12,24,Control,1.11,0.96,Taraxacum.officinale,0.22
+2024,7/11/24,Avery,C12C,12,24,Control,1.11,0.96,Valeriana.occidentalis,0.35
+2024,7/11/24,Avery,C13,13,25,Castilleja,1.13,1.03,Bare.ground,0.1
+2024,7/11/24,Avery,C13,13,25,Castilleja,1.13,1.03,Achnatherum.nelsonii,0.04
+2024,7/11/24,Avery,C13,13,25,Castilleja,1.13,1.03,Agoseris.sp.,0.03
+2024,7/11/24,Avery,C13,13,25,Castilleja,1.13,1.03,Bromus.inermis,0.05
+2024,7/11/24,Avery,C13,13,25,Castilleja,1.13,1.03,Castilleja.septentrionalis,0.12
+2024,7/11/24,Avery,C13,13,25,Castilleja,1.13,1.03,Erigeron.coulteri,0.1
+2024,7/11/24,Avery,C13,13,25,Castilleja,1.13,1.03,Erigeron.subtrinervis,0.18
+2024,7/11/24,Avery,C13,13,25,Castilleja,1.13,1.03,Ipomopsis.aggregata,0.08
+2024,7/11/24,Avery,C13,13,25,Castilleja,1.13,1.03,Mertensia.brevistyla,0.01
+2024,7/11/24,Avery,C13,13,25,Castilleja,1.13,1.03,Poa.pratensis,0.08
+2024,7/11/24,Avery,C13,13,25,Castilleja,1.13,1.03,Solidago.multiradiata,0.04
+2024,7/11/24,Avery,C13,13,25,Castilleja,1.13,1.03,Taraxacum.officinale,0.3
+2024,7/11/24,Avery,C13C,13,26,Control,1,0.76,Bare.ground,0.24
+2024,7/11/24,Avery,C13C,13,26,Control,1,0.76,Achnatherum.nelsonii,0.02
+2024,7/11/24,Avery,C13C,13,26,Control,1,0.76,Agoseris.sp.,0.09
+2024,7/11/24,Avery,C13C,13,26,Control,1,0.76,Elymus.lanceolatus,0.02
+2024,7/11/24,Avery,C13C,13,26,Control,1,0.76,Erigeron.coulteri,0.18
+2024,7/11/24,Avery,C13C,13,26,Control,1,0.76,Ipomopsis.aggregata,0.03
+2024,7/11/24,Avery,C13C,13,26,Control,1,0.76,Poa.compressa,0.03
+2024,7/11/24,Avery,C13C,13,26,Control,1,0.76,Taraxacum.officinale,0.35
+2024,7/11/24,Avery,C13C,13,26,Control,1,0.76,Valeriana.occidentalis,0.04
+2024,7/11/24,Avery,C14,14,27,Castilleja,1.19,1.11,Bare.ground,0.08
+2024,7/11/24,Avery,C14,14,27,Castilleja,1.19,1.11,Achnatherum.nelsonii,0.03
+2024,7/11/24,Avery,C14,14,27,Castilleja,1.19,1.11,Agoseris.sp.,0.05
+2024,7/11/24,Avery,C14,14,27,Castilleja,1.19,1.11,Castilleja.septentrionalis,0.1
+2024,7/11/24,Avery,C14,14,27,Castilleja,1.19,1.11,Dactylis.glomerata,0.01
+2024,7/11/24,Avery,C14,14,27,Castilleja,1.19,1.11,Erigeron.subtrinervis,0.13
+2024,7/11/24,Avery,C14,14,27,Castilleja,1.19,1.11,Ipomopsis.aggregata,0.02
+2024,7/11/24,Avery,C14,14,27,Castilleja,1.19,1.11,Poa.compressa,0.08
+2024,7/11/24,Avery,C14,14,27,Castilleja,1.19,1.11,Taraxacum.officinale,0.65
+2024,7/11/24,Avery,C14,14,27,Castilleja,1.19,1.11,Valeriana.occidentalis,0.04
+2024,7/11/24,Avery,C14C,14,28,Control,1.055,0.955,Bare.ground,0.1
+2024,7/11/24,Avery,C14C,14,28,Control,1.055,0.955,Agoseris.sp.,0.04
+2024,7/11/24,Avery,C14C,14,28,Control,1.055,0.955,Bromus.inermis,0.01
+2024,7/11/24,Avery,C14C,14,28,Control,1.055,0.955,Erigeron.subtrinervis,0.15
+2024,7/11/24,Avery,C14C,14,28,Control,1.055,0.955,Ipomopsis.aggregata,0.05
+2024,7/11/24,Avery,C14C,14,28,Control,1.055,0.955,Mertensia.brevistyla,0.01
+2024,7/11/24,Avery,C14C,14,28,Control,1.055,0.955,Poa.compressa,0.05
+2024,7/11/24,Avery,C14C,14,28,Control,1.055,0.955,Potentilla.pulcherrima,0.04
+2024,7/11/24,Avery,C14C,14,28,Control,1.055,0.955,Taraxacum.officinale,0.6
+2024,7/11/24,Avery,C14C,14,28,Control,1.055,0.955,Viola.adunca,0.005
+2024,7/11/24,Avery,C15,15,29,Castilleja,1.06,0.86,Bare.ground,0.2
+2024,7/11/24,Avery,C15,15,29,Castilleja,1.06,0.86,Achillea.millefolium,0.01
+2024,7/11/24,Avery,C15,15,29,Castilleja,1.06,0.86,Agoseris.sp.,0.02
+2024,7/11/24,Avery,C15,15,29,Castilleja,1.06,0.86,Carex.obtusata,0.02
+2024,7/11/24,Avery,C15,15,29,Castilleja,1.06,0.86,Castilleja.septentrionalis,0.07
+2024,7/11/24,Avery,C15,15,29,Castilleja,1.06,0.86,Erigeron.subtrinervis,0.27
+2024,7/11/24,Avery,C15,15,29,Castilleja,1.06,0.86,Ipomopsis.aggregata,0.1
+2024,7/11/24,Avery,C15,15,29,Castilleja,1.06,0.86,Poa.compressa,0.03
+2024,7/11/24,Avery,C15,15,29,Castilleja,1.06,0.86,Potentilla.pulcherrima,0.08
+2024,7/11/24,Avery,C15,15,29,Castilleja,1.06,0.86,Taraxacum.officinale,0.25
+2024,7/11/24,Avery,C15,15,29,Castilleja,1.06,0.86,Viola.adunca,0.01
+2024,7/11/24,Avery,C15C,15,30,Control,1.22,1.02,Bare.ground,0.2
+2024,7/11/24,Avery,C15C,15,30,Control,1.22,1.02,Achillea.millefolium,0.03
+2024,7/11/24,Avery,C15C,15,30,Control,1.22,1.02,Achnatherum.nelsonii,0.02
+2024,7/11/24,Avery,C15C,15,30,Control,1.22,1.02,Agoseris.sp.,0.04
+2024,7/11/24,Avery,C15C,15,30,Control,1.22,1.02,Dactylis.glomerata,0.2
+2024,7/11/24,Avery,C15C,15,30,Control,1.22,1.02,Erigeron.coulteri,0.02
+2024,7/11/24,Avery,C15C,15,30,Control,1.22,1.02,Erigeron.subtrinervis,0.16
+2024,7/11/24,Avery,C15C,15,30,Control,1.22,1.02,Ipomopsis.aggregata,0.04
+2024,7/11/24,Avery,C15C,15,30,Control,1.22,1.02,Poa.compressa,0.1
+2024,7/11/24,Avery,C15C,15,30,Control,1.22,1.02,Potentilla.pulcherrima,0.05
+2024,7/11/24,Avery,C15C,15,30,Control,1.22,1.02,Taraxacum.officinale,0.35
+2024,7/11/24,Avery,C15C,15,30,Control,1.22,1.02,Viola.adunca,0.01
+2024,7/11/24,Avery,C16,16,31,Castilleja,1.12,1.02,Bare.ground,0.1
+2024,7/11/24,Avery,C16,16,31,Castilleja,1.12,1.02,Achillea.millefolium,0.25
+2024,7/11/24,Avery,C16,16,31,Castilleja,1.12,1.02,Achnatherum.nelsonii,0.02
+2024,7/11/24,Avery,C16,16,31,Castilleja,1.12,1.02,Agoseris.sp.,0.04
+2024,7/11/24,Avery,C16,16,31,Castilleja,1.12,1.02,Boechera.stricta,0.03
+2024,7/11/24,Avery,C16,16,31,Castilleja,1.12,1.02,Bromus.inermis,0.03
+2024,7/11/24,Avery,C16,16,31,Castilleja,1.12,1.02,Castilleja.septentrionalis,0.1
+2024,7/11/24,Avery,C16,16,31,Castilleja,1.12,1.02,Dactylis.glomerata,0.02
+2024,7/11/24,Avery,C16,16,31,Castilleja,1.12,1.02,Ipomopsis.aggregata,0.03
+2024,7/11/24,Avery,C16,16,31,Castilleja,1.12,1.02,Poa.compressa,0.03
+2024,7/11/24,Avery,C16,16,31,Castilleja,1.12,1.02,Poa.pratensis,0.06
+2024,7/11/24,Avery,C16,16,31,Castilleja,1.12,1.02,Potentilla.pulcherrima,0.13
+2024,7/11/24,Avery,C16,16,31,Castilleja,1.12,1.02,Solidago.multiradiata,0.03
+2024,7/11/24,Avery,C16,16,31,Castilleja,1.12,1.02,Taraxacum.officinale,0.25
+2024,7/11/24,Avery,C16C,16,32,Control,1,0.65,Bare.ground,0.35
+2024,7/11/24,Avery,C16C,16,32,Control,1,0.65,Bromus.inermis,0.15
+2024,7/11/24,Avery,C16C,16,32,Control,1,0.65,Ipomopsis.aggregata,0.02
+2024,7/11/24,Avery,C16C,16,32,Control,1,0.65,Poa.compressa,0.12
+2024,7/11/24,Avery,C16C,16,32,Control,1,0.65,Potentilla.pulcherrima,0.01
+2024,7/11/24,Avery,C16C,16,32,Control,1,0.65,Taraxacum.officinale,0.35
+2024,7/11/24,Avery,C17,17,33,Castilleja,1.25,1.05,Bare.ground,0.2
+2024,7/11/24,Avery,C17,17,33,Castilleja,1.25,1.05,Achillea.millefolium,0.04
+2024,7/11/24,Avery,C17,17,33,Castilleja,1.25,1.05,Achnatherum.nelsonii,0.01
+2024,7/11/24,Avery,C17,17,33,Castilleja,1.25,1.05,Agoseris.sp.,0.03
+2024,7/11/24,Avery,C17,17,33,Castilleja,1.25,1.05,Castilleja.septentrionalis,0.08
+2024,7/11/24,Avery,C17,17,33,Castilleja,1.25,1.05,Ipomopsis.aggregata,0.01
+2024,7/11/24,Avery,C17,17,33,Castilleja,1.25,1.05,Poa.compressa,0.03
+2024,7/11/24,Avery,C17,17,33,Castilleja,1.25,1.05,Poa.pratensis,0.03
+2024,7/11/24,Avery,C17,17,33,Castilleja,1.25,1.05,Potentilla.pulcherrima,0.07
+2024,7/11/24,Avery,C17,17,33,Castilleja,1.25,1.05,Taraxacum.officinale,0.75
+2024,7/11/24,Avery,C17C,17,34,Control,1.22,1.18,Bare.ground,0.04
+2024,7/11/24,Avery,C17C,17,34,Control,1.22,1.18,Achillea.millefolium,0.09
+2024,7/11/24,Avery,C17C,17,34,Control,1.22,1.18,Agoseris.sp.,0.02
+2024,7/11/24,Avery,C17C,17,34,Control,1.22,1.18,Bromus.inermis,0.04
+2024,7/11/24,Avery,C17C,17,34,Control,1.22,1.18,Elymus.lanceolatus,0.02
+2024,7/11/24,Avery,C17C,17,34,Control,1.22,1.18,Ipomopsis.aggregata,0.08
+2024,7/11/24,Avery,C17C,17,34,Control,1.22,1.18,Poa.compressa,0.05
+2024,7/11/24,Avery,C17C,17,34,Control,1.22,1.18,Potentilla.pulcherrima,0.08
+2024,7/11/24,Avery,C17C,17,34,Control,1.22,1.18,Taraxacum.officinale,0.8
+2024,7/11/24,Avery,C18,18,35,Castilleja,1.22,0.97,Bare.ground,0.25
+2024,7/11/24,Avery,C18,18,35,Castilleja,1.22,0.97,Agoseris.sp.,0.09
+2024,7/11/24,Avery,C18,18,35,Castilleja,1.22,0.97,Bromus.inermis,0.04
+2024,7/11/24,Avery,C18,18,35,Castilleja,1.22,0.97,Castilleja.septentrionalis,0.15
+2024,7/11/24,Avery,C18,18,35,Castilleja,1.22,0.97,Dactylis.glomerata,0.02
+2024,7/11/24,Avery,C18,18,35,Castilleja,1.22,0.97,Elymus.lanceolatus,0.02
+2024,7/11/24,Avery,C18,18,35,Castilleja,1.22,0.97,Erigeron.subtrinervis,0.02
+2024,7/11/24,Avery,C18,18,35,Castilleja,1.22,0.97,Ipomopsis.aggregata,0.03
+2024,7/11/24,Avery,C18,18,35,Castilleja,1.22,0.97,Potentilla.pulcherrima,0.09
+2024,7/11/24,Avery,C18,18,35,Castilleja,1.22,0.97,Taraxacum.officinale,0.4
+2024,7/11/24,Avery,C18,18,35,Castilleja,1.22,0.97,Valeriana.occidentalis,0.11
+2024,7/11/24,Avery,C18C,18,36,Control,1.15,0.97,Bare.ground,0.18
+2024,7/11/24,Avery,C18C,18,36,Control,1.15,0.97,Agoseris.sp.,0.01
+2024,7/11/24,Avery,C18C,18,36,Control,1.15,0.97,Bromus.inermis,0.07
+2024,7/11/24,Avery,C18C,18,36,Control,1.15,0.97,Dactylis.glomerata,0.02
+2024,7/11/24,Avery,C18C,18,36,Control,1.15,0.97,Elymus.lanceolatus,0.03
+2024,7/11/24,Avery,C18C,18,36,Control,1.15,0.97,Ipomopsis.aggregata,0.08
+2024,7/11/24,Avery,C18C,18,36,Control,1.15,0.97,Poa.pratensis,0.04
+2024,7/11/24,Avery,C18C,18,36,Control,1.15,0.97,Potentilla.pulcherrima,0.22
+2024,7/11/24,Avery,C18C,18,36,Control,1.15,0.97,Taraxacum.officinale,0.38
+2024,7/11/24,Avery,C18C,18,36,Control,1.15,0.97,Valeriana.occidentalis,0.12
+2024,7/11/24,Avery,C19,19,37,Castilleja,1.39,1.36,Bare.ground,0.03
+2024,7/11/24,Avery,C19,19,37,Castilleja,1.39,1.36,Achillea.millefolium,0.02
+2024,7/11/24,Avery,C19,19,37,Castilleja,1.39,1.36,Achnatherum.nelsonii,0.01
+2024,7/11/24,Avery,C19,19,37,Castilleja,1.39,1.36,Agoseris.sp.,0.04
+2024,7/11/24,Avery,C19,19,37,Castilleja,1.39,1.36,Bromus.inermis,0.04
+2024,7/11/24,Avery,C19,19,37,Castilleja,1.39,1.36,Castilleja.septentrionalis,0.15
+2024,7/11/24,Avery,C19,19,37,Castilleja,1.39,1.36,Elymus.lanceolatus,0.01
+2024,7/11/24,Avery,C19,19,37,Castilleja,1.39,1.36,Erigeron.subtrinervis,0.03
+2024,7/11/24,Avery,C19,19,37,Castilleja,1.39,1.36,Poa.compressa,0.05
+2024,7/11/24,Avery,C19,19,37,Castilleja,1.39,1.36,Potentilla.pulcherrima,0.06
+2024,7/11/24,Avery,C19,19,37,Castilleja,1.39,1.36,Taraxacum.officinale,0.55
+2024,7/11/24,Avery,C19,19,37,Castilleja,1.39,1.36,Valeriana.occidentalis,0.4
+2024,7/11/24,Avery,C19C,19,38,Control,1.35,1.25,Bare.ground,0.1
+2024,7/11/24,Avery,C19C,19,38,Control,1.35,1.25,Achillea.millefolium,0.01
+2024,7/11/24,Avery,C19C,19,38,Control,1.35,1.25,Agoseris.sp.,0.03
+2024,7/11/24,Avery,C19C,19,38,Control,1.35,1.25,Boechera.stricta,0.005
+2024,7/11/24,Avery,C19C,19,38,Control,1.35,1.25,Elymus.lanceolatus,0.02
+2024,7/11/24,Avery,C19C,19,38,Control,1.35,1.25,Erigeron.subtrinervis,0.08
+2024,7/11/24,Avery,C19C,19,38,Control,1.35,1.25,Mertensia.brevistyla,0.005
+2024,7/11/24,Avery,C19C,19,38,Control,1.35,1.25,Poa.compressa,0.03
+2024,7/11/24,Avery,C19C,19,38,Control,1.35,1.25,Potentilla.pulcherrima,0.09
+2024,7/11/24,Avery,C19C,19,38,Control,1.35,1.25,Taraxacum.officinale,0.85
+2024,7/11/24,Avery,C19C,19,38,Control,1.35,1.25,Valeriana.occidentalis,0.13
+2024,7/11/24,Avery,C20,20,39,Castilleja,1.185,1.105,Bare.ground,0.08
+2024,7/11/24,Avery,C20,20,39,Castilleja,1.185,1.105,Agoseris.sp.,0.02
+2024,7/11/24,Avery,C20,20,39,Castilleja,1.185,1.105,Boechera.stricta,0.005
+2024,7/11/24,Avery,C20,20,39,Castilleja,1.185,1.105,Castilleja.septentrionalis,0.1
+2024,7/11/24,Avery,C20,20,39,Castilleja,1.185,1.105,Ipomopsis.aggregata,0.01
+2024,7/11/24,Avery,C20,20,39,Castilleja,1.185,1.105,Poa.compressa,0.04
+2024,7/11/24,Avery,C20,20,39,Castilleja,1.185,1.105,Potentilla.pulcherrima,0.17
+2024,7/11/24,Avery,C20,20,39,Castilleja,1.185,1.105,Taraxacum.officinale,0.75
+2024,7/11/24,Avery,C20,20,39,Castilleja,1.185,1.105,Valeriana.occidentalis,0.01
+2024,7/11/24,Avery,C20C,20,40,Control,1.11,0.91,Bare.ground,0.2
+2024,7/11/24,Avery,C20C,20,40,Control,1.11,0.91,Achillea.millefolium,0.02
+2024,7/11/24,Avery,C20C,20,40,Control,1.11,0.91,Agoseris.sp.,0.03
+2024,7/11/24,Avery,C20C,20,40,Control,1.11,0.91,Ipomopsis.aggregata,0.05
+2024,7/11/24,Avery,C20C,20,40,Control,1.11,0.91,Poa.compressa,0.02
+2024,7/11/24,Avery,C20C,20,40,Control,1.11,0.91,Potentilla.pulcherrima,0.05
+2024,7/11/24,Avery,C20C,20,40,Control,1.11,0.91,Taraxacum.officinale,0.65
+2024,7/11/24,Avery,C20C,20,40,Control,1.11,0.91,Valeriana.occidentalis,0.09
+2024,18-Jul,Copper Creek,E1,1,1,Castilleja,1.055,0.655,Bare.ground,0.4
+2024,18-Jul,Copper Creek,E1,1,1,Castilleja,1.055,0.655,Campanula.petiolata,0.02
+2024,18-Jul,Copper Creek,E1,1,1,Castilleja,1.055,0.655,Castilleja.septentrionalis,0.05
+2024,18-Jul,Copper Creek,E1,1,1,Castilleja,1.055,0.655,Chenopodium.atrovirens,0.005
+2024,18-Jul,Copper Creek,E1,1,1,Castilleja,1.055,0.655,Delphinium.nuttalianum,0.01
+2024,18-Jul,Copper Creek,E1,1,1,Castilleja,1.055,0.655,Eremogone.congesta,0.01
+2024,18-Jul,Copper Creek,E1,1,1,Castilleja,1.055,0.655,Frasera.speciosa,0.01
+2024,18-Jul,Copper Creek,E1,1,1,Castilleja,1.055,0.655,Galium.boreale,0.02
+2024,18-Jul,Copper Creek,E1,1,1,Castilleja,1.055,0.655,Helianthella.quinquenerva,0.05
+2024,18-Jul,Copper Creek,E1,1,1,Castilleja,1.055,0.655,Ipomopsis.aggregata,0.09
+2024,18-Jul,Copper Creek,E1,1,1,Castilleja,1.055,0.655,Maianthemum.stellatum,0.03
+2024,18-Jul,Copper Creek,E1,1,1,Castilleja,1.055,0.655,Mertensia.brevistyla,0.02
+2024,18-Jul,Copper Creek,E1,1,1,Castilleja,1.055,0.655,Poa.pratensis,0.05
+2024,18-Jul,Copper Creek,E1,1,1,Castilleja,1.055,0.655,Solidago.multiradiata,0.12
+2024,18-Jul,Copper Creek,E1,1,1,Castilleja,1.055,0.655,Taraxacum.officinale,0.12
+2024,18-Jul,Copper Creek,E1,1,1,Castilleja,1.055,0.655,Vicia.americana,0.03
+2024,18-Jul,Copper Creek,E1,1,1,Castilleja,1.055,0.655,Viola.adunca,0.02
+2024,18-Jul,Copper Creek,E1C,1,2,Control,1.005,0.605,Bare.ground,0.4
+2024,18-Jul,Copper Creek,E1C,1,2,Control,1.005,0.605,Androsace.septentrionales,0.005
+2024,18-Jul,Copper Creek,E1C,1,2,Control,1.005,0.605,Boechera.stricta,0.01
+2024,18-Jul,Copper Creek,E1C,1,2,Control,1.005,0.605,Campanula.petiolata,0.005
+2024,18-Jul,Copper Creek,E1C,1,2,Control,1.005,0.605,Chenopodium.atrovirens,0.01
+2024,18-Jul,Copper Creek,E1C,1,2,Control,1.005,0.605,Eremogone.congesta,0.09
+2024,18-Jul,Copper Creek,E1C,1,2,Control,1.005,0.605,Fragaria.virginiana,0.03
+2024,18-Jul,Copper Creek,E1C,1,2,Control,1.005,0.605,Helianthella.quinquenerva,0.12
+2024,18-Jul,Copper Creek,E1C,1,2,Control,1.005,0.605,Ipomopsis.aggregata,0.01
+2024,18-Jul,Copper Creek,E1C,1,2,Control,1.005,0.605,Maianthemum.stellatum,0.08
+2024,18-Jul,Copper Creek,E1C,1,2,Control,1.005,0.605,Poa.alpina,0.03
+2024,18-Jul,Copper Creek,E1C,1,2,Control,1.005,0.605,Poa.pratensis,0.09
+2024,18-Jul,Copper Creek,E1C,1,2,Control,1.005,0.605,Polygonum.sp.,0.005
+2024,18-Jul,Copper Creek,E1C,1,2,Control,1.005,0.605,Potentilla.pulcherrima,0.01
+2024,18-Jul,Copper Creek,E1C,1,2,Control,1.005,0.605,Solidago.multiradiata,0.02
+2024,18-Jul,Copper Creek,E1C,1,2,Control,1.005,0.605,Taraxacum.officinale,0.04
+2024,18-Jul,Copper Creek,E1C,1,2,Control,1.005,0.605,Thalictrum.fendleri,0.03
+2024,18-Jul,Copper Creek,E1C,1,2,Control,1.005,0.605,Viola.adunca,0.02
+2024,18-Jul,Copper Creek,E2,2,3,Castilleja,1.046,0.746,Bare.ground,0.3
+2024,18-Jul,Copper Creek,E2,2,3,Castilleja,1.046,0.746,Anemone.multifida,0.26
+2024,18-Jul,Copper Creek,E2,2,3,Castilleja,1.046,0.746,Boechera.stricta,0.01
+2024,18-Jul,Copper Creek,E2,2,3,Castilleja,1.046,0.746,Campanula.petiolata,0.02
+2024,18-Jul,Copper Creek,E2,2,3,Castilleja,1.046,0.746,Castilleja.septentrionalis,0.09
+2024,18-Jul,Copper Creek,E2,2,3,Castilleja,1.046,0.746,Eremogone.congesta,0.09
+2024,18-Jul,Copper Creek,E2,2,3,Castilleja,1.046,0.746,Galium.boreale,0.02
+2024,18-Jul,Copper Creek,E2,2,3,Castilleja,1.046,0.746,Helianthella.quinquenerva,0.02
+2024,18-Jul,Copper Creek,E2,2,3,Castilleja,1.046,0.746,Lathyrus.lanszwertii,0.006
+2024,18-Jul,Copper Creek,E2,2,3,Castilleja,1.046,0.746,Maianthemum.stellatum,0.02
+2024,18-Jul,Copper Creek,E2,2,3,Castilleja,1.046,0.746,Mertensia.brevistyla,0.02
+2024,18-Jul,Copper Creek,E2,2,3,Castilleja,1.046,0.746,Poa.pratensis,0.07
+2024,18-Jul,Copper Creek,E2,2,3,Castilleja,1.046,0.746,Solidago.multiradiata,0.02
+2024,18-Jul,Copper Creek,E2,2,3,Castilleja,1.046,0.746,Taraxacum.officinale,0.02
+2024,18-Jul,Copper Creek,E2,2,3,Castilleja,1.046,0.746,Thalictrum.fendleri,0.06
+2024,18-Jul,Copper Creek,E2,2,3,Castilleja,1.046,0.746,Viola.adunca,0.02
+2024,18-Jul,Copper Creek,E2C,2,4,Control,1.04,0.64,Bare.ground,0.4
+2024,18-Jul,Copper Creek,E2C,2,4,Control,1.04,0.64,Anemone.multifida,0.11
+2024,18-Jul,Copper Creek,E2C,2,4,Control,1.04,0.64,Boechera.stricta,0.03
+2024,18-Jul,Copper Creek,E2C,2,4,Control,1.04,0.64,Campanula.petiolata,0.01
+2024,18-Jul,Copper Creek,E2C,2,4,Control,1.04,0.64,Carex.geyeri,0.03
+2024,18-Jul,Copper Creek,E2C,2,4,Control,1.04,0.64,Cymopterus.lemmonii,0.03
+2024,18-Jul,Copper Creek,E2C,2,4,Control,1.04,0.64,Eremogone.congesta,0.11
+2024,18-Jul,Copper Creek,E2C,2,4,Control,1.04,0.64,Erigeron.speciosus,0.03
+2024,18-Jul,Copper Creek,E2C,2,4,Control,1.04,0.64,Helianthella.quinquenerva,0.06
+2024,18-Jul,Copper Creek,E2C,2,4,Control,1.04,0.64,Maianthemum.stellatum,0.03
+2024,18-Jul,Copper Creek,E2C,2,4,Control,1.04,0.64,Mertensia.brevistyla,0.03
+2024,18-Jul,Copper Creek,E2C,2,4,Control,1.04,0.64,Poa.pratensis,0.05
+2024,18-Jul,Copper Creek,E2C,2,4,Control,1.04,0.64,Potentilla.pulcherrima,0.03
+2024,18-Jul,Copper Creek,E2C,2,4,Control,1.04,0.64,Sedum.lanceolatum,0.01
+2024,18-Jul,Copper Creek,E2C,2,4,Control,1.04,0.64,Taraxacum.officinale,0.04
+2024,18-Jul,Copper Creek,E2C,2,4,Control,1.04,0.64,Thalictrum.fendleri,0.02
+2024,18-Jul,Copper Creek,E2C,2,4,Control,1.04,0.64,Viola.adunca,0.02
+2024,18-Jul,Copper Creek,E3,3,5,Castilleja,1.055,0.705,Bare.ground,0.35
+2024,18-Jul,Copper Creek,E3,3,5,Castilleja,1.055,0.705,Achillea.millefolium,0.01
+2024,18-Jul,Copper Creek,E3,3,5,Castilleja,1.055,0.705,Agoseris.sp.,0.02
+2024,18-Jul,Copper Creek,E3,3,5,Castilleja,1.055,0.705,Astragalus.alpinus,0.02
+2024,18-Jul,Copper Creek,E3,3,5,Castilleja,1.055,0.705,Boechera.stricta,0.005
+2024,18-Jul,Copper Creek,E3,3,5,Castilleja,1.055,0.705,Campanula.petiolata,0.07
+2024,18-Jul,Copper Creek,E3,3,5,Castilleja,1.055,0.705,Castilleja.septentrionalis,0.02
+2024,18-Jul,Copper Creek,E3,3,5,Castilleja,1.055,0.705,Cymopterus.lemmonii,0.005
+2024,18-Jul,Copper Creek,E3,3,5,Castilleja,1.055,0.705,Eremogone.congesta,0.06
+2024,18-Jul,Copper Creek,E3,3,5,Castilleja,1.055,0.705,Ipomopsis.aggregata,0.08
+2024,18-Jul,Copper Creek,E3,3,5,Castilleja,1.055,0.705,Mertensia.brevistyla,0.02
+2024,18-Jul,Copper Creek,E3,3,5,Castilleja,1.055,0.705,Poa.pratensis,0.06
+2024,18-Jul,Copper Creek,E3,3,5,Castilleja,1.055,0.705,Polygonum.sp.,0.005
+2024,18-Jul,Copper Creek,E3,3,5,Castilleja,1.055,0.705,Taraxacum.officinale,0.15
+2024,18-Jul,Copper Creek,E3,3,5,Castilleja,1.055,0.705,Thalictrum.fendleri,0.18
+2024,18-Jul,Copper Creek,E3C,3,6,Control,1.195,0.645,Bare.ground,0.55
+2024,18-Jul,Copper Creek,E3C,3,6,Control,1.195,0.645,Anemone.multifida,0.14
+2024,18-Jul,Copper Creek,E3C,3,6,Control,1.195,0.645,Astragalus.alpinus,0.05
+2024,18-Jul,Copper Creek,E3C,3,6,Control,1.195,0.645,Campanula.petiolata,0.02
+2024,18-Jul,Copper Creek,E3C,3,6,Control,1.195,0.645,Chenopodium.atrovirens,0.005
+2024,18-Jul,Copper Creek,E3C,3,6,Control,1.195,0.645,Cymopterus.lemmonii,0.03
+2024,18-Jul,Copper Creek,E3C,3,6,Control,1.195,0.645,Eremogone.congesta,0.07
+2024,18-Jul,Copper Creek,E3C,3,6,Control,1.195,0.645,Ipomopsis.aggregata,0.05
+2024,18-Jul,Copper Creek,E3C,3,6,Control,1.195,0.645,Mertensia.brevistyla,0.03
+2024,18-Jul,Copper Creek,E3C,3,6,Control,1.195,0.645,Poa.pratensis,0.08
+2024,18-Jul,Copper Creek,E3C,3,6,Control,1.195,0.645,Potentilla.pulcherrima,0.03
+2024,18-Jul,Copper Creek,E3C,3,6,Control,1.195,0.645,Taraxacum.officinale,0.14
+2024,18-Jul,Copper Creek,E4,4,7,Castilleja,1.105,0.655,Bare.ground,0.45
+2024,18-Jul,Copper Creek,E4,4,7,Castilleja,1.105,0.655,Anemone.multifida,0.01
+2024,18-Jul,Copper Creek,E4,4,7,Castilleja,1.105,0.655,Astragalus.alpinus,0.07
+2024,18-Jul,Copper Creek,E4,4,7,Castilleja,1.105,0.655,Boechera.stricta,0.02
+2024,18-Jul,Copper Creek,E4,4,7,Castilleja,1.105,0.655,Campanula.petiolata,0.07
+2024,18-Jul,Copper Creek,E4,4,7,Castilleja,1.105,0.655,Castilleja.septentrionalis,0.06
+2024,18-Jul,Copper Creek,E4,4,7,Castilleja,1.105,0.655,Eremogone.congesta,0.15
+2024,18-Jul,Copper Creek,E4,4,7,Castilleja,1.105,0.655,Erigeron.speciosus,0.02
+2024,18-Jul,Copper Creek,E4,4,7,Castilleja,1.105,0.655,Frasera.speciosa,0.02
+2024,18-Jul,Copper Creek,E4,4,7,Castilleja,1.105,0.655,Helianthella.quinquenerva,0.03
+2024,18-Jul,Copper Creek,E4,4,7,Castilleja,1.105,0.655,Mertensia.brevistyla,0.03
+2024,18-Jul,Copper Creek,E4,4,7,Castilleja,1.105,0.655,Poa.alpina,0.02
+2024,18-Jul,Copper Creek,E4,4,7,Castilleja,1.105,0.655,Poa.pratensis,0.08
+2024,18-Jul,Copper Creek,E4,4,7,Castilleja,1.105,0.655,Polygonum.sp.,0.005
+2024,18-Jul,Copper Creek,E4,4,7,Castilleja,1.105,0.655,Taraxacum.officinale,0.07
+2024,18-Jul,Copper Creek,E4C,4,8,Control,1.01,0.51,Bare.ground,0.5
+2024,18-Jul,Copper Creek,E4C,4,8,Control,1.01,0.51,Agoseris.sp.,0.02
+2024,18-Jul,Copper Creek,E4C,4,8,Control,1.01,0.51,Boechera.stricta,0.04
+2024,18-Jul,Copper Creek,E4C,4,8,Control,1.01,0.51,Campanula.petiolata,0.03
+2024,18-Jul,Copper Creek,E4C,4,8,Control,1.01,0.51,Eremogone.congesta,0.14
+2024,18-Jul,Copper Creek,E4C,4,8,Control,1.01,0.51,Erigeron.speciosus,0.05
+2024,18-Jul,Copper Creek,E4C,4,8,Control,1.01,0.51,Maianthemum.stellatum,0.03
+2024,18-Jul,Copper Creek,E4C,4,8,Control,1.01,0.51,Poa.pratensis,0.15
+2024,18-Jul,Copper Creek,E4C,4,8,Control,1.01,0.51,Polygonum.sp.,0.02
+2024,18-Jul,Copper Creek,E4C,4,8,Control,1.01,0.51,Potentilla.pulcherrima,0.01
+2024,18-Jul,Copper Creek,E4C,4,8,Control,1.01,0.51,Taraxacum.officinale,0.02
+2024,18-Jul,Copper Creek,E5,5,9,Castilleja,1.06,0.66,Bare.ground,0.4
+2024,18-Jul,Copper Creek,E5,5,9,Castilleja,1.06,0.66,Boechera.stricta,0.01
+2024,18-Jul,Copper Creek,E5,5,9,Castilleja,1.06,0.66,Castilleja.septentrionalis,0.03
+2024,18-Jul,Copper Creek,E5,5,9,Castilleja,1.06,0.66,Cymopterus.lemmonii,0.04
+2024,18-Jul,Copper Creek,E5,5,9,Castilleja,1.06,0.66,Eremogone.congesta,0.13
+2024,18-Jul,Copper Creek,E5,5,9,Castilleja,1.06,0.66,Erigeron.speciosus,0.06
+2024,18-Jul,Copper Creek,E5,5,9,Castilleja,1.06,0.66,Eriogonum.umbellatum.majus,0.03
+2024,18-Jul,Copper Creek,E5,5,9,Castilleja,1.06,0.66,Frasera.speciosa,0.01
+2024,18-Jul,Copper Creek,E5,5,9,Castilleja,1.06,0.66,Helianthella.quinquenerva,0.08
+2024,18-Jul,Copper Creek,E5,5,9,Castilleja,1.06,0.66,Ipomopsis.aggregata,0.05
+2024,18-Jul,Copper Creek,E5,5,9,Castilleja,1.06,0.66,Lathyrus.lanszwertii,0.01
+2024,18-Jul,Copper Creek,E5,5,9,Castilleja,1.06,0.66,Maianthemum.stellatum,0.03
+2024,18-Jul,Copper Creek,E5,5,9,Castilleja,1.06,0.66,Mertensia.brevistyla,0.03
+2024,18-Jul,Copper Creek,E5,5,9,Castilleja,1.06,0.66,Poa.pratensis,0.03
+2024,18-Jul,Copper Creek,E5,5,9,Castilleja,1.06,0.66,Potentilla.pulcherrima,0.04
+2024,18-Jul,Copper Creek,E5,5,9,Castilleja,1.06,0.66,Taraxacum.officinale,0.05
+2024,18-Jul,Copper Creek,E5,5,9,Castilleja,1.06,0.66,Thalictrum.fendleri,0.03
+2024,18-Jul,Copper Creek,E5C,5,10,Control,1.12,0.72,Bare.ground,0.4
+2024,18-Jul,Copper Creek,E5C,5,10,Control,1.12,0.72,Boechera.stricta,0.01
+2024,18-Jul,Copper Creek,E5C,5,10,Control,1.12,0.72,Campanula.petiolata,0.01
+2024,18-Jul,Copper Creek,E5C,5,10,Control,1.12,0.72,Cymopterus.lemmonii,0.06
+2024,18-Jul,Copper Creek,E5C,5,10,Control,1.12,0.72,Eremogone.congesta,0.15
+2024,18-Jul,Copper Creek,E5C,5,10,Control,1.12,0.72,Erigeron.speciosus,0.07
+2024,18-Jul,Copper Creek,E5C,5,10,Control,1.12,0.72,Frasera.speciosa,0.02
+2024,18-Jul,Copper Creek,E5C,5,10,Control,1.12,0.72,Helianthella.quinquenerva,0.13
+2024,18-Jul,Copper Creek,E5C,5,10,Control,1.12,0.72,Ipomopsis.aggregata,0.03
+2024,18-Jul,Copper Creek,E5C,5,10,Control,1.12,0.72,Maianthemum.stellatum,0.04
+2024,18-Jul,Copper Creek,E5C,5,10,Control,1.12,0.72,Mertensia.brevistyla,0.02
+2024,18-Jul,Copper Creek,E5C,5,10,Control,1.12,0.72,Poa.pratensis,0.04
+2024,18-Jul,Copper Creek,E5C,5,10,Control,1.12,0.72,Taraxacum.officinale,0.12
+2024,18-Jul,Copper Creek,E5C,5,10,Control,1.12,0.72,Thalictrum.fendleri,0.02
+2024,18-Jul,Copper Creek,E6,6,11,Castilleja,1.2,0.85,Bare.ground,0.35
+2024,18-Jul,Copper Creek,E6,6,11,Castilleja,1.2,0.85,Achnatherum.nelsonii,0.01
+2024,18-Jul,Copper Creek,E6,6,11,Castilleja,1.2,0.85,Anemone.multifida,0.03
+2024,18-Jul,Copper Creek,E6,6,11,Castilleja,1.2,0.85,Boechera.stricta,0.02
+2024,18-Jul,Copper Creek,E6,6,11,Castilleja,1.2,0.85,Campanula.petiolata,0.01
+2024,18-Jul,Copper Creek,E6,6,11,Castilleja,1.2,0.85,Castilleja.septentrionalis,0.06
+2024,18-Jul,Copper Creek,E6,6,11,Castilleja,1.2,0.85,Eremogone.congesta,0.14
+2024,18-Jul,Copper Creek,E6,6,11,Castilleja,1.2,0.85,Frasera.speciosa,0.01
+2024,18-Jul,Copper Creek,E6,6,11,Castilleja,1.2,0.85,Galium.boreale,0.03
+2024,18-Jul,Copper Creek,E6,6,11,Castilleja,1.2,0.85,Ipomopsis.aggregata,0.02
+2024,18-Jul,Copper Creek,E6,6,11,Castilleja,1.2,0.85,Maianthemum.stellatum,0.03
+2024,18-Jul,Copper Creek,E6,6,11,Castilleja,1.2,0.85,Mertensia.brevistyla,0.02
+2024,18-Jul,Copper Creek,E6,6,11,Castilleja,1.2,0.85,Poa.pratensis,0.03
+2024,18-Jul,Copper Creek,E6,6,11,Castilleja,1.2,0.85,Polygonum.sp.,0.01
+2024,18-Jul,Copper Creek,E6,6,11,Castilleja,1.2,0.85,Potentilla.pulcherrima,0.05
+2024,18-Jul,Copper Creek,E6,6,11,Castilleja,1.2,0.85,Sedum.lanceolatum,0.01
+2024,18-Jul,Copper Creek,E6,6,11,Castilleja,1.2,0.85,Solidago.multiradiata,0.07
+2024,18-Jul,Copper Creek,E6,6,11,Castilleja,1.2,0.85,Taraxacum.officinale,0.04
+2024,18-Jul,Copper Creek,E6,6,11,Castilleja,1.2,0.85,Thalictrum.fendleri,0.22
+2024,18-Jul,Copper Creek,E6,6,11,Castilleja,1.2,0.85,Viola.adunca,0.04
+2024,18-Jul,Copper Creek,E6C,6,12,Control,1.235,1.035,Bare.ground,0.2
+2024,18-Jul,Copper Creek,E6C,6,12,Control,1.235,1.035,Boechera.stricta,0.02
+2024,18-Jul,Copper Creek,E6C,6,12,Control,1.235,1.035,Carex.geyeri,0.02
+2024,18-Jul,Copper Creek,E6C,6,12,Control,1.235,1.035,Chenopodium.atrovirens,0.005
+2024,18-Jul,Copper Creek,E6C,6,12,Control,1.235,1.035,Cymopterus.lemmonii,0.08
+2024,18-Jul,Copper Creek,E6C,6,12,Control,1.235,1.035,Elymus.lanceolatus,0.04
+2024,18-Jul,Copper Creek,E6C,6,12,Control,1.235,1.035,Eremogone.congesta,0.15
+2024,18-Jul,Copper Creek,E6C,6,12,Control,1.235,1.035,Eriogonum.umbellatum.majus,0.01
+2024,18-Jul,Copper Creek,E6C,6,12,Control,1.235,1.035,Frasera.speciosa,0.02
+2024,18-Jul,Copper Creek,E6C,6,12,Control,1.235,1.035,Galium.boreale,0.09
+2024,18-Jul,Copper Creek,E6C,6,12,Control,1.235,1.035,Ipomopsis.aggregata,0.06
+2024,18-Jul,Copper Creek,E6C,6,12,Control,1.235,1.035,Lathyrus.lanszwertii,0.01
+2024,18-Jul,Copper Creek,E6C,6,12,Control,1.235,1.035,Lomatium.triternatum,0.02
+2024,18-Jul,Copper Creek,E6C,6,12,Control,1.235,1.035,Maianthemum.stellatum,0.04
+2024,18-Jul,Copper Creek,E6C,6,12,Control,1.235,1.035,Poa.pratensis,0.02
+2024,18-Jul,Copper Creek,E6C,6,12,Control,1.235,1.035,Polygonum.sp.,0.01
+2024,18-Jul,Copper Creek,E6C,6,12,Control,1.235,1.035,Populus.balsamifera,0.3
+2024,18-Jul,Copper Creek,E6C,6,12,Control,1.235,1.035,Potentilla.pulcherrima,0.02
+2024,18-Jul,Copper Creek,E6C,6,12,Control,1.235,1.035,Solidago.multiradiata,0.05
+2024,18-Jul,Copper Creek,E6C,6,12,Control,1.235,1.035,Thalictrum.fendleri,0.07
+2024,18-Jul,Copper Creek,E7,7,13,Castilleja,1.115,0.815,Bare.ground,0.3
+2024,18-Jul,Copper Creek,E7,7,13,Castilleja,1.115,0.815,Agoseris.sp.,0.01
+2024,18-Jul,Copper Creek,E7,7,13,Castilleja,1.115,0.815,Campanula.petiolata,0.03
+2024,18-Jul,Copper Creek,E7,7,13,Castilleja,1.115,0.815,Castilleja.septentrionalis,0.06
+2024,18-Jul,Copper Creek,E7,7,13,Castilleja,1.115,0.815,Eremogone.congesta,0.13
+2024,18-Jul,Copper Creek,E7,7,13,Castilleja,1.115,0.815,Erigeron.speciosus,0.09
+2024,18-Jul,Copper Creek,E7,7,13,Castilleja,1.115,0.815,Frasera.speciosa,0.03
+2024,18-Jul,Copper Creek,E7,7,13,Castilleja,1.115,0.815,Galium.boreale,0.05
+2024,18-Jul,Copper Creek,E7,7,13,Castilleja,1.115,0.815,Ipomopsis.aggregata,0.11
+2024,18-Jul,Copper Creek,E7,7,13,Castilleja,1.115,0.815,Lathyrus.lanszwertii,0.03
+2024,18-Jul,Copper Creek,E7,7,13,Castilleja,1.115,0.815,Mertensia.brevistyla,0.02
+2024,18-Jul,Copper Creek,E7,7,13,Castilleja,1.115,0.815,Poa.pratensis,0.01
+2024,18-Jul,Copper Creek,E7,7,13,Castilleja,1.115,0.815,Polygonum.sp.,0.005
+2024,18-Jul,Copper Creek,E7,7,13,Castilleja,1.115,0.815,Taraxacum.officinale,0.06
+2024,18-Jul,Copper Creek,E7,7,13,Castilleja,1.115,0.815,Thalictrum.fendleri,0.15
+2024,18-Jul,Copper Creek,E7,7,13,Castilleja,1.115,0.815,Vicia.americana,0.03
+2024,18-Jul,Copper Creek,E7C,7,14,Control,1.015,0.765,Bare.ground,0.25
+2024,18-Jul,Copper Creek,E7C,7,14,Control,1.015,0.765,Achillea.millefolium,0.005
+2024,18-Jul,Copper Creek,E7C,7,14,Control,1.015,0.765,Campanula.petiolata,0.05
+2024,18-Jul,Copper Creek,E7C,7,14,Control,1.015,0.765,Cymopterus.lemmonii,0.005
+2024,18-Jul,Copper Creek,E7C,7,14,Control,1.015,0.765,Erigeron.speciosus,0.08
+2024,18-Jul,Copper Creek,E7C,7,14,Control,1.015,0.765,Eriogonum.umbellatum.majus,0.11
+2024,18-Jul,Copper Creek,E7C,7,14,Control,1.015,0.765,Galium.boreale,0.02
+2024,18-Jul,Copper Creek,E7C,7,14,Control,1.015,0.765,Ipomopsis.aggregata,0.005
+2024,18-Jul,Copper Creek,E7C,7,14,Control,1.015,0.765,Poa.pratensis,0.02
+2024,18-Jul,Copper Creek,E7C,7,14,Control,1.015,0.765,Populus.balsamifera,0.2
+2024,18-Jul,Copper Creek,E7C,7,14,Control,1.015,0.765,Potentilla.pulcherrima,0.01
+2024,18-Jul,Copper Creek,E7C,7,14,Control,1.015,0.765,Taraxacum.officinale,0.1
+2024,18-Jul,Copper Creek,E7C,7,14,Control,1.015,0.765,Thalictrum.fendleri,0.16
+2024,18-Jul,Copper Creek,E8,8,15,Castilleja,1.15,0.95,Bare.ground,0.2
+2024,18-Jul,Copper Creek,E8,8,15,Castilleja,1.15,0.95,Boechera.stricta,0.01
+2024,18-Jul,Copper Creek,E8,8,15,Castilleja,1.15,0.95,Campanula.petiolata,0.03
+2024,18-Jul,Copper Creek,E8,8,15,Castilleja,1.15,0.95,Carex.geyeri,0.04
+2024,18-Jul,Copper Creek,E8,8,15,Castilleja,1.15,0.95,Castilleja.septentrionalis,0.06
+2024,18-Jul,Copper Creek,E8,8,15,Castilleja,1.15,0.95,Cymopterus.lemmonii,0.02
+2024,18-Jul,Copper Creek,E8,8,15,Castilleja,1.15,0.95,Eremogone.congesta,0.03
+2024,18-Jul,Copper Creek,E8,8,15,Castilleja,1.15,0.95,Fragaria.virginiana,0.01
+2024,18-Jul,Copper Creek,E8,8,15,Castilleja,1.15,0.95,Frasera.speciosa,0.15
+2024,18-Jul,Copper Creek,E8,8,15,Castilleja,1.15,0.95,Galium.boreale,0.04
+2024,18-Jul,Copper Creek,E8,8,15,Castilleja,1.15,0.95,Lathyrus.lanszwertii,0.05
+2024,18-Jul,Copper Creek,E8,8,15,Castilleja,1.15,0.95,Lomatium.triternatum,0.04
+2024,18-Jul,Copper Creek,E8,8,15,Castilleja,1.15,0.95,Maianthemum.stellatum,0.15
+2024,18-Jul,Copper Creek,E8,8,15,Castilleja,1.15,0.95,Mertensia.brevistyla,0.01
+2024,18-Jul,Copper Creek,E8,8,15,Castilleja,1.15,0.95,Moehringia.sp.,0.02
+2024,18-Jul,Copper Creek,E8,8,15,Castilleja,1.15,0.95,Poa.pratensis,0.01
+2024,18-Jul,Copper Creek,E8,8,15,Castilleja,1.15,0.95,Potentilla.pulcherrima,0.03
+2024,18-Jul,Copper Creek,E8,8,15,Castilleja,1.15,0.95,Taraxacum.officinale,0.02
+2024,18-Jul,Copper Creek,E8,8,15,Castilleja,1.15,0.95,Thalictrum.fendleri,0.18
+2024,18-Jul,Copper Creek,E8,8,15,Castilleja,1.15,0.95,Vicia.americana,0.01
+2024,18-Jul,Copper Creek,E8,8,15,Castilleja,1.15,0.95,Viola.adunca,0.04
+2024,18-Jul,Copper Creek,E8C,8,16,Control,1,0.8,Bare.ground,0.2
+2024,18-Jul,Copper Creek,E8C,8,16,Control,1,0.8,Androsace.septentrionales,0.03
+2024,18-Jul,Copper Creek,E8C,8,16,Control,1,0.8,Boechera.stricta,0.01
+2024,18-Jul,Copper Creek,E8C,8,16,Control,1,0.8,Campanula.petiolata,0.02
+2024,18-Jul,Copper Creek,E8C,8,16,Control,1,0.8,Carex.geyeri,0.04
+2024,18-Jul,Copper Creek,E8C,8,16,Control,1,0.8,Eremogone.congesta,0.06
+2024,18-Jul,Copper Creek,E8C,8,16,Control,1,0.8,Erigeron.speciosus,0.01
+2024,18-Jul,Copper Creek,E8C,8,16,Control,1,0.8,Galium.boreale,0.14
+2024,18-Jul,Copper Creek,E8C,8,16,Control,1,0.8,Maianthemum.stellatum,0.09
+2024,18-Jul,Copper Creek,E8C,8,16,Control,1,0.8,Mertensia.brevistyla,0.01
+2024,18-Jul,Copper Creek,E8C,8,16,Control,1,0.8,Poa.pratensis,0.01
+2024,18-Jul,Copper Creek,E8C,8,16,Control,1,0.8,Potentilla.pulcherrima,0.22
+2024,18-Jul,Copper Creek,E8C,8,16,Control,1,0.8,Solidago.multiradiata,0.02
+2024,18-Jul,Copper Creek,E8C,8,16,Control,1,0.8,Taraxacum.officinale,0.02
+2024,18-Jul,Copper Creek,E8C,8,16,Control,1,0.8,Thalictrum.fendleri,0.11
+2024,18-Jul,Copper Creek,E8C,8,16,Control,1,0.8,Viola.adunca,0.01
+2024,22-Jul,Copper Creek,E9,9,17,Castilleja,1,0.6,Bare.ground,0.4
+2024,22-Jul,Copper Creek,E9,9,17,Castilleja,1,0.6,Agoseris.sp.,0.01
+2024,22-Jul,Copper Creek,E9,9,17,Castilleja,1,0.6,Boechera.stricta,0.01
+2024,22-Jul,Copper Creek,E9,9,17,Castilleja,1,0.6,Campanula.petiolata,0.04
+2024,22-Jul,Copper Creek,E9,9,17,Castilleja,1,0.6,Carex.geyeri,0.02
+2024,22-Jul,Copper Creek,E9,9,17,Castilleja,1,0.6,Castilleja.septentrionalis,0.03
+2024,22-Jul,Copper Creek,E9,9,17,Castilleja,1,0.6,Eremogone.congesta,0.07
+2024,22-Jul,Copper Creek,E9,9,17,Castilleja,1,0.6,Erigeron.speciosus,0.02
+2024,22-Jul,Copper Creek,E9,9,17,Castilleja,1,0.6,Fragaria.virginiana,0.01
+2024,22-Jul,Copper Creek,E9,9,17,Castilleja,1,0.6,Frasera.speciosa,0.02
+2024,22-Jul,Copper Creek,E9,9,17,Castilleja,1,0.6,Galium.boreale,0.07
+2024,22-Jul,Copper Creek,E9,9,17,Castilleja,1,0.6,Lathyrus.lanszwertii,0.02
+2024,22-Jul,Copper Creek,E9,9,17,Castilleja,1,0.6,Maianthemum.stellatum,0.11
+2024,22-Jul,Copper Creek,E9,9,17,Castilleja,1,0.6,Poa.pratensis,0.06
+2024,22-Jul,Copper Creek,E9,9,17,Castilleja,1,0.6,Solidago.multiradiata,0.02
+2024,22-Jul,Copper Creek,E9,9,17,Castilleja,1,0.6,Taraxacum.officinale,0.09
+2024,22-Jul,Copper Creek,E9C,9,18,Control,1.095,0.645,Bare.ground,0.45
+2024,22-Jul,Copper Creek,E9C,9,18,Control,1.095,0.645,Boechera.stricta,0.005
+2024,22-Jul,Copper Creek,E9C,9,18,Control,1.095,0.645,Campanula.petiolata,0.02
+2024,22-Jul,Copper Creek,E9C,9,18,Control,1.095,0.645,Cymopterus.lemmonii,0.09
+2024,22-Jul,Copper Creek,E9C,9,18,Control,1.095,0.645,Eremogone.congesta,0.05
+2024,22-Jul,Copper Creek,E9C,9,18,Control,1.095,0.645,Eriogonum.umbellatum.majus,0.06
+2024,22-Jul,Copper Creek,E9C,9,18,Control,1.095,0.645,Galium.boreale,0.02
+2024,22-Jul,Copper Creek,E9C,9,18,Control,1.095,0.645,Ipomopsis.aggregata,0.12
+2024,22-Jul,Copper Creek,E9C,9,18,Control,1.095,0.645,Maianthemum.stellatum,0.07
+2024,22-Jul,Copper Creek,E9C,9,18,Control,1.095,0.645,Poa.pratensis,0.04
+2024,22-Jul,Copper Creek,E9C,9,18,Control,1.095,0.645,Potentilla.pulcherrima,0.03
+2024,22-Jul,Copper Creek,E9C,9,18,Control,1.095,0.645,Sedum.lanceolatum,0.04
+2024,22-Jul,Copper Creek,E9C,9,18,Control,1.095,0.645,Solidago.multiradiata,0.03
+2024,22-Jul,Copper Creek,E9C,9,18,Control,1.095,0.645,Taraxacum.officinale,0.05
+2024,22-Jul,Copper Creek,E9C,9,18,Control,1.095,0.645,Thalictrum.fendleri,0.02
+2024,22-Jul,Copper Creek,E10,10,19,Castilleja,1.07,0.77,Bare.ground,0.3
+2024,22-Jul,Copper Creek,E10,10,19,Castilleja,1.07,0.77,Campanula.petiolata,0.05
+2024,22-Jul,Copper Creek,E10,10,19,Castilleja,1.07,0.77,Carex.geyeri,0.08
+2024,22-Jul,Copper Creek,E10,10,19,Castilleja,1.07,0.77,Castilleja.septentrionalis,0.09
+2024,22-Jul,Copper Creek,E10,10,19,Castilleja,1.07,0.77,Eremogone.congesta,0.05
+2024,22-Jul,Copper Creek,E10,10,19,Castilleja,1.07,0.77,Erigeron.speciosus,0.05
+2024,22-Jul,Copper Creek,E10,10,19,Castilleja,1.07,0.77,Eriogonum.umbellatum.majus,0.13
+2024,22-Jul,Copper Creek,E10,10,19,Castilleja,1.07,0.77,Frasera.speciosa,0.02
+2024,22-Jul,Copper Creek,E10,10,19,Castilleja,1.07,0.77,Lathyrus.lanszwertii,0.13
+2024,22-Jul,Copper Creek,E10,10,19,Castilleja,1.07,0.77,Maianthemum.stellatum,0.02
+2024,22-Jul,Copper Creek,E10,10,19,Castilleja,1.07,0.77,Mertensia.brevistyla,0.01
+2024,22-Jul,Copper Creek,E10,10,19,Castilleja,1.07,0.77,Poa.pratensis,0.07
+2024,22-Jul,Copper Creek,E10,10,19,Castilleja,1.07,0.77,Taraxacum.officinale,0.01
+2024,22-Jul,Copper Creek,E10,10,19,Castilleja,1.07,0.77,Thalictrum.fendleri,0.05
+2024,22-Jul,Copper Creek,E10,10,19,Castilleja,1.07,0.77,Viola.adunca,0.01
+2024,22-Jul,Copper Creek,E10C,10,20,Control,1,0.59,Bare.ground,0.41
+2024,22-Jul,Copper Creek,E10C,10,20,Control,1,0.59,Campanula.petiolata,0.03
+2024,22-Jul,Copper Creek,E10C,10,20,Control,1,0.59,Cymopterus.lemmonii,0.03
+2024,22-Jul,Copper Creek,E10C,10,20,Control,1,0.59,Eremogone.congesta,0.05
+2024,22-Jul,Copper Creek,E10C,10,20,Control,1,0.59,Erigeron.speciosus,0.04
+2024,22-Jul,Copper Creek,E10C,10,20,Control,1,0.59,Eriogonum.umbellatum.majus,0.02
+2024,22-Jul,Copper Creek,E10C,10,20,Control,1,0.59,Frasera.speciosa,0.02
+2024,22-Jul,Copper Creek,E10C,10,20,Control,1,0.59,Ipomopsis.aggregata,0.04
+2024,22-Jul,Copper Creek,E10C,10,20,Control,1,0.59,Lathyrus.lanszwertii,0.03
+2024,22-Jul,Copper Creek,E10C,10,20,Control,1,0.59,Maianthemum.stellatum,0.03
+2024,22-Jul,Copper Creek,E10C,10,20,Control,1,0.59,Poa.pratensis,0.07
+2024,22-Jul,Copper Creek,E10C,10,20,Control,1,0.59,Populus.balsamifera,0.08
+2024,22-Jul,Copper Creek,E10C,10,20,Control,1,0.59,Sedum.lanceolatum,0.03
+2024,22-Jul,Copper Creek,E10C,10,20,Control,1,0.59,Solidago.multiradiata,0.08
+2024,22-Jul,Copper Creek,E10C,10,20,Control,1,0.59,Taraxacum.officinale,0.02
+2024,22-Jul,Copper Creek,E10C,10,20,Control,1,0.59,Thalictrum.fendleri,0.02
+2024,22-Jul,Copper Creek,E11,11,21,Castilleja,1.04,0.69,Bare.ground,0.35
+2024,22-Jul,Copper Creek,E11,11,21,Castilleja,1.04,0.69,Campanula.petiolata,0.05
+2024,22-Jul,Copper Creek,E11,11,21,Castilleja,1.04,0.69,Carex.geyeri,0.06
+2024,22-Jul,Copper Creek,E11,11,21,Castilleja,1.04,0.69,Castilleja.septentrionalis,0.08
+2024,22-Jul,Copper Creek,E11,11,21,Castilleja,1.04,0.69,Eremogone.congesta,0.09
+2024,22-Jul,Copper Creek,E11,11,21,Castilleja,1.04,0.69,Erigeron.speciosus,0.03
+2024,22-Jul,Copper Creek,E11,11,21,Castilleja,1.04,0.69,Helianthella.quinquenerva,0.02
+2024,22-Jul,Copper Creek,E11,11,21,Castilleja,1.04,0.69,Ipomopsis.aggregata,0.1
+2024,22-Jul,Copper Creek,E11,11,21,Castilleja,1.04,0.69,Maianthemum.stellatum,0.04
+2024,22-Jul,Copper Creek,E11,11,21,Castilleja,1.04,0.69,Mertensia.brevistyla,0.01
+2024,22-Jul,Copper Creek,E11,11,21,Castilleja,1.04,0.69,Poa.pratensis,0.13
+2024,22-Jul,Copper Creek,E11,11,21,Castilleja,1.04,0.69,Solidago.multiradiata,0.02
+2024,22-Jul,Copper Creek,E11,11,21,Castilleja,1.04,0.69,Taraxacum.officinale,0.06
+2024,22-Jul,Copper Creek,E11C,11,22,Control,1.01,0.41,Bare.ground,0.6
+2024,22-Jul,Copper Creek,E11C,11,22,Control,1.01,0.41,Achillea.millefolium,0.09
+2024,22-Jul,Copper Creek,E11C,11,22,Control,1.01,0.41,Anemone.multifida,0.05
+2024,22-Jul,Copper Creek,E11C,11,22,Control,1.01,0.41,Campanula.petiolata,0.03
+2024,22-Jul,Copper Creek,E11C,11,22,Control,1.01,0.41,Eremogone.congesta,0.02
+2024,22-Jul,Copper Creek,E11C,11,22,Control,1.01,0.41,Ipomopsis.aggregata,0.03
+2024,22-Jul,Copper Creek,E11C,11,22,Control,1.01,0.41,Poa.pratensis,0.15
+2024,22-Jul,Copper Creek,E11C,11,22,Control,1.01,0.41,Polygonum.sp.,0.01
+2024,22-Jul,Copper Creek,E11C,11,22,Control,1.01,0.41,Taraxacum.officinale,0.03
+2024,22-Jul,Copper Creek,E12,12,23,Castilleja,1.28,0.98,Bare.ground,0.3
+2024,22-Jul,Copper Creek,E12,12,23,Castilleja,1.28,0.98,Achnatherum.nelsonii,0.08
+2024,22-Jul,Copper Creek,E12,12,23,Castilleja,1.28,0.98,Agoseris.sp.,0.09
+2024,22-Jul,Copper Creek,E12,12,23,Castilleja,1.28,0.98,Castilleja.septentrionalis,0.04
+2024,22-Jul,Copper Creek,E12,12,23,Castilleja,1.28,0.98,Eremogone.congesta,0.11
+2024,22-Jul,Copper Creek,E12,12,23,Castilleja,1.28,0.98,Erigeron.speciosus,0.06
+2024,22-Jul,Copper Creek,E12,12,23,Castilleja,1.28,0.98,Ipomopsis.aggregata,0.07
+2024,22-Jul,Copper Creek,E12,12,23,Castilleja,1.28,0.98,Mertensia.brevistyla,0.02
+2024,22-Jul,Copper Creek,E12,12,23,Castilleja,1.28,0.98,Poa.pratensis,0.3
+2024,22-Jul,Copper Creek,E12,12,23,Castilleja,1.28,0.98,Potentilla.pulcherrima,0.04
+2024,22-Jul,Copper Creek,E12,12,23,Castilleja,1.28,0.98,Silene.drummondii,0.01
+2024,22-Jul,Copper Creek,E12,12,23,Castilleja,1.28,0.98,Taraxacum.officinale,0.16
+2024,22-Jul,Copper Creek,E12C,12,24,Control,1.015,0.615,Bare.ground,0.4
+2024,22-Jul,Copper Creek,E12C,12,24,Control,1.015,0.615,Achnatherum.nelsonii,0.01
+2024,22-Jul,Copper Creek,E12C,12,24,Control,1.015,0.615,Agoseris.sp.,0.02
+2024,22-Jul,Copper Creek,E12C,12,24,Control,1.015,0.615,Boechera.stricta,0.005
+2024,22-Jul,Copper Creek,E12C,12,24,Control,1.015,0.615,Carex.geyeri,0.03
+2024,22-Jul,Copper Creek,E12C,12,24,Control,1.015,0.615,Eremogone.congesta,0.08
+2024,22-Jul,Copper Creek,E12C,12,24,Control,1.015,0.615,Erigeron.speciosus,0.25
+2024,22-Jul,Copper Creek,E12C,12,24,Control,1.015,0.615,Helianthella.quinquenerva,0.03
+2024,22-Jul,Copper Creek,E12C,12,24,Control,1.015,0.615,Mertensia.brevistyla,0.01
+2024,22-Jul,Copper Creek,E12C,12,24,Control,1.015,0.615,Poa.alpina,0.01
+2024,22-Jul,Copper Creek,E12C,12,24,Control,1.015,0.615,Poa.pratensis,0.04
+2024,22-Jul,Copper Creek,E12C,12,24,Control,1.015,0.615,Polygonum.sp.,0.01
+2024,22-Jul,Copper Creek,E12C,12,24,Control,1.015,0.615,Taraxacum.officinale,0.12
+2024,22-Jul,Copper Creek,E13,13,25,Castilleja,1.17,0.62,Bare.ground,0.55
+2024,22-Jul,Copper Creek,E13,13,25,Castilleja,1.17,0.62,Agoseris.sp.,0.04
+2024,22-Jul,Copper Creek,E13,13,25,Castilleja,1.17,0.62,Anemone.multifida,0.03
+2024,22-Jul,Copper Creek,E13,13,25,Castilleja,1.17,0.62,Campanula.petiolata,0.04
+2024,22-Jul,Copper Creek,E13,13,25,Castilleja,1.17,0.62,Castilleja.septentrionalis,0.06
+2024,22-Jul,Copper Creek,E13,13,25,Castilleja,1.17,0.62,Eremogone.congesta,0.18
+2024,22-Jul,Copper Creek,E13,13,25,Castilleja,1.17,0.62,Erigeron.speciosus,0.02
+2024,22-Jul,Copper Creek,E13,13,25,Castilleja,1.17,0.62,Frasera.speciosa,0.01
+2024,22-Jul,Copper Creek,E13,13,25,Castilleja,1.17,0.62,Helianthella.quinquenerva,0.01
+2024,22-Jul,Copper Creek,E13,13,25,Castilleja,1.17,0.62,Maianthemum.stellatum,0.02
+2024,22-Jul,Copper Creek,E13,13,25,Castilleja,1.17,0.62,Mertensia.brevistyla,0.01
+2024,22-Jul,Copper Creek,E13,13,25,Castilleja,1.17,0.62,Poa.pratensis,0.1
+2024,22-Jul,Copper Creek,E13,13,25,Castilleja,1.17,0.62,Potentilla.pulcherrima,0.02
+2024,22-Jul,Copper Creek,E13,13,25,Castilleja,1.17,0.62,Taraxacum.officinale,0.06
+2024,22-Jul,Copper Creek,E13,13,25,Castilleja,1.17,0.62,Vicia.americana,0.02
+2024,22-Jul,Copper Creek,E13C,13,26,Control,1.175,0.525,Bare.ground,0.65
+2024,22-Jul,Copper Creek,E13C,13,26,Control,1.175,0.525,Achnatherum.nelsonii,0.03
+2024,22-Jul,Copper Creek,E13C,13,26,Control,1.175,0.525,Agoseris.sp.,0.005
+2024,22-Jul,Copper Creek,E13C,13,26,Control,1.175,0.525,Anemone.multifida,0.14
+2024,22-Jul,Copper Creek,E13C,13,26,Control,1.175,0.525,Boechera.stricta,0.05
+2024,22-Jul,Copper Creek,E13C,13,26,Control,1.175,0.525,Campanula.petiolata,0.01
+2024,22-Jul,Copper Creek,E13C,13,26,Control,1.175,0.525,Eremogone.congesta,0.08
+2024,22-Jul,Copper Creek,E13C,13,26,Control,1.175,0.525,Mertensia.brevistyla,0.005
+2024,22-Jul,Copper Creek,E13C,13,26,Control,1.175,0.525,Poa.alpina,0.01
+2024,22-Jul,Copper Creek,E13C,13,26,Control,1.175,0.525,Poa.pratensis,0.04
+2024,22-Jul,Copper Creek,E13C,13,26,Control,1.175,0.525,Polygonum.sp.,0.005
+2024,22-Jul,Copper Creek,E13C,13,26,Control,1.175,0.525,Potentilla.pulcherrima,0.03
+2024,22-Jul,Copper Creek,E13C,13,26,Control,1.175,0.525,Taraxacum.officinale,0.12
+2024,22-Jul,Copper Creek,E14,14,27,Castilleja,1.02,0.67,Bare.ground,0.35
+2024,22-Jul,Copper Creek,E14,14,27,Castilleja,1.02,0.67,Achnatherum.nelsonii,0.02
+2024,22-Jul,Copper Creek,E14,14,27,Castilleja,1.02,0.67,Boechera.stricta,0.02
+2024,22-Jul,Copper Creek,E14,14,27,Castilleja,1.02,0.67,Campanula.petiolata,0.15
+2024,22-Jul,Copper Creek,E14,14,27,Castilleja,1.02,0.67,Castilleja.septentrionalis,0.07
+2024,22-Jul,Copper Creek,E14,14,27,Castilleja,1.02,0.67,Cymopterus.lemmonii,0.03
+2024,22-Jul,Copper Creek,E14,14,27,Castilleja,1.02,0.67,Eremogone.congesta,0.13
+2024,22-Jul,Copper Creek,E14,14,27,Castilleja,1.02,0.67,Erigeron.speciosus,0.02
+2024,22-Jul,Copper Creek,E14,14,27,Castilleja,1.02,0.67,Galium.boreale,0.05
+2024,22-Jul,Copper Creek,E14,14,27,Castilleja,1.02,0.67,Ipomopsis.aggregata,0.01
+2024,22-Jul,Copper Creek,E14,14,27,Castilleja,1.02,0.67,Lathyrus.lanszwertii,0.01
+2024,22-Jul,Copper Creek,E14,14,27,Castilleja,1.02,0.67,Maianthemum.stellatum,0.01
+2024,22-Jul,Copper Creek,E14,14,27,Castilleja,1.02,0.67,Mertensia.brevistyla,0.03
+2024,22-Jul,Copper Creek,E14,14,27,Castilleja,1.02,0.67,Poa.pratensis,0.06
+2024,22-Jul,Copper Creek,E14,14,27,Castilleja,1.02,0.67,Potentilla.pulcherrima,0.06
+2024,22-Jul,Copper Creek,E14C,14,28,Control,1.14,0.59,Bare.ground,0.55
+2024,22-Jul,Copper Creek,E14C,14,28,Control,1.14,0.59,Campanula.petiolata,0.02
+2024,22-Jul,Copper Creek,E14C,14,28,Control,1.14,0.59,Carex.geyeri,0.08
+2024,22-Jul,Copper Creek,E14C,14,28,Control,1.14,0.59,Cymopterus.lemmonii,0.04
+2024,22-Jul,Copper Creek,E14C,14,28,Control,1.14,0.59,Eremogone.congesta,0.17
+2024,22-Jul,Copper Creek,E14C,14,28,Control,1.14,0.59,Erigeron.speciosus,0.07
+2024,22-Jul,Copper Creek,E14C,14,28,Control,1.14,0.59,Mertensia.brevistyla,0.02
+2024,22-Jul,Copper Creek,E14C,14,28,Control,1.14,0.59,Poa.pratensis,0.03
+2024,22-Jul,Copper Creek,E14C,14,28,Control,1.14,0.59,Polygonum.sp.,0.01
+2024,22-Jul,Copper Creek,E14C,14,28,Control,1.14,0.59,Taraxacum.officinale,0.15
+2024,22-Jul,Copper Creek,E15,15,29,Castilleja,1.04,0.64,Bare.ground,0.4
+2024,22-Jul,Copper Creek,E15,15,29,Castilleja,1.04,0.64,Campanula.petiolata,0.01
+2024,22-Jul,Copper Creek,E15,15,29,Castilleja,1.04,0.64,Carex.geyeri,0.09
+2024,22-Jul,Copper Creek,E15,15,29,Castilleja,1.04,0.64,Castilleja.septentrionalis,0.09
+2024,22-Jul,Copper Creek,E15,15,29,Castilleja,1.04,0.64,Eremogone.congesta,0.15
+2024,22-Jul,Copper Creek,E15,15,29,Castilleja,1.04,0.64,Galium.boreale,0.15
+2024,22-Jul,Copper Creek,E15,15,29,Castilleja,1.04,0.64,Mertensia.brevistyla,0.02
+2024,22-Jul,Copper Creek,E15,15,29,Castilleja,1.04,0.64,Poa.pratensis,0.04
+2024,22-Jul,Copper Creek,E15,15,29,Castilleja,1.04,0.64,Potentilla.pulcherrima,0.04
+2024,22-Jul,Copper Creek,E15,15,29,Castilleja,1.04,0.64,Taraxacum.officinale,0.01
+2024,22-Jul,Copper Creek,E15,15,29,Castilleja,1.04,0.64,Thalictrum.fendleri,0.04
+2024,22-Jul,Copper Creek,E15C,15,30,Control,1.14,0.69,Bare.ground,0.45
+2024,22-Jul,Copper Creek,E15C,15,30,Control,1.14,0.69,Boechera.stricta,0.03
+2024,22-Jul,Copper Creek,E15C,15,30,Control,1.14,0.69,Campanula.petiolata,0.01
+2024,22-Jul,Copper Creek,E15C,15,30,Control,1.14,0.69,Carex.geyeri,0.02
+2024,22-Jul,Copper Creek,E15C,15,30,Control,1.14,0.69,Eremogone.congesta,0.08
+2024,22-Jul,Copper Creek,E15C,15,30,Control,1.14,0.69,Galium.boreale,0.2
+2024,22-Jul,Copper Creek,E15C,15,30,Control,1.14,0.69,Helianthella.quinquenerva,0.1
+2024,22-Jul,Copper Creek,E15C,15,30,Control,1.14,0.69,Ipomopsis.aggregata,0.04
+2024,22-Jul,Copper Creek,E15C,15,30,Control,1.14,0.69,Maianthemum.stellatum,0.04
+2024,22-Jul,Copper Creek,E15C,15,30,Control,1.14,0.69,Poa.pratensis,0.04
+2024,22-Jul,Copper Creek,E15C,15,30,Control,1.14,0.69,Taraxacum.officinale,0.13
+2024,22-Jul,Copper Creek,E16,16,31,Castilleja,1.09,0.74,Bare.ground,0.35
+2024,22-Jul,Copper Creek,E16,16,31,Castilleja,1.09,0.74,Boechera.stricta,0.03
+2024,22-Jul,Copper Creek,E16,16,31,Castilleja,1.09,0.74,Campanula.petiolata,0.05
+2024,22-Jul,Copper Creek,E16,16,31,Castilleja,1.09,0.74,Castilleja.septentrionalis,0.03
+2024,22-Jul,Copper Creek,E16,16,31,Castilleja,1.09,0.74,Cymopterus.lemmonii,0.02
+2024,22-Jul,Copper Creek,E16,16,31,Castilleja,1.09,0.74,Eremogone.congesta,0.07
+2024,22-Jul,Copper Creek,E16,16,31,Castilleja,1.09,0.74,Galium.boreale,0.14
+2024,22-Jul,Copper Creek,E16,16,31,Castilleja,1.09,0.74,Helianthella.quinquenerva,0.07
+2024,22-Jul,Copper Creek,E16,16,31,Castilleja,1.09,0.74,Ipomopsis.aggregata,0.05
+2024,22-Jul,Copper Creek,E16,16,31,Castilleja,1.09,0.74,Maianthemum.stellatum,0.08
+2024,22-Jul,Copper Creek,E16,16,31,Castilleja,1.09,0.74,Mertensia.brevistyla,0.02
+2024,22-Jul,Copper Creek,E16,16,31,Castilleja,1.09,0.74,Poa.pratensis,0.06
+2024,22-Jul,Copper Creek,E16,16,31,Castilleja,1.09,0.74,Polygonum.sp.,0.01
+2024,22-Jul,Copper Creek,E16,16,31,Castilleja,1.09,0.74,Thalictrum.fendleri,0.09
+2024,22-Jul,Copper Creek,E16,16,31,Castilleja,1.09,0.74,Viola.adunca,0.02
+2024,22-Jul,Copper Creek,E16C,16,32,Control,1.17,0.82,Bare.ground,0.35
+2024,22-Jul,Copper Creek,E16C,16,32,Control,1.17,0.82,Boechera.stricta,0.02
+2024,22-Jul,Copper Creek,E16C,16,32,Control,1.17,0.82,Campanula.petiolata,0.09
+2024,22-Jul,Copper Creek,E16C,16,32,Control,1.17,0.82,Cymopterus.lemmonii,0.06
+2024,22-Jul,Copper Creek,E16C,16,32,Control,1.17,0.82,Eremogone.congesta,0.05
+2024,22-Jul,Copper Creek,E16C,16,32,Control,1.17,0.82,Galium.boreale,0.1
+2024,22-Jul,Copper Creek,E16C,16,32,Control,1.17,0.82,Helianthella.quinquenerva,0.22
+2024,22-Jul,Copper Creek,E16C,16,32,Control,1.17,0.82,Maianthemum.stellatum,0.13
+2024,22-Jul,Copper Creek,E16C,16,32,Control,1.17,0.82,Mertensia.brevistyla,0.02
+2024,22-Jul,Copper Creek,E16C,16,32,Control,1.17,0.82,Poa.pratensis,0.05
+2024,22-Jul,Copper Creek,E16C,16,32,Control,1.17,0.82,Polygonum.sp.,0.01
+2024,22-Jul,Copper Creek,E16C,16,32,Control,1.17,0.82,Potentilla.pulcherrima,0.03
+2024,22-Jul,Copper Creek,E16C,16,32,Control,1.17,0.82,Taraxacum.officinale,0.02
+2024,22-Jul,Copper Creek,E16C,16,32,Control,1.17,0.82,Thalictrum.fendleri,0.02
+2024,7/23/24,Copper Creek,E17,17,33,Castilleja,1.23,0.98,Bare.ground,0.25
+2024,7/23/24,Copper Creek,E17,17,33,Castilleja,1.23,0.98,Boechera.stricta,0.02
+2024,7/23/24,Copper Creek,E17,17,33,Castilleja,1.23,0.98,Campanula.petiolata,0.03
+2024,7/23/24,Copper Creek,E17,17,33,Castilleja,1.23,0.98,Castilleja.septentrionalis,0.13
+2024,7/23/24,Copper Creek,E17,17,33,Castilleja,1.23,0.98,Eremogone.congesta,0.13
+2024,7/23/24,Copper Creek,E17,17,33,Castilleja,1.23,0.98,Erigeron.speciosus,0.02
+2024,7/23/24,Copper Creek,E17,17,33,Castilleja,1.23,0.98,Galium.boreale,0.09
+2024,7/23/24,Copper Creek,E17,17,33,Castilleja,1.23,0.98,Lathyrus.lanszwertii,0.01
+2024,7/23/24,Copper Creek,E17,17,33,Castilleja,1.23,0.98,Maianthemum.stellatum,0.11
+2024,7/23/24,Copper Creek,E17,17,33,Castilleja,1.23,0.98,Mertensia.brevistyla,0.03
+2024,7/23/24,Copper Creek,E17,17,33,Castilleja,1.23,0.98,Poa.pratensis,0.15
+2024,7/23/24,Copper Creek,E17,17,33,Castilleja,1.23,0.98,Taraxacum.officinale,0.07
+2024,7/23/24,Copper Creek,E17,17,33,Castilleja,1.23,0.98,Thalictrum.fendleri,0.19
+2024,7/23/24,Copper Creek,E17C,17,34,Control,1.12,0.57,Bare.ground,0.55
+2024,7/23/24,Copper Creek,E17C,17,34,Control,1.12,0.57,Agoseris.sp.,0.04
+2024,7/23/24,Copper Creek,E17C,17,34,Control,1.12,0.57,Anemone.multifida,0.02
+2024,7/23/24,Copper Creek,E17C,17,34,Control,1.12,0.57,Boechera.stricta,0.01
+2024,7/23/24,Copper Creek,E17C,17,34,Control,1.12,0.57,Campanula.petiolata,0.04
+2024,7/23/24,Copper Creek,E17C,17,34,Control,1.12,0.57,Eremogone.congesta,0.05
+2024,7/23/24,Copper Creek,E17C,17,34,Control,1.12,0.57,Ipomopsis.aggregata,0.03
+2024,7/23/24,Copper Creek,E17C,17,34,Control,1.12,0.57,Maianthemum.stellatum,0.08
+2024,7/23/24,Copper Creek,E17C,17,34,Control,1.12,0.57,Mertensia.brevistyla,0.05
+2024,7/23/24,Copper Creek,E17C,17,34,Control,1.12,0.57,Poa.alpina,0.02
+2024,7/23/24,Copper Creek,E17C,17,34,Control,1.12,0.57,Poa.pratensis,0.08
+2024,7/23/24,Copper Creek,E17C,17,34,Control,1.12,0.57,Taraxacum.officinale,0.07
+2024,7/23/24,Copper Creek,E17C,17,34,Control,1.12,0.57,Thalictrum.fendleri,0.08
+2024,7/23/24,Copper Creek,E18,18,35,Castilleja,1.105,0.855,Bare.ground,0.25
+2024,7/23/24,Copper Creek,E18,18,35,Castilleja,1.105,0.855,Achnatherum.nelsonii,0.03
+2024,7/23/24,Copper Creek,E18,18,35,Castilleja,1.105,0.855,Boechera.stricta,0.015
+2024,7/23/24,Copper Creek,E18,18,35,Castilleja,1.105,0.855,Castilleja.septentrionalis,0.12
+2024,7/23/24,Copper Creek,E18,18,35,Castilleja,1.105,0.855,Eremogone.congesta,0.04
+2024,7/23/24,Copper Creek,E18,18,35,Castilleja,1.105,0.855,Erigeron.speciosus,0.02
+2024,7/23/24,Copper Creek,E18,18,35,Castilleja,1.105,0.855,Fragaria.virginiana,0.01
+2024,7/23/24,Copper Creek,E18,18,35,Castilleja,1.105,0.855,Galium.boreale,0.05
+2024,7/23/24,Copper Creek,E18,18,35,Castilleja,1.105,0.855,Helianthella.quinquenerva,0.08
+2024,7/23/24,Copper Creek,E18,18,35,Castilleja,1.105,0.855,Mertensia.brevistyla,0.02
+2024,7/23/24,Copper Creek,E18,18,35,Castilleja,1.105,0.855,Poa.pratensis,0.15
+2024,7/23/24,Copper Creek,E18,18,35,Castilleja,1.105,0.855,Potentilla.pulcherrima,0.03
+2024,7/23/24,Copper Creek,E18,18,35,Castilleja,1.105,0.855,Taraxacum.officinale,0.17
+2024,7/23/24,Copper Creek,E18,18,35,Castilleja,1.105,0.855,Thalictrum.fendleri,0.12
+2024,7/23/24,Copper Creek,E18C,18,36,Control,1.08,0.68,Bare.ground,0.4
+2024,7/23/24,Copper Creek,E18C,18,36,Control,1.08,0.68,Agoseris.sp.,0.01
+2024,7/23/24,Copper Creek,E18C,18,36,Control,1.08,0.68,Anemone.multifida,0.03
+2024,7/23/24,Copper Creek,E18C,18,36,Control,1.08,0.68,Boechera.stricta,0.01
+2024,7/23/24,Copper Creek,E18C,18,36,Control,1.08,0.68,Chenopodium.atrovirens,0.01
+2024,7/23/24,Copper Creek,E18C,18,36,Control,1.08,0.68,Eremogone.congesta,0.06
+2024,7/23/24,Copper Creek,E18C,18,36,Control,1.08,0.68,Lathyrus.lanszwertii,0.01
+2024,7/23/24,Copper Creek,E18C,18,36,Control,1.08,0.68,Maianthemum.stellatum,0.13
+2024,7/23/24,Copper Creek,E18C,18,36,Control,1.08,0.68,Mertensia.brevistyla,0.03
+2024,7/23/24,Copper Creek,E18C,18,36,Control,1.08,0.68,Poa.pratensis,0.1
+2024,7/23/24,Copper Creek,E18C,18,36,Control,1.08,0.68,Solidago.multiradiata,0.06
+2024,7/23/24,Copper Creek,E18C,18,36,Control,1.08,0.68,Taraxacum.officinale,0.19
+2024,7/23/24,Copper Creek,E18C,18,36,Control,1.08,0.68,Thalictrum.fendleri,0.04
+2024,7/23/24,Copper Creek,E19,19,37,Castilleja,1.03,0.43,Bare.ground,0.6
+2024,7/23/24,Copper Creek,E19,19,37,Castilleja,1.03,0.43,Achnatherum.nelsonii,0.03
+2024,7/23/24,Copper Creek,E19,19,37,Castilleja,1.03,0.43,Boechera.stricta,0.01
+2024,7/23/24,Copper Creek,E19,19,37,Castilleja,1.03,0.43,Campanula.petiolata,0.08
+2024,7/23/24,Copper Creek,E19,19,37,Castilleja,1.03,0.43,Castilleja.septentrionalis,0.07
+2024,7/23/24,Copper Creek,E19,19,37,Castilleja,1.03,0.43,Eremogone.congesta,0.06
+2024,7/23/24,Copper Creek,E19,19,37,Castilleja,1.03,0.43,Erigeron.subtrinervis,0.01
+2024,7/23/24,Copper Creek,E19,19,37,Castilleja,1.03,0.43,Galium.boreale,0.04
+2024,7/23/24,Copper Creek,E19,19,37,Castilleja,1.03,0.43,Mertensia.brevistyla,0.01
+2024,7/23/24,Copper Creek,E19,19,37,Castilleja,1.03,0.43,Poa.pratensis,0.05
+2024,7/23/24,Copper Creek,E19,19,37,Castilleja,1.03,0.43,Polygonum.sp.,0.01
+2024,7/23/24,Copper Creek,E19,19,37,Castilleja,1.03,0.43,Taraxacum.officinale,0.06
+2024,7/23/24,Copper Creek,E19C,19,38,Control,1.095,0.395,Bare.ground,0.7
+2024,7/23/24,Copper Creek,E19C,19,38,Control,1.095,0.395,Boechera.stricta,0.01
+2024,7/23/24,Copper Creek,E19C,19,38,Control,1.095,0.395,Campanula.petiolata,0.04
+2024,7/23/24,Copper Creek,E19C,19,38,Control,1.095,0.395,Eremogone.congesta,0.05
+2024,7/23/24,Copper Creek,E19C,19,38,Control,1.095,0.395,Erigeron.speciosus,0.09
+2024,7/23/24,Copper Creek,E19C,19,38,Control,1.095,0.395,Galium.boreale,0.005
+2024,7/23/24,Copper Creek,E19C,19,38,Control,1.095,0.395,Mertensia.brevistyla,0.01
+2024,7/23/24,Copper Creek,E19C,19,38,Control,1.095,0.395,Poa.pratensis,0.05
+2024,7/23/24,Copper Creek,E19C,19,38,Control,1.095,0.395,Potentilla.pulcherrima,0.04
+2024,7/23/24,Copper Creek,E19C,19,38,Control,1.095,0.395,Taraxacum.officinale,0.06
+2024,7/23/24,Copper Creek,E19C,19,38,Control,1.095,0.395,Viola.adunca,0.04
+2024,7/23/24,Copper Creek,E20,20,39,Castilleja,1.02,0.77,Bare.ground,0.25
+2024,7/23/24,Copper Creek,E20,20,39,Castilleja,1.02,0.77,Boechera.stricta,0.03
+2024,7/23/24,Copper Creek,E20,20,39,Castilleja,1.02,0.77,Campanula.petiolata,0.04
+2024,7/23/24,Copper Creek,E20,20,39,Castilleja,1.02,0.77,Castilleja.septentrionalis,0.08
+2024,7/23/24,Copper Creek,E20,20,39,Castilleja,1.02,0.77,Cymopterus.lemmonii,0.05
+2024,7/23/24,Copper Creek,E20,20,39,Castilleja,1.02,0.77,Eremogone.congesta,0.12
+2024,7/23/24,Copper Creek,E20,20,39,Castilleja,1.02,0.77,Erigeron.speciosus,0.04
+2024,7/23/24,Copper Creek,E20,20,39,Castilleja,1.02,0.77,Galium.boreale,0.09
+2024,7/23/24,Copper Creek,E20,20,39,Castilleja,1.02,0.77,Helianthella.quinquenerva,0.07
+2024,7/23/24,Copper Creek,E20,20,39,Castilleja,1.02,0.77,Poa.pratensis,0.04
+2024,7/23/24,Copper Creek,E20,20,39,Castilleja,1.02,0.77,Polygonum.sp.,0.01
+2024,7/23/24,Copper Creek,E20,20,39,Castilleja,1.02,0.77,Potentilla.pulcherrima,0.04
+2024,7/23/24,Copper Creek,E20,20,39,Castilleja,1.02,0.77,Solidago.multiradiata,0.01
+2024,7/23/24,Copper Creek,E20,20,39,Castilleja,1.02,0.77,Taraxacum.officinale,0.06
+2024,7/23/24,Copper Creek,E20,20,39,Castilleja,1.02,0.77,Thalictrum.fendleri,0.09
+2024,7/23/24,Copper Creek,E20C,20,40,Control,1.005,0.505,Bare.ground,0.5
+2024,7/23/24,Copper Creek,E20C,20,40,Control,1.005,0.505,Boechera.stricta,0.005
+2024,7/23/24,Copper Creek,E20C,20,40,Control,1.005,0.505,Campanula.petiolata,0.03
+2024,7/23/24,Copper Creek,E20C,20,40,Control,1.005,0.505,Eremogone.congesta,0.07
+2024,7/23/24,Copper Creek,E20C,20,40,Control,1.005,0.505,Erigeron.speciosus,0.18
+2024,7/23/24,Copper Creek,E20C,20,40,Control,1.005,0.505,Ipomopsis.aggregata,0.005
+2024,7/23/24,Copper Creek,E20C,20,40,Control,1.005,0.505,Lathyrus.lanszwertii,0.02
+2024,7/23/24,Copper Creek,E20C,20,40,Control,1.005,0.505,Mertensia.brevistyla,0.03
+2024,7/23/24,Copper Creek,E20C,20,40,Control,1.005,0.505,Poa.pratensis,0.06
+2024,7/23/24,Copper Creek,E20C,20,40,Control,1.005,0.505,Potentilla.pulcherrima,0.005
+2024,7/23/24,Copper Creek,E20C,20,40,Control,1.005,0.505,Taraxacum.officinale,0.05
+2024,7/23/24,Copper Creek,E20C,20,40,Control,1.005,0.505,Thalictrum.fendleri,0.05
+2024,7/25/24,Emerald Lake,F1,1,1,Castilleja,1.33,1.29,Bare.ground,0.04
+2024,7/25/24,Emerald Lake,F1,1,1,Castilleja,1.33,1.29,Agoseris.sp.,0.02
+2024,7/25/24,Emerald Lake,F1,1,1,Castilleja,1.33,1.29,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.04
+2024,7/25/24,Emerald Lake,F1,1,1,Castilleja,1.33,1.29,Castilleja.septentrionalis,0.03
+2024,7/25/24,Emerald Lake,F1,1,1,Castilleja,1.33,1.29,Danthonia.parryi,0.03
+2024,7/25/24,Emerald Lake,F1,1,1,Castilleja,1.33,1.29,Deschampsia.cespitosa,0.2
+2024,7/25/24,Emerald Lake,F1,1,1,Castilleja,1.33,1.29,Draba.spectabilis,0.02
+2024,7/25/24,Emerald Lake,F1,1,1,Castilleja,1.33,1.29,Elymus.lanceolatus,0.05
+2024,7/25/24,Emerald Lake,F1,1,1,Castilleja,1.33,1.29,Erigeron.coulteri,0.05
+2024,7/25/24,Emerald Lake,F1,1,1,Castilleja,1.33,1.29,Fragaria.virginiana,0.35
+2024,7/25/24,Emerald Lake,F1,1,1,Castilleja,1.33,1.29,Oreochrysum.parryi,0.16
+2024,7/25/24,Emerald Lake,F1,1,1,Castilleja,1.33,1.29,Poa.fendleriana,0.02
+2024,7/25/24,Emerald Lake,F1,1,1,Castilleja,1.33,1.29,Potentilla.pulcherrima,0.23
+2024,7/25/24,Emerald Lake,F1,1,1,Castilleja,1.33,1.29,Senecio.crassulus,0.08
+2024,7/25/24,Emerald Lake,F1,1,1,Castilleja,1.33,1.29,Viola.adunca,0.01
+2024,7/25/24,Emerald Lake,F1C,1,2,Control,1,0.97,Bare.ground,0.03
+2024,7/25/24,Emerald Lake,F1C,1,2,Control,1,0.97,Agoseris.sp.,0.03
+2024,7/25/24,Emerald Lake,F1C,1,2,Control,1,0.97,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.01
+2024,7/25/24,Emerald Lake,F1C,1,2,Control,1,0.97,Deschampsia.cespitosa,0.15
+2024,7/25/24,Emerald Lake,F1C,1,2,Control,1,0.97,Draba.spectabilis,0.02
+2024,7/25/24,Emerald Lake,F1C,1,2,Control,1,0.97,Elymus.lanceolatus,0.04
+2024,7/25/24,Emerald Lake,F1C,1,2,Control,1,0.97,Erigeron.coulteri,0.02
+2024,7/25/24,Emerald Lake,F1C,1,2,Control,1,0.97,Fragaria.virginiana,0.2
+2024,7/25/24,Emerald Lake,F1C,1,2,Control,1,0.97,Oreochrysum.parryi,0.13
+2024,7/25/24,Emerald Lake,F1C,1,2,Control,1,0.97,Poa.fendleriana,0.02
+2024,7/25/24,Emerald Lake,F1C,1,2,Control,1,0.97,Potentilla.pulcherrima,0.18
+2024,7/25/24,Emerald Lake,F1C,1,2,Control,1,0.97,Senecio.crassulus,0.11
+2024,7/25/24,Emerald Lake,F1C,1,2,Control,1,0.97,Taraxacum.officinale,0.04
+2024,7/25/24,Emerald Lake,F1C,1,2,Control,1,0.97,Thalictrum.fendleri,0.02
+2024,7/25/24,Emerald Lake,F2,2,3,Castilleja,1.11,0.81,Bare.ground,0.3
+2024,7/25/24,Emerald Lake,F2,2,3,Castilleja,1.11,0.81,Achillea.millefolium,0.06
+2024,7/25/24,Emerald Lake,F2,2,3,Castilleja,1.11,0.81,Boechera.stricta,0.005
+2024,7/25/24,Emerald Lake,F2,2,3,Castilleja,1.11,0.81,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.03
+2024,7/25/24,Emerald Lake,F2,2,3,Castilleja,1.11,0.81,Castilleja.septentrionalis,0.09
+2024,7/25/24,Emerald Lake,F2,2,3,Castilleja,1.11,0.81,Deschampsia.cespitosa,0.08
+2024,7/25/24,Emerald Lake,F2,2,3,Castilleja,1.11,0.81,Draba.spectabilis,0.03
+2024,7/25/24,Emerald Lake,F2,2,3,Castilleja,1.11,0.81,Elymus.lanceolatus,0.01
+2024,7/25/24,Emerald Lake,F2,2,3,Castilleja,1.11,0.81,Erigeron.coulteri,0.03
+2024,7/25/24,Emerald Lake,F2,2,3,Castilleja,1.11,0.81,Fragaria.virginiana,0.13
+2024,7/25/24,Emerald Lake,F2,2,3,Castilleja,1.11,0.81,Oreochrysum.parryi,0.12
+2024,7/25/24,Emerald Lake,F2,2,3,Castilleja,1.11,0.81,Phleum.alpinum,0.02
+2024,7/25/24,Emerald Lake,F2,2,3,Castilleja,1.11,0.81,Poa.alpina,0.03
+2024,7/25/24,Emerald Lake,F2,2,3,Castilleja,1.11,0.81,Potentilla.pulcherrima,0.12
+2024,7/25/24,Emerald Lake,F2,2,3,Castilleja,1.11,0.81,Taraxacum.officinale,0.05
+2024,7/25/24,Emerald Lake,F2,2,3,Castilleja,1.11,0.81,Thalictrum.fendleri,0.005
+2024,7/25/24,Emerald Lake,F2C,2,4,Control,1.1,0.85,Bare.ground,0.25
+2024,7/25/24,Emerald Lake,F2C,2,4,Control,1.1,0.85,Achillea.millefolium,0.1
+2024,7/25/24,Emerald Lake,F2C,2,4,Control,1.1,0.85,Agoseris.sp.,0.01
+2024,7/25/24,Emerald Lake,F2C,2,4,Control,1.1,0.85,Anemone.multifida,0.03
+2024,7/25/24,Emerald Lake,F2C,2,4,Control,1.1,0.85,Aquilegia.coerulea,0.17
+2024,7/25/24,Emerald Lake,F2C,2,4,Control,1.1,0.85,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.06
+2024,7/25/24,Emerald Lake,F2C,2,4,Control,1.1,0.85,Draba.spectabilis,0.02
+2024,7/25/24,Emerald Lake,F2C,2,4,Control,1.1,0.85,Elymus.lanceolatus,0.03
+2024,7/25/24,Emerald Lake,F2C,2,4,Control,1.1,0.85,Fragaria.virginiana,0.12
+2024,7/25/24,Emerald Lake,F2C,2,4,Control,1.1,0.85,Phleum.alpinum,0.04
+2024,7/25/24,Emerald Lake,F2C,2,4,Control,1.1,0.85,Poa.alpina,0.01
+2024,7/25/24,Emerald Lake,F2C,2,4,Control,1.1,0.85,Potentilla.pulcherrima,0.1
+2024,7/25/24,Emerald Lake,F2C,2,4,Control,1.1,0.85,Senecio.crassulus,0.05
+2024,7/25/24,Emerald Lake,F2C,2,4,Control,1.1,0.85,Taraxacum.officinale,0.11
+2024,7/25/24,Emerald Lake,F3,3,5,Castilleja,1,0.65,Bare.ground,0.35
+2024,7/25/24,Emerald Lake,F3,3,5,Castilleja,1,0.65,Achillea.millefolium,0.03
+2024,7/25/24,Emerald Lake,F3,3,5,Castilleja,1,0.65,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.07
+2024,7/25/24,Emerald Lake,F3,3,5,Castilleja,1,0.65,Castilleja.septentrionalis,0.02
+2024,7/25/24,Emerald Lake,F3,3,5,Castilleja,1,0.65,Danthonia.parryi,0.01
+2024,7/25/24,Emerald Lake,F3,3,5,Castilleja,1,0.65,Deschampsia.cespitosa,0.08
+2024,7/25/24,Emerald Lake,F3,3,5,Castilleja,1,0.65,Draba.spectabilis,0.01
+2024,7/25/24,Emerald Lake,F3,3,5,Castilleja,1,0.65,Erigeron.coulteri,0.03
+2024,7/25/24,Emerald Lake,F3,3,5,Castilleja,1,0.65,Fragaria.virginiana,0.07
+2024,7/25/24,Emerald Lake,F3,3,5,Castilleja,1,0.65,Poa.fendleriana,0.04
+2024,7/25/24,Emerald Lake,F3,3,5,Castilleja,1,0.65,Potentilla.pulcherrima,0.1
+2024,7/25/24,Emerald Lake,F3,3,5,Castilleja,1,0.65,Senecio.crassulus,0.08
+2024,7/25/24,Emerald Lake,F3,3,5,Castilleja,1,0.65,Taraxacum.officinale,0.06
+2024,7/25/24,Emerald Lake,F3,3,5,Castilleja,1,0.65,Thalictrum.fendleri,0.04
+2024,7/25/24,Emerald Lake,F3,3,5,Castilleja,1,0.65,Viola.adunca,0.01
+2024,7/25/24,Emerald Lake,F3C,3,6,Control,1.005,0.695,Bare.ground,0.31
+2024,7/25/24,Emerald Lake,F3C,3,6,Control,1.005,0.695,Achillea.millefolium,0.01
+2024,7/25/24,Emerald Lake,F3C,3,6,Control,1.005,0.695,Agoseris.sp.,0.01
+2024,7/25/24,Emerald Lake,F3C,3,6,Control,1.005,0.695,Androsace.septentrionales,0.005
+2024,7/25/24,Emerald Lake,F3C,3,6,Control,1.005,0.695,Anemone.multifida,0.07
+2024,7/25/24,Emerald Lake,F3C,3,6,Control,1.005,0.695,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.03
+2024,7/25/24,Emerald Lake,F3C,3,6,Control,1.005,0.695,Deschampsia.cespitosa,0.11
+2024,7/25/24,Emerald Lake,F3C,3,6,Control,1.005,0.695,Draba.spectabilis,0.01
+2024,7/25/24,Emerald Lake,F3C,3,6,Control,1.005,0.695,Elymus.lanceolatus,0.04
+2024,7/25/24,Emerald Lake,F3C,3,6,Control,1.005,0.695,Erigeron.coulteri,0.04
+2024,7/25/24,Emerald Lake,F3C,3,6,Control,1.005,0.695,Fragaria.virginiana,0.1
+2024,7/25/24,Emerald Lake,F3C,3,6,Control,1.005,0.695,Poa.alpina,0.05
+2024,7/25/24,Emerald Lake,F3C,3,6,Control,1.005,0.695,Potentilla.pulcherrima,0.08
+2024,7/25/24,Emerald Lake,F3C,3,6,Control,1.005,0.695,Senecio.crassulus,0.09
+2024,7/25/24,Emerald Lake,F3C,3,6,Control,1.005,0.695,Trisetum.canescens,0.03
+2024,7/25/24,Emerald Lake,F3C,3,6,Control,1.005,0.695,Viola.adunca,0.02
+2024,7/25/24,Emerald Lake,F4,4,7,Castilleja,1.01,0.89,Bare.ground,0.12
+2024,7/25/24,Emerald Lake,F4,4,7,Castilleja,1.01,0.89,Agoseris.sp.,0.02
+2024,7/25/24,Emerald Lake,F4,4,7,Castilleja,1.01,0.89,Anemone.multifida,0.02
+2024,7/25/24,Emerald Lake,F4,4,7,Castilleja,1.01,0.89,Boechera.stricta,0.01
+2024,7/25/24,Emerald Lake,F4,4,7,Castilleja,1.01,0.89,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.04
+2024,7/25/24,Emerald Lake,F4,4,7,Castilleja,1.01,0.89,Castilleja.septentrionalis,0.08
+2024,7/25/24,Emerald Lake,F4,4,7,Castilleja,1.01,0.89,Deschampsia.cespitosa,0.09
+2024,7/25/24,Emerald Lake,F4,4,7,Castilleja,1.01,0.89,Draba.spectabilis,0.005
+2024,7/25/24,Emerald Lake,F4,4,7,Castilleja,1.01,0.89,Erigeron.coulteri,0.05
+2024,7/25/24,Emerald Lake,F4,4,7,Castilleja,1.01,0.89,Fragaria.virginiana,0.1
+2024,7/25/24,Emerald Lake,F4,4,7,Castilleja,1.01,0.89,Phleum.alpinum,0.01
+2024,7/25/24,Emerald Lake,F4,4,7,Castilleja,1.01,0.89,Potentilla.pulcherrima,0.26
+2024,7/25/24,Emerald Lake,F4,4,7,Castilleja,1.01,0.89,Senecio.crassulus,0.1
+2024,7/25/24,Emerald Lake,F4,4,7,Castilleja,1.01,0.89,Taraxacum.officinale,0.09
+2024,7/25/24,Emerald Lake,F4,4,7,Castilleja,1.01,0.89,Trisetum.canescens,0.005
+2024,7/25/24,Emerald Lake,F4,4,7,Castilleja,1.01,0.89,Viola.adunca,0.01
+2024,7/25/24,Emerald Lake,F4C,4,8,Control,1.151,1.051,Bare.ground,0.1
+2024,7/25/24,Emerald Lake,F4C,4,8,Control,1.151,1.051,Achillea.millefolium,0.01
+2024,7/25/24,Emerald Lake,F4C,4,8,Control,1.151,1.051,Agoseris.sp.,0.03
+2024,7/25/24,Emerald Lake,F4C,4,8,Control,1.151,1.051,Anemone.multifida,0.09
+2024,7/25/24,Emerald Lake,F4C,4,8,Control,1.151,1.051,Boechera.stricta,0.001
+2024,7/25/24,Emerald Lake,F4C,4,8,Control,1.151,1.051,Deschampsia.cespitosa,0.13
+2024,7/25/24,Emerald Lake,F4C,4,8,Control,1.151,1.051,Draba.spectabilis,0.02
+2024,7/25/24,Emerald Lake,F4C,4,8,Control,1.151,1.051,Elymus.lanceolatus,0.01
+2024,7/25/24,Emerald Lake,F4C,4,8,Control,1.151,1.051,Erigeron.coulteri,0.05
+2024,7/25/24,Emerald Lake,F4C,4,8,Control,1.151,1.051,Fragaria.virginiana,0.17
+2024,7/25/24,Emerald Lake,F4C,4,8,Control,1.151,1.051,Lupinus.argenteus,0.06
+2024,7/25/24,Emerald Lake,F4C,4,8,Control,1.151,1.051,Phleum.alpinum,0.02
+2024,7/25/24,Emerald Lake,F4C,4,8,Control,1.151,1.051,Poa.alpina,0.07
+2024,7/25/24,Emerald Lake,F4C,4,8,Control,1.151,1.051,Potentilla.pulcherrima,0.2
+2024,7/25/24,Emerald Lake,F4C,4,8,Control,1.151,1.051,Senecio.crassulus,0.09
+2024,7/25/24,Emerald Lake,F4C,4,8,Control,1.151,1.051,Taraxacum.officinale,0.06
+2024,7/25/24,Emerald Lake,F4C,4,8,Control,1.151,1.051,Trisetum.canescens,0.03
+2024,7/25/24,Emerald Lake,F4C,4,8,Control,1.151,1.051,Viola.adunca,0.01
+2024,7/25/24,Emerald Lake,F5,5,9,Castilleja,1.23,0.93,Bare.ground,0.3
+2024,7/25/24,Emerald Lake,F5,5,9,Castilleja,1.23,0.93,Achillea.millefolium,0.12
+2024,7/25/24,Emerald Lake,F5,5,9,Castilleja,1.23,0.93,Agoseris.sp.,0.02
+2024,7/25/24,Emerald Lake,F5,5,9,Castilleja,1.23,0.93,Anemone.multifida,0.07
+2024,7/25/24,Emerald Lake,F5,5,9,Castilleja,1.23,0.93,Castilleja.septentrionalis,0.05
+2024,7/25/24,Emerald Lake,F5,5,9,Castilleja,1.23,0.93,Deschampsia.cespitosa,0.11
+2024,7/25/24,Emerald Lake,F5,5,9,Castilleja,1.23,0.93,Draba.spectabilis,0.01
+2024,7/25/24,Emerald Lake,F5,5,9,Castilleja,1.23,0.93,Elymus.lanceolatus,0.03
+2024,7/25/24,Emerald Lake,F5,5,9,Castilleja,1.23,0.93,Erigeron.coulteri,0.01
+2024,7/25/24,Emerald Lake,F5,5,9,Castilleja,1.23,0.93,Erigeron.leiomerus,0.2
+2024,7/25/24,Emerald Lake,F5,5,9,Castilleja,1.23,0.93,Fragaria.virginiana,0.07
+2024,7/25/24,Emerald Lake,F5,5,9,Castilleja,1.23,0.93,Poa.alpina,0.03
+2024,7/25/24,Emerald Lake,F5,5,9,Castilleja,1.23,0.93,Potentilla.pulcherrima,0.14
+2024,7/25/24,Emerald Lake,F5,5,9,Castilleja,1.23,0.93,Senecio.crassulus,0.01
+2024,7/25/24,Emerald Lake,F5,5,9,Castilleja,1.23,0.93,Taraxacum.officinale,0.05
+2024,7/25/24,Emerald Lake,F5,5,9,Castilleja,1.23,0.93,Trisetum.canescens,0.01
+2024,7/25/24,Emerald Lake,F5C,5,10,Control,1.18,0.88,Bare.ground,0.3
+2024,7/25/24,Emerald Lake,F5C,5,10,Control,1.18,0.88,Achillea.millefolium,0.02
+2024,7/25/24,Emerald Lake,F5C,5,10,Control,1.18,0.88,Agoseris.sp.,0.02
+2024,7/25/24,Emerald Lake,F5C,5,10,Control,1.18,0.88,Anemone.multifida,0.04
+2024,7/25/24,Emerald Lake,F5C,5,10,Control,1.18,0.88,Boechera.stricta,0.01
+2024,7/25/24,Emerald Lake,F5C,5,10,Control,1.18,0.88,Deschampsia.cespitosa,0.07
+2024,7/25/24,Emerald Lake,F5C,5,10,Control,1.18,0.88,Draba.spectabilis,0.01
+2024,7/25/24,Emerald Lake,F5C,5,10,Control,1.18,0.88,Erigeron.leiomerus,0.35
+2024,7/25/24,Emerald Lake,F5C,5,10,Control,1.18,0.88,Fragaria.virginiana,0.07
+2024,7/25/24,Emerald Lake,F5C,5,10,Control,1.18,0.88,Lupinus.argenteus,0.05
+2024,7/25/24,Emerald Lake,F5C,5,10,Control,1.18,0.88,Poa.alpina,0.02
+2024,7/25/24,Emerald Lake,F5C,5,10,Control,1.18,0.88,Potentilla.pulcherrima,0.17
+2024,7/25/24,Emerald Lake,F5C,5,10,Control,1.18,0.88,Senecio.crassulus,0.01
+2024,7/25/24,Emerald Lake,F5C,5,10,Control,1.18,0.88,Taraxacum.officinale,0.04
+2024,7/25/24,Emerald Lake,F6,6,11,Castilleja,1.145,0.965,Bare.ground,0.18
+2024,7/25/24,Emerald Lake,F6,6,11,Castilleja,1.145,0.965,Achillea.millefolium,0.02
+2024,7/25/24,Emerald Lake,F6,6,11,Castilleja,1.145,0.965,Agoseris.sp.,0.04
+2024,7/25/24,Emerald Lake,F6,6,11,Castilleja,1.145,0.965,Anemone.multifida,0.03
+2024,7/25/24,Emerald Lake,F6,6,11,Castilleja,1.145,0.965,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.02
+2024,7/25/24,Emerald Lake,F6,6,11,Castilleja,1.145,0.965,Castilleja.septentrionalis,0.11
+2024,7/25/24,Emerald Lake,F6,6,11,Castilleja,1.145,0.965,Cirsium.griseum,0.04
+2024,7/25/24,Emerald Lake,F6,6,11,Castilleja,1.145,0.965,Deschampsia.cespitosa,0.05
+2024,7/25/24,Emerald Lake,F6,6,11,Castilleja,1.145,0.965,Draba.spectabilis,0.01
+2024,7/25/24,Emerald Lake,F6,6,11,Castilleja,1.145,0.965,Elymus.lanceolatus,0.01
+2024,7/25/24,Emerald Lake,F6,6,11,Castilleja,1.145,0.965,Erigeron.coulteri,0.01
+2024,7/25/24,Emerald Lake,F6,6,11,Castilleja,1.145,0.965,Erigeron.leiomerus,0.28
+2024,7/25/24,Emerald Lake,F6,6,11,Castilleja,1.145,0.965,Fragaria.virginiana,0.12
+2024,7/25/24,Emerald Lake,F6,6,11,Castilleja,1.145,0.965,Poa.alpina,0.005
+2024,7/25/24,Emerald Lake,F6,6,11,Castilleja,1.145,0.965,Potentilla.pulcherrima,0.15
+2024,7/25/24,Emerald Lake,F6,6,11,Castilleja,1.145,0.965,Senecio.crassulus,0.02
+2024,7/25/24,Emerald Lake,F6,6,11,Castilleja,1.145,0.965,Trisetum.canescens,0.02
+2024,7/25/24,Emerald Lake,F6,6,11,Castilleja,1.145,0.965,Viola.adunca,0.03
+2024,7/25/24,Emerald Lake,F6C,6,12,Control,1,0.6,Bare.ground,0.4
+2024,7/25/24,Emerald Lake,F6C,6,12,Control,1,0.6,Achillea.millefolium,0.03
+2024,7/25/24,Emerald Lake,F6C,6,12,Control,1,0.6,Agoseris.sp.,0.02
+2024,7/25/24,Emerald Lake,F6C,6,12,Control,1,0.6,Anemone.multifida,0.05
+2024,7/25/24,Emerald Lake,F6C,6,12,Control,1,0.6,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.02
+2024,7/25/24,Emerald Lake,F6C,6,12,Control,1,0.6,Deschampsia.cespitosa,0.03
+2024,7/25/24,Emerald Lake,F6C,6,12,Control,1,0.6,Elymus.lanceolatus,0.02
+2024,7/25/24,Emerald Lake,F6C,6,12,Control,1,0.6,Erigeron.leiomerus,0.17
+2024,7/25/24,Emerald Lake,F6C,6,12,Control,1,0.6,Fragaria.virginiana,0.12
+2024,7/25/24,Emerald Lake,F6C,6,12,Control,1,0.6,Poa.alpina,0.02
+2024,7/25/24,Emerald Lake,F6C,6,12,Control,1,0.6,Potentilla.pulcherrima,0.07
+2024,7/25/24,Emerald Lake,F6C,6,12,Control,1,0.6,Senecio.crassulus,0.01
+2024,7/25/24,Emerald Lake,F6C,6,12,Control,1,0.6,Taraxacum.officinale,0.01
+2024,7/25/24,Emerald Lake,F6C,6,12,Control,1,0.6,Thalictrum.fendleri,0.01
+2024,7/25/24,Emerald Lake,F6C,6,12,Control,1,0.6,Viola.adunca,0.02
+2024,7/26/24,Emerald Lake,F7,7,13,Castilleja,1.325,1.025,Bare.ground,0.3
+2024,7/26/24,Emerald Lake,F7,7,13,Castilleja,1.325,1.025,Achillea.millefolium,0.02
+2024,7/26/24,Emerald Lake,F7,7,13,Castilleja,1.325,1.025,Agoseris.sp.,0.01
+2024,7/26/24,Emerald Lake,F7,7,13,Castilleja,1.325,1.025,Boechera.stricta,0.005
+2024,7/26/24,Emerald Lake,F7,7,13,Castilleja,1.325,1.025,Castilleja.septentrionalis,0.07
+2024,7/26/24,Emerald Lake,F7,7,13,Castilleja,1.325,1.025,Cirsium.griseum,0.02
+2024,7/26/24,Emerald Lake,F7,7,13,Castilleja,1.325,1.025,Deschampsia.cespitosa,0.12
+2024,7/26/24,Emerald Lake,F7,7,13,Castilleja,1.325,1.025,Draba.spectabilis,0.01
+2024,7/26/24,Emerald Lake,F7,7,13,Castilleja,1.325,1.025,Elymus.lanceolatus,0.04
+2024,7/26/24,Emerald Lake,F7,7,13,Castilleja,1.325,1.025,Erigeron.coulteri,0.02
+2024,7/26/24,Emerald Lake,F7,7,13,Castilleja,1.325,1.025,Fragaria.virginiana,0.23
+2024,7/26/24,Emerald Lake,F7,7,13,Castilleja,1.325,1.025,Hymenoxys.hoopesii,0.08
+2024,7/26/24,Emerald Lake,F7,7,13,Castilleja,1.325,1.025,Noccaea.fendleri,0.02
+2024,7/26/24,Emerald Lake,F7,7,13,Castilleja,1.325,1.025,Oreochrysum.parryi,0.04
+2024,7/26/24,Emerald Lake,F7,7,13,Castilleja,1.325,1.025,Phleum.alpinum,0.06
+2024,7/26/24,Emerald Lake,F7,7,13,Castilleja,1.325,1.025,Potentilla.pulcherrima,0.14
+2024,7/26/24,Emerald Lake,F7,7,13,Castilleja,1.325,1.025,Senecio.crassulus,0.09
+2024,7/26/24,Emerald Lake,F7,7,13,Castilleja,1.325,1.025,Taraxacum.officinale,0.01
+2024,7/26/24,Emerald Lake,F7,7,13,Castilleja,1.325,1.025,Thalictrum.fendleri,0.03
+2024,7/26/24,Emerald Lake,F7,7,13,Castilleja,1.325,1.025,Viola.adunca,0.01
+2024,7/26/24,Emerald Lake,F7C,7,14,Control,1.05,0.87,Bare.ground,0.18
+2024,7/26/24,Emerald Lake,F7C,7,14,Control,1.05,0.87,Achillea.millefolium,0.05
+2024,7/26/24,Emerald Lake,F7C,7,14,Control,1.05,0.87,Androsace.septentrionales,0.005
+2024,7/26/24,Emerald Lake,F7C,7,14,Control,1.05,0.87,Cirsium.griseum,0.1
+2024,7/26/24,Emerald Lake,F7C,7,14,Control,1.05,0.87,Deschampsia.cespitosa,0.03
+2024,7/26/24,Emerald Lake,F7C,7,14,Control,1.05,0.87,Draba.spectabilis,0.005
+2024,7/26/24,Emerald Lake,F7C,7,14,Control,1.05,0.87,Elymus.lanceolatus,0.02
+2024,7/26/24,Emerald Lake,F7C,7,14,Control,1.05,0.87,Erigeron.coulteri,0.03
+2024,7/26/24,Emerald Lake,F7C,7,14,Control,1.05,0.87,Fragaria.virginiana,0.1
+2024,7/26/24,Emerald Lake,F7C,7,14,Control,1.05,0.87,Heterotheca.sp.,0.01
+2024,7/26/24,Emerald Lake,F7C,7,14,Control,1.05,0.87,Hymenoxys.hoopesii,0.02
+2024,7/26/24,Emerald Lake,F7C,7,14,Control,1.05,0.87,Noccaea.fendleri,0.05
+2024,7/26/24,Emerald Lake,F7C,7,14,Control,1.05,0.87,Oreochrysum.parryi,0.28
+2024,7/26/24,Emerald Lake,F7C,7,14,Control,1.05,0.87,Phleum.alpinum,0.01
+2024,7/26/24,Emerald Lake,F7C,7,14,Control,1.05,0.87,Potentilla.glaucophylla,0.02
+2024,7/26/24,Emerald Lake,F7C,7,14,Control,1.05,0.87,Potentilla.pulcherrima,0.06
+2024,7/26/24,Emerald Lake,F7C,7,14,Control,1.05,0.87,Senecio.crassulus,0.06
+2024,7/26/24,Emerald Lake,F7C,7,14,Control,1.05,0.87,Viola.adunca,0.02
+2024,7/26/24,Emerald Lake,F8,8,15,Castilleja,1,0.78,Bare.ground,0.22
+2024,7/26/24,Emerald Lake,F8,8,15,Castilleja,1,0.78,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.02
+2024,7/26/24,Emerald Lake,F8,8,15,Castilleja,1,0.78,Castilleja.septentrionalis,0.07
+2024,7/26/24,Emerald Lake,F8,8,15,Castilleja,1,0.78,Cirsium.griseum,0.03
+2024,7/26/24,Emerald Lake,F8,8,15,Castilleja,1,0.78,Deschampsia.cespitosa,0.1
+2024,7/26/24,Emerald Lake,F8,8,15,Castilleja,1,0.78,Draba.spectabilis,0.01
+2024,7/26/24,Emerald Lake,F8,8,15,Castilleja,1,0.78,Elymus.lanceolatus,0.04
+2024,7/26/24,Emerald Lake,F8,8,15,Castilleja,1,0.78,Erigeron.coulteri,0.02
+2024,7/26/24,Emerald Lake,F8,8,15,Castilleja,1,0.78,Fragaria.virginiana,0.15
+2024,7/26/24,Emerald Lake,F8,8,15,Castilleja,1,0.78,Noccaea.fendleri,0.01
+2024,7/26/24,Emerald Lake,F8,8,15,Castilleja,1,0.78,Phleum.alpinum,0.02
+2024,7/26/24,Emerald Lake,F8,8,15,Castilleja,1,0.78,Potentilla.pulcherrima,0.18
+2024,7/26/24,Emerald Lake,F8,8,15,Castilleja,1,0.78,Senecio.crassulus,0.05
+2024,7/26/24,Emerald Lake,F8,8,15,Castilleja,1,0.78,Taraxacum.officinale,0.04
+2024,7/26/24,Emerald Lake,F8,8,15,Castilleja,1,0.78,Viola.adunca,0.04
+2024,7/26/24,Emerald Lake,F8C,8,16,Control,1.005,0.605,Bare.ground,0.4
+2024,7/26/24,Emerald Lake,F8C,8,16,Control,1.005,0.605,Achillea.millefolium,0.01
+2024,7/26/24,Emerald Lake,F8C,8,16,Control,1.005,0.605,Androsace.septentrionales,0.005
+2024,7/26/24,Emerald Lake,F8C,8,16,Control,1.005,0.605,Deschampsia.cespitosa,0.09
+2024,7/26/24,Emerald Lake,F8C,8,16,Control,1.005,0.605,Draba.spectabilis,0.01
+2024,7/26/24,Emerald Lake,F8C,8,16,Control,1.005,0.605,Elymus.lanceolatus,0.03
+2024,7/26/24,Emerald Lake,F8C,8,16,Control,1.005,0.605,Erigeron.coulteri,0.05
+2024,7/26/24,Emerald Lake,F8C,8,16,Control,1.005,0.605,Fragaria.virginiana,0.11
+2024,7/26/24,Emerald Lake,F8C,8,16,Control,1.005,0.605,Noccaea.fendleri,0.01
+2024,7/26/24,Emerald Lake,F8C,8,16,Control,1.005,0.605,Phleum.alpinum,0.03
+2024,7/26/24,Emerald Lake,F8C,8,16,Control,1.005,0.605,Potentilla.glaucophylla,0.04
+2024,7/26/24,Emerald Lake,F8C,8,16,Control,1.005,0.605,Potentilla.pulcherrima,0.12
+2024,7/26/24,Emerald Lake,F8C,8,16,Control,1.005,0.605,Senecio.crassulus,0.07
+2024,7/26/24,Emerald Lake,F8C,8,16,Control,1.005,0.605,Taraxacum.officinale,0.03
+2024,7/26/24,Emerald Lake,F9,9,17,Castilleja,1.14,0.84,Bare.ground,0.3
+2024,7/26/24,Emerald Lake,F9,9,17,Castilleja,1.14,0.84,Achillea.millefolium,0.07
+2024,7/26/24,Emerald Lake,F9,9,17,Castilleja,1.14,0.84,Anemone.multifida,0.04
+2024,7/26/24,Emerald Lake,F9,9,17,Castilleja,1.14,0.84,Boechera.stricta,0.005
+2024,7/26/24,Emerald Lake,F9,9,17,Castilleja,1.14,0.84,Castilleja.septentrionalis,0.07
+2024,7/26/24,Emerald Lake,F9,9,17,Castilleja,1.14,0.84,Deschampsia.cespitosa,0.12
+2024,7/26/24,Emerald Lake,F9,9,17,Castilleja,1.14,0.84,Draba.spectabilis,0.01
+2024,7/26/24,Emerald Lake,F9,9,17,Castilleja,1.14,0.84,Elymus.lanceolatus,0.04
+2024,7/26/24,Emerald Lake,F9,9,17,Castilleja,1.14,0.84,Fragaria.virginiana,0.16
+2024,7/26/24,Emerald Lake,F9,9,17,Castilleja,1.14,0.84,Noccaea.fendleri,0.03
+2024,7/26/24,Emerald Lake,F9,9,17,Castilleja,1.14,0.84,Phleum.alpinum,0.03
+2024,7/26/24,Emerald Lake,F9,9,17,Castilleja,1.14,0.84,Potentilla.pulcherrima,0.12
+2024,7/26/24,Emerald Lake,F9,9,17,Castilleja,1.14,0.84,Senecio.crassulus,0.03
+2024,7/26/24,Emerald Lake,F9,9,17,Castilleja,1.14,0.84,Taraxacum.officinale,0.05
+2024,7/26/24,Emerald Lake,F9,9,17,Castilleja,1.14,0.84,Trisetum.canescens,0.005
+2024,7/26/24,Emerald Lake,F9,9,17,Castilleja,1.14,0.84,Valeriana.edulis,0.06
+2024,7/26/24,Emerald Lake,F9C,9,18,Control,1.005,0.855,Bare.ground,0.15
+2024,7/26/24,Emerald Lake,F9C,9,18,Control,1.005,0.855,Achillea.millefolium,0.02
+2024,7/26/24,Emerald Lake,F9C,9,18,Control,1.005,0.855,Androsace.septentrionales,0.01
+2024,7/26/24,Emerald Lake,F9C,9,18,Control,1.005,0.855,Anemone.multifida,0.03
+2024,7/26/24,Emerald Lake,F9C,9,18,Control,1.005,0.855,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.13
+2024,7/26/24,Emerald Lake,F9C,9,18,Control,1.005,0.855,Deschampsia.cespitosa,0.03
+2024,7/26/24,Emerald Lake,F9C,9,18,Control,1.005,0.855,Draba.spectabilis,0.02
+2024,7/26/24,Emerald Lake,F9C,9,18,Control,1.005,0.855,Elymus.lanceolatus,0.02
+2024,7/26/24,Emerald Lake,F9C,9,18,Control,1.005,0.855,Erigeron.coulteri,0.05
+2024,7/26/24,Emerald Lake,F9C,9,18,Control,1.005,0.855,Fragaria.virginiana,0.25
+2024,7/26/24,Emerald Lake,F9C,9,18,Control,1.005,0.855,Noccaea.fendleri,0.02
+2024,7/26/24,Emerald Lake,F9C,9,18,Control,1.005,0.855,Phleum.alpinum,0.01
+2024,7/26/24,Emerald Lake,F9C,9,18,Control,1.005,0.855,Potentilla.pulcherrima,0.13
+2024,7/26/24,Emerald Lake,F9C,9,18,Control,1.005,0.855,Senecio.crassulus,0.07
+2024,7/26/24,Emerald Lake,F9C,9,18,Control,1.005,0.855,Taraxacum.officinale,0.02
+2024,7/26/24,Emerald Lake,F9C,9,18,Control,1.005,0.855,Valeriana.edulis,0.04
+2024,7/26/24,Emerald Lake,F9C,9,18,Control,1.005,0.855,Viola.adunca,0.005
+2024,7/26/24,Emerald Lake,F10,10,19,Castilleja,1.035,0.865,Bare.ground,0.17
+2024,7/26/24,Emerald Lake,F10,10,19,Castilleja,1.035,0.865,Achillea.millefolium,0.01
+2024,7/26/24,Emerald Lake,F10,10,19,Castilleja,1.035,0.865,Agoseris.sp.,0.01
+2024,7/26/24,Emerald Lake,F10,10,19,Castilleja,1.035,0.865,Anemone.multifida,0.03
+2024,7/26/24,Emerald Lake,F10,10,19,Castilleja,1.035,0.865,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.11
+2024,7/26/24,Emerald Lake,F10,10,19,Castilleja,1.035,0.865,Castilleja.septentrionalis,0.08
+2024,7/26/24,Emerald Lake,F10,10,19,Castilleja,1.035,0.865,Deschampsia.cespitosa,0.03
+2024,7/26/24,Emerald Lake,F10,10,19,Castilleja,1.035,0.865,Draba.spectabilis,0.01
+2024,7/26/24,Emerald Lake,F10,10,19,Castilleja,1.035,0.865,Elymus.lanceolatus,0.01
+2024,7/26/24,Emerald Lake,F10,10,19,Castilleja,1.035,0.865,Erigeron.coulteri,0.03
+2024,7/26/24,Emerald Lake,F10,10,19,Castilleja,1.035,0.865,Fragaria.virginiana,0.18
+2024,7/26/24,Emerald Lake,F10,10,19,Castilleja,1.035,0.865,Noccaea.fendleri,0.005
+2024,7/26/24,Emerald Lake,F10,10,19,Castilleja,1.035,0.865,Poa.alpina,0.04
+2024,7/26/24,Emerald Lake,F10,10,19,Castilleja,1.035,0.865,Potentilla.glaucophylla,0.04
+2024,7/26/24,Emerald Lake,F10,10,19,Castilleja,1.035,0.865,Potentilla.pulcherrima,0.16
+2024,7/26/24,Emerald Lake,F10,10,19,Castilleja,1.035,0.865,Taraxacum.officinale,0.1
+2024,7/26/24,Emerald Lake,F10,10,19,Castilleja,1.035,0.865,Viola.adunca,0.02
+2024,7/26/24,Emerald Lake,F10C,10,20,Control,1.015,0.665,Bare.ground,0.35
+2024,7/26/24,Emerald Lake,F10C,10,20,Control,1.015,0.665,Achillea.millefolium,0.06
+2024,7/26/24,Emerald Lake,F10C,10,20,Control,1.015,0.665,Agoseris.sp.,0.01
+2024,7/26/24,Emerald Lake,F10C,10,20,Control,1.015,0.665,Androsace.septentrionales,0.005
+2024,7/26/24,Emerald Lake,F10C,10,20,Control,1.015,0.665,Anemone.multifida,0.04
+2024,7/26/24,Emerald Lake,F10C,10,20,Control,1.015,0.665,Boechera.stricta,0.01
+2024,7/26/24,Emerald Lake,F10C,10,20,Control,1.015,0.665,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.05
+2024,7/26/24,Emerald Lake,F10C,10,20,Control,1.015,0.665,Deschampsia.cespitosa,0.03
+2024,7/26/24,Emerald Lake,F10C,10,20,Control,1.015,0.665,Draba.spectabilis,0.01
+2024,7/26/24,Emerald Lake,F10C,10,20,Control,1.015,0.665,Erigeron.coulteri,0.01
+2024,7/26/24,Emerald Lake,F10C,10,20,Control,1.015,0.665,Fragaria.virginiana,0.1
+2024,7/26/24,Emerald Lake,F10C,10,20,Control,1.015,0.665,Phleum.alpinum,0.02
+2024,7/26/24,Emerald Lake,F10C,10,20,Control,1.015,0.665,Poa.alpina,0.01
+2024,7/26/24,Emerald Lake,F10C,10,20,Control,1.015,0.665,Potentilla.glaucophylla,0.01
+2024,7/26/24,Emerald Lake,F10C,10,20,Control,1.015,0.665,Potentilla.pulcherrima,0.2
+2024,7/26/24,Emerald Lake,F10C,10,20,Control,1.015,0.665,Senecio.crassulus,0.03
+2024,7/26/24,Emerald Lake,F10C,10,20,Control,1.015,0.665,Taraxacum.officinale,0.07
+2024,7/26/24,Emerald Lake,F11,11,21,Castilleja,1.05,0.8,Bare.ground,0.25
+2024,7/26/24,Emerald Lake,F11,11,21,Castilleja,1.05,0.8,Achillea.millefolium,0.04
+2024,7/26/24,Emerald Lake,F11,11,21,Castilleja,1.05,0.8,Agoseris.sp.,0.01
+2024,7/26/24,Emerald Lake,F11,11,21,Castilleja,1.05,0.8,Anemone.multifida,0.09
+2024,7/26/24,Emerald Lake,F11,11,21,Castilleja,1.05,0.8,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.02
+2024,7/26/24,Emerald Lake,F11,11,21,Castilleja,1.05,0.8,Castilleja.septentrionalis,0.02
+2024,7/26/24,Emerald Lake,F11,11,21,Castilleja,1.05,0.8,Deschampsia.cespitosa,0.07
+2024,7/26/24,Emerald Lake,F11,11,21,Castilleja,1.05,0.8,Draba.spectabilis,0.01
+2024,7/26/24,Emerald Lake,F11,11,21,Castilleja,1.05,0.8,Fragaria.virginiana,0.13
+2024,7/26/24,Emerald Lake,F11,11,21,Castilleja,1.05,0.8,Phleum.alpinum,0.01
+2024,7/26/24,Emerald Lake,F11,11,21,Castilleja,1.05,0.8,Potentilla.pulcherrima,0.25
+2024,7/26/24,Emerald Lake,F11,11,21,Castilleja,1.05,0.8,Senecio.crassulus,0.1
+2024,7/26/24,Emerald Lake,F11,11,21,Castilleja,1.05,0.8,Taraxacum.officinale,0.02
+2024,7/26/24,Emerald Lake,F11,11,21,Castilleja,1.05,0.8,Trisetum.canescens,0.01
+2024,7/26/24,Emerald Lake,F11,11,21,Castilleja,1.05,0.8,Viola.adunca,0.02
+2024,7/26/24,Emerald Lake,F11C,11,22,Control,1.005,0.835,Bare.ground,0.17
+2024,7/26/24,Emerald Lake,F11C,11,22,Control,1.005,0.835,Achillea.millefolium,0.03
+2024,7/26/24,Emerald Lake,F11C,11,22,Control,1.005,0.835,Agoseris.sp.,0.02
+2024,7/26/24,Emerald Lake,F11C,11,22,Control,1.005,0.835,Androsace.septentrionales,0.005
+2024,7/26/24,Emerald Lake,F11C,11,22,Control,1.005,0.835,Anemone.multifida,0.11
+2024,7/26/24,Emerald Lake,F11C,11,22,Control,1.005,0.835,Boechera.stricta,0.01
+2024,7/26/24,Emerald Lake,F11C,11,22,Control,1.005,0.835,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.12
+2024,7/26/24,Emerald Lake,F11C,11,22,Control,1.005,0.835,Deschampsia.cespitosa,0.02
+2024,7/26/24,Emerald Lake,F11C,11,22,Control,1.005,0.835,Draba.spectabilis,0.01
+2024,7/26/24,Emerald Lake,F11C,11,22,Control,1.005,0.835,Elymus.lanceolatus,0.01
+2024,7/26/24,Emerald Lake,F11C,11,22,Control,1.005,0.835,Erigeron.coulteri,0.01
+2024,7/26/24,Emerald Lake,F11C,11,22,Control,1.005,0.835,Fragaria.virginiana,0.19
+2024,7/26/24,Emerald Lake,F11C,11,22,Control,1.005,0.835,Potentilla.pulcherrima,0.15
+2024,7/26/24,Emerald Lake,F11C,11,22,Control,1.005,0.835,Senecio.crassulus,0.12
+2024,7/26/24,Emerald Lake,F11C,11,22,Control,1.005,0.835,Trisetum.canescens,0.02
+2024,7/26/24,Emerald Lake,F11C,11,22,Control,1.005,0.835,Viola.adunca,0.01
+2024,7/26/24,Emerald Lake,F12,12,23,Castilleja,1.11,0.88,Bare.ground,0.23
+2024,7/26/24,Emerald Lake,F12,12,23,Castilleja,1.11,0.88,Achillea.millefolium,0.01
+2024,7/26/24,Emerald Lake,F12,12,23,Castilleja,1.11,0.88,Agoseris.sp.,0.02
+2024,7/26/24,Emerald Lake,F12,12,23,Castilleja,1.11,0.88,Anemone.multifida,0.01
+2024,7/26/24,Emerald Lake,F12,12,23,Castilleja,1.11,0.88,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.03
+2024,7/26/24,Emerald Lake,F12,12,23,Castilleja,1.11,0.88,Castilleja.septentrionalis,0.05
+2024,7/26/24,Emerald Lake,F12,12,23,Castilleja,1.11,0.88,Cirsium.griseum,0.03
+2024,7/26/24,Emerald Lake,F12,12,23,Castilleja,1.11,0.88,Deschampsia.cespitosa,0.12
+2024,7/26/24,Emerald Lake,F12,12,23,Castilleja,1.11,0.88,Draba.spectabilis,0.01
+2024,7/26/24,Emerald Lake,F12,12,23,Castilleja,1.11,0.88,Elymus.lanceolatus,0.08
+2024,7/26/24,Emerald Lake,F12,12,23,Castilleja,1.11,0.88,Erigeron.coulteri,0.01
+2024,7/26/24,Emerald Lake,F12,12,23,Castilleja,1.11,0.88,Fragaria.virginiana,0.16
+2024,7/26/24,Emerald Lake,F12,12,23,Castilleja,1.11,0.88,Noccaea.fendleri,0.01
+2024,7/26/24,Emerald Lake,F12,12,23,Castilleja,1.11,0.88,Potentilla.pulcherrima,0.1
+2024,7/26/24,Emerald Lake,F12,12,23,Castilleja,1.11,0.88,Senecio.crassulus,0.14
+2024,7/26/24,Emerald Lake,F12,12,23,Castilleja,1.11,0.88,Taraxacum.officinale,0.08
+2024,7/26/24,Emerald Lake,F12,12,23,Castilleja,1.11,0.88,Viola.adunca,0.02
+2024,7/26/24,Emerald Lake,F12C,12,24,Control,1.085,0.485,Bare.ground,0.6
+2024,7/26/24,Emerald Lake,F12C,12,24,Control,1.085,0.485,Achillea.millefolium,0.02
+2024,7/26/24,Emerald Lake,F12C,12,24,Control,1.085,0.485,Agoseris.sp.,0.03
+2024,7/26/24,Emerald Lake,F12C,12,24,Control,1.085,0.485,Androsace.septentrionales,0.005
+2024,7/26/24,Emerald Lake,F12C,12,24,Control,1.085,0.485,Anemone.multifida,0.03
+2024,7/26/24,Emerald Lake,F12C,12,24,Control,1.085,0.485,Boechera.stricta,0.01
+2024,7/26/24,Emerald Lake,F12C,12,24,Control,1.085,0.485,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.01
+2024,7/26/24,Emerald Lake,F12C,12,24,Control,1.085,0.485,Deschampsia.cespitosa,0.03
+2024,7/26/24,Emerald Lake,F12C,12,24,Control,1.085,0.485,Elymus.lanceolatus,0.04
+2024,7/26/24,Emerald Lake,F12C,12,24,Control,1.085,0.485,Erigeron.leiomerus,0.01
+2024,7/26/24,Emerald Lake,F12C,12,24,Control,1.085,0.485,Fragaria.virginiana,0.05
+2024,7/26/24,Emerald Lake,F12C,12,24,Control,1.085,0.485,Noccaea.fendleri,0.01
+2024,7/26/24,Emerald Lake,F12C,12,24,Control,1.085,0.485,Potentilla.pulcherrima,0.15
+2024,7/26/24,Emerald Lake,F12C,12,24,Control,1.085,0.485,Senecio.crassulus,0.07
+2024,7/26/24,Emerald Lake,F12C,12,24,Control,1.085,0.485,Trisetum.canescens,0.01
+2024,7/26/24,Emerald Lake,F12C,12,24,Control,1.085,0.485,Viola.adunca,0.01
+2024,7/26/24,Emerald Lake,F13,13,25,Castilleja,1,0.82,Bare.ground,0.18
+2024,7/26/24,Emerald Lake,F13,13,25,Castilleja,1,0.82,Achillea.millefolium,0.02
+2024,7/26/24,Emerald Lake,F13,13,25,Castilleja,1,0.82,Agoseris.sp.,0.05
+2024,7/26/24,Emerald Lake,F13,13,25,Castilleja,1,0.82,Anemone.multifida,0.02
+2024,7/26/24,Emerald Lake,F13,13,25,Castilleja,1,0.82,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.02
+2024,7/26/24,Emerald Lake,F13,13,25,Castilleja,1,0.82,Castilleja.septentrionalis,0.09
+2024,7/26/24,Emerald Lake,F13,13,25,Castilleja,1,0.82,Cirsium.griseum,0.06
+2024,7/26/24,Emerald Lake,F13,13,25,Castilleja,1,0.82,Deschampsia.cespitosa,0.09
+2024,7/26/24,Emerald Lake,F13,13,25,Castilleja,1,0.82,Draba.spectabilis,0.02
+2024,7/26/24,Emerald Lake,F13,13,25,Castilleja,1,0.82,Elymus.lanceolatus,0.04
+2024,7/26/24,Emerald Lake,F13,13,25,Castilleja,1,0.82,Erigeron.coulteri,0.02
+2024,7/26/24,Emerald Lake,F13,13,25,Castilleja,1,0.82,Fragaria.virginiana,0.05
+2024,7/26/24,Emerald Lake,F13,13,25,Castilleja,1,0.82,Potentilla.pulcherrima,0.18
+2024,7/26/24,Emerald Lake,F13,13,25,Castilleja,1,0.82,Senecio.crassulus,0.1
+2024,7/26/24,Emerald Lake,F13,13,25,Castilleja,1,0.82,Taraxacum.officinale,0.04
+2024,7/26/24,Emerald Lake,F13,13,25,Castilleja,1,0.82,Trisetum.canescens,0.01
+2024,7/26/24,Emerald Lake,F13,13,25,Castilleja,1,0.82,Viola.adunca,0.01
+2024,7/26/24,Emerald Lake,F13C,13,26,Control,1,0.67,Bare.ground,0.33
+2024,7/26/24,Emerald Lake,F13C,13,26,Control,1,0.67,Achillea.millefolium,0.01
+2024,7/26/24,Emerald Lake,F13C,13,26,Control,1,0.67,Agoseris.sp.,0.04
+2024,7/26/24,Emerald Lake,F13C,13,26,Control,1,0.67,Androsace.septentrionales,0.005
+2024,7/26/24,Emerald Lake,F13C,13,26,Control,1,0.67,Cirsium.griseum,0.08
+2024,7/26/24,Emerald Lake,F13C,13,26,Control,1,0.67,Deschampsia.cespitosa,0.07
+2024,7/26/24,Emerald Lake,F13C,13,26,Control,1,0.67,Draba.spectabilis,0.005
+2024,7/26/24,Emerald Lake,F13C,13,26,Control,1,0.67,Elymus.lanceolatus,0.02
+2024,7/26/24,Emerald Lake,F13C,13,26,Control,1,0.67,Erigeron.coulteri,0.03
+2024,7/26/24,Emerald Lake,F13C,13,26,Control,1,0.67,Fragaria.virginiana,0.06
+2024,7/26/24,Emerald Lake,F13C,13,26,Control,1,0.67,Noccaea.fendleri,0.01
+2024,7/26/24,Emerald Lake,F13C,13,26,Control,1,0.67,Poa.alpina,0.02
+2024,7/26/24,Emerald Lake,F13C,13,26,Control,1,0.67,Potentilla.pulcherrima,0.16
+2024,7/26/24,Emerald Lake,F13C,13,26,Control,1,0.67,Senecio.crassulus,0.02
+2024,7/26/24,Emerald Lake,F13C,13,26,Control,1,0.67,Taraxacum.officinale,0.04
+2024,7/26/24,Emerald Lake,F13C,13,26,Control,1,0.67,Trisetum.canescens,0.03
+2024,7/26/24,Emerald Lake,F13C,13,26,Control,1,0.67,Viola.adunca,0.07
+2024,7/27/24,Emerald Lake,F14,14,27,Castilleja,1.155,0.805,Bare.ground,0.35
+2024,7/27/24,Emerald Lake,F14,14,27,Castilleja,1.155,0.805,Achillea.millefolium,0.02
+2024,7/27/24,Emerald Lake,F14,14,27,Castilleja,1.155,0.805,Anemone.multifida,0.06
+2024,7/27/24,Emerald Lake,F14,14,27,Castilleja,1.155,0.805,Carex.pityophila,0.06
+2024,7/27/24,Emerald Lake,F14,14,27,Castilleja,1.155,0.805,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.1
+2024,7/27/24,Emerald Lake,F14,14,27,Castilleja,1.155,0.805,Castilleja.septentrionalis,0.03
+2024,7/27/24,Emerald Lake,F14,14,27,Castilleja,1.155,0.805,Cirsium.griseum,0.03
+2024,7/27/24,Emerald Lake,F14,14,27,Castilleja,1.155,0.805,Deschampsia.cespitosa,0.08
+2024,7/27/24,Emerald Lake,F14,14,27,Castilleja,1.155,0.805,Draba.spectabilis,0.005
+2024,7/27/24,Emerald Lake,F14,14,27,Castilleja,1.155,0.805,Fragaria.virginiana,0.21
+2024,7/27/24,Emerald Lake,F14,14,27,Castilleja,1.155,0.805,Noccaea.fendleri,0.01
+2024,7/27/24,Emerald Lake,F14,14,27,Castilleja,1.155,0.805,Potentilla.glaucophylla,0.12
+2024,7/27/24,Emerald Lake,F14,14,27,Castilleja,1.155,0.805,Senecio.crassulus,0.04
+2024,7/27/24,Emerald Lake,F14,14,27,Castilleja,1.155,0.805,Trisetum.canescens,0.02
+2024,7/27/24,Emerald Lake,F14,14,27,Castilleja,1.155,0.805,Viola.adunca,0.02
+2024,7/27/24,Emerald Lake,F14C,14,28,Control,1.09,0.54,Bare.ground,0.55
+2024,7/27/24,Emerald Lake,F14C,14,28,Control,1.09,0.54,Achillea.millefolium,0.01
+2024,7/27/24,Emerald Lake,F14C,14,28,Control,1.09,0.54,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.04
+2024,7/27/24,Emerald Lake,F14C,14,28,Control,1.09,0.54,Cirsium.griseum,0.01
+2024,7/27/24,Emerald Lake,F14C,14,28,Control,1.09,0.54,Deschampsia.cespitosa,0.22
+2024,7/27/24,Emerald Lake,F14C,14,28,Control,1.09,0.54,Elymus.lanceolatus,0.04
+2024,7/27/24,Emerald Lake,F14C,14,28,Control,1.09,0.54,Fragaria.virginiana,0.02
+2024,7/27/24,Emerald Lake,F14C,14,28,Control,1.09,0.54,Heterotheca.sp.,0.01
+2024,7/27/24,Emerald Lake,F14C,14,28,Control,1.09,0.54,Poa.alpina,0.04
+2024,7/27/24,Emerald Lake,F14C,14,28,Control,1.09,0.54,Potentilla.glaucophylla,0.07
+2024,7/27/24,Emerald Lake,F14C,14,28,Control,1.09,0.54,Senecio.crassulus,0.04
+2024,7/27/24,Emerald Lake,F14C,14,28,Control,1.09,0.54,Taraxacum.officinale,0.02
+2024,7/27/24,Emerald Lake,F14C,14,28,Control,1.09,0.54,Viola.adunca,0.02
+2024,7/27/24,Emerald Lake,F15,15,29,Castilleja,1,0.69,Bare.ground,0.31
+2024,7/27/24,Emerald Lake,F15,15,29,Castilleja,1,0.69,Achillea.millefolium,0.01
+2024,7/27/24,Emerald Lake,F15,15,29,Castilleja,1,0.69,Anemone.multifida,0.005
+2024,7/27/24,Emerald Lake,F15,15,29,Castilleja,1,0.69,Boechera.stricta,0.005
+2024,7/27/24,Emerald Lake,F15,15,29,Castilleja,1,0.69,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.08
+2024,7/27/24,Emerald Lake,F15,15,29,Castilleja,1,0.69,Castilleja.septentrionalis,0.03
+2024,7/27/24,Emerald Lake,F15,15,29,Castilleja,1,0.69,Cirsium.griseum,0.04
+2024,7/27/24,Emerald Lake,F15,15,29,Castilleja,1,0.69,Deschampsia.cespitosa,0.12
+2024,7/27/24,Emerald Lake,F15,15,29,Castilleja,1,0.69,Fragaria.virginiana,0.13
+2024,7/27/24,Emerald Lake,F15,15,29,Castilleja,1,0.69,Potentilla.glaucophylla,0.11
+2024,7/27/24,Emerald Lake,F15,15,29,Castilleja,1,0.69,Potentilla.pulcherrima,0.06
+2024,7/27/24,Emerald Lake,F15,15,29,Castilleja,1,0.69,Senecio.crassulus,0.06
+2024,7/27/24,Emerald Lake,F15,15,29,Castilleja,1,0.69,Viola.adunca,0.04
+2024,7/27/24,Emerald Lake,F15C,15,30,Control,1.06,0.21,Bare.ground,0.85
+2024,7/27/24,Emerald Lake,F15C,15,30,Control,1.06,0.21,Achillea.millefolium,0.02
+2024,7/27/24,Emerald Lake,F15C,15,30,Control,1.06,0.21,Deschampsia.cespitosa,0.03
+2024,7/27/24,Emerald Lake,F15C,15,30,Control,1.06,0.21,Fragaria.virginiana,0.03
+2024,7/27/24,Emerald Lake,F15C,15,30,Control,1.06,0.21,Potentilla.glaucophylla,0.05
+2024,7/27/24,Emerald Lake,F15C,15,30,Control,1.06,0.21,Senecio.crassulus,0.07
+2024,7/27/24,Emerald Lake,F15C,15,30,Control,1.06,0.21,Viola.adunca,0.01
+2024,7/27/24,Emerald Lake,F16,16,31,Castilleja,1.1,0.75,Bare.ground,0.35
+2024,7/27/24,Emerald Lake,F16,16,31,Castilleja,1.1,0.75,Achillea.millefolium,0.03
+2024,7/27/24,Emerald Lake,F16,16,31,Castilleja,1.1,0.75,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.01
+2024,7/27/24,Emerald Lake,F16,16,31,Castilleja,1.1,0.75,Castilleja.septentrionalis,0.04
+2024,7/27/24,Emerald Lake,F16,16,31,Castilleja,1.1,0.75,Cirsium.griseum,0.05
+2024,7/27/24,Emerald Lake,F16,16,31,Castilleja,1.1,0.75,Deschampsia.cespitosa,0.06
+2024,7/27/24,Emerald Lake,F16,16,31,Castilleja,1.1,0.75,Fragaria.virginiana,0.01
+2024,7/27/24,Emerald Lake,F16,16,31,Castilleja,1.1,0.75,Noccaea.fendleri,0.01
+2024,7/27/24,Emerald Lake,F16,16,31,Castilleja,1.1,0.75,Poa.alpina,0.04
+2024,7/27/24,Emerald Lake,F16,16,31,Castilleja,1.1,0.75,Potentilla.glaucophylla,0.18
+2024,7/27/24,Emerald Lake,F16,16,31,Castilleja,1.1,0.75,Potentilla.pulcherrima,0.19
+2024,7/27/24,Emerald Lake,F16,16,31,Castilleja,1.1,0.75,Senecio.crassulus,0.07
+2024,7/27/24,Emerald Lake,F16,16,31,Castilleja,1.1,0.75,Sibbaldia.procumbens,0.02
+2024,7/27/24,Emerald Lake,F16,16,31,Castilleja,1.1,0.75,Viola.adunca,0.04
+2024,7/27/24,Emerald Lake,F16C,16,32,Control,1.03,0.63,Bare.ground,0.4
+2024,7/27/24,Emerald Lake,F16C,16,32,Control,1.03,0.63,Achillea.millefolium,0.04
+2024,7/27/24,Emerald Lake,F16C,16,32,Control,1.03,0.63,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.05
+2024,7/27/24,Emerald Lake,F16C,16,32,Control,1.03,0.63,Cirsium.griseum,0.05
+2024,7/27/24,Emerald Lake,F16C,16,32,Control,1.03,0.63,Deschampsia.cespitosa,0.03
+2024,7/27/24,Emerald Lake,F16C,16,32,Control,1.03,0.63,Elymus.lanceolatus,0.05
+2024,7/27/24,Emerald Lake,F16C,16,32,Control,1.03,0.63,Fragaria.virginiana,0.02
+2024,7/27/24,Emerald Lake,F16C,16,32,Control,1.03,0.63,Potentilla.glaucophylla,0.23
+2024,7/27/24,Emerald Lake,F16C,16,32,Control,1.03,0.63,Potentilla.pulcherrima,0.06
+2024,7/27/24,Emerald Lake,F16C,16,32,Control,1.03,0.63,Senecio.crassulus,0.1
+2024,7/27/24,Emerald Lake,F17,17,33,Castilleja,1.02,0.87,Bare.ground,0.15
+2024,7/27/24,Emerald Lake,F17,17,33,Castilleja,1.02,0.87,Anemone.multifida,0.04
+2024,7/27/24,Emerald Lake,F17,17,33,Castilleja,1.02,0.87,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.09
+2024,7/27/24,Emerald Lake,F17,17,33,Castilleja,1.02,0.87,Castilleja.septentrionalis,0.06
+2024,7/27/24,Emerald Lake,F17,17,33,Castilleja,1.02,0.87,Deschampsia.cespitosa,0.01
+2024,7/27/24,Emerald Lake,F17,17,33,Castilleja,1.02,0.87,Draba.spectabilis,0.02
+2024,7/27/24,Emerald Lake,F17,17,33,Castilleja,1.02,0.87,Fragaria.virginiana,0.15
+2024,7/27/24,Emerald Lake,F17,17,33,Castilleja,1.02,0.87,Poa.fendleriana,0.02
+2024,7/27/24,Emerald Lake,F17,17,33,Castilleja,1.02,0.87,Potentilla.glaucophylla,0.04
+2024,7/27/24,Emerald Lake,F17,17,33,Castilleja,1.02,0.87,Potentilla.pulcherrima,0.3
+2024,7/27/24,Emerald Lake,F17,17,33,Castilleja,1.02,0.87,Senecio.crassulus,0.08
+2024,7/27/24,Emerald Lake,F17,17,33,Castilleja,1.02,0.87,Trisetum.canescens,0.01
+2024,7/27/24,Emerald Lake,F17,17,33,Castilleja,1.02,0.87,Viola.adunca,0.05
+2024,7/27/24,Emerald Lake,F17C,17,34,Control,1,0.83,Bare.ground,0.17
+2024,7/27/24,Emerald Lake,F17C,17,34,Control,1,0.83,Achillea.millefolium,0.02
+2024,7/27/24,Emerald Lake,F17C,17,34,Control,1,0.83,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.06
+2024,7/27/24,Emerald Lake,F17C,17,34,Control,1,0.83,Cirsium.griseum,0.05
+2024,7/27/24,Emerald Lake,F17C,17,34,Control,1,0.83,Deschampsia.cespitosa,0.08
+2024,7/27/24,Emerald Lake,F17C,17,34,Control,1,0.83,Draba.spectabilis,0.02
+2024,7/27/24,Emerald Lake,F17C,17,34,Control,1,0.83,Erigeron.leiomerus,0.09
+2024,7/27/24,Emerald Lake,F17C,17,34,Control,1,0.83,Fragaria.virginiana,0.06
+2024,7/27/24,Emerald Lake,F17C,17,34,Control,1,0.83,Noccaea.fendleri,0.01
+2024,7/27/24,Emerald Lake,F17C,17,34,Control,1,0.83,Phleum.alpinum,0.01
+2024,7/27/24,Emerald Lake,F17C,17,34,Control,1,0.83,Poa.fendleriana,0.01
+2024,7/27/24,Emerald Lake,F17C,17,34,Control,1,0.83,Potentilla.glaucophylla,0.16
+2024,7/27/24,Emerald Lake,F17C,17,34,Control,1,0.83,Potentilla.pulcherrima,0.14
+2024,7/27/24,Emerald Lake,F17C,17,34,Control,1,0.83,Senecio.crassulus,0.09
+2024,7/27/24,Emerald Lake,F17C,17,34,Control,1,0.83,Viola.adunca,0.03
+2024,7/27/24,Emerald Lake,F18,18,35,Castilleja,1.055,0.855,Bare.ground,0.2
+2024,7/27/24,Emerald Lake,F18,18,35,Castilleja,1.055,0.855,Achillea.millefolium,0.06
+2024,7/27/24,Emerald Lake,F18,18,35,Castilleja,1.055,0.855,Anemone.multifida,0.05
+2024,7/27/24,Emerald Lake,F18,18,35,Castilleja,1.055,0.855,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.06
+2024,7/27/24,Emerald Lake,F18,18,35,Castilleja,1.055,0.855,Castilleja.septentrionalis,0.01
+2024,7/27/24,Emerald Lake,F18,18,35,Castilleja,1.055,0.855,Deschampsia.cespitosa,0.03
+2024,7/27/24,Emerald Lake,F18,18,35,Castilleja,1.055,0.855,Draba.spectabilis,0.02
+2024,7/27/24,Emerald Lake,F18,18,35,Castilleja,1.055,0.855,Elymus.lanceolatus,0.02
+2024,7/27/24,Emerald Lake,F18,18,35,Castilleja,1.055,0.855,Fragaria.virginiana,0.02
+2024,7/27/24,Emerald Lake,F18,18,35,Castilleja,1.055,0.855,Noccaea.fendleri,0.005
+2024,7/27/24,Emerald Lake,F18,18,35,Castilleja,1.055,0.855,Phleum.alpinum,0.02
+2024,7/27/24,Emerald Lake,F18,18,35,Castilleja,1.055,0.855,Potentilla.glaucophylla,0.05
+2024,7/27/24,Emerald Lake,F18,18,35,Castilleja,1.055,0.855,Potentilla.pulcherrima,0.38
+2024,7/27/24,Emerald Lake,F18,18,35,Castilleja,1.055,0.855,Senecio.crassulus,0.08
+2024,7/27/24,Emerald Lake,F18,18,35,Castilleja,1.055,0.855,Trisetum.canescens,0.01
+2024,7/27/24,Emerald Lake,F18,18,35,Castilleja,1.055,0.855,Viola.adunca,0.04
+2024,7/27/24,Emerald Lake,F18C,18,36,Control,1.02,0.52,Bare.ground,0.5
+2024,7/27/24,Emerald Lake,F18C,18,36,Control,1.02,0.52,Achillea.millefolium,0.01
+2024,7/27/24,Emerald Lake,F18C,18,36,Control,1.02,0.52,Anemone.multifida,0.04
+2024,7/27/24,Emerald Lake,F18C,18,36,Control,1.02,0.52,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.01
+2024,7/27/24,Emerald Lake,F18C,18,36,Control,1.02,0.52,Cirsium.griseum,0.01
+2024,7/27/24,Emerald Lake,F18C,18,36,Control,1.02,0.52,Draba.spectabilis,0.02
+2024,7/27/24,Emerald Lake,F18C,18,36,Control,1.02,0.52,Elymus.lanceolatus,0.06
+2024,7/27/24,Emerald Lake,F18C,18,36,Control,1.02,0.52,Fragaria.virginiana,0.01
+2024,7/27/24,Emerald Lake,F18C,18,36,Control,1.02,0.52,Gentiana.parryi,0.07
+2024,7/27/24,Emerald Lake,F18C,18,36,Control,1.02,0.52,Phleum.alpinum,0.06
+2024,7/27/24,Emerald Lake,F18C,18,36,Control,1.02,0.52,Potentilla.glaucophylla,0.06
+2024,7/27/24,Emerald Lake,F18C,18,36,Control,1.02,0.52,Potentilla.pulcherrima,0.14
+2024,7/27/24,Emerald Lake,F18C,18,36,Control,1.02,0.52,Senecio.crassulus,0.02
+2024,7/27/24,Emerald Lake,F18C,18,36,Control,1.02,0.52,Viola.adunca,0.01
+2024,7/27/24,Emerald Lake,F19,19,37,Castilleja,1.05,0.9,Bare.ground,0.15
+2024,7/27/24,Emerald Lake,F19,19,37,Castilleja,1.05,0.9,Achillea.millefolium,0.02
+2024,7/27/24,Emerald Lake,F19,19,37,Castilleja,1.05,0.9,Androsace.septentrionales,0.01
+2024,7/27/24,Emerald Lake,F19,19,37,Castilleja,1.05,0.9,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.05
+2024,7/27/24,Emerald Lake,F19,19,37,Castilleja,1.05,0.9,Castilleja.septentrionalis,0.03
+2024,7/27/24,Emerald Lake,F19,19,37,Castilleja,1.05,0.9,Cirsium.griseum,0.02
+2024,7/27/24,Emerald Lake,F19,19,37,Castilleja,1.05,0.9,Danthonia.parryi,0.01
+2024,7/27/24,Emerald Lake,F19,19,37,Castilleja,1.05,0.9,Deschampsia.cespitosa,0.07
+2024,7/27/24,Emerald Lake,F19,19,37,Castilleja,1.05,0.9,Draba.spectabilis,0.01
+2024,7/27/24,Emerald Lake,F19,19,37,Castilleja,1.05,0.9,Erigeron.speciosus,0.09
+2024,7/27/24,Emerald Lake,F19,19,37,Castilleja,1.05,0.9,Fragaria.virginiana,0.16
+2024,7/27/24,Emerald Lake,F19,19,37,Castilleja,1.05,0.9,Gentiana.parryi,0.03
+2024,7/27/24,Emerald Lake,F19,19,37,Castilleja,1.05,0.9,Phleum.alpinum,0.01
+2024,7/27/24,Emerald Lake,F19,19,37,Castilleja,1.05,0.9,Potentilla.pulcherrima,0.26
+2024,7/27/24,Emerald Lake,F19,19,37,Castilleja,1.05,0.9,Senecio.crassulus,0.06
+2024,7/27/24,Emerald Lake,F19,19,37,Castilleja,1.05,0.9,Taraxacum.officinale,0.02
+2024,7/27/24,Emerald Lake,F19,19,37,Castilleja,1.05,0.9,Trisetum.canescens,0.02
+2024,7/27/24,Emerald Lake,F19,19,37,Castilleja,1.05,0.9,Viola.adunca,0.03
+2024,7/27/24,Emerald Lake,F19C,19,38,Control,1.065,0.835,Bare.ground,0.23
+2024,7/27/24,Emerald Lake,F19C,19,38,Control,1.065,0.835,Achillea.millefolium,0.04
+2024,7/27/24,Emerald Lake,F19C,19,38,Control,1.065,0.835,Anemone.multifida,0.01
+2024,7/27/24,Emerald Lake,F19C,19,38,Control,1.065,0.835,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.18
+2024,7/27/24,Emerald Lake,F19C,19,38,Control,1.065,0.835,Danthonia.parryi,0.02
+2024,7/27/24,Emerald Lake,F19C,19,38,Control,1.065,0.835,Deschampsia.cespitosa,0.02
+2024,7/27/24,Emerald Lake,F19C,19,38,Control,1.065,0.835,Draba.spectabilis,0.005
+2024,7/27/24,Emerald Lake,F19C,19,38,Control,1.065,0.835,Erigeron.leiomerus,0.01
+2024,7/27/24,Emerald Lake,F19C,19,38,Control,1.065,0.835,Erigeron.speciosus,0.05
+2024,7/27/24,Emerald Lake,F19C,19,38,Control,1.065,0.835,Fragaria.virginiana,0.08
+2024,7/27/24,Emerald Lake,F19C,19,38,Control,1.065,0.835,Gentiana.parryi,0.05
+2024,7/27/24,Emerald Lake,F19C,19,38,Control,1.065,0.835,Potentilla.pulcherrima,0.26
+2024,7/27/24,Emerald Lake,F19C,19,38,Control,1.065,0.835,Senecio.crassulus,0.08
+2024,7/27/24,Emerald Lake,F19C,19,38,Control,1.065,0.835,Trisetum.canescens,0.01
+2024,7/27/24,Emerald Lake,F19C,19,38,Control,1.065,0.835,Viola.adunca,0.02
+2024,7/27/24,Emerald Lake,F20,20,39,Castilleja,1.06,0.88,Bare.ground,0.18
+2024,7/27/24,Emerald Lake,F20,20,39,Castilleja,1.06,0.88,Achillea.millefolium,0.11
+2024,7/27/24,Emerald Lake,F20,20,39,Castilleja,1.06,0.88,Androsace.septentrionales,0.01
+2024,7/27/24,Emerald Lake,F20,20,39,Castilleja,1.06,0.88,Anemone.multifida,0.08
+2024,7/27/24,Emerald Lake,F20,20,39,Castilleja,1.06,0.88,Boechera.stricta,0.01
+2024,7/27/24,Emerald Lake,F20,20,39,Castilleja,1.06,0.88,Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..,0.01
+2024,7/27/24,Emerald Lake,F20,20,39,Castilleja,1.06,0.88,Castilleja.septentrionalis,0.08
+2024,7/27/24,Emerald Lake,F20,20,39,Castilleja,1.06,0.88,Deschampsia.cespitosa,0.01
+2024,7/27/24,Emerald Lake,F20,20,39,Castilleja,1.06,0.88,Draba.spectabilis,0.02
+2024,7/27/24,Emerald Lake,F20,20,39,Castilleja,1.06,0.88,Elymus.lanceolatus,0.04
+2024,7/27/24,Emerald Lake,F20,20,39,Castilleja,1.06,0.88,Erigeron.coulteri,0.01
+2024,7/27/24,Emerald Lake,F20,20,39,Castilleja,1.06,0.88,Fragaria.virginiana,0.03
+2024,7/27/24,Emerald Lake,F20,20,39,Castilleja,1.06,0.88,Hymenoxys.hoopesii,0.11
+2024,7/27/24,Emerald Lake,F20,20,39,Castilleja,1.06,0.88,Potentilla.pulcherrima,0.23
+2024,7/27/24,Emerald Lake,F20,20,39,Castilleja,1.06,0.88,Senecio.crassulus,0.11
+2024,7/27/24,Emerald Lake,F20,20,39,Castilleja,1.06,0.88,Trisetum.canescens,0.01
+2024,7/27/24,Emerald Lake,F20,20,39,Castilleja,1.06,0.88,Viola.adunca,0.01
+2024,7/27/24,Emerald Lake,F20C,20,40,Control,1,0.55,Bare.ground,0.45
+2024,7/27/24,Emerald Lake,F20C,20,40,Control,1,0.55,Achillea.millefolium,0.03
+2024,7/27/24,Emerald Lake,F20C,20,40,Control,1,0.55,Cirsium.griseum,0.09
+2024,7/27/24,Emerald Lake,F20C,20,40,Control,1,0.55,Draba.spectabilis,0.02
+2024,7/27/24,Emerald Lake,F20C,20,40,Control,1,0.55,Elymus.lanceolatus,0.1
+2024,7/27/24,Emerald Lake,F20C,20,40,Control,1,0.55,Fragaria.virginiana,0.02
+2024,7/27/24,Emerald Lake,F20C,20,40,Control,1,0.55,Potentilla.pulcherrima,0.07
+2024,7/27/24,Emerald Lake,F20C,20,40,Control,1,0.55,Senecio.crassulus,0.17
+2024,7/27/24,Emerald Lake,F20C,20,40,Control,1,0.55,Trisetum.canescens,0.01
+2024,7/27/24,Emerald Lake,F20C,20,40,Control,1,0.55,Viola.adunca,0.04

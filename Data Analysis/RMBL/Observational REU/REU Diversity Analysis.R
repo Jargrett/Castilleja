@@ -16,14 +16,13 @@ library(emmeans)#post-hoc analysis
 
 #Load in 2023 + 2024 datasets (For diversity analysis we will use species counts)
 CALI.24 <- read.csv("Cali 2024 Count.csv")
-CALI.24.Johnson <- read.csv("Cali 2024 Johnson Hill Count.csv")
 CALI.23 <- read.csv("Cali 2023 Count.csv")
 CASE.23 <- read.csv("Case 2023 Count.csv")
-CASE.24.Avery <- read.csv("Case 2024 Avery Count.csv")
+CASE.24 <- read.csv("Case 2024 Count.csv")
 
 #merging dataframes by pivot longer then rbind
-cali <- rbind.fill(CALI.23,CALI.24,CALI.24.Johnson)
-case <- rbind.fill(CASE.23,CASE.24.Avery)
+cali <- rbind.fill(CALI.23,CALI.24)
+case <- rbind.fill(CASE.23,CASE.24)
 
 #changing NA to 0
 cali[is.na(cali)] <- 0
