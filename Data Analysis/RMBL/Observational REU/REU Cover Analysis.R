@@ -158,6 +158,7 @@ Anova(plant.lm)
 emmeans(plant.lm, pairwise ~ castilleja|site)
 emmip(plant.lm, castilleja ~ site)
 
+no.cali.cover <- cali.cover[-(which(cali.cover$species %in% "Castilleja.linariifolia")),]
 
 grass.cover <- cali.cover %>% filter (functional.group == "grass")
 grass.lm <- lm(cover ~ castilleja*site, data = grass.cover)
@@ -183,3 +184,52 @@ case.cover$site <- as.factor(case.cover$site)
 case.cover$year <- as.factor(case.cover$year)
 case.cover$castilleja <- as.factor(case.cover$castilleja)
 case.cover$species <- as.factor(case.cover$species)
+
+
+case.indv.species = subset(case.cover, select = -c(2,5,7,8))
+#The we pivot the columns wider creating two cover columns based on a given species
+case.species.pair <- case.indv.species %>%
+  pivot_wider(names_from = castilleja,
+              values_from = c(cover)) %>% drop_na() %>%
+  filter(if_any(species, ~ !(.x %in% c("Bare.ground"))))
+
+case.species.pair$cover.difference <- case.species.pair$Castilleja-case.species.pair$Control
+
+summary(case.species.pair)
+
+#Birds eye view
+no.case.cover <- case.cover[-(which(case.cover$species %in% "Castilleja.septentrionalis")),]
+no.case.cover <- case.cover[-(which(case.cover$species %in% "Bare.ground")),]
+noplant.lm <- lm(plant.cover ~ castilleja*site, data = no.case.cover)
+summary(noplant.lm)
+Anova(noplant.lm)
+emmeans(noplant.lm, pairwise ~ castilleja|site)
+emmip(noplant.lm, castilleja ~ site)
+
+summary(no.case.cover)
+
+plant.lm <- lm(plant.cover ~ castilleja*site, data = case.cover)
+summary(plant.lm)
+Anova(plant.lm)
+emmeans(plant.lm, pairwise ~ castilleja|site)
+emmip(plant.lm, castilleja ~ site)
+
+FRVI.pair <- case.species.pair%>% filter (species == "Fragaria.virginiana")
+
+t.test(FRVI.pair$Castilleja, FRVI.pair$Control,
+       paired = TRUE,   
+       conf.level = 0.95)
+
+FRVI.pair <- case.species.pair%>% filter (species == "Fragaria.virginiana")
+
+t.test(FRVI.pair$Castilleja, FRVI.pair$Control,
+       paired = TRUE,   
+       conf.level = 0.95)
+
+VIAD.pair <- case.species.pair %>% filter (species == "Viola.adunca")
+
+t.test(VIAD.pair$Castilleja, VIAD.pair$Control,
+       paired = TRUE,   
+       conf.level = 0.95)
+
+summary(VIAD.pair)
