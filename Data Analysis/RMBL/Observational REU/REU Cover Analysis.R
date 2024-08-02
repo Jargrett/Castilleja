@@ -16,7 +16,7 @@ library(car)#for regression analysis
 library(emmeans)#post-hoc analysis
 library(indicspecies)
 library(statmod)
-
+library(rstatix)
 # #Load in 2023 + 2024 datasets (For cover analysis)
 # CALI.24 <- read.csv("Cali 2024 Cover.csv")
 # CALI.23 <- read.csv("Cali 2023 - Cover.csv")
@@ -219,6 +219,8 @@ FRVI.pair <- case.species.pair%>% filter (species == "Fragaria.virginiana")
 t.test(FRVI.pair$Castilleja, FRVI.pair$Control,
        paired = TRUE,   
        conf.level = 0.95)
+
+
 
 FRVI.pair <- case.species.pair%>% filter (species == "Fragaria.virginiana")
 
