@@ -62,7 +62,6 @@ case.cover.comb <- rbind(case.23.cover,case.24.cover)
 case.cover.zero <- rbind(case.23.long,case.24.long)
 
 write.csv(case.cover.comb,"/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL/Observational REU/Combined septentrionalis Species Cover.csv", row.names=FALSE)
-install.packages("openxlsx")
 library(openxlsx)
 write.xlsx(case.cover.comb,"/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL/Observational REU/Combined septentrionalis Species Cover.xlsx")
 #-----------------------------linariifolia COVER ANALYSIS BEGINS----------------------------#

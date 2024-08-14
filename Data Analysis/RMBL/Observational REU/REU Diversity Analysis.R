@@ -44,13 +44,13 @@ nocali.cover.matrix <- cali.cover[ -c(1:10,20)]
 
 # Calculating Shannon diversity, richness, and evenness for 2023 plots (Cover data)
 #linariifolia
-cali.cover.div <- diversity(cali.cover.matrix, index = "shannon")
-cali.cover.rich <- specnumber(cali.cover.matrix)
-cali.cover.even <- diversity(cali.cover.matrix, index = "shannon") / log(specnumber(cali.cover.matrix)) 
+cali.cover.div <- diversity(nocali.cover.matrix, index = "shannon")
+cali.cover.rich <- specnumber(nocali.cover.matrix)
+cali.cover.even <- diversity(nocali.cover.matrix, index = "shannon") / log(specnumber(cali.cover.matrix)) 
 #septentrionalis
-case.cover.div <- diversity(case.cover.matrix, index = "shannon")
-case.cover.rich <- specnumber(case.cover.matrix)
-case.cover.even <- diversity(case.cover.matrix, index = "shannon") / log(specnumber(case.cover.matrix)) 
+case.cover.div <- diversity(nocase.cover.matrix, index = "shannon")
+case.cover.rich <- specnumber(nocase.cover.matrix)
+case.cover.even <- diversity(nocase.cover.matrix, index = "shannon") / log(specnumber(case.cover.matrix)) 
 
 #combined data set with environmental and calculated values
 #linariifolia
@@ -192,7 +192,7 @@ case.richness.plot <- ggplot(case.cover.diversity, aes(x = Castilleja, y = rich)
   facet_wrap(~Site) +
   scale_color_manual(values=c( "khaki3", "burlywood4")) +
   labs(x = "Castilleja septentrionalis", y = "Species Richness") +
-  ylim(3,16)
+  ylim(0,20)
 
 case.richness.plot
 
@@ -205,7 +205,7 @@ case.evenness.plot <- ggplot(case.cover.diversity, aes(x = Castilleja, y = even)
   facet_wrap(~Site) +
   scale_color_manual(values=c( "khaki3", "burlywood4")) +
   labs(x = "Castilleja septentrionalis", y = "Species Evenness") +
-  ylim(.5,1)
+  ylim(0.2,1)
 
 case.evenness.plot
 
@@ -213,3 +213,8 @@ septentrionalis.plot <- ggarrange(case.diversity.plot, case.richness.plot, case.
                                labels = c("A", "B","C"), 
                                nrow = 1, common.legend = TRUE, legend = "bottom")
 septentrionalis.plot
+
+
+#--------Composition Analysis (Multivariate analysis) -------#
+# non-metric multidimensional scaling (NMDS)
+
