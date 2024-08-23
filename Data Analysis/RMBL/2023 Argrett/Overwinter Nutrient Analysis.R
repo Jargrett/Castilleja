@@ -23,12 +23,17 @@ nitrate <- ggplot(soil, aes(x = Litter, y = P)) +
   
 nitrate
 
+nitrate.lmm <- lmer(Ammonium ~ Litter*Removal + (1|Block) + (1|Pair), data = soil)
+summary(nitrate.lmm)
+Anova(nitrate.lmm)
+emmip(nitrate.lmm, Litter ~ Removal)
+emmeans(nitrate.lmm, pairwise ~  Removal|Litter)
 
-k.lmm <- lmer(K ~ Litter*Removal + (1|Block) + (1|Pair), data = soil)
+k.lmm <- lmer(k ~ Litter*Removal + (1|Block) + (1|Pair), data = soil)
 summary(k.lmm)
 Anova(k.lmm)
 emmip(k.lmm, Litter ~ Removal)
-emmeans(k.lmm, pairwise ~  Removal|Litter)
+emmeans(k.lmm, pairwise ~  Litter)
 
 ggplot(data = soil, aes(x = Litter, y = K, fill = Removal)) +
   geom_bar(stat ="identity", position=position_dodge(1)) +
