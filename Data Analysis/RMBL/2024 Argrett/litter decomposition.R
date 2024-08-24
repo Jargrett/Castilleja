@@ -28,5 +28,9 @@ winter <- winter %>%
   select(-c((missing)))
 
 #first lets see if decomp is different between treatment
-
+over.lm <- lm(final_dry_weight ~ litter, data = winter)
+summary(over.lm)
+Anova(over.lm)
+emmip(over.lm, removal ~ litter)
+emmeans(over.lmm, pairwise ~ litter)
 
