@@ -234,3 +234,21 @@ t.test(VIAD.pair$Castilleja, VIAD.pair$Control,
        conf.level = 0.95)
 
 summary(VIAD.pair)
+
+#--------Indicator Species Analysis---------#
+CASE.24 <- read.csv("Case 2024 Cover.csv")
+CASE.23 <- read.csv("Case 2023 Cover.csv")
+CALI.23 <- read.csv("Cali 2023 Cover.csv")
+CALI.24 <- read.csv("Cali 2024 Cover.csv")
+
+# remove columns that arn't site, plot, treatment
+case.avery <- filter(CALI.24, Site == "Deer Creek 2")
+case.matrix <- CALI.24 %>%
+  select(11:69) %>% 
+  select (-c(Castilleja.linariifolia))
+
+treatment = CALI.24$Treatment
+
+inv = multipatt(case.matrix, treatment, func = "r.g", control = how(nperm=9999))
+
+summary(inv)
