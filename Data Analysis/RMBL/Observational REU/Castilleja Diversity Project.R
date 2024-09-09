@@ -298,3 +298,199 @@ cali.pair <- cali.species %>%
 
 case.pair$cover.difference <- case.pair$Castilleja-case.pair$Control
 cali.pair$cover.difference <- cali.pair$Castilleja-cali.pair$Control
+
+FRVI.pair <- case.pair%>% filter (species == "Fragaria.virginiana")
+
+t.test(FRVI.pair$Castilleja, FRVI.pair$Control,#higher in Castilleja plots by 2%, p = 0.006285
+       paired = TRUE,   
+       conf.level = 0.95)
+
+DENU.pair <- cali.pair%>% filter (species == "Delphinum.nuttalliianum")
+
+t.test(DENU.pair$Castilleja, DENU.pair$Control,#not signficant
+       paired = TRUE,   
+       conf.level = 0.95)
+
+KOMA.pair <- cali.pair%>% filter (species == "Koeleria.macrantha")#not enough paired plots
+
+#Now lets investigate functional group differences
+
+#Grasses
+case.grass <- case.long %>% 
+  filter (functional.group == "grass") %>%
+  pivot_wider(names_from = species,
+              values_from = c(cover),
+              values_fill = 0) %>% 
+  select(,-c(total.cover, plant.cover, functional.group, life.history, family))
+
+case.grass$grass.cover <- rowSums(case.grass[7:20])
+
+case.grass.lm <- lmer(grass.cover ~ castilleja*site + year + (1|pair), data = case.grass)
+summary(case.grass.lm)
+Anova(case.grass.lm)
+emmip(case.grass.lm, castilleja ~ site)
+emmeans(case.grass.lm, pairwise ~ castilleja|site)
+
+#Legumes
+case.legume <- case.long %>% 
+  filter (functional.group == "legume") %>%
+  filter (site != "Emerald") %>%
+  pivot_wider(names_from = species,
+              values_from = c(cover),
+              values_fill = 0) %>% 
+  select(,-c(total.cover, plant.cover, functional.group, life.history, family))
+
+case.legume$legume.cover <- rowSums(case.legume[7:10])
+
+case.legume.lm <- lmer(legume.cover ~ castilleja*site + year + (1|pair), data = case.legume)
+summary(case.legume.lm)
+Anova(case.legume.lm)
+emmip(case.legume.lm, castilleja ~ site)
+emmeans(case.legume.lm, pairwise ~ castilleja|site)
+
+#Forbs
+case.forb <- case.long %>% 
+  filter (functional.group == "forb") %>%
+  pivot_wider(names_from = species,
+              values_from = c(cover),
+              values_fill = 0) %>% 
+  select(,-c(total.cover, plant.cover, functional.group, life.history, family))
+
+case.forb$forb.cover <- rowSums(case.forb[7:50])
+
+case.forb.lm <- lmer(forb.cover ~ castilleja*site + year + (1|pair), data = case.forb)
+summary(case.forb.lm)
+Anova(case.forb.lm)
+emmip(case.forb.lm, castilleja ~ site)
+emmeans(case.forb.lm, pairwise ~ castilleja|site)
+
+#Sedge
+case.sedge <- case.long %>% 
+  filter (functional.group == "sedge") %>%
+  filter (site != "Avery") %>%
+  pivot_wider(names_from = species,
+              values_from = c(cover),
+              values_fill = 0) %>% 
+  select(,-c(total.cover, plant.cover, functional.group, life.history, family))
+
+case.sedge$sedge.cover <- rowSums(case.sedge[7:10])
+
+case.sedge.lm <- lmer(sedge.cover ~ castilleja*site + year + (1|pair), data = case.sedge)
+summary(case.sedge.lm)
+Anova(case.sedge.lm)
+emmip(case.sedge.lm, castilleja ~ site)
+emmeans(case.sedge.lm, pairwise ~ castilleja|site)
+
+#--------------------------Multivariate analysis-------------------------------#
+#we will now run a (Multivariate analysis)
+#This allows us to look at the compoisitinoal differences between our sites,castilleja,etc.
+library(ggrepel)
+
+#we are working towards Matrix format so we can take our castilleja matrix as our starting point
+set.seed(20)
+
+#First calculate distance matrix
+case.dist <-vegdist(case.cover.matrix, method="bray")
+cali.dist <-vegdist(cali.cover.matrix, method="bray")
+
+#Run NMDS on distance matrix
+case.nmds <- metaMDS(case.dist, distance="bray", #use bray-curtis distance
+                      k=2, #2 dimensions
+                      try=500) #for publication I recommend 500)
+cali.nmds <- metaMDS(cali.dist, distance="bray", #use bray-curtis distance
+                   k=2, #2 dimensions
+                   try=500) #for publication I recommend 500)
+case.nmds#stress value 0.15 which is below .2 so we are good!
+cali.nmds#stress value 0.27 which is above .2 so we need to investigate
+
+ordiplot(case.nmds, type="text", display="sites")
+ordiplot(cali.nmds, type="text", display="sites")
+
+case.nmds.scores <- as.data.frame(vegan::scores(case.nmds))
+case.NMDS <- cbind(case.env,case.nmds.scores) #final dataset
+
+adonis2(case.dist~castilleja*site, data = case.NMDS, permutations=999)
+
+ggplot(case.NMDS, aes(NMDS1, NMDS2)) +
+  geom_point(aes(color=castilleja , shape=site)) +
+  coord_equal() +
+  theme_bw()
+
+
+
+cali.nmds.scores <- as.data.frame(vegan::scores(cali.nmds))
+cali.NMDS <- cbind(cali.env,cali.nmds.scores) #final dataset
+
+adonis2(cali.dist~castilleja*pair, data = cali.NMDS, permutations=999)
+
+ggplot(cali.NMDS, aes(NMDS1, NMDS2)) +
+  geom_point(aes(color=castilleja , shape=site)) +
+  coord_equal() +
+  theme_bw()
+
+#---------------------------species count data analysis------------------------#
+# Our key question here is looking at the differences between functional groups and key speices
+case.23.count <- read.csv("Case 2023 - Individuals.csv")
+case.24.count <- read.csv("Case 2024 - Individuals.csv")
+cali.23.count <- read.csv("Cali 2023 - Individuals.csv")
+cali.24.count <- read.csv("Cali 2024 - Individuals.csv")
+
+#combining datesets by castilleja species
+case.count <- rbind.fill(case.23.count,case.24.count)
+cali.count <- rbind.fill(cali.23.count,cali.24.count)
+
+#remove set merged NA values to 0
+cali.count[is.na(cali.count)] <- 0
+case.count[is.na(case.count)] <- 0
+
+cali.count.long<- pivot_longer(cali.count, cols = Agastache.urticifolia:Viola.adunca,
+                                                      names_to = "species",
+                                                     values_to = "counts")
+
+case.count.long<- pivot_longer(case.count, cols = Achnatherum.sp.:Vicia.americana,
+                               names_to = "species",
+                               values_to = "counts")
+
+#Removing 0s from dateset
+case.count.long <- filter(case.count.long, counts > 0)
+cali.count.long <- filter(cali.count.long, counts > 0)
+
+#write and reload data with functional groups added in manually
+write.csv(case.count.long, "/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL/Observational REU/combined septentrionalis counts.csv", row.names=FALSE)
+write.csv(cali.count.long, "/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL/Observational REU/combined linariifolia counts.csv", row.names=FALSE)
+case.counts <- read.csv("combined septentrionalis counts - sheet1.csv")
+cali.counts <- read.csv("combined linariifolia counts - sheet1.csv")
+
+
+cali.counts$site <- as.factor(cali.counts$site)
+cali.counts$year <- as.factor(cali.counts$year)
+cali.counts$castilleja <- as.factor(cali.counts$castilleja)
+cali.counts$species <- as.factor(cali.counts$species)
+cali.counts$functional_group <- as.factor(cali.counts$functional_group)
+case.counts$site <- as.factor(case.counts$site)
+case.counts$year <- as.factor(case.counts$year)
+case.counts$castilleja <- as.factor(case.counts$castilleja)
+case.counts$species <- as.factor(case.counts$species)
+case.counts$functional_group <- as.factor(case.counts$functional_group)
+
+case.species.counts = subset(case.counts, select = -c(2,4,6,10))
+cali.species.counts = subset(cali.counts, select = -c(2,4,6,10))
+
+
+case.pair.counts <- case.species.counts %>%
+  pivot_wider(names_from = castilleja,
+              values_from = c(counts)) %>% drop_na()
+
+
+cali.pair.counts <- cali.species.counts %>%
+  pivot_wider(names_from = castilleja,
+              values_from = c(counts)) %>% drop_na()
+
+summary(cali.species.counts)
+
+LALA.pair <- cali.pair.counts %>% filter (species == "")
+
+t.test(LALA.pair$Castilleja, LALA.pair$Control,#higher in Castilleja plots by 2%, p = 0.006285
+       paired = TRUE,   
+       conf.level = 0.95)
+

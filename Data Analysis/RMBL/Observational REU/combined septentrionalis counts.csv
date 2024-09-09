@@ -1,0 +1,2157 @@
+"Year","Date","Site","Field.plot","Pair","Plot","Treatment","species","counts"
+2023,"7/25/23","Avery","E1",1,1,"Castilleja","Agoseris.sp.",15
+2023,"7/25/23","Avery","E1",1,1,"Castilleja","Castilleja.septentrionalis",1
+2023,"7/25/23","Avery","E1",1,1,"Castilleja","Taraxacum.officinale",16
+2023,"7/25/23","Avery","E1",1,1,"Castilleja","Elymus.lanceolatus",3
+2023,"7/25/23","Avery","E1",1,1,"Castilleja","Erigeron.subtrinervis",5
+2023,"7/25/23","Avery","E1",1,1,"Castilleja","Lathyrus.lanszwertii",7
+2023,"7/25/23","Avery","E1",1,1,"Castilleja","Poa.pratensis",10
+2023,"7/25/23","Avery","E1",1,1,"Castilleja","Potentilla.pulcherrima",10
+2023,"7/25/23","Avery","E1C",1,2,"Control","Agoseris.sp.",7
+2023,"7/25/23","Avery","E1C",1,2,"Control","Taraxacum.officinale",6
+2023,"7/25/23","Avery","E1C",1,2,"Control","Elymus.lanceolatus",4
+2023,"7/25/23","Avery","E1C",1,2,"Control","Erigeron.subtrinervis",1
+2023,"7/25/23","Avery","E1C",1,2,"Control","Lathyrus.lanszwertii",4
+2023,"7/25/23","Avery","E1C",1,2,"Control","Poa.pratensis",6
+2023,"7/25/23","Avery","E1C",1,2,"Control","Potentilla.pulcherrima",2
+2023,"7/25/23","Avery","E2",2,3,"Castilleja","Achnatherum.sp.",3
+2023,"7/25/23","Avery","E2",2,3,"Castilleja","Castilleja.septentrionalis",1
+2023,"7/25/23","Avery","E2",2,3,"Castilleja","Taraxacum.officinale",8
+2023,"7/25/23","Avery","E2",2,3,"Castilleja","Erigeron.subtrinervis",1
+2023,"7/25/23","Avery","E2",2,3,"Castilleja","Poa.pratensis",1
+2023,"7/25/23","Avery","E2",2,3,"Castilleja","Potentilla.pulcherrima",2
+2023,"7/25/23","Avery","E2C",2,4,"Control","Achnatherum.sp.",1
+2023,"7/25/23","Avery","E2C",2,4,"Control","Taraxacum.officinale",4
+2023,"7/25/23","Avery","E2C",2,4,"Control","Elymus.lanceolatus",1
+2023,"7/25/23","Avery","E2C",2,4,"Control","Erigeron.subtrinervis",6
+2023,"7/25/23","Avery","E2C",2,4,"Control","Poa.pratensis",12
+2023,"7/25/23","Avery","E2C",2,4,"Control","Potentilla.pulcherrima",4
+2023,"7/26/23","Avery","E3",3,5,"Castilleja","Castilleja.septentrionalis",2
+2023,"7/26/23","Avery","E3",3,5,"Castilleja","Taraxacum.officinale",5
+2023,"7/26/23","Avery","E3",3,5,"Castilleja","Elymus.lanceolatus",1
+2023,"7/26/23","Avery","E3",3,5,"Castilleja","Erigeron.subtrinervis",8
+2023,"7/26/23","Avery","E3",3,5,"Castilleja","Poa.pratensis",12
+2023,"7/26/23","Avery","E3",3,5,"Castilleja","Potentilla.pulcherrima",3
+2023,"7/26/23","Avery","E3C",3,6,"Control","Agoseris.sp.",3
+2023,"7/26/23","Avery","E3C",3,6,"Control","Taraxacum.officinale",4
+2023,"7/26/23","Avery","E3C",3,6,"Control","Elymus.lanceolatus",4
+2023,"7/26/23","Avery","E3C",3,6,"Control","Erigeron.subtrinervis",2
+2023,"7/26/23","Avery","E3C",3,6,"Control","Lathyrus.lanszwertii",1
+2023,"7/26/23","Avery","E3C",3,6,"Control","Poa.pratensis",5
+2023,"7/26/23","Avery","E3C",3,6,"Control","Potentilla.pulcherrima",3
+2023,"7/26/23","Avery","E4",4,7,"Castilleja","Agoseris.sp.",3
+2023,"7/26/23","Avery","E4",4,7,"Castilleja","Castilleja.septentrionalis",1
+2023,"7/26/23","Avery","E4",4,7,"Castilleja","Taraxacum.officinale",5
+2023,"7/26/23","Avery","E4",4,7,"Castilleja","Elymus.lanceolatus",1
+2023,"7/26/23","Avery","E4",4,7,"Castilleja","Erigeron.subtrinervis",5
+2023,"7/26/23","Avery","E4",4,7,"Castilleja","Poa.pratensis",13
+2023,"7/26/23","Avery","E4",4,7,"Castilleja","Potentilla.pulcherrima",6
+2023,"7/26/23","Avery","E4",4,7,"Castilleja","Thalictrum.fendleri",1
+2023,"7/26/23","Avery","E4C",4,8,"Control","Agoseris.sp.",3
+2023,"7/26/23","Avery","E4C",4,8,"Control","Taraxacum.officinale",8
+2023,"7/26/23","Avery","E4C",4,8,"Control","Erigeron.subtrinervis",8
+2023,"7/26/23","Avery","E4C",4,8,"Control","Poa.pratensis",11
+2023,"7/26/23","Avery","E4C",4,8,"Control","Potentilla.pulcherrima",5
+2023,"7/26/23","Avery","E5",5,9,"Castilleja","Agoseris.sp.",3
+2023,"7/26/23","Avery","E5",5,9,"Castilleja","Castilleja.septentrionalis",1
+2023,"7/26/23","Avery","E5",5,9,"Castilleja","Taraxacum.officinale",13
+2023,"7/26/23","Avery","E5",5,9,"Castilleja","Elymus.lanceolatus",1
+2023,"7/26/23","Avery","E5",5,9,"Castilleja","Poa.pratensis",13
+2023,"7/26/23","Avery","E5",5,9,"Castilleja","Potentilla.pulcherrima",3
+2023,"7/26/23","Avery","E5C",5,10,"Control","Taraxacum.officinale",4
+2023,"7/26/23","Avery","E5C",5,10,"Control","Elymus.lanceolatus",2
+2023,"7/26/23","Avery","E5C",5,10,"Control","Poa.pratensis",10
+2023,"7/26/23","Avery","E5C",5,10,"Control","Achillea.millefolium",4
+2023,"7/26/23","Avery","E6",6,11,"Castilleja","Achnatherum.sp.",1
+2023,"7/26/23","Avery","E6",6,11,"Castilleja","Castilleja.septentrionalis",1
+2023,"7/26/23","Avery","E6",6,11,"Castilleja","Taraxacum.officinale",3
+2023,"7/26/23","Avery","E6",6,11,"Castilleja","Elymus.lanceolatus",5
+2023,"7/26/23","Avery","E6",6,11,"Castilleja","Poa.pratensis",5
+2023,"7/26/23","Avery","E6",6,11,"Castilleja","Potentilla.pulcherrima",2
+2023,"7/26/23","Avery","E6",6,11,"Castilleja","Thalictrum.fendleri",6
+2023,"7/26/23","Avery","E6C",6,12,"Control","Achnatherum.sp.",1
+2023,"7/26/23","Avery","E6C",6,12,"Control","Agoseris.sp.",1
+2023,"7/26/23","Avery","E6C",6,12,"Control","Taraxacum.officinale",3
+2023,"7/26/23","Avery","E6C",6,12,"Control","Erigeron.subtrinervis",2
+2023,"7/26/23","Avery","E6C",6,12,"Control","Poa.pratensis",6
+2023,"7/26/23","Avery","E6C",6,12,"Control","Potentilla.pulcherrima",1
+2023,"7/26/23","Avery","E7",7,13,"Castilleja","Achnatherum.sp.",2
+2023,"7/26/23","Avery","E7",7,13,"Castilleja","Agoseris.sp.",5
+2023,"7/26/23","Avery","E7",7,13,"Castilleja","Castilleja.septentrionalis",1
+2023,"7/26/23","Avery","E7",7,13,"Castilleja","Taraxacum.officinale",7
+2023,"7/26/23","Avery","E7",7,13,"Castilleja","Erigeron.subtrinervis",3
+2023,"7/26/23","Avery","E7",7,13,"Castilleja","Poa.pratensis",9
+2023,"7/26/23","Avery","E7",7,13,"Castilleja","Potentilla.pulcherrima",1
+2023,"7/26/23","Avery","E7C",7,14,"Control","Achnatherum.sp.",1
+2023,"7/26/23","Avery","E7C",7,14,"Control","Taraxacum.officinale",2
+2023,"7/26/23","Avery","E7C",7,14,"Control","Elymus.lanceolatus",2
+2023,"7/26/23","Avery","E7C",7,14,"Control","Poa.pratensis",11
+2023,"7/26/23","Avery","E7C",7,14,"Control","Potentilla.pulcherrima",1
+2023,"7/26/23","Avery","E7C",7,14,"Control","Thalictrum.fendleri",3
+2023,"7/26/23","Avery","E7C",7,14,"Control","Valeriana.occidentalis",1
+2023,"7/27/23","Avery","E8",8,15,"Castilleja","Agoseris.sp.",1
+2023,"7/27/23","Avery","E8",8,15,"Castilleja","Castilleja.septentrionalis",1
+2023,"7/27/23","Avery","E8",8,15,"Castilleja","Taraxacum.officinale",7
+2023,"7/27/23","Avery","E8",8,15,"Castilleja","Elymus.lanceolatus",3
+2023,"7/27/23","Avery","E8",8,15,"Castilleja","Poa.pratensis",12
+2023,"7/27/23","Avery","E8",8,15,"Castilleja","Potentilla.pulcherrima",1
+2023,"7/27/23","Avery","E8",8,15,"Castilleja","Achillea.millefolium",2
+2023,"7/27/23","Avery","E8",8,15,"Castilleja","Solidago.multiradiata",1
+2023,"7/27/23","Avery","E8C",8,16,"Control","Taraxacum.officinale",3
+2023,"7/27/23","Avery","E8C",8,16,"Control","Erigeron.subtrinervis",1
+2023,"7/27/23","Avery","E8C",8,16,"Control","Poa.pratensis",6
+2023,"7/27/23","Avery","E8C",8,16,"Control","Solidago.multiradiata",1
+2023,"7/27/23","Avery","E9",9,17,"Castilleja","Castilleja.septentrionalis",2
+2023,"7/27/23","Avery","E9",9,17,"Castilleja","Taraxacum.officinale",7
+2023,"7/27/23","Avery","E9",9,17,"Castilleja","Erigeron.subtrinervis",7
+2023,"7/27/23","Avery","E9",9,17,"Castilleja","Lathyrus.lanszwertii",6
+2023,"7/27/23","Avery","E9",9,17,"Castilleja","Poa.pratensis",6
+2023,"7/27/23","Avery","E9",9,17,"Castilleja","Potentilla.pulcherrima",1
+2023,"7/27/23","Avery","E9",9,17,"Castilleja","Boechera.stricta",1
+2023,"7/27/23","Avery","E9C",9,18,"Control","Agoseris.sp.",7
+2023,"7/27/23","Avery","E9C",9,18,"Control","Taraxacum.officinale",6
+2023,"7/27/23","Avery","E9C",9,18,"Control","Erigeron.subtrinervis",8
+2023,"7/27/23","Avery","E9C",9,18,"Control","Lathyrus.lanszwertii",2
+2023,"7/27/23","Avery","E9C",9,18,"Control","Poa.pratensis",8
+2023,"7/27/23","Avery","E9C",9,18,"Control","Potentilla.pulcherrima",1
+2023,"7/27/23","Avery","E9C",9,18,"Control","Achillea.millefolium",4
+2023,"7/27/23","Avery","E10",10,19,"Castilleja","Achnatherum.sp.",1
+2023,"7/27/23","Avery","E10",10,19,"Castilleja","Castilleja.septentrionalis",1
+2023,"7/27/23","Avery","E10",10,19,"Castilleja","Taraxacum.officinale",4
+2023,"7/27/23","Avery","E10",10,19,"Castilleja","Elymus.lanceolatus",2
+2023,"7/27/23","Avery","E10",10,19,"Castilleja","Erigeron.subtrinervis",3
+2023,"7/27/23","Avery","E10",10,19,"Castilleja","Poa.pratensis",4
+2023,"7/27/23","Avery","E10",10,19,"Castilleja","Potentilla.pulcherrima",2
+2023,"7/27/23","Avery","E10",10,19,"Castilleja","Ipomopsis.aggregata",1
+2023,"7/27/23","Avery","E10",10,19,"Castilleja","Valeriana.occidentalis",1
+2023,"7/27/23","Avery","E10",10,19,"Castilleja","Artemisia.dracunculus",9
+2023,"7/27/23","Avery","E10C",10,20,"Control","Taraxacum.officinale",5
+2023,"7/27/23","Avery","E10C",10,20,"Control","Elymus.lanceolatus",7
+2023,"7/27/23","Avery","E10C",10,20,"Control","Poa.pratensis",4
+2023,"7/27/23","Avery","E10C",10,20,"Control","Potentilla.pulcherrima",1
+2023,"7/27/23","Avery","E10C",10,20,"Control","Achillea.millefolium",2
+2023,"7/27/23","Avery","E10C",10,20,"Control","Valeriana.occidentalis",3
+2023,"7/27/23","Avery","E11",11,21,"Castilleja","Castilleja.septentrionalis",1
+2023,"7/27/23","Avery","E11",11,21,"Castilleja","Taraxacum.officinale",4
+2023,"7/27/23","Avery","E11",11,21,"Castilleja","Elymus.lanceolatus",2
+2023,"7/27/23","Avery","E11",11,21,"Castilleja","Erigeron.subtrinervis",1
+2023,"7/27/23","Avery","E11",11,21,"Castilleja","Poa.pratensis",3
+2023,"7/27/23","Avery","E11",11,21,"Castilleja","Thalictrum.fendleri",4
+2023,"7/27/23","Avery","E11",11,21,"Castilleja","Achillea.millefolium",3
+2023,"7/27/23","Avery","E11C",11,22,"Control","Taraxacum.officinale",7
+2023,"7/27/23","Avery","E11C",11,22,"Control","Elymus.lanceolatus",3
+2023,"7/27/23","Avery","E11C",11,22,"Control","Erigeron.subtrinervis",3
+2023,"7/27/23","Avery","E11C",11,22,"Control","Poa.pratensis",5
+2023,"7/27/23","Avery","E11C",11,22,"Control","Potentilla.pulcherrima",1
+2023,"7/27/23","Avery","E11C",11,22,"Control","Thalictrum.fendleri",6
+2023,"7/27/23","Avery","E11C",11,22,"Control","Ipomopsis.aggregata",3
+2023,"7/27/23","Avery","E12",12,23,"Castilleja","Castilleja.septentrionalis",1
+2023,"7/27/23","Avery","E12",12,23,"Castilleja","Taraxacum.officinale",5
+2023,"7/27/23","Avery","E12",12,23,"Castilleja","Erigeron.subtrinervis",3
+2023,"7/27/23","Avery","E12",12,23,"Castilleja","Poa.pratensis",4
+2023,"7/27/23","Avery","E12",12,23,"Castilleja","Potentilla.pulcherrima",3
+2023,"7/27/23","Avery","E12",12,23,"Castilleja","Thalictrum.fendleri",8
+2023,"7/27/23","Avery","E12",12,23,"Castilleja","Ipomopsis.aggregata",2
+2023,"7/27/23","Avery","E12",12,23,"Castilleja","Boechera.stricta",5
+2023,"7/27/23","Avery","E12C",12,24,"Control","Taraxacum.officinale",5
+2023,"7/27/23","Avery","E12C",12,24,"Control","Elymus.lanceolatus",1
+2023,"7/27/23","Avery","E12C",12,24,"Control","Erigeron.subtrinervis",4
+2023,"7/27/23","Avery","E12C",12,24,"Control","Poa.pratensis",5
+2023,"7/27/23","Avery","E12C",12,24,"Control","Potentilla.pulcherrima",1
+2023,"7/27/23","Avery","E12C",12,24,"Control","Thalictrum.fendleri",7
+2023,"7/27/23","Avery","E12C",12,24,"Control","Ipomopsis.aggregata",1
+2023,"7/28/23","Avery","E13",13,25,"Castilleja","Castilleja.septentrionalis",1
+2023,"7/28/23","Avery","E13",13,25,"Castilleja","Taraxacum.officinale",3
+2023,"7/28/23","Avery","E13",13,25,"Castilleja","Erigeron.subtrinervis",7
+2023,"7/28/23","Avery","E13",13,25,"Castilleja","Lathyrus.lanszwertii",1
+2023,"7/28/23","Avery","E13",13,25,"Castilleja","Poa.pratensis",4
+2023,"7/28/23","Avery","E13",13,25,"Castilleja","Potentilla.pulcherrima",3
+2023,"7/28/23","Avery","E13",13,25,"Castilleja","Achillea.millefolium",1
+2023,"7/28/23","Avery","E13",13,25,"Castilleja","Boechera.stricta",2
+2023,"7/28/23","Avery","E13C",13,26,"Control","Achnatherum.sp.",1
+2023,"7/28/23","Avery","E13C",13,26,"Control","Taraxacum.officinale",3
+2023,"7/28/23","Avery","E13C",13,26,"Control","Erigeron.subtrinervis",2
+2023,"7/28/23","Avery","E13C",13,26,"Control","Poa.pratensis",4
+2023,"7/28/23","Avery","E13C",13,26,"Control","Potentilla.pulcherrima",3
+2023,"7/28/23","Avery","E13C",13,26,"Control","Thalictrum.fendleri",5
+2023,"7/28/23","Avery","E13C",13,26,"Control","Achillea.millefolium",1
+2023,"7/28/23","Avery","E13C",13,26,"Control","Boechera.stricta",1
+2023,"7/28/23","Avery","E14",14,27,"Castilleja","Achnatherum.sp.",2
+2023,"7/28/23","Avery","E14",14,27,"Castilleja","Castilleja.septentrionalis",1
+2023,"7/28/23","Avery","E14",14,27,"Castilleja","Taraxacum.officinale",4
+2023,"7/28/23","Avery","E14",14,27,"Castilleja","Erigeron.subtrinervis",2
+2023,"7/28/23","Avery","E14",14,27,"Castilleja","Poa.pratensis",7
+2023,"7/28/23","Avery","E14",14,27,"Castilleja","Potentilla.pulcherrima",3
+2023,"7/28/23","Avery","E14",14,27,"Castilleja","Thalictrum.fendleri",4
+2023,"7/28/23","Avery","E14",14,27,"Castilleja","Ipomopsis.aggregata",4
+2023,"7/28/23","Avery","E14",14,27,"Castilleja","Valeriana.occidentalis",1
+2023,"7/28/23","Avery","E14C",14,28,"Control","Agoseris.sp.",3
+2023,"7/28/23","Avery","E14C",14,28,"Control","Taraxacum.officinale",4
+2023,"7/28/23","Avery","E14C",14,28,"Control","Poa.pratensis",5
+2023,"7/28/23","Avery","E14C",14,28,"Control","Thalictrum.fendleri",8
+2023,"7/28/23","Avery","E14C",14,28,"Control","Boechera.stricta",1
+2023,"7/28/23","Avery","E15",15,29,"Castilleja","Agoseris.sp.",1
+2023,"7/28/23","Avery","E15",15,29,"Castilleja","Castilleja.septentrionalis",2
+2023,"7/28/23","Avery","E15",15,29,"Castilleja","Taraxacum.officinale",5
+2023,"7/28/23","Avery","E15",15,29,"Castilleja","Elymus.lanceolatus",1
+2023,"7/28/23","Avery","E15",15,29,"Castilleja","Erigeron.subtrinervis",5
+2023,"7/28/23","Avery","E15",15,29,"Castilleja","Lathyrus.lanszwertii",3
+2023,"7/28/23","Avery","E15",15,29,"Castilleja","Poa.pratensis",3
+2023,"7/28/23","Avery","E15",15,29,"Castilleja","Potentilla.pulcherrima",3
+2023,"7/28/23","Avery","E15",15,29,"Castilleja","Achillea.millefolium",4
+2023,"7/28/23","Avery","E15C",15,30,"Control","Taraxacum.officinale",1
+2023,"7/28/23","Avery","E15C",15,30,"Control","Elymus.lanceolatus",3
+2023,"7/28/23","Avery","E15C",15,30,"Control","Lathyrus.lanszwertii",1
+2023,"7/28/23","Avery","E15C",15,30,"Control","Poa.pratensis",6
+2023,"7/28/23","Avery","E15C",15,30,"Control","Thalictrum.fendleri",1
+2023,"7/28/23","Avery","E15C",15,30,"Control","Achillea.millefolium",5
+2023,"7/28/23","Avery","E16",16,31,"Castilleja","Achnatherum.sp.",1
+2023,"7/28/23","Avery","E16",16,31,"Castilleja","Castilleja.septentrionalis",2
+2023,"7/28/23","Avery","E16",16,31,"Castilleja","Taraxacum.officinale",9
+2023,"7/28/23","Avery","E16",16,31,"Castilleja","Elymus.lanceolatus",3
+2023,"7/28/23","Avery","E16",16,31,"Castilleja","Poa.pratensis",4
+2023,"7/28/23","Avery","E16",16,31,"Castilleja","Potentilla.pulcherrima",3
+2023,"7/28/23","Avery","E16",16,31,"Castilleja","Achillea.millefolium",2
+2023,"7/28/23","Avery","E16",16,31,"Castilleja","Ipomopsis.aggregata",2
+2023,"7/28/23","Avery","E16C",16,32,"Control","Achnatherum.sp.",1
+2023,"7/28/23","Avery","E16C",16,32,"Control","Taraxacum.officinale",7
+2023,"7/28/23","Avery","E16C",16,32,"Control","Elymus.lanceolatus",3
+2023,"7/28/23","Avery","E16C",16,32,"Control","Poa.pratensis",3
+2023,"7/28/23","Avery","E16C",16,32,"Control","Potentilla.pulcherrima",2
+2023,"7/28/23","Avery","E17",17,33,"Castilleja","Achnatherum.sp.",1
+2023,"7/28/23","Avery","E17",17,33,"Castilleja","Agoseris.sp.",2
+2023,"7/28/23","Avery","E17",17,33,"Castilleja","Castilleja.septentrionalis",1
+2023,"7/28/23","Avery","E17",17,33,"Castilleja","Taraxacum.officinale",5
+2023,"7/28/23","Avery","E17",17,33,"Castilleja","Elymus.lanceolatus",1
+2023,"7/28/23","Avery","E17",17,33,"Castilleja","Erigeron.subtrinervis",3
+2023,"7/28/23","Avery","E17",17,33,"Castilleja","Poa.pratensis",4
+2023,"7/28/23","Avery","E17",17,33,"Castilleja","Potentilla.pulcherrima",7
+2023,"7/28/23","Avery","E17",17,33,"Castilleja","Ipomopsis.aggregata",2
+2023,"7/28/23","Avery","E17C",17,34,"Control","Achnatherum.sp.",2
+2023,"7/28/23","Avery","E17C",17,34,"Control","Taraxacum.officinale",2
+2023,"7/28/23","Avery","E17C",17,34,"Control","Elymus.lanceolatus",2
+2023,"7/28/23","Avery","E17C",17,34,"Control","Poa.pratensis",4
+2023,"7/28/23","Avery","E17C",17,34,"Control","Potentilla.pulcherrima",4
+2023,"7/28/23","Avery","E17C",17,34,"Control","Achillea.millefolium",3
+2023,"7/28/23","Avery","E17C",17,34,"Control","Ipomopsis.aggregata",3
+2023,"7/28/23","Avery","E18",18,35,"Castilleja","Agoseris.sp.",1
+2023,"7/28/23","Avery","E18",18,35,"Castilleja","Castilleja.septentrionalis",1
+2023,"7/28/23","Avery","E18",18,35,"Castilleja","Taraxacum.officinale",7
+2023,"7/28/23","Avery","E18",18,35,"Castilleja","Poa.pratensis",4
+2023,"7/28/23","Avery","E18",18,35,"Castilleja","Potentilla.pulcherrima",4
+2023,"7/28/23","Avery","E18",18,35,"Castilleja","Ipomopsis.aggregata",3
+2023,"7/28/23","Avery","E18C",18,36,"Control","Achnatherum.sp.",1
+2023,"7/28/23","Avery","E18C",18,36,"Control","Agoseris.sp.",1
+2023,"7/28/23","Avery","E18C",18,36,"Control","Taraxacum.officinale",9
+2023,"7/28/23","Avery","E18C",18,36,"Control","Erigeron.subtrinervis",3
+2023,"7/28/23","Avery","E18C",18,36,"Control","Poa.pratensis",4
+2023,"7/28/23","Avery","E18C",18,36,"Control","Potentilla.pulcherrima",8
+2023,"7/28/23","Avery","E18C",18,36,"Control","Ipomopsis.aggregata",1
+2023,"7/28/23","Avery","E19",19,37,"Castilleja","Castilleja.septentrionalis",1
+2023,"7/28/23","Avery","E19",19,37,"Castilleja","Taraxacum.officinale",4
+2023,"7/28/23","Avery","E19",19,37,"Castilleja","Erigeron.subtrinervis",3
+2023,"7/28/23","Avery","E19",19,37,"Castilleja","Poa.pratensis",3
+2023,"7/28/23","Avery","E19",19,37,"Castilleja","Potentilla.pulcherrima",1
+2023,"7/28/23","Avery","E19",19,37,"Castilleja","Achillea.millefolium",3
+2023,"7/28/23","Avery","E19",19,37,"Castilleja","Ipomopsis.aggregata",1
+2023,"7/28/23","Avery","E19",19,37,"Castilleja","Dactylis.glomerata",2
+2023,"7/28/23","Avery","E19C",19,38,"Control","Taraxacum.officinale",3
+2023,"7/28/23","Avery","E19C",19,38,"Control","Elymus.lanceolatus",2
+2023,"7/28/23","Avery","E19C",19,38,"Control","Poa.pratensis",4
+2023,"7/28/23","Avery","E19C",19,38,"Control","Potentilla.pulcherrima",1
+2023,"7/28/23","Avery","E19C",19,38,"Control","Thalictrum.fendleri",1
+2023,"7/28/23","Avery","E19C",19,38,"Control","Achillea.millefolium",2
+2023,"7/28/23","Avery","E19C",19,38,"Control","Dactylis.glomerata",3
+2023,"7/28/23","Avery","E20",20,39,"Castilleja","Castilleja.septentrionalis",1
+2023,"7/28/23","Avery","E20",20,39,"Castilleja","Taraxacum.officinale",4
+2023,"7/28/23","Avery","E20",20,39,"Castilleja","Elymus.lanceolatus",2
+2023,"7/28/23","Avery","E20",20,39,"Castilleja","Erigeron.subtrinervis",1
+2023,"7/28/23","Avery","E20",20,39,"Castilleja","Poa.pratensis",4
+2023,"7/28/23","Avery","E20",20,39,"Castilleja","Potentilla.pulcherrima",3
+2023,"7/28/23","Avery","E20C",20,40,"Control","Taraxacum.officinale",12
+2023,"7/28/23","Avery","E20C",20,40,"Control","Erigeron.subtrinervis",4
+2023,"7/28/23","Avery","E20C",20,40,"Control","Poa.pratensis",4
+2023,"7/28/23","Avery","E20C",20,40,"Control","Potentilla.pulcherrima",2
+2023,"7/28/23","Avery","E20C",20,40,"Control","Ipomopsis.aggregata",1
+2023,"7/31/23","Emerald Lake","F1",61,121,"Castilleja","Castilleja.septentrionalis",1
+2023,"7/31/23","Emerald Lake","F1",61,121,"Castilleja","Taraxacum.officinale",7
+2023,"7/31/23","Emerald Lake","F1",61,121,"Castilleja","Deschampsia.cespitosa",8
+2023,"7/31/23","Emerald Lake","F1",61,121,"Castilleja","Potentilla.pulcherrima",9
+2023,"7/31/23","Emerald Lake","F1",61,121,"Castilleja","Achillea.millefolium",6
+2023,"7/31/23","Emerald Lake","F1",61,121,"Castilleja","Fragaria.virginiana",9
+2023,"7/31/23","Emerald Lake","F1",61,121,"Castilleja","Anemone.multifida",3
+2023,"7/31/23","Emerald Lake","F1",61,121,"Castilleja","Senecio.crassulus",6
+2023,"7/31/23","Emerald Lake","F1C",61,122,"Control","Agoseris.sp.",3
+2023,"7/31/23","Emerald Lake","F1C",61,122,"Control","Taraxacum.officinale",2
+2023,"7/31/23","Emerald Lake","F1C",61,122,"Control","Elymus.lanceolatus",2
+2023,"7/31/23","Emerald Lake","F1C",61,122,"Control","Deschampsia.cespitosa",6
+2023,"7/31/23","Emerald Lake","F1C",61,122,"Control","Potentilla.pulcherrima",7
+2023,"7/31/23","Emerald Lake","F1C",61,122,"Control","Achillea.millefolium",9
+2023,"7/31/23","Emerald Lake","F1C",61,122,"Control","Carex.sp.",2
+2023,"7/31/23","Emerald Lake","F1C",61,122,"Control","Fragaria.virginiana",11
+2023,"7/31/23","Emerald Lake","F1C",61,122,"Control","Anemone.multifida",1
+2023,"7/31/23","Emerald Lake","F1C",61,122,"Control","Senecio.crassulus",4
+2023,"7/31/23","Emerald Lake","F2",62,123,"Castilleja","Agoseris.sp.",1
+2023,"7/31/23","Emerald Lake","F2",62,123,"Castilleja","Castilleja.septentrionalis",1
+2023,"7/31/23","Emerald Lake","F2",62,123,"Castilleja","Taraxacum.officinale",1
+2023,"7/31/23","Emerald Lake","F2",62,123,"Castilleja","Deschampsia.cespitosa",3
+2023,"7/31/23","Emerald Lake","F2",62,123,"Castilleja","Potentilla.pulcherrima",9
+2023,"7/31/23","Emerald Lake","F2",62,123,"Castilleja","Thalictrum.fendleri",4
+2023,"7/31/23","Emerald Lake","F2",62,123,"Castilleja","Achillea.millefolium",5
+2023,"7/31/23","Emerald Lake","F2",62,123,"Castilleja","Fragaria.virginiana",10
+2023,"7/31/23","Emerald Lake","F2",62,123,"Castilleja","Anemone.multifida",7
+2023,"7/31/23","Emerald Lake","F2",62,123,"Castilleja","Hymenoxys.hoopesii",2
+2023,"7/31/23","Emerald Lake","F2",62,123,"Castilleja","Senecio.crassulus",3
+2023,"7/31/23","Emerald Lake","F2",62,123,"Castilleja","Cirsium.griseum",1
+2023,"7/31/23","Emerald Lake","F2",62,123,"Castilleja","Pyrrocoma.crocea",3
+2023,"7/31/23","Emerald Lake","F2C",62,124,"Control","Agoseris.sp.",2
+2023,"7/31/23","Emerald Lake","F2C",62,124,"Control","Taraxacum.officinale",3
+2023,"7/31/23","Emerald Lake","F2C",62,124,"Control","Elymus.lanceolatus",2
+2023,"7/31/23","Emerald Lake","F2C",62,124,"Control","Deschampsia.cespitosa",6
+2023,"7/31/23","Emerald Lake","F2C",62,124,"Control","Potentilla.pulcherrima",8
+2023,"7/31/23","Emerald Lake","F2C",62,124,"Control","Thalictrum.fendleri",3
+2023,"7/31/23","Emerald Lake","F2C",62,124,"Control","Achillea.millefolium",3
+2023,"7/31/23","Emerald Lake","F2C",62,124,"Control","Fragaria.virginiana",6
+2023,"7/31/23","Emerald Lake","F2C",62,124,"Control","Anemone.multifida",6
+2023,"7/31/23","Emerald Lake","F2C",62,124,"Control","Hymenoxys.hoopesii",1
+2023,"7/31/23","Emerald Lake","F2C",62,124,"Control","Senecio.crassulus",1
+2023,"7/31/23","Emerald Lake","F2C",62,124,"Control","Pyrrocoma.crocea",2
+2023,"7/31/23","Emerald Lake","F3",63,125,"Castilleja","Agoseris.sp.",3
+2023,"7/31/23","Emerald Lake","F3",63,125,"Castilleja","Castilleja.septentrionalis",1
+2023,"7/31/23","Emerald Lake","F3",63,125,"Castilleja","Taraxacum.officinale",3
+2023,"7/31/23","Emerald Lake","F3",63,125,"Castilleja","Elymus.lanceolatus",1
+2023,"7/31/23","Emerald Lake","F3",63,125,"Castilleja","Deschampsia.cespitosa",7
+2023,"7/31/23","Emerald Lake","F3",63,125,"Castilleja","Potentilla.pulcherrima",6
+2023,"7/31/23","Emerald Lake","F3",63,125,"Castilleja","Achillea.millefolium",10
+2023,"7/31/23","Emerald Lake","F3",63,125,"Castilleja","Fragaria.virginiana",4
+2023,"7/31/23","Emerald Lake","F3",63,125,"Castilleja","Anemone.multifida",4
+2023,"7/31/23","Emerald Lake","F3",63,125,"Castilleja","Senecio.crassulus",5
+2023,"7/31/23","Emerald Lake","F3",63,125,"Castilleja","Phleum.alpinum",1
+2023,"7/31/23","Emerald Lake","F3",63,125,"Castilleja","Draba.spectabilis",15
+2023,"7/31/23","Emerald Lake","F3C",63,126,"Control","Agoseris.sp.",3
+2023,"7/31/23","Emerald Lake","F3C",63,126,"Control","Deschampsia.cespitosa",6
+2023,"7/31/23","Emerald Lake","F3C",63,126,"Control","Potentilla.pulcherrima",6
+2023,"7/31/23","Emerald Lake","F3C",63,126,"Control","Thalictrum.fendleri",4
+2023,"7/31/23","Emerald Lake","F3C",63,126,"Control","Achillea.millefolium",5
+2023,"7/31/23","Emerald Lake","F3C",63,126,"Control","Carex.sp.",1
+2023,"7/31/23","Emerald Lake","F3C",63,126,"Control","Fragaria.virginiana",5
+2023,"7/31/23","Emerald Lake","F3C",63,126,"Control","Anemone.multifida",3
+2023,"7/31/23","Emerald Lake","F3C",63,126,"Control","Senecio.crassulus",1
+2023,"7/31/23","Emerald Lake","F3C",63,126,"Control","Pyrrocoma.crocea",7
+2023,"7/31/23","Emerald Lake","F3C",63,126,"Control","Draba.spectabilis",15
+2023,"7/31/23","Emerald Lake","F3C",63,126,"Control","Poa.alpina",2
+2023,"7/31/23","Emerald Lake","F4",64,127,"Castilleja","Agoseris.sp.",1
+2023,"7/31/23","Emerald Lake","F4",64,127,"Castilleja","Castilleja.septentrionalis",1
+2023,"7/31/23","Emerald Lake","F4",64,127,"Castilleja","Elymus.lanceolatus",1
+2023,"7/31/23","Emerald Lake","F4",64,127,"Castilleja","Deschampsia.cespitosa",4
+2023,"7/31/23","Emerald Lake","F4",64,127,"Castilleja","Potentilla.pulcherrima",7
+2023,"7/31/23","Emerald Lake","F4",64,127,"Castilleja","Achillea.millefolium",6
+2023,"7/31/23","Emerald Lake","F4",64,127,"Castilleja","Carex.sp.",2
+2023,"7/31/23","Emerald Lake","F4",64,127,"Castilleja","Fragaria.virginiana",13
+2023,"7/31/23","Emerald Lake","F4",64,127,"Castilleja","Anemone.multifida",2
+2023,"7/31/23","Emerald Lake","F4",64,127,"Castilleja","Hymenoxys.hoopesii",1
+2023,"7/31/23","Emerald Lake","F4",64,127,"Castilleja","Senecio.crassulus",6
+2023,"7/31/23","Emerald Lake","F4",64,127,"Castilleja","Draba.spectabilis",15
+2023,"7/31/23","Emerald Lake","F4C",64,128,"Control","Agoseris.sp.",1
+2023,"7/31/23","Emerald Lake","F4C",64,128,"Control","Elymus.lanceolatus",4
+2023,"7/31/23","Emerald Lake","F4C",64,128,"Control","Deschampsia.cespitosa",5
+2023,"7/31/23","Emerald Lake","F4C",64,128,"Control","Potentilla.pulcherrima",5
+2023,"7/31/23","Emerald Lake","F4C",64,128,"Control","Achillea.millefolium",1
+2023,"7/31/23","Emerald Lake","F4C",64,128,"Control","Carex.sp.",4
+2023,"7/31/23","Emerald Lake","F4C",64,128,"Control","Fragaria.virginiana",5
+2023,"7/31/23","Emerald Lake","F4C",64,128,"Control","Anemone.multifida",3
+2023,"7/31/23","Emerald Lake","F4C",64,128,"Control","Senecio.crassulus",3
+2023,"7/31/23","Emerald Lake","F4C",64,128,"Control","Draba.spectabilis",15
+2023,"8/1/23","Emerald Lake","F5",65,129,"Castilleja","Agoseris.sp.",2
+2023,"8/1/23","Emerald Lake","F5",65,129,"Castilleja","Castilleja.septentrionalis",2
+2023,"8/1/23","Emerald Lake","F5",65,129,"Castilleja","Taraxacum.officinale",5
+2023,"8/1/23","Emerald Lake","F5",65,129,"Castilleja","Deschampsia.cespitosa",8
+2023,"8/1/23","Emerald Lake","F5",65,129,"Castilleja","Potentilla.pulcherrima",8
+2023,"8/1/23","Emerald Lake","F5",65,129,"Castilleja","Achillea.millefolium",7
+2023,"8/1/23","Emerald Lake","F5",65,129,"Castilleja","Fragaria.virginiana",8
+2023,"8/1/23","Emerald Lake","F5",65,129,"Castilleja","Anemone.multifida",1
+2023,"8/1/23","Emerald Lake","F5",65,129,"Castilleja","Senecio.crassulus",4
+2023,"8/1/23","Emerald Lake","F5",65,129,"Castilleja","Cirsium.griseum",1
+2023,"8/1/23","Emerald Lake","F5",65,129,"Castilleja","Erigeron.coulteri",15
+2023,"8/1/23","Emerald Lake","F5C",65,130,"Control","Agoseris.sp.",1
+2023,"8/1/23","Emerald Lake","F5C",65,130,"Control","Taraxacum.officinale",5
+2023,"8/1/23","Emerald Lake","F5C",65,130,"Control","Deschampsia.cespitosa",7
+2023,"8/1/23","Emerald Lake","F5C",65,130,"Control","Potentilla.pulcherrima",6
+2023,"8/1/23","Emerald Lake","F5C",65,130,"Control","Thalictrum.fendleri",3
+2023,"8/1/23","Emerald Lake","F5C",65,130,"Control","Achillea.millefolium",9
+2023,"8/1/23","Emerald Lake","F5C",65,130,"Control","Carex.sp.",3
+2023,"8/1/23","Emerald Lake","F5C",65,130,"Control","Fragaria.virginiana",8
+2023,"8/1/23","Emerald Lake","F5C",65,130,"Control","Senecio.crassulus",5
+2023,"8/1/23","Emerald Lake","F5C",65,130,"Control","Phleum.alpinum",1
+2023,"8/1/23","Emerald Lake","F5C",65,130,"Control","Erigeron.coulteri",1
+2023,"8/1/23","Emerald Lake","F6",66,131,"Castilleja","Agoseris.sp.",2
+2023,"8/1/23","Emerald Lake","F6",66,131,"Castilleja","Castilleja.septentrionalis",2
+2023,"8/1/23","Emerald Lake","F6",66,131,"Castilleja","Taraxacum.officinale",2
+2023,"8/1/23","Emerald Lake","F6",66,131,"Castilleja","Elymus.lanceolatus",2
+2023,"8/1/23","Emerald Lake","F6",66,131,"Castilleja","Deschampsia.cespitosa",6
+2023,"8/1/23","Emerald Lake","F6",66,131,"Castilleja","Potentilla.pulcherrima",7
+2023,"8/1/23","Emerald Lake","F6",66,131,"Castilleja","Thalictrum.fendleri",3
+2023,"8/1/23","Emerald Lake","F6",66,131,"Castilleja","Achillea.millefolium",13
+2023,"8/1/23","Emerald Lake","F6",66,131,"Castilleja","Fragaria.virginiana",2
+2023,"8/1/23","Emerald Lake","F6",66,131,"Castilleja","Anemone.multifida",2
+2023,"8/1/23","Emerald Lake","F6",66,131,"Castilleja","Senecio.crassulus",5
+2023,"8/1/23","Emerald Lake","F6",66,131,"Castilleja","Poa.alpina",2
+2023,"8/1/23","Emerald Lake","F6",66,131,"Castilleja","Erigeron.coulteri",2
+2023,"8/1/23","Emerald Lake","F6",66,131,"Castilleja","Eremogone.congesta",7
+2023,"8/1/23","Emerald Lake","F6C",66,132,"Control","Taraxacum.officinale",3
+2023,"8/1/23","Emerald Lake","F6C",66,132,"Control","Elymus.lanceolatus",3
+2023,"8/1/23","Emerald Lake","F6C",66,132,"Control","Deschampsia.cespitosa",4
+2023,"8/1/23","Emerald Lake","F6C",66,132,"Control","Potentilla.pulcherrima",4
+2023,"8/1/23","Emerald Lake","F6C",66,132,"Control","Achillea.millefolium",11
+2023,"8/1/23","Emerald Lake","F6C",66,132,"Control","Fragaria.virginiana",4
+2023,"8/1/23","Emerald Lake","F6C",66,132,"Control","Anemone.multifida",1
+2023,"8/1/23","Emerald Lake","F6C",66,132,"Control","Senecio.crassulus",1
+2023,"8/1/23","Emerald Lake","F6C",66,132,"Control","Draba.spectabilis",15
+2023,"8/1/23","Emerald Lake","F6C",66,132,"Control","Poa.alpina",2
+2023,"8/1/23","Emerald Lake","F6C",66,132,"Control","Eremogone.congesta",2
+2023,"8/1/23","Emerald Lake","F7",67,133,"Castilleja","Agoseris.sp.",4
+2023,"8/1/23","Emerald Lake","F7",67,133,"Castilleja","Castilleja.septentrionalis",1
+2023,"8/1/23","Emerald Lake","F7",67,133,"Castilleja","Taraxacum.officinale",3
+2023,"8/1/23","Emerald Lake","F7",67,133,"Castilleja","Elymus.lanceolatus",1
+2023,"8/1/23","Emerald Lake","F7",67,133,"Castilleja","Deschampsia.cespitosa",4
+2023,"8/1/23","Emerald Lake","F7",67,133,"Castilleja","Potentilla.pulcherrima",9
+2023,"8/1/23","Emerald Lake","F7",67,133,"Castilleja","Achillea.millefolium",5
+2023,"8/1/23","Emerald Lake","F7",67,133,"Castilleja","Fragaria.virginiana",3
+2023,"8/1/23","Emerald Lake","F7",67,133,"Castilleja","Anemone.multifida",9
+2023,"8/1/23","Emerald Lake","F7",67,133,"Castilleja","Senecio.crassulus",2
+2023,"8/1/23","Emerald Lake","F7",67,133,"Castilleja","Draba.spectabilis",15
+2023,"8/1/23","Emerald Lake","F7C",67,134,"Control","Agoseris.sp.",2
+2023,"8/1/23","Emerald Lake","F7C",67,134,"Control","Deschampsia.cespitosa",7
+2023,"8/1/23","Emerald Lake","F7C",67,134,"Control","Potentilla.pulcherrima",8
+2023,"8/1/23","Emerald Lake","F7C",67,134,"Control","Achillea.millefolium",13
+2023,"8/1/23","Emerald Lake","F7C",67,134,"Control","Fragaria.virginiana",4
+2023,"8/1/23","Emerald Lake","F7C",67,134,"Control","Anemone.multifida",4
+2023,"8/1/23","Emerald Lake","F7C",67,134,"Control","Senecio.crassulus",1
+2023,"8/1/23","Emerald Lake","F7C",67,134,"Control","Phleum.alpinum",1
+2023,"8/1/23","Emerald Lake","F7C",67,134,"Control","Draba.spectabilis",15
+2023,"8/1/23","Emerald Lake","F8",68,135,"Castilleja","Agoseris.sp.",1
+2023,"8/1/23","Emerald Lake","F8",68,135,"Castilleja","Castilleja.septentrionalis",1
+2023,"8/1/23","Emerald Lake","F8",68,135,"Castilleja","Taraxacum.officinale",2
+2023,"8/1/23","Emerald Lake","F8",68,135,"Castilleja","Elymus.lanceolatus",3
+2023,"8/1/23","Emerald Lake","F8",68,135,"Castilleja","Deschampsia.cespitosa",6
+2023,"8/1/23","Emerald Lake","F8",68,135,"Castilleja","Potentilla.pulcherrima",9
+2023,"8/1/23","Emerald Lake","F8",68,135,"Castilleja","Achillea.millefolium",8
+2023,"8/1/23","Emerald Lake","F8",68,135,"Castilleja","Carex.sp.",1
+2023,"8/1/23","Emerald Lake","F8",68,135,"Castilleja","Fragaria.virginiana",4
+2023,"8/1/23","Emerald Lake","F8",68,135,"Castilleja","Anemone.multifida",4
+2023,"8/1/23","Emerald Lake","F8",68,135,"Castilleja","Senecio.crassulus",10
+2023,"8/1/23","Emerald Lake","F8",68,135,"Castilleja","Draba.spectabilis",15
+2023,"8/1/23","Emerald Lake","F8",68,135,"Castilleja","Poa.alpina",4
+2023,"8/1/23","Emerald Lake","F8C",68,136,"Control","Agoseris.sp.",4
+2023,"8/1/23","Emerald Lake","F8C",68,136,"Control","Deschampsia.cespitosa",7
+2023,"8/1/23","Emerald Lake","F8C",68,136,"Control","Potentilla.pulcherrima",9
+2023,"8/1/23","Emerald Lake","F8C",68,136,"Control","Carex.sp.",1
+2023,"8/1/23","Emerald Lake","F8C",68,136,"Control","Fragaria.virginiana",7
+2023,"8/1/23","Emerald Lake","F8C",68,136,"Control","Anemone.multifida",6
+2023,"8/1/23","Emerald Lake","F8C",68,136,"Control","Senecio.crassulus",6
+2023,"8/1/23","Emerald Lake","F8C",68,136,"Control","Cirsium.griseum",1
+2023,"8/1/23","Emerald Lake","F8C",68,136,"Control","Erigeron.coulteri",1
+2023,"8/1/23","Emerald Lake","F9",69,137,"Castilleja","Agoseris.sp.",1
+2023,"8/1/23","Emerald Lake","F9",69,137,"Castilleja","Castilleja.septentrionalis",1
+2023,"8/1/23","Emerald Lake","F9",69,137,"Castilleja","Elymus.lanceolatus",3
+2023,"8/1/23","Emerald Lake","F9",69,137,"Castilleja","Deschampsia.cespitosa",2
+2023,"8/1/23","Emerald Lake","F9",69,137,"Castilleja","Potentilla.pulcherrima",7
+2023,"8/1/23","Emerald Lake","F9",69,137,"Castilleja","Fragaria.virginiana",8
+2023,"8/1/23","Emerald Lake","F9",69,137,"Castilleja","Anemone.multifida",4
+2023,"8/1/23","Emerald Lake","F9",69,137,"Castilleja","Senecio.crassulus",8
+2023,"8/1/23","Emerald Lake","F9",69,137,"Castilleja","Pyrrocoma.crocea",5
+2023,"8/1/23","Emerald Lake","F9",69,137,"Castilleja","Draba.spectabilis",15
+2023,"8/1/23","Emerald Lake","F9",69,137,"Castilleja","Poa.alpina",1
+2023,"8/1/23","Emerald Lake","F9C",69,138,"Control","Elymus.lanceolatus",2
+2023,"8/1/23","Emerald Lake","F9C",69,138,"Control","Deschampsia.cespitosa",4
+2023,"8/1/23","Emerald Lake","F9C",69,138,"Control","Potentilla.pulcherrima",7
+2023,"8/1/23","Emerald Lake","F9C",69,138,"Control","Achillea.millefolium",3
+2023,"8/1/23","Emerald Lake","F9C",69,138,"Control","Fragaria.virginiana",4
+2023,"8/1/23","Emerald Lake","F9C",69,138,"Control","Anemone.multifida",6
+2023,"8/1/23","Emerald Lake","F9C",69,138,"Control","Senecio.crassulus",4
+2023,"8/1/23","Emerald Lake","F9C",69,138,"Control","Draba.spectabilis",15
+2023,"8/1/23","Emerald Lake","F10",70,139,"Castilleja","Castilleja.septentrionalis",2
+2023,"8/1/23","Emerald Lake","F10",70,139,"Castilleja","Deschampsia.cespitosa",3
+2023,"8/1/23","Emerald Lake","F10",70,139,"Castilleja","Potentilla.pulcherrima",7
+2023,"8/1/23","Emerald Lake","F10",70,139,"Castilleja","Achillea.millefolium",2
+2023,"8/1/23","Emerald Lake","F10",70,139,"Castilleja","Carex.sp.",7
+2023,"8/1/23","Emerald Lake","F10",70,139,"Castilleja","Fragaria.virginiana",7
+2023,"8/1/23","Emerald Lake","F10",70,139,"Castilleja","Anemone.multifida",1
+2023,"8/1/23","Emerald Lake","F10",70,139,"Castilleja","Senecio.crassulus",5
+2023,"8/1/23","Emerald Lake","F10",70,139,"Castilleja","Erigeron.coulteri",1
+2023,"8/1/23","Emerald Lake","F10C",70,140,"Control","Elymus.lanceolatus",3
+2023,"8/1/23","Emerald Lake","F10C",70,140,"Control","Deschampsia.cespitosa",2
+2023,"8/1/23","Emerald Lake","F10C",70,140,"Control","Potentilla.pulcherrima",3
+2023,"8/1/23","Emerald Lake","F10C",70,140,"Control","Achillea.millefolium",4
+2023,"8/1/23","Emerald Lake","F10C",70,140,"Control","Carex.sp.",2
+2023,"8/1/23","Emerald Lake","F10C",70,140,"Control","Fragaria.virginiana",3
+2023,"8/1/23","Emerald Lake","F10C",70,140,"Control","Senecio.crassulus",3
+2023,"8/1/23","Emerald Lake","F11",71,141,"Castilleja","Castilleja.septentrionalis",2
+2023,"8/1/23","Emerald Lake","F11",71,141,"Castilleja","Elymus.lanceolatus",2
+2023,"8/1/23","Emerald Lake","F11",71,141,"Castilleja","Deschampsia.cespitosa",3
+2023,"8/1/23","Emerald Lake","F11",71,141,"Castilleja","Potentilla.pulcherrima",7
+2023,"8/1/23","Emerald Lake","F11",71,141,"Castilleja","Fragaria.virginiana",3
+2023,"8/1/23","Emerald Lake","F11",71,141,"Castilleja","Anemone.multifida",1
+2023,"8/1/23","Emerald Lake","F11",71,141,"Castilleja","Senecio.crassulus",2
+2023,"8/1/23","Emerald Lake","F11",71,141,"Castilleja","Valeriana.edulis",3
+2023,"8/1/23","Emerald Lake","F11C",71,142,"Control","Taraxacum.officinale",1
+2023,"8/1/23","Emerald Lake","F11C",71,142,"Control","Elymus.lanceolatus",3
+2023,"8/1/23","Emerald Lake","F11C",71,142,"Control","Deschampsia.cespitosa",1
+2023,"8/1/23","Emerald Lake","F11C",71,142,"Control","Potentilla.pulcherrima",8
+2023,"8/1/23","Emerald Lake","F11C",71,142,"Control","Thalictrum.fendleri",3
+2023,"8/1/23","Emerald Lake","F11C",71,142,"Control","Fragaria.virginiana",4
+2023,"8/1/23","Emerald Lake","F11C",71,142,"Control","Senecio.crassulus",3
+2023,"8/1/23","Emerald Lake","F12",72,143,"Castilleja","Castilleja.septentrionalis",2
+2023,"8/1/23","Emerald Lake","F12",72,143,"Castilleja","Deschampsia.cespitosa",2
+2023,"8/1/23","Emerald Lake","F12",72,143,"Castilleja","Potentilla.pulcherrima",5
+2023,"8/1/23","Emerald Lake","F12",72,143,"Castilleja","Achillea.millefolium",4
+2023,"8/1/23","Emerald Lake","F12",72,143,"Castilleja","Fragaria.virginiana",1
+2023,"8/1/23","Emerald Lake","F12",72,143,"Castilleja","Senecio.crassulus",3
+2023,"8/1/23","Emerald Lake","F12",72,143,"Castilleja","Delphinium.barbeyi",2
+2023,"8/1/23","Emerald Lake","F12C",72,144,"Control","Deschampsia.cespitosa",2
+2023,"8/1/23","Emerald Lake","F12C",72,144,"Control","Potentilla.pulcherrima",3
+2023,"8/1/23","Emerald Lake","F12C",72,144,"Control","Fragaria.virginiana",1
+2023,"8/1/23","Emerald Lake","F12C",72,144,"Control","Senecio.crassulus",4
+2023,"8/1/23","Emerald Lake","F12C",72,144,"Control","Cirsium.griseum",2
+2023,"8/3/23","Emerald Lake","F13",73,145,"Castilleja","Agoseris.sp.",3
+2023,"8/3/23","Emerald Lake","F13",73,145,"Castilleja","Castilleja.septentrionalis",2
+2023,"8/3/23","Emerald Lake","F13",73,145,"Castilleja","Taraxacum.officinale",3
+2023,"8/3/23","Emerald Lake","F13",73,145,"Castilleja","Deschampsia.cespitosa",7
+2023,"8/3/23","Emerald Lake","F13",73,145,"Castilleja","Potentilla.pulcherrima",9
+2023,"8/3/23","Emerald Lake","F13",73,145,"Castilleja","Achillea.millefolium",1
+2023,"8/3/23","Emerald Lake","F13",73,145,"Castilleja","Carex.sp.",3
+2023,"8/3/23","Emerald Lake","F13",73,145,"Castilleja","Fragaria.virginiana",7
+2023,"8/3/23","Emerald Lake","F13",73,145,"Castilleja","Senecio.crassulus",5
+2023,"8/3/23","Emerald Lake","F13",73,145,"Castilleja","Erigeron.coulteri",6
+2023,"8/3/23","Emerald Lake","F13C",73,146,"Control","Taraxacum.officinale",5
+2023,"8/3/23","Emerald Lake","F13C",73,146,"Control","Deschampsia.cespitosa",3
+2023,"8/3/23","Emerald Lake","F13C",73,146,"Control","Potentilla.pulcherrima",6
+2023,"8/3/23","Emerald Lake","F13C",73,146,"Control","Achillea.millefolium",7
+2023,"8/3/23","Emerald Lake","F13C",73,146,"Control","Carex.sp.",2
+2023,"8/3/23","Emerald Lake","F13C",73,146,"Control","Fragaria.virginiana",5
+2023,"8/3/23","Emerald Lake","F13C",73,146,"Control","Senecio.crassulus",5
+2023,"8/3/23","Emerald Lake","F13C",73,146,"Control","Draba.spectabilis",5
+2023,"8/3/23","Emerald Lake","F13C",73,146,"Control","Erigeron.coulteri",4
+2023,"8/3/23","Emerald Lake","F13C",73,146,"Control","Valeriana.edulis",1
+2023,"8/3/23","Emerald Lake","F14",74,147,"Castilleja","Agoseris.sp.",2
+2023,"8/3/23","Emerald Lake","F14",74,147,"Castilleja","Castilleja.septentrionalis",2
+2023,"8/3/23","Emerald Lake","F14",74,147,"Castilleja","Deschampsia.cespitosa",7
+2023,"8/3/23","Emerald Lake","F14",74,147,"Castilleja","Potentilla.pulcherrima",7
+2023,"8/3/23","Emerald Lake","F14",74,147,"Castilleja","Thalictrum.fendleri",4
+2023,"8/3/23","Emerald Lake","F14",74,147,"Castilleja","Achillea.millefolium",1
+2023,"8/3/23","Emerald Lake","F14",74,147,"Castilleja","Boechera.stricta",1
+2023,"8/3/23","Emerald Lake","F14",74,147,"Castilleja","Carex.sp.",6
+2023,"8/3/23","Emerald Lake","F14",74,147,"Castilleja","Fragaria.virginiana",4
+2023,"8/3/23","Emerald Lake","F14",74,147,"Castilleja","Anemone.multifida",1
+2023,"8/3/23","Emerald Lake","F14",74,147,"Castilleja","Senecio.crassulus",3
+2023,"8/3/23","Emerald Lake","F14",74,147,"Castilleja","Cirsium.griseum",4
+2023,"8/3/23","Emerald Lake","F14",74,147,"Castilleja","Draba.spectabilis",5
+2023,"8/3/23","Emerald Lake","F14",74,147,"Castilleja","Erigeron.coulteri",8
+2023,"8/3/23","Emerald Lake","F14C",74,148,"Control","Agoseris.sp.",3
+2023,"8/3/23","Emerald Lake","F14C",74,148,"Control","Taraxacum.officinale",4
+2023,"8/3/23","Emerald Lake","F14C",74,148,"Control","Elymus.lanceolatus",1
+2023,"8/3/23","Emerald Lake","F14C",74,148,"Control","Deschampsia.cespitosa",5
+2023,"8/3/23","Emerald Lake","F14C",74,148,"Control","Potentilla.pulcherrima",6
+2023,"8/3/23","Emerald Lake","F14C",74,148,"Control","Thalictrum.fendleri",1
+2023,"8/3/23","Emerald Lake","F14C",74,148,"Control","Achillea.millefolium",3
+2023,"8/3/23","Emerald Lake","F14C",74,148,"Control","Fragaria.virginiana",6
+2023,"8/3/23","Emerald Lake","F14C",74,148,"Control","Anemone.multifida",1
+2023,"8/3/23","Emerald Lake","F14C",74,148,"Control","Senecio.crassulus",9
+2023,"8/3/23","Emerald Lake","F15",75,149,"Castilleja","Agoseris.sp.",4
+2023,"8/3/23","Emerald Lake","F15",75,149,"Castilleja","Castilleja.septentrionalis",2
+2023,"8/3/23","Emerald Lake","F15",75,149,"Castilleja","Taraxacum.officinale",3
+2023,"8/3/23","Emerald Lake","F15",75,149,"Castilleja","Elymus.lanceolatus",3
+2023,"8/3/23","Emerald Lake","F15",75,149,"Castilleja","Deschampsia.cespitosa",4
+2023,"8/3/23","Emerald Lake","F15",75,149,"Castilleja","Potentilla.pulcherrima",10
+2023,"8/3/23","Emerald Lake","F15",75,149,"Castilleja","Achillea.millefolium",2
+2023,"8/3/23","Emerald Lake","F15",75,149,"Castilleja","Fragaria.virginiana",9
+2023,"8/3/23","Emerald Lake","F15",75,149,"Castilleja","Anemone.multifida",2
+2023,"8/3/23","Emerald Lake","F15",75,149,"Castilleja","Senecio.crassulus",5
+2023,"8/3/23","Emerald Lake","F15",75,149,"Castilleja","Draba.spectabilis",5
+2023,"8/3/23","Emerald Lake","F15",75,149,"Castilleja","Erigeron.leiomerus",8
+2023,"8/3/23","Emerald Lake","F15",75,149,"Castilleja","Erigeron.coulteri",4
+2023,"8/3/23","Emerald Lake","F15C",75,150,"Control","Agoseris.sp.",2
+2023,"8/3/23","Emerald Lake","F15C",75,150,"Control","Taraxacum.officinale",4
+2023,"8/3/23","Emerald Lake","F15C",75,150,"Control","Deschampsia.cespitosa",3
+2023,"8/3/23","Emerald Lake","F15C",75,150,"Control","Potentilla.pulcherrima",4
+2023,"8/3/23","Emerald Lake","F15C",75,150,"Control","Fragaria.virginiana",5
+2023,"8/3/23","Emerald Lake","F15C",75,150,"Control","Anemone.multifida",2
+2023,"8/3/23","Emerald Lake","F15C",75,150,"Control","Senecio.crassulus",3
+2023,"8/3/23","Emerald Lake","F15C",75,150,"Control","Draba.spectabilis",5
+2023,"8/3/23","Emerald Lake","F15C",75,150,"Control","Erigeron.leiomerus",20
+2023,"8/3/23","Emerald Lake","F16",76,151,"Castilleja","Castilleja.septentrionalis",1
+2023,"8/3/23","Emerald Lake","F16",76,151,"Castilleja","Taraxacum.officinale",1
+2023,"8/3/23","Emerald Lake","F16",76,151,"Castilleja","Elymus.lanceolatus",2
+2023,"8/3/23","Emerald Lake","F16",76,151,"Castilleja","Deschampsia.cespitosa",5
+2023,"8/3/23","Emerald Lake","F16",76,151,"Castilleja","Potentilla.pulcherrima",9
+2023,"8/3/23","Emerald Lake","F16",76,151,"Castilleja","Fragaria.virginiana",4
+2023,"8/3/23","Emerald Lake","F16",76,151,"Castilleja","Anemone.multifida",2
+2023,"8/3/23","Emerald Lake","F16",76,151,"Castilleja","Senecio.crassulus",9
+2023,"8/3/23","Emerald Lake","F16",76,151,"Castilleja","Viola.adunca",3
+2023,"8/3/23","Emerald Lake","F16C",76,152,"Control","Agoseris.sp.",5
+2023,"8/3/23","Emerald Lake","F16C",76,152,"Control","Elymus.lanceolatus",1
+2023,"8/3/23","Emerald Lake","F16C",76,152,"Control","Deschampsia.cespitosa",5
+2023,"8/3/23","Emerald Lake","F16C",76,152,"Control","Potentilla.pulcherrima",6
+2023,"8/3/23","Emerald Lake","F16C",76,152,"Control","Thalictrum.fendleri",2
+2023,"8/3/23","Emerald Lake","F16C",76,152,"Control","Achillea.millefolium",7
+2023,"8/3/23","Emerald Lake","F16C",76,152,"Control","Fragaria.virginiana",6
+2023,"8/3/23","Emerald Lake","F16C",76,152,"Control","Anemone.multifida",1
+2023,"8/3/23","Emerald Lake","F16C",76,152,"Control","Senecio.crassulus",6
+2023,"8/3/23","Emerald Lake","F17",77,153,"Castilleja","Agoseris.sp.",1
+2023,"8/3/23","Emerald Lake","F17",77,153,"Castilleja","Castilleja.septentrionalis",1
+2023,"8/3/23","Emerald Lake","F17",77,153,"Castilleja","Deschampsia.cespitosa",5
+2023,"8/3/23","Emerald Lake","F17",77,153,"Castilleja","Potentilla.pulcherrima",6
+2023,"8/3/23","Emerald Lake","F17",77,153,"Castilleja","Carex.sp.",4
+2023,"8/3/23","Emerald Lake","F17",77,153,"Castilleja","Fragaria.virginiana",6
+2023,"8/3/23","Emerald Lake","F17",77,153,"Castilleja","Anemone.multifida",2
+2023,"8/3/23","Emerald Lake","F17",77,153,"Castilleja","Senecio.crassulus",5
+2023,"8/3/23","Emerald Lake","F17",77,153,"Castilleja","Draba.spectabilis",5
+2023,"8/3/23","Emerald Lake","F17",77,153,"Castilleja","Viola.adunca",1
+2023,"8/3/23","Emerald Lake","F17C",77,154,"Control","Deschampsia.cespitosa",6
+2023,"8/3/23","Emerald Lake","F17C",77,154,"Control","Potentilla.pulcherrima",7
+2023,"8/3/23","Emerald Lake","F17C",77,154,"Control","Fragaria.virginiana",6
+2023,"8/3/23","Emerald Lake","F17C",77,154,"Control","Anemone.multifida",1
+2023,"8/3/23","Emerald Lake","F17C",77,154,"Control","Senecio.crassulus",5
+2023,"8/3/23","Emerald Lake","F17C",77,154,"Control","Cirsium.griseum",1
+2023,"8/3/23","Emerald Lake","F17C",77,154,"Control","Draba.spectabilis",5
+2023,"8/3/23","Emerald Lake","F18",78,155,"Castilleja","Castilleja.septentrionalis",1
+2023,"8/3/23","Emerald Lake","F18",78,155,"Castilleja","Deschampsia.cespitosa",1
+2023,"8/3/23","Emerald Lake","F18",78,155,"Castilleja","Potentilla.pulcherrima",7
+2023,"8/3/23","Emerald Lake","F18",78,155,"Castilleja","Achillea.millefolium",1
+2023,"8/3/23","Emerald Lake","F18",78,155,"Castilleja","Fragaria.virginiana",4
+2023,"8/3/23","Emerald Lake","F18",78,155,"Castilleja","Anemone.multifida",4
+2023,"8/3/23","Emerald Lake","F18",78,155,"Castilleja","Senecio.crassulus",4
+2023,"8/3/23","Emerald Lake","F18",78,155,"Castilleja","Cirsium.griseum",5
+2023,"8/3/23","Emerald Lake","F18",78,155,"Castilleja","Draba.spectabilis",3
+2023,"8/3/23","Emerald Lake","F18C",78,156,"Control","Deschampsia.cespitosa",2
+2023,"8/3/23","Emerald Lake","F18C",78,156,"Control","Potentilla.pulcherrima",3
+2023,"8/3/23","Emerald Lake","F18C",78,156,"Control","Fragaria.virginiana",2
+2023,"8/3/23","Emerald Lake","F18C",78,156,"Control","Senecio.crassulus",4
+2023,"8/3/23","Emerald Lake","F18C",78,156,"Control","Cirsium.griseum",2
+2023,"8/3/23","Emerald Lake","F19",79,157,"Castilleja","Agoseris.sp.",2
+2023,"8/3/23","Emerald Lake","F19",79,157,"Castilleja","Castilleja.septentrionalis",1
+2023,"8/3/23","Emerald Lake","F19",79,157,"Castilleja","Taraxacum.officinale",3
+2023,"8/3/23","Emerald Lake","F19",79,157,"Castilleja","Deschampsia.cespitosa",3
+2023,"8/3/23","Emerald Lake","F19",79,157,"Castilleja","Potentilla.pulcherrima",5
+2023,"8/3/23","Emerald Lake","F19",79,157,"Castilleja","Achillea.millefolium",5
+2023,"8/3/23","Emerald Lake","F19",79,157,"Castilleja","Carex.sp.",3
+2023,"8/3/23","Emerald Lake","F19",79,157,"Castilleja","Fragaria.virginiana",8
+2023,"8/3/23","Emerald Lake","F19",79,157,"Castilleja","Anemone.multifida",3
+2023,"8/3/23","Emerald Lake","F19",79,157,"Castilleja","Senecio.crassulus",3
+2023,"8/3/23","Emerald Lake","F19",79,157,"Castilleja","Draba.spectabilis",5
+2023,"8/3/23","Emerald Lake","F19",79,157,"Castilleja","Erigeron.coulteri",4
+2023,"8/3/23","Emerald Lake","F19C",79,158,"Control","Agoseris.sp.",5
+2023,"8/3/23","Emerald Lake","F19C",79,158,"Control","Taraxacum.officinale",1
+2023,"8/3/23","Emerald Lake","F19C",79,158,"Control","Deschampsia.cespitosa",3
+2023,"8/3/23","Emerald Lake","F19C",79,158,"Control","Potentilla.pulcherrima",4
+2023,"8/3/23","Emerald Lake","F19C",79,158,"Control","Achillea.millefolium",10
+2023,"8/3/23","Emerald Lake","F19C",79,158,"Control","Fragaria.virginiana",7
+2023,"8/3/23","Emerald Lake","F19C",79,158,"Control","Anemone.multifida",2
+2023,"8/3/23","Emerald Lake","F19C",79,158,"Control","Senecio.crassulus",6
+2023,"8/3/23","Emerald Lake","F19C",79,158,"Control","Draba.spectabilis",5
+2023,"8/3/23","Emerald Lake","F19C",79,158,"Control","Erigeron.coulteri",4
+2023,"8/3/23","Emerald Lake","F20",80,159,"Castilleja","Agoseris.sp.",1
+2023,"8/3/23","Emerald Lake","F20",80,159,"Castilleja","Castilleja.septentrionalis",1
+2023,"8/3/23","Emerald Lake","F20",80,159,"Castilleja","Elymus.lanceolatus",2
+2023,"8/3/23","Emerald Lake","F20",80,159,"Castilleja","Deschampsia.cespitosa",6
+2023,"8/3/23","Emerald Lake","F20",80,159,"Castilleja","Potentilla.pulcherrima",6
+2023,"8/3/23","Emerald Lake","F20",80,159,"Castilleja","Achillea.millefolium",12
+2023,"8/3/23","Emerald Lake","F20",80,159,"Castilleja","Fragaria.virginiana",7
+2023,"8/3/23","Emerald Lake","F20",80,159,"Castilleja","Anemone.multifida",4
+2023,"8/3/23","Emerald Lake","F20",80,159,"Castilleja","Senecio.crassulus",7
+2023,"8/3/23","Emerald Lake","F20",80,159,"Castilleja","Draba.spectabilis",5
+2023,"8/3/23","Emerald Lake","F20",80,159,"Castilleja","Viola.adunca",1
+2023,"8/3/23","Emerald Lake","F20C",80,160,"Control","Taraxacum.officinale",3
+2023,"8/3/23","Emerald Lake","F20C",80,160,"Control","Deschampsia.cespitosa",3
+2023,"8/3/23","Emerald Lake","F20C",80,160,"Control","Potentilla.pulcherrima",6
+2023,"8/3/23","Emerald Lake","F20C",80,160,"Control","Achillea.millefolium",1
+2023,"8/3/23","Emerald Lake","F20C",80,160,"Control","Fragaria.virginiana",5
+2023,"8/3/23","Emerald Lake","F20C",80,160,"Control","Anemone.multifida",4
+2023,"8/3/23","Emerald Lake","F20C",80,160,"Control","Senecio.crassulus",5
+2023,"8/3/23","Emerald Lake","F20C",80,160,"Control","Phleum.alpinum",1
+2024,"7/10/24","Avery","C1",21,41,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/10/24","Avery","C1",21,41,"Castilleja","Taraxacum.officinale",10
+2024,"7/10/24","Avery","C1",21,41,"Castilleja","Elymus.lanceolatus",7
+2024,"7/10/24","Avery","C1",21,41,"Castilleja","Poa.pratensis",7
+2024,"7/10/24","Avery","C1",21,41,"Castilleja","Potentilla.pulcherrima",3
+2024,"7/10/24","Avery","C1",21,41,"Castilleja","Achillea.millefolium",8
+2024,"7/10/24","Avery","C1",21,41,"Castilleja","Ipomopsis.aggregata",2
+2024,"7/10/24","Avery","C1",21,41,"Castilleja","Bromus.inermis",2
+2024,"7/10/24","Avery","C1",21,41,"Castilleja","Erigeron.speciosus",1
+2024,"7/10/24","Avery","C1C",21,42,"Control","Achnatherum.sp.",1
+2024,"7/10/24","Avery","C1C",21,42,"Control","Agoseris.sp.",1
+2024,"7/10/24","Avery","C1C",21,42,"Control","Taraxacum.officinale",7
+2024,"7/10/24","Avery","C1C",21,42,"Control","Poa.pratensis",5
+2024,"7/10/24","Avery","C1C",21,42,"Control","Potentilla.pulcherrima",1
+2024,"7/10/24","Avery","C1C",21,42,"Control","Thalictrum.fendleri",1
+2024,"7/10/24","Avery","C1C",21,42,"Control","Achillea.millefolium",1
+2024,"7/10/24","Avery","C1C",21,42,"Control","Ipomopsis.aggregata",7
+2024,"7/10/24","Avery","C1C",21,42,"Control","Boechera.stricta",1
+2024,"7/10/24","Avery","C1C",21,42,"Control","Fragaria.virginiana",11
+2024,"7/10/24","Avery","C1C",21,42,"Control","Viola.adunca",1
+2024,"7/10/24","Avery","C1C",21,42,"Control","Erigeron.speciosus",1
+2024,"7/10/24","Avery","C2",22,43,"Castilleja","Agoseris.sp.",3
+2024,"7/10/24","Avery","C2",22,43,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/10/24","Avery","C2",22,43,"Castilleja","Taraxacum.officinale",12
+2024,"7/10/24","Avery","C2",22,43,"Castilleja","Poa.pratensis",10
+2024,"7/10/24","Avery","C2",22,43,"Castilleja","Potentilla.pulcherrima",15
+2024,"7/10/24","Avery","C2",22,43,"Castilleja","Thalictrum.fendleri",1
+2024,"7/10/24","Avery","C2",22,43,"Castilleja","Ipomopsis.aggregata",1
+2024,"7/10/24","Avery","C2",22,43,"Castilleja","Valeriana.occidentalis",2
+2024,"7/10/24","Avery","C2",22,43,"Castilleja","Dactylis.glomerata",4
+2024,"7/10/24","Avery","C2C",22,44,"Control","Taraxacum.officinale",30
+2024,"7/10/24","Avery","C2C",22,44,"Control","Poa.pratensis",11
+2024,"7/10/24","Avery","C2C",22,44,"Control","Potentilla.pulcherrima",3
+2024,"7/10/24","Avery","C2C",22,44,"Control","Ipomopsis.aggregata",3
+2024,"7/10/24","Avery","C2C",22,44,"Control","Dactylis.glomerata",3
+2024,"7/10/24","Avery","C2C",22,44,"Control","Erigeron.coulteri",4
+2024,"7/10/24","Avery","C2C",22,44,"Control","Viola.adunca",2
+2024,"7/10/24","Avery","C3",23,45,"Castilleja","Achnatherum.sp.",1
+2024,"7/10/24","Avery","C3",23,45,"Castilleja","Agoseris.sp.",4
+2024,"7/10/24","Avery","C3",23,45,"Castilleja","Castilleja.septentrionalis",2
+2024,"7/10/24","Avery","C3",23,45,"Castilleja","Taraxacum.officinale",30
+2024,"7/10/24","Avery","C3",23,45,"Castilleja","Poa.pratensis",1
+2024,"7/10/24","Avery","C3",23,45,"Castilleja","Potentilla.pulcherrima",5
+2024,"7/10/24","Avery","C3",23,45,"Castilleja","Achillea.millefolium",8
+2024,"7/10/24","Avery","C3",23,45,"Castilleja","Ipomopsis.aggregata",6
+2024,"7/10/24","Avery","C3",23,45,"Castilleja","Dactylis.glomerata",3
+2024,"7/10/24","Avery","C3",23,45,"Castilleja","Erigeron.coulteri",4
+2024,"7/10/24","Avery","C3",23,45,"Castilleja","Viola.adunca",2
+2024,"7/10/24","Avery","C3",23,45,"Castilleja","Carex.sp...obtusata..geyeri.",1
+2024,"7/10/24","Avery","C3",23,45,"Castilleja","Poa.compressa",1
+2024,"7/10/24","Avery","C3C",23,46,"Control","Achnatherum.sp.",3
+2024,"7/10/24","Avery","C3C",23,46,"Control","Agoseris.sp.",2
+2024,"7/10/24","Avery","C3C",23,46,"Control","Taraxacum.officinale",10
+2024,"7/10/24","Avery","C3C",23,46,"Control","Elymus.lanceolatus",1
+2024,"7/10/24","Avery","C3C",23,46,"Control","Poa.pratensis",7
+2024,"7/10/24","Avery","C3C",23,46,"Control","Potentilla.pulcherrima",2
+2024,"7/10/24","Avery","C3C",23,46,"Control","Ipomopsis.aggregata",1
+2024,"7/10/24","Avery","C3C",23,46,"Control","Viola.adunca",1
+2024,"7/10/24","Avery","C3C",23,46,"Control","Poa.compressa",2
+2024,"7/10/24","Avery","C4",24,47,"Castilleja","Agoseris.sp.",3
+2024,"7/10/24","Avery","C4",24,47,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/10/24","Avery","C4",24,47,"Castilleja","Taraxacum.officinale",20
+2024,"7/10/24","Avery","C4",24,47,"Castilleja","Elymus.lanceolatus",1
+2024,"7/10/24","Avery","C4",24,47,"Castilleja","Poa.pratensis",3
+2024,"7/10/24","Avery","C4",24,47,"Castilleja","Potentilla.pulcherrima",4
+2024,"7/10/24","Avery","C4",24,47,"Castilleja","Achillea.millefolium",1
+2024,"7/10/24","Avery","C4",24,47,"Castilleja","Fragaria.virginiana",3
+2024,"7/10/24","Avery","C4",24,47,"Castilleja","Erigeron.coulteri",1
+2024,"7/10/24","Avery","C4C",24,48,"Control","Achnatherum.sp.",2
+2024,"7/10/24","Avery","C4C",24,48,"Control","Agoseris.sp.",2
+2024,"7/10/24","Avery","C4C",24,48,"Control","Taraxacum.officinale",10
+2024,"7/10/24","Avery","C4C",24,48,"Control","Lathyrus.lanszwertii",3
+2024,"7/10/24","Avery","C4C",24,48,"Control","Potentilla.pulcherrima",3
+2024,"7/10/24","Avery","C4C",24,48,"Control","Ipomopsis.aggregata",2
+2024,"7/10/24","Avery","C4C",24,48,"Control","Dactylis.glomerata",2
+2024,"7/10/24","Avery","C4C",24,48,"Control","Fragaria.virginiana",1
+2024,"7/10/24","Avery","C4C",24,48,"Control","Erigeron.coulteri",1
+2024,"7/10/24","Avery","C4C",24,48,"Control","Poa.compressa",1
+2024,"7/10/24","Avery","C5",25,49,"Castilleja","Achnatherum.sp.",1
+2024,"7/10/24","Avery","C5",25,49,"Castilleja","Agoseris.sp.",6
+2024,"7/10/24","Avery","C5",25,49,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/10/24","Avery","C5",25,49,"Castilleja","Taraxacum.officinale",40
+2024,"7/10/24","Avery","C5",25,49,"Castilleja","Poa.pratensis",1
+2024,"7/10/24","Avery","C5",25,49,"Castilleja","Potentilla.pulcherrima",5
+2024,"7/10/24","Avery","C5",25,49,"Castilleja","Ipomopsis.aggregata",4
+2024,"7/10/24","Avery","C5",25,49,"Castilleja","Dactylis.glomerata",1
+2024,"7/10/24","Avery","C5",25,49,"Castilleja","Fragaria.virginiana",1
+2024,"7/10/24","Avery","C5",25,49,"Castilleja","Erigeron.coulteri",3
+2024,"7/10/24","Avery","C5",25,49,"Castilleja","Poa.compressa",1
+2024,"7/10/24","Avery","C5C",25,50,"Control","Agoseris.sp.",7
+2024,"7/10/24","Avery","C5C",25,50,"Control","Taraxacum.officinale",10
+2024,"7/10/24","Avery","C5C",25,50,"Control","Elymus.lanceolatus",2
+2024,"7/10/24","Avery","C5C",25,50,"Control","Poa.pratensis",1
+2024,"7/10/24","Avery","C5C",25,50,"Control","Potentilla.pulcherrima",6
+2024,"7/10/24","Avery","C5C",25,50,"Control","Ipomopsis.aggregata",2
+2024,"7/10/24","Avery","C5C",25,50,"Control","Fragaria.virginiana",1
+2024,"7/10/24","Avery","C5C",25,50,"Control","Erigeron.coulteri",2
+2024,"7/10/24","Avery","C6",26,51,"Castilleja","Achnatherum.sp.",1
+2024,"7/10/24","Avery","C6",26,51,"Castilleja","Agoseris.sp.",3
+2024,"7/10/24","Avery","C6",26,51,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/10/24","Avery","C6",26,51,"Castilleja","Taraxacum.officinale",10
+2024,"7/10/24","Avery","C6",26,51,"Castilleja","Potentilla.pulcherrima",5
+2024,"7/10/24","Avery","C6",26,51,"Castilleja","Ipomopsis.aggregata",1
+2024,"7/10/24","Avery","C6",26,51,"Castilleja","Erigeron.coulteri",4
+2024,"7/10/24","Avery","C6",26,51,"Castilleja","Poa.compressa",10
+2024,"7/10/24","Avery","C6C",26,52,"Control","Achnatherum.sp.",4
+2024,"7/10/24","Avery","C6C",26,52,"Control","Agoseris.sp.",6
+2024,"7/10/24","Avery","C6C",26,52,"Control","Taraxacum.officinale",40
+2024,"7/10/24","Avery","C6C",26,52,"Control","Potentilla.pulcherrima",5
+2024,"7/10/24","Avery","C6C",26,52,"Control","Ipomopsis.aggregata",3
+2024,"7/10/24","Avery","C6C",26,52,"Control","Erigeron.coulteri",1
+2024,"7/10/24","Avery","C6C",26,52,"Control","Viola.adunca",2
+2024,"7/10/24","Avery","C6C",26,52,"Control","Erigeron.speciosus",1
+2024,"7/10/24","Avery","C6C",26,52,"Control","Poa.compressa",8
+2024,"7/10/24","Avery","C7",27,53,"Castilleja","Agoseris.sp.",6
+2024,"7/10/24","Avery","C7",27,53,"Castilleja","Castilleja.septentrionalis",2
+2024,"7/10/24","Avery","C7",27,53,"Castilleja","Taraxacum.officinale",30
+2024,"7/10/24","Avery","C7",27,53,"Castilleja","Potentilla.pulcherrima",5
+2024,"7/10/24","Avery","C7",27,53,"Castilleja","Ipomopsis.aggregata",2
+2024,"7/10/24","Avery","C7",27,53,"Castilleja","Fragaria.virginiana",3
+2024,"7/10/24","Avery","C7",27,53,"Castilleja","Viola.adunca",1
+2024,"7/10/24","Avery","C7",27,53,"Castilleja","Botrychium.sp.",1
+2024,"7/10/24","Avery","C7",27,53,"Castilleja","Erigeron.speciosus",3
+2024,"7/10/24","Avery","C7",27,53,"Castilleja","Poa.compressa",1
+2024,"7/10/24","Avery","C7C",27,54,"Control","Taraxacum.officinale",15
+2024,"7/10/24","Avery","C7C",27,54,"Control","Elymus.lanceolatus",1
+2024,"7/10/24","Avery","C7C",27,54,"Control","Potentilla.pulcherrima",4
+2024,"7/10/24","Avery","C7C",27,54,"Control","Ipomopsis.aggregata",4
+2024,"7/10/24","Avery","C7C",27,54,"Control","Valeriana.occidentalis",3
+2024,"7/10/24","Avery","C7C",27,54,"Control","Fragaria.virginiana",2
+2024,"7/10/24","Avery","C7C",27,54,"Control","Erigeron.coulteri",2
+2024,"7/10/24","Avery","C7C",27,54,"Control","Viola.adunca",3
+2024,"7/10/24","Avery","C7C",27,54,"Control","Mertensia.brevistyla",1
+2024,"7/10/24","Avery","C7C",27,54,"Control","Poa.compressa",2
+2024,"7/10/24","Avery","C8",28,55,"Castilleja","Agoseris.sp.",3
+2024,"7/10/24","Avery","C8",28,55,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/10/24","Avery","C8",28,55,"Castilleja","Taraxacum.officinale",2
+2024,"7/10/24","Avery","C8",28,55,"Castilleja","Elymus.lanceolatus",1
+2024,"7/10/24","Avery","C8",28,55,"Castilleja","Poa.pratensis",1
+2024,"7/10/24","Avery","C8",28,55,"Castilleja","Potentilla.pulcherrima",3
+2024,"7/10/24","Avery","C8",28,55,"Castilleja","Valeriana.occidentalis",3
+2024,"7/10/24","Avery","C8",28,55,"Castilleja","Fragaria.virginiana",2
+2024,"7/10/24","Avery","C8",28,55,"Castilleja","Viola.adunca",3
+2024,"7/10/24","Avery","C8",28,55,"Castilleja","Erigeron.speciosus",1
+2024,"7/10/24","Avery","C8C",28,56,"Control","Agoseris.sp.",2
+2024,"7/10/24","Avery","C8C",28,56,"Control","Taraxacum.officinale",10
+2024,"7/10/24","Avery","C8C",28,56,"Control","Elymus.lanceolatus",1
+2024,"7/10/24","Avery","C8C",28,56,"Control","Potentilla.pulcherrima",2
+2024,"7/10/24","Avery","C8C",28,56,"Control","Valeriana.occidentalis",1
+2024,"7/10/24","Avery","C8C",28,56,"Control","Erigeron.speciosus",3
+2024,"7/10/24","Avery","C8C",28,56,"Control","Poa.compressa",1
+2024,"7/11/24","Avery","C9",29,57,"Castilleja","Agoseris.sp.",1
+2024,"7/11/24","Avery","C9",29,57,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/11/24","Avery","C9",29,57,"Castilleja","Taraxacum.officinale",30
+2024,"7/11/24","Avery","C9",29,57,"Castilleja","Erigeron.subtrinervis",3
+2024,"7/11/24","Avery","C9",29,57,"Castilleja","Potentilla.pulcherrima",6
+2024,"7/11/24","Avery","C9",29,57,"Castilleja","Achillea.millefolium",1
+2024,"7/11/24","Avery","C9",29,57,"Castilleja","Valeriana.occidentalis",1
+2024,"7/11/24","Avery","C9",29,57,"Castilleja","Fragaria.virginiana",8
+2024,"7/11/24","Avery","C9",29,57,"Castilleja","Hymenoxys.hoopesii",3
+2024,"7/11/24","Avery","C9",29,57,"Castilleja","Carex.sp...obtusata..geyeri.",5
+2024,"7/11/24","Avery","C9",29,57,"Castilleja","Poa.compressa",10
+2024,"7/11/24","Avery","C9C",29,58,"Control","Agoseris.sp.",9
+2024,"7/11/24","Avery","C9C",29,58,"Control","Taraxacum.officinale",20
+2024,"7/11/24","Avery","C9C",29,58,"Control","Erigeron.subtrinervis",5
+2024,"7/11/24","Avery","C9C",29,58,"Control","Poa.pratensis",8
+2024,"7/11/24","Avery","C9C",29,58,"Control","Potentilla.pulcherrima",5
+2024,"7/11/24","Avery","C9C",29,58,"Control","Ipomopsis.aggregata",1
+2024,"7/11/24","Avery","C9C",29,58,"Control","Valeriana.occidentalis",1
+2024,"7/11/24","Avery","C9C",29,58,"Control","Poa.compressa",5
+2024,"7/11/24","Avery","C10",30,59,"Castilleja","Achnatherum.sp.",1
+2024,"7/11/24","Avery","C10",30,59,"Castilleja","Agoseris.sp.",3
+2024,"7/11/24","Avery","C10",30,59,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/11/24","Avery","C10",30,59,"Castilleja","Taraxacum.officinale",20
+2024,"7/11/24","Avery","C10",30,59,"Castilleja","Potentilla.pulcherrima",9
+2024,"7/11/24","Avery","C10",30,59,"Castilleja","Ipomopsis.aggregata",3
+2024,"7/11/24","Avery","C10",30,59,"Castilleja","Dactylis.glomerata",4
+2024,"7/11/24","Avery","C10",30,59,"Castilleja","Erigeron.coulteri",2
+2024,"7/11/24","Avery","C10",30,59,"Castilleja","Viola.adunca",3
+2024,"7/11/24","Avery","C10",30,59,"Castilleja","Carex.sp...obtusata..geyeri.",10
+2024,"7/11/24","Avery","C10",30,59,"Castilleja","Poa.compressa",2
+2024,"7/11/24","Avery","C10C",30,60,"Control","Taraxacum.officinale",20
+2024,"7/11/24","Avery","C10C",30,60,"Control","Erigeron.subtrinervis",2
+2024,"7/11/24","Avery","C10C",30,60,"Control","Potentilla.pulcherrima",5
+2024,"7/11/24","Avery","C10C",30,60,"Control","Ipomopsis.aggregata",3
+2024,"7/11/24","Avery","C10C",30,60,"Control","Dactylis.glomerata",4
+2024,"7/11/24","Avery","C10C",30,60,"Control","Hymenoxys.hoopesii",3
+2024,"7/11/24","Avery","C10C",30,60,"Control","Viola.adunca",2
+2024,"7/11/24","Avery","C10C",30,60,"Control","Poa.compressa",10
+2024,"7/11/24","Avery","C11",31,61,"Castilleja","Achnatherum.sp.",2
+2024,"7/11/24","Avery","C11",31,61,"Castilleja","Castilleja.septentrionalis",3
+2024,"7/11/24","Avery","C11",31,61,"Castilleja","Taraxacum.officinale",25
+2024,"7/11/24","Avery","C11",31,61,"Castilleja","Elymus.lanceolatus",2
+2024,"7/11/24","Avery","C11",31,61,"Castilleja","Erigeron.subtrinervis",3
+2024,"7/11/24","Avery","C11",31,61,"Castilleja","Poa.pratensis",20
+2024,"7/11/24","Avery","C11",31,61,"Castilleja","Potentilla.pulcherrima",2
+2024,"7/11/24","Avery","C11",31,61,"Castilleja","Ipomopsis.aggregata",6
+2024,"7/11/24","Avery","C11",31,61,"Castilleja","Valeriana.occidentalis",1
+2024,"7/11/24","Avery","C11",31,61,"Castilleja","Dactylis.glomerata",1
+2024,"7/11/24","Avery","C11",31,61,"Castilleja","Erigeron.coulteri",4
+2024,"7/11/24","Avery","C11C",31,62,"Control","Taraxacum.officinale",8
+2024,"7/11/24","Avery","C11C",31,62,"Control","Erigeron.subtrinervis",2
+2024,"7/11/24","Avery","C11C",31,62,"Control","Poa.pratensis",30
+2024,"7/11/24","Avery","C11C",31,62,"Control","Potentilla.pulcherrima",3
+2024,"7/11/24","Avery","C11C",31,62,"Control","Thalictrum.fendleri",2
+2024,"7/11/24","Avery","C11C",31,62,"Control","Ipomopsis.aggregata",2
+2024,"7/11/24","Avery","C11C",31,62,"Control","Valeriana.occidentalis",1
+2024,"7/11/24","Avery","C11C",31,62,"Control","Dactylis.glomerata",2
+2024,"7/11/24","Avery","C11C",31,62,"Control","Erigeron.coulteri",1
+2024,"7/11/24","Avery","C11C",31,62,"Control","Mertensia.brevistyla",1
+2024,"7/11/24","Avery","C12",32,63,"Castilleja","Achnatherum.sp.",1
+2024,"7/11/24","Avery","C12",32,63,"Castilleja","Castilleja.septentrionalis",2
+2024,"7/11/24","Avery","C12",32,63,"Castilleja","Taraxacum.officinale",25
+2024,"7/11/24","Avery","C12",32,63,"Castilleja","Erigeron.subtrinervis",3
+2024,"7/11/24","Avery","C12",32,63,"Castilleja","Poa.pratensis",20
+2024,"7/11/24","Avery","C12",32,63,"Castilleja","Potentilla.pulcherrima",2
+2024,"7/11/24","Avery","C12",32,63,"Castilleja","Ipomopsis.aggregata",6
+2024,"7/11/24","Avery","C12",32,63,"Castilleja","Valeriana.occidentalis",1
+2024,"7/11/24","Avery","C12",32,63,"Castilleja","Solidago.multiradiata",3
+2024,"7/11/24","Avery","C12",32,63,"Castilleja","Dactylis.glomerata",3
+2024,"7/11/24","Avery","C12",32,63,"Castilleja","Erigeron.coulteri",2
+2024,"7/11/24","Avery","C12",32,63,"Castilleja","Botrychium.sp.",1
+2024,"7/11/24","Avery","C12",32,63,"Castilleja","Poa.compressa",2
+2024,"7/11/24","Avery","C12",32,63,"Castilleja","Trisetum.spicatum",4
+2024,"7/11/24","Avery","C12C",32,64,"Control","Achnatherum.sp.",3
+2024,"7/11/24","Avery","C12C",32,64,"Control","Agoseris.sp.",1
+2024,"7/11/24","Avery","C12C",32,64,"Control","Taraxacum.officinale",4
+2024,"7/11/24","Avery","C12C",32,64,"Control","Erigeron.subtrinervis",1
+2024,"7/11/24","Avery","C12C",32,64,"Control","Lathyrus.lanszwertii",1
+2024,"7/11/24","Avery","C12C",32,64,"Control","Poa.pratensis",6
+2024,"7/11/24","Avery","C12C",32,64,"Control","Potentilla.pulcherrima",3
+2024,"7/11/24","Avery","C12C",32,64,"Control","Valeriana.occidentalis",3
+2024,"7/11/24","Avery","C12C",32,64,"Control","Dactylis.glomerata",2
+2024,"7/11/24","Avery","C12C",32,64,"Control","Bromus.inermis",1
+2024,"7/11/24","Avery","C13",33,65,"Castilleja","Achnatherum.sp.",3
+2024,"7/11/24","Avery","C13",33,65,"Castilleja","Agoseris.sp.",3
+2024,"7/11/24","Avery","C13",33,65,"Castilleja","Castilleja.septentrionalis",2
+2024,"7/11/24","Avery","C13",33,65,"Castilleja","Taraxacum.officinale",9
+2024,"7/11/24","Avery","C13",33,65,"Castilleja","Erigeron.subtrinervis",2
+2024,"7/11/24","Avery","C13",33,65,"Castilleja","Poa.pratensis",5
+2024,"7/11/24","Avery","C13",33,65,"Castilleja","Ipomopsis.aggregata",4
+2024,"7/11/24","Avery","C13",33,65,"Castilleja","Solidago.multiradiata",2
+2024,"7/11/24","Avery","C13",33,65,"Castilleja","Erigeron.coulteri",2
+2024,"7/11/24","Avery","C13",33,65,"Castilleja","Bromus.inermis",4
+2024,"7/11/24","Avery","C13",33,65,"Castilleja","Mertensia.brevistyla",1
+2024,"7/11/24","Avery","C13C",33,66,"Control","Achnatherum.sp.",2
+2024,"7/11/24","Avery","C13C",33,66,"Control","Agoseris.sp.",10
+2024,"7/11/24","Avery","C13C",33,66,"Control","Taraxacum.officinale",6
+2024,"7/11/24","Avery","C13C",33,66,"Control","Elymus.lanceolatus",1
+2024,"7/11/24","Avery","C13C",33,66,"Control","Ipomopsis.aggregata",2
+2024,"7/11/24","Avery","C13C",33,66,"Control","Valeriana.occidentalis",1
+2024,"7/11/24","Avery","C13C",33,66,"Control","Erigeron.coulteri",4
+2024,"7/11/24","Avery","C13C",33,66,"Control","Poa.compressa",2
+2024,"7/11/24","Avery","C14",34,67,"Castilleja","Achnatherum.sp.",4
+2024,"7/11/24","Avery","C14",34,67,"Castilleja","Agoseris.sp.",7
+2024,"7/11/24","Avery","C14",34,67,"Castilleja","Castilleja.septentrionalis",2
+2024,"7/11/24","Avery","C14",34,67,"Castilleja","Taraxacum.officinale",15
+2024,"7/11/24","Avery","C14",34,67,"Castilleja","Erigeron.subtrinervis",4
+2024,"7/11/24","Avery","C14",34,67,"Castilleja","Ipomopsis.aggregata",2
+2024,"7/11/24","Avery","C14",34,67,"Castilleja","Valeriana.occidentalis",1
+2024,"7/11/24","Avery","C14",34,67,"Castilleja","Dactylis.glomerata",1
+2024,"7/11/24","Avery","C14",34,67,"Castilleja","Poa.compressa",15
+2024,"7/11/24","Avery","C14C",34,68,"Control","Agoseris.sp.",5
+2024,"7/11/24","Avery","C14C",34,68,"Control","Taraxacum.officinale",10
+2024,"7/11/24","Avery","C14C",34,68,"Control","Erigeron.subtrinervis",1
+2024,"7/11/24","Avery","C14C",34,68,"Control","Potentilla.pulcherrima",2
+2024,"7/11/24","Avery","C14C",34,68,"Control","Ipomopsis.aggregata",6
+2024,"7/11/24","Avery","C14C",34,68,"Control","Viola.adunca",1
+2024,"7/11/24","Avery","C14C",34,68,"Control","Bromus.inermis",2
+2024,"7/11/24","Avery","C14C",34,68,"Control","Mertensia.brevistyla",1
+2024,"7/11/24","Avery","C14C",34,68,"Control","Poa.compressa",10
+2024,"7/11/24","Avery","C15",35,69,"Castilleja","Agoseris.sp.",2
+2024,"7/11/24","Avery","C15",35,69,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/11/24","Avery","C15",35,69,"Castilleja","Taraxacum.officinale",6
+2024,"7/11/24","Avery","C15",35,69,"Castilleja","Erigeron.subtrinervis",2
+2024,"7/11/24","Avery","C15",35,69,"Castilleja","Potentilla.pulcherrima",3
+2024,"7/11/24","Avery","C15",35,69,"Castilleja","Achillea.millefolium",1
+2024,"7/11/24","Avery","C15",35,69,"Castilleja","Ipomopsis.aggregata",6
+2024,"7/11/24","Avery","C15",35,69,"Castilleja","Viola.adunca",1
+2024,"7/11/24","Avery","C15",35,69,"Castilleja","Carex.sp...obtusata..geyeri.",1
+2024,"7/11/24","Avery","C15",35,69,"Castilleja","Poa.compressa",6
+2024,"7/11/24","Avery","C15C",35,70,"Control","Achnatherum.sp.",2
+2024,"7/11/24","Avery","C15C",35,70,"Control","Agoseris.sp.",2
+2024,"7/11/24","Avery","C15C",35,70,"Control","Taraxacum.officinale",6
+2024,"7/11/24","Avery","C15C",35,70,"Control","Erigeron.subtrinervis",4
+2024,"7/11/24","Avery","C15C",35,70,"Control","Potentilla.pulcherrima",7
+2024,"7/11/24","Avery","C15C",35,70,"Control","Achillea.millefolium",2
+2024,"7/11/24","Avery","C15C",35,70,"Control","Ipomopsis.aggregata",2
+2024,"7/11/24","Avery","C15C",35,70,"Control","Dactylis.glomerata",1
+2024,"7/11/24","Avery","C15C",35,70,"Control","Erigeron.coulteri",1
+2024,"7/11/24","Avery","C15C",35,70,"Control","Viola.adunca",2
+2024,"7/11/24","Avery","C15C",35,70,"Control","Poa.compressa",15
+2024,"7/11/24","Avery","C16",36,71,"Castilleja","Achnatherum.sp.",3
+2024,"7/11/24","Avery","C16",36,71,"Castilleja","Agoseris.sp.",3
+2024,"7/11/24","Avery","C16",36,71,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/11/24","Avery","C16",36,71,"Castilleja","Taraxacum.officinale",7
+2024,"7/11/24","Avery","C16",36,71,"Castilleja","Poa.pratensis",6
+2024,"7/11/24","Avery","C16",36,71,"Castilleja","Potentilla.pulcherrima",5
+2024,"7/11/24","Avery","C16",36,71,"Castilleja","Achillea.millefolium",7
+2024,"7/11/24","Avery","C16",36,71,"Castilleja","Ipomopsis.aggregata",2
+2024,"7/11/24","Avery","C16",36,71,"Castilleja","Solidago.multiradiata",3
+2024,"7/11/24","Avery","C16",36,71,"Castilleja","Boechera.stricta",2
+2024,"7/11/24","Avery","C16",36,71,"Castilleja","Dactylis.glomerata",2
+2024,"7/11/24","Avery","C16",36,71,"Castilleja","Bromus.inermis",5
+2024,"7/11/24","Avery","C16",36,71,"Castilleja","Poa.compressa",5
+2024,"7/11/24","Avery","C16C",36,72,"Control","Taraxacum.officinale",5
+2024,"7/11/24","Avery","C16C",36,72,"Control","Potentilla.pulcherrima",1
+2024,"7/11/24","Avery","C16C",36,72,"Control","Ipomopsis.aggregata",1
+2024,"7/11/24","Avery","C16C",36,72,"Control","Bromus.inermis",5
+2024,"7/11/24","Avery","C16C",36,72,"Control","Poa.compressa",3
+2024,"7/11/24","Avery","C17",37,73,"Castilleja","Achnatherum.sp.",4
+2024,"7/11/24","Avery","C17",37,73,"Castilleja","Agoseris.sp.",2
+2024,"7/11/24","Avery","C17",37,73,"Castilleja","Castilleja.septentrionalis",2
+2024,"7/11/24","Avery","C17",37,73,"Castilleja","Taraxacum.officinale",30
+2024,"7/11/24","Avery","C17",37,73,"Castilleja","Poa.pratensis",3
+2024,"7/11/24","Avery","C17",37,73,"Castilleja","Potentilla.pulcherrima",4
+2024,"7/11/24","Avery","C17",37,73,"Castilleja","Achillea.millefolium",3
+2024,"7/11/24","Avery","C17",37,73,"Castilleja","Ipomopsis.aggregata",1
+2024,"7/11/24","Avery","C17",37,73,"Castilleja","Poa.compressa",3
+2024,"7/11/24","Avery","C17C",37,74,"Control","Agoseris.sp.",1
+2024,"7/11/24","Avery","C17C",37,74,"Control","Taraxacum.officinale",30
+2024,"7/11/24","Avery","C17C",37,74,"Control","Elymus.lanceolatus",1
+2024,"7/11/24","Avery","C17C",37,74,"Control","Potentilla.pulcherrima",2
+2024,"7/11/24","Avery","C17C",37,74,"Control","Achillea.millefolium",3
+2024,"7/11/24","Avery","C17C",37,74,"Control","Ipomopsis.aggregata",5
+2024,"7/11/24","Avery","C17C",37,74,"Control","Bromus.inermis",4
+2024,"7/11/24","Avery","C17C",37,74,"Control","Poa.compressa",7
+2024,"7/11/24","Avery","C18",38,75,"Castilleja","Agoseris.sp.",7
+2024,"7/11/24","Avery","C18",38,75,"Castilleja","Castilleja.septentrionalis",2
+2024,"7/11/24","Avery","C18",38,75,"Castilleja","Taraxacum.officinale",9
+2024,"7/11/24","Avery","C18",38,75,"Castilleja","Elymus.lanceolatus",2
+2024,"7/11/24","Avery","C18",38,75,"Castilleja","Erigeron.subtrinervis",1
+2024,"7/11/24","Avery","C18",38,75,"Castilleja","Potentilla.pulcherrima",4
+2024,"7/11/24","Avery","C18",38,75,"Castilleja","Ipomopsis.aggregata",4
+2024,"7/11/24","Avery","C18",38,75,"Castilleja","Valeriana.occidentalis",2
+2024,"7/11/24","Avery","C18",38,75,"Castilleja","Dactylis.glomerata",1
+2024,"7/11/24","Avery","C18",38,75,"Castilleja","Bromus.inermis",3
+2024,"7/11/24","Avery","C18C",38,76,"Control","Agoseris.sp.",1
+2024,"7/11/24","Avery","C18C",38,76,"Control","Taraxacum.officinale",12
+2024,"7/11/24","Avery","C18C",38,76,"Control","Elymus.lanceolatus",5
+2024,"7/11/24","Avery","C18C",38,76,"Control","Poa.pratensis",3
+2024,"7/11/24","Avery","C18C",38,76,"Control","Potentilla.pulcherrima",3
+2024,"7/11/24","Avery","C18C",38,76,"Control","Ipomopsis.aggregata",5
+2024,"7/11/24","Avery","C18C",38,76,"Control","Valeriana.occidentalis",1
+2024,"7/11/24","Avery","C18C",38,76,"Control","Dactylis.glomerata",1
+2024,"7/11/24","Avery","C18C",38,76,"Control","Bromus.inermis",5
+2024,"7/11/24","Avery","C19",39,77,"Castilleja","Achnatherum.sp.",1
+2024,"7/11/24","Avery","C19",39,77,"Castilleja","Agoseris.sp.",3
+2024,"7/11/24","Avery","C19",39,77,"Castilleja","Castilleja.septentrionalis",2
+2024,"7/11/24","Avery","C19",39,77,"Castilleja","Taraxacum.officinale",20
+2024,"7/11/24","Avery","C19",39,77,"Castilleja","Elymus.lanceolatus",1
+2024,"7/11/24","Avery","C19",39,77,"Castilleja","Erigeron.subtrinervis",2
+2024,"7/11/24","Avery","C19",39,77,"Castilleja","Potentilla.pulcherrima",3
+2024,"7/11/24","Avery","C19",39,77,"Castilleja","Achillea.millefolium",1
+2024,"7/11/24","Avery","C19",39,77,"Castilleja","Valeriana.occidentalis",5
+2024,"7/11/24","Avery","C19",39,77,"Castilleja","Bromus.inermis",2
+2024,"7/11/24","Avery","C19",39,77,"Castilleja","Poa.compressa",10
+2024,"7/11/24","Avery","C19C",39,78,"Control","Agoseris.sp.",5
+2024,"7/11/24","Avery","C19C",39,78,"Control","Taraxacum.officinale",25
+2024,"7/11/24","Avery","C19C",39,78,"Control","Elymus.lanceolatus",3
+2024,"7/11/24","Avery","C19C",39,78,"Control","Erigeron.subtrinervis",2
+2024,"7/11/24","Avery","C19C",39,78,"Control","Potentilla.pulcherrima",4
+2024,"7/11/24","Avery","C19C",39,78,"Control","Achillea.millefolium",2
+2024,"7/11/24","Avery","C19C",39,78,"Control","Valeriana.occidentalis",1
+2024,"7/11/24","Avery","C19C",39,78,"Control","Boechera.stricta",1
+2024,"7/11/24","Avery","C19C",39,78,"Control","Mertensia.brevistyla",1
+2024,"7/11/24","Avery","C19C",39,78,"Control","Poa.compressa",4
+2024,"7/11/24","Avery","C20",40,79,"Castilleja","Agoseris.sp.",3
+2024,"7/11/24","Avery","C20",40,79,"Castilleja","Castilleja.septentrionalis",2
+2024,"7/11/24","Avery","C20",40,79,"Castilleja","Taraxacum.officinale",30
+2024,"7/11/24","Avery","C20",40,79,"Castilleja","Potentilla.pulcherrima",4
+2024,"7/11/24","Avery","C20",40,79,"Castilleja","Ipomopsis.aggregata",2
+2024,"7/11/24","Avery","C20",40,79,"Castilleja","Valeriana.occidentalis",1
+2024,"7/11/24","Avery","C20",40,79,"Castilleja","Boechera.stricta",1
+2024,"7/11/24","Avery","C20",40,79,"Castilleja","Poa.compressa",10
+2024,"7/11/24","Avery","C20C",40,80,"Control","Agoseris.sp.",7
+2024,"7/11/24","Avery","C20C",40,80,"Control","Taraxacum.officinale",18
+2024,"7/11/24","Avery","C20C",40,80,"Control","Potentilla.pulcherrima",1
+2024,"7/11/24","Avery","C20C",40,80,"Control","Achillea.millefolium",5
+2024,"7/11/24","Avery","C20C",40,80,"Control","Ipomopsis.aggregata",4
+2024,"7/11/24","Avery","C20C",40,80,"Control","Valeriana.occidentalis",2
+2024,"7/11/24","Avery","C20C",40,80,"Control","Poa.compressa",10
+2024,"7/18","Copper Creek","E1",41,81,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/18","Copper Creek","E1",41,81,"Castilleja","Taraxacum.officinale",4
+2024,"7/18","Copper Creek","E1",41,81,"Castilleja","Poa.pratensis",15
+2024,"7/18","Copper Creek","E1",41,81,"Castilleja","Ipomopsis.aggregata",8
+2024,"7/18","Copper Creek","E1",41,81,"Castilleja","Solidago.multiradiata",3
+2024,"7/18","Copper Creek","E1",41,81,"Castilleja","Eremogone.congesta",1
+2024,"7/18","Copper Creek","E1",41,81,"Castilleja","Viola.adunca",1
+2024,"7/18","Copper Creek","E1",41,81,"Castilleja","Campanula.petiolata",4
+2024,"7/18","Copper Creek","E1",41,81,"Castilleja","Chenopodium.atrovirens",1
+2024,"7/18","Copper Creek","E1",41,81,"Castilleja","Delphinium.nuttalianum",1
+2024,"7/18","Copper Creek","E1",41,81,"Castilleja","Frasera.speciosa",1
+2024,"7/18","Copper Creek","E1",41,81,"Castilleja","Galium.boreale",1
+2024,"7/18","Copper Creek","E1",41,81,"Castilleja","Helianthella.quinquenerva",1
+2024,"7/18","Copper Creek","E1",41,81,"Castilleja","Maianthemum.stellatum",2
+2024,"7/18","Copper Creek","E1",41,81,"Castilleja","Mertensia.brevistyla",1
+2024,"7/18","Copper Creek","E1",41,81,"Castilleja","Vicia.americana",1
+2024,"7/18","Copper Creek","E1C",41,82,"Control","Taraxacum.officinale",6
+2024,"7/18","Copper Creek","E1C",41,82,"Control","Poa.pratensis",10
+2024,"7/18","Copper Creek","E1C",41,82,"Control","Potentilla.pulcherrima",1
+2024,"7/18","Copper Creek","E1C",41,82,"Control","Thalictrum.fendleri",3
+2024,"7/18","Copper Creek","E1C",41,82,"Control","Ipomopsis.aggregata",1
+2024,"7/18","Copper Creek","E1C",41,82,"Control","Solidago.multiradiata",2
+2024,"7/18","Copper Creek","E1C",41,82,"Control","Boechera.stricta",1
+2024,"7/18","Copper Creek","E1C",41,82,"Control","Fragaria.virginiana",2
+2024,"7/18","Copper Creek","E1C",41,82,"Control","Poa.alpina",1
+2024,"7/18","Copper Creek","E1C",41,82,"Control","Eremogone.congesta",3
+2024,"7/18","Copper Creek","E1C",41,82,"Control","Viola.adunca",3
+2024,"7/18","Copper Creek","E1C",41,82,"Control","Androsace.septentrionales",1
+2024,"7/18","Copper Creek","E1C",41,82,"Control","Campanula.petiolata",1
+2024,"7/18","Copper Creek","E1C",41,82,"Control","Chenopodium.atrovirens",7
+2024,"7/18","Copper Creek","E1C",41,82,"Control","Helianthella.quinquenerva",4
+2024,"7/18","Copper Creek","E1C",41,82,"Control","Maianthemum.stellatum",7
+2024,"7/18","Copper Creek","E1C",41,82,"Control","Polygonum.sp.",4
+2024,"7/18","Copper Creek","E2",42,83,"Castilleja","Castilleja.septentrionalis",2
+2024,"7/18","Copper Creek","E2",42,83,"Castilleja","Taraxacum.officinale",1
+2024,"7/18","Copper Creek","E2",42,83,"Castilleja","Lathyrus.lanszwertii",1
+2024,"7/18","Copper Creek","E2",42,83,"Castilleja","Poa.pratensis",11
+2024,"7/18","Copper Creek","E2",42,83,"Castilleja","Thalictrum.fendleri",4
+2024,"7/18","Copper Creek","E2",42,83,"Castilleja","Solidago.multiradiata",2
+2024,"7/18","Copper Creek","E2",42,83,"Castilleja","Boechera.stricta",2
+2024,"7/18","Copper Creek","E2",42,83,"Castilleja","Anemone.multifida",10
+2024,"7/18","Copper Creek","E2",42,83,"Castilleja","Eremogone.congesta",5
+2024,"7/18","Copper Creek","E2",42,83,"Castilleja","Viola.adunca",2
+2024,"7/18","Copper Creek","E2",42,83,"Castilleja","Campanula.petiolata",4
+2024,"7/18","Copper Creek","E2",42,83,"Castilleja","Galium.boreale",1
+2024,"7/18","Copper Creek","E2",42,83,"Castilleja","Helianthella.quinquenerva",3
+2024,"7/18","Copper Creek","E2",42,83,"Castilleja","Maianthemum.stellatum",1
+2024,"7/18","Copper Creek","E2",42,83,"Castilleja","Mertensia.brevistyla",4
+2024,"7/18","Copper Creek","E2C",42,84,"Control","Taraxacum.officinale",4
+2024,"7/18","Copper Creek","E2C",42,84,"Control","Poa.pratensis",6
+2024,"7/18","Copper Creek","E2C",42,84,"Control","Potentilla.pulcherrima",3
+2024,"7/18","Copper Creek","E2C",42,84,"Control","Thalictrum.fendleri",2
+2024,"7/18","Copper Creek","E2C",42,84,"Control","Boechera.stricta",7
+2024,"7/18","Copper Creek","E2C",42,84,"Control","Anemone.multifida",4
+2024,"7/18","Copper Creek","E2C",42,84,"Control","Eremogone.congesta",8
+2024,"7/18","Copper Creek","E2C",42,84,"Control","Viola.adunca",3
+2024,"7/18","Copper Creek","E2C",42,84,"Control","Campanula.petiolata",2
+2024,"7/18","Copper Creek","E2C",42,84,"Control","Carex.sp...obtusata..geyeri.",5
+2024,"7/18","Copper Creek","E2C",42,84,"Control","Cymopterus.lemmonii",1
+2024,"7/18","Copper Creek","E2C",42,84,"Control","Erigeron.speciosus",1
+2024,"7/18","Copper Creek","E2C",42,84,"Control","Helianthella.quinquenerva",3
+2024,"7/18","Copper Creek","E2C",42,84,"Control","Maianthemum.stellatum",2
+2024,"7/18","Copper Creek","E2C",42,84,"Control","Mertensia.brevistyla",3
+2024,"7/18","Copper Creek","E2C",42,84,"Control","Sedum.lanceolatum",1
+2024,"7/18","Copper Creek","E3",43,85,"Castilleja","Agoseris.sp.",1
+2024,"7/18","Copper Creek","E3",43,85,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/18","Copper Creek","E3",43,85,"Castilleja","Taraxacum.officinale",9
+2024,"7/18","Copper Creek","E3",43,85,"Castilleja","Poa.pratensis",8
+2024,"7/18","Copper Creek","E3",43,85,"Castilleja","Thalictrum.fendleri",3
+2024,"7/18","Copper Creek","E3",43,85,"Castilleja","Achillea.millefolium",1
+2024,"7/18","Copper Creek","E3",43,85,"Castilleja","Ipomopsis.aggregata",3
+2024,"7/18","Copper Creek","E3",43,85,"Castilleja","Boechera.stricta",1
+2024,"7/18","Copper Creek","E3",43,85,"Castilleja","Eremogone.congesta",3
+2024,"7/18","Copper Creek","E3",43,85,"Castilleja","Astragalus.alpinus",5
+2024,"7/18","Copper Creek","E3",43,85,"Castilleja","Campanula.petiolata",13
+2024,"7/18","Copper Creek","E3",43,85,"Castilleja","Cymopterus.lemmonii",1
+2024,"7/18","Copper Creek","E3",43,85,"Castilleja","Mertensia.brevistyla",2
+2024,"7/18","Copper Creek","E3",43,85,"Castilleja","Polygonum.sp.",1
+2024,"7/18","Copper Creek","E3C",43,86,"Control","Taraxacum.officinale",9
+2024,"7/18","Copper Creek","E3C",43,86,"Control","Poa.pratensis",10
+2024,"7/18","Copper Creek","E3C",43,86,"Control","Potentilla.pulcherrima",2
+2024,"7/18","Copper Creek","E3C",43,86,"Control","Ipomopsis.aggregata",1
+2024,"7/18","Copper Creek","E3C",43,86,"Control","Anemone.multifida",2
+2024,"7/18","Copper Creek","E3C",43,86,"Control","Eremogone.congesta",3
+2024,"7/18","Copper Creek","E3C",43,86,"Control","Astragalus.alpinus",4
+2024,"7/18","Copper Creek","E3C",43,86,"Control","Campanula.petiolata",4
+2024,"7/18","Copper Creek","E3C",43,86,"Control","Chenopodium.atrovirens",2
+2024,"7/18","Copper Creek","E3C",43,86,"Control","Cymopterus.lemmonii",1
+2024,"7/18","Copper Creek","E3C",43,86,"Control","Mertensia.brevistyla",2
+2024,"7/18","Copper Creek","E4",44,87,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/18","Copper Creek","E4",44,87,"Castilleja","Taraxacum.officinale",4
+2024,"7/18","Copper Creek","E4",44,87,"Castilleja","Poa.pratensis",10
+2024,"7/18","Copper Creek","E4",44,87,"Castilleja","Boechera.stricta",2
+2024,"7/18","Copper Creek","E4",44,87,"Castilleja","Anemone.multifida",2
+2024,"7/18","Copper Creek","E4",44,87,"Castilleja","Poa.alpina",1
+2024,"7/18","Copper Creek","E4",44,87,"Castilleja","Eremogone.congesta",5
+2024,"7/18","Copper Creek","E4",44,87,"Castilleja","Astragalus.alpinus",9
+2024,"7/18","Copper Creek","E4",44,87,"Castilleja","Campanula.petiolata",15
+2024,"7/18","Copper Creek","E4",44,87,"Castilleja","Erigeron.speciosus",1
+2024,"7/18","Copper Creek","E4",44,87,"Castilleja","Frasera.speciosa",1
+2024,"7/18","Copper Creek","E4",44,87,"Castilleja","Helianthella.quinquenerva",2
+2024,"7/18","Copper Creek","E4",44,87,"Castilleja","Mertensia.brevistyla",2
+2024,"7/18","Copper Creek","E4",44,87,"Castilleja","Polygonum.sp.",2
+2024,"7/18","Copper Creek","E4C",44,88,"Control","Agoseris.sp.",1
+2024,"7/18","Copper Creek","E4C",44,88,"Control","Taraxacum.officinale",2
+2024,"7/18","Copper Creek","E4C",44,88,"Control","Poa.pratensis",10
+2024,"7/18","Copper Creek","E4C",44,88,"Control","Potentilla.pulcherrima",1
+2024,"7/18","Copper Creek","E4C",44,88,"Control","Boechera.stricta",3
+2024,"7/18","Copper Creek","E4C",44,88,"Control","Eremogone.congesta",5
+2024,"7/18","Copper Creek","E4C",44,88,"Control","Campanula.petiolata",6
+2024,"7/18","Copper Creek","E4C",44,88,"Control","Erigeron.speciosus",6
+2024,"7/18","Copper Creek","E4C",44,88,"Control","Maianthemum.stellatum",2
+2024,"7/18","Copper Creek","E4C",44,88,"Control","Polygonum.sp.",8
+2024,"7/18","Copper Creek","E5",45,89,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/18","Copper Creek","E5",45,89,"Castilleja","Taraxacum.officinale",4
+2024,"7/18","Copper Creek","E5",45,89,"Castilleja","Lathyrus.lanszwertii",2
+2024,"7/18","Copper Creek","E5",45,89,"Castilleja","Poa.pratensis",6
+2024,"7/18","Copper Creek","E5",45,89,"Castilleja","Potentilla.pulcherrima",3
+2024,"7/18","Copper Creek","E5",45,89,"Castilleja","Thalictrum.fendleri",4
+2024,"7/18","Copper Creek","E5",45,89,"Castilleja","Ipomopsis.aggregata",3
+2024,"7/18","Copper Creek","E5",45,89,"Castilleja","Boechera.stricta",1
+2024,"7/18","Copper Creek","E5",45,89,"Castilleja","Eremogone.congesta",8
+2024,"7/18","Copper Creek","E5",45,89,"Castilleja","Cymopterus.lemmonii",1
+2024,"7/18","Copper Creek","E5",45,89,"Castilleja","Erigeron.speciosus",1
+2024,"7/18","Copper Creek","E5",45,89,"Castilleja","Eriogonum.umbellatum.majus",1
+2024,"7/18","Copper Creek","E5",45,89,"Castilleja","Frasera.speciosa",1
+2024,"7/18","Copper Creek","E5",45,89,"Castilleja","Helianthella.quinquenerva",5
+2024,"7/18","Copper Creek","E5",45,89,"Castilleja","Maianthemum.stellatum",2
+2024,"7/18","Copper Creek","E5",45,89,"Castilleja","Mertensia.brevistyla",2
+2024,"7/18","Copper Creek","E5C",45,90,"Control","Taraxacum.officinale",8
+2024,"7/18","Copper Creek","E5C",45,90,"Control","Poa.pratensis",8
+2024,"7/18","Copper Creek","E5C",45,90,"Control","Thalictrum.fendleri",1
+2024,"7/18","Copper Creek","E5C",45,90,"Control","Ipomopsis.aggregata",3
+2024,"7/18","Copper Creek","E5C",45,90,"Control","Boechera.stricta",1
+2024,"7/18","Copper Creek","E5C",45,90,"Control","Eremogone.congesta",8
+2024,"7/18","Copper Creek","E5C",45,90,"Control","Campanula.petiolata",3
+2024,"7/18","Copper Creek","E5C",45,90,"Control","Cymopterus.lemmonii",3
+2024,"7/18","Copper Creek","E5C",45,90,"Control","Erigeron.speciosus",3
+2024,"7/18","Copper Creek","E5C",45,90,"Control","Frasera.speciosa",6
+2024,"7/18","Copper Creek","E5C",45,90,"Control","Helianthella.quinquenerva",2
+2024,"7/18","Copper Creek","E5C",45,90,"Control","Maianthemum.stellatum",4
+2024,"7/18","Copper Creek","E5C",45,90,"Control","Mertensia.brevistyla",3
+2024,"7/18","Copper Creek","E6",46,91,"Castilleja","Achnatherum.sp.",1
+2024,"7/18","Copper Creek","E6",46,91,"Castilleja","Castilleja.septentrionalis",2
+2024,"7/18","Copper Creek","E6",46,91,"Castilleja","Taraxacum.officinale",5
+2024,"7/18","Copper Creek","E6",46,91,"Castilleja","Poa.pratensis",6
+2024,"7/18","Copper Creek","E6",46,91,"Castilleja","Potentilla.pulcherrima",3
+2024,"7/18","Copper Creek","E6",46,91,"Castilleja","Thalictrum.fendleri",10
+2024,"7/18","Copper Creek","E6",46,91,"Castilleja","Ipomopsis.aggregata",2
+2024,"7/18","Copper Creek","E6",46,91,"Castilleja","Solidago.multiradiata",8
+2024,"7/18","Copper Creek","E6",46,91,"Castilleja","Boechera.stricta",2
+2024,"7/18","Copper Creek","E6",46,91,"Castilleja","Anemone.multifida",2
+2024,"7/18","Copper Creek","E6",46,91,"Castilleja","Eremogone.congesta",8
+2024,"7/18","Copper Creek","E6",46,91,"Castilleja","Viola.adunca",1
+2024,"7/18","Copper Creek","E6",46,91,"Castilleja","Campanula.petiolata",2
+2024,"7/18","Copper Creek","E6",46,91,"Castilleja","Frasera.speciosa",1
+2024,"7/18","Copper Creek","E6",46,91,"Castilleja","Galium.boreale",2
+2024,"7/18","Copper Creek","E6",46,91,"Castilleja","Maianthemum.stellatum",2
+2024,"7/18","Copper Creek","E6",46,91,"Castilleja","Mertensia.brevistyla",2
+2024,"7/18","Copper Creek","E6",46,91,"Castilleja","Polygonum.sp.",10
+2024,"7/18","Copper Creek","E6",46,91,"Castilleja","Sedum.lanceolatum",2
+2024,"7/18","Copper Creek","E6C",46,92,"Control","Elymus.lanceolatus",2
+2024,"7/18","Copper Creek","E6C",46,92,"Control","Lathyrus.lanszwertii",1
+2024,"7/18","Copper Creek","E6C",46,92,"Control","Poa.pratensis",3
+2024,"7/18","Copper Creek","E6C",46,92,"Control","Potentilla.pulcherrima",1
+2024,"7/18","Copper Creek","E6C",46,92,"Control","Thalictrum.fendleri",3
+2024,"7/18","Copper Creek","E6C",46,92,"Control","Ipomopsis.aggregata",4
+2024,"7/18","Copper Creek","E6C",46,92,"Control","Solidago.multiradiata",2
+2024,"7/18","Copper Creek","E6C",46,92,"Control","Boechera.stricta",2
+2024,"7/18","Copper Creek","E6C",46,92,"Control","Eremogone.congesta",7
+2024,"7/18","Copper Creek","E6C",46,92,"Control","Carex.sp...obtusata..geyeri.",3
+2024,"7/18","Copper Creek","E6C",46,92,"Control","Chenopodium.atrovirens",1
+2024,"7/18","Copper Creek","E6C",46,92,"Control","Cymopterus.lemmonii",3
+2024,"7/18","Copper Creek","E6C",46,92,"Control","Eriogonum.umbellatum.majus",1
+2024,"7/18","Copper Creek","E6C",46,92,"Control","Frasera.speciosa",3
+2024,"7/18","Copper Creek","E6C",46,92,"Control","Galium.boreale",4
+2024,"7/18","Copper Creek","E6C",46,92,"Control","Lomatium.triternatum",1
+2024,"7/18","Copper Creek","E6C",46,92,"Control","Maianthemum.stellatum",4
+2024,"7/18","Copper Creek","E6C",46,92,"Control","Polygonum.sp.",5
+2024,"7/18","Copper Creek","E6C",46,92,"Control","Populus.balsamifera",1
+2024,"7/18","Copper Creek","E7",47,93,"Castilleja","Agoseris.sp.",3
+2024,"7/18","Copper Creek","E7",47,93,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/18","Copper Creek","E7",47,93,"Castilleja","Taraxacum.officinale",5
+2024,"7/18","Copper Creek","E7",47,93,"Castilleja","Lathyrus.lanszwertii",3
+2024,"7/18","Copper Creek","E7",47,93,"Castilleja","Poa.pratensis",6
+2024,"7/18","Copper Creek","E7",47,93,"Castilleja","Thalictrum.fendleri",9
+2024,"7/18","Copper Creek","E7",47,93,"Castilleja","Ipomopsis.aggregata",8
+2024,"7/18","Copper Creek","E7",47,93,"Castilleja","Eremogone.congesta",8
+2024,"7/18","Copper Creek","E7",47,93,"Castilleja","Campanula.petiolata",2
+2024,"7/18","Copper Creek","E7",47,93,"Castilleja","Erigeron.speciosus",3
+2024,"7/18","Copper Creek","E7",47,93,"Castilleja","Frasera.speciosa",3
+2024,"7/18","Copper Creek","E7",47,93,"Castilleja","Galium.boreale",4
+2024,"7/18","Copper Creek","E7",47,93,"Castilleja","Mertensia.brevistyla",2
+2024,"7/18","Copper Creek","E7",47,93,"Castilleja","Polygonum.sp.",2
+2024,"7/18","Copper Creek","E7",47,93,"Castilleja","Vicia.americana",2
+2024,"7/18","Copper Creek","E7C",47,94,"Control","Taraxacum.officinale",6
+2024,"7/18","Copper Creek","E7C",47,94,"Control","Poa.pratensis",10
+2024,"7/18","Copper Creek","E7C",47,94,"Control","Potentilla.pulcherrima",1
+2024,"7/18","Copper Creek","E7C",47,94,"Control","Thalictrum.fendleri",9
+2024,"7/18","Copper Creek","E7C",47,94,"Control","Achillea.millefolium",1
+2024,"7/18","Copper Creek","E7C",47,94,"Control","Ipomopsis.aggregata",1
+2024,"7/18","Copper Creek","E7C",47,94,"Control","Campanula.petiolata",13
+2024,"7/18","Copper Creek","E7C",47,94,"Control","Cymopterus.lemmonii",1
+2024,"7/18","Copper Creek","E7C",47,94,"Control","Erigeron.speciosus",6
+2024,"7/18","Copper Creek","E7C",47,94,"Control","Eriogonum.umbellatum.majus",2
+2024,"7/18","Copper Creek","E7C",47,94,"Control","Galium.boreale",2
+2024,"7/18","Copper Creek","E7C",47,94,"Control","Populus.balsamifera",1
+2024,"7/18","Copper Creek","E8",48,95,"Castilleja","Castilleja.septentrionalis",2
+2024,"7/18","Copper Creek","E8",48,95,"Castilleja","Taraxacum.officinale",1
+2024,"7/18","Copper Creek","E8",48,95,"Castilleja","Lathyrus.lanszwertii",3
+2024,"7/18","Copper Creek","E8",48,95,"Castilleja","Poa.pratensis",4
+2024,"7/18","Copper Creek","E8",48,95,"Castilleja","Potentilla.pulcherrima",1
+2024,"7/18","Copper Creek","E8",48,95,"Castilleja","Thalictrum.fendleri",8
+2024,"7/18","Copper Creek","E8",48,95,"Castilleja","Boechera.stricta",1
+2024,"7/18","Copper Creek","E8",48,95,"Castilleja","Fragaria.virginiana",1
+2024,"7/18","Copper Creek","E8",48,95,"Castilleja","Eremogone.congesta",2
+2024,"7/18","Copper Creek","E8",48,95,"Castilleja","Viola.adunca",3
+2024,"7/18","Copper Creek","E8",48,95,"Castilleja","Campanula.petiolata",4
+2024,"7/18","Copper Creek","E8",48,95,"Castilleja","Carex.sp...obtusata..geyeri.",5
+2024,"7/18","Copper Creek","E8",48,95,"Castilleja","Cymopterus.lemmonii",1
+2024,"7/18","Copper Creek","E8",48,95,"Castilleja","Frasera.speciosa",2
+2024,"7/18","Copper Creek","E8",48,95,"Castilleja","Galium.boreale",6
+2024,"7/18","Copper Creek","E8",48,95,"Castilleja","Lomatium.triternatum",1
+2024,"7/18","Copper Creek","E8",48,95,"Castilleja","Maianthemum.stellatum",8
+2024,"7/18","Copper Creek","E8",48,95,"Castilleja","Mertensia.brevistyla",1
+2024,"7/18","Copper Creek","E8",48,95,"Castilleja","Moehringia.sp.",3
+2024,"7/18","Copper Creek","E8",48,95,"Castilleja","Vicia.americana",1
+2024,"7/18","Copper Creek","E8C",48,96,"Control","Taraxacum.officinale",2
+2024,"7/18","Copper Creek","E8C",48,96,"Control","Poa.pratensis",3
+2024,"7/18","Copper Creek","E8C",48,96,"Control","Potentilla.pulcherrima",5
+2024,"7/18","Copper Creek","E8C",48,96,"Control","Thalictrum.fendleri",8
+2024,"7/18","Copper Creek","E8C",48,96,"Control","Solidago.multiradiata",2
+2024,"7/18","Copper Creek","E8C",48,96,"Control","Boechera.stricta",1
+2024,"7/18","Copper Creek","E8C",48,96,"Control","Eremogone.congesta",6
+2024,"7/18","Copper Creek","E8C",48,96,"Control","Viola.adunca",1
+2024,"7/18","Copper Creek","E8C",48,96,"Control","Androsace.septentrionales",3
+2024,"7/18","Copper Creek","E8C",48,96,"Control","Campanula.petiolata",3
+2024,"7/18","Copper Creek","E8C",48,96,"Control","Carex.sp...obtusata..geyeri.",5
+2024,"7/18","Copper Creek","E8C",48,96,"Control","Erigeron.speciosus",1
+2024,"7/18","Copper Creek","E8C",48,96,"Control","Galium.boreale",4
+2024,"7/18","Copper Creek","E8C",48,96,"Control","Maianthemum.stellatum",6
+2024,"7/18","Copper Creek","E8C",48,96,"Control","Mertensia.brevistyla",2
+2024,"7/22","Copper Creek","E9",49,97,"Castilleja","Agoseris.sp.",1
+2024,"7/22","Copper Creek","E9",49,97,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/22","Copper Creek","E9",49,97,"Castilleja","Taraxacum.officinale",16
+2024,"7/22","Copper Creek","E9",49,97,"Castilleja","Lathyrus.lanszwertii",3
+2024,"7/22","Copper Creek","E9",49,97,"Castilleja","Poa.pratensis",10
+2024,"7/22","Copper Creek","E9",49,97,"Castilleja","Solidago.multiradiata",1
+2024,"7/22","Copper Creek","E9",49,97,"Castilleja","Boechera.stricta",1
+2024,"7/22","Copper Creek","E9",49,97,"Castilleja","Fragaria.virginiana",1
+2024,"7/22","Copper Creek","E9",49,97,"Castilleja","Eremogone.congesta",4
+2024,"7/22","Copper Creek","E9",49,97,"Castilleja","Campanula.petiolata",4
+2024,"7/22","Copper Creek","E9",49,97,"Castilleja","Carex.sp...obtusata..geyeri.",2
+2024,"7/22","Copper Creek","E9",49,97,"Castilleja","Erigeron.speciosus",2
+2024,"7/22","Copper Creek","E9",49,97,"Castilleja","Frasera.speciosa",1
+2024,"7/22","Copper Creek","E9",49,97,"Castilleja","Galium.boreale",8
+2024,"7/22","Copper Creek","E9",49,97,"Castilleja","Maianthemum.stellatum",10
+2024,"7/22","Copper Creek","E9C",49,98,"Control","Taraxacum.officinale",7
+2024,"7/22","Copper Creek","E9C",49,98,"Control","Poa.pratensis",9
+2024,"7/22","Copper Creek","E9C",49,98,"Control","Potentilla.pulcherrima",1
+2024,"7/22","Copper Creek","E9C",49,98,"Control","Thalictrum.fendleri",1
+2024,"7/22","Copper Creek","E9C",49,98,"Control","Ipomopsis.aggregata",10
+2024,"7/22","Copper Creek","E9C",49,98,"Control","Solidago.multiradiata",1
+2024,"7/22","Copper Creek","E9C",49,98,"Control","Boechera.stricta",1
+2024,"7/22","Copper Creek","E9C",49,98,"Control","Eremogone.congesta",7
+2024,"7/22","Copper Creek","E9C",49,98,"Control","Campanula.petiolata",3
+2024,"7/22","Copper Creek","E9C",49,98,"Control","Cymopterus.lemmonii",7
+2024,"7/22","Copper Creek","E9C",49,98,"Control","Eriogonum.umbellatum.majus",1
+2024,"7/22","Copper Creek","E9C",49,98,"Control","Galium.boreale",1
+2024,"7/22","Copper Creek","E9C",49,98,"Control","Maianthemum.stellatum",7
+2024,"7/22","Copper Creek","E9C",49,98,"Control","Sedum.lanceolatum",10
+2024,"7/22","Copper Creek","E10",50,99,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/22","Copper Creek","E10",50,99,"Castilleja","Taraxacum.officinale",1
+2024,"7/22","Copper Creek","E10",50,99,"Castilleja","Lathyrus.lanszwertii",16
+2024,"7/22","Copper Creek","E10",50,99,"Castilleja","Poa.pratensis",7
+2024,"7/22","Copper Creek","E10",50,99,"Castilleja","Thalictrum.fendleri",2
+2024,"7/22","Copper Creek","E10",50,99,"Castilleja","Eremogone.congesta",5
+2024,"7/22","Copper Creek","E10",50,99,"Castilleja","Viola.adunca",1
+2024,"7/22","Copper Creek","E10",50,99,"Castilleja","Campanula.petiolata",8
+2024,"7/22","Copper Creek","E10",50,99,"Castilleja","Carex.sp...obtusata..geyeri.",3
+2024,"7/22","Copper Creek","E10",50,99,"Castilleja","Erigeron.speciosus",3
+2024,"7/22","Copper Creek","E10",50,99,"Castilleja","Eriogonum.umbellatum.majus",2
+2024,"7/22","Copper Creek","E10",50,99,"Castilleja","Frasera.speciosa",2
+2024,"7/22","Copper Creek","E10",50,99,"Castilleja","Maianthemum.stellatum",2
+2024,"7/22","Copper Creek","E10",50,99,"Castilleja","Mertensia.brevistyla",3
+2024,"7/22","Copper Creek","E10C",50,100,"Control","Taraxacum.officinale",5
+2024,"7/22","Copper Creek","E10C",50,100,"Control","Lathyrus.lanszwertii",3
+2024,"7/22","Copper Creek","E10C",50,100,"Control","Poa.pratensis",8
+2024,"7/22","Copper Creek","E10C",50,100,"Control","Thalictrum.fendleri",1
+2024,"7/22","Copper Creek","E10C",50,100,"Control","Ipomopsis.aggregata",5
+2024,"7/22","Copper Creek","E10C",50,100,"Control","Solidago.multiradiata",3
+2024,"7/22","Copper Creek","E10C",50,100,"Control","Eremogone.congesta",4
+2024,"7/22","Copper Creek","E10C",50,100,"Control","Campanula.petiolata",10
+2024,"7/22","Copper Creek","E10C",50,100,"Control","Cymopterus.lemmonii",2
+2024,"7/22","Copper Creek","E10C",50,100,"Control","Erigeron.speciosus",2
+2024,"7/22","Copper Creek","E10C",50,100,"Control","Eriogonum.umbellatum.majus",1
+2024,"7/22","Copper Creek","E10C",50,100,"Control","Frasera.speciosa",3
+2024,"7/22","Copper Creek","E10C",50,100,"Control","Maianthemum.stellatum",4
+2024,"7/22","Copper Creek","E10C",50,100,"Control","Populus.balsamifera",1
+2024,"7/22","Copper Creek","E10C",50,100,"Control","Sedum.lanceolatum",7
+2024,"7/22","Copper Creek","E11",51,101,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/22","Copper Creek","E11",51,101,"Castilleja","Taraxacum.officinale",5
+2024,"7/22","Copper Creek","E11",51,101,"Castilleja","Poa.pratensis",8
+2024,"7/22","Copper Creek","E11",51,101,"Castilleja","Ipomopsis.aggregata",12
+2024,"7/22","Copper Creek","E11",51,101,"Castilleja","Solidago.multiradiata",2
+2024,"7/22","Copper Creek","E11",51,101,"Castilleja","Eremogone.congesta",1
+2024,"7/22","Copper Creek","E11",51,101,"Castilleja","Campanula.petiolata",5
+2024,"7/22","Copper Creek","E11",51,101,"Castilleja","Carex.sp...obtusata..geyeri.",3
+2024,"7/22","Copper Creek","E11",51,101,"Castilleja","Erigeron.speciosus",2
+2024,"7/22","Copper Creek","E11",51,101,"Castilleja","Helianthella.quinquenerva",1
+2024,"7/22","Copper Creek","E11",51,101,"Castilleja","Maianthemum.stellatum",4
+2024,"7/22","Copper Creek","E11",51,101,"Castilleja","Mertensia.brevistyla",1
+2024,"7/22","Copper Creek","E11C",51,102,"Control","Taraxacum.officinale",3
+2024,"7/22","Copper Creek","E11C",51,102,"Control","Poa.pratensis",25
+2024,"7/22","Copper Creek","E11C",51,102,"Control","Achillea.millefolium",7
+2024,"7/22","Copper Creek","E11C",51,102,"Control","Ipomopsis.aggregata",9
+2024,"7/22","Copper Creek","E11C",51,102,"Control","Anemone.multifida",1
+2024,"7/22","Copper Creek","E11C",51,102,"Control","Eremogone.congesta",2
+2024,"7/22","Copper Creek","E11C",51,102,"Control","Campanula.petiolata",4
+2024,"7/22","Copper Creek","E11C",51,102,"Control","Polygonum.sp.",1
+2024,"7/22","Copper Creek","E12",52,103,"Castilleja","Achnatherum.sp.",2
+2024,"7/22","Copper Creek","E12",52,103,"Castilleja","Agoseris.sp.",4
+2024,"7/22","Copper Creek","E12",52,103,"Castilleja","Castilleja.septentrionalis",2
+2024,"7/22","Copper Creek","E12",52,103,"Castilleja","Taraxacum.officinale",6
+2024,"7/22","Copper Creek","E12",52,103,"Castilleja","Poa.pratensis",20
+2024,"7/22","Copper Creek","E12",52,103,"Castilleja","Potentilla.pulcherrima",1
+2024,"7/22","Copper Creek","E12",52,103,"Castilleja","Ipomopsis.aggregata",6
+2024,"7/22","Copper Creek","E12",52,103,"Castilleja","Eremogone.congesta",6
+2024,"7/22","Copper Creek","E12",52,103,"Castilleja","Erigeron.speciosus",1
+2024,"7/22","Copper Creek","E12",52,103,"Castilleja","Mertensia.brevistyla",3
+2024,"7/22","Copper Creek","E12",52,103,"Castilleja","Silene.drummondii",1
+2024,"7/22","Copper Creek","E12C",52,104,"Control","Achnatherum.sp.",1
+2024,"7/22","Copper Creek","E12C",52,104,"Control","Agoseris.sp.",1
+2024,"7/22","Copper Creek","E12C",52,104,"Control","Taraxacum.officinale",8
+2024,"7/22","Copper Creek","E12C",52,104,"Control","Poa.pratensis",4
+2024,"7/22","Copper Creek","E12C",52,104,"Control","Boechera.stricta",1
+2024,"7/22","Copper Creek","E12C",52,104,"Control","Poa.alpina",1
+2024,"7/22","Copper Creek","E12C",52,104,"Control","Eremogone.congesta",5
+2024,"7/22","Copper Creek","E12C",52,104,"Control","Carex.sp...obtusata..geyeri.",2
+2024,"7/22","Copper Creek","E12C",52,104,"Control","Erigeron.speciosus",3
+2024,"7/22","Copper Creek","E12C",52,104,"Control","Helianthella.quinquenerva",1
+2024,"7/22","Copper Creek","E12C",52,104,"Control","Mertensia.brevistyla",1
+2024,"7/22","Copper Creek","E12C",52,104,"Control","Polygonum.sp.",3
+2024,"7/22","Copper Creek","E13",53,105,"Castilleja","Agoseris.sp.",2
+2024,"7/22","Copper Creek","E13",53,105,"Castilleja","Castilleja.septentrionalis",4
+2024,"7/22","Copper Creek","E13",53,105,"Castilleja","Taraxacum.officinale",7
+2024,"7/22","Copper Creek","E13",53,105,"Castilleja","Poa.pratensis",15
+2024,"7/22","Copper Creek","E13",53,105,"Castilleja","Potentilla.pulcherrima",1
+2024,"7/22","Copper Creek","E13",53,105,"Castilleja","Anemone.multifida",1
+2024,"7/22","Copper Creek","E13",53,105,"Castilleja","Eremogone.congesta",9
+2024,"7/22","Copper Creek","E13",53,105,"Castilleja","Campanula.petiolata",10
+2024,"7/22","Copper Creek","E13",53,105,"Castilleja","Erigeron.speciosus",1
+2024,"7/22","Copper Creek","E13",53,105,"Castilleja","Frasera.speciosa",2
+2024,"7/22","Copper Creek","E13",53,105,"Castilleja","Helianthella.quinquenerva",1
+2024,"7/22","Copper Creek","E13",53,105,"Castilleja","Maianthemum.stellatum",3
+2024,"7/22","Copper Creek","E13",53,105,"Castilleja","Mertensia.brevistyla",3
+2024,"7/22","Copper Creek","E13",53,105,"Castilleja","Vicia.americana",1
+2024,"7/22","Copper Creek","E13C",53,106,"Control","Achnatherum.sp.",2
+2024,"7/22","Copper Creek","E13C",53,106,"Control","Agoseris.sp.",1
+2024,"7/22","Copper Creek","E13C",53,106,"Control","Taraxacum.officinale",8
+2024,"7/22","Copper Creek","E13C",53,106,"Control","Poa.pratensis",6
+2024,"7/22","Copper Creek","E13C",53,106,"Control","Potentilla.pulcherrima",2
+2024,"7/22","Copper Creek","E13C",53,106,"Control","Boechera.stricta",3
+2024,"7/22","Copper Creek","E13C",53,106,"Control","Anemone.multifida",6
+2024,"7/22","Copper Creek","E13C",53,106,"Control","Poa.alpina",2
+2024,"7/22","Copper Creek","E13C",53,106,"Control","Eremogone.congesta",7
+2024,"7/22","Copper Creek","E13C",53,106,"Control","Campanula.petiolata",2
+2024,"7/22","Copper Creek","E13C",53,106,"Control","Mertensia.brevistyla",1
+2024,"7/22","Copper Creek","E13C",53,106,"Control","Polygonum.sp.",1
+2024,"7/22","Copper Creek","E14",54,107,"Castilleja","Achnatherum.sp.",1
+2024,"7/22","Copper Creek","E14",54,107,"Castilleja","Castilleja.septentrionalis",3
+2024,"7/22","Copper Creek","E14",54,107,"Castilleja","Lathyrus.lanszwertii",1
+2024,"7/22","Copper Creek","E14",54,107,"Castilleja","Poa.pratensis",7
+2024,"7/22","Copper Creek","E14",54,107,"Castilleja","Potentilla.pulcherrima",2
+2024,"7/22","Copper Creek","E14",54,107,"Castilleja","Ipomopsis.aggregata",1
+2024,"7/22","Copper Creek","E14",54,107,"Castilleja","Boechera.stricta",1
+2024,"7/22","Copper Creek","E14",54,107,"Castilleja","Eremogone.congesta",9
+2024,"7/22","Copper Creek","E14",54,107,"Castilleja","Campanula.petiolata",16
+2024,"7/22","Copper Creek","E14",54,107,"Castilleja","Cymopterus.lemmonii",2
+2024,"7/22","Copper Creek","E14",54,107,"Castilleja","Erigeron.speciosus",1
+2024,"7/22","Copper Creek","E14",54,107,"Castilleja","Galium.boreale",3
+2024,"7/22","Copper Creek","E14",54,107,"Castilleja","Maianthemum.stellatum",1
+2024,"7/22","Copper Creek","E14",54,107,"Castilleja","Mertensia.brevistyla",4
+2024,"7/22","Copper Creek","E14C",54,108,"Control","Taraxacum.officinale",6
+2024,"7/22","Copper Creek","E14C",54,108,"Control","Poa.pratensis",8
+2024,"7/22","Copper Creek","E14C",54,108,"Control","Eremogone.congesta",7
+2024,"7/22","Copper Creek","E14C",54,108,"Control","Campanula.petiolata",3
+2024,"7/22","Copper Creek","E14C",54,108,"Control","Carex.sp...obtusata..geyeri.",2
+2024,"7/22","Copper Creek","E14C",54,108,"Control","Cymopterus.lemmonii",2
+2024,"7/22","Copper Creek","E14C",54,108,"Control","Erigeron.speciosus",1
+2024,"7/22","Copper Creek","E14C",54,108,"Control","Mertensia.brevistyla",3
+2024,"7/22","Copper Creek","E14C",54,108,"Control","Polygonum.sp.",11
+2024,"7/22","Copper Creek","E15",55,109,"Castilleja","Castilleja.septentrionalis",2
+2024,"7/22","Copper Creek","E15",55,109,"Castilleja","Taraxacum.officinale",2
+2024,"7/22","Copper Creek","E15",55,109,"Castilleja","Poa.pratensis",4
+2024,"7/22","Copper Creek","E15",55,109,"Castilleja","Potentilla.pulcherrima",1
+2024,"7/22","Copper Creek","E15",55,109,"Castilleja","Thalictrum.fendleri",1
+2024,"7/22","Copper Creek","E15",55,109,"Castilleja","Eremogone.congesta",7
+2024,"7/22","Copper Creek","E15",55,109,"Castilleja","Campanula.petiolata",1
+2024,"7/22","Copper Creek","E15",55,109,"Castilleja","Carex.sp...obtusata..geyeri.",4
+2024,"7/22","Copper Creek","E15",55,109,"Castilleja","Galium.boreale",5
+2024,"7/22","Copper Creek","E15",55,109,"Castilleja","Mertensia.brevistyla",6
+2024,"7/22","Copper Creek","E15C",55,110,"Control","Taraxacum.officinale",9
+2024,"7/22","Copper Creek","E15C",55,110,"Control","Poa.pratensis",6
+2024,"7/22","Copper Creek","E15C",55,110,"Control","Ipomopsis.aggregata",5
+2024,"7/22","Copper Creek","E15C",55,110,"Control","Boechera.stricta",5
+2024,"7/22","Copper Creek","E15C",55,110,"Control","Eremogone.congesta",4
+2024,"7/22","Copper Creek","E15C",55,110,"Control","Campanula.petiolata",1
+2024,"7/22","Copper Creek","E15C",55,110,"Control","Carex.sp...obtusata..geyeri.",1
+2024,"7/22","Copper Creek","E15C",55,110,"Control","Galium.boreale",10
+2024,"7/22","Copper Creek","E15C",55,110,"Control","Helianthella.quinquenerva",1
+2024,"7/22","Copper Creek","E15C",55,110,"Control","Maianthemum.stellatum",3
+2024,"7/22","Copper Creek","E16",56,111,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/22","Copper Creek","E16",56,111,"Castilleja","Poa.pratensis",9
+2024,"7/22","Copper Creek","E16",56,111,"Castilleja","Thalictrum.fendleri",6
+2024,"7/22","Copper Creek","E16",56,111,"Castilleja","Ipomopsis.aggregata",4
+2024,"7/22","Copper Creek","E16",56,111,"Castilleja","Boechera.stricta",3
+2024,"7/22","Copper Creek","E16",56,111,"Castilleja","Eremogone.congesta",4
+2024,"7/22","Copper Creek","E16",56,111,"Castilleja","Viola.adunca",1
+2024,"7/22","Copper Creek","E16",56,111,"Castilleja","Campanula.petiolata",5
+2024,"7/22","Copper Creek","E16",56,111,"Castilleja","Cymopterus.lemmonii",1
+2024,"7/22","Copper Creek","E16",56,111,"Castilleja","Galium.boreale",7
+2024,"7/22","Copper Creek","E16",56,111,"Castilleja","Helianthella.quinquenerva",3
+2024,"7/22","Copper Creek","E16",56,111,"Castilleja","Maianthemum.stellatum",7
+2024,"7/22","Copper Creek","E16",56,111,"Castilleja","Mertensia.brevistyla",3
+2024,"7/22","Copper Creek","E16",56,111,"Castilleja","Polygonum.sp.",8
+2024,"7/22","Copper Creek","E16C",56,112,"Control","Taraxacum.officinale",2
+2024,"7/22","Copper Creek","E16C",56,112,"Control","Poa.pratensis",8
+2024,"7/22","Copper Creek","E16C",56,112,"Control","Potentilla.pulcherrima",1
+2024,"7/22","Copper Creek","E16C",56,112,"Control","Thalictrum.fendleri",1
+2024,"7/22","Copper Creek","E16C",56,112,"Control","Boechera.stricta",4
+2024,"7/22","Copper Creek","E16C",56,112,"Control","Eremogone.congesta",2
+2024,"7/22","Copper Creek","E16C",56,112,"Control","Campanula.petiolata",10
+2024,"7/22","Copper Creek","E16C",56,112,"Control","Cymopterus.lemmonii",3
+2024,"7/22","Copper Creek","E16C",56,112,"Control","Galium.boreale",3
+2024,"7/22","Copper Creek","E16C",56,112,"Control","Helianthella.quinquenerva",5
+2024,"7/22","Copper Creek","E16C",56,112,"Control","Maianthemum.stellatum",7
+2024,"7/22","Copper Creek","E16C",56,112,"Control","Mertensia.brevistyla",4
+2024,"7/22","Copper Creek","E16C",56,112,"Control","Polygonum.sp.",15
+2024,"7/23","Copper Creek","E17",57,113,"Castilleja","Castilleja.septentrionalis",3
+2024,"7/23","Copper Creek","E17",57,113,"Castilleja","Taraxacum.officinale",7
+2024,"7/23","Copper Creek","E17",57,113,"Castilleja","Lathyrus.lanszwertii",2
+2024,"7/23","Copper Creek","E17",57,113,"Castilleja","Poa.pratensis",15
+2024,"7/23","Copper Creek","E17",57,113,"Castilleja","Thalictrum.fendleri",8
+2024,"7/23","Copper Creek","E17",57,113,"Castilleja","Boechera.stricta",4
+2024,"7/23","Copper Creek","E17",57,113,"Castilleja","Eremogone.congesta",6
+2024,"7/23","Copper Creek","E17",57,113,"Castilleja","Campanula.petiolata",2
+2024,"7/23","Copper Creek","E17",57,113,"Castilleja","Erigeron.speciosus",1
+2024,"7/23","Copper Creek","E17",57,113,"Castilleja","Galium.boreale",5
+2024,"7/23","Copper Creek","E17",57,113,"Castilleja","Maianthemum.stellatum",7
+2024,"7/23","Copper Creek","E17",57,113,"Castilleja","Mertensia.brevistyla",3
+2024,"7/23","Copper Creek","E17C",57,114,"Control","Agoseris.sp.",3
+2024,"7/23","Copper Creek","E17C",57,114,"Control","Taraxacum.officinale",5
+2024,"7/23","Copper Creek","E17C",57,114,"Control","Poa.pratensis",9
+2024,"7/23","Copper Creek","E17C",57,114,"Control","Thalictrum.fendleri",4
+2024,"7/23","Copper Creek","E17C",57,114,"Control","Ipomopsis.aggregata",2
+2024,"7/23","Copper Creek","E17C",57,114,"Control","Boechera.stricta",2
+2024,"7/23","Copper Creek","E17C",57,114,"Control","Anemone.multifida",1
+2024,"7/23","Copper Creek","E17C",57,114,"Control","Poa.alpina",1
+2024,"7/23","Copper Creek","E17C",57,114,"Control","Eremogone.congesta",6
+2024,"7/23","Copper Creek","E17C",57,114,"Control","Campanula.petiolata",5
+2024,"7/23","Copper Creek","E17C",57,114,"Control","Maianthemum.stellatum",6
+2024,"7/23","Copper Creek","E17C",57,114,"Control","Mertensia.brevistyla",1
+2024,"7/23","Copper Creek","E18",58,115,"Castilleja","Achnatherum.sp.",1
+2024,"7/23","Copper Creek","E18",58,115,"Castilleja","Castilleja.septentrionalis",3
+2024,"7/23","Copper Creek","E18",58,115,"Castilleja","Taraxacum.officinale",6
+2024,"7/23","Copper Creek","E18",58,115,"Castilleja","Poa.pratensis",20
+2024,"7/23","Copper Creek","E18",58,115,"Castilleja","Potentilla.pulcherrima",2
+2024,"7/23","Copper Creek","E18",58,115,"Castilleja","Thalictrum.fendleri",5
+2024,"7/23","Copper Creek","E18",58,115,"Castilleja","Boechera.stricta",2
+2024,"7/23","Copper Creek","E18",58,115,"Castilleja","Fragaria.virginiana",1
+2024,"7/23","Copper Creek","E18",58,115,"Castilleja","Eremogone.congesta",2
+2024,"7/23","Copper Creek","E18",58,115,"Castilleja","Erigeron.speciosus",2
+2024,"7/23","Copper Creek","E18",58,115,"Castilleja","Galium.boreale",2
+2024,"7/23","Copper Creek","E18",58,115,"Castilleja","Helianthella.quinquenerva",1
+2024,"7/23","Copper Creek","E18",58,115,"Castilleja","Mertensia.brevistyla",4
+2024,"7/23","Copper Creek","E18C",58,116,"Control","Agoseris.sp.",1
+2024,"7/23","Copper Creek","E18C",58,116,"Control","Taraxacum.officinale",7
+2024,"7/23","Copper Creek","E18C",58,116,"Control","Lathyrus.lanszwertii",1
+2024,"7/23","Copper Creek","E18C",58,116,"Control","Poa.pratensis",20
+2024,"7/23","Copper Creek","E18C",58,116,"Control","Thalictrum.fendleri",2
+2024,"7/23","Copper Creek","E18C",58,116,"Control","Solidago.multiradiata",4
+2024,"7/23","Copper Creek","E18C",58,116,"Control","Boechera.stricta",2
+2024,"7/23","Copper Creek","E18C",58,116,"Control","Anemone.multifida",1
+2024,"7/23","Copper Creek","E18C",58,116,"Control","Eremogone.congesta",3
+2024,"7/23","Copper Creek","E18C",58,116,"Control","Chenopodium.atrovirens",6
+2024,"7/23","Copper Creek","E18C",58,116,"Control","Maianthemum.stellatum",9
+2024,"7/23","Copper Creek","E18C",58,116,"Control","Mertensia.brevistyla",4
+2024,"7/23","Copper Creek","E19",59,117,"Castilleja","Achnatherum.sp.",1
+2024,"7/23","Copper Creek","E19",59,117,"Castilleja","Castilleja.septentrionalis",2
+2024,"7/23","Copper Creek","E19",59,117,"Castilleja","Taraxacum.officinale",3
+2024,"7/23","Copper Creek","E19",59,117,"Castilleja","Erigeron.subtrinervis",1
+2024,"7/23","Copper Creek","E19",59,117,"Castilleja","Poa.pratensis",12
+2024,"7/23","Copper Creek","E19",59,117,"Castilleja","Boechera.stricta",2
+2024,"7/23","Copper Creek","E19",59,117,"Castilleja","Eremogone.congesta",5
+2024,"7/23","Copper Creek","E19",59,117,"Castilleja","Campanula.petiolata",10
+2024,"7/23","Copper Creek","E19",59,117,"Castilleja","Galium.boreale",2
+2024,"7/23","Copper Creek","E19",59,117,"Castilleja","Mertensia.brevistyla",2
+2024,"7/23","Copper Creek","E19",59,117,"Castilleja","Polygonum.sp.",14
+2024,"7/23","Copper Creek","E19C",59,118,"Control","Taraxacum.officinale",2
+2024,"7/23","Copper Creek","E19C",59,118,"Control","Poa.pratensis",10
+2024,"7/23","Copper Creek","E19C",59,118,"Control","Potentilla.pulcherrima",1
+2024,"7/23","Copper Creek","E19C",59,118,"Control","Boechera.stricta",1
+2024,"7/23","Copper Creek","E19C",59,118,"Control","Eremogone.congesta",2
+2024,"7/23","Copper Creek","E19C",59,118,"Control","Viola.adunca",1
+2024,"7/23","Copper Creek","E19C",59,118,"Control","Campanula.petiolata",7
+2024,"7/23","Copper Creek","E19C",59,118,"Control","Erigeron.speciosus",2
+2024,"7/23","Copper Creek","E19C",59,118,"Control","Galium.boreale",1
+2024,"7/23","Copper Creek","E19C",59,118,"Control","Mertensia.brevistyla",1
+2024,"7/23","Copper Creek","E20",60,119,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/23","Copper Creek","E20",60,119,"Castilleja","Taraxacum.officinale",5
+2024,"7/23","Copper Creek","E20",60,119,"Castilleja","Poa.pratensis",5
+2024,"7/23","Copper Creek","E20",60,119,"Castilleja","Potentilla.pulcherrima",2
+2024,"7/23","Copper Creek","E20",60,119,"Castilleja","Thalictrum.fendleri",5
+2024,"7/23","Copper Creek","E20",60,119,"Castilleja","Solidago.multiradiata",1
+2024,"7/23","Copper Creek","E20",60,119,"Castilleja","Boechera.stricta",5
+2024,"7/23","Copper Creek","E20",60,119,"Castilleja","Eremogone.congesta",7
+2024,"7/23","Copper Creek","E20",60,119,"Castilleja","Campanula.petiolata",7
+2024,"7/23","Copper Creek","E20",60,119,"Castilleja","Cymopterus.lemmonii",2
+2024,"7/23","Copper Creek","E20",60,119,"Castilleja","Erigeron.speciosus",1
+2024,"7/23","Copper Creek","E20",60,119,"Castilleja","Galium.boreale",7
+2024,"7/23","Copper Creek","E20",60,119,"Castilleja","Helianthella.quinquenerva",5
+2024,"7/23","Copper Creek","E20",60,119,"Castilleja","Polygonum.sp.",15
+2024,"7/23","Copper Creek","E20C",60,120,"Control","Taraxacum.officinale",1
+2024,"7/23","Copper Creek","E20C",60,120,"Control","Lathyrus.lanszwertii",1
+2024,"7/23","Copper Creek","E20C",60,120,"Control","Poa.pratensis",15
+2024,"7/23","Copper Creek","E20C",60,120,"Control","Potentilla.pulcherrima",1
+2024,"7/23","Copper Creek","E20C",60,120,"Control","Thalictrum.fendleri",2
+2024,"7/23","Copper Creek","E20C",60,120,"Control","Ipomopsis.aggregata",1
+2024,"7/23","Copper Creek","E20C",60,120,"Control","Boechera.stricta",1
+2024,"7/23","Copper Creek","E20C",60,120,"Control","Eremogone.congesta",5
+2024,"7/23","Copper Creek","E20C",60,120,"Control","Campanula.petiolata",1
+2024,"7/23","Copper Creek","E20C",60,120,"Control","Erigeron.speciosus",2
+2024,"7/23","Copper Creek","E20C",60,120,"Control","Mertensia.brevistyla",3
+2024,"7/25/2024","Emerald Lake","F1",81,161,"Castilleja","Agoseris.sp.",3
+2024,"7/25/2024","Emerald Lake","F1",81,161,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/25/2024","Emerald Lake","F1",81,161,"Castilleja","Elymus.lanceolatus",2
+2024,"7/25/2024","Emerald Lake","F1",81,161,"Castilleja","Deschampsia.cespitosa",7
+2024,"7/25/2024","Emerald Lake","F1",81,161,"Castilleja","Potentilla.pulcherrima",6
+2024,"7/25/2024","Emerald Lake","F1",81,161,"Castilleja","Fragaria.virginiana",6
+2024,"7/25/2024","Emerald Lake","F1",81,161,"Castilleja","Senecio.crassulus",2
+2024,"7/25/2024","Emerald Lake","F1",81,161,"Castilleja","Draba.spectabilis",6
+2024,"7/25/2024","Emerald Lake","F1",81,161,"Castilleja","Erigeron.coulteri",4
+2024,"7/25/2024","Emerald Lake","F1",81,161,"Castilleja","Viola.adunca",1
+2024,"7/25/2024","Emerald Lake","F1",81,161,"Castilleja","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",3
+2024,"7/25/2024","Emerald Lake","F1",81,161,"Castilleja","Danthonia.parryi",4
+2024,"7/25/2024","Emerald Lake","F1",81,161,"Castilleja","Oreochrysum.parryi",10
+2024,"7/25/2024","Emerald Lake","F1",81,161,"Castilleja","Poa.fendleriana",2
+2024,"7/25/2024","Emerald Lake","F1C",81,162,"Control","Agoseris.sp.",2
+2024,"7/25/2024","Emerald Lake","F1C",81,162,"Control","Taraxacum.officinale",1
+2024,"7/25/2024","Emerald Lake","F1C",81,162,"Control","Elymus.lanceolatus",3
+2024,"7/25/2024","Emerald Lake","F1C",81,162,"Control","Deschampsia.cespitosa",10
+2024,"7/25/2024","Emerald Lake","F1C",81,162,"Control","Potentilla.pulcherrima",8
+2024,"7/25/2024","Emerald Lake","F1C",81,162,"Control","Thalictrum.fendleri",1
+2024,"7/25/2024","Emerald Lake","F1C",81,162,"Control","Fragaria.virginiana",4
+2024,"7/25/2024","Emerald Lake","F1C",81,162,"Control","Senecio.crassulus",3
+2024,"7/25/2024","Emerald Lake","F1C",81,162,"Control","Draba.spectabilis",3
+2024,"7/25/2024","Emerald Lake","F1C",81,162,"Control","Erigeron.coulteri",2
+2024,"7/25/2024","Emerald Lake","F1C",81,162,"Control","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",1
+2024,"7/25/2024","Emerald Lake","F1C",81,162,"Control","Oreochrysum.parryi",3
+2024,"7/25/2024","Emerald Lake","F1C",81,162,"Control","Poa.fendleriana",1
+2024,"7/25/2024","Emerald Lake","F2",82,163,"Castilleja","Castilleja.septentrionalis",3
+2024,"7/25/2024","Emerald Lake","F2",82,163,"Castilleja","Taraxacum.officinale",3
+2024,"7/25/2024","Emerald Lake","F2",82,163,"Castilleja","Elymus.lanceolatus",1
+2024,"7/25/2024","Emerald Lake","F2",82,163,"Castilleja","Deschampsia.cespitosa",5
+2024,"7/25/2024","Emerald Lake","F2",82,163,"Castilleja","Potentilla.pulcherrima",4
+2024,"7/25/2024","Emerald Lake","F2",82,163,"Castilleja","Thalictrum.fendleri",1
+2024,"7/25/2024","Emerald Lake","F2",82,163,"Castilleja","Achillea.millefolium",7
+2024,"7/25/2024","Emerald Lake","F2",82,163,"Castilleja","Boechera.stricta",1
+2024,"7/25/2024","Emerald Lake","F2",82,163,"Castilleja","Fragaria.virginiana",4
+2024,"7/25/2024","Emerald Lake","F2",82,163,"Castilleja","Phleum.alpinum",1
+2024,"7/25/2024","Emerald Lake","F2",82,163,"Castilleja","Draba.spectabilis",5
+2024,"7/25/2024","Emerald Lake","F2",82,163,"Castilleja","Poa.alpina",2
+2024,"7/25/2024","Emerald Lake","F2",82,163,"Castilleja","Erigeron.coulteri",2
+2024,"7/25/2024","Emerald Lake","F2",82,163,"Castilleja","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",3
+2024,"7/25/2024","Emerald Lake","F2",82,163,"Castilleja","Oreochrysum.parryi",7
+2024,"7/25/2024","Emerald Lake","F2C",82,164,"Control","Agoseris.sp.",2
+2024,"7/25/2024","Emerald Lake","F2C",82,164,"Control","Taraxacum.officinale",5
+2024,"7/25/2024","Emerald Lake","F2C",82,164,"Control","Elymus.lanceolatus",2
+2024,"7/25/2024","Emerald Lake","F2C",82,164,"Control","Potentilla.pulcherrima",4
+2024,"7/25/2024","Emerald Lake","F2C",82,164,"Control","Achillea.millefolium",8
+2024,"7/25/2024","Emerald Lake","F2C",82,164,"Control","Fragaria.virginiana",5
+2024,"7/25/2024","Emerald Lake","F2C",82,164,"Control","Anemone.multifida",2
+2024,"7/25/2024","Emerald Lake","F2C",82,164,"Control","Senecio.crassulus",2
+2024,"7/25/2024","Emerald Lake","F2C",82,164,"Control","Phleum.alpinum",2
+2024,"7/25/2024","Emerald Lake","F2C",82,164,"Control","Draba.spectabilis",8
+2024,"7/25/2024","Emerald Lake","F2C",82,164,"Control","Poa.alpina",1
+2024,"7/25/2024","Emerald Lake","F2C",82,164,"Control","Aquilegia.coerulea",1
+2024,"7/25/2024","Emerald Lake","F2C",82,164,"Control","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",3
+2024,"7/25/2024","Emerald Lake","F3",83,165,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/25/2024","Emerald Lake","F3",83,165,"Castilleja","Taraxacum.officinale",2
+2024,"7/25/2024","Emerald Lake","F3",83,165,"Castilleja","Deschampsia.cespitosa",6
+2024,"7/25/2024","Emerald Lake","F3",83,165,"Castilleja","Potentilla.pulcherrima",4
+2024,"7/25/2024","Emerald Lake","F3",83,165,"Castilleja","Thalictrum.fendleri",2
+2024,"7/25/2024","Emerald Lake","F3",83,165,"Castilleja","Achillea.millefolium",3
+2024,"7/25/2024","Emerald Lake","F3",83,165,"Castilleja","Fragaria.virginiana",3
+2024,"7/25/2024","Emerald Lake","F3",83,165,"Castilleja","Senecio.crassulus",2
+2024,"7/25/2024","Emerald Lake","F3",83,165,"Castilleja","Draba.spectabilis",7
+2024,"7/25/2024","Emerald Lake","F3",83,165,"Castilleja","Erigeron.coulteri",3
+2024,"7/25/2024","Emerald Lake","F3",83,165,"Castilleja","Viola.adunca",1
+2024,"7/25/2024","Emerald Lake","F3",83,165,"Castilleja","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",2
+2024,"7/25/2024","Emerald Lake","F3",83,165,"Castilleja","Danthonia.parryi",1
+2024,"7/25/2024","Emerald Lake","F3",83,165,"Castilleja","Poa.fendleriana",2
+2024,"7/25/2024","Emerald Lake","F3C",83,166,"Control","Agoseris.sp.",1
+2024,"7/25/2024","Emerald Lake","F3C",83,166,"Control","Elymus.lanceolatus",1
+2024,"7/25/2024","Emerald Lake","F3C",83,166,"Control","Deschampsia.cespitosa",5
+2024,"7/25/2024","Emerald Lake","F3C",83,166,"Control","Potentilla.pulcherrima",3
+2024,"7/25/2024","Emerald Lake","F3C",83,166,"Control","Achillea.millefolium",2
+2024,"7/25/2024","Emerald Lake","F3C",83,166,"Control","Fragaria.virginiana",6
+2024,"7/25/2024","Emerald Lake","F3C",83,166,"Control","Anemone.multifida",3
+2024,"7/25/2024","Emerald Lake","F3C",83,166,"Control","Senecio.crassulus",3
+2024,"7/25/2024","Emerald Lake","F3C",83,166,"Control","Draba.spectabilis",3
+2024,"7/25/2024","Emerald Lake","F3C",83,166,"Control","Poa.alpina",2
+2024,"7/25/2024","Emerald Lake","F3C",83,166,"Control","Erigeron.coulteri",3
+2024,"7/25/2024","Emerald Lake","F3C",83,166,"Control","Viola.adunca",1
+2024,"7/25/2024","Emerald Lake","F3C",83,166,"Control","Androsace.septentrionales",2
+2024,"7/25/2024","Emerald Lake","F3C",83,166,"Control","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",2
+2024,"7/25/2024","Emerald Lake","F3C",83,166,"Control","Trisetum.canescens",1
+2024,"7/25/2024","Emerald Lake","F4",84,167,"Castilleja","Agoseris.sp.",5
+2024,"7/25/2024","Emerald Lake","F4",84,167,"Castilleja","Castilleja.septentrionalis",3
+2024,"7/25/2024","Emerald Lake","F4",84,167,"Castilleja","Taraxacum.officinale",2
+2024,"7/25/2024","Emerald Lake","F4",84,167,"Castilleja","Deschampsia.cespitosa",3
+2024,"7/25/2024","Emerald Lake","F4",84,167,"Castilleja","Potentilla.pulcherrima",7
+2024,"7/25/2024","Emerald Lake","F4",84,167,"Castilleja","Boechera.stricta",1
+2024,"7/25/2024","Emerald Lake","F4",84,167,"Castilleja","Fragaria.virginiana",7
+2024,"7/25/2024","Emerald Lake","F4",84,167,"Castilleja","Anemone.multifida",1
+2024,"7/25/2024","Emerald Lake","F4",84,167,"Castilleja","Senecio.crassulus",5
+2024,"7/25/2024","Emerald Lake","F4",84,167,"Castilleja","Phleum.alpinum",1
+2024,"7/25/2024","Emerald Lake","F4",84,167,"Castilleja","Draba.spectabilis",2
+2024,"7/25/2024","Emerald Lake","F4",84,167,"Castilleja","Erigeron.coulteri",5
+2024,"7/25/2024","Emerald Lake","F4",84,167,"Castilleja","Viola.adunca",1
+2024,"7/25/2024","Emerald Lake","F4",84,167,"Castilleja","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",1
+2024,"7/25/2024","Emerald Lake","F4",84,167,"Castilleja","Trisetum.canescens",1
+2024,"7/25/2024","Emerald Lake","F4C",84,168,"Control","Agoseris.sp.",4
+2024,"7/25/2024","Emerald Lake","F4C",84,168,"Control","Taraxacum.officinale",4
+2024,"7/25/2024","Emerald Lake","F4C",84,168,"Control","Elymus.lanceolatus",1
+2024,"7/25/2024","Emerald Lake","F4C",84,168,"Control","Deschampsia.cespitosa",7
+2024,"7/25/2024","Emerald Lake","F4C",84,168,"Control","Potentilla.pulcherrima",6
+2024,"7/25/2024","Emerald Lake","F4C",84,168,"Control","Achillea.millefolium",2
+2024,"7/25/2024","Emerald Lake","F4C",84,168,"Control","Boechera.stricta",1
+2024,"7/25/2024","Emerald Lake","F4C",84,168,"Control","Fragaria.virginiana",5
+2024,"7/25/2024","Emerald Lake","F4C",84,168,"Control","Anemone.multifida",3
+2024,"7/25/2024","Emerald Lake","F4C",84,168,"Control","Senecio.crassulus",5
+2024,"7/25/2024","Emerald Lake","F4C",84,168,"Control","Phleum.alpinum",2
+2024,"7/25/2024","Emerald Lake","F4C",84,168,"Control","Draba.spectabilis",4
+2024,"7/25/2024","Emerald Lake","F4C",84,168,"Control","Poa.alpina",3
+2024,"7/25/2024","Emerald Lake","F4C",84,168,"Control","Erigeron.coulteri",4
+2024,"7/25/2024","Emerald Lake","F4C",84,168,"Control","Viola.adunca",1
+2024,"7/25/2024","Emerald Lake","F4C",84,168,"Control","Lupinus.argenteus",2
+2024,"7/25/2024","Emerald Lake","F4C",84,168,"Control","Trisetum.canescens",1
+2024,"7/25/2024","Emerald Lake","F5",85,169,"Castilleja","Agoseris.sp.",3
+2024,"7/25/2024","Emerald Lake","F5",85,169,"Castilleja","Castilleja.septentrionalis",2
+2024,"7/25/2024","Emerald Lake","F5",85,169,"Castilleja","Taraxacum.officinale",3
+2024,"7/25/2024","Emerald Lake","F5",85,169,"Castilleja","Elymus.lanceolatus",2
+2024,"7/25/2024","Emerald Lake","F5",85,169,"Castilleja","Deschampsia.cespitosa",5
+2024,"7/25/2024","Emerald Lake","F5",85,169,"Castilleja","Potentilla.pulcherrima",4
+2024,"7/25/2024","Emerald Lake","F5",85,169,"Castilleja","Achillea.millefolium",3
+2024,"7/25/2024","Emerald Lake","F5",85,169,"Castilleja","Fragaria.virginiana",6
+2024,"7/25/2024","Emerald Lake","F5",85,169,"Castilleja","Anemone.multifida",4
+2024,"7/25/2024","Emerald Lake","F5",85,169,"Castilleja","Senecio.crassulus",1
+2024,"7/25/2024","Emerald Lake","F5",85,169,"Castilleja","Draba.spectabilis",6
+2024,"7/25/2024","Emerald Lake","F5",85,169,"Castilleja","Erigeron.leiomerus",12
+2024,"7/25/2024","Emerald Lake","F5",85,169,"Castilleja","Poa.alpina",2
+2024,"7/25/2024","Emerald Lake","F5",85,169,"Castilleja","Erigeron.coulteri",2
+2024,"7/25/2024","Emerald Lake","F5",85,169,"Castilleja","Trisetum.canescens",1
+2024,"7/25/2024","Emerald Lake","F5C",85,170,"Control","Agoseris.sp.",1
+2024,"7/25/2024","Emerald Lake","F5C",85,170,"Control","Taraxacum.officinale",2
+2024,"7/25/2024","Emerald Lake","F5C",85,170,"Control","Deschampsia.cespitosa",5
+2024,"7/25/2024","Emerald Lake","F5C",85,170,"Control","Potentilla.pulcherrima",5
+2024,"7/25/2024","Emerald Lake","F5C",85,170,"Control","Achillea.millefolium",4
+2024,"7/25/2024","Emerald Lake","F5C",85,170,"Control","Boechera.stricta",2
+2024,"7/25/2024","Emerald Lake","F5C",85,170,"Control","Fragaria.virginiana",5
+2024,"7/25/2024","Emerald Lake","F5C",85,170,"Control","Anemone.multifida",1
+2024,"7/25/2024","Emerald Lake","F5C",85,170,"Control","Senecio.crassulus",2
+2024,"7/25/2024","Emerald Lake","F5C",85,170,"Control","Draba.spectabilis",1
+2024,"7/25/2024","Emerald Lake","F5C",85,170,"Control","Erigeron.leiomerus",11
+2024,"7/25/2024","Emerald Lake","F5C",85,170,"Control","Poa.alpina",2
+2024,"7/25/2024","Emerald Lake","F5C",85,170,"Control","Lupinus.argenteus",3
+2024,"7/25/2024","Emerald Lake","F6",86,171,"Castilleja","Agoseris.sp.",2
+2024,"7/25/2024","Emerald Lake","F6",86,171,"Castilleja","Castilleja.septentrionalis",2
+2024,"7/25/2024","Emerald Lake","F6",86,171,"Castilleja","Elymus.lanceolatus",1
+2024,"7/25/2024","Emerald Lake","F6",86,171,"Castilleja","Deschampsia.cespitosa",4
+2024,"7/25/2024","Emerald Lake","F6",86,171,"Castilleja","Potentilla.pulcherrima",7
+2024,"7/25/2024","Emerald Lake","F6",86,171,"Castilleja","Achillea.millefolium",5
+2024,"7/25/2024","Emerald Lake","F6",86,171,"Castilleja","Fragaria.virginiana",8
+2024,"7/25/2024","Emerald Lake","F6",86,171,"Castilleja","Anemone.multifida",2
+2024,"7/25/2024","Emerald Lake","F6",86,171,"Castilleja","Senecio.crassulus",2
+2024,"7/25/2024","Emerald Lake","F6",86,171,"Castilleja","Cirsium.griseum",1
+2024,"7/25/2024","Emerald Lake","F6",86,171,"Castilleja","Draba.spectabilis",2
+2024,"7/25/2024","Emerald Lake","F6",86,171,"Castilleja","Erigeron.leiomerus",8
+2024,"7/25/2024","Emerald Lake","F6",86,171,"Castilleja","Poa.alpina",1
+2024,"7/25/2024","Emerald Lake","F6",86,171,"Castilleja","Erigeron.coulteri",4
+2024,"7/25/2024","Emerald Lake","F6",86,171,"Castilleja","Viola.adunca",2
+2024,"7/25/2024","Emerald Lake","F6",86,171,"Castilleja","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",2
+2024,"7/25/2024","Emerald Lake","F6",86,171,"Castilleja","Trisetum.canescens",1
+2024,"7/25/2024","Emerald Lake","F6C",86,172,"Control","Agoseris.sp.",3
+2024,"7/25/2024","Emerald Lake","F6C",86,172,"Control","Taraxacum.officinale",2
+2024,"7/25/2024","Emerald Lake","F6C",86,172,"Control","Elymus.lanceolatus",2
+2024,"7/25/2024","Emerald Lake","F6C",86,172,"Control","Deschampsia.cespitosa",5
+2024,"7/25/2024","Emerald Lake","F6C",86,172,"Control","Potentilla.pulcherrima",3
+2024,"7/25/2024","Emerald Lake","F6C",86,172,"Control","Thalictrum.fendleri",1
+2024,"7/25/2024","Emerald Lake","F6C",86,172,"Control","Achillea.millefolium",10
+2024,"7/25/2024","Emerald Lake","F6C",86,172,"Control","Fragaria.virginiana",7
+2024,"7/25/2024","Emerald Lake","F6C",86,172,"Control","Anemone.multifida",5
+2024,"7/25/2024","Emerald Lake","F6C",86,172,"Control","Senecio.crassulus",1
+2024,"7/25/2024","Emerald Lake","F6C",86,172,"Control","Erigeron.leiomerus",7
+2024,"7/25/2024","Emerald Lake","F6C",86,172,"Control","Poa.alpina",2
+2024,"7/25/2024","Emerald Lake","F6C",86,172,"Control","Viola.adunca",1
+2024,"7/25/2024","Emerald Lake","F6C",86,172,"Control","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",2
+2024,"7/25/2024","Emerald Lake","F6C",86,172,"Control","Poa.compressa",2
+2024,"7/26/2024","Emerald Lake","F7",87,173,"Castilleja","Agoseris.sp.",1
+2024,"7/26/2024","Emerald Lake","F7",87,173,"Castilleja","Castilleja.septentrionalis",2
+2024,"7/26/2024","Emerald Lake","F7",87,173,"Castilleja","Taraxacum.officinale",1
+2024,"7/26/2024","Emerald Lake","F7",87,173,"Castilleja","Elymus.lanceolatus",3
+2024,"7/26/2024","Emerald Lake","F7",87,173,"Castilleja","Deschampsia.cespitosa",6
+2024,"7/26/2024","Emerald Lake","F7",87,173,"Castilleja","Potentilla.pulcherrima",5
+2024,"7/26/2024","Emerald Lake","F7",87,173,"Castilleja","Thalictrum.fendleri",2
+2024,"7/26/2024","Emerald Lake","F7",87,173,"Castilleja","Achillea.millefolium",4
+2024,"7/26/2024","Emerald Lake","F7",87,173,"Castilleja","Boechera.stricta",1
+2024,"7/26/2024","Emerald Lake","F7",87,173,"Castilleja","Fragaria.virginiana",4
+2024,"7/26/2024","Emerald Lake","F7",87,173,"Castilleja","Hymenoxys.hoopesii",2
+2024,"7/26/2024","Emerald Lake","F7",87,173,"Castilleja","Senecio.crassulus",4
+2024,"7/26/2024","Emerald Lake","F7",87,173,"Castilleja","Cirsium.griseum",1
+2024,"7/26/2024","Emerald Lake","F7",87,173,"Castilleja","Phleum.alpinum",4
+2024,"7/26/2024","Emerald Lake","F7",87,173,"Castilleja","Draba.spectabilis",2
+2024,"7/26/2024","Emerald Lake","F7",87,173,"Castilleja","Erigeron.coulteri",3
+2024,"7/26/2024","Emerald Lake","F7",87,173,"Castilleja","Viola.adunca",1
+2024,"7/26/2024","Emerald Lake","F7",87,173,"Castilleja","Noccaea.fendleri",4
+2024,"7/26/2024","Emerald Lake","F7",87,173,"Castilleja","Oreochrysum.parryi",2
+2024,"7/26/2024","Emerald Lake","F7C",87,174,"Control","Elymus.lanceolatus",3
+2024,"7/26/2024","Emerald Lake","F7C",87,174,"Control","Deschampsia.cespitosa",2
+2024,"7/26/2024","Emerald Lake","F7C",87,174,"Control","Potentilla.pulcherrima",3
+2024,"7/26/2024","Emerald Lake","F7C",87,174,"Control","Achillea.millefolium",6
+2024,"7/26/2024","Emerald Lake","F7C",87,174,"Control","Fragaria.virginiana",5
+2024,"7/26/2024","Emerald Lake","F7C",87,174,"Control","Hymenoxys.hoopesii",1
+2024,"7/26/2024","Emerald Lake","F7C",87,174,"Control","Senecio.crassulus",3
+2024,"7/26/2024","Emerald Lake","F7C",87,174,"Control","Cirsium.griseum",5
+2024,"7/26/2024","Emerald Lake","F7C",87,174,"Control","Phleum.alpinum",1
+2024,"7/26/2024","Emerald Lake","F7C",87,174,"Control","Draba.spectabilis",1
+2024,"7/26/2024","Emerald Lake","F7C",87,174,"Control","Erigeron.coulteri",2
+2024,"7/26/2024","Emerald Lake","F7C",87,174,"Control","Viola.adunca",2
+2024,"7/26/2024","Emerald Lake","F7C",87,174,"Control","Androsace.septentrionales",1
+2024,"7/26/2024","Emerald Lake","F7C",87,174,"Control","Heterotheca.sp.",1
+2024,"7/26/2024","Emerald Lake","F7C",87,174,"Control","Noccaea.fendleri",16
+2024,"7/26/2024","Emerald Lake","F7C",87,174,"Control","Oreochrysum.parryi",4
+2024,"7/26/2024","Emerald Lake","F7C",87,174,"Control","Potentilla.glaucophylla",1
+2024,"7/26/2024","Emerald Lake","F8",88,175,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/26/2024","Emerald Lake","F8",88,175,"Castilleja","Taraxacum.officinale",3
+2024,"7/26/2024","Emerald Lake","F8",88,175,"Castilleja","Elymus.lanceolatus",3
+2024,"7/26/2024","Emerald Lake","F8",88,175,"Castilleja","Deschampsia.cespitosa",5
+2024,"7/26/2024","Emerald Lake","F8",88,175,"Castilleja","Potentilla.pulcherrima",6
+2024,"7/26/2024","Emerald Lake","F8",88,175,"Castilleja","Fragaria.virginiana",4
+2024,"7/26/2024","Emerald Lake","F8",88,175,"Castilleja","Senecio.crassulus",3
+2024,"7/26/2024","Emerald Lake","F8",88,175,"Castilleja","Cirsium.griseum",1
+2024,"7/26/2024","Emerald Lake","F8",88,175,"Castilleja","Phleum.alpinum",1
+2024,"7/26/2024","Emerald Lake","F8",88,175,"Castilleja","Draba.spectabilis",3
+2024,"7/26/2024","Emerald Lake","F8",88,175,"Castilleja","Erigeron.coulteri",5
+2024,"7/26/2024","Emerald Lake","F8",88,175,"Castilleja","Viola.adunca",2
+2024,"7/26/2024","Emerald Lake","F8",88,175,"Castilleja","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",2
+2024,"7/26/2024","Emerald Lake","F8",88,175,"Castilleja","Noccaea.fendleri",2
+2024,"7/26/2024","Emerald Lake","F8C",88,176,"Control","Taraxacum.officinale",2
+2024,"7/26/2024","Emerald Lake","F8C",88,176,"Control","Elymus.lanceolatus",1
+2024,"7/26/2024","Emerald Lake","F8C",88,176,"Control","Deschampsia.cespitosa",2
+2024,"7/26/2024","Emerald Lake","F8C",88,176,"Control","Potentilla.pulcherrima",5
+2024,"7/26/2024","Emerald Lake","F8C",88,176,"Control","Achillea.millefolium",2
+2024,"7/26/2024","Emerald Lake","F8C",88,176,"Control","Fragaria.virginiana",5
+2024,"7/26/2024","Emerald Lake","F8C",88,176,"Control","Senecio.crassulus",3
+2024,"7/26/2024","Emerald Lake","F8C",88,176,"Control","Phleum.alpinum",2
+2024,"7/26/2024","Emerald Lake","F8C",88,176,"Control","Draba.spectabilis",3
+2024,"7/26/2024","Emerald Lake","F8C",88,176,"Control","Erigeron.coulteri",9
+2024,"7/26/2024","Emerald Lake","F8C",88,176,"Control","Androsace.septentrionales",2
+2024,"7/26/2024","Emerald Lake","F8C",88,176,"Control","Noccaea.fendleri",2
+2024,"7/26/2024","Emerald Lake","F8C",88,176,"Control","Potentilla.glaucophylla",3
+2024,"7/26/2024","Emerald Lake","F9",89,177,"Castilleja","Castilleja.septentrionalis",2
+2024,"7/26/2024","Emerald Lake","F9",89,177,"Castilleja","Taraxacum.officinale",6
+2024,"7/26/2024","Emerald Lake","F9",89,177,"Castilleja","Elymus.lanceolatus",2
+2024,"7/26/2024","Emerald Lake","F9",89,177,"Castilleja","Deschampsia.cespitosa",6
+2024,"7/26/2024","Emerald Lake","F9",89,177,"Castilleja","Potentilla.pulcherrima",5
+2024,"7/26/2024","Emerald Lake","F9",89,177,"Castilleja","Achillea.millefolium",8
+2024,"7/26/2024","Emerald Lake","F9",89,177,"Castilleja","Boechera.stricta",1
+2024,"7/26/2024","Emerald Lake","F9",89,177,"Castilleja","Fragaria.virginiana",4
+2024,"7/26/2024","Emerald Lake","F9",89,177,"Castilleja","Anemone.multifida",1
+2024,"7/26/2024","Emerald Lake","F9",89,177,"Castilleja","Senecio.crassulus",1
+2024,"7/26/2024","Emerald Lake","F9",89,177,"Castilleja","Phleum.alpinum",2
+2024,"7/26/2024","Emerald Lake","F9",89,177,"Castilleja","Draba.spectabilis",2
+2024,"7/26/2024","Emerald Lake","F9",89,177,"Castilleja","Valeriana.edulis",1
+2024,"7/26/2024","Emerald Lake","F9",89,177,"Castilleja","Noccaea.fendleri",11
+2024,"7/26/2024","Emerald Lake","F9",89,177,"Castilleja","Trisetum.canescens",1
+2024,"7/26/2024","Emerald Lake","F9C",89,178,"Control","Taraxacum.officinale",1
+2024,"7/26/2024","Emerald Lake","F9C",89,178,"Control","Elymus.lanceolatus",2
+2024,"7/26/2024","Emerald Lake","F9C",89,178,"Control","Deschampsia.cespitosa",2
+2024,"7/26/2024","Emerald Lake","F9C",89,178,"Control","Potentilla.pulcherrima",7
+2024,"7/26/2024","Emerald Lake","F9C",89,178,"Control","Achillea.millefolium",5
+2024,"7/26/2024","Emerald Lake","F9C",89,178,"Control","Fragaria.virginiana",6
+2024,"7/26/2024","Emerald Lake","F9C",89,178,"Control","Anemone.multifida",1
+2024,"7/26/2024","Emerald Lake","F9C",89,178,"Control","Senecio.crassulus",3
+2024,"7/26/2024","Emerald Lake","F9C",89,178,"Control","Phleum.alpinum",1
+2024,"7/26/2024","Emerald Lake","F9C",89,178,"Control","Draba.spectabilis",5
+2024,"7/26/2024","Emerald Lake","F9C",89,178,"Control","Erigeron.coulteri",10
+2024,"7/26/2024","Emerald Lake","F9C",89,178,"Control","Valeriana.edulis",1
+2024,"7/26/2024","Emerald Lake","F9C",89,178,"Control","Viola.adunca",1
+2024,"7/26/2024","Emerald Lake","F9C",89,178,"Control","Androsace.septentrionales",3
+2024,"7/26/2024","Emerald Lake","F9C",89,178,"Control","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",4
+2024,"7/26/2024","Emerald Lake","F9C",89,178,"Control","Noccaea.fendleri",11
+2024,"7/26/2024","Emerald Lake","F10",90,179,"Castilleja","Agoseris.sp.",3
+2024,"7/26/2024","Emerald Lake","F10",90,179,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/26/2024","Emerald Lake","F10",90,179,"Castilleja","Taraxacum.officinale",4
+2024,"7/26/2024","Emerald Lake","F10",90,179,"Castilleja","Elymus.lanceolatus",1
+2024,"7/26/2024","Emerald Lake","F10",90,179,"Castilleja","Deschampsia.cespitosa",2
+2024,"7/26/2024","Emerald Lake","F10",90,179,"Castilleja","Potentilla.pulcherrima",5
+2024,"7/26/2024","Emerald Lake","F10",90,179,"Castilleja","Achillea.millefolium",2
+2024,"7/26/2024","Emerald Lake","F10",90,179,"Castilleja","Fragaria.virginiana",6
+2024,"7/26/2024","Emerald Lake","F10",90,179,"Castilleja","Anemone.multifida",2
+2024,"7/26/2024","Emerald Lake","F10",90,179,"Castilleja","Draba.spectabilis",1
+2024,"7/26/2024","Emerald Lake","F10",90,179,"Castilleja","Poa.alpina",3
+2024,"7/26/2024","Emerald Lake","F10",90,179,"Castilleja","Erigeron.coulteri",6
+2024,"7/26/2024","Emerald Lake","F10",90,179,"Castilleja","Viola.adunca",1
+2024,"7/26/2024","Emerald Lake","F10",90,179,"Castilleja","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",4
+2024,"7/26/2024","Emerald Lake","F10",90,179,"Castilleja","Noccaea.fendleri",1
+2024,"7/26/2024","Emerald Lake","F10",90,179,"Castilleja","Potentilla.glaucophylla",3
+2024,"7/26/2024","Emerald Lake","F10C",90,180,"Control","Agoseris.sp.",1
+2024,"7/26/2024","Emerald Lake","F10C",90,180,"Control","Taraxacum.officinale",4
+2024,"7/26/2024","Emerald Lake","F10C",90,180,"Control","Deschampsia.cespitosa",2
+2024,"7/26/2024","Emerald Lake","F10C",90,180,"Control","Potentilla.pulcherrima",4
+2024,"7/26/2024","Emerald Lake","F10C",90,180,"Control","Achillea.millefolium",7
+2024,"7/26/2024","Emerald Lake","F10C",90,180,"Control","Boechera.stricta",1
+2024,"7/26/2024","Emerald Lake","F10C",90,180,"Control","Fragaria.virginiana",5
+2024,"7/26/2024","Emerald Lake","F10C",90,180,"Control","Anemone.multifida",1
+2024,"7/26/2024","Emerald Lake","F10C",90,180,"Control","Senecio.crassulus",4
+2024,"7/26/2024","Emerald Lake","F10C",90,180,"Control","Phleum.alpinum",1
+2024,"7/26/2024","Emerald Lake","F10C",90,180,"Control","Draba.spectabilis",3
+2024,"7/26/2024","Emerald Lake","F10C",90,180,"Control","Poa.alpina",1
+2024,"7/26/2024","Emerald Lake","F10C",90,180,"Control","Erigeron.coulteri",1
+2024,"7/26/2024","Emerald Lake","F10C",90,180,"Control","Androsace.septentrionales",1
+2024,"7/26/2024","Emerald Lake","F10C",90,180,"Control","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",3
+2024,"7/26/2024","Emerald Lake","F10C",90,180,"Control","Potentilla.glaucophylla",1
+2024,"7/26/2024","Emerald Lake","F11",91,181,"Castilleja","Agoseris.sp.",1
+2024,"7/26/2024","Emerald Lake","F11",91,181,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/26/2024","Emerald Lake","F11",91,181,"Castilleja","Taraxacum.officinale",1
+2024,"7/26/2024","Emerald Lake","F11",91,181,"Castilleja","Deschampsia.cespitosa",4
+2024,"7/26/2024","Emerald Lake","F11",91,181,"Castilleja","Potentilla.pulcherrima",8
+2024,"7/26/2024","Emerald Lake","F11",91,181,"Castilleja","Achillea.millefolium",5
+2024,"7/26/2024","Emerald Lake","F11",91,181,"Castilleja","Fragaria.virginiana",3
+2024,"7/26/2024","Emerald Lake","F11",91,181,"Castilleja","Anemone.multifida",4
+2024,"7/26/2024","Emerald Lake","F11",91,181,"Castilleja","Senecio.crassulus",5
+2024,"7/26/2024","Emerald Lake","F11",91,181,"Castilleja","Phleum.alpinum",1
+2024,"7/26/2024","Emerald Lake","F11",91,181,"Castilleja","Draba.spectabilis",2
+2024,"7/26/2024","Emerald Lake","F11",91,181,"Castilleja","Viola.adunca",1
+2024,"7/26/2024","Emerald Lake","F11",91,181,"Castilleja","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",2
+2024,"7/26/2024","Emerald Lake","F11",91,181,"Castilleja","Trisetum.canescens",1
+2024,"7/26/2024","Emerald Lake","F11C",91,182,"Control","Agoseris.sp.",1
+2024,"7/26/2024","Emerald Lake","F11C",91,182,"Control","Elymus.lanceolatus",1
+2024,"7/26/2024","Emerald Lake","F11C",91,182,"Control","Deschampsia.cespitosa",2
+2024,"7/26/2024","Emerald Lake","F11C",91,182,"Control","Potentilla.pulcherrima",5
+2024,"7/26/2024","Emerald Lake","F11C",91,182,"Control","Achillea.millefolium",2
+2024,"7/26/2024","Emerald Lake","F11C",91,182,"Control","Boechera.stricta",1
+2024,"7/26/2024","Emerald Lake","F11C",91,182,"Control","Fragaria.virginiana",6
+2024,"7/26/2024","Emerald Lake","F11C",91,182,"Control","Anemone.multifida",2
+2024,"7/26/2024","Emerald Lake","F11C",91,182,"Control","Senecio.crassulus",7
+2024,"7/26/2024","Emerald Lake","F11C",91,182,"Control","Draba.spectabilis",3
+2024,"7/26/2024","Emerald Lake","F11C",91,182,"Control","Erigeron.coulteri",1
+2024,"7/26/2024","Emerald Lake","F11C",91,182,"Control","Viola.adunca",1
+2024,"7/26/2024","Emerald Lake","F11C",91,182,"Control","Androsace.septentrionales",1
+2024,"7/26/2024","Emerald Lake","F11C",91,182,"Control","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",3
+2024,"7/26/2024","Emerald Lake","F11C",91,182,"Control","Trisetum.canescens",2
+2024,"7/26/2024","Emerald Lake","F12",92,183,"Castilleja","Agoseris.sp.",2
+2024,"7/26/2024","Emerald Lake","F12",92,183,"Castilleja","Castilleja.septentrionalis",2
+2024,"7/26/2024","Emerald Lake","F12",92,183,"Castilleja","Taraxacum.officinale",3
+2024,"7/26/2024","Emerald Lake","F12",92,183,"Castilleja","Elymus.lanceolatus",4
+2024,"7/26/2024","Emerald Lake","F12",92,183,"Castilleja","Deschampsia.cespitosa",6
+2024,"7/26/2024","Emerald Lake","F12",92,183,"Castilleja","Potentilla.pulcherrima",6
+2024,"7/26/2024","Emerald Lake","F12",92,183,"Castilleja","Achillea.millefolium",1
+2024,"7/26/2024","Emerald Lake","F12",92,183,"Castilleja","Fragaria.virginiana",6
+2024,"7/26/2024","Emerald Lake","F12",92,183,"Castilleja","Anemone.multifida",1
+2024,"7/26/2024","Emerald Lake","F12",92,183,"Castilleja","Senecio.crassulus",5
+2024,"7/26/2024","Emerald Lake","F12",92,183,"Castilleja","Cirsium.griseum",1
+2024,"7/26/2024","Emerald Lake","F12",92,183,"Castilleja","Draba.spectabilis",7
+2024,"7/26/2024","Emerald Lake","F12",92,183,"Castilleja","Erigeron.coulteri",1
+2024,"7/26/2024","Emerald Lake","F12",92,183,"Castilleja","Viola.adunca",2
+2024,"7/26/2024","Emerald Lake","F12",92,183,"Castilleja","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",2
+2024,"7/26/2024","Emerald Lake","F12",92,183,"Castilleja","Noccaea.fendleri",3
+2024,"7/26/2024","Emerald Lake","F12C",92,184,"Control","Agoseris.sp.",1
+2024,"7/26/2024","Emerald Lake","F12C",92,184,"Control","Elymus.lanceolatus",2
+2024,"7/26/2024","Emerald Lake","F12C",92,184,"Control","Deschampsia.cespitosa",3
+2024,"7/26/2024","Emerald Lake","F12C",92,184,"Control","Potentilla.pulcherrima",7
+2024,"7/26/2024","Emerald Lake","F12C",92,184,"Control","Achillea.millefolium",5
+2024,"7/26/2024","Emerald Lake","F12C",92,184,"Control","Boechera.stricta",2
+2024,"7/26/2024","Emerald Lake","F12C",92,184,"Control","Fragaria.virginiana",2
+2024,"7/26/2024","Emerald Lake","F12C",92,184,"Control","Anemone.multifida",3
+2024,"7/26/2024","Emerald Lake","F12C",92,184,"Control","Senecio.crassulus",3
+2024,"7/26/2024","Emerald Lake","F12C",92,184,"Control","Erigeron.leiomerus",1
+2024,"7/26/2024","Emerald Lake","F12C",92,184,"Control","Viola.adunca",1
+2024,"7/26/2024","Emerald Lake","F12C",92,184,"Control","Androsace.septentrionales",1
+2024,"7/26/2024","Emerald Lake","F12C",92,184,"Control","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",1
+2024,"7/26/2024","Emerald Lake","F12C",92,184,"Control","Noccaea.fendleri",5
+2024,"7/26/2024","Emerald Lake","F12C",92,184,"Control","Trisetum.canescens",1
+2024,"7/26/2024","Emerald Lake","F13",93,185,"Castilleja","Agoseris.sp.",2
+2024,"7/26/2024","Emerald Lake","F13",93,185,"Castilleja","Castilleja.septentrionalis",2
+2024,"7/26/2024","Emerald Lake","F13",93,185,"Castilleja","Taraxacum.officinale",2
+2024,"7/26/2024","Emerald Lake","F13",93,185,"Castilleja","Elymus.lanceolatus",3
+2024,"7/26/2024","Emerald Lake","F13",93,185,"Castilleja","Deschampsia.cespitosa",5
+2024,"7/26/2024","Emerald Lake","F13",93,185,"Castilleja","Potentilla.pulcherrima",5
+2024,"7/26/2024","Emerald Lake","F13",93,185,"Castilleja","Achillea.millefolium",4
+2024,"7/26/2024","Emerald Lake","F13",93,185,"Castilleja","Fragaria.virginiana",5
+2024,"7/26/2024","Emerald Lake","F13",93,185,"Castilleja","Anemone.multifida",2
+2024,"7/26/2024","Emerald Lake","F13",93,185,"Castilleja","Senecio.crassulus",5
+2024,"7/26/2024","Emerald Lake","F13",93,185,"Castilleja","Cirsium.griseum",1
+2024,"7/26/2024","Emerald Lake","F13",93,185,"Castilleja","Draba.spectabilis",11
+2024,"7/26/2024","Emerald Lake","F13",93,185,"Castilleja","Erigeron.coulteri",6
+2024,"7/26/2024","Emerald Lake","F13",93,185,"Castilleja","Viola.adunca",1
+2024,"7/26/2024","Emerald Lake","F13",93,185,"Castilleja","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",1
+2024,"7/26/2024","Emerald Lake","F13",93,185,"Castilleja","Trisetum.canescens",1
+2024,"7/26/2024","Emerald Lake","F13C",93,186,"Control","Agoseris.sp.",3
+2024,"7/26/2024","Emerald Lake","F13C",93,186,"Control","Taraxacum.officinale",3
+2024,"7/26/2024","Emerald Lake","F13C",93,186,"Control","Elymus.lanceolatus",2
+2024,"7/26/2024","Emerald Lake","F13C",93,186,"Control","Deschampsia.cespitosa",6
+2024,"7/26/2024","Emerald Lake","F13C",93,186,"Control","Potentilla.pulcherrima",8
+2024,"7/26/2024","Emerald Lake","F13C",93,186,"Control","Achillea.millefolium",2
+2024,"7/26/2024","Emerald Lake","F13C",93,186,"Control","Fragaria.virginiana",5
+2024,"7/26/2024","Emerald Lake","F13C",93,186,"Control","Senecio.crassulus",1
+2024,"7/26/2024","Emerald Lake","F13C",93,186,"Control","Cirsium.griseum",1
+2024,"7/26/2024","Emerald Lake","F13C",93,186,"Control","Draba.spectabilis",1
+2024,"7/26/2024","Emerald Lake","F13C",93,186,"Control","Poa.alpina",1
+2024,"7/26/2024","Emerald Lake","F13C",93,186,"Control","Erigeron.coulteri",11
+2024,"7/26/2024","Emerald Lake","F13C",93,186,"Control","Viola.adunca",3
+2024,"7/26/2024","Emerald Lake","F13C",93,186,"Control","Androsace.septentrionales",1
+2024,"7/26/2024","Emerald Lake","F13C",93,186,"Control","Noccaea.fendleri",2
+2024,"7/26/2024","Emerald Lake","F13C",93,186,"Control","Trisetum.canescens",1
+2024,"7/27/2024","Emerald Lake","F14",94,187,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/27/2024","Emerald Lake","F14",94,187,"Castilleja","Deschampsia.cespitosa",4
+2024,"7/27/2024","Emerald Lake","F14",94,187,"Castilleja","Achillea.millefolium",12
+2024,"7/27/2024","Emerald Lake","F14",94,187,"Castilleja","Fragaria.virginiana",5
+2024,"7/27/2024","Emerald Lake","F14",94,187,"Castilleja","Anemone.multifida",1
+2024,"7/27/2024","Emerald Lake","F14",94,187,"Castilleja","Senecio.crassulus",4
+2024,"7/27/2024","Emerald Lake","F14",94,187,"Castilleja","Cirsium.griseum",3
+2024,"7/27/2024","Emerald Lake","F14",94,187,"Castilleja","Draba.spectabilis",1
+2024,"7/27/2024","Emerald Lake","F14",94,187,"Castilleja","Viola.adunca",4
+2024,"7/27/2024","Emerald Lake","F14",94,187,"Castilleja","Carex.pityophila",1
+2024,"7/27/2024","Emerald Lake","F14",94,187,"Castilleja","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",3
+2024,"7/27/2024","Emerald Lake","F14",94,187,"Castilleja","Noccaea.fendleri",1
+2024,"7/27/2024","Emerald Lake","F14",94,187,"Castilleja","Potentilla.glaucophylla",6
+2024,"7/27/2024","Emerald Lake","F14",94,187,"Castilleja","Trisetum.canescens",1
+2024,"7/27/2024","Emerald Lake","F14C",94,188,"Control","Taraxacum.officinale",2
+2024,"7/27/2024","Emerald Lake","F14C",94,188,"Control","Elymus.lanceolatus",2
+2024,"7/27/2024","Emerald Lake","F14C",94,188,"Control","Deschampsia.cespitosa",5
+2024,"7/27/2024","Emerald Lake","F14C",94,188,"Control","Achillea.millefolium",2
+2024,"7/27/2024","Emerald Lake","F14C",94,188,"Control","Fragaria.virginiana",1
+2024,"7/27/2024","Emerald Lake","F14C",94,188,"Control","Senecio.crassulus",2
+2024,"7/27/2024","Emerald Lake","F14C",94,188,"Control","Cirsium.griseum",4
+2024,"7/27/2024","Emerald Lake","F14C",94,188,"Control","Poa.alpina",2
+2024,"7/27/2024","Emerald Lake","F14C",94,188,"Control","Viola.adunca",3
+2024,"7/27/2024","Emerald Lake","F14C",94,188,"Control","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",2
+2024,"7/27/2024","Emerald Lake","F14C",94,188,"Control","Heterotheca.sp.",1
+2024,"7/27/2024","Emerald Lake","F14C",94,188,"Control","Potentilla.glaucophylla",3
+2024,"7/27/2024","Emerald Lake","F15",95,189,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/27/2024","Emerald Lake","F15",95,189,"Castilleja","Deschampsia.cespitosa",6
+2024,"7/27/2024","Emerald Lake","F15",95,189,"Castilleja","Potentilla.pulcherrima",11
+2024,"7/27/2024","Emerald Lake","F15",95,189,"Castilleja","Achillea.millefolium",2
+2024,"7/27/2024","Emerald Lake","F15",95,189,"Castilleja","Boechera.stricta",1
+2024,"7/27/2024","Emerald Lake","F15",95,189,"Castilleja","Fragaria.virginiana",4
+2024,"7/27/2024","Emerald Lake","F15",95,189,"Castilleja","Anemone.multifida",1
+2024,"7/27/2024","Emerald Lake","F15",95,189,"Castilleja","Senecio.crassulus",5
+2024,"7/27/2024","Emerald Lake","F15",95,189,"Castilleja","Cirsium.griseum",4
+2024,"7/27/2024","Emerald Lake","F15",95,189,"Castilleja","Viola.adunca",3
+2024,"7/27/2024","Emerald Lake","F15",95,189,"Castilleja","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",3
+2024,"7/27/2024","Emerald Lake","F15",95,189,"Castilleja","Potentilla.glaucophylla",6
+2024,"7/27/2024","Emerald Lake","F15C",95,190,"Control","Deschampsia.cespitosa",1
+2024,"7/27/2024","Emerald Lake","F15C",95,190,"Control","Achillea.millefolium",7
+2024,"7/27/2024","Emerald Lake","F15C",95,190,"Control","Fragaria.virginiana",2
+2024,"7/27/2024","Emerald Lake","F15C",95,190,"Control","Senecio.crassulus",2
+2024,"7/27/2024","Emerald Lake","F15C",95,190,"Control","Viola.adunca",1
+2024,"7/27/2024","Emerald Lake","F15C",95,190,"Control","Potentilla.glaucophylla",2
+2024,"7/27/2024","Emerald Lake","F16",96,191,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/27/2024","Emerald Lake","F16",96,191,"Castilleja","Deschampsia.cespitosa",2
+2024,"7/27/2024","Emerald Lake","F16",96,191,"Castilleja","Potentilla.pulcherrima",6
+2024,"7/27/2024","Emerald Lake","F16",96,191,"Castilleja","Achillea.millefolium",2
+2024,"7/27/2024","Emerald Lake","F16",96,191,"Castilleja","Fragaria.virginiana",2
+2024,"7/27/2024","Emerald Lake","F16",96,191,"Castilleja","Senecio.crassulus",6
+2024,"7/27/2024","Emerald Lake","F16",96,191,"Castilleja","Cirsium.griseum",3
+2024,"7/27/2024","Emerald Lake","F16",96,191,"Castilleja","Poa.alpina",3
+2024,"7/27/2024","Emerald Lake","F16",96,191,"Castilleja","Viola.adunca",4
+2024,"7/27/2024","Emerald Lake","F16",96,191,"Castilleja","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",1
+2024,"7/27/2024","Emerald Lake","F16",96,191,"Castilleja","Noccaea.fendleri",1
+2024,"7/27/2024","Emerald Lake","F16",96,191,"Castilleja","Potentilla.glaucophylla",6
+2024,"7/27/2024","Emerald Lake","F16",96,191,"Castilleja","Sibbaldia.procumbens",1
+2024,"7/27/2024","Emerald Lake","F16C",96,192,"Control","Elymus.lanceolatus",2
+2024,"7/27/2024","Emerald Lake","F16C",96,192,"Control","Deschampsia.cespitosa",1
+2024,"7/27/2024","Emerald Lake","F16C",96,192,"Control","Potentilla.pulcherrima",1
+2024,"7/27/2024","Emerald Lake","F16C",96,192,"Control","Achillea.millefolium",6
+2024,"7/27/2024","Emerald Lake","F16C",96,192,"Control","Fragaria.virginiana",1
+2024,"7/27/2024","Emerald Lake","F16C",96,192,"Control","Senecio.crassulus",3
+2024,"7/27/2024","Emerald Lake","F16C",96,192,"Control","Cirsium.griseum",9
+2024,"7/27/2024","Emerald Lake","F16C",96,192,"Control","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",3
+2024,"7/27/2024","Emerald Lake","F16C",96,192,"Control","Potentilla.glaucophylla",5
+2024,"7/27/2024","Emerald Lake","F17",97,193,"Castilleja","Castilleja.septentrionalis",4
+2024,"7/27/2024","Emerald Lake","F17",97,193,"Castilleja","Deschampsia.cespitosa",1
+2024,"7/27/2024","Emerald Lake","F17",97,193,"Castilleja","Potentilla.pulcherrima",8
+2024,"7/27/2024","Emerald Lake","F17",97,193,"Castilleja","Fragaria.virginiana",4
+2024,"7/27/2024","Emerald Lake","F17",97,193,"Castilleja","Anemone.multifida",2
+2024,"7/27/2024","Emerald Lake","F17",97,193,"Castilleja","Senecio.crassulus",4
+2024,"7/27/2024","Emerald Lake","F17",97,193,"Castilleja","Draba.spectabilis",5
+2024,"7/27/2024","Emerald Lake","F17",97,193,"Castilleja","Viola.adunca",3
+2024,"7/27/2024","Emerald Lake","F17",97,193,"Castilleja","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",10
+2024,"7/27/2024","Emerald Lake","F17",97,193,"Castilleja","Poa.fendleriana",1
+2024,"7/27/2024","Emerald Lake","F17",97,193,"Castilleja","Potentilla.glaucophylla",1
+2024,"7/27/2024","Emerald Lake","F17",97,193,"Castilleja","Trisetum.canescens",1
+2024,"7/27/2024","Emerald Lake","F17C",97,194,"Control","Deschampsia.cespitosa",4
+2024,"7/27/2024","Emerald Lake","F17C",97,194,"Control","Potentilla.pulcherrima",2
+2024,"7/27/2024","Emerald Lake","F17C",97,194,"Control","Achillea.millefolium",7
+2024,"7/27/2024","Emerald Lake","F17C",97,194,"Control","Fragaria.virginiana",3
+2024,"7/27/2024","Emerald Lake","F17C",97,194,"Control","Senecio.crassulus",2
+2024,"7/27/2024","Emerald Lake","F17C",97,194,"Control","Cirsium.griseum",1
+2024,"7/27/2024","Emerald Lake","F17C",97,194,"Control","Phleum.alpinum",1
+2024,"7/27/2024","Emerald Lake","F17C",97,194,"Control","Draba.spectabilis",7
+2024,"7/27/2024","Emerald Lake","F17C",97,194,"Control","Erigeron.leiomerus",1
+2024,"7/27/2024","Emerald Lake","F17C",97,194,"Control","Viola.adunca",3
+2024,"7/27/2024","Emerald Lake","F17C",97,194,"Control","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",2
+2024,"7/27/2024","Emerald Lake","F17C",97,194,"Control","Noccaea.fendleri",4
+2024,"7/27/2024","Emerald Lake","F17C",97,194,"Control","Poa.fendleriana",1
+2024,"7/27/2024","Emerald Lake","F17C",97,194,"Control","Potentilla.glaucophylla",5
+2024,"7/27/2024","Emerald Lake","F18",98,195,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/27/2024","Emerald Lake","F18",98,195,"Castilleja","Elymus.lanceolatus",1
+2024,"7/27/2024","Emerald Lake","F18",98,195,"Castilleja","Deschampsia.cespitosa",1
+2024,"7/27/2024","Emerald Lake","F18",98,195,"Castilleja","Potentilla.pulcherrima",8
+2024,"7/27/2024","Emerald Lake","F18",98,195,"Castilleja","Achillea.millefolium",9
+2024,"7/27/2024","Emerald Lake","F18",98,195,"Castilleja","Fragaria.virginiana",1
+2024,"7/27/2024","Emerald Lake","F18",98,195,"Castilleja","Anemone.multifida",2
+2024,"7/27/2024","Emerald Lake","F18",98,195,"Castilleja","Senecio.crassulus",5
+2024,"7/27/2024","Emerald Lake","F18",98,195,"Castilleja","Phleum.alpinum",2
+2024,"7/27/2024","Emerald Lake","F18",98,195,"Castilleja","Draba.spectabilis",4
+2024,"7/27/2024","Emerald Lake","F18",98,195,"Castilleja","Viola.adunca",3
+2024,"7/27/2024","Emerald Lake","F18",98,195,"Castilleja","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",2
+2024,"7/27/2024","Emerald Lake","F18",98,195,"Castilleja","Noccaea.fendleri",1
+2024,"7/27/2024","Emerald Lake","F18",98,195,"Castilleja","Potentilla.glaucophylla",3
+2024,"7/27/2024","Emerald Lake","F18",98,195,"Castilleja","Trisetum.canescens",1
+2024,"7/27/2024","Emerald Lake","F18C",98,196,"Control","Elymus.lanceolatus",2
+2024,"7/27/2024","Emerald Lake","F18C",98,196,"Control","Potentilla.pulcherrima",6
+2024,"7/27/2024","Emerald Lake","F18C",98,196,"Control","Achillea.millefolium",5
+2024,"7/27/2024","Emerald Lake","F18C",98,196,"Control","Fragaria.virginiana",1
+2024,"7/27/2024","Emerald Lake","F18C",98,196,"Control","Anemone.multifida",2
+2024,"7/27/2024","Emerald Lake","F18C",98,196,"Control","Senecio.crassulus",1
+2024,"7/27/2024","Emerald Lake","F18C",98,196,"Control","Cirsium.griseum",1
+2024,"7/27/2024","Emerald Lake","F18C",98,196,"Control","Phleum.alpinum",4
+2024,"7/27/2024","Emerald Lake","F18C",98,196,"Control","Draba.spectabilis",6
+2024,"7/27/2024","Emerald Lake","F18C",98,196,"Control","Viola.adunca",1
+2024,"7/27/2024","Emerald Lake","F18C",98,196,"Control","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",1
+2024,"7/27/2024","Emerald Lake","F18C",98,196,"Control","Gentiana.parryi",1
+2024,"7/27/2024","Emerald Lake","F18C",98,196,"Control","Potentilla.glaucophylla",4
+2024,"7/27/2024","Emerald Lake","F19",99,197,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/27/2024","Emerald Lake","F19",99,197,"Castilleja","Taraxacum.officinale",1
+2024,"7/27/2024","Emerald Lake","F19",99,197,"Castilleja","Deschampsia.cespitosa",6
+2024,"7/27/2024","Emerald Lake","F19",99,197,"Castilleja","Potentilla.pulcherrima",5
+2024,"7/27/2024","Emerald Lake","F19",99,197,"Castilleja","Achillea.millefolium",10
+2024,"7/27/2024","Emerald Lake","F19",99,197,"Castilleja","Fragaria.virginiana",6
+2024,"7/27/2024","Emerald Lake","F19",99,197,"Castilleja","Senecio.crassulus",7
+2024,"7/27/2024","Emerald Lake","F19",99,197,"Castilleja","Cirsium.griseum",1
+2024,"7/27/2024","Emerald Lake","F19",99,197,"Castilleja","Phleum.alpinum",1
+2024,"7/27/2024","Emerald Lake","F19",99,197,"Castilleja","Draba.spectabilis",1
+2024,"7/27/2024","Emerald Lake","F19",99,197,"Castilleja","Viola.adunca",3
+2024,"7/27/2024","Emerald Lake","F19",99,197,"Castilleja","Androsace.septentrionales",2
+2024,"7/27/2024","Emerald Lake","F19",99,197,"Castilleja","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",2
+2024,"7/27/2024","Emerald Lake","F19",99,197,"Castilleja","Danthonia.parryi",1
+2024,"7/27/2024","Emerald Lake","F19",99,197,"Castilleja","Erigeron.speciosus",2
+2024,"7/27/2024","Emerald Lake","F19",99,197,"Castilleja","Gentiana.parryi",2
+2024,"7/27/2024","Emerald Lake","F19",99,197,"Castilleja","Trisetum.canescens",1
+2024,"7/27/2024","Emerald Lake","F19C",99,198,"Control","Deschampsia.cespitosa",1
+2024,"7/27/2024","Emerald Lake","F19C",99,198,"Control","Potentilla.pulcherrima",6
+2024,"7/27/2024","Emerald Lake","F19C",99,198,"Control","Achillea.millefolium",9
+2024,"7/27/2024","Emerald Lake","F19C",99,198,"Control","Fragaria.virginiana",5
+2024,"7/27/2024","Emerald Lake","F19C",99,198,"Control","Anemone.multifida",1
+2024,"7/27/2024","Emerald Lake","F19C",99,198,"Control","Senecio.crassulus",5
+2024,"7/27/2024","Emerald Lake","F19C",99,198,"Control","Draba.spectabilis",1
+2024,"7/27/2024","Emerald Lake","F19C",99,198,"Control","Erigeron.leiomerus",1
+2024,"7/27/2024","Emerald Lake","F19C",99,198,"Control","Viola.adunca",2
+2024,"7/27/2024","Emerald Lake","F19C",99,198,"Control","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",4
+2024,"7/27/2024","Emerald Lake","F19C",99,198,"Control","Danthonia.parryi",1
+2024,"7/27/2024","Emerald Lake","F19C",99,198,"Control","Erigeron.speciosus",1
+2024,"7/27/2024","Emerald Lake","F19C",99,198,"Control","Gentiana.parryi",1
+2024,"7/27/2024","Emerald Lake","F19C",99,198,"Control","Trisetum.canescens",1
+2024,"7/27/2024","Emerald Lake","F20",100,199,"Castilleja","Castilleja.septentrionalis",1
+2024,"7/27/2024","Emerald Lake","F20",100,199,"Castilleja","Elymus.lanceolatus",2
+2024,"7/27/2024","Emerald Lake","F20",100,199,"Castilleja","Deschampsia.cespitosa",1
+2024,"7/27/2024","Emerald Lake","F20",100,199,"Castilleja","Potentilla.pulcherrima",8
+2024,"7/27/2024","Emerald Lake","F20",100,199,"Castilleja","Achillea.millefolium",9
+2024,"7/27/2024","Emerald Lake","F20",100,199,"Castilleja","Boechera.stricta",1
+2024,"7/27/2024","Emerald Lake","F20",100,199,"Castilleja","Fragaria.virginiana",4
+2024,"7/27/2024","Emerald Lake","F20",100,199,"Castilleja","Anemone.multifida",1
+2024,"7/27/2024","Emerald Lake","F20",100,199,"Castilleja","Hymenoxys.hoopesii",2
+2024,"7/27/2024","Emerald Lake","F20",100,199,"Castilleja","Senecio.crassulus",5
+2024,"7/27/2024","Emerald Lake","F20",100,199,"Castilleja","Draba.spectabilis",3
+2024,"7/27/2024","Emerald Lake","F20",100,199,"Castilleja","Erigeron.coulteri",7
+2024,"7/27/2024","Emerald Lake","F20",100,199,"Castilleja","Viola.adunca",1
+2024,"7/27/2024","Emerald Lake","F20",100,199,"Castilleja","Androsace.septentrionales",1
+2024,"7/27/2024","Emerald Lake","F20",100,199,"Castilleja","Carex.sp...chalciolepis..ebenea..egglestonii..hoodii..",1
+2024,"7/27/2024","Emerald Lake","F20",100,199,"Castilleja","Trisetum.canescens",1
+2024,"7/27/2024","Emerald Lake","F20C",100,200,"Control","Elymus.lanceolatus",3
+2024,"7/27/2024","Emerald Lake","F20C",100,200,"Control","Potentilla.pulcherrima",2
+2024,"7/27/2024","Emerald Lake","F20C",100,200,"Control","Achillea.millefolium",9
+2024,"7/27/2024","Emerald Lake","F20C",100,200,"Control","Fragaria.virginiana",2
+2024,"7/27/2024","Emerald Lake","F20C",100,200,"Control","Senecio.crassulus",5
+2024,"7/27/2024","Emerald Lake","F20C",100,200,"Control","Cirsium.griseum",6
+2024,"7/27/2024","Emerald Lake","F20C",100,200,"Control","Draba.spectabilis",4
+2024,"7/27/2024","Emerald Lake","F20C",100,200,"Control","Viola.adunca",2
+2024,"7/27/2024","Emerald Lake","F20C",100,200,"Control","Trisetum.canescens",1
