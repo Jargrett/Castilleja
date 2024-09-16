@@ -1,0 +1,141 @@
+year,site,taxa,rel_abund_cover,NN_freq,total_cover,NN_count
+2023,Avery,Taraxacum officinale,34.68773514,23.52941176,9.22,16
+2023,Avery,Potentilla pulcherrima,18.54778029,11.76470588,4.93,8
+2023,Avery,Poa pratensis,15.31226486,29.41176471,4.07,20
+2023,Avery,Erigeron subtrinervis,11.13619263,13.23529412,2.96,9
+2023,Avery,Thalictrum fendleri,4.815650865,2.941176471,1.28,2
+2023,Avery,Elymus lanceolatus,3.912716328,4.411764706,1.04,3
+2023,Avery,Agoseris sp.,2.91572611,4.411764706,0.775,3
+2023,Avery,Achillea millefolium,2.539503386,2.941176471,0.675,2
+2023,Avery,Achnatherum sp.,2.294958616,2.941176471,0.61,2
+2023,Avery,Ipomopsis aggregata,1.636568849,0,0.435,0
+2023,Avery,Valeriana occidentalis,1.431064572,0,0.355,3
+2023,Avery,Lathyrus lanszwertii,1.33559067,4.411764706,0.15,0
+2023,Avery,Dactylis glomerata,0.942408377,0,0.05,0
+2023,Avery,Artemisia dracunculus,0.5643340858,0,0.03,0
+2023,Avery,Solidago multiradiata,0.1881113619,0,0.41,0
+2023,Avery,Boechera stricta,0.1128668172,0,0.27,0
+2023,Emerald Lake,Potentilla pulcherrima,25.27607362,18.98734177,6.18,15
+2023,Emerald Lake,Fragaria virginiana,12.51533742,18.98734177,3.06,15
+2023,Emerald Lake,Senecio crassulus,11.32924335,10.12658228,2.77,8
+2023,Emerald Lake,Deschampsia cespitosa,10.71574642,24.05063291,2.62,19
+2023,Emerald Lake,Anemone multifida,7.239263804,2.53164557,1.77,2
+2023,Emerald Lake,Achillea millefolium,5.439672802,10.12658228,1.33,8
+2023,Emerald Lake,Taraxacum officinale,4.867075665,2.53164557,1.19,2
+2023,Emerald Lake,Elymus lanceolatus,3.047034765,2.53164557,0.745,2
+2023,Emerald Lake,Thalictrum fendleri,2.944785276,1.265822785,0.72,1
+2023,Emerald Lake,Carex sp.,2.862985685,1.265822785,0.7,1
+2023,Emerald Lake,Agoseris sp.,2.862985685,1.265822785,0.7,1
+2023,Emerald Lake,Erigeron coulteri,2.474437628,3.797468354,0.605,3
+2023,Emerald Lake,Cirsium griseum,2.208588957,1.265822785,0.54,1
+2023,Emerald Lake,Erigeron leiomerus,1.145194274,0,0.28,0
+2023,Emerald Lake,Pyrrocoma crocea,1.104294479,0,0.27,0
+2023,Emerald Lake,Draba spectabilis,0.9406952965,1.265822785,0.23,1
+2023,Emerald Lake,Poa alpina,0.6134969325,0,0.15,0
+2023,Emerald Lake,Valeriana edulis,0.5316973415,0,0.13,0
+2023,Emerald Lake,Viola adunca,0.490797546,0,0.12,0
+2023,Emerald Lake,Hymenoxys hoopesii,0.490797546,0,0.12,0
+2023,Emerald Lake,Phleum alpinum,0.327198364,0,0.08,0
+2023,Emerald Lake,Eremogone congesta,0.2862985685,0,0.07,0
+2023,Emerald Lake,Delphinium barbeyi,0.163599182,0,0.04,0
+2023,Emerald Lake,Boechera stricta,0.1226993865,0,0.03,0
+2024,Avery,Taraxacum officinale,50.98039216,27.39726027,20.8,20
+2024,Avery,Potentilla pulcherrima,11.54411765,13.69863014,4.71,10
+2024,Avery,Valeriana occidentalis,4.779411765,4.109589041,1.95,3
+2024,Avery,Erigeron subtrinervis,3.87254902,6.849315068,1.58,5
+2024,Avery,Ipomopsis aggregata,3.75,8.219178082,1.53,6
+2024,Avery,Dactylis glomerata,3.602941176,2.739726027,1.47,2
+2024,Avery,Erigeron coulteri,3.357843137,2.739726027,1.37,2
+2024,Avery,Poa pratensis,3.333333333,8.219178082,1.36,6
+2024,Avery,Agoseris sp.,2.549019608,6.849315068,1.04,5
+2024,Avery,Poa compressa,2.536764706,2.739726027,1.035,2
+2024,Avery,Achillea millefolium,1.715686275,4.109589041,0.7,3
+2024,Avery,Bromus inermis,1.446078431,0,0.59,0
+2024,Avery,Erigeron speciosus,1.225490196,1.369863014,0.5,1
+2024,Avery,Fragaria virginiana,1.066176471,2.739726027,0.435,2
+2024,Avery,Viola adunca,1.017156863,0,0.415,0
+2024,Avery,Achnatherum sp.,0.8700980392,1.369863014,0.355,1
+2024,Avery,Elymus lanceolatus,0.7720588235,1.369863014,0.315,1
+2024,Avery,Thalictrum fendleri,0.3676470588,0,0.15,0
+2024,Avery,"Carex sp. (obtusata, geyeri)",0.3431372549,4.109589041,0.14,3
+2024,Avery,Hymenoxys hoopesii,0.2205882353,0,0.09,0
+2024,Avery,Solidago multiradiata,0.2205882353,0,0.09,0
+2024,Avery,Lathyrus lanszwertii,0.1225490196,0,0.05,0
+2024,Avery,Boechera stricta,0.1102941176,0,0.045,0
+2024,Avery,Mertensia brevistyla,0.09803921569,0,0.04,0
+2024,Avery,Trisetum spicatum ,0.07352941176,0,0.03,0
+2024,Avery,Botrychium sp.,0.02450980392,1.369863014,0.01,1
+2024,Copper Creek,Eremogone congesta,13.42691486,13.33333333,3.52,14
+2024,Copper Creek,Taraxacum officinale,10.56606652,9.523809524,2.77,10
+2024,Copper Creek,Poa pratensis,10.52792188,14.28571429,2.76,15
+2024,Copper Creek,Thalictrum fendleri,7.781507476,13.33333333,2.04,14
+2024,Copper Creek,Maianthemum stellatum,5.492828807,5.714285714,1.44,6
+2024,Copper Creek,Galium boreale,5.397467196,5.714285714,1.415,6
+2024,Copper Creek,Erigeron speciosus,5.035093073,3.80952381,1.32,4
+2024,Copper Creek,Campanula petiolata,4.787152884,6.666666667,1.255,7
+2024,Copper Creek,Helianthella quinquenerva,4.15776625,2.857142857,1.09,3
+2024,Copper Creek,Ipomopsis aggregata,3.814464449,0.9523809524,1,1
+2024,Copper Creek,Anemone multifida,3.127860848,0.9523809524,0.82,1
+2024,Copper Creek,Potentilla pulcherrima,3.108788526,1.904761905,0.815,2
+2024,Copper Creek,Mertensia brevistyla,2.345895636,6.666666667,0.615,7
+2024,Copper Creek,Cymopterus lemmonii,2.250534025,0.9523809524,0.59,1
+2024,Copper Creek,Populus balsamifera,2.212389381,0,0.58,0
+2024,Copper Creek,Solidago multiradiata,1.983521514,0.9523809524,0.52,1
+2024,Copper Creek,"Carex sp. (obtusata, geyeri)",1.945376869,1.904761905,0.51,2
+2024,Copper Creek,Boechera stricta,1.811870613,0.9523809524,0.475,1
+2024,Copper Creek,Eriogonum umbellatum majus,1.373207202,0.9523809524,0.36,1
+2024,Copper Creek,Frasera speciosa,1.296917913,1.904761905,0.34,2
+2024,Copper Creek,Lathyrus lanszwertii,1.281660055,0.9523809524,0.336,1
+2024,Copper Creek,Agoseris sp.,1.010833079,1.904761905,0.265,2
+2024,Copper Creek,Viola adunca,0.9154714678,1.904761905,0.24,2
+2024,Copper Creek,Achnatherum sp.,0.8010375343,0.9523809524,0.21,1
+2024,Copper Creek,Astragalus alpinus,0.5340250229,0,0.14,0
+2024,Copper Creek,Polygonum sp.,0.5149527006,0.9523809524,0.135,1
+2024,Copper Creek,Achillea millefolium,0.4005187672,0,0.105,0
+2024,Copper Creek,Poa alpina,0.3433018004,0,0.09,0
+2024,Copper Creek,Sedum lanceolatum,0.3433018004,0,0.09,0
+2024,Copper Creek,Vicia americana,0.3433018004,0,0.09,0
+2024,Copper Creek,Fragaria virginiana,0.228867867,0,0.06,0
+2024,Copper Creek,Lomatium triternatum,0.228867867,0,0.06,0
+2024,Copper Creek,Elymus lanceolatus,0.152578578,0,0.04,0
+2024,Copper Creek,Chenopodium atrovirens,0.1335062557,0,0.035,0
+2024,Copper Creek,Androsace septentionales,0.1335062557,0,0.035,0
+2024,Copper Creek,Moehringia sp.,0.07628928898,0,0.02,0
+2024,Copper Creek,Delphinium nuttalianum,0.03814464449,0,0.01,0
+2024,Copper Creek,Erigeron subtrinervis,0.03814464449,0,0.01,0
+2024,Copper Creek,Silene drummondii,0.03814464449,0,0.01,0
+2024,Emerald Lake,Potentilla pulcherrima,19.74877188,13.97849462,5.99,13
+2024,Emerald Lake,Fragaria virginiana,14.80333652,20.43010753,4.49,19
+2024,Emerald Lake,Deschampsia cespitosa,9.264448914,8.602150538,2.81,8
+2024,Emerald Lake,Senecio crassulus,8.802874946,4.301075269,2.67,4
+2024,Emerald Lake,Carex sp.,5.176222347,5.376344086,1.57,5
+2024,Emerald Lake,Achillea millefolium,3.923378721,7.52688172,1.19,7
+2024,Emerald Lake,Potentilla glaucophylla,3.890409152,2.150537634,1.18,2
+2024,Emerald Lake,Erigeron leiomerus,3.659622169,1.075268817,1.11,1
+2024,Emerald Lake,Anemone multifida,3.577198246,4.301075269,1.085,4
+2024,Emerald Lake,Taraxacum officinale,3.461804754,2.150537634,1.05,2
+2024,Emerald Lake,Elymus lanceolatus,3.099139494,4.301075269,0.94,4
+2024,Emerald Lake,Oreochrysum parryi,2.406778543,1.075268817,0.73,1
+2024,Emerald Lake,Cirsium griseum,2.340839405,0,0.71,0
+2024,Emerald Lake,Viola adunca,2.324354621,6.451612903,0.705,6
+2024,Emerald Lake,Erigeron coulteri,1.912235007,4.301075269,0.58,4
+2024,Emerald Lake,Draba spectabilis,1.467145824,2.150537634,0.445,2
+2024,Emerald Lake,Agoseris sp.,1.384721902,4.301075269,0.42,4
+2024,Emerald Lake,Poa alpina,1.26932841,1.075268817,0.385,1
+2024,Emerald Lake,Phleum alpinum,1.252843625,1.075268817,0.38,1
+2024,Emerald Lake,Trisetum canescens,0.8901783654,2.150537634,0.27,2
+2024,Emerald Lake,Noccaea fendleri,0.6923609508,1.075268817,0.21,1
+2024,Emerald Lake,Hymenoxys hoopesii,0.6923609508,0,0.21,0
+2024,Emerald Lake,Aquilegia coerulea,0.5604826745,0,0.17,0
+2024,Emerald Lake,Gentiana parryi,0.4945435363,0,0.15,0
+2024,Emerald Lake,Erigeron speciosus,0.4615739672,0,0.14,0
+2024,Emerald Lake,Lupinus argenteus,0.36266526,0,0.11,0
+2024,Emerald Lake,Poa fendleriana,0.36266526,0,0.11,0
+2024,Emerald Lake,Thalictrum fendleri,0.3461804754,2.150537634,0.105,2
+2024,Emerald Lake,Valeriana edulis,0.3296956909,0,0.1,0
+2024,Emerald Lake,Boechera stricta,0.2670535096,0,0.081,0
+2024,Emerald Lake,Danthonia parryi,0.2307869836,0,0.07,0
+2024,Emerald Lake,Androsace septentionales,0.2143021991,0,0.065,0
+2024,Emerald Lake,Carex pityophila,0.1978174145,0,0.06,0
+2024,Emerald Lake,Heterotheca sp.,0.06593913818,0,0.02,0
+2024,Emerald Lake,Sibbaldia procumbens,0.06593913818,0,0.02,0

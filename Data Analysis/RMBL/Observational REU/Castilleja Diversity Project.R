@@ -33,11 +33,11 @@ library(vegan)#for diversity analysis
 #cali
 cali.cover.div <- diversity(nocali.cover.matrix, index = "shannon")
 cali.cover.rich <- specnumber(nocali.cover.matrix)
-cali.cover.even <- diversity(nocali.cover.matrix, index = "shannon") / log(specnumber(cali.cover.matrix)) 
+cali.cover.even <- diversity(nocali.cover.matrix, index = "shannon") / log(specnumber(nocali.cover.matrix)) 
 #case
 case.cover.div <- diversity(nocase.cover.matrix, index = "shannon")
 case.cover.rich <- specnumber(nocase.cover.matrix)
-case.cover.even <- diversity(nocase.cover.matrix, index = "shannon") / log(specnumber(case.cover.matrix))
+case.cover.even <- diversity(nocase.cover.matrix, index = "shannon") / log(specnumber(nocase.cover.matrix))
 
 #Combine calculated values with our environmental data
 cali.cover.diversity <- cbind(cali.env,cali.cover.div,cali.cover.rich,cali.cover.even)
@@ -228,7 +228,7 @@ summary(cali.johnson.inv)#Nothing significant for Johnson Hill
 #we will aslo first remove castilleja from both datasets
 
 #septentrionalis
-nocase.cover<- case.cover%>% select (-c(Castilleja.septentrionalis))
+nocase.cover <- case.cover%>% select (-c(Castilleja.septentrionalis))
 nocase.cover$no_case_plant <- rowSums(nocase.cover[11:81])
 
 case.bare<- lmer(bare ~ castilleja*site + year + (1|pair), data = nocase.cover)
@@ -390,15 +390,15 @@ library(ggrepel)
 set.seed(20)
 
 #First calculate distance matrix
-case.dist <-vegdist(case.cover.matrix, method="bray")
-cali.dist <-vegdist(cali.cover.matrix, method="bray")
+case.dist <-vegdist(nocase.cover.matrix, method="bray")
+cali.dist <-vegdist(nocali.cover.matrix, method="bray")
 
 #Run NMDS on distance matrix
 case.nmds <- metaMDS(case.dist, distance="bray", #use bray-curtis distance
                       k=2, #2 dimensions
                       try=500) #for publication I recommend 500)
 cali.nmds <- metaMDS(cali.dist, distance="bray", #use bray-curtis distance
-                   k=2, #2 dimensions
+                   k=3, #2 dimensions
                    try=500) #for publication I recommend 500)
 case.nmds#stress value 0.15 which is below .2 so we are good!
 cali.nmds#stress value 0.27 which is above .2 so we need to investigate
@@ -416,12 +416,10 @@ ggplot(case.NMDS, aes(NMDS1, NMDS2)) +
   coord_equal() +
   theme_bw()
 
-
-
 cali.nmds.scores <- as.data.frame(vegan::scores(cali.nmds))
 cali.NMDS <- cbind(cali.env,cali.nmds.scores) #final dataset
 
-adonis2(cali.dist~castilleja*pair, data = cali.NMDS, permutations=999)
+adonis2(cali.dist~castilleja*site, data = cali.NMDS, permutations=999)
 
 ggplot(cali.NMDS, aes(NMDS1, NMDS2)) +
   geom_point(aes(color=castilleja , shape=site)) +
@@ -493,4 +491,11 @@ LALA.pair <- cali.pair.counts %>% filter (species == "")
 t.test(LALA.pair$Castilleja, LALA.pair$Control,#higher in Castilleja plots by 2%, p = 0.006285
        paired = TRUE,   
        conf.level = 0.95)
+
+#--------------------------Nearest Neighbor Analysis---------------------------#
+#
+#
+case.nn <- read.csv("NN - Case.csv")
+cali.nn <- read.csv("NN - Cali.csv")
+
 
