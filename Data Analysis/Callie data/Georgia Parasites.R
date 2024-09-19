@@ -14,10 +14,16 @@ library(emmeans)#post-hoc analysis
 
 #Load-in Data
 georgia.parasites <- read.csv("Georgia Parasites - Master.csv")
-
+#Removing unneccesary coloumns
+georgia.data <- georgia.parasites[ -c(18:22)]
 #organize data strucutre, remove link columns, changing to factors
+str(georgia.data)
+georgia.data <- as.data.frame(unclass(georgia.data),stringsAsFactors=TRUE)
 
-str(georgia.parasites)
-georgia.parasites$genus <- as.factor(georgia.parasites$genus)
-georgia.parasites$species <- as.factor(georgia.parasites$species)
-georgia.parasites$species <- as.factor(georgia.parasites$species)
+#-----------------Example Analysis-------------------#
+# lets look into creating a graph showing the...
+ggplot(data = georgia.data, aes(x = genus, y = inat_GA, fill = native)) +
+  geom_bar(stat ="identity", position=position_dodge(1)) +
+  labs(x = "Genera", y = "Elemental Occurances") +
+  scale_fill_manual(values=c('black','lightgray')) +
+  theme_classic()
