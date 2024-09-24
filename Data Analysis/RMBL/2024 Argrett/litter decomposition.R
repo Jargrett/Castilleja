@@ -18,7 +18,7 @@ library(emmeans)#post-hoc analysis
 #load-in the data
 winter <- read.csv("Litter Decomposition - 2023-2024 Overwinter.csv")
 within <- read.csv("Litter Decomposition - 2024 Within Season.csv")
-
+#yearlong <- read.csv("Litter Decomposition - 2023-2024 Yearlong.csv")
 #bind
 decomp <- rbind.fill(winter, within)
 #check structure
@@ -26,6 +26,7 @@ str(decomp)
 decomp <- as.data.frame(unclass(decomp),stringsAsFactors=TRUE)
 within <- as.data.frame(unclass(within),stringsAsFactors=TRUE)
 winter <- as.data.frame(unclass(winter),stringsAsFactors=TRUE)
+#yearlong <- as.data.frame(unclass(yearlong),stringsAsFactors=TRUE)
 #remove missing bags
 decomp <- decomp %>% 
   filter(missing != "Yes") %>% 
@@ -35,8 +36,12 @@ within <- within %>%
   filter(missing != "Yes") %>% 
   select(-c((missing)))
 
+winter <- winter %>% 
+  filter(missing != "Yes") %>% 
+  select(-c((missing)))
+
 #first lets see if decomp is different between treatment
-over.lm <- lmer(final_dry_weight ~ litter*removal + (1|location) + (1|bag), data = within)
+over.lm <- lm(final_dry_weight ~ litter*removal, data = within)
 summary(over.lm)
 Anova(over.lm)
 emmip(over.lm, litter ~ removal)
