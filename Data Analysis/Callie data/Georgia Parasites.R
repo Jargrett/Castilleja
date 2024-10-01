@@ -25,8 +25,7 @@ summary(georgia.data)
 # We only have data for 20 out of 40 Root HP:
 # of which S1/S1? = 11, S2/S2? = 5, S3 = 1, SH = 1
 filter.data <- georgia.data %>% 
-  filter((parasitic_habit == "Root Hemiparasite")) %>% 
-  filter((DNR_status_GA != "N/A"))
+  filter((parasitic_habit == "Root Hemiparasite")) 
 
 summary(filter.data)
  
