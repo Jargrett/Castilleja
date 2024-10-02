@@ -52,10 +52,23 @@ summary(flags)
 plot(flags, lon = "decimalLongitude", lat = "decimalLatitude")
 
 gbif_cl <- gbif_cleaner[flags$.summary,]
+write.csv(gbif_cl, "/Users/jargrett/Desktop/Castilleja/Data Analysis/Bot RA/Total Occurances.csv", row.names=FALSE)
 
 summary(gbif_cl)
+occurance_us <- subset(gbif_cl, countryCode == 'USA')
+write.csv(occurance_us, "/Users/jargrett/Desktop/Castilleja/Data Analysis/Bot RA/US Occurances.csv", row.names=FALSE)
 occurance_ga <- subset(gbif_cl, stateProvince == 'Georgia')
+occurance_ga <- subset(occurance_ga, basisOfRecord %in% c('LIVING_SPECIMEN','HUMAN_OBSEVATION'))
 write.csv(occurance_ga, "/Users/jargrett/Desktop/Castilleja/Data Analysis/Bot RA/Georgia Occurances.csv", row.names=FALSE)
+cm <- borders("state", colour = "gray50", fill = "gray50")
+ggplot() +
+  coord_fixed() +
+  cm +
+  geom_point(data = occurance_us,
+             aes(x = decimalLongitude, y = decimalLatitude, fill = basisOfRecord),
+             colour = "darkred",
+             size = 0.5) +
+  theme_bw()
 #Species codes:
 #GBIF.org (01 October 2024) GBIF Occurrence Download  https://doi.org/10.15468/dl.2f8w82
 #Parthenium integrifolium
