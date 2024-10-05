@@ -58,13 +58,12 @@ summary(gbif_cl)
 occurance_us <- subset(gbif_cl, countryCode == 'USA')
 write.csv(occurance_us, "/Users/jargrett/Desktop/Castilleja/Data Analysis/Bot RA/US Occurances.csv", row.names=FALSE)
 occurance_ga <- subset(gbif_cl, stateProvince == 'Georgia')
-occurance_ga <- subset(occurance_ga, basisOfRecord %in% c('LIVING_SPECIMEN','HUMAN_OBSEVATION'))
 write.csv(occurance_ga, "/Users/jargrett/Desktop/Castilleja/Data Analysis/Bot RA/Georgia Occurances.csv", row.names=FALSE)
 cm <- borders("state", colour = "gray50", fill = "gray50")
 ggplot() +
   coord_fixed() +
   cm +
-  geom_point(data = occurance_us,
+  geom_point(data = occurance_ga,
              aes(x = decimalLongitude, y = decimalLatitude, fill = basisOfRecord),
              colour = "darkred",
              size = 0.5) +
