@@ -677,6 +677,8 @@ t.test(LALA.pair$Castilleja, LALA.pair$Control,#higher in Castilleja plots by 2%
 #--------------------------Nearest Neighbor Analysis---------------------------#
 #
 #
+library(ggplot2)
+library(ggpubr)
 library(hrbrthemes)
 
 case.nn <- read.csv("NN - Case.csv")
@@ -687,26 +689,102 @@ cali.nn <- read.csv("NN - Cali.csv")
 cali.nn$rel_abund_cover <- cali.nn$rel_abund_cover / 100
 cali.nn$NN_freq <- cali.nn$NN_freq / 100
 
+cacr.nn <- read.csv("NN - Cacr.csv")
+cacr.nn$rel_abund_cover <- cacr.nn$rel_abund_cover / 100
+cacr.nn$NN_freq <- cacr.nn$NN_freq / 100
+
 #cacr.nn <- read.csv("NN - Cacr.csv")
 #cacr.nn$rel_abund_cover <- cacr.nn$rel_abund_cover / 100
 #cacr.nn$NN_freq <- cacr.nn$NN_freq / 100
 
-
-# Print the prediction interval
-head(prediction_intervals)
-
 emerald.nn <- filter(case.nn, site == "Emerald Lake")
-EL.NN <- lm(rel_abund_cover ~ NN_freq, data = emerald.nn)
-summary(EL.NN)
+emerald.lm <- lm(NN_freq ~ rel_abund_cover, data = emerald.nn)
+summary(emerald.lm)
 
-emerald.predict <- predict(EL.NN, newdata = emerald.nn, interval = "prediction", level = 0.95)
+emerald.predict <- as.data.frame(predict(emerald.lm, newdata = emerald.nn, interval = "prediction", level = 0.95))
 
 EL.nn <- cbind(emerald.nn, emerald.predict)
 
+
+avery.nn <- filter(case.nn, site == "Avery")
+avery.lm <- lm(NN_freq ~ rel_abund_cover, data = avery.nn)
+summary(avery.lm)
+
+avery.predict <- as.data.frame(predict(avery.lm, newdata = avery.nn, interval = "prediction", level = 0.95))
+
+AO.nn <- cbind(avery.nn, avery.predict)
+
+copper.nn <- filter(case.nn, site == "Copper Creek")
+copper.lm <- lm(NN_freq ~ rel_abund_cover, data = copper.nn)
+summary(copper.lm)
+
+copper.predict <- as.data.frame(predict(copper.lm, newdata = copper.nn, interval = "prediction", level = 0.95))
+
+CC.nn <- cbind(copper.nn, copper.predict)
+
 ggplot(EL.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_point() +
-  geom_smooth(method=lm , color="darkred", fill="#69b3a2", se=TRUE) + 
+  geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
+  #geom_point(aes(y = fit), col = "steelblue", size = 2.5) +
   geom_line(aes(y = fit)) +
-  geom_line(aes(y = lwr), linetype = "dashed", col = "red") +
-  geom_line(aes(y = upr), linetype = "dashed", col = "red") +
+  geom_line(aes(y = lwr), linetype = "dashed", col = "cadetblue") +
+  geom_line(aes(y = upr), linetype = "dashed", col = "cadetblue") +
+  labs(x = "Relative Abundance", y = "Nearest Neighbor Frequency") +
   theme_minimal()
+
+ggplot(AO.nn, aes(x = rel_abund_cover, y = NN_freq)) +
+  geom_point() +
+  geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
+  #geom_point(aes(y = fit), col = "steelblue", size = 2.5) +
+  geom_line(aes(y = fit)) +
+  geom_line(aes(y = lwr), linetype = "dashed", col = "cadetblue") +
+  geom_line(aes(y = upr), linetype = "dashed", col = "cadetblue") +
+  labs(x = "Relative Abundance", y = "Nearest Neighbor Frequency") +
+  theme_minimal()
+
+ggplot(CC.nn, aes(x = rel_abund_cover, y = NN_freq)) +
+  geom_point() +
+  geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
+  #geom_point(aes(y = fit), col = "steelblue", size = 2.5) +
+  geom_line(aes(y = fit)) +
+  geom_line(aes(y = lwr), linetype = "dashed", col = "cadetblue") +
+  geom_line(aes(y = upr), linetype = "dashed", col = "cadetblue") +
+  labs(x = "Relative Abundance", y = "Nearest Neighbor Frequency") +
+  theme_minimal()
+
+johnson.nn <- filter(cali.nn, site == "Johnson Hill")
+johnson.lm <- lm(NN_freq ~ rel_abund_cover, data = johnson.nn)
+summary(johnson.lm)
+
+johnson.predict <- as.data.frame(predict(johnson.lm, newdata = johnson.nn, interval = "prediction", level = 0.95))
+
+JH.nn <- cbind(johnson.nn, johnson.predict)
+
+deer.nn <- filter(cali.nn, site == "Deer Creek")
+deer.lm <- lm(NN_freq ~ rel_abund_cover, data = deer.nn)
+summary(deer.lm)
+
+deer.predict <- as.data.frame(predict(deer.lm, newdata = deer.nn, interval = "prediction", level = 0.95))
+
+DC.nn <- cbind(deer.nn, deer.predict)
+
+ggplot(JH.nn, aes(x = rel_abund_cover, y = NN_freq)) +
+  geom_point() +
+  geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
+  #geom_point(aes(y = fit), col = "steelblue", size = 2.5) +
+  geom_line(aes(y = fit)) +
+  geom_line(aes(y = lwr), linetype = "dashed", col = "cadetblue") +
+  geom_line(aes(y = upr), linetype = "dashed", col = "cadetblue") +
+  labs(x = "Relative Abundance", y = "Nearest Neighbor Frequency") +
+  theme_minimal()
+
+ggplot(DC.nn, aes(x = rel_abund_cover, y = NN_freq)) +
+  geom_point() +
+  geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
+  #geom_point(aes(y = fit), col = "steelblue", size = 2.5) +
+  geom_line(aes(y = fit)) +
+  geom_line(aes(y = lwr), linetype = "dashed", col = "cadetblue") +
+  geom_line(aes(y = upr), linetype = "dashed", col = "cadetblue") +
+  labs(x = "Relative Abundance", y = "Nearest Neighbor Frequency") +
+  theme_minimal()
+
