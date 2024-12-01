@@ -10,13 +10,14 @@ library(CoordinateCleaner)
 #install.packages("sf")
 library(sf)
 library(tidyverse)
+library(dplyr)
 user <- "jargrett" # your gbif.org username 
 pwd <- "Korra13506!" # your gbif.org password
 email <- "jordan.argrett@uga.edu" # your email 
 
-gbif_data <- read.csv("GBIF1.csv")
+gbif_data <- read.csv("GBIF2.csv")
 
-gbif_clean <- gbif_data %>% select(species,decimalLongitude, 
+gbif_clean <- gbif_data %>% dplyr::select(species,decimalLongitude, 
                 decimalLatitude, countryCode, stateProvince, individualCount,
                 gbifID, family, taxonRank, coordinateUncertaintyInMeters,
                 year, basisOfRecord, institutionCode, datasetName)
@@ -68,6 +69,44 @@ ggplot() +
              colour = "darkred",
              size = 0.5) +
   theme_bw()
+
+grasslands <- read.csv("Georgia Occurances.csv")
+
+ARNATR <- grasslands %>% filter(species == "Arnoglossum atriplicifolium")
+write.csv(ARNATR, "/Users/jargrett/Desktop/Castilleja/Data Analysis/Bot RA/Species Occurence/Arnoglossum atriplicifolium.csv", row.names=FALSE)
+ASCTUB <- grasslands %>% filter(species == "Asclepias tuberosa")
+write.csv(ASCTUB, "/Users/jargrett/Desktop/Castilleja/Data Analysis/Bot RA/Species Occurence/Asclepias tuberosa.csv", row.names=FALSE)
+CHAFAS <- grasslands %>% filter(species == "Chamaecrista fasciculata")
+write.csv(CHAFAS, "/Users/jargrett/Desktop/Castilleja/Data Analysis/Bot RA/Species Occurence/Chamaecrista fasciculata.csv", row.names=FALSE)
+CORMAJ <- grasslands %>% filter(species == "Coreopsis major")
+write.csv(CORMAJ, "/Users/jargrett/Desktop/Castilleja/Data Analysis/Bot RA/Species Occurence/Coreopsis major.csv", row.names=FALSE)
+ERYYUC <- grasslands %>% filter(species == "Eryngium yuccifolium")
+write.csv(ERYYUC, "/Users/jargrett/Desktop/Castilleja/Data Analysis/Bot RA/Species Occurence/Eryngium yuccifolium.csv", row.names=FALSE)
+HELATR <- grasslands %>% filter(species == "Helianthus atrorubens")
+write.csv(HELATR, "/Users/jargrett/Desktop/Castilleja/Data Analysis/Bot RA/Species Occurence/Helianthus atrorubens.csv", row.names=FALSE)
+LIAELE <- grasslands %>% filter(species == "Liatris elegantula")
+write.csv(LIAELE, "/Users/jargrett/Desktop/Castilleja/Data Analysis/Bot RA/Species Occurence/Liatris elegantula.csv", row.names=FALSE)
+LIAMIC <- grasslands %>% filter(species == "Liatris microcephala")
+write.csv(LIAMIC, "/Users/jargrett/Desktop/Castilleja/Data Analysis/Bot RA/Species Occurence/Liatris microcephala.csv", row.names=FALSE)
+LIASPI <- grasslands %>% filter(species == "Liatris spicata")
+write.csv(LIASPI, "/Users/jargrett/Desktop/Castilleja/Data Analysis/Bot RA/Species Occurence/Liatris spicata.csv", row.names=FALSE)
+LIASQU <- grasslands %>% filter(species == "Liatris squarrosa")
+write.csv(LIASQU, "/Users/jargrett/Desktop/Castilleja/Data Analysis/Bot RA/Species Occurence/Liatris squarrosa.csv", row.names=FALSE)
+PACANO <- grasslands %>% filter(species == "Packera anonyma")
+write.csv(PACANO, "/Users/jargrett/Desktop/Castilleja/Data Analysis/Bot RA/Species Occurence/Packera anonyma.csv", row.names=FALSE)
+PARINT <- grasslands %>% filter(species == "Parthenium integrifolium")
+write.csv(PARINT, "/Users/jargrett/Desktop/Castilleja/Data Analysis/Bot RA/Species Occurence/Parthenium integrifolium.csv", row.names=FALSE)
+SCHSCO <- grasslands %>% filter(species == "Schizachyrium scoparium")
+write.csv(SCHSCO, "/Users/jargrett/Desktop/Castilleja/Data Analysis/Bot RA/Species Occurence/Schizachyrium scoparium.csv", row.names=FALSE)
+SILCOM <- grasslands %>% filter(species == "Silphium compositum")
+write.csv(SILCOM, "/Users/jargrett/Desktop/Castilleja/Data Analysis/Bot RA/Species Occurence/Silphium compositum.csv", row.names=FALSE)
+
+
+
+#Donwloading fed data
+install.packages("devtools")
+devtools::install_github("ropensci/FedData")
+library(FedData)
 #Species codes:
 #GBIF.org (01 October 2024) GBIF Occurrence Download  https://doi.org/10.15468/dl.2f8w82
 #Parthenium integrifolium
@@ -116,7 +155,7 @@ library(reshape2)
 # but you can change to download=F for any subsequent time you re-fun the script
 
 # we are downloading bioclim variables at a 2.5 degree minute resolution
-bio_curr <- worldclim_global(var='bio', res=0.5, download=TRUE, path="data/")
+bio_curr <- worldclim_global(var='bio', res=2.5, download=TRUE, path="data/")
 
 # we are downloading forecasted values of the bioclim variables
 # from SSP585 for the time frame 2061-2080 and the model ACCESS-CM2

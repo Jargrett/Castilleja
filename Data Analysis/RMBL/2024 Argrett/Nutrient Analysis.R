@@ -10,24 +10,19 @@ library(emmeans)#post-hoc analysis
 library(lme4)#for modeling linear mixed effect models
 
 soil <- read.csv("Soil Nutrients - Full.csv")
+soil <- as.data.frame(unclass(soil),stringsAsFactors=TRUE)
 
-str(soil)
-soil$pair <- as.factor(soil$pair)
-soil$plot <- as.factor(soil$plot)
-soil$litter <- as.factor(soil$litter)
-soil$removal <- as.factor(soil$removal)
-soil$block <- as.factor(soil$block)
 
-nitrate <- ggplot(soil, aes(x = litter, y = P)) +
+nitrate <- ggplot(soil, aes(x = litter, y = K)) +
   geom_point(aes(color = (removal))) +
   facet_wrap(~burial) +
   labs(x = "Litter Treatment", y = "Nitrate")
 
 nitrate
 
-nitrate.lmm <- lmer(P ~ litter*removal + burial + (1|block) + (1|pair), data = soil)
-summary(nitrate.lmm)
-Anova(nitrate.lmm)
-emmip(nitrate.lmm, litter ~ removal)
-emmeans(nitrate.lmm, pairwise ~  removal|litter)
+K.lmm <- lmer(K ~ litter*removal + burial + (1|block) + (1|pair), data = soil)
+summary(K.lmm)
+Anova(K.lmm)
+emmip(K.lmm, litter ~ removal)
+emmeans(K.lmm, pairwise ~  removal|litter)
         

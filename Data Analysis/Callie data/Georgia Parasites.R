@@ -12,13 +12,15 @@ library(car)#for regression analysis
 library(emmeans)#post-hoc analysis
 library(gridExtra)
 library(webr)
+library(formattable)
+library(data.table)
 
 #Load-in Data
 georgia.parasites <- read.csv("Georgia Parasites - Master.csv")
 georgia.parasites$taxa <- interaction(georgia.parasites$genus, georgia.parasites$species, sep = " ")
 georgia.parasites <- georgia.parasites %>% relocate(taxa)
 #Removing unnecessary coloumns
-georgia.data <- georgia.parasites[ -c(31:35)]
+georgia.data <- georgia.parasites[ -c(32:36)]
 #organize data strucutre, remove link columns, changing to factors
 str(georgia.data)
 georgia.data <- as.data.frame(unclass(georgia.data),stringsAsFactors=TRUE)
@@ -37,30 +39,44 @@ ggplot(filter.data, aes(x = ecosystem)) +
   geom_bar() +
   geom_bar(aes(x = DNR_status_GA))
 
-PieDonut(georgia.data, aes(x = parasitic_habit, y = genus), r0=0.3, explode=0,showRatioThreshold =.001, labelpositionThreshold=.01,
+
+
+
+
+
+
+
+ecosystem.data <- plyr::rename(georgia.data, c("ecosystem_lump" = "Ecosystem",
+                                               "habit" = "Habit",
+                                               "DNR_status_lump" = "Status"))
+
+PieDonut(ecosystem.data, aes(x = Habit, y = genus), r0=0.3, pieLabelSize = 4.7, donutLabelSize = 2.4,showRatioThreshold =.001, labelpositionThreshold=.01,
+         ratioByGroup = TRUE)
+
+PieDonut(ecosystem.data, aes(x = Ecosystem, y = habit), r0=0.3, pieLabelSize = 5, donutLabelSize = 2.4, explode=0,showRatioThreshold =.001, labelpositionThreshold=.01,
+         ratioByGroup = TRUE)
+
+PieDonut(ecosystem.data, aes(x = habit, y = NatureServ_status), r0=0.3, pieLabelSize = 5, donutLabelSize = 2.4, explode=0,showRatioThreshold =.001, labelpositionThreshold=.01,
+         ratioByGroup = TRUE)
+
+filter.data <- GP %>% 
+  filter((parasitic_habit == "Root Hemiparasite")) %>% 
+  filter((native == "Yes")) 
+
+PieDonut(filter.data, aes(x = Status, y = DNR_monitor), r0=0.3, pieLabelSize = 5, donutLabelSize = 2.4,showRatioThreshold =.001, labelpositionThreshold=.01,
          ratioByGroup = TRUE)
 
 
-PieDonut(georgia.data, aes(x = DNR_status_lump, y = DNR_monitor), r0=0.3, explode=0,showRatioThreshold =.001, labelpositionThreshold=.01,
-         ratioByGroup = TRUE)
+write.csv(ecosystem.data, "/Users/jargrett/Desktop/Castilleja/Data Analysis/Callie data/GP.csv", row.names=FALSE)
+GP <- read.csv("GP.csv")
+GP <- as.data.frame(unclass(GP),stringsAsFactors=TRUE)
 
-PieDonut(georgia.data, aes(x = ecosystem_lump, y = parasitic_habit), r0=0.3, explode=0,showRatioThreshold =.001, labelpositionThreshold=.21,
-         ratioByGroup = TRUE)
+GP.filter <- GP %>% 
+  filter((parasitic_habit == "Root Hemiparasite")) %>% 
+  filter((native == "Yes")) %>% 
+  filter((Status != "N/A"))
 
-S1.data <- filter.data %>% 
-  filter((DNR_status_GA == "S1"))
-
-agalinis.data <- filter.data %>% 
-  filter((genus == "Agalinis"))
-
-PieDonut(S1.data, aes(x = south_inat, y =species ),
-         ratioByGroup = F)
-#-----------------Example Analysis-------------------#
-# lets look into creating a graph showing the...
-ggplot(data = filter.data, aes(x = genus, y = inat_GA)) +
-  geom_bar(stat ="identity", position=position_dodge(1)) +
-  labs(x = "Genera", y = "Proportion of observatoins in GA") +
-  scale_fill_manual(values=c('black','lightgray')) +
-  theme_classic()
-
+ggplot(GP.filter, aes(x = NatureServ_status, fill = DNR_monitor)) + 
+  geom_bar()
+  
 

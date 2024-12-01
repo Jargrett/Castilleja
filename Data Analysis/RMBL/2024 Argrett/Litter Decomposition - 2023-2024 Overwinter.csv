@@ -83,7 +83,7 @@ year,deployment_period,plot,location,bag,missing,deployment_date,removal_date,de
 2024,Overwinter,38,1,A,Yes,8/16/23,6/30/24,319,Castilleja,R,1.57,,,,
 2024,Overwinter,38,7,B,Yes,8/16/23,6/30/24,319,Castilleja,R,1.57,,,,
 2024,Overwinter,38,8,C,No,8/16/23,6/30/24,319,Castilleja,R,1.58,3,5,1.42,3.58
-2024,Overwinter,39,1,A,No,8/16/23,6/30/24,319,Mixed,R,1.58,3.31,5,,
+2024,Overwinter,39,1,A,No,8/16/23,6/30/24,319,Mixed,R,1.58,3.31,5,1.73,3.27
 2024,Overwinter,39,5,B,Yes,8/16/23,6/30/24,319,Mixed,R,1.56,,,,
 2024,Overwinter,39,8,C,Yes,8/16/23,6/30/24,319,Mixed,R,1.55,,,,
 2024,Overwinter,40,1,A,Yes,8/16/23,6/30/24,319,Mixed,C,1.59,,,,

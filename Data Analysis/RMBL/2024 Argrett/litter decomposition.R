@@ -7,13 +7,14 @@ setwd("/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL/2024 Argrett")
 
 library(litterfitter)#for k-curve fitting
 library(tidyverse)#for data wrangling and restructuring
-library(plyr)#for data wrangling and restructuring
+library(dplyr)#for data wrangling and restructuring
 library(lme4)#for modeling linear mixed effect models
 library(nlme)#alternative for modeling linear mixed effect models
 library(ggplot2)#for plotting
 library(ggpubr)#extended functions for plotting
 library(car)#for regression analysis
 library(emmeans)#post-hoc analysis
+library(dplyr)
 
 #load-in the data
 winter <- read.csv("Litter Decomposition - 2023-2024 Overwinter.csv")
@@ -32,19 +33,19 @@ yearlong <- as.data.frame(unclass(yearlong),stringsAsFactors=TRUE)
 #remove missing bags
 decomp <- decomp %>% 
   filter(missing != "Yes") %>% 
-  select(-c((missing)))
+  dplyr::select(-c((missing)))
 
 within <- within %>% 
   filter(missing != "Yes") %>% 
-  select(-c((missing)))
+  dplyr::select(-c((missing)))
 
 winter <- winter %>% 
   filter(missing != "Yes") %>% 
-  select(-c((missing)))
+  dplyr::select(-c((missing)))
 
 yearlong <- yearlong %>% 
   filter(missing != "Yes") %>% 
-  select(-c((missing)))
+  dplyr::select(-c((missing)))
 
 decomp <- decomp %>% mutate(mass_remaining = final_dry_weight/initial_dry_weight)
 within <- within %>% mutate(mass_remaining = final_dry_weight/initial_dry_weight)
@@ -56,7 +57,7 @@ within <- within %>% mutate(time = deployment_duration/365)
 winter <- winter %>% mutate(time = deployment_duration/365)
 yearlong <- yearlong %>% mutate(time = deployment_duration/365)
 #first lets see if decomp is different between treatment
-over.lm <- lm(mass_remaining ~ litter*deployment_period, data = decomp)
+over.lm <- lm(mass_remaining ~ removal*litter + deployment_period, data = decomp)
 summary(over.lm)
 Anova(over.lm)
 emmip(over.lm, litter ~ deployment_period)
@@ -64,6 +65,15 @@ emmeans(over.lm, pairwise ~ litter|deployment_period)
 
 litter <- fit_litter(time = decomp$time,
                      mass.remaining = decomp$mass_remaining,
-                     model = "neg.exp",
-                     iters=500)
+                     model = "weibull",
+                     iters=1000)
 
+plot_multiple_fits(time = decomp$time,
+                   mass.remaining = decomp$mass_remaining,
+                   model=c("neg.exp","weibull"),
+                   iters=500)
+
+summary(litter)
+
+class(litter)
+plot(litter)

@@ -1,48 +1,47 @@
-year,site,taxa,NN freq,mean % cover,SD % cover,Count
-2024,Almont,Achnatherum pinetorum,11,5.5,4.254710813,35
-2024,Almont,Chrysothamnus vaseyi,7,4.3625,7.237710628,17
-2024,Almont,Chrysothamnus depresus,6,6.6875,9.352558611,21
-2024,Almont,Crepis occidentalis,6,1.6125,1.966017385,24
-2024,Almont,Phlox multiflora,6,4.2875,6.472711456,28
-2024,Almont,Cyrtorhyncha ranunculina,4,1.8625,3.379780565,18
-2024,Almont,Eremegone congesta,3,1.325,1.478694851,33
-2024,Almont,Erigeron eatonii,3,0.8,1.314612159,18
-2024,Almont,Sedum lanceolatum,3,0.325,0.4606294467,14
-2024,Almont,Eriogonum racemosum,2,0.89375,0.9454470859,25
-2024,Almont,Wyethia x magna,2,0.5625,1.971552493,6
-2024,Almont,Achillea millefolium,1,0.5625,1.861166921,7
-2024,Almont,Allium geyeri,1,0.1125,0.2883974288,6
-2024,Almont,Antennaria parviflora,1,3.1125,5.169545311,21
-2024,Almont,Artemisia arbuscula,1,5.525,9.904641492,20
-2024,Almont,Artemisia tridentata,1,1.15,6.351054829,3
-2024,Almont,Astragalus miser,1,0.1375,0.4527338608,5
-2024,Almont,Balsamorhiza sagittata,1,1.3,3.081791021,10
-2024,Almont,Calochortus gunnisonii,1,0.375,0.4493585171,21
-2024,Almont,Carex sp. (pityophila?),1,2.775,6.039347477,19
-2024,Almont,Lupinus polyphylous,1,0.05,0.1894661867,3
-2024,Almont,Penstemon caespitosus,1,1.3375,1.97220266,20
-2024,Almont,Poa compresa,1,0.7625,2.454685473,10
-2024,Almont,Pulsatilla nuttalliana,1,0.75,3.200560848,3
-2024,Almont,Vicia americana,1,0.25,0.8086075401,4
-2024,Almont,Agoseris glauca,0,0.1,0.2819347078,5
-2024,Almont,Amelanchier alnifolia,0,0.85,4.294002974,4
-2024,Almont,Asteraceae?,0,0.0625,0.3239875749,2
-2024,Almont,Astragalus drummondii,0,0.025,0.158113883,1
-2024,Almont,Berberis repens,0,0.15,0.6998168259,2
-2024,Almont,Boechera consanguina,0,0.025,0.158113883,1
-2024,Almont,Boechera stricta,0,0.025,0.158113883,1
-2024,Almont,Caryophyllaceae?,0,0.05,0.1894661867,3
-2024,Almont,Castilleja chromosa,0,0.975,1.187272245,20
-2024,Almont,Chrysothamnus viscidiflorus,0,0.65,2.465661611,3
-2024,Almont,Delphinium nuttallianum,0,0.0125,0.0790569415,1
-2024,Almont,Elymus elymoides,0,0.05,0.316227766,1
-2024,Almont,Eriogonum umbellatum,0,0.15,0.9486832981,1
-2024,Almont,Galium boreale,0,0.1625,0.6735620962,4
-2024,Almont,Mertensia brevistyla,0,0.1625,0.4142880826,7
-2024,Almont,Pediocactus simpsonii,0,0.025,0.158113883,1
-2024,Almont,Penstemon strictus,0,0.025,0.158113883,1
-2024,Almont,Poaceae?,0,0.3375,0.7543676245,9
-2024,Almont,Polygonum douglasii,0,0.0125,0.0790569415,1
-2024,Almont,Potentilla pulcherrima,0,0.0625,0.231702174,3
-2024,Almont,Symphoricarpos rotundifolius,0,2.875,9.351230551,8
-2024,Almont,Taraxacum officianale,0,0.0375,0.1749542065,2
+year,site,taxa,rel_abund_cover,NN_freq,total_cover,NN_count
+2024,Almont,Chrysothamnus depresus,6.98479013,8.955223881,2.675,6
+2024,Almont,Artemisia arbuscula,5.770611659,1.492537313,2.21,1
+2024,Almont,Stipeae,5.744500294,16.41791045,2.2,11
+2024,Almont,Chrysothamnus vaseyi,4.556433188,10.44776119,1.745,7
+2024,Almont,Phlox multiflora,4.478099093,8.955223881,1.715,6
+2024,Almont,Antennaria parviflora,3.250864939,1.492537313,1.245,1
+2024,Almont,Symphoricarpos rotundifolius,3.002806972,0,1.15,0
+2024,Almont,Carex sp.,2.898361512,1.492537313,1.11,1
+2024,Almont,Cyrtorhyncha ranunculina,1.94529669,5.970149254,0.745,4
+2024,Almont,Crepis sp.,1.684183041,8.955223881,0.645,6
+2024,Almont,Penstemon caespitosus,1.396958026,1.492537313,0.535,1
+2024,Almont,Eremegone congesta,1.383902343,4.47761194,0.53,3
+2024,Almont,Balsamorhiza sagittata,1.357790979,1.492537313,0.52,1
+2024,Almont,Artemisia tridentata,1.201122789,1.492537313,0.46,1
+2024,Almont,Poa sp.,1.148900059,1.492537313,0.44,1
+2024,Almont,Castilleja chromosa,1.018343234,0,0.39,0
+2024,Almont,Eriogonum racemosum,0.9334812977,2.985074627,0.3575,2
+2024,Almont,Amelanchier alnifolia,0.887786409,0,0.34,0
+2024,Almont,Erigeron eatonii,0.8355636791,4.47761194,0.32,3
+2024,Almont,Pulsatilla nuttalliana,0.7833409491,1.492537313,0.3,1
+2024,Almont,Chrysothamnus viscidiflorus,0.6788954893,0,0.26,0
+2024,Almont,Wyethia x magna,0.5875057119,2.985074627,0.225,2
+2024,Almont,Achillea millefolium,0.5875057119,1.492537313,0.225,1
+2024,Almont,Calochortus gunnisonii,0.3916704746,1.492537313,0.15,1
+2024,Almont,Sedum lanceolatum,0.3394477446,4.47761194,0.13,3
+2024,Almont,Vicia americana,0.2611136497,1.492537313,0.1,1
+2024,Almont,Galium boreale,0.1697238723,0,0.065,0
+2024,Almont,Mertensia brevistyla,0.1697238723,0,0.065,0
+2024,Almont,Berberis repens,0.1566681898,0,0.06,0
+2024,Almont,Eriogonum umbellatum,0.1566681898,0,0.06,0
+2024,Almont,Astragalus miser,0.1436125073,1.492537313,0.055,1
+2024,Almont,Allium geyeri,0.1175011424,1.492537313,0.045,1
+2024,Almont,Agoseris glauca,0.1044454599,0,0.04,0
+2024,Almont,Asteraceae,0.06527841243,0,0.025,0
+2024,Almont,Potentilla pulcherrima,0.06527841243,0,0.025,0
+2024,Almont,Caryophyllaceae,0.05222272994,0,0.02,0
+2024,Almont,Elymus elymoides,0.05222272994,0,0.02,0
+2024,Almont,Lupinus polyphyllus,0.05222272994,1.492537313,0.02,1
+2024,Almont,Taraxacum officianale,0.03916704746,0,0.015,0
+2024,Almont,Astragalus drummondii,0.02611136497,0,0.01,0
+2024,Almont,Boechera consanguinea,0.02611136497,0,0.01,0
+2024,Almont,Boechera stricta,0.02611136497,0,0.01,0
+2024,Almont,Pediocactus simpsonii,0.02611136497,0,0.01,0
+2024,Almont,Penstemon strictus,0.02611136497,0,0.01,0
+2024,Almont,Delphinium nuttallianum,0.01305568249,0,0.005,0
+2024,Almont,Polygonum sp.,0.01305568249,0,0.005,0

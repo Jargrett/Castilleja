@@ -19,6 +19,7 @@ cacr.cover <- read.csv("Cacr Cover 24 - Cover.csv")
 cali.env <- subset(cali.cover, select=c(1:3,5:10))
 case.env <- subset(case.cover, select=c(1:3,5:10))
 cacr.env <- subset(cacr.cover, select=c(1:3,6:11))
+
 #Isolating the species matrix, we also will remove Castilleja from the analysis to assess the background community
 nocase.cover.matrix <- case.cover[ -c(1:10,26)]
 nocali.cover.matrix <- cali.cover[ -c(1:10,25)]
@@ -66,8 +67,8 @@ write.csv(cali.cover.diversity, "/Users/jargrett/Desktop/Castilleja/Data Analysi
 cali.cover.diversity <- read.csv("Combined linariifolia Cover Diversity.csv")
 write.csv(case.cover.diversity, "/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL/Observational REU/Combined septentrionalis Cover Diversity.csv", row.names=FALSE)
 case.cover.diversity <- read.csv("Combined septentrionalis Cover Diversity.csv")
-write.csv(cacr.cover.diversity, "/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL/Observational REU/Combined septentrionalis Cover Diversity.csv", row.names=FALSE)
-cacr.cover.diversity <- read.csv("Combined septentrionalis Cover Diversity.csv")
+write.csv(cacr.cover.diversity, "/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL/Observational REU/chromosa Cover Diversity.csv", row.names=FALSE)
+cacr.cover.diversity <- read.csv("chromosa Cover Diversity.csv")
 #----------------------------Diversity Analysis--------------------------------#
 #We will do analysis by species starting with septentrionalis first
 library(lme4)#for modeling linear mixed effect models
@@ -77,6 +78,7 @@ library(performance)#this is new
 library(see)#this is new
 library(lmerTest)
 library(patchwork)
+library(ggpubr)
 #Lets first check the data structure
 str(case.cover.diversity)
 #We will want to change some of our integers and characters to factors
@@ -86,7 +88,7 @@ case.cover.diversity <- as.data.frame(unclass(case.cover.diversity),stringsAsFac
 #Fixed effects = castilleja and site
 #Random effects = year and pair
 
-#Shannon Diverisity
+#Shannon Diversity
 case.div <- lmer(div ~ castilleja*site + year + (1|pair), data = case.cover.diversity)
 summary(case.div)
 Anova(case.div) #Castilleja p = 0.02415, Site p =  < 2e-16
@@ -112,11 +114,11 @@ check_model(case.even)
 
 #visuals
 case.diversity.plot <- ggplot(case.cover.diversity, aes(x = castilleja, y = div)) +
-  stat_summary(aes(group = pair), geom = "line", fun.y = mean, col ="ivory3") +
+  stat_summary(aes(group = pair), geom = "line", fun = mean, col ="ivory3") +
   geom_point(aes(color = (castilleja), size = 1, alpha = 2), show.legend = FALSE) + 
   stat_summary(fun=mean, geom = "crossbar", position = position_dodge(1), linewidth = 1, width = 0.25, col = "grey34") +
   theme_pubr() +
-  facet_wrap(~Site) +
+  facet_wrap(~site) +
   scale_color_manual(values=c( "khaki3", "burlywood4")) +
   labs(x = "Castilleja septentrionalis", y = "Shannon Diversity") +
   ylim(1,2.7)
@@ -126,10 +128,9 @@ case.diversity.plot
 case.richness.plot <- ggplot(case.cover.diversity, aes(x = castilleja, y = rich)) +
   stat_summary(aes(group = pair), geom = "line", fun.y = mean, col ="ivory3") +
   geom_point(aes(color = (castilleja), size = 1, alpha = 2), show.legend = FALSE) + 
-  #stat_summary(fun.y=mean, position = position_dodge(1), size = 2, col = "grey34") +
   stat_summary(fun=mean, geom = "crossbar", position = position_dodge(1), linewidth = 1, width = 0.25, col = "grey34") +
   theme_pubr() +
-  facet_wrap(~Site) +
+  facet_wrap(~site) +
   scale_color_manual(values=c( "khaki3", "burlywood4")) +
   labs(x = "Castilleja septentrionalis", y = "Species Richness") +
   ylim(0,20)
@@ -139,10 +140,9 @@ case.richness.plot
 case.evenness.plot <- ggplot(case.cover.diversity, aes(x = castilleja, y = even)) +
   stat_summary(aes(group = pair), geom = "line", fun.y = mean, col ="ivory3") +
   geom_point(aes(color = (castilleja), size = 1, alpha = 2), show.legend = FALSE) + 
-  #stat_summary(fun.y=mean, position = position_dodge(1), size = 2, col = "grey34") +
   stat_summary(fun=mean, geom = "crossbar", position = position_dodge(1), linewidth = 1, width = 0.25, col = "grey34") +
   theme_pubr() +
-  facet_wrap(~Site) +
+  facet_wrap(~site) +
   scale_color_manual(values=c( "khaki3", "burlywood4")) +
   labs(x = "Castilleja septentrionalis", y = "Species Evenness") +
   ylim(0.2,1)
@@ -183,7 +183,7 @@ cali.diversity.plot <- ggplot(cali.cover.diversity, aes(x = castilleja, y = div)
   geom_point(aes(color = (castilleja), size = 1, alpha = 2), show.legend = FALSE) + 
   stat_summary(fun=mean, geom = "crossbar", position = position_dodge(1), linewidth = 1, width = 0.25, col = "grey34") +
   theme_pubr() +
-  facet_wrap(~Site) +
+  facet_wrap(~site) +
   scale_color_manual(values=c( "coral", "burlywood4")) +
   labs(x = "Castilleja linariifolia", y = "Shannon Diversity") +
   ylim(0,3)
@@ -196,7 +196,7 @@ cali.richness.plot <- ggplot(cali.cover.diversity, aes(x = castilleja, y = rich)
   #stat_summary(fun=mean, position = position_dodge(1), size = 2, col = "grey34") +
   stat_summary(fun=mean, geom = "crossbar", position = position_dodge(1), linewidth = 1, width = 0.25, col = "grey34") +
   theme_pubr() +
-  facet_wrap(~Site) +
+  facet_wrap(~site) +
   scale_color_manual(values=c( "coral", "burlywood4")) +
   labs(x = "Castilleja linariifolia", y = "Species Richness") +
   ylim(3,18)
@@ -209,7 +209,6 @@ cali.evenness.plot <- ggplot(cali.cover.diversity, aes(x = castilleja, y = even)
   #stat_summary(fun.y=mean, position = position_dodge(1), size = 2, col = "grey34") +
   stat_summary(fun=mean, geom = "crossbar", position = position_dodge(1), linewidth = 1, width = 0.25, col = "grey34") +
   theme_pubr() +
-  facet_wrap(~Site) +
   scale_color_manual(values=c( "coral", "burlywood4")) +
   labs(x = "Castilleja linariifolia", y = "Species Evenness") +
   ylim(.4,1)
@@ -245,7 +244,6 @@ cacr.diversity.plot <- ggplot(cacr.cover.diversity, aes(x = castilleja, y = div)
   geom_point(aes(color = (castilleja), size = 1, alpha = 2), show.legend = FALSE) + 
   stat_summary(fun=mean, geom = "crossbar", position = position_dodge(1), linewidth = 1, width = 0.25, col = "grey34") +
   theme_pubr() +
-  facet_wrap(~Site) +
   scale_color_manual(values=c( "darkred", "burlywood4")) +
   labs(x = "Castilleja chromosa", y = "Shannon Diversity") +
   ylim(0,3)
@@ -258,7 +256,6 @@ cacr.richness.plot <- ggplot(cacr.cover.diversity, aes(x = castilleja, y = rich)
   #stat_summary(fun=mean, position = position_dodge(1), size = 2, col = "grey34") +
   stat_summary(fun=mean, geom = "crossbar", position = position_dodge(1), linewidth = 1, width = 0.25, col = "grey34") +
   theme_pubr() +
-  facet_wrap(~Site) +
   scale_color_manual(values=c( "darkred", "burlywood4")) +
   labs(x = "Castilleja chromosa", y = "Species Richness") +
   ylim(0,20)
@@ -271,7 +268,6 @@ cacr.evenness.plot <- ggplot(cacr.cover.diversity, aes(x = castilleja, y = even)
   #stat_summary(fun.y=mean, position = position_dodge(1), size = 2, col = "grey34") +
   stat_summary(fun=mean, geom = "crossbar", position = position_dodge(1), linewidth = 1, width = 0.25, col = "grey34") +
   theme_pubr() +
-  facet_wrap(~Site) +
   scale_color_manual(values=c( "darkred", "burlywood4")) +
   labs(x = "Castilleja chromosa", y = "Species Evenness") +
   ylim(.4,1)
@@ -282,6 +278,77 @@ chromosa.plot <- ggarrange(cacr.diversity.plot, cacr.richness.plot, cacr.evennes
                                labels = c("A", "B","C"), 
                                nrow = 1, common.legend = TRUE, legend = "bottom")
 chromosa.plot
+
+#combined Castilleja diverisity
+case.cover.diversity <- case.cover.diversity %>% 
+  mutate(species = "C. septentrionalis")
+cali.cover.diversity <- cali.cover.diversity %>% 
+  mutate(species = "C. linariifolia")
+cacr.cover.diversity <- cacr.cover.diversity %>% 
+  mutate(species = "C. chromosa")
+castilleja.diversity <- rbind(case.cover.diversity, cali.cover.diversity,cacr.cover.diversity)
+castilleja.diversity <- as.data.frame(unclass(castilleja.diversity),stringsAsFactors=TRUE)
+
+castilleja.div <- lmer(div ~ castilleja*species + year + (1|pair) + (1|site), data = castilleja.diversity)
+summary(castilleja.div)
+Anova(castilleja.div)
+emmip(castilleja.div, castilleja ~ species)
+emmeans(castilleja.div, pairwise ~ castilleja|species)
+
+castilleja.rich <- lmer(rich ~ castilleja*species + year + (1|pair) + (1|site), data = castilleja.diversity)
+summary(castilleja.rich)
+Anova(castilleja.rich) 
+emmip(castilleja.rich, castilleja ~ species)
+emmeans(castilleja.rich, pairwise ~ castilleja|species)
+
+castilleja.even <- lmer(even ~ castilleja*species + year + (1|pair) + (1|site), data = castilleja.diversity)
+summary(castilleja.even)
+Anova(castilleja.even) 
+emmip(castilleja.even, castilleja ~ species)
+emmeans(castilleja.even, pairwise ~ castilleja|species)
+
+#Visuals
+castilleja.diversity.plot <- ggplot(castilleja.diversity, aes(x = castilleja, y = div)) +
+  stat_summary(aes(group = pair), geom = "line", fun.y = mean, col ="ivory3") +
+  geom_point(aes(color = (castilleja), size = 1, alpha = 2), show.legend = FALSE) + 
+  stat_summary(fun=mean, geom = "crossbar", position = position_dodge(1), linewidth = 1, width = 0.25, col = "grey34") +
+  theme_pubr() +
+  facet_wrap(~species) +
+  scale_color_manual(values=c( "darkseagreen4", "burlywood4")) +
+  labs(x = "Castilleja", y = "Shannon Diversity") +
+  ylim(0,3)
+
+castilleja.diversity.plot
+
+castilleja.richness.plot <- ggplot(castilleja.diversity, aes(x = castilleja, y = rich)) +
+  stat_summary(aes(group = pair), geom = "line", fun.y = mean, col ="ivory3") +
+  geom_point(aes(color = (castilleja), size = 1, alpha = 2), show.legend = FALSE) + 
+  stat_summary(fun=mean, geom = "crossbar", position = position_dodge(1), linewidth = 1, width = 0.25, col = "grey34") +
+  theme_pubr() +
+  facet_wrap(~species) +
+  scale_color_manual(values=c( "darkseagreen4", "burlywood4")) +
+  labs(x = "Castilleja", y = "Species Richness") +
+  ylim(0,20)
+
+castilleja.richness.plot
+
+
+castilleja.evenness.plot <- ggplot(castilleja.diversity, aes(x = castilleja, y = even)) +
+  stat_summary(aes(group = pair), geom = "line", fun.y = mean, col ="ivory3") +
+  geom_point(aes(color = (castilleja), size = 1, alpha = 2), show.legend = FALSE) + 
+  stat_summary(fun=mean, geom = "crossbar", position = position_dodge(1), linewidth = 1, width = 0.25, col = "grey34") +
+  theme_pubr() +
+  facet_wrap(~species) +
+  scale_color_manual(values=c( "darkseagreen4", "burlywood4")) +
+  labs(x = "Castilleja", y = "Pelou's Evenness") +
+  ylim(0,1)
+
+castilleja.evenness.plot
+
+castilleja.plot <- ggarrange(castilleja.diversity.plot, castilleja.richness.plot, castilleja.evenness.plot,
+                           labels = c("A", "B","C"), 
+                           nrow = 1, common.legend = TRUE, legend = "bottom")
+castilleja.plot
 #-------------------------Indicator Species Analysis---------------------------#
 #In this analysis we will be assessing species that are found more often in one treatment group compared to another.
 #This package takes into account both the relative abundance in a given plot as well as presence absence so we will use cover data
@@ -388,8 +455,10 @@ summary(cacr.cover.inv)#Nothing significant for Almont
 #septentrionalis
 nocase.cover <- case.cover%>% select (-c(Castilleja.septentrionalis))
 nocase.cover$no_case_plant <- rowSums(nocase.cover[11:81])
+nocase.cover$no_case_total <- nocase.cover$no_case_plant +nocase.cover$bare
 
-case.bare<- lmer(bare ~ castilleja*site + year + (1|pair), data = nocase.cover)
+
+case.bare <- lmer(bare ~ castilleja*site + year + (1|pair), data = nocase.cover)
 summary(case.bare)
 Anova(case.bare) #castilleja p = 1.868e-07, site p = 1.481e-14
 emmip(case.bare, castilleja ~ site)#looks like sites are different, but control plots have higher bareground consistently
@@ -401,15 +470,75 @@ Anova(case.plant) #castilleja p = 0.002466, site p = 1.168e-14
 emmip(case.plant, castilleja ~ site)#Castilleja plots have significantly higher plant cover 
 emmeans(case.plant, pairwise ~ castilleja|site)#looks like between 3-6% higher
 
-case.total<- lmer(total_cover ~ castilleja*site + year + (1|pair), data = nocase.cover)
+case.total<- lmer(no_case_total ~ castilleja*site + year + (1|pair), data = nocase.cover)
 summary(case.total)
-Anova(case.total) #castilleja p = 0.002487, site p = 0.003333
+Anova(case.total) #castilleja p = 0.04872, site p = 0.02171
 emmip(case.total, castilleja ~ site)#Castilleja plots have significantly higher total cover 
 emmeans(case.total, pairwise ~ castilleja|site) #looks like between 1-6% higher
+
+#Standard error calc
+mean_nocase.bare <- nocase.cover %>% 
+  group_by(castilleja) %>% 
+  summarise(mean= mean(bare),
+            se = sd(bare)/sqrt(n()))
+mean_nocase.plant <- nocase.cover %>% 
+  group_by(castilleja) %>% 
+  summarise(mean= mean(no_case_plant),
+            se = sd(no_case_plant)/sqrt(n()))
+mean_nocase.total <- nocase.cover %>% 
+  group_by(castilleja) %>% 
+  summarise(mean= mean(no_case_total),
+            se = sd(no_case_total)/sqrt(n()))
+#Visials
+
+case.bareplot <- ggplot(data = mean_nocase.bare, aes(x = castilleja, y = mean, fill = castilleja)) +
+  geom_col(position = "dodge", width = .7, linewidth = 0.5, alpha = 0.5, color = "black", size = 0.1) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.5), width = 0.15) +
+  theme_pubr() +
+  scale_fill_manual(values=c("cornsilk2", "burlywood4")) +
+  labs(x = "Castilleja septentrionalis", y = "Percent Bareground") +
+  geom_bracket(data = mean_nocali.bare,
+               xmin = "Castilleja", xmax = "Control", y.position = 0.50,
+               label = "***") +
+  ylim(0,1)
+  
+case.bareplot
+
+case.plantplot <- ggplot(data = mean_nocase.plant, aes(x = castilleja, y = mean, fill = castilleja)) +
+  geom_col(position = "dodge", width = .7, linewidth = 0.5, alpha = 0.5, color = "black", size = 0.1) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.5), width = 0.15) +
+  theme_pubr() +
+  labs(x = "Castilleja septentrionalis", y = "Percent Plant Cover") +
+  scale_fill_manual(values=c("cornsilk2", "burlywood4")) +
+  geom_bracket(data = mean_nocali.bare,
+               xmin = "Castilleja", xmax = "Control", y.position = 0.9,
+               label = "**") +
+  ylim(0,1)
+
+case.plantplot
+
+case.totalplot <- ggplot(data = mean_nocase.total, aes(x = castilleja, y = mean, fill = castilleja)) +
+  geom_col(position = "dodge", width = .7, linewidth = 0.5, alpha = 0.5, color = "black", size = 0.1) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.5), width = 0.15) +
+  theme_pubr() +
+  labs(x = "Castilleja septentrionalis", y = "Percent Total Cover") +
+  scale_fill_manual(values=c("cornsilk2", "burlywood4")) +
+  ylim(0,1.25)
+
+case.totalplot
+
+case.plants.plot <- ggarrange(case.plantplot, case.bareplot,
+                              labels = c("A", "B"), 
+                              nrow = 1, common.legend = TRUE, legend = "bottom")
+case.plants.plot
 
 #linariifolia
 nocali.cover <- cali.cover%>% select (-c(Castilleja.linariifolia))
 nocali.cover$no_cali_plant <- rowSums(nocali.cover[11:75])
+nocali.cover$no_calie_total <- nocali.cover$no_cali_plant + nocali.cover$bare
 
 cali.bare<- lmer(bare ~ castilleja*site + year + (1|pair), data = nocali.cover)
 summary(cali.bare)
@@ -424,15 +553,74 @@ Anova(cali.plant) #site p = 0.003679, year p = 0.006288
 emmip(cali.plant, castilleja ~ site)#no significance in plant cover
 emmeans(cali.plant, pairwise ~ castilleja|site)#looks like between 4-10% higher
 
-cali.total<- lmer(total_cover ~ castilleja*site + year + (1|pair), data = nocali.cover)
+cali.total<- lmer(no_cali_total ~ castilleja*site + year + (1|pair), data = nocali.cover)
 summary(cali.total)
-Anova(cali.total) #site p = 0.004993
+Anova(cali.total) #site p = 0.004993, Castilleja p = 4.108e-06 
 emmip(cali.total, castilleja ~ site)
 emmeans(cali.total, pairwise ~ castilleja|site)
+
+#Standard error calc
+mean_nocali.bare <- nocali.cover %>% 
+  group_by(castilleja) %>% 
+  summarise(mean= mean(bare),
+            se = sd(bare)/sqrt(n()))
+mean_nocali.plant <- nocali.cover %>% 
+  group_by(castilleja) %>% 
+  summarise(mean= mean(no_cali_plant),
+            se = sd(no_cali_plant)/sqrt(n()))
+mean_nocali.total <- nocali.cover %>% 
+  group_by(castilleja) %>% 
+  summarise(mean= mean(no_cali_total),
+            se = sd(no_cali_total)/sqrt(n()))
+
+#Visials
+cali.bareplot <- ggplot(data = mean_nocali.bare, aes(x = castilleja, y = mean, fill = castilleja)) +
+  geom_col(position = "dodge", width = .7, linewidth = 0.5, alpha = 0.5, color = "black", size = 0.1) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.5), width = 0.15) +
+  theme_pubr() +
+  scale_fill_manual(values=c("indianred3", "burlywood4")) +
+  labs(x = "Castilleja linariifolia", y = "Percent Bareground") +
+  geom_bracket(data = mean_nocali.bare,
+               xmin = "Castilleja", xmax = "Control", y.position = 0.65,
+               label = "***") +
+  ylim(0,1)
+cali.bareplot
+
+cali.plantplot <- ggplot(data = mean_nocali.plant, aes(x = castilleja, y = mean, fill = castilleja)) +
+  geom_col(position = "dodge", width = .7, linewidth = 0.5, alpha = 0.5, color = "black", size = 0.2) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.5), width = 0.15) +
+  theme_pubr() +
+  labs(x = "Castilleja linariifolia", y = "Percent Plant Cover") +
+  scale_fill_manual(values=c("indianred3", "burlywood4")) +
+  geom_bracket(data = mean_nocali.bare,
+               xmin = "Castilleja", xmax = "Control", y.position = 0.75,
+               label = "ns") +
+  ylim(0,1)
+
+cali.plantplot
+
+cali.totalplot <- ggplot(data = mean_nocali.total, aes(x = castilleja, y = mean, fill = castilleja)) +
+  geom_col(position = "dodge", width = .7, linewidth = 0.5, alpha = 0.5, color = "black", size = 0.2) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.5), width = 0.15) +
+  theme_pubr() +
+  labs(x = "Castilleja linariifolia", y = "Percent Plant Cover") +
+  scale_fill_manual(values=c("indianred3", "burlywood4")) +
+  ylim(0,1.25)
+
+cali.totalplot
+
+cali.plants.plot <- ggarrange(cali.plantplot, cali.bareplot,
+                              labels = c("A", "B"), 
+                              nrow = 1, common.legend = TRUE, legend = "bottom")
+cali.plants.plot
 
 #chromosa
 nocacr.cover <- cacr.cover%>% select (-c(Castilleja.chromosa))
 nocacr.cover$no_cacr_plant <- rowSums(nocacr.cover[12:56])
+nocacr.cover$no_cacr_total <- nocacr.cover$no_cacr_plant + nocacr.cover$bare
 
 cacr.bare<- lmer(bare ~ castilleja + (1|pair), data = nocacr.cover)
 summary(cacr.bare)
@@ -446,10 +634,57 @@ Anova(cacr.plant) #no significance
 emmip(cacr.plant, castilleja)
 emmeans(cacr.plant, pairwise ~ castilleja)
 
-cacr.total<- lmer(total_cover ~ castilleja + (1|pair), data = nocacr.cover)
+cacr.total<- lmer(no_cacr_total ~ castilleja + (1|pair), data = nocacr.cover)
 summary(cacr.total)
 Anova(cacr.total) #castilleja p = 0.03736
 emmeans(cacr.total, pairwise ~ castilleja) #2% higher in castilleja plots
+
+#Standard error calc
+mean_nocacr.bare <- nocacr.cover %>% 
+  group_by(castilleja) %>% 
+  summarise(mean= mean(bare),
+            se = sd(bare)/sqrt(n()))
+mean_nocacr.plant <- nocacr.cover %>% 
+  group_by(castilleja) %>% 
+  summarise(mean= mean(no_cacr_plant),
+            se = sd(no_cacr_plant)/sqrt(n()))
+mean_nocacr.total <- nocacr.cover %>% 
+  group_by(castilleja) %>% 
+  summarise(mean= mean(no_cacr_total),
+            se = sd(no_cacr_total)/sqrt(n()))
+
+cacr.bareplot <- ggplot(data = mean_nocacr.bare, aes(x = castilleja, y = mean, fill = castilleja)) +
+  geom_col(position = "dodge", width = .7, linewidth = 0.5, alpha = 0.5, color = "black", size = 0.2) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.5), width = 0.15) +
+  theme_pubr() +
+  labs(x = "Castilleja chromosa", y = "Percent Bareground") +
+  scale_fill_manual(values=c("darkred", "burlywood4")) +
+  geom_bracket(data = mean_nocacr.bare,
+               xmin = "Castilleja", xmax = "Control", y.position = 0.75,
+               label = "ns") +
+  ylim(0,1)
+
+cacr.bareplot
+
+cacr.plantplot <- ggplot(data = mean_nocacr.plant, aes(x = castilleja, y = mean, fill = castilleja)) +
+  geom_col(position = "dodge", width = .7, linewidth = 0.5, alpha = 0.5, color = "black", size = 0.2) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.5), width = 0.15) +
+  theme_pubr() +
+  labs(x = "Castilleja chromosa", y = "Percent Plant Cover") +
+  scale_fill_manual(values=c("darkred", "burlywood4")) +
+  geom_bracket(data = mean_nocacr.plant,
+               xmin = "Castilleja", xmax = "Control", y.position = .75,
+               label = "ns") +
+  ylim(0,1)
+
+cacr.plantplot
+
+cacr.plants.plot <- ggarrange(cacr.plantplot, cacr.bareplot,
+                              labels = c("A", "B"), 
+                              nrow = 1, common.legend = TRUE, legend = "bottom")
+cacr.plants.plot
 
 #Now we will look at compararisons between individual species
 #We will focus on the three species identified by our indicator species analysis
@@ -568,32 +803,56 @@ emmeans(case.sedge.lm, pairwise ~ castilleja|site)
 #This allows us to look at the compoisitinoal differences between our sites,castilleja,etc.
 library(ggrepel)
 
+#First we will subset data by sites
+emerald.cover <- case.cover %>%filter((site == "Emerald Lake"))
+emerald.cover.matrix <- emerald.cover[ -c(1:10,26)]
+emerald.env <- subset(emerald.cover, select=c(1:3,5:10))
+
+avery.cover <- case.cover %>%filter((site == "Avery"))
+avery.cover.matrix <- avery.cover[ -c(1:10,26)]
+avery.env <- subset(avery.cover, select=c(1:3,5:10))
+
+copper.cover <- case.cover %>%filter((site == "Copper Creek"))
+copper.cover.matrix <- copper.cover[ -c(1:10,26)]
+copper.env <- subset(copper.cover, select=c(1:3,5:10))
 #we are working towards Matrix format so we can take our castilleja matrix as our starting point
 set.seed(20)
 
 #First calculate distance matrix
-case.dist <-vegdist(nocase.cover.matrix, method="bray")
+emerald.dist <-vegdist(emerald.cover.matrix, method="bray")
+avery.dist <-vegdist(avery.cover.matrix, method="bray")
+copper.dist <-vegdist(copper.cover.matrix, method="bray")
+
 cali.dist <-vegdist(nocali.cover.matrix, method="bray")
 
 #Run NMDS on distance matrix
-case.nmds <- metaMDS(case.dist, distance="bray", #use bray-curtis distance
-                      k=2, #2 dimensions
+emerald.nmds <- metaMDS(emerald.dist, distance="bray", #use bray-curtis distance
+                      k=3, #2 dimensions
                       try=500) #for publication I recommend 500)
-cali.nmds <- metaMDS(cali.dist, distance="bray", #use bray-curtis distance
+
+avery.nmds <- metaMDS(avery.dist, distance="bray", #use bray-curtis distance
+                        k=2, #2 dimensions
+                        try=500) #for publication I recommend 500)
+
+copper.nmds <- metaMDS(copper.dist, distance="bray", #use bray-curtis distance
                    k=3, #2 dimensions
                    try=500) #for publication I recommend 500)
-case.nmds#stress value 0.15 which is below .2 so we are good!
+emerald.nmds#stress value 0.15 which is below .2 so we are good!
+avery.nmds
+copper.nmds
 cali.nmds#stress value 0.27 which is above .2 so we need to investigate
 
-ordiplot(case.nmds, type="text", display="sites")
-ordiplot(cali.nmds, type="text", display="sites")
+ordiplot(emerald.nmds, type="text", display="sites")
+ordiplot(avery.nmds, type="text", display="sites")
 
-case.nmds.scores <- as.data.frame(vegan::scores(case.nmds))
-case.NMDS <- cbind(case.env,case.nmds.scores) #final dataset
+emerald.nmds.scores <- as.data.frame(vegan::scores(emerald.nmds))
+emerald.NMDS <- cbind(emerald.env,emerald.nmds.scores) #final dataset
 
-adonis2(case.dist~castilleja*site*pair, data = case.NMDS, permutations=999)
+adonis2(emerald.dist~castilleja*year*pair, data = emerald.NMDS, permutations=999)
+adonis2(avery.dist~castilleja*year*pair, data = emerald.NMDS, permutations=999)
+adonis2(copper.dist~castilleja*year*pair, data = emerald.NMDS, permutations=999)
 
-ggplot(case.NMDS, aes(NMDS1, NMDS2)) +
+ggplot(emerald.NMDS, aes(NMDS1, NMDS2)) +
   geom_point(aes(color=castilleja , shape=site)) +
   coord_equal() +
   theme_bw()
@@ -722,37 +981,51 @@ copper.predict <- as.data.frame(predict(copper.lm, newdata = copper.nn, interval
 
 CC.nn <- cbind(copper.nn, copper.predict)
 
-ggplot(EL.nn, aes(x = rel_abund_cover, y = NN_freq)) +
-  geom_point() +
+emerald.nearest <- ggplot(EL.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
-  #geom_point(aes(y = fit), col = "steelblue", size = 2.5) +
+  geom_point() +
   geom_line(aes(y = fit)) +
   geom_line(aes(y = lwr), linetype = "dashed", col = "cadetblue") +
   geom_line(aes(y = upr), linetype = "dashed", col = "cadetblue") +
+  geom_text(aes(0.1071574642, 0.24050633), label = "Deschampsia cespitosa", color = "grey22", nudge_y = 0.015) +
+  geom_text(aes(0.1251533742, 0.18987342), label = "Fragaria virginiana", color = "grey22", nudge_y = -0.01) +
   labs(x = "Relative Abundance", y = "Nearest Neighbor Frequency") +
   theme_minimal()
+emerald.nearest
 
-ggplot(AO.nn, aes(x = rel_abund_cover, y = NN_freq)) +
-  geom_point() +
+avery.nearest <- ggplot(AO.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
+  geom_point() +
   #geom_point(aes(y = fit), col = "steelblue", size = 2.5) +
   geom_line(aes(y = fit)) +
   geom_line(aes(y = lwr), linetype = "dashed", col = "cadetblue") +
   geom_line(aes(y = upr), linetype = "dashed", col = "cadetblue") +
+  geom_text(aes(0.1531226486, 0.29411765), label = "Poa pratensis", color = "grey22", nudge_y = 0.015) +
   labs(x = "Relative Abundance", y = "Nearest Neighbor Frequency") +
   theme_minimal()
+avery.nearest
 
-ggplot(CC.nn, aes(x = rel_abund_cover, y = NN_freq)) +
-  geom_point() +
+copper.nearest <- ggplot(CC.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
+  geom_point() +
   #geom_point(aes(y = fit), col = "steelblue", size = 2.5) +
   geom_line(aes(y = fit)) +
   geom_line(aes(y = lwr), linetype = "dashed", col = "cadetblue") +
   geom_line(aes(y = upr), linetype = "dashed", col = "cadetblue") +
   labs(x = "Relative Abundance", y = "Nearest Neighbor Frequency") +
+  geom_text(aes(0.0778150748, 0.13333333), label = "Thalictrum fendleri", color = "grey22", nudge_y = 0.01) +
+  geom_text(aes(0.0234589564, 0.06666667), label = "Mertensia brevistyla", color = "grey22", nudge_y = 0.01) +
   theme_minimal()
+copper.nearest
+
+case.nearestplots <- ggarrange(emerald.nearest, avery.nearest, copper.nearest,
+                              labels = c("A", "B","C"), 
+                              nrow = 1, common.legend = FALSE, legend = "bottom")
+
+case.nearestplots 
 
 johnson.nn <- filter(cali.nn, site == "Johnson Hill")
+johnson.nn <- johnson.nn[-c(7), ]
 johnson.lm <- lm(NN_freq ~ rel_abund_cover, data = johnson.nn)
 summary(johnson.lm)
 
@@ -768,23 +1041,56 @@ deer.predict <- as.data.frame(predict(deer.lm, newdata = deer.nn, interval = "pr
 
 DC.nn <- cbind(deer.nn, deer.predict)
 
-ggplot(JH.nn, aes(x = rel_abund_cover, y = NN_freq)) +
-  geom_point() +
+deercreek.nearest <- ggplot(DC.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
+  geom_point() +
   #geom_point(aes(y = fit), col = "steelblue", size = 2.5) +
   geom_line(aes(y = fit)) +
   geom_line(aes(y = lwr), linetype = "dashed", col = "cadetblue") +
   geom_line(aes(y = upr), linetype = "dashed", col = "cadetblue") +
   labs(x = "Relative Abundance", y = "Nearest Neighbor Frequency") +
+  geom_text(aes(0.0746228926, 0.155038760), label = "Eremogone congesta", color = "grey22", nudge_y = 0.007) +
+  geom_text(aes(0.0143414410, 0.121212121), label = "Bromus inermis", color = "grey22", nudge_y = 0.007) +
+  geom_text(aes(0.0402707664, 0.111111111), label = "Carex sp.", color = "grey22", nudge_y = 0.007) +
+  geom_text(aes(0.0383203304, 0.090909091), label = "Achnatherum sp.", color = "grey22", nudge_y = 0.007) +
+  geom_text(aes(0.0463176575, 0.085271318), label = "Carex sp.", color = "grey22", nudge_y = -0.005) +
   theme_minimal()
+deercreek.nearest
 
-ggplot(DC.nn, aes(x = rel_abund_cover, y = NN_freq)) +
-  geom_point() +
+johnson.nearest <- ggplot(JH.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
-  #geom_point(aes(y = fit), col = "steelblue", size = 2.5) +
+  geom_point() +
   geom_line(aes(y = fit)) +
   geom_line(aes(y = lwr), linetype = "dashed", col = "cadetblue") +
   geom_line(aes(y = upr), linetype = "dashed", col = "cadetblue") +
+  geom_text(aes(0.0738952297, 0.14492754), label = "Lathyrus lanszwertii", color = "grey22", nudge_y = 0.007) +
+  geom_text(aes(0.0496049166, 0.10144928), label = "Viola praemorsa", color = "grey22", nudge_y = 0.007) +
   labs(x = "Relative Abundance", y = "Nearest Neighbor Frequency") +
   theme_minimal()
+johnson.nearest
 
+cali.nearestplots <- ggarrange(deercreek.nearest, johnson.nearest,
+                               labels = c("A", "B"), 
+                               nrow = 1, common.legend = FALSE, legend = "bottom")
+
+cali.nearestplots 
+
+almont.lm <- lm(NN_freq ~ rel_abund_cover, data = cacr.nn)
+summary(almont.lm)
+
+almont.predict <- as.data.frame(predict(almont.lm, newdata = cacr.nn, interval = "prediction", level = 0.95))
+
+AL.nn <- cbind(cacr.nn, almont.predict)
+
+almont.nearest <- ggplot(AL.nn, aes(x = rel_abund_cover, y = NN_freq)) +
+  geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
+  geom_point() +
+  geom_line(aes(y = fit)) +
+  geom_line(aes(y = lwr), linetype = "dashed", col = "cadetblue") +
+  geom_line(aes(y = upr), linetype = "dashed", col = "cadetblue") +
+  geom_text(aes(0.0574450029, 0.16417910), label = "Stipeae", color = "grey22", nudge_y = 0.007) +
+  geom_text(aes(0.0168418304, 0.08955224), label = "Crepis sp.", color = "grey22", nudge_y = 0.007) +
+  geom_text(aes(0.0577061166, 0.01492537), label = "Artemisia arbuscula", color = "grey22", nudge_y = -0.006) +
+  labs(x = "Relative Abundance", y = "Nearest Neighbor Frequency") +
+  theme_minimal()
+almont.nearest
