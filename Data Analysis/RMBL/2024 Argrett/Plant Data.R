@@ -39,19 +39,7 @@ str(EL.comb)
 summary(EL.comb)
 
 #changing to factors
-EL.comb$site <- as.factor(EL.comb$site)
-EL.comb$year <- as.factor(EL.comb$year)
-EL.comb$litter <- as.factor(EL.comb$litter)
-EL.comb$code <- as.factor(EL.comb$code)
-EL.comb$collection <- as.factor(EL.comb$collection)
-EL.comb$functional_group <- as.factor(EL.comb$functional_group)
-EL.comb$removal <- as.factor(EL.comb$removal)
-EL.comb$nearest_neighbor <- as.factor(EL.comb$nearest_neighbor)
-EL.comb$pair <- as.factor(EL.comb$pair)
-EL.comb$block <- as.factor(EL.comb$block)
-EL.comb$plot <- as.factor(EL.comb$plot)
-EL.comb$life_history <- as.factor(EL.comb$life_history)
-
+EL.comb <- as.data.frame(unclass(EL.comb),stringsAsFactors=TRUE)
 #Removing pre treatment analysis from dataset
 emerald <- EL.comb%>% filter (collection == "Post")
 str(emerald)
@@ -62,22 +50,41 @@ summary(emerald)
 # we will need to conververt data to a matrix format
 emerald.24 <- EL.comb%>% filter (year == "2024")
 emerald.24 <- emerald.24[!(emerald.24$functional_group %in% "environmental"),]
+emerald.24 <- emerald.24[!(emerald.24$code %in% "CASE"),]
 emerald.24.cov <- subset(emerald.24, select = c('plot','code','cover'))
 
-emerald.matrix <- matrify(emerald.24.cov)
+emerald.23 <- EL.comb%>% filter (year == "2023")
+emerald.23 <- emerald.24[!(emerald.23$functional_group %in% "environmental"),]
+emerald.23 <- emerald.24[!(emerald.23$code %in% "CASE"),]
+emerald.23.cov <- subset(emerald.23, select = c('plot','code','cover'))
+
+emerald.24.matrix <- matrify(emerald.24.cov)
+emerald.23.matrix <- matrify(emerald.23.cov)
 # Calculating Shannon diversity for plots
-div <- diversity(emerald.matrix, index = "shannon")
+div.24 <- diversity(emerald.24.matrix, index = "shannon")
+div.23 <- diversity(emerald.23.matrix, index = "shannon")
 # Calculating species richness for plots
-rich <- specnumber(emerald.matrix)
+rich.24 <- specnumber(emerald.24.matrix)
+rich.23 <- specnumber(emerald.23.matrix)
 # Calculating species evenness for plots 
-even <- diversity(emerald.matrix, index = "shannon") / log(specnumber(emerald.matrix)) 
+even.24 <- diversity(emerald.24.matrix, index = "shannon") / log(specnumber(emerald.24.matrix)) 
+even.23 <- diversity(emerald.23.matrix, index = "shannon") / log(specnumber(emerald.23.matrix)) 
 
 #combined data set with Plot Data File and calculated values
 p.data <- read.csv("Emerald Lake Plot Data - Info.csv") #importing metadata
-el.div <- cbind(p.data,div,rich,even) #final dataset
+el.div.24 <- cbind(p.data,div.24,rich.24,even.24) #final dataset
+el.div.23 <- cbind(p.data,div.23,rich.23,even.23)
 
-write.csv(el.div, "/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL/2024 Argrett/Diversity 2023.csv", row.names=FALSE)
+el.div.24 <- plyr::rename(el.div.24, c("div.24" = "div",
+                                       "even.24" = "even",
+                                       "rich.24" = "rich"))
 
+el.div.23 <- plyr::rename(el.div.23, c("div.23" = "div",
+                                       "even.23" = "even",
+                                       "rich.23" = "rich"))
+
+write.csv(el.div.24, "/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL/2024 Argrett/Diversity 2024.csv", row.names=FALSE)
+write.csv(el.div.23, "/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL/2024 Argrett/Diversity 2023.csv", row.names=FALSE)
 
 
 el.div.23 <- read.csv("Diversity 2023.csv")
