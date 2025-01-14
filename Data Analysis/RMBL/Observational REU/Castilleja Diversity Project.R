@@ -289,13 +289,13 @@ cacr.cover.diversity <- cacr.cover.diversity %>%
 castilleja.diversity <- rbind(case.cover.diversity, cali.cover.diversity,cacr.cover.diversity)
 castilleja.diversity <- as.data.frame(unclass(castilleja.diversity),stringsAsFactors=TRUE)
 
-castilleja.div <- lmer(div ~ castilleja*species + year + (1|pair) + (1|site), data = castilleja.diversity)
+castilleja.div <- lmer(div ~ castilleja*species + castilleja*year + (1|pair) + (1|site), data = castilleja.diversity)
 summary(castilleja.div)
 Anova(castilleja.div)
-emmip(castilleja.div, castilleja ~ species)
-emmeans(castilleja.div, pairwise ~ castilleja|species)
+emmip(castilleja.div, castilleja ~ year)
+emmeans(castilleja.div, pairwise ~ castilleja|year)
 
-castilleja.rich <- lmer(rich ~ castilleja*species + year + (1|pair) + (1|site), data = castilleja.diversity)
+castilleja.rich <- lmer(rich ~ castilleja*species + castilleja*year + (1|pair) + (1|site), data = castilleja.diversity)
 summary(castilleja.rich)
 Anova(castilleja.rich) 
 emmip(castilleja.rich, castilleja ~ species)
