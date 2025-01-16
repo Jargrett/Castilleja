@@ -17,6 +17,7 @@ library(ggplot2)#for plotting
 library(ggpubr)#extended functions for plotting
 library(car)#for regression analysis
 library(emmeans)#post-hoc analysis
+
 #To install packages use this code template:
 #install.packages("package_name")
 
@@ -45,11 +46,11 @@ hemi.biomass
 
 biomass.host <- lm(Biomass_host ~ host*parasite, data = biomass)
 summary(biomass.host)
-Anova(biomass.host)
+Anova(biomass.host) #this is the meat of what we want
 emmip(biomass.host, parasite ~ host)
-emmeans(biomass.host, pairwise ~ parasite|host) 
+emmeans(biomass.host, pairwise ~ parasite|host)
 
 biomass.hemi <- lm(biomass_parasite ~ host, data = biomass)
 summary(biomass.hemi)
 Anova(biomass.hemi)
-emmeans(biomass.hemi, pairwise ~ parasite|host) 
+

@@ -301,19 +301,18 @@ Anova(castilleja.rich)
 emmip(castilleja.rich, castilleja ~ species)
 emmeans(castilleja.rich, pairwise ~ castilleja|species)
 
-castilleja.even <- lmer(even ~ castilleja*species + year + (1|pair) + (1|site), data = castilleja.diversity)
+castilleja.even <- lmer(even ~ castilleja*species + castilleja*year + (1|pair) + (1|site), data = castilleja.diversity)
 summary(castilleja.even)
 Anova(castilleja.even) 
 emmip(castilleja.even, castilleja ~ species)
 emmeans(castilleja.even, pairwise ~ castilleja|species)
 
-#Visuals
+  #Visuals
 castilleja.diversity.plot <- ggplot(castilleja.diversity, aes(x = castilleja, y = div)) +
   stat_summary(aes(group = pair), geom = "line", fun.y = mean, col ="ivory3") +
   geom_point(aes(color = (castilleja), size = 1, alpha = 2), show.legend = FALSE) + 
   stat_summary(fun=mean, geom = "crossbar", position = position_dodge(1), linewidth = 1, width = 0.25, col = "grey34") +
   theme_pubr() +
-  facet_wrap(~species) +
   scale_color_manual(values=c( "darkseagreen4", "burlywood4")) +
   labs(x = "Castilleja", y = "Shannon Diversity") +
   ylim(0,3)
@@ -325,7 +324,6 @@ castilleja.richness.plot <- ggplot(castilleja.diversity, aes(x = castilleja, y =
   geom_point(aes(color = (castilleja), size = 1, alpha = 2), show.legend = FALSE) + 
   stat_summary(fun=mean, geom = "crossbar", position = position_dodge(1), linewidth = 1, width = 0.25, col = "grey34") +
   theme_pubr() +
-  facet_wrap(~species) +
   scale_color_manual(values=c( "darkseagreen4", "burlywood4")) +
   labs(x = "Castilleja", y = "Species Richness") +
   ylim(0,20)
@@ -338,7 +336,6 @@ castilleja.evenness.plot <- ggplot(castilleja.diversity, aes(x = castilleja, y =
   geom_point(aes(color = (castilleja), size = 1, alpha = 2), show.legend = FALSE) + 
   stat_summary(fun=mean, geom = "crossbar", position = position_dodge(1), linewidth = 1, width = 0.25, col = "grey34") +
   theme_pubr() +
-  facet_wrap(~species) +
   scale_color_manual(values=c( "darkseagreen4", "burlywood4")) +
   labs(x = "Castilleja", y = "Pelou's Evenness") +
   ylim(0,1)
