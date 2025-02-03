@@ -24,6 +24,7 @@ cacr.env <- subset(cacr.cover, select=c(1:3,6:11))
 nocase.cover.matrix <- case.cover[ -c(1:10,26)]
 nocali.cover.matrix <- cali.cover[ -c(1:10,25)]
 nocacr.cover.matrix <- cacr.cover[ -c(1:11,30)]
+
 #Isolating the species matric with Castilleja included we will use this to run the secondary analysis
 case.cover.matrix <- case.cover[ -c(1:10)]
 cali.cover.matrix <- cali.cover[ -c(1:10)]
@@ -288,6 +289,7 @@ cacr.cover.diversity <- cacr.cover.diversity %>%
   mutate(species = "C. chromosa")
 castilleja.diversity <- rbind(case.cover.diversity, cali.cover.diversity,cacr.cover.diversity)
 castilleja.diversity <- as.data.frame(unclass(castilleja.diversity),stringsAsFactors=TRUE)
+write.csv(castilleja.diversity, "/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL/Observational REU/castilleja diversity.csv", row.names=FALSE)
 
 castilleja.div <- lmer(div ~ castilleja*species + castilleja*year + (1|pair) + (1|site), data = castilleja.diversity)
 summary(castilleja.div)
@@ -451,8 +453,9 @@ summary(cacr.cover.inv)#Nothing significant for Almont
 
 #septentrionalis
 nocase.cover <- case.cover%>% select (-c(Castilleja.septentrionalis))
-nocase.cover$no_case_plant <- rowSums(nocase.cover[11:81])
-nocase.cover$no_case_total <- nocase.cover$no_case_plant +nocase.cover$bare
+nocase.cover$no_plant <- rowSums(nocase.cover[11:81])
+nocase.cover$no_total <- nocase.cover$no_plant +nocase.cover$bare
+comba.case <- subset(nocase.cover, select=c(1:3,5:10,82,83))
 
 
 case.bare <- lmer(bare ~ castilleja*site + year + (1|pair), data = nocase.cover)
@@ -495,7 +498,7 @@ case.bareplot <- ggplot(data = mean_nocase.bare, aes(x = castilleja, y = mean, f
   theme_pubr() +
   scale_fill_manual(values=c("cornsilk2", "burlywood4")) +
   labs(x = "Castilleja septentrionalis", y = "Percent Bareground") +
-  geom_bracket(data = mean_nocali.bare,
+  geom_bracket(data = mean_nocase.bare,
                xmin = "Castilleja", xmax = "Control", y.position = 0.50,
                label = "***") +
   ylim(0,1)
@@ -534,8 +537,9 @@ case.plants.plot
 
 #linariifolia
 nocali.cover <- cali.cover%>% select (-c(Castilleja.linariifolia))
-nocali.cover$no_cali_plant <- rowSums(nocali.cover[11:75])
-nocali.cover$no_calie_total <- nocali.cover$no_cali_plant + nocali.cover$bare
+nocali.cover$no_plant <- rowSums(nocali.cover[11:75])
+nocali.cover$no_total <- nocali.cover$no_plant + nocali.cover$bare
+comba.cali <- subset(nocali.cover, select=c(1:3,5:10,76,77))
 
 cali.bare<- lmer(bare ~ castilleja*site + year + (1|pair), data = nocali.cover)
 summary(cali.bare)
@@ -616,8 +620,9 @@ cali.plants.plot
 
 #chromosa
 nocacr.cover <- cacr.cover%>% select (-c(Castilleja.chromosa))
-nocacr.cover$no_cacr_plant <- rowSums(nocacr.cover[12:56])
-nocacr.cover$no_cacr_total <- nocacr.cover$no_cacr_plant + nocacr.cover$bare
+nocacr.cover$no_plant <- rowSums(nocacr.cover[12:56])
+nocacr.cover$no_total <- nocacr.cover$no_plant + nocacr.cover$bare
+comba.cach <- subset(nocacr.cover, select=c(1:3,6:11,57,58))
 
 cacr.bare<- lmer(bare ~ castilleja + (1|pair), data = nocacr.cover)
 summary(cacr.bare)
@@ -682,6 +687,31 @@ cacr.plants.plot <- ggarrange(cacr.plantplot, cacr.bareplot,
                               labels = c("A", "B"), 
                               nrow = 1, common.legend = TRUE, legend = "bottom")
 cacr.plants.plot
+
+
+comba.case <- comba.case %>% 
+  mutate(species = "C. septentrionalis")
+comba.cali <- comba.cali %>% 
+  mutate(species = "C. linariifolia")
+comba.cach <- comba.cach %>% 
+  mutate(species = "C. chromosa")
+comba.cover <- rbind(comba.case, comba.cali,comba.cach)
+comba.cover <- as.data.frame(unclass(castilleja.diversity),stringsAsFactors=TRUE)
+
+comba.bare <- comba.cover %>% 
+  group_by(castilleja) %>% 
+  summarise(mean= mean(bare),
+            se = sd(bare)/sqrt(n()))
+comba.plant <- comba.cover %>% 
+  group_by(castilleja) %>% 
+  summarise(mean= mean(no_plant),
+            se = sd(no_plant)/sqrt(n()))
+comba.total <- comba.cover %>% 
+  group_by(castilleja) %>% 
+  summarise(mean= mean(no_total),
+            se = sd(no_total)/sqrt(n()))
+
+write.csv(comba.cover, "/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL/Observational REU/castilleja productivity.csv", row.names=FALSE)
 
 #Now we will look at compararisons between individual species
 #We will focus on the three species identified by our indicator species analysis
