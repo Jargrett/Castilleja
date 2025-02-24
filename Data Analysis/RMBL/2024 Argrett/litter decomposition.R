@@ -15,6 +15,7 @@ library(ggpubr)#extended functions for plotting
 library(car)#for regression analysis
 library(emmeans)#post-hoc analysis
 library(dplyr)
+library(plyr)
 
 #load-in the data
 winter <- read.csv("Litter Decomposition - 2023-2024 Overwinter.csv")
@@ -56,7 +57,13 @@ decomp <- decomp %>% mutate(time = deployment_duration/365)
 within <- within %>% mutate(time = deployment_duration/365)
 winter <- winter %>% mutate(time = deployment_duration/365)
 yearlong <- yearlong %>% mutate(time = deployment_duration/365)
+
+
 #first lets see if decomp is different between treatment
+
+#Removing Outliers for testing
+decomp <- decomp[-c(57,69,157),]
+
 over.lm <- lm(mass_remaining ~ removal*litter + deployment_period, data = decomp)
 summary(over.lm)
 Anova(over.lm)
@@ -77,3 +84,11 @@ summary(litter)
 
 class(litter)
 plot(litter)
+
+boxplot(decomp$mass_remaining ~ decomp$litter)
+
+ggplot(decomp, aes(x = litter, y = mass_remaining)) +
+  geom_jitter(aes(color = (litter))) +
+  facet_wrap(~deployment_period) +
+  labs(x = "Litter Treatment", y = "Mass remaining")
+

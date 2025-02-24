@@ -3,7 +3,7 @@
 
 #Set up---------------------------
 #Set working directory, clean environment, etc.
-setwd("C:/Users/jargr/Dropbox/PC/Desktop/Anny Stats/Lab 9")
+setwd("/Users/jargrett/Desktop/Castilleja/Data Analysis/Anny Stats/Lab 9")
 #Load packages
 library(GGally)#this is new
 library(factoextra)#this is new

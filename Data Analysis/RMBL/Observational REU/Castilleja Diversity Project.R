@@ -904,6 +904,8 @@ cali.24.count <- read.csv("Cali 2024 - Individuals.csv")
 #combining datesets by castilleja species
 case.count <- rbind.fill(case.23.count,case.24.count)
 cali.count <- rbind.fill(cali.23.count,cali.24.count)
+write.csv(case.count, "/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL/Observational REU/combined septentrionalis counts.csv", row.names=FALSE)
+write.csv(cali.count, "/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL/Observational REU/combined linariifolia counts.csv", row.names=FALSE)
 
 #remove set merged NA values to 0
 cali.count[is.na(cali.count)] <- 0
