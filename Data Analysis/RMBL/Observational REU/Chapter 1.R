@@ -15,24 +15,27 @@ library(see)#this is new
 library(lmerTest)
 library(patchwork)
 library(ggpubr)
+library(rstatix)
 
+#import and clean data
 castilleja.cover <- read.csv("castilleja cover complete.csv")
+castilleja.cover$castilleja[castilleja.cover$castilleja=="Castilleja"] <- "Present"
+castilleja.cover$castilleja[castilleja.cover$castilleja=="Control"] <- "Absent"
+castilleja.cover <- as.data.frame(unclass(castilleja.cover),stringsAsFactors=TRUE)
 
-cali.count <- read.csv("combined linariifolia counts.csv")
-cali.count <- cali.count %>% 
-  mutate(species = "C. linariifolia")
-case.count <- read.csv("combined septentrionalis counts.csv")
-case.count <- case.count %>% 
-  mutate(species = "C. septentrionalis")
+castilleja.long<- pivot_longer(castilleja.cover, cols = Achillea.millefolium:Wyethia.x.magna,
+                               names_to = "taxa",
+                               values_to = "cover")
 
-cali.count[is.na(cali.count)] <- 0
-case.count[is.na(case.count)] <- 0
+castilleja.long <- filter(castilleja.long, cover > 0)
 
-comba.count <- rbind.fill(case.count, cali.count)
-comba.count[is.na(comba.count)] <- 0
+average_cover <- castilleja.long %>% 
+  group_by(castilleja, taxa) %>% 
+  summarize(average_cover = mean(cover), plots = n())
 
-#castilleja.count <- read.csv("castilleja count complete.csv")
+write.csv(average_cover, "/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL/Observational REU/average cover.csv", row.names=FALSE)
 
+castilleja.cover$castilleja <- factor(castilleja.cover$castilleja, levels=c("Present", "Absent"))
 #Diversity Analysis
 div <- lmer(div ~ castilleja*species + castilleja*year + (1|pair) + (1|site), data = castilleja.cover)
 summary(div)
@@ -52,42 +55,7 @@ Anova(even)
 emmip(even, castilleja ~ species)
 emmeans(even, pairwise ~ castilleja|species)
 
-diversity.plot <- ggplot(castilleja.cover, aes(x = castilleja, y = div)) +
-  stat_summary(aes(group = pair), geom = "line", fun.y = mean, col ="ivory3") +
-  geom_point(aes(color = (castilleja), size = 1, alpha = 2), show.legend = FALSE) + 
-  stat_summary(fun=mean, geom = "crossbar", position = position_dodge(1), linewidth = 1, width = 0.25, col = "grey34") +
-  theme_pubr() +
-  facet_wrap(~year) +
-  scale_color_manual(values=c( "darkseagreen4", "burlywood4")) +
-  labs(x = "Castilleja", y = "Shannon Diversity") +
-  ylim(0,3)
-
-diversity.plot
-
-richness.plot <- ggplot(castilleja.cover, aes(x = castilleja, y = rich)) +
-  stat_summary(aes(group = pair), geom = "line", fun.y = mean, col ="ivory3") +
-  geom_point(aes(color = (castilleja), size = 1, alpha = 2), show.legend = FALSE) + 
-  stat_summary(fun=mean, geom = "crossbar", position = position_dodge(1), linewidth = 1, width = 0.25, col = "grey34") +
-  theme_pubr() +
-  facet_wrap(~year) +
-  scale_color_manual(values=c( "darkseagreen4", "burlywood4")) +
-  labs(x = "Castilleja", y = "Species Richness") +
-  ylim(0,20)
-
-richness.plot
-
-evenness.plot <- ggplot(castilleja.cover, aes(x = castilleja, y = even)) +
-  stat_summary(aes(group = pair), geom = "line", fun.y = mean, col ="ivory3") +
-  geom_point(aes(color = (castilleja), size = 1, alpha = 2), show.legend = FALSE) + 
-  stat_summary(fun=mean, geom = "crossbar", position = position_dodge(1), linewidth = 1, width = 0.25, col = "grey34") +
-  theme_pubr() +
-  facet_wrap(~year) +
-  scale_color_manual(values=c( "darkseagreen4", "burlywood4")) +
-  labs(x = "Castilleja", y = "Species Evenness") +
-  ylim(0,1)
-
-evenness.plot
-
+#plotting
 castilleja.div <- castilleja.cover %>% 
   group_by(castilleja, year) %>% 
   dplyr::summarise(mean= mean(div),
@@ -101,17 +69,44 @@ castilleja.even <- castilleja.cover %>%
   dplyr::summarise(mean= mean(even),
                    se = sd(even)/sqrt(n()))
 
-div.plot <- ggplot(data = castilleja.div, aes(x = castilleja, y = mean, fill = castilleja)) +
-  geom_point() +
+
+div.plot <- ggplot(data = castilleja.div, aes(x = castilleja, y = mean, color = castilleja)) +
+  geom_point(size = 4.5, shape = 18) +
   geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
-                position =  position_dodge(width = 0.5), width = 0.15) +
+                position =  position_dodge(width = 0.5), width = 0.1) +
   theme_pubr() +
   facet_wrap(~year) +
-  scale_fill_manual(values=c("indianred3", "burlywood4")) +
-  labs(x = "Hemiparasite presence", y = "Species Diversity") +
+  scale_color_manual(values=c("#8c510a", "#35978f")) +
+  labs(x = "Castilleja", y = "Shannon diversity of co-occurring species") +
   ylim(1,2)
 div.plot
 
+rich.plot <- ggplot(data = castilleja.rich, aes(x = castilleja, y = mean, color = castilleja)) +
+  geom_point(size = 4.5, shape = 18) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.5), width = 0.1) +
+  theme_pubr() +
+  facet_wrap(~year) +
+  scale_color_manual(values=c("#8c510a", "#35978f")) +
+  labs(x = "Castilleja", y = "Species richness of co-occurring species") +
+  ylim(5,13)
+rich.plot
+
+even.plot <- ggplot(data = castilleja.even, aes(x = castilleja, y = mean, color = castilleja)) +
+  geom_point(size = 4.5, shape = 18) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.5), width = 0.1) +
+  theme_pubr() +
+  facet_wrap(~year) +
+  scale_color_manual(values=c("#8c510a", "#35978f")) +
+  labs(x = "Castilleja", y = "Species evenness of co-occurring species") +
+  ylim(0.4,1)
+even.plot
+
+diversity.plot <- ggarrange(div.plot, rich.plot, even.plot,
+                           labels = c("A", "B","C"), 
+                           nrow = 1, common.legend = TRUE, legend = "bottom")
+diversity.plot
 #raincloudplot attempts
 install.packages("ggthemes")
 library(tidyquant)
@@ -131,6 +126,7 @@ ggplot(castilleja.cover, aes(1, div, fill = castilleja, color = castilleja)) +
   scale_fill_brewer(palette = 'Dark2') +
   scale_color_brewer(palette = 'Dark2') +
   guides(fill = 'none', color = 'none')
+
 
 
 
