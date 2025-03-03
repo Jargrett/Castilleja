@@ -116,7 +116,7 @@ diversity.plots
 #we are working towards Matrix format so we can take our castilleja matrix as our starting point
 library(ggrepel)
 library(vegan)
-devtools::install_github("jfq3/ggordiplots")
+library(ggordiplots)
 species.matrix <- castilleja.cover[ -c(1:16)]
 species.env <- subset(castilleja.cover, select=c(1:8))
 
@@ -142,8 +142,6 @@ NMDS <- cbind(species.env,nmds.scores) #final dataset
 
 
 perm <- adonis2(dist~castilleja*species + castilleja*year + castilleja*site, data = NMDS, permutations=9999)
-
-
 perm
 
 
@@ -257,23 +255,28 @@ library(hrbrthemes)
 case.nn <- read.csv("NN - Case.csv")
 case.nn$rel_abund_cover <- case.nn$rel_abund_cover / 100
 case.nn$NN_freq <- case.nn$NN_freq / 100
+case.nn <- as.data.frame(unclass(case.nn),stringsAsFactors=TRUE)
+case.nn$year <- factor(case.nn$year)
 
 cali.nn <- read.csv("NN - Cali.csv")
 cali.nn$rel_abund_cover <- cali.nn$rel_abund_cover / 100
 cali.nn$NN_freq <- cali.nn$NN_freq / 100
+cali.nn <- as.data.frame(unclass(cali.nn),stringsAsFactors=TRUE)
+cali.nn$year <- factor(cali.nn$year)
 
 cacr.nn <- read.csv("NN - Cacr.csv")
 cacr.nn$rel_abund_cover <- cacr.nn$rel_abund_cover / 100
 cacr.nn$NN_freq <- cacr.nn$NN_freq / 100
+cacr.nn <- as.data.frame(unclass(cacr.nn),stringsAsFactors=TRUE)
+cacr.nn$year <- factor(cacr.nn$year)
 
 emerald.nn <- filter(case.nn, site == "Emerald Lake")
 emerald.lm <- lm(NN_freq ~ rel_abund_cover, data = emerald.nn)
-summary(emerald.lm)
+
 
 emerald.predict <- as.data.frame(predict(emerald.lm, newdata = emerald.nn, interval = "prediction", level = 0.95))
 
 EL.nn <- cbind(emerald.nn, emerald.predict)
-
 
 avery.nn <- filter(case.nn, site == "Avery")
 avery.lm <- lm(NN_freq ~ rel_abund_cover, data = avery.nn)
@@ -293,12 +296,15 @@ CC.nn <- cbind(copper.nn, copper.predict)
 
 emerald.nearest <- ggplot(EL.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
-  geom_point() +
+  geom_point(aes(color = year, shape = year), size = 2.3) +
+  scale_color_manual( values=c("darkgoldenrod3", "chartreuse4")) +
+  scale_shape_manual(values = c(20, 18)) +
   geom_line(aes(y = fit)) +
   geom_line(aes(y = lwr), linetype = "dashed", col = "cadetblue") +
   geom_line(aes(y = upr), linetype = "dashed", col = "cadetblue") +
   geom_text(aes(0.1071574642, 0.24050633), label = "Deschampsia cespitosa", color = "grey22", nudge_y = 0.015) +
   geom_text(aes(0.1251533742, 0.18987342), label = "Fragaria virginiana", color = "grey22", nudge_y = -0.01) +
+  geom_text(aes(0.1480333652, 0.20430108), label = "Fragaria virginiana", color = "grey22", nudge_y = 0.01) +
   labs(x = "Relative Abundance", y = "Nearest Neighbor Frequency") +
   theme_minimal() +
   ggtitle("Castilleja septentrionalis") +
@@ -307,7 +313,9 @@ emerald.nearest
 
 avery.nearest <- ggplot(AO.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
-  geom_point() +
+  geom_point(aes(color = year, shape = year), size = 2.3) +
+  scale_color_manual( values=c("darkgoldenrod3", "chartreuse4")) +
+  scale_shape_manual(values = c(20, 18)) +
   geom_line(aes(y = fit)) +
   geom_line(aes(y = lwr), linetype = "dashed", col = "cadetblue") +
   geom_line(aes(y = upr), linetype = "dashed", col = "cadetblue") +
@@ -320,7 +328,9 @@ avery.nearest
 
 copper.nearest <- ggplot(CC.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
-  geom_point() +
+  geom_point(aes(color = year, shape = year), size = 2.3) +
+  scale_color_manual( values=c("darkgoldenrod3", "chartreuse4")) +
+  scale_shape_manual(values = c(20, 18)) +
   geom_line(aes(y = fit)) +
   geom_line(aes(y = lwr), linetype = "dashed", col = "cadetblue") +
   geom_line(aes(y = upr), linetype = "dashed", col = "cadetblue") +
@@ -357,13 +367,15 @@ DC.nn <- cbind(deer.nn, deer.predict)
 
 deercreek.nearest <- ggplot(DC.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
-  geom_point() +
+  geom_point(aes(color = year, shape = year), size = 2.3) +
+  scale_color_manual( values=c("darkgoldenrod3", "chartreuse4")) +
+  scale_shape_manual(values = c(20, 18)) +
   geom_line(aes(y = fit)) +
   geom_line(aes(y = lwr), linetype = "dashed", col = "cadetblue") +
   geom_line(aes(y = upr), linetype = "dashed", col = "cadetblue") +
   labs(x = "Relative Abundance", y = "Nearest Neighbor Frequency") +
   geom_text(aes(0.0746228926, 0.155038760), label = "Eremogone congesta", color = "grey22", nudge_y = 0.007) +
-  geom_text(aes(0.0143414410, 0.121212121), label = "Bromus inermis", color = "grey22",nudge_x = 0.005, nudge_y = 0.007) +
+  geom_text(aes(0.0143414410, 0.121212121), label = "Bromus inermis", color = "grey22",nudge_x = 0.007, nudge_y = 0.007) +
   geom_text(aes(0.0402707664, 0.111111111), label = "Carex sp.", color = "grey22", nudge_y = 0.007) +
   geom_text(aes(0.0383203304, 0.090909091), label = "Achnatherum sp.", color = "grey22", nudge_y = 0.007) +
   geom_text(aes(0.0463176575, 0.085271318), label = "Carex sp.", color = "grey22", nudge_y = -0.005) +
@@ -374,7 +386,9 @@ deercreek.nearest
 
 johnson.nearest <- ggplot(JH.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
-  geom_point() +
+  geom_point(aes(color = year, shape = year), size = 2.3) +
+  scale_color_manual( values=c("darkgoldenrod3", "chartreuse4")) +
+  scale_shape_manual(values = c(20, 18)) +
   geom_line(aes(y = fit)) +
   geom_line(aes(y = lwr), linetype = "dashed", col = "cadetblue") +
   geom_line(aes(y = upr), linetype = "dashed", col = "cadetblue") +
@@ -401,7 +415,9 @@ AL.nn <- cbind(cacr.nn, almont.predict)
 
 almont.nearest <- ggplot(AL.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
-  geom_point() +
+  geom_point(aes(color = year, shape = year), size = 2.3) +
+  scale_color_manual( values=c("darkgoldenrod3", "chartreuse4")) +
+  scale_shape_manual(values = c(20, 18)) +
   geom_line(aes(y = fit)) +
   geom_line(aes(y = lwr), linetype = "dashed", col = "cadetblue") +
   geom_line(aes(y = upr), linetype = "dashed", col = "cadetblue") +
@@ -416,5 +432,5 @@ almont.nearest
 
 nearestplots <- ggarrange(emerald.nearest, avery.nearest, copper.nearest, deercreek.nearest, johnson.nearest, almont.nearest,
                                labels = c("A", "B", "C", "D", "E", "F"), 
-                               nrow = 2, ncol = 3, common.legend = FALSE, legend = "bottom")
+                               nrow = 2, ncol = 3, common.legend = TRUE, legend = "right")
 nearestplots
