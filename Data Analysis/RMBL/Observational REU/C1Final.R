@@ -12,10 +12,15 @@ library(patchwork)
 library(ggpubr)
 library(rstatix)
 
+#df73ff = purple
+
 castilleja.cover <- read.csv("castilleja cover complete.csv")
+castilleja.cover <- as.data.frame(unclass(castilleja.cover),stringsAsFactors=TRUE)
 castilleja.cover$castilleja[castilleja.cover$castilleja == "Control"] <- "Absent"
 castilleja.cover$castilleja[castilleja.cover$castilleja == "Castilleja"] <- "Present"
 cover.overview <- read.csv("average cover.csv")
+cover.overview <- as.data.frame(unclass(cover.overview),stringsAsFactors=TRUE)
+
 #Diversity Analysis
 div <- lmer(div ~ castilleja*species + castilleja*year + (1|pair) + (1|site), data = castilleja.cover)
 summary(div)
