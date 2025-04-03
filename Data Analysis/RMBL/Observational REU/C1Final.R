@@ -15,9 +15,9 @@ library(rstatix)
 #df73ff = purple
 
 castilleja.cover <- read.csv("castilleja cover complete.csv")
-castilleja.cover <- as.data.frame(unclass(castilleja.cover),stringsAsFactors=TRUE)
 castilleja.cover$castilleja[castilleja.cover$castilleja == "Control"] <- "Absent"
 castilleja.cover$castilleja[castilleja.cover$castilleja == "Castilleja"] <- "Present"
+castilleja.cover <- as.data.frame(unclass(castilleja.cover),stringsAsFactors=TRUE)
 cover.overview <- read.csv("average cover.csv")
 cover.overview <- as.data.frame(unclass(cover.overview),stringsAsFactors=TRUE)
 
@@ -25,8 +25,8 @@ cover.overview <- as.data.frame(unclass(cover.overview),stringsAsFactors=TRUE)
 div <- lmer(div ~ castilleja*species + castilleja*year + (1|pair) + (1|site), data = castilleja.cover)
 summary(div)
 Anova(div)
-div.em <- emmip(div, ~ castilleja, plotit = FALSE)
-emmeans(div, pairwise ~ castilleja)
+emmip(div, ~ castilleja, plotit = FALSE)
+emmeans(div, pairwise ~ castilleja|year)
 
 rich <- lmer(rich ~ castilleja*species + castilleja*year + (1|pair) + (1|site), data = castilleja.cover)
 summary(rich)
