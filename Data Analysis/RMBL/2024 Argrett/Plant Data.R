@@ -46,7 +46,7 @@ str(emerald)
 summary(emerald)
 
 #------------Diversity Analysis------------#
-# here we will be working with the count column
+# here we will be working with the cover column
 # we will need to conververt data to a matrix format
 emerald.24 <- EL.comb%>% filter (year == "2024")
 emerald.24 <- emerald.24[!(emerald.24$functional_group %in% "environmental"),]
@@ -54,8 +54,8 @@ emerald.24 <- emerald.24[!(emerald.24$code %in% "CASE"),]
 emerald.24.cov <- subset(emerald.24, select = c('plot','code','cover'))
 
 emerald.23 <- EL.comb%>% filter (year == "2023")
-emerald.23 <- emerald.24[!(emerald.23$functional_group %in% "environmental"),]
-emerald.23 <- emerald.24[!(emerald.23$code %in% "CASE"),]
+emerald.23 <- emerald.23[!(emerald.23$functional_group %in% "environmental"),]
+emerald.23 <- emerald.23[!(emerald.23$code %in% "CASE"),]
 emerald.23.cov <- subset(emerald.23, select = c('plot','code','cover'))
 
 emerald.24.matrix <- matrify(emerald.24.cov)
@@ -96,119 +96,151 @@ el.div.comb<- rbind.fill(el.div.23,el.div.24)
 el.div.comb$year <- as.factor(el.div.comb$year)
 
 #Run some models
-div.lmm <- lmer(div ~ removal*year + (1|block) + (1|pair), data = el.div.comb)
+div.lmm <- lmer(div ~ litter*removal + year + (1|block) + (1|pair), data = el.div.comb)
 summary(div.lmm)
 Anova(div.lmm)
 emmip(div.lmm, removal ~ year)
 emmeans(div.lmm, pairwise ~ removal|year)
 
-rich.lmm <- lmer(rich ~ removal*year + (1|block) + (1|pair), data = el.div.comb)
+rich.lmm <- lmer(rich ~ litter*removal + year + (1|block) + (1|pair), data = el.div.comb)
 summary(rich.lmm)
 Anova(rich.lmm)
 emmip(rich.lmm, removal ~ year)
 emmeans(rich.lmm, pairwise ~ removal|year)
 
-even.lmm <- lmer(even ~ removal*year + (1|block) + (1|pair), data = el.div.comb)
+even.lmm <- lmer(even ~ litter*removal + year + (1|block) + (1|pair), data = el.div.comb)
 summary(even.lmm)
 Anova(even.lmm)
 emmip(even.lmm, removal ~ year)
 emmeans(even.lmm, pairwise ~ year|removal)
 
-diversity.plot <- ggplot(el.div.comb, aes(x = removal, y = div)) +
-  stat_summary(aes(group = pair), geom = "line", fun.y = mean, col ="ivory3") +
-  geom_point(aes(color = (removal), size = 1, alpha = 2), show.legend = FALSE) + 
-  stat_summary(fun=mean, geom = "crossbar", position = position_dodge(1), linewidth = 1, width = 0.25, col = "grey34") +
+#Standard error calculations
+el.div <- el.div.comb %>% 
+  group_by(removal, year) %>% 
+  dplyr::summarise(mean= mean(div),
+                   se = sd(div)/sqrt(n()))
+el.rich <- el.div.comb %>% 
+  group_by(removal, year) %>% 
+  dplyr::summarise(mean= mean(rich),
+                   se = sd(rich)/sqrt(n()))
+el.even <- el.div.comb %>% 
+  group_by(removal, year) %>% 
+  dplyr::summarise(mean= mean(even),
+                   se = sd(even)/sqrt(n()))
+
+div.plot <- ggplot(data = el.div, aes(x = removal, y = mean, color = removal)) +
+  stat_summary(fun=mean, colour="grey90", geom="line", aes(group = 1)) +
+  geom_point(shape=18, size = 4) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.5), width = 0.07) +
   theme_pubr() +
-  facet_wrap(~year) +
-  scale_color_manual(values=c( "khaki3", "burlywood4")) +
-  labs(x = "Castilleja septentrionalis", y = "Shannon Diversity") +
-  ylim(1,3)
+  facet_wrap(~year) + 
+  scale_color_manual( values=c("#35978f", "#8c510a")) +
+  theme(strip.text = element_text(size = 15),
+        strip.background = element_blank(),
+        panel.border = element_rect(fill = "transparent", 
+                                    color = "gray", linewidth = 0.12)) +
+  labs(x = "Castilleja", y = "Shannon diversity of co-occuring species") +
+  theme(legend.position="none") +
+  ylim(1.5,2.5)
 
-diversity.plot
-
-richness.plot <- ggplot(el.div.comb, aes(x = removal, y = rich)) +
-  stat_summary(aes(group = pair), geom = "line", fun.y = mean, col ="ivory3") +
-  geom_point(aes(color = (removal), size = 1, alpha = 2), show.legend = FALSE) + 
-  stat_summary(fun=mean, geom = "crossbar", position = position_dodge(1), linewidth = 1, width = 0.25, col = "grey34") +
-  theme_pubr() +
-  facet_wrap(~year) +
-  scale_color_manual(values=c( "khaki3", "burlywood4")) +
-  labs(x = "Castilleja septentrionalis", y = "Species Richness") +
-  ylim(5,22)
-
-richness.plot
-
-evenness.plot <- ggplot(el.div.comb, aes(x = removal, y = even)) +
-  stat_summary(aes(group = pair), geom = "line", fun.y = mean, col ="ivory3") +
-  geom_point(aes(color = (removal), size = 1, alpha = 2), show.legend = FALSE) + 
-  stat_summary(fun=mean, geom = "crossbar", position = position_dodge(1), linewidth = 1, width = 0.25, col = "grey34") +
-  theme_pubr() +
-  facet_wrap(~year) +
-  scale_color_manual(values=c( "khaki3", "burlywood4")) +
-  labs(x = "Castilleja septentrionalis", y = "Species Evenness") +
-  ylim(0.5,1)
-
-evenness.plot
-
-
-div.plot <- ggarrange(diversity.plot, richness.plot, evenness.plot,
-                                  labels = c("A", "B","C"), 
-                                  nrow = 1, common.legend = TRUE, legend = "bottom")
 div.plot
 
-#--------Composition Analysis (Multivariate analysis) -------#
-library(ggrepel)
-# non-metric multidimensional scaling (NMDS)
-# for this we need to take a matrix so we will retake code from before
-emerald.24 <- EL.comb%>% filter (year == "2024")
-emerald.24 <- emerald.24[!(emerald.24$functional_group %in% "environmental"),] #remove rock,bare, and Litter
+rich.plot <- ggplot(data = el.rich, aes(x = removal, y = mean, color = removal)) +
+  stat_summary(fun=mean, colour="grey90", geom="line", aes(group = 1)) +
+  geom_point(shape=18, size = 4) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.5), width = 0.07) +
+  theme_pubr() +
+  facet_wrap(~year) + 
+  scale_color_manual( values=c("#35978f", "#8c510a")) +
+  theme(strip.text = element_text(size = 15),
+        strip.background = element_blank(),
+        panel.border = element_rect(fill = "transparent", 
+                                    color = "gray", linewidth = 0.12)) +
+  labs(x = "Castilleja", y = "Species Richness of co-occuring species") +
+  theme(legend.position="none") +
+  ylim(10,20)
 
-emerald.matrix <- matrify(emerald.24.cov)
-set.seed(20)#This sets the random start seed so that we are guaranteed to all get the same outputs
+rich.plot
+
+even.plot <- ggplot(data = el.even, aes(x = removal, y = mean, color = removal)) +
+  stat_summary(fun=mean, colour="grey90", geom="line", aes(group = 1)) +
+  geom_point(shape=18, size = 4) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.5), width = 0.07) +
+  theme_pubr() +
+  facet_wrap(~year) + 
+  scale_color_manual( values=c("#35978f", "#8c510a")) +
+  theme(strip.text = element_text(size = 15),
+        strip.background = element_blank(),
+        panel.border = element_rect(fill = "transparent", 
+                                    color = "gray", linewidth = 0.12)) +
+  labs(x = "Castilleja", y = "Species Evenness of co-occuring species") +
+  theme(legend.position="none") +
+  ylim(0.5,1)
+
+even.plot
+
+diversity.plots <- ggarrange(div.plot, rich.plot, even.plot,
+                             labels = c("A", "B","C"), 
+                             nrow = 1)
+diversity.plots  
+
+alt.rich.plot <- ggplot(data = el.rich, aes(x = year, y = mean, color = removal)) +
+  stat_summary(fun=mean, colour="grey90", geom="line", aes(group = 1)) +
+  geom_point(shape=18, size = 4,
+             position =  position_dodge(width = 0.5), width = 0.07) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.5), width = 0.07) +
+  theme_pubr() +
+  scale_color_manual( values=c("#35978f", "#8c510a")) +
+  theme(strip.text = element_text(size = 15),
+        strip.background = element_blank(),
+        panel.border = element_rect(fill = "transparent", 
+                                    color = "gray", linewidth = 0.12)) +
+  labs(x = "Sampling year", y = "Species Richness of co-occuring species") +
+  theme(legend.position="none") +
+  ylim(10,20)
+
+alt.rich.plot
+
+#--------------------------Multivariate analysis-------------------------------#
+#we will now run a (Multivariate analysis)
+#This allows us to look at the compositional differences between our sites,castilleja,etc.
+#we are working towards Matrix format so we can take our castilleja matrix as our starting point
+library(ggrepel)
+library(vegan)
+library(ggordiplots)
+
+
 
 #First calculate distance matrix
-emerald.dist <-vegdist(emerald.matrix, method="bray")
+dist <-vegdist(emerald.24.matrix, method="bray")
 
+
+set.seed(20)
 #Run NMDS on distance matrix
-emerald.nmds<-metaMDS(emerald.dist,distance="bray", #use bray-curtis distance
-                   k=3, #2 dimensions
-                   try=500 #force it to try 100 different times (default is 20, for publication I recommend 500)
-)
-emerald.nmds #Gives stress value of best solution, aim for <0.2
-#Check the fit
-
-stressplot(emerald.nmds) #Also called a "Shepard diagram"
-#We want this plot to show a monotonic relationship
-
-ordiplot(emerald.nmds, type="text", display="sites")
-
-#Can output ordination coordinates and use ggplot for nicer graphics
-nmds.scores <- as.data.frame(vegan::scores(emerald.nmds))  #Using the scores function from vegan to extract the site scores and convert to a data.frame
-#Add to mite.info dataframe
-#combined data set with Plot Data File and calculated values
-el.data <- read.csv("Diversity 2024.csv") #importing metadata
-el.NMDS <- cbind(el.data,nmds.scores) #final dataset
-
-#Build NMDS figure in ggplot
-ggplot(el.NMDS, aes(NMDS1, NMDS2)) +
-  geom_point() +
-  geom_text_repel(aes(NMDS1, NMDS2, label = pair), size = 3)#avoids text overlapping
-
-NMDS.scree <- function(x) { #where x is the name of the data frame variable
-  plot(rep(1, 6), replicate(6, metaMDS(x, autotransform = F, k = 1)$stress), xlim = c(1, 6),ylim = c(0, 0.30), xlab = "# of Dimensions", ylab = "Stress", main = "NMDS Scree plot")
-  for (i in 1:6) {
-    points(rep(i + 1,6),replicate(6, metaMDS(x, autotransform = F, k = i + 1)$stress))
-  }
-}
-#looks like k=3 is the best for our data
-NMDS.scree(emerald.dist)
-
-#PERMANOVA to test whether composition differs by shrub cover or topography---------
-adonis2(emerald.dist~removal*block*litter, data = el.NMDS, permutations=999)
+nmds <- metaMDS(dist, distance="bray", #use bray-curtis distance
+                k=3, #2 dimensions
+                try=500) #for publication I recommend 500)
 
 
-ggplot(el.NMDS, aes(NMDS1, NMDS2)) +
-  geom_point(aes(color= litter, shape=removal)) +
+nmds#stress value 0.14 which is below .2 so we need to investigate
+
+ordiplot(nmds, type="text", display="sites")
+
+nmds.scores <- as.data.frame(vegan::scores(nmds))
+
+NMDS <- cbind(el.div.24,nmds.scores) #final dataset
+
+
+perm <- adonis2(dist ~ litter*removal, data = NMDS, permutations=9999)
+perm
+
+
+ggplot(NMDS, aes(NMDS1, NMDS2)) +
+  geom_point(aes(color=litter , shape=removal), size = 3, alpha = 0.8) +
+  scale_color_manual( values=c("#B308F6", "#35978f","#E1BE6A","#000000")) +
   coord_equal() +
   theme_bw()
-

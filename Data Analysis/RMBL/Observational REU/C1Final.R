@@ -68,7 +68,7 @@ div.plot <- ggplot(data = castilleja.div, aes(x = reorder(castilleja, -mean), y 
         strip.background = element_blank(),
         panel.border = element_rect(fill = "transparent", 
        color = "gray", linewidth = 0.12)) +
-  labs(x = "Castilleja", y = "Shannon diversity of co-occuring species") +
+  labs(x = "Castilleja", y = "Shannon Diversity of co-occuring species") +
   theme(legend.position="none") +
   ylim(1,2.2)
 
@@ -86,7 +86,7 @@ rich.plot <- ggplot(data = castilleja.rich, aes(x = reorder(castilleja, -mean), 
         strip.background = element_blank(),
         panel.border = element_rect(fill = "transparent", 
                                     color = "gray", linewidth = 0.12)) +
-  labs(x = "Castilleja", y = "Species richness of co-occuring species") +
+  labs(x = "Castilleja", y = "Species Richness of co-occuring species") +
   theme(legend.position="none") +
   ylim(5,13)
 
@@ -146,7 +146,7 @@ nmds.scores <- as.data.frame(vegan::scores(nmds))
 NMDS <- cbind(species.env,nmds.scores) #final dataset
 
 
-perm <- adonis2(dist~castilleja*species + castilleja*year + castilleja*site, data = NMDS, permutations=9999)
+perm <- adonis2(dist ~ castilleja*species + castilleja*year + castilleja*site, data = NMDS, permutations=9999)
 perm
 
 
