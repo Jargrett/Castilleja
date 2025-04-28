@@ -4,7 +4,8 @@ setwd("/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL/2024 Argrett")
 library(tidyverse)#for data wrangling and restructuring
 library(plyr)#for data wrangling and restructuring
 library(ggplot2)#for plotting
-library(ggpubr)#extended functions for plotting
+library(ggpubr)#extended functions for plottinglibrary(remotes)
+library(ggpattern)
 library(car)#for regression analysis
 library(emmeans)#post-hoc analysis
 library(lme4)#for modeling linear mixed effect models
@@ -26,23 +27,55 @@ nitrate <- ggplot(soil, aes(x = litter, y = K)) +
 
 nitrate
 
-K.lmm <- lmer(K ~ litter*removal + burial + (1|block) + (1|pair), data = soil)
+K.lmm <- lmer(NO3 ~ litter*removal + burial + (1|block) + (1|pair), data = soil)
 summary(K.lmm)
 Anova(K.lmm)
 emmip(K.lmm, litter ~ removal)
 emmeans(K.lmm, pairwise ~  removal|litter)
+
+soil.NO3 <- soil %>% 
+  group_by(litter,removal,burial) %>% 
+  dplyr::summarise(mean= mean(NO3),
+                   se = sd(NO3)/sqrt(n()))
+
+NO3.plot <- ggplot(data = soil.NO3, aes(x = litter, y = mean, fill = removal, pattern = removal)) +
+  geom_bar(stat="identity", color="black",position=position_dodge2(preserve="single", padding=0), alpha=0.5) +
+  geom_errorbar(aes(ymin=mean, ymax=mean+se), alpha=1, width=.2,position=position_dodge(.9)) +
+  theme(panel.grid = element_blank(),legend.position = "bottom") +
+  labs(x="Litter Type", y="Nitrate (micro grams/10cm2/burial length)", pattern="") + scale_fill_manual(values=cols)+
+  geom_bar_pattern(stat="identity", position = "dodge", color = "black", pattern_angle = 45, pattern_density = 0.1, pattern_spacing = 0.025, pattern_key_scale_factor = 0.6) +
+  scale_fill_manual( values=c("#004D40", "#FFC107"))
+NO3.plot
+
+a<-ggplot(COroots, aes(x = Invasion, y = mean, fill = grp, pattern=Treatment, alpha=alfa)) +
+  geom_bar(stat="identity", color="black",position=position_dodge2(preserve="single", padding=0), alpha=0.5) +
+  geom_errorbar(aes(ymin=mean, ymax=mean+se), alpha=1, width=.2,position=position_dodge(.9)) +
+  theme(panel.grid = element_blank(),legend.position = "bottom") +
+  labs(x="Soil Type", y="Root Mass (g)", pattern="") + scale_fill_manual(values=cols)+
+  geom_bar_pattern(stat="identity", position = "dodge", color = "black", pattern_angle = 45, pattern_density = 0.1, pattern_spacing = 0.025, pattern_key_scale_factor = 0.6) +
+  scale_pattern_manual(values = c("stripe", "none")) +
+  theme(axis.text.x = element_text(size=11, colour= "black", angle = 0),axis.text.y = element_text(size=12, colour="black"),strip.text = element_text(size = 10))+
+  theme(axis.title.x = element_text(size=12, colour="black"), axis.title.y = element_text(size= 12, colour = "black"))+
+  theme(legend.title = element_blank())+theme(axis.ticks.x = element_blank())+
+  theme(panel.grid = element_blank(),legend.position = "bottom")+
+  theme(legend.title = element_blank())+theme(legend.text = element_text(size = 10, colour = "black"))+
+  theme(legend.background = element_blank())+ylim(0, 2.0) +
+  facet_grid(~ Grown, scales = "free") +
+  geom_signif(data=data.frame(Grown=c("Linaria", "Native")), aes(xmin =c(1,1), xmax = c(2,2), y_position = c(0.95, 1.95), annotations=c("*","*")), tip_length = 0, manual=T, inherit.aes = FALSE) +
+  guides(pattern = guide_legend(override.aes = list(fill = "white")),fill = guide_legend(override.aes = list(pattern = "none"))) +
+  guides(fill=FALSE)+ guides(size="none", alpha="none")
 
 
 #remove rows if NAs occur in any of the variables we care about
 winter.soil <- subset(soil, burial == 'overwinter')
 winter.soil <- subset( winter.soil, select = -c(B, S, Pb, Al, Cd))
 
-winter.soil <- winter.soil %>% filter_at(vars(NO3, NH4, Ca, Mg, K, P, Fe, Mn, Cu, Zn),
+year.soil <- year.soil %>% filter_at(vars(NO3, NH4, Ca, Mg, K, P, Fe, Mn, Cu, Zn),
                                     all_vars(!is.na(.)))
 
 #Examine correlations among the body shape response variables------
 #ggpairs plots is a good way to get lots of info (GGally package)
-ggpairs(winter.soil, mapping = aes(color = litter), 
+ggpairs(year.soil, mapping = aes(color = litter), 
         columns = c("NO3", "NH4", 
                     "K", "P"))+
   scale_colour_manual(values = c("coral4","darkolivegreen3","deepskyblue4","darkgoldenrod2")) +
@@ -54,28 +87,28 @@ ggpairs(winter.soil, mapping = aes(color = litter),
 ##Likely easy to find principle components
 
 #PCA analysis--------------------
-winter.pca <- prcomp (~ NO3 + NH4 + Ca + Mg + K + P + Fe + Mn + Cu + Zn,
-                    data=winter.soil,
+year.pca <- prcomp (~ NO3 + NH4 + Ca + Mg + K + P + Fe + Mn + Cu + Zn,
+                    data=year.soil,
                     scale. = TRUE) #Make sure to scale variables!
 
 #Get factor loadings on principle components
-winter.pca
+year.pca
 
 #Visualize how much variation is explained by each principle component (Scree plot)
 #Basic plot
-plot(winter.pca)#however, this gives us the absolute variances, not % of total variance
+plot(year.pca)#however, this gives us the absolute variances, not % of total variance
 #Use function from a different package (factoextra) for nicer plot
-fviz_eig(winter.pca,addlabels = TRUE)
+fviz_eig(year.pca,addlabels = TRUE)
 #PC1 and PC2 combined explain >55% of total variation
 #Feel pretty good about plotting on the first 2 PCs
 
 #Visualize results in a biplot--------
-fviz_pca_biplot(winter.pca, label = "var",
-                col.ind = winter.soil$litter, palette = c("coral4","darkgoldenrod2","deepskyblue4","darkolivegreen3"), 
+fviz_pca_biplot(year.pca, label = "var",
+                col.ind = year.soil$litter, palette = c("coral4","darkgoldenrod2","deepskyblue4","darkolivegreen3"), 
                 col.var = "black", repel = TRUE,
                 legend.title = "Litter Treatment")
 
-perm <- adonis2(winter.pca ~ litter*removal, data = NMDS, permutations=9999)
+perm <- adonis2(year.pca ~ litter*removal, data = NMDS, permutations=9999)
 perm
 
 
@@ -90,10 +123,13 @@ library(factoextra)#this is new
 
 #Create an object that contains the response variables (Nutrients)
 # Units: (micro grams/10cm2/burial length)
-nutrients <- subset( winter.soil, select = c(NO3, NH4, Ca, Mg, K, P, Fe, Mn, Cu, Zn))
+year.soil <- subset(soil, burial == 'year')
+year.soil <- subset( year.soil, select = -c(B, S, Pb, Al, Cd))
+
+nutrients <- subset(year.soil, select = c(NO3, NH4, Ca, Mg, K, P, Fe, Mn, Cu, Zn))
 
 #subset out predictors
-envi <- subset( winter.soil, select = c(5:10))
+envi <- subset(soil, select = c(5:10))
 
 #Normalize data – subtract the mean and divide by the standard deviation for each column.
 nutrients.scale <- scale(nutrients)
@@ -146,12 +182,12 @@ fviz_eig(nutrients.pca,addlabels = TRUE)
 
 
 #-------#
-adonis2(nutrients.bind$Comp.1 ~ litter*removal,
+adonis2(nutrients.bind$Comp.3 ~ litter*removal,
         data = nutrients.bind,
         method = "euc",
         permutations=9999)
 
-ggplot(data = nutrients.bind, aes(x = litter, y = Comp.1)) +
+ggplot(data = nutrients.bind, aes(x = litter, y = Comp.3)) +
   geom_boxplot() +
   geom_jitter(aes(colour = litter), width = 0.3, height = 0) +
   theme_bw()

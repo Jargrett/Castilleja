@@ -110,3 +110,18 @@ decomp.plot <- ggplot(data = decomp.mean, aes(x = reorder (deployment_period, -m
 
 decomp.plot 
 
+full.decomp.plot <- ggplot(data = decomp.mean, aes(x = reorder (deployment_period, -mean), y = mean, color = litter)) +
+  geom_point(shape=18, size = 4,position =  position_dodge(width = 0.5)) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.5), width = 0.07) +
+  theme_pubr() +
+  scale_color_manual( values=c("#004D40", "#C52812", "#FFC107")) +
+  theme(strip.text = element_text(size = 15),
+        strip.background = element_blank(),
+        panel.border = element_rect(fill = "transparent", 
+                                    color = "gray", linewidth = 0.12)) +
+  labs(x = "Deployment Period", y = "Proportion of Mass Remaining") +
+  ylim(0.25 ,0.75)
+
+full.decomp.plot 
+

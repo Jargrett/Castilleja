@@ -57,56 +57,62 @@ castilleja.even <- castilleja.cover %>%
 #Diversity Graphs
   
 div.plot <- ggplot(data = castilleja.div, aes(x = reorder(castilleja, -mean), y = mean, color = castilleja)) +
-  stat_summary(fun=mean, colour="grey90", geom="line", aes(group = 1)) +
   geom_point(shape=18, size = 4) +
   geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
                 position =  position_dodge(width = 0.5), width = 0.07) +
   theme_pubr() +
   facet_wrap(~year) + 
-  scale_color_manual( values=c("#8c510a", "#35978f")) +
+  scale_color_manual( values=c("#b08968", "#67A29D")) +
+  #geom_signif(data = data.frame(year=c("2023", "2024")),
+              #aes(xmin =c(1,1), xmax = c(2,2), y_position = c(1.7, 1.98),
+                  #annotations=c("ns","***")), tip_length = 0.01, manual=T, inherit.aes = FALSE) +
   theme(strip.text = element_text(size = 15),
         strip.background = element_blank(),
         panel.border = element_rect(fill = "transparent", 
        color = "gray", linewidth = 0.12)) +
   labs(x = "Castilleja", y = "Shannon Diversity of co-occuring species") +
   theme(legend.position="none") +
-  ylim(1,2.2)
+  ylim(1.25,2)
 
 div.plot
 
 rich.plot <- ggplot(data = castilleja.rich, aes(x = reorder(castilleja, -mean), y = mean, color = castilleja)) +
-  stat_summary(fun=mean, colour="grey90", geom="line", aes(group = 1)) +
   geom_point(shape=18, size = 4) +
   geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
                 position =  position_dodge(width = 0.5), width = 0.07) +
   theme_pubr() +
   facet_wrap(~year) + 
-  scale_color_manual( values=c("#8c510a", "#35978f")) +
+  scale_color_manual( values=c("#b08968", "#67A29D")) +
+  #geom_signif(data = data.frame(year=c("2023", "2024")),
+              #aes(xmin =c(1,1), xmax = c(2,2), y_position = c(9, 12),
+              #annotations=c(".","****")), tip_length = 0.01, manual=T, inherit.aes = FALSE) +
   theme(strip.text = element_text(size = 15),
         strip.background = element_blank(),
         panel.border = element_rect(fill = "transparent", 
                                     color = "gray", linewidth = 0.12)) +
   labs(x = "Castilleja", y = "Species Richness of co-occuring species") +
   theme(legend.position="none") +
-  ylim(5,13)
+  ylim(6,13)
 
 rich.plot
 
 even.plot <- ggplot(data = castilleja.even, aes(x = reorder(castilleja, -mean), y = mean, color = castilleja)) +
-  stat_summary(fun=mean, colour="grey90", geom="line", aes(group = 1)) +
   geom_point(shape=18, size = 4) +
   geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
                 position =  position_dodge(width = 0.5), width = 0.07) +
   theme_pubr() +
   facet_wrap(~year) + 
-  scale_color_manual( values=c("#8c510a", "#35978f")) +
+  scale_color_manual( values=c("#b08968", "#67A29D")) +
+  #geom_signif(data = data.frame(year=c("2023", "2024")),
+              #aes(xmin =c(1,1), xmax = c(2,2), y_position = c(0.85, 0.84),
+                  #annotations=c("ns",".")), tip_length = 0.01, manual=T, inherit.aes = FALSE) +
   theme(strip.text = element_text(size = 15),
         strip.background = element_blank(),
         panel.border = element_rect(fill = "transparent", 
-                                    color = "gray", linewidth = 0.12)) +
+                                    color = "white", linewidth = 0.12)) +
   labs(x = "Castilleja", y = "Species evenness of co-occuring species") +
   theme(legend.position="none") +
-  ylim(0.4,1)
+  ylim(0.6,1)
 
 even.plot
 
@@ -151,8 +157,8 @@ perm
 
 
 ggplot(NMDS, aes(NMDS1, NMDS2)) +
-  geom_point(aes(color=castilleja , shape=species), size = 3, alpha = 0.5) +
-  scale_color_manual( values=c("#8c510a", "#35978f")) +
+  geom_point(aes(color=castilleja , shape=species), size = 3, alpha = 0.8) +
+  scale_color_manual( values=c("#67A29D", "#b08968")) +
   coord_equal() +
   theme_bw()
 
