@@ -17,7 +17,8 @@ data$parasite[data$parasite == "no"] <- "absent"
 data$parasite[data$parasite == "yes"] <- "present"
 data <- as.data.frame(unclass(data),stringsAsFactors=TRUE)
 data <- filter(data, haustoria != "no")
-
+data$solidago_rs <- data$solidago_below/data$solidago_above
+data$agalinis_rs <- data$agalinis_below/data$agalinis_above
 
 #Above
 soal.agb.lm <- lmer(solidago_above ~ treatment*parasite + (1|soil_id), data = data)
@@ -35,6 +36,17 @@ soal.bgb.lm <- lmer(solidago_below ~ treatment*parasite + (1|soil_id), data = da
 summary(soal.bgb.lm)
 Anova(soal.bgb.lm) #treatment P = 0.007758 (difference of 1.3 gram in parasite absence plots)
 emmeans(soal.bgb.lm, pairwise ~ treatment|parasite)
+
+#Root:shoot
+soal.rs.lm <- lmer(solidago_rs ~ treatment*parasite + (1|soil_id), data = data)
+summary(soal.rs.lm)
+Anova(soal.rs.lm) #treatment P = 0.007758 (difference of 1.3 gram in parasite absence plots)
+emmeans(soal.rs.lm, pairwise ~ treatment|parasite)
+
+agpu.rs.lm <- lmer(agalinis_rs ~ treatment + (1|soil_id), data = data)
+summary(agpu.rs.lm)
+Anova(agpu.rs.lm) #treatment P = 0.007758 (difference of 1.3 gram in parasite absence plots)
+emmeans(agpu.rs.lm, pairwise ~ treatment|parasite)
 
 #Total
 soal.total.lm <- lmer(solidago_total ~ treatment*parasite + (1|soil_id), data = data)
@@ -101,6 +113,18 @@ AGPU.growth <- growth.a %>%
   group_by(treatment) %>% 
   dplyr::summarise(mean= mean(agalinis_final_height),
                    se = sd(agalinis_final_height)/sqrt(n()))
+
+rs.s <- data %>% drop_na(solidago_rs)
+SOAL.rootshoot <- rs.s %>% 
+  group_by(treatment, parasite) %>% 
+  dplyr::summarise(mean= mean(solidago_rs),
+                   se = sd(solidago_rs)/sqrt(n()))
+
+rs.a <- data %>% drop_na(agalinis_rs)
+AGPU.rootshoot<- rs.a %>% 
+  group_by(treatment) %>% 
+  dplyr::summarise(mean= mean(agalinis_rs),
+                   se = sd(agalinis_rs)/sqrt(n()))
 
 #Graphs
 solidago.above.plot <- ggplot(data = SOAL.AGB, aes(x = reorder(treatment, mean), y = mean, color = treatment)) +
@@ -221,3 +245,36 @@ agalinis.plots <- ggarrange(agalinis.growth.plot, agalinis.above.plot,
                             labels = c("A", "B"), 
                             nrow = 2)
 agalinis.plots
+
+
+solidago.rs.plot <- ggplot(data = SOAL.rootshoot, aes(x = reorder(treatment, mean), y = mean, color = treatment)) +
+  geom_point(shape=18, size = 4) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.5), width = 0.07) +
+  theme_pubr() +
+  facet_wrap(~parasite) +
+  scale_color_manual( values=c("#40b0a6", "#E1BE6A")) +
+  theme(strip.text = element_text(size = 15),
+        strip.background = element_blank(),
+        panel.border = element_rect(fill = "transparent", 
+                                    color = "gray", linewidth = 0.12)) +
+  labs(x = "Innoculumn", y = "Solidago Root/Shoot") +
+  theme(legend.position="none") +
+  ylim(0,1.5)
+solidago.rs.plot
+
+agalinis.rs.plot <- ggplot(data = AGPU.rootshoot, aes(x = reorder(treatment, -mean), y = mean, color = treatment)) +
+  geom_point(shape=18, size = 4) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.5), width = 0.07) +
+  theme_pubr() +
+  scale_color_manual( values=c("#40b0a6", "#E1BE6A")) +
+  theme(strip.text = element_text(size = 15),
+        strip.background = element_blank(),
+        panel.border = element_rect(fill = "transparent", 
+                                    color = "gray", linewidth = 0.12)) +
+  labs(x = "Innoculumn", y = "Agalinis Root/Shoot") +
+  theme(legend.position="none") +
+  ylim(0,0.2)
+
+agalinis.rs.plot

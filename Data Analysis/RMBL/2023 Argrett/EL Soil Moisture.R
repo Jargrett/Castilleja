@@ -51,8 +51,8 @@ el.moisture$block <- as.factor(el.moisture$block)
 el.moisture$pair <- as.factor(el.moisture$pair)
 
 #linear regression and ANOVA to to see if Block and Elevation effect SM
-sm.lm <- lmer(asm24 ~ removal*block + (1|pair), data = el.moisture)
+sm.lm <- lmer(asm24 ~ removal + (1|block) + (1|pair), data = el.moisture)
 summary(sm.lm)
 Anova(sm.lm)
-emmeans(sm.lm, pairwise ~ removal|block)
+
 

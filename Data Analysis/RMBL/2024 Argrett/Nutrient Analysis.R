@@ -27,11 +27,11 @@ nitrate <- ggplot(soil, aes(x = litter, y = K)) +
 
 nitrate
 
-K.lmm <- lmer(NO3 ~ litter*removal + burial + (1|block) + (1|pair), data = soil)
-summary(K.lmm)
-Anova(K.lmm)
-emmip(K.lmm, litter ~ removal)
-emmeans(K.lmm, pairwise ~  removal|litter)
+nitrate.lme <- lmer(NO3 ~ litter*removal + (1|block) + (1|pair), data = soil)
+summary(nitrate.lme)
+Anova(nitrate.lme)
+emmip(nitrate.lme, litter ~ removal)
+emmeans(nitrate.lme, pairwise ~  removal|litter)
 
 soil.NO3 <- soil %>% 
   group_by(litter,removal,burial) %>% 
@@ -67,11 +67,23 @@ a<-ggplot(COroots, aes(x = Invasion, y = mean, fill = grp, pattern=Treatment, al
 
 
 #remove rows if NAs occur in any of the variables we care about
-winter.soil <- subset(soil, burial == 'overwinter')
-winter.soil <- subset( winter.soil, select = -c(B, S, Pb, Al, Cd))
+year.soil <- subset(soil, burial == 'year')
+year.soil <- subset(year.soil, select = -c(B, S, Pb, Al, Cd))
 
 year.soil <- year.soil %>% filter_at(vars(NO3, NH4, Ca, Mg, K, P, Fe, Mn, Cu, Zn),
                                     all_vars(!is.na(.)))
+
+season.soil <- subset(soil, burial == 'within')
+season.soil <- subset(season.soil, select = -c(B, S, Pb, Al, Cd))
+
+season.soil <- season.soil %>% filter_at(vars(NO3, NH4, Ca, Mg, K, P, Fe, Mn, Cu, Zn),
+                                     all_vars(!is.na(.)))
+
+overwinter.soil <- subset(soil, burial == 'overwinter')
+overwinter.soil <- subset(overwinter.soil, select = -c(B, S, Pb, Al, Cd))
+
+overwinter.soil <- overwinter.soil %>% filter_at(vars(NO3, NH4, Ca, Mg, K, P, Fe, Mn, Cu, Zn),
+                                         all_vars(!is.na(.)))
 
 #Examine correlations among the body shape response variables------
 #ggpairs plots is a good way to get lots of info (GGally package)

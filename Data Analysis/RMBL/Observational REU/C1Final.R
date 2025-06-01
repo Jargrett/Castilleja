@@ -20,19 +20,20 @@ castilleja.cover$castilleja[castilleja.cover$castilleja == "Castilleja"] <- "Pre
 castilleja.cover <- as.data.frame(unclass(castilleja.cover),stringsAsFactors=TRUE)
 cover.overview <- read.csv("average cover.csv")
 cover.overview <- as.data.frame(unclass(cover.overview),stringsAsFactors=TRUE)
+castilleja.cover$year = as.factor(castilleja.cover$year)
 
 #Diversity Analysis
 div <- lmer(div ~ castilleja*species + castilleja*year + (1|pair) + (1|site), data = castilleja.cover)
 summary(div)
 Anova(div)
-emmip(div, ~ castilleja, plotit = FALSE)
+emmip(div, ~ castilleja ~ year)
 emmeans(div, pairwise ~ castilleja|year)
 
 rich <- lmer(rich ~ castilleja*species + castilleja*year + (1|pair) + (1|site), data = castilleja.cover)
 summary(rich)
 Anova(rich) 
 emmip(rich, castilleja ~ year)
-emmeans(rich, pairwise ~ castilleja|year)
+emmeans(rich, pairwise ~ species|year)
 
 even <- lmer(even ~ castilleja*species + castilleja*year + (1|pair) + (1|site), data = castilleja.cover)
 summary(even)
@@ -45,6 +46,7 @@ castilleja.div <- castilleja.cover %>%
   group_by(castilleja, year) %>% 
   dplyr::summarise(mean= mean(div),
                    se = sd(div)/sqrt(n()))
+
 castilleja.rich <- castilleja.cover %>% 
   group_by(castilleja, year) %>% 
   dplyr::summarise(mean= mean(rich),
@@ -54,62 +56,66 @@ castilleja.even <- castilleja.cover %>%
   dplyr::summarise(mean= mean(even),
                    se = sd(even)/sqrt(n()))
 
+castilleja.div$colcast = castilleja.div$castilleja
+castilleja.rich$colcast = castilleja.rich$castilleja
+castilleja.even$colcast = castilleja.even$castilleja
+
 #Diversity Graphs
   
 div.plot <- ggplot(data = castilleja.div, aes(x = reorder(castilleja, -mean), y = mean, color = castilleja)) +
-  geom_point(shape=18, size = 4) +
   geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
-                position =  position_dodge(width = 0.5), width = 0.07) +
+                position =  position_dodge(width = 0.5), size = 1, width = 0.09) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.5), size = 0.8, width = 0.001, color = "grey63") +
+  geom_point(shape = 18 ,size = 5.6, colour = "grey38") +
+  geom_point(aes(colour=castilleja),shape = 18, size = 4) +
   theme_pubr() +
   facet_wrap(~year) + 
-  scale_color_manual( values=c("#b08968", "#67A29D")) +
-  #geom_signif(data = data.frame(year=c("2023", "2024")),
-              #aes(xmin =c(1,1), xmax = c(2,2), y_position = c(1.7, 1.98),
-                  #annotations=c("ns","***")), tip_length = 0.01, manual=T, inherit.aes = FALSE) +
+  scale_color_manual( values=c("#D6A839", "#71A4A0")) +
   theme(strip.text = element_text(size = 15),
         strip.background = element_blank(),
         panel.border = element_rect(fill = "transparent", 
-       color = "gray", linewidth = 0.12)) +
+                                    color = "gray23", linewidth = 0.12)) +
   labs(x = "Castilleja", y = "Shannon Diversity of co-occuring species") +
   theme(legend.position="none") +
-  ylim(1.25,2)
+  ylim(1.4,2)
 
 div.plot
 
 rich.plot <- ggplot(data = castilleja.rich, aes(x = reorder(castilleja, -mean), y = mean, color = castilleja)) +
-  geom_point(shape=18, size = 4) +
   geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
-                position =  position_dodge(width = 0.5), width = 0.07) +
+                position =  position_dodge(width = 0.5), size = 1, width = 0.09) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.5), size = 0.8, width = 0.001, color = "grey63") +
+  geom_point(shape = 18 ,size = 5.6, colour = "grey38") +
+  geom_point(aes(colour=castilleja),shape = 18, size = 4) +
   theme_pubr() +
   facet_wrap(~year) + 
-  scale_color_manual( values=c("#b08968", "#67A29D")) +
-  #geom_signif(data = data.frame(year=c("2023", "2024")),
-              #aes(xmin =c(1,1), xmax = c(2,2), y_position = c(9, 12),
-              #annotations=c(".","****")), tip_length = 0.01, manual=T, inherit.aes = FALSE) +
+  scale_color_manual( values=c("#D6A839", "#71A4A0")) +
   theme(strip.text = element_text(size = 15),
         strip.background = element_blank(),
         panel.border = element_rect(fill = "transparent", 
-                                    color = "gray", linewidth = 0.12)) +
+                                    color = "gray23", linewidth = 0.12)) +
   labs(x = "Castilleja", y = "Species Richness of co-occuring species") +
   theme(legend.position="none") +
-  ylim(6,13)
+  ylim(6,12)
 
 rich.plot
 
 even.plot <- ggplot(data = castilleja.even, aes(x = reorder(castilleja, -mean), y = mean, color = castilleja)) +
-  geom_point(shape=18, size = 4) +
   geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
-                position =  position_dodge(width = 0.5), width = 0.07) +
+                position =  position_dodge(width = 0.5), size = 1, width = 0.1) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                   position =  position_dodge(width = 0.5), size = 0.8, width = 0.001, color = "grey63") +
+  geom_point(shape = 18 ,size = 5.2,colour = "grey38") +
+  geom_point(aes(colour=castilleja),shape = 18, size = 4) +
   theme_pubr() +
   facet_wrap(~year) + 
-  scale_color_manual( values=c("#b08968", "#67A29D")) +
-  #geom_signif(data = data.frame(year=c("2023", "2024")),
-              #aes(xmin =c(1,1), xmax = c(2,2), y_position = c(0.85, 0.84),
-                  #annotations=c("ns",".")), tip_length = 0.01, manual=T, inherit.aes = FALSE) +
+  scale_color_manual( values=c("#D6A839", "#71A4A0")) +
   theme(strip.text = element_text(size = 15),
         strip.background = element_blank(),
         panel.border = element_rect(fill = "transparent", 
-                                    color = "white", linewidth = 0.12)) +
+                                    color = "gray23", linewidth = 0.12)) +
   labs(x = "Castilleja", y = "Species evenness of co-occuring species") +
   theme(legend.position="none") +
   ylim(0.6,1)
@@ -128,37 +134,72 @@ diversity.plots
 library(ggrepel)
 library(vegan)
 library(ggordiplots)
+
 species.matrix <- castilleja.cover[ -c(1:16)]
 species.env <- subset(castilleja.cover, select=c(1:8))
 
+#case.cover <- filter(castilleja.cover, species == "C. septentrionalis")
+#cali.cover <- filter(castilleja.cover, species == "C. linariifolia")
+#cach.cover <- filter(castilleja.cover, species == "C. chromosa")
+
+#case.matrix <- case.cover[ -c(1:16)]
+#cali.matrix <- cali.cover[ -c(1:16)]
+#cach.matrix <- cach.cover[ -c(1:16)]
+
+#case.env <- subset(case.cover, select=c(1:8))
+#cali.env <- subset(cali.cover, select=c(1:8))
+#cach.env <- subset(cach.cover, select=c(1:8))
 
 #First calculate distance matrix
 dist <-vegdist(species.matrix, method="bray")
-
-
+#case.dist <-vegdist(case.matrix, method="bray")
+#cali.dist <-vegdist(cali.matrix, method="bray")
+#cach.dist <-vegdist(cach.matrix, method="bray")
 set.seed(20)
 #Run NMDS on distance matrix
 nmds <- metaMDS(dist, distance="bray", #use bray-curtis distance
                      k=2, #2 dimensions
                      try=500) #for publication I recommend 500)
+#case.nmds <- metaMDS(case.dist, distance="bray", k=2,try=500)
+#cali.nmds <- metaMDS(cali.dist, distance="bray", k=3,try=500)
+#cach.nmds <- metaMDS(cach.dist, distance="bray", k=3,try=500)
+
 
 
 nmds#stress value 0.14 which is below .2 so we need to investigate
+#case.nmds# Stress = 0.1433057, k = 2
+#cali.nmds# Stress = 0.1970012, k = 3
+#cach.nmds# Stress = 0.1433057, k = 3
 
 ordiplot(nmds, type="text", display="sites")
 
 nmds.scores <- as.data.frame(vegan::scores(nmds))
+#case.nmds.scores <- as.data.frame(vegan::scores(case.nmds))
+#cali.nmds.scores <- as.data.frame(vegan::scores(cali.nmds))
+#cach.nmds.scores <- as.data.frame(vegan::scores(cach.nmds))
 
 NMDS <- cbind(species.env,nmds.scores) #final dataset
-
+#case.NMDS <- cbind(case.env,case.nmds.scores) #final dataset
+#cali.NMDS <- cbind(cali.env,cali.nmds.scores) #final dataset
+#cach.NMDS <- cbind(cach.env,cach.nmds.scores) #final dataset
 
 perm <- adonis2(dist ~ castilleja*species + castilleja*year + castilleja*site, data = NMDS, permutations=9999)
 perm
 
+#case.perm <- adonis2(case.dist ~ castilleja*year + castilleja*site, data = case.NMDS, permutations=9999)
+#case.perm
+
+#cali.perm <- adonis2(cali.dist ~ castilleja*year + castilleja*site, data = cali.NMDS, permutations=9999)
+#cali.perm
+
+#cach.perm <- adonis2(cach.dist ~ castilleja*site, data = cach.NMDS, permutations=9999)
+#cach.perm
 
 ggplot(NMDS, aes(NMDS1, NMDS2)) +
-  geom_point(aes(color=castilleja , shape=species), size = 3, alpha = 0.8) +
-  scale_color_manual( values=c("#67A29D", "#b08968")) +
+  geom_point(aes(color=castilleja , shape = species), size = 2.2, alpha = 0.8) +
+  scale_color_manual( values=c("#D6A839", "#71A4A0")) +
+  stat_ellipse(geom = "polygon", segments = 20, linetype = 2, alpha = 0.1, aes(group = site)) +
+  stat_ellipse(segments = 20, linetype = 2, alpha = 0.5, aes(group = site)) +
   coord_equal() +
   theme_bw()
 
