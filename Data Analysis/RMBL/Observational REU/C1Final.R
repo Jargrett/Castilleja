@@ -138,68 +138,38 @@ library(ggordiplots)
 species.matrix <- castilleja.cover[ -c(1:16)]
 species.env <- subset(castilleja.cover, select=c(1:8))
 
-#case.cover <- filter(castilleja.cover, species == "C. septentrionalis")
-#cali.cover <- filter(castilleja.cover, species == "C. linariifolia")
-#cach.cover <- filter(castilleja.cover, species == "C. chromosa")
-
-#case.matrix <- case.cover[ -c(1:16)]
-#cali.matrix <- cali.cover[ -c(1:16)]
-#cach.matrix <- cach.cover[ -c(1:16)]
-
-#case.env <- subset(case.cover, select=c(1:8))
-#cali.env <- subset(cali.cover, select=c(1:8))
-#cach.env <- subset(cach.cover, select=c(1:8))
-
 #First calculate distance matrix
 dist <-vegdist(species.matrix, method="bray")
-#case.dist <-vegdist(case.matrix, method="bray")
-#cali.dist <-vegdist(cali.matrix, method="bray")
-#cach.dist <-vegdist(cach.matrix, method="bray")
+
 set.seed(20)
 #Run NMDS on distance matrix
 nmds <- metaMDS(dist, distance="bray", #use bray-curtis distance
                      k=2, #2 dimensions
                      try=500) #for publication I recommend 500)
-#case.nmds <- metaMDS(case.dist, distance="bray", k=2,try=500)
-#cali.nmds <- metaMDS(cali.dist, distance="bray", k=3,try=500)
-#cach.nmds <- metaMDS(cach.dist, distance="bray", k=3,try=500)
-
-
-
 nmds#stress value 0.14 which is below .2 so we need to investigate
-#case.nmds# Stress = 0.1433057, k = 2
-#cali.nmds# Stress = 0.1970012, k = 3
-#cach.nmds# Stress = 0.1433057, k = 3
+
 
 ordiplot(nmds, type="text", display="sites")
 
 nmds.scores <- as.data.frame(vegan::scores(nmds))
-#case.nmds.scores <- as.data.frame(vegan::scores(case.nmds))
-#cali.nmds.scores <- as.data.frame(vegan::scores(cali.nmds))
-#cach.nmds.scores <- as.data.frame(vegan::scores(cach.nmds))
 
 NMDS <- cbind(species.env,nmds.scores) #final dataset
-#case.NMDS <- cbind(case.env,case.nmds.scores) #final dataset
-#cali.NMDS <- cbind(cali.env,cali.nmds.scores) #final dataset
-#cach.NMDS <- cbind(cach.env,cach.nmds.scores) #final dataset
 
 perm <- adonis2(dist ~ castilleja*species + castilleja*year + castilleja*site, data = NMDS, permutations=9999)
 perm
-
-#case.perm <- adonis2(case.dist ~ castilleja*year + castilleja*site, data = case.NMDS, permutations=9999)
-#case.perm
-
-#cali.perm <- adonis2(cali.dist ~ castilleja*year + castilleja*site, data = cali.NMDS, permutations=9999)
-#cali.perm
-
-#cach.perm <- adonis2(cach.dist ~ castilleja*site, data = cach.NMDS, permutations=9999)
-#cach.perm
 
 ggplot(NMDS, aes(NMDS1, NMDS2)) +
   geom_point(aes(color=castilleja , shape = species), size = 2.2, alpha = 0.8) +
   scale_color_manual( values=c("#D6A839", "#71A4A0")) +
   stat_ellipse(geom = "polygon", segments = 20, linetype = 2, alpha = 0.1, aes(group = site)) +
   stat_ellipse(segments = 20, linetype = 2, alpha = 0.5, aes(group = site)) +
+  geom_text(aes(-1.53,0.72), label = "EL", color = "grey22", size = 3.5) +
+  geom_text(aes(-0.9,0.1), label = "AP", color = "grey22", size = 3.5) +
+  geom_text(aes(-0.3,0.58), label = "CC", color = "grey22", size = 3.5) +
+  geom_text(aes(0.85,1.85), label = "AL", color = "grey22", size = 3.5) +
+  geom_text(aes(0.85,0.9), label = "DC1", color = "grey22", size = 3.5) +
+  geom_text(aes(0.23,0), label = "DC2", color = "grey22", size = 3.5) +
+  geom_text(aes(-0.14,-0.5), label = "JH", color = "grey22", size = 3.5) +
   coord_equal() +
   theme_bw()
 
@@ -349,14 +319,14 @@ CC.nn <- cbind(copper.nn, copper.predict)
 emerald.nearest <- ggplot(EL.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
   geom_point(aes(color = year, shape = year), size = 2.3) +
-  scale_color_manual( values=c("darkgoldenrod3", "chartreuse4")) +
+  scale_color_manual( values=c("#D6A839", "#71A4A0")) +
   scale_shape_manual(values = c(20, 18)) +
   geom_line(aes(y = fit)) +
-  geom_line(aes(y = lwr), linetype = "dashed", col = "cadetblue") +
-  geom_line(aes(y = upr), linetype = "dashed", col = "cadetblue") +
-  geom_text(aes(0.1071574642, 0.24050633), label = "Deschampsia cespitosa", color = "grey22", nudge_y = 0.015) +
-  geom_text(aes(0.1251533742, 0.18987342), label = "Fragaria virginiana", color = "grey22", nudge_y = -0.01) +
-  geom_text(aes(0.1480333652, 0.20430108), label = "Fragaria virginiana", color = "grey22", nudge_y = 0.01) +
+  geom_line(aes(y = lwr), linetype = "dashed", col = "black") +
+  geom_line(aes(y = upr), linetype = "dashed", col = "black") +
+  geom_text(aes(0.1071574642, 0.24050633), label = "Deschampsia cespitosa", color = "grey22", nudge_y = 0.015, size = 3.5) +
+  geom_text(aes(0.1251533742, 0.18987342), label = "Fragaria virginiana", color = "grey22", nudge_y = -0.01, size = 3.5) +
+  geom_text(aes(0.1480333652, 0.20430108), label = "Fragaria virginiana", color = "grey22", nudge_y = 0.01, size = 3.5) +
   labs(x = "Relative Abundance", y = "Nearest Neighbor Frequency") +
   theme_minimal() +
   ggtitle("Castilleja septentrionalis") +
@@ -366,12 +336,12 @@ emerald.nearest
 avery.nearest <- ggplot(AO.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
   geom_point(aes(color = year, shape = year), size = 2.3) +
-  scale_color_manual( values=c("darkgoldenrod3", "chartreuse4")) +
+  scale_color_manual( values=c("#D6A839", "#71A4A0")) +
   scale_shape_manual(values = c(20, 18)) +
   geom_line(aes(y = fit)) +
-  geom_line(aes(y = lwr), linetype = "dashed", col = "cadetblue") +
-  geom_line(aes(y = upr), linetype = "dashed", col = "cadetblue") +
-  geom_text(aes(0.1531226486, 0.29411765), label = "Poa pratensis", color = "grey22", nudge_y = 0.015) +
+  geom_line(aes(y = lwr), linetype = "dashed", col = "black") +
+  geom_line(aes(y = upr), linetype = "dashed", col = "black") +
+  geom_text(aes(0.1531226486, 0.29411765), label = "Poa pratensis", color = "grey22", nudge_y = 0.015, size = 3.5) +
   labs(x = "Relative Abundance", y = "Nearest Neighbor Frequency") +
   theme_minimal() +
   ggtitle("Castilleja septentrionalis") +
@@ -381,14 +351,14 @@ avery.nearest
 copper.nearest <- ggplot(CC.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
   geom_point(aes(color = year, shape = year), size = 2.3) +
-  scale_color_manual( values=c("darkgoldenrod3", "chartreuse4")) +
+  scale_color_manual( values=c("#D6A839", "#71A4A0")) +
   scale_shape_manual(values = c(20, 18)) +
   geom_line(aes(y = fit)) +
-  geom_line(aes(y = lwr), linetype = "dashed", col = "cadetblue") +
-  geom_line(aes(y = upr), linetype = "dashed", col = "cadetblue") +
+  geom_line(aes(y = lwr), linetype = "dashed", col = "black") +
+  geom_line(aes(y = upr), linetype = "dashed", col = "black") +
   labs(x = "Relative Abundance", y = "Nearest Neighbor Frequency") +
-  geom_text(aes(0.0778150748, 0.13333333), label = "Thalictrum fendleri", color = "grey22", nudge_y = 0.01) +
-  geom_text(aes(0.0234589564, 0.06666667), label = "Mertensia brevistyla", color = "grey22", nudge_y = 0.01) +
+  geom_text(aes(0.0778150748, 0.13333333), label = "Thalictrum fendleri", color = "grey22", nudge_y = 0.01, size = 3.5) +
+  geom_text(aes(0.0234589564, 0.06666667), label = "Mertensia brevistyla", color = "grey22", nudge_y = 0.01, size = 3.5) +
   theme_minimal() +
   ggtitle("Castilleja septentrionalis") +
   theme(plot.title = element_text(hjust = 0.92, vjust= -0.12))
@@ -420,17 +390,17 @@ DC.nn <- cbind(deer.nn, deer.predict)
 deercreek.nearest <- ggplot(DC.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
   geom_point(aes(color = year, shape = year), size = 2.3) +
-  scale_color_manual( values=c("darkgoldenrod3", "chartreuse4")) +
+  scale_color_manual( values=c("#D6A839", "#71A4A0")) +
   scale_shape_manual(values = c(20, 18)) +
   geom_line(aes(y = fit)) +
-  geom_line(aes(y = lwr), linetype = "dashed", col = "cadetblue") +
-  geom_line(aes(y = upr), linetype = "dashed", col = "cadetblue") +
+  geom_line(aes(y = lwr), linetype = "dashed", col = "black") +
+  geom_line(aes(y = upr), linetype = "dashed", col = "black") +
   labs(x = "Relative Abundance", y = "Nearest Neighbor Frequency") +
-  geom_text(aes(0.0746228926, 0.155038760), label = "Eremogone congesta", color = "grey22", nudge_y = 0.007) +
-  geom_text(aes(0.0143414410, 0.121212121), label = "Bromus inermis", color = "grey22",nudge_x = 0.007, nudge_y = 0.007) +
-  geom_text(aes(0.0402707664, 0.111111111), label = "Carex sp.", color = "grey22", nudge_y = 0.007) +
-  geom_text(aes(0.0383203304, 0.090909091), label = "Achnatherum sp.", color = "grey22", nudge_y = 0.007) +
-  geom_text(aes(0.0463176575, 0.085271318), label = "Carex sp.", color = "grey22", nudge_y = -0.005) +
+  geom_text(aes(0.0746228926, 0.155038760), label = "Eremogone congesta", color = "grey22", nudge_y = 0.007, size = 3.5) +
+  geom_text(aes(0.0143414410, 0.121212121), label = "Bromus inermis", color = "grey22",nudge_x = 0.007, nudge_y = 0.007, size = 3.5) +
+  geom_text(aes(0.0402707664, 0.111111111), label = "Carex sp.", color = "grey22", nudge_y = 0.007, size = 3.5) +
+  geom_text(aes(0.0383203304, 0.090909091), label = "Achnatherum sp.", color = "grey22", nudge_y = 0.007, size = 3.5) +
+  geom_text(aes(0.0463176575, 0.085271318), label = "Carex sp.", color = "grey22", nudge_y = -0.005, size = 3.5) +
   theme_minimal() +
   ggtitle("Castilleja linariifolia") +
   theme(plot.title = element_text(hjust = 0.92, vjust= -0.12))
@@ -439,13 +409,13 @@ deercreek.nearest
 johnson.nearest <- ggplot(JH.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
   geom_point(aes(color = year, shape = year), size = 2.3) +
-  scale_color_manual( values=c("darkgoldenrod3", "chartreuse4")) +
+  scale_color_manual( values=c("#D6A839", "#71A4A0")) +
   scale_shape_manual(values = c(20, 18)) +
   geom_line(aes(y = fit)) +
-  geom_line(aes(y = lwr), linetype = "dashed", col = "cadetblue") +
-  geom_line(aes(y = upr), linetype = "dashed", col = "cadetblue") +
-  geom_text(aes(0.0738952297, 0.14492754), label = "Lathyrus lanszwertii", color = "grey22", nudge_y = 0.007) +
-  geom_text(aes(0.0496049166, 0.10144928), label = "Viola praemorsa", color = "grey22", nudge_y = 0.007) +
+  geom_line(aes(y = lwr), linetype = "dashed", col = "black") +
+  geom_line(aes(y = upr), linetype = "dashed", col = "black") +
+  geom_text(aes(0.0738952297, 0.14492754), label = "Lathyrus lanszwertii", color = "grey22", nudge_y = 0.007, size = 3.5) +
+  geom_text(aes(0.0496049166, 0.10144928), label = "Viola praemorsa", color = "grey22", nudge_y = 0.007, size = 3.5) +
   labs(x = "Relative Abundance", y = "Nearest Neighbor Frequency") +
   theme_minimal() +
   ggtitle("Castilleja linariifolia") +
@@ -468,14 +438,14 @@ AL.nn <- cbind(cacr.nn, almont.predict)
 almont.nearest <- ggplot(AL.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
   geom_point(aes(color = year, shape = year), size = 2.3) +
-  scale_color_manual( values=c("darkgoldenrod3", "chartreuse4")) +
+  scale_color_manual( values=c("#D6A839", "#71A4A0")) +
   scale_shape_manual(values = c(20, 18)) +
   geom_line(aes(y = fit)) +
-  geom_line(aes(y = lwr), linetype = "dashed", col = "cadetblue") +
-  geom_line(aes(y = upr), linetype = "dashed", col = "cadetblue") +
-  geom_text(aes(0.0574450029, 0.16417910), label = "Stipeae", color = "grey22", nudge_y = 0.007) +
-  geom_text(aes(0.0168418304, 0.08955224), label = "Crepis sp.", color = "grey22", nudge_y = 0.007) +
-  geom_text(aes(0.0577061166, 0.01492537), label = "Artemisia arbuscula", color = "grey22", nudge_y = -0.006) +
+  geom_line(aes(y = lwr), linetype = "dashed", col = "black") +
+  geom_line(aes(y = upr), linetype = "dashed", col = "black") +
+  geom_text(aes(0.0574450029, 0.16417910), label = "Stipeae", color = "grey22", nudge_y = 0.007, size = 3.5) +
+  geom_text(aes(0.0168418304, 0.08955224), label = "Crepis sp.", color = "grey22", nudge_y = 0.007, size = 3.5) +
+  geom_text(aes(0.0577061166, 0.01492537), label = "Artemisia arbuscula", color = "grey22", nudge_y = -0.006, size = 3.5) +
   labs(x = "Relative Abundance", y = "Nearest Neighbor Frequency") +
   theme_minimal() +
   ggtitle("Castilleja chromosa") +
@@ -486,3 +456,4 @@ nearestplots <- ggarrange(emerald.nearest, avery.nearest, copper.nearest, deercr
                                labels = c("A", "B", "C", "D", "E", "F"), 
                                nrow = 2, ncol = 3, common.legend = TRUE, legend = "right")
 nearestplots
+
