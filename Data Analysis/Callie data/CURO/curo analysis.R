@@ -31,11 +31,18 @@ summary(agpu.agb.lm)
 Anova(agpu.agb.lm)
 emmeans(agpu.agb.lm, pairwise ~ treatment|parasite)
 
+
+
 #Below
 soal.bgb.lm <- lmer(solidago_below ~ treatment*parasite + (1|soil_id), data = data)
 summary(soal.bgb.lm)
 Anova(soal.bgb.lm) #treatment P = 0.007758 (difference of 1.3 gram in parasite absence plots)
 emmeans(soal.bgb.lm, pairwise ~ treatment|parasite)
+
+agpu.bgb.lm <- lmer(agalinis_below ~ treatment + (1|soil_id), data = data)
+summary(agpu.bgb.lm)
+Anova(agpu.bgb.lm) #treatment P = 0.007758 (difference of 1.3 gram in parasite absence plots)
+emmeans(agpu.bgb.lm, pairwise ~ treatment|parasite)
 
 #Root:shoot
 soal.rs.lm <- lmer(solidago_rs ~ treatment*parasite + (1|soil_id), data = data)
