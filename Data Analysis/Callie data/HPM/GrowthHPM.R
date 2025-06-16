@@ -19,6 +19,10 @@ leaf <- read.csv("HPM Growth - Leaf_Number.csv")
 str(leaf)
 leaf <- as.data.frame(unclass(leaf),stringsAsFactors=TRUE)
 
+flower <- read.csv("HPM Growth - Flowering.csv")
+str(flower)
+flower <- as.data.frame(unclass(flower),stringsAsFactors=TRUE)
+
 #Height analysis
 agalinis.height <- filter(height, species == "AGPU")
 ag.height.lm <- lmer(t8 ~ treatment*type + (1|replicate_id), data = agalinis.height)
@@ -102,6 +106,7 @@ hes.height <- ggplot(HESU.Height, aes(x = week, y = mean, color = type, group = 
   theme_pubr() +
   facet_wrap(~treatment)
 hes.height
+
 #leaf graphs
 leaf.long <- leaf %>% pivot_longer(cols=8:15, names_to = "week",values_to="leaves")
 hetero.leaf.long <- filter(leaf.long, species == "HESU")
@@ -160,3 +165,46 @@ growth.plots <- ggarrange(ag.height, ag.leaf, hes.height, hes.leaf,
                             labels = c("A", "B","C","D"), 
                             nrow = 2, ncol = 2)
 growth.plots
+
+
+#bud analysis
+ag.flower.lm <- lmer(total_bud ~ treatment*type + (1|replicate_id), data = flower)
+summary(ag.flower.lm)
+Anova(ag.flower.lm) #Treatment by type interaction: Chisq: 5.806, p = 0.0159
+emmeans(ag.flower.lm, pairwise ~ type|treatment)
+emmip(ag.flower.lm, ~treatment ~ type)
+
+
+#
+flower$type <- as.character(flower$type)
+flower$type[flower$type == "host-parasite"] <- "With Host"
+flower$type[flower$type == "parasite"] <- "Alone"
+flower$type <- as.factor(flower$type)
+
+flower$treatment <- as.character(flower$treatment)
+flower$treatment[flower$treatment == "innoculated"] <- "AMF"
+flower$treatment[flower$treatment == "sterilized"] <- "Control"
+flower$treatment <- as.factor(flower$treatment)
+
+ag.bud <- flower %>% 
+  group_by(treatment, type) %>% 
+  dplyr::summarise(mean= mean(total_bud),
+                   se = sd(total_bud)/sqrt(n()))
+
+bud.graph <- ggplot(ag.bud, aes(x = treatment, y = mean, color = type)) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.5), linewidth = 1, width = 0.09) +
+  geom_point(aes(shape = type), size = 7, position =  position_dodge(width = 0.5)) +
+  labs(x = "Fungi", y = "Number of flower buds") +
+  scale_color_manual(values=c("#D6A839", "#71A4A0")) +
+  scale_shape_manual(values=c(18,18)) +
+  theme_pubr() +
+  theme(strip.text = element_text(size = 15),
+        strip.background = element_blank(),
+        panel.border = element_rect(fill = "transparent", 
+                                    color = "gray23", linewidth = 0.12)) +
+  ylim(0,15)
+
+bud.graph
+
+
