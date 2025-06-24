@@ -12,7 +12,6 @@ library(patchwork)
 library(ggpubr)
 library(rstatix)
 
-#df73ff = purple
 
 castilleja.cover <- read.csv("castilleja cover complete.csv")
 castilleja.cover$castilleja[castilleja.cover$castilleja == "Control"] <- "Absent"
@@ -123,7 +122,7 @@ even.plot <- ggplot(data = castilleja.even, aes(x = reorder(castilleja, -mean), 
 even.plot
 
 diversity.plots <- ggarrange(div.plot, rich.plot, even.plot,
-                            labels = c("A", "B","C"), 
+                            labels = c("a", "b","c"), 
                             nrow = 1)
 diversity.plots  
 
@@ -453,7 +452,7 @@ almont.nearest <- ggplot(AL.nn, aes(x = rel_abund_cover, y = NN_freq)) +
 almont.nearest
 
 nearestplots <- ggarrange(emerald.nearest, avery.nearest, copper.nearest, deercreek.nearest, johnson.nearest, almont.nearest,
-                               labels = c("A", "B", "C", "D", "E", "F"), 
+                               labels = c("a", "b", "c", "d", "e", "f"), 
                                nrow = 2, ncol = 3, common.legend = TRUE, legend = "right")
 nearestplots
 
