@@ -63,9 +63,9 @@ castilleja.even$colcast = castilleja.even$castilleja
   
 div.plot <- ggplot(data = castilleja.div, aes(x = reorder(castilleja, -mean), y = mean, color = castilleja)) +
   geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
-                position =  position_dodge(width = 0.5), size = 1, width = 0.09) +
+                position =  position_dodge(width = 0.5), size = 0.8, width = 0.09) +
   geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
-                position =  position_dodge(width = 0.5), size = 0.8, width = 0.001, color = "grey63") +
+                position =  position_dodge(width = 0.5), size = 0.6, width = 0.09, color = "grey38") +
   geom_point(shape = 18 ,size = 5.6, colour = "grey38") +
   geom_point(aes(colour=castilleja),shape = 18, size = 4) +
   theme_pubr() +
@@ -83,9 +83,9 @@ div.plot
 
 rich.plot <- ggplot(data = castilleja.rich, aes(x = reorder(castilleja, -mean), y = mean, color = castilleja)) +
   geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
-                position =  position_dodge(width = 0.5), size = 1, width = 0.09) +
+                position =  position_dodge(width = 0.5), size = 0.8, width = 0.09) +
   geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
-                position =  position_dodge(width = 0.5), size = 0.8, width = 0.001, color = "grey63") +
+                position =  position_dodge(width = 0.5), size = 0.7, width = 0.09, color = "grey38") +
   geom_point(shape = 18 ,size = 5.6, colour = "grey38") +
   geom_point(aes(colour=castilleja),shape = 18, size = 4) +
   theme_pubr() +
@@ -103,9 +103,9 @@ rich.plot
 
 even.plot <- ggplot(data = castilleja.even, aes(x = reorder(castilleja, -mean), y = mean, color = castilleja)) +
   geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
-                position =  position_dodge(width = 0.5), size = 1, width = 0.1) +
+                position =  position_dodge(width = 0.5), size = 0.8, width = 0.09) +
   geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
-                   position =  position_dodge(width = 0.5), size = 0.8, width = 0.001, color = "grey63") +
+                   position =  position_dodge(width = 0.5), size = 0.7, width = 0.09, color = "grey38") +
   geom_point(shape = 18 ,size = 5.2,colour = "grey38") +
   geom_point(aes(colour=castilleja),shape = 18, size = 4) +
   theme_pubr() +
@@ -318,7 +318,7 @@ CC.nn <- cbind(copper.nn, copper.predict)
 emerald.nearest <- ggplot(EL.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
   geom_point(aes(color = year, shape = year), size = 2.3) +
-  scale_color_manual( values=c("#D6A839", "#71A4A0")) +
+  scale_color_manual( values=c("#e07a5f", "#3d405b")) +
   scale_shape_manual(values = c(20, 18)) +
   geom_line(aes(y = fit)) +
   geom_line(aes(y = lwr), linetype = "dashed", col = "black") +
@@ -335,7 +335,7 @@ emerald.nearest
 avery.nearest <- ggplot(AO.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
   geom_point(aes(color = year, shape = year), size = 2.3) +
-  scale_color_manual( values=c("#D6A839", "#71A4A0")) +
+  scale_color_manual( values=c("#e07a5f", "#3d405b")) +
   scale_shape_manual(values = c(20, 18)) +
   geom_line(aes(y = fit)) +
   geom_line(aes(y = lwr), linetype = "dashed", col = "black") +
@@ -350,7 +350,7 @@ avery.nearest
 copper.nearest <- ggplot(CC.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
   geom_point(aes(color = year, shape = year), size = 2.3) +
-  scale_color_manual( values=c("#D6A839", "#71A4A0")) +
+  scale_color_manual( values=c("#e07a5f", "#3d405b")) +
   scale_shape_manual(values = c(20, 18)) +
   geom_line(aes(y = fit)) +
   geom_line(aes(y = lwr), linetype = "dashed", col = "black") +
@@ -389,7 +389,7 @@ DC.nn <- cbind(deer.nn, deer.predict)
 deercreek.nearest <- ggplot(DC.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
   geom_point(aes(color = year, shape = year), size = 2.3) +
-  scale_color_manual( values=c("#D6A839", "#71A4A0")) +
+  scale_color_manual( values=c("#e07a5f", "#3d405b")) +
   scale_shape_manual(values = c(20, 18)) +
   geom_line(aes(y = fit)) +
   geom_line(aes(y = lwr), linetype = "dashed", col = "black") +
@@ -437,7 +437,7 @@ AL.nn <- cbind(cacr.nn, almont.predict)
 almont.nearest <- ggplot(AL.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
   geom_point(aes(color = year, shape = year), size = 2.3) +
-  scale_color_manual( values=c("#D6A839", "#71A4A0")) +
+  scale_color_manual( values=c("#e07a5f", "#3d405b")) +
   scale_shape_manual(values = c(20, 18)) +
   geom_line(aes(y = fit)) +
   geom_line(aes(y = lwr), linetype = "dashed", col = "black") +

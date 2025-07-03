@@ -16,11 +16,10 @@ library(formattable)
 library(data.table)
 
 #Load-in Data
-georgia.parasites <- read.csv("Georgia Parasites - Master.csv")
-georgia.parasites$taxa <- interaction(georgia.parasites$genus, georgia.parasites$species, sep = " ")
-georgia.parasites <- georgia.parasites %>% relocate(taxa)
+georgia.parasites <- read.csv("Southeastern Parasites - Georgia.csv")
+
 #Removing unnecessary coloumns
-georgia.data <- georgia.parasites[ -c(32:36)]
+georgia.data <- georgia.parasites[ -c(33:38)]
 #organize data strucutre, remove link columns, changing to factors
 str(georgia.data)
 georgia.data <- as.data.frame(unclass(georgia.data),stringsAsFactors=TRUE)
@@ -41,22 +40,17 @@ ggplot(filter.data, aes(x = ecosystem)) +
 
 
 
-
-
-
-
-
 ecosystem.data <- plyr::rename(georgia.data, c("ecosystem_lump" = "Ecosystem",
                                                "habit" = "Habit",
                                                "DNR_status_lump" = "Status"))
 
-PieDonut(ecosystem.data, aes(x = Habit, y = genus), r0=0.3, pieLabelSize = 4.7, donutLabelSize = 2.4,showRatioThreshold =.001, labelpositionThreshold=.01,
+PieDonut(ecosystem.data, aes(x = Habit, y = genus), r0=0.3, pieLabelSize = 5, donutLabelSize = 2.1,showRatioThreshold =.001, labelpositionThreshold=.01,
          ratioByGroup = TRUE)
 
-PieDonut(ecosystem.data, aes(x = Ecosystem, y = habit), r0=0.3, pieLabelSize = 5, donutLabelSize = 2.4, explode=0,showRatioThreshold =.001, labelpositionThreshold=.01,
+PieDonut(ecosystem.data, aes(x = Ecosystem, y = Habit), r0=0.3, pieLabelSize = 4.5, donutLabelSize = 2.1, explode=0,showRatioThreshold =.001, labelpositionThreshold=.01,
          ratioByGroup = TRUE)
 
-PieDonut(ecosystem.data, aes(x = habit, y = NatureServ_status), r0=0.3, pieLabelSize = 5, donutLabelSize = 2.4, explode=0,showRatioThreshold =.001, labelpositionThreshold=.01,
+PieDonut(ecosystem.data, aes(x = Habit, y = NatureServ_status), r0=0.3, pieLabelSize = 5, donutLabelSize = 2.1, explode=0,showRatioThreshold =.001, labelpositionThreshold=.01,
          ratioByGroup = TRUE)
 
 filter.data <- GP %>% 

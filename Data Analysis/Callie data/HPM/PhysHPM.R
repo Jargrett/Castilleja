@@ -18,6 +18,8 @@ library(gasanalyzer)
 
 physiology <- read.csv("HPM Physiology - Phys.csv")
 str(physiology)
+physiology$treatment[physiology$treatment == "innoculated"] <- "AMF"
+physiology$treatment[physiology$treatment == "sterilized"] <- "Control"
 physiology <- as.data.frame(unclass(physiology),stringsAsFactors=TRUE)
 
 
@@ -44,7 +46,7 @@ ass.graph <- ggplot(ass.phys, aes(x = plant_id, y = mean, color = plant_id, grou
                 position =  position_dodge(width = 0.5), size = 1, width = 0.09) +
   geom_point(aes(colour=plant_id),shape = 18, size = 5) +
   labs(x = "Plant Identity", y = "Carbon Assimilation (µmol m-2 s-1)") +
-  scale_color_manual( values=c("#e07a5f", "#3d405b","#D6A839", "#71A4A0")) +
+  scale_color_manual( values=c("#e07a5f", "#D6A839","#71A4A0", "#3d405b")) +
   theme_pubr() +
   theme(strip.text = element_text(size = 15),
         strip.background = element_blank(),
@@ -61,7 +63,7 @@ trans.graph <- ggplot(trans.phys, aes(x = plant_id, y = mean, color = plant_id))
                 position =  position_dodge(width = 0.5), size = 1, width = 0.09) +
   geom_point(aes(colour=plant_id),shape = 18, size = 5) +
   labs(x = "Plant Identity", y = "Transpiration rate (mol m-2 s-1)") +
-  scale_color_manual( values=c("#e07a5f", "#3d405b","#D6A839", "#71A4A0")) +
+  scale_color_manual( values=c("#e07a5f", "#D6A839","#71A4A0", "#3d405b")) +
   theme_pubr() +
   theme(strip.text = element_text(size = 15),
         strip.background = element_blank(),
@@ -78,7 +80,7 @@ sto.graph <- ggplot(sto.phys, aes(x = plant_id, y = mean, color = plant_id)) +
                 position =  position_dodge(width = 0.5), size = 1, width = 0.09) +
   geom_point(aes(colour=plant_id),shape = 18, size = 5) +
   labs(x = "Plant Identity", y = "Stomatal Conductance (mol m-2 s-1)") +
-  scale_color_manual( values=c("#e07a5f", "#3d405b","#D6A839", "#71A4A0")) +
+  scale_color_manual( values=c("#e07a5f", "#D6A839","#71A4A0", "#3d405b")) +
   theme_pubr() +
   theme(strip.text = element_text(size = 15),
         strip.background = element_blank(),
