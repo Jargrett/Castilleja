@@ -110,12 +110,12 @@ sd.rs <- sd.rs %>%
                    se = sd(root_shoot)/sqrt(n()))
 
 hetero.above <- filter(sd.above, species == "HESU")
-hetero.above.plot <- ggplot(data = hetero.above, aes(x = type, y = mean, color = type)) +
+hetero.above.plot <- ggplot(data = hetero.above, aes(x = type, y = mean, fill = type)) +
   geom_col(position = "dodge", width = .7, linewidth = 0.5, alpha = 0.5, size = 0.1) +
   geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
                 position =  position_dodge(width = 0.5), width = 0.15) +
   theme_pubr() +
-  scale_color_manual( values=c("#e07a5f", "#3d405b")) +
+  scale_fill_manual( values=c("#e07a5f", "#3d405b")) +
   labs(x = "Hemiparasite presence", y = "Aboveground Biomass") +
   facet_wrap(~treatment) +
   ylim(0,1.5)
@@ -214,4 +214,4 @@ hesu.rs.plot
 rootshoot.plots <- ggarrange(agpu.total.plot, hetero.total.plot, agpu.rs.plot, hesu.rs.plot,
                            labels = c("A", "B","C","D"), 
                            nrow = 2, ncol = 2, legend = FALSE)
-rootshoot.plots
+rootshoot.plots 

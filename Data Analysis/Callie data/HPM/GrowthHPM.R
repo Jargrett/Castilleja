@@ -13,22 +13,39 @@ library(ggplot2)#post-hoc analysis
 
 height <- read.csv("HPM Growth - Height.csv")
 str(height)
+height$treatment[height$treatment == "innoculated"] <- "AMF"
+height$treatment[height$treatment == "sterilized"] <- "Control"
+agalinis.height <- filter(height, species == "AGPU")
+hetero.height <- filter(height, species == "HESU")
 height <- as.data.frame(unclass(height),stringsAsFactors=TRUE)
+hetero.height <- as.data.frame(unclass(hetero.height),stringsAsFactors=TRUE)
+agalinis.height <- as.data.frame(unclass(agalinis.height),stringsAsFactors=TRUE)
 
 leaf <- read.csv("HPM Growth - Leaf_Number.csv")
 str(leaf)
+leaf$treatment[leaf$treatment == "innoculated"] <- "AMF"
+leaf$treatment[leaf$treatment == "sterilized"] <- "Control"
 leaf <- as.data.frame(unclass(leaf),stringsAsFactors=TRUE)
+
 
 flower <- read.csv("HPM Growth - Flowering.csv")
 str(flower)
+flower$treatment[flower$treatment == "innoculated"] <- "AMF"
+flower$treatment[flower$treatment == "sterilized"] <- "Control"
 flower <- as.data.frame(unclass(flower),stringsAsFactors=TRUE)
+
+SLA<- read.csv("HPM SLA - SLA.csv")
+str(SLA)
+SLA$treatment[SLA$treatment == "innoculated"] <- "AMF"
+SLA$treatment[SLA$treatment == "sterilized"] <- "Control"
+SLA <- as.data.frame(unclass(SLA),stringsAsFactors=TRUE)
 
 #Height analysis
 agalinis.height <- filter(height, species == "AGPU")
 ag.height.lm <- lmer(t8 ~ treatment*type + (1|replicate_id), data = agalinis.height)
 summary(ag.height.lm)
-Anova(ag.height.lm)
-emmeans(ag.height.lm, pairwise ~ type|treatment)
+Anova(ag.height.lm) #treatment:type p = 0.029
+emmeans(ag.height.lm, pairwise ~ type*treatment)
 emmip(ag.height.lm, ~ type ~ treatment)
 
 hetero.height <- filter(height, species == "HESU")
@@ -52,6 +69,63 @@ summary(he.leaf.lm)
 Anova(he.leaf.lm)
 emmeans(he.leaf.lm, pairwise ~ type|treatment)
 emmip(he.leaf.lm, ~ type ~ treatment)
+
+#final time point graphs
+tiff("effect.tiff", units = "in", width = 10, length = 8, res = 300)
+dev.off()
+
+a.h <- agalinis.height %>% drop_na()
+agpu.Height <- a.h %>% 
+  group_by(treatment, type) %>% 
+  dplyr::summarise(mean= mean(t8),
+                   se = sd(t8)/sqrt(n()))
+a.l <- agalinis.leaf %>% drop_na()
+agpu.Leaf <- a.l %>% 
+  group_by(treatment, type) %>% 
+  dplyr::summarise(mean= mean(t8),
+                   se = sd(t8)/sqrt(n()))
+h.h <- hetero.height %>% drop_na()
+agpu.Height <- h.h %>% 
+  group_by(treatment, type) %>% 
+  dplyr::summarise(mean= mean(t8),
+                   se = sd(t8)/sqrt(n()))
+h.l <- hetero.leaf %>% drop_na()
+agpu.Leaf <- h.l %>% 
+  group_by(treatment, type) %>% 
+  dplyr::summarise(mean= mean(t8),
+                   se = sd(t8)/sqrt(n()))
+
+t8.ag.height.graph <- ggplot(agpu.Height, aes(x = treatment, y = mean, color = type)) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.5), linewidth = 1, width = 0.09) +
+  geom_point(aes(shape = type), size = 7, position =  position_dodge(width = 0.5)) +
+  labs(x = "Fungi", y = "Final Height (cm)") +
+  scale_color_manual(values=c("#D6A839", "#71A4A0")) +
+  scale_shape_manual(values=c(18,18)) +
+  theme_pubr() +
+  theme(strip.text = element_text(size = 15),
+        strip.background = element_blank(),
+        panel.border = element_rect(fill = "transparent", 
+                                    color = "gray23", linewidth = 0.12)) +
+  ylim(0,50)
+
+t8.ag.height.graph
+
+t8.ag.leaf.graph <- ggplot(agpu., aes(x = treatment, y = mean, color = type)) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.5), linewidth = 1, width = 0.09) +
+  geom_point(aes(shape = type), size = 7, position =  position_dodge(width = 0.5)) +
+  labs(x = "Fungi", y = "Final Leaf Number") +
+  scale_color_manual(values=c("#D6A839", "#71A4A0")) +
+  scale_shape_manual(values=c(18,18)) +
+  theme_pubr() +
+  theme(strip.text = element_text(size = 15),
+        strip.background = element_blank(),
+        panel.border = element_rect(fill = "transparent", 
+                                    color = "gray23", linewidth = 0.12)) +
+  ylim(0,300)
+
+t8.ag.height.graph
 
 #height graphs
 height.long <- height %>% pivot_longer(cols=8:15, names_to = "week",values_to="height")
@@ -171,7 +245,7 @@ growth.plots
 ag.flower.lm <- lmer(total_bud ~ treatment*type + (1|replicate_id), data = flower)
 summary(ag.flower.lm)
 Anova(ag.flower.lm) #Treatment by type interaction: Chisq: 5.806, p = 0.0159
-emmeans(ag.flower.lm, pairwise ~ type|treatment)
+emmeans(ag.flower.lm, pairwise ~ type*treatment)
 emmip(ag.flower.lm, ~treatment ~ type)
 
 
@@ -207,4 +281,66 @@ bud.graph <- ggplot(ag.bud, aes(x = treatment, y = mean, color = type)) +
 
 bud.graph
 
+#SLA analysis
+agalinis.sla <- filter(SLA, species == "AGPU")
+ag.sla.lm <- lmer(sla ~ treatment*type + (1|replicate_id), data = agalinis.sla)
+summary(ag.sla.lm)
+Anova(ag.sla.lm)
+emmeans(ag.sla.lm, pairwise ~ type|treatment)
+emmip(ag.sla.lm, ~ type ~ treatment)
 
+hetero.sla <- filter(SLA, species == "HESU")
+he.sla.lm <- lmer(sla ~ treatment*type + (1|replicate_id), data = hetero.sla)
+summary(he.sla.lm)
+Anova(he.sla.lm)
+emmeans(he.sla.lm, pairwise ~ type|treatment)
+emmip(he.sla.lm, ~ type ~ treatment)
+
+#Standard error calculations
+AGPU.sla <- agalinis.sla %>% 
+  group_by(treatment, type) %>% 
+  dplyr::summarise(mean= mean(sla),
+                   se = sd(sla)/sqrt(n()))
+
+HESU.sla <- hetero.sla %>% 
+  group_by(treatment, type) %>% 
+  dplyr::summarise(mean= mean(sla),
+                   se = sd(sla)/sqrt(n()))
+
+ag.SLA.graph <- ggplot(AGPU.sla, aes(x = treatment, y = mean, color = type)) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.5), linewidth = 1, width = 0.09) +
+  geom_point(aes(shape = type), size = 7, position =  position_dodge(width = 0.5)) +
+  labs(x = "Fungi", y = "Specific leaf Area (cm^2/g)") +
+  scale_color_manual(values=c("#71A4A0", "#D6A839")) +
+  scale_shape_manual(values=c(18,18)) +
+  theme_pubr() +
+  theme(strip.text = element_text(size = 15),
+        strip.background = element_blank(),
+        panel.border = element_rect(fill = "transparent", 
+                                    color = "gray23", linewidth = 0.12)) +
+  ylim(100,200)
+
+ag.SLA.graph
+
+
+he.SLA.graph <- ggplot(HESU.sla, aes(x = treatment, y = mean, color = type)) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.5), linewidth = 1, width = 0.09) +
+  geom_point(aes(shape = type), size = 7, position =  position_dodge(width = 0.5)) +
+  labs(x = "Fungi", y = "Specific leaf Area (cm^2/g)") +
+  scale_color_manual( values=c("#e07a5f", "#3d405b")) +
+  scale_shape_manual(values=c(18,18)) +
+  theme_pubr() +
+  theme(strip.text = element_text(size = 15),
+        strip.background = element_blank(),
+        panel.border = element_rect(fill = "transparent", 
+                                    color = "gray23", linewidth = 0.12)) +
+  ylim(200,600)
+
+he.SLA.graph
+
+sla.plots <- ggarrange(ag.SLA.graph, he.SLA.graph,
+                          labels = c("A", "B"), 
+                          nrow = 1, ncol = 2)
+sla.plots

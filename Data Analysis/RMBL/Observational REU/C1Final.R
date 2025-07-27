@@ -408,7 +408,7 @@ deercreek.nearest
 johnson.nearest <- ggplot(JH.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
   geom_point(aes(color = year, shape = year), size = 2.3) +
-  scale_color_manual( values=c("#D6A839", "#71A4A0")) +
+  scale_color_manual( values=c("#e07a5f", "#3d405b")) +
   scale_shape_manual(values = c(20, 18)) +
   geom_line(aes(y = fit)) +
   geom_line(aes(y = lwr), linetype = "dashed", col = "black") +

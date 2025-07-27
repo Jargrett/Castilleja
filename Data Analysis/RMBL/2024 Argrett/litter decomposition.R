@@ -18,12 +18,29 @@ library(dplyr)
 library(plyr)
 
 #load-in the data
-winter <- read.csv("Litter Decomposition - 2023-2024 Overwinter.csv")
+winter1 <- read.csv("Litter Decomposition - 2024 Overwinter.csv")
+winter2 <- read.csv("Litter Decomposition - 2025 Overwinter.csv")
 within <- read.csv("Litter Decomposition - 2024 Within Season.csv")
-yearlong <- read.csv("Litter Decomposition - 2023-2024 Full Year.csv")
-#yearlong <- read.csv("Litter Decomposition - 2023-2024 Yearlong.csv")
+yearlong <- read.csv("Litter Decomposition - 2024 Full Year.csv")
+
+
 #bind
-decomp <- rbind.fill(winter, within, yearlong)
+
+winter1 <- winter1 %>% 
+  filter(missing != "Yes") %>% 
+  dplyr::select(-c((missing))) %>%
+  dplyr::select(-c((redo_coin_litter_dry_weight))) %>% 
+  dplyr::select(-c((diff))) 
+
+winter2 <- winter2 %>% 
+  filter(ups_missing != "Yes") %>% 
+  dplyr::select(-c((ups_missing))) %>% 
+  dplyr::select(-c((missing)))
+
+winter <- rbind.fill(winter1, winter2)
+winter <- winter %>% drop_na(mass_loss)
+
+decomp <- rbind.fill(within, winter, yearlong)
 #check structure
 str(decomp)
 decomp <- as.data.frame(unclass(decomp),stringsAsFactors=TRUE)
@@ -37,10 +54,6 @@ decomp <- decomp %>%
   dplyr::select(-c((missing)))
 
 within <- within %>% 
-  filter(missing != "Yes") %>% 
-  dplyr::select(-c((missing)))
-
-winter <- winter %>% 
   filter(missing != "Yes") %>% 
   dplyr::select(-c((missing)))
 
@@ -64,11 +77,11 @@ yearlong <- yearlong %>% mutate(time = deployment_duration/365)
 #Removing Outliers for testing
 decomp <- decomp[-c(57,69,157),]
 
-over.lm <- lmer(mass_remaining ~ removal*litter + deployment_period + (1|location), data = decomp)
+over.lm <- lmer(mass_remaining ~ removal*litter + year + (1|block) + (1|location), data = winter)
 summary(over.lm)
 Anova(over.lm)
-emmip(over.lm, litter ~ deployment_period)
-emmeans(over.lm, pairwise ~ litter|deployment_period)
+emmip(over.lm, litter ~ removal)
+emmeans(over.lm, pairwise ~ litter|removal)
 
 litter <- fit_litter(time = decomp$time,
                      mass.remaining = decomp$mass_remaining,
