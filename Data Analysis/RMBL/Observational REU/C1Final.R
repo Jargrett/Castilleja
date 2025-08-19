@@ -76,7 +76,7 @@ div.plot <- ggplot(data = castilleja.div, aes(x = reorder(castilleja, -mean), y 
         panel.border = element_rect(fill = "transparent", 
                                     color = "gray23", linewidth = 0.12)) +
   labs(x = "Castilleja", y = "Shannon Diversity of co-occuring species") +
-  theme(legend.position="none") +
+  theme(legend.position = "none") +
   ylim(1.4,2)
 
 div.plot
@@ -96,7 +96,7 @@ rich.plot <- ggplot(data = castilleja.rich, aes(x = reorder(castilleja, -mean), 
         panel.border = element_rect(fill = "transparent", 
                                     color = "gray23", linewidth = 0.12)) +
   labs(x = "Castilleja", y = "Species Richness of co-occuring species") +
-  theme(legend.position="none") +
+  theme(legend.position = "none") +
   ylim(6,12)
 
 rich.plot
@@ -116,7 +116,7 @@ even.plot <- ggplot(data = castilleja.even, aes(x = reorder(castilleja, -mean), 
         panel.border = element_rect(fill = "transparent", 
                                     color = "gray23", linewidth = 0.12)) +
   labs(x = "Castilleja", y = "Species evenness of co-occuring species") +
-  theme(legend.position="none") +
+  theme(legend.position = "none") +
   ylim(0.6,1)
 
 even.plot
