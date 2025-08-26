@@ -1,0 +1,1244 @@
+date,site,who,transect,segment,round,gross_ID,plant,insect_order
+6/26/19,Brush Creek,MDC,K1,1,1,Small black solitary bee,Agoseris glauca,Hymenoptera
+6/26/19,Brush Creek,MDC,K1,1,1,Small metallic solitary bee,Agoseris glauca,Hymenoptera
+6/26/19,Brush Creek,KA,K1,1,2,Other fly,Lomatium dissectum,Diptera
+6/26/19,Brush Creek,KA,K1,1,2,Other fly,Agoseris glauca,Diptera
+6/26/19,Brush Creek,MDC,K2,1,2,Small black solitary bee,Lomatium dissectum,Hymenoptera
+6/26/19,Brush Creek,MDC,K2,1,2,Wasps,Agoseris glauca,Hymenoptera
+6/26/19,Brush Creek,MDC,K2,2,1,Small black solitary bee,Agoseris glauca,Hymenoptera
+6/26/19,Brush Creek,KA,K3,2,1,Small black solitary bee,Lomatium dissectum,Hymenoptera
+6/26/19,Brush Creek,KA,K3,2,1,Small black solitary bee,Lomatium dissectum,Hymenoptera
+6/26/19,Brush Creek,KA,K1,3,2,Small black solitary bee,Lomatium dissectum,Hymenoptera
+6/26/19,Brush Creek,KA,K3,3,1,Other fly,Boechera stricta,Diptera
+6/26/19,Brush Creek,KA,K1,4,2,Small black solitary bee,Lomatium dissectum,Hymenoptera
+6/26/19,Brush Creek,KA,K3,4,1,Small black solitary bee,Lomatium dissectum,Hymenoptera
+6/26/19,Brush Creek,MDC,K3,4,2,Hemipteran,Agoseris glauca,Hemiptera
+6/26/19,Brush Creek,KA,K1,5,2,Small black solitary bee,Lomatium dissectum,Hymenoptera
+6/26/19,Brush Creek,KA,K1,5,2,Other fly,Lomatium dissectum,Diptera
+6/26/19,Brush Creek,KA,K3,5,1,Wasps,Delphinium occidentale,Hymenoptera
+7/3/19,Brush Creek,KA,K1,2,1,Other fly,Lomatium dissectum,Diptera
+7/3/19,Brush Creek,KA,K2,2,1,Small black solitary bee,Lomatium dissectum,Hymenoptera
+7/3/19,Brush Creek,KA,K3,2,2,Beetles,Lomatium dissectum,Coleoptera
+7/3/19,Brush Creek,KA,K1,3,1,Bombus insularis,Wyethia amplexicaulis,Hymenoptera
+7/3/19,Brush Creek,KA,K1,3,1,Small black solitary bee,Lomatium dissectum,Hymenoptera
+7/3/19,Brush Creek,KA,K3,3,2,Other fly,Boechera stricta,Diptera
+7/11/19,Brush Creek,KA,K1,1,1,Other fly,Linum lewisii,Diptera
+7/11/19,Brush Creek,KA,K1,1,1,Syrphidae,Erigeron speciosus,Diptera
+7/11/19,Brush Creek,KA,K3,1,2,Syrphidae,Collomia linearis,Diptera
+7/11/19,Brush Creek,KA,K2,2,1,Syrphidae,Lomatium dissectum,Diptera
+7/11/19,Brush Creek,KA,K3,2,2,Bombus unknown,Delphinium occidentale,Hymenoptera
+7/11/19,Brush Creek,BB,K1,3,2,Wasps,Collomia linearis,Hymenoptera
+7/11/19,Brush Creek,BB,K2,4,1,Bombyliidae,Collomia linearis,Diptera
+7/11/19,Brush Creek,KA,K3,4,1,Syrphidae,Collomia linearis,Diptera
+7/17/19,Virginia Basin,SP,T3,1,1,Syrphidae,Viola praemorsa,Diptera
+7/17/19,Virginia Basin,MDC,T1,2,1,Syrphidae,Draba aurea,Diptera
+7/17/19,Virginia Basin,MDC,T1,2,1,Other fly,Draba aurea,Diptera
+7/17/19,Virginia Basin,CM,T2,2,1,Bombyliidae,Androsace septentrionalis,Diptera
+7/17/19,Virginia Basin,SP,T3,5,1,Other fly,Fragaria virginiana,Diptera
+7/18/19,Brush Creek,KA,K1,1,1,Hemipteran,Erigeron speciosus,Hemiptera
+7/18/19,Brush Creek,KA,K3,1,1,Moths,Erigeron speciosus,Lepidoptera
+7/18/19,Brush Creek,BD,K2,2,1,Beetles,Wyethia amplexicaulis,Coleoptera
+7/18/19,Brush Creek,BD,K2,3,2,Small black solitary bee,Erigeron speciosus,Hymenoptera
+7/18/19,Brush Creek,KA,K2,4,2,Beetles,Agastache urticifolia,Coleoptera
+7/18/19,Brush Creek,KA,K2,4,2,Small black solitary bee,Erigeron speciosus,Hymenoptera
+7/18/19,Brush Creek,BD,K3,5,1,Small black solitary bee,Calochortus gunnisonii,Hymenoptera
+7/24/19,Virginia Basin,AL,T1,1,1,Syrphidae,Ligusticum porteri,Diptera
+7/24/19,Virginia Basin,SP,T2,1,1,Hemipteran,Pseudocymopterus montanus,Hemiptera
+7/24/19,Virginia Basin,TR,T3,1,1,Small black solitary bee,Fragaria virginiana,Hymenoptera
+7/26/19,Brush Creek,KA,K2,2,1,Beetles,Agastache urticifolia,Coleoptera
+7/26/19,Brush Creek,KA,K2,2,2,Syrphidae,Agastache urticifolia,Diptera
+7/26/19,Brush Creek,KA,K2,2,2,Other fly,Agastache urticifolia,Diptera
+7/26/19,Brush Creek,KA,K3,2,1,Moths,Agastache urticifolia,Lepidoptera
+7/26/19,Brush Creek,ES,K1,3,2,Bombus flavifrons,Agastache urticifolia,Hymenoptera
+7/26/19,Brush Creek,KA,K1,3,1,Other fly,Erigeron speciosus,Diptera
+7/26/19,Brush Creek,ES,K3,3,2,Bombus bifarius,Agastache urticifolia,Hymenoptera
+7/26/19,Brush Creek,KA,K2,4,1,Hemipteran,Erigeron speciosus,Hemiptera
+7/26/19,Brush Creek,KA,K1,5,2,Bombus flavifrons,Delphinium occidentale,Hymenoptera
+7/26/19,Brush Creek,KA,K2,5,1,Bombus bifarius,Agastache urticifolia,Hymenoptera
+7/26/19,Brush Creek,KA,K3,5,1,Moths,Agastache urticifolia,Lepidoptera
+8/2/19,Brush Creek,BD,K1,1,1,Other fly,Erigeron speciosus,Diptera
+8/2/19,Brush Creek,KA,K3,1,1,Bombus flavifrons,Delphinium occidentale,Hymenoptera
+8/2/19,Brush Creek,KA,K3,1,2,Bombus flavifrons,Delphinium occidentale,Hymenoptera
+8/2/19,Brush Creek,KA,K3,1,2,Bombus bifarius,Erigeron speciosus,Hymenoptera
+8/2/19,Brush Creek,KA,K3,1,2,Bombus bifarius,Erigeron speciosus,Hymenoptera
+8/2/19,Brush Creek,KA,K3,1,1,Small black solitary bee,Erigeron speciosus,Hymenoptera
+8/2/19,Virginia Basin,TR,T1,1,1,Other fly,Ligusticum porteri,Diptera
+8/2/19,Virginia Basin,TR,T1,1,1,Other fly,Senecio crassulus,Diptera
+8/2/19,Virginia Basin,TR,T1,1,1,Other fly,Ligusticum porteri,Diptera
+8/2/19,Virginia Basin,TR,T1,1,1,Small black solitary bee,Pseudocymopterus montanus,Hymenoptera
+8/2/19,Virginia Basin,TR,T2,1,1,Bombus flavifrons,Castilleja sulphurea,Hymenoptera
+8/2/19,Virginia Basin,TR,T2,1,1,Other fly,Potentilla pulcherrima,Diptera
+8/2/19,Virginia Basin,CM,T3,1,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+8/2/19,Virginia Basin,CM,T3,1,1,Other fly,Senecio crassulus,Diptera
+8/2/19,Brush Creek,KA,K3,2,1,Bombus unknown,Delphinium occidentale,Hymenoptera
+8/2/19,Brush Creek,KA,K3,2,1,Bombus unknown,Erigeron speciosus,Hymenoptera
+8/2/19,Virginia Basin,TR,T1,2,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+8/2/19,Virginia Basin,TR,T1,2,1,Other fly,Potentilla pulcherrima,Diptera
+8/2/19,Virginia Basin,CM,T2,2,1,Other fly,Linum lewisii,Diptera
+8/2/19,Virginia Basin,CM,T2,2,1,Other fly,Pseudocymopterus montanus,Diptera
+8/2/19,Virginia Basin,CM,T2,2,1,Other fly,Linum lewisii,Diptera
+8/2/19,Virginia Basin,CM,T3,2,1,Other fly,Potentilla pulcherrima,Diptera
+8/2/19,Brush Creek,KA,K1,3,2,Bombus bifarius,Erigeron speciosus,Hymenoptera
+8/2/19,Brush Creek,KA,K2,3,1,Other fly,Agastache urticifolia,Raphidioptera
+8/2/19,Brush Creek,KA,K3,3,2,Other fly,Agastache urticifolia,Raphidioptera
+8/2/19,Brush Creek,KA,K1,4,1,Bombus insularis,Agastache urticifolia,Hymenoptera
+8/2/19,Brush Creek,KA,K1,4,1,Bombus bifarius,Agastache urticifolia,Hymenoptera
+8/2/19,Brush Creek,KA,K1,4,1,Hemipteran,Erigeron speciosus,Hemiptera
+8/2/19,Brush Creek,BD,K1,4,2,Small black solitary bee,Erigeron speciosus,Hymenoptera
+8/2/19,Brush Creek,BD,K2,4,2,Bombus bifarius,Agastache urticifolia,Hymenoptera
+8/2/19,Brush Creek,BD,K2,4,2,Bombus bifarius,Agastache urticifolia,Hymenoptera
+8/2/19,Brush Creek,KA,K3,4,2,Other fly,Agastache urticifolia,Raphidioptera
+8/2/19,Virginia Basin,CM,T1,4,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+8/2/19,Virginia Basin,CM,T1,4,1,Other fly,Potentilla pulcherrima,Diptera
+8/2/19,Virginia Basin,CM,T1,4,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+8/2/19,Virginia Basin,CM,T1,4,1,Other fly,Potentilla pulcherrima,Diptera
+8/2/19,Virginia Basin,CS,T2,4,1,Bombus unknown,Castilleja sulphurea,Hymenoptera
+8/2/19,Virginia Basin,TR,T3,4,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+8/2/19,Brush Creek,KA,K1,5,2,Small metallic solitary bee,Agastache urticifolia,Hymenoptera
+8/2/19,Brush Creek,KA,K2,5,2,Bombus flavifrons,Delphinium occidentale,Hymenoptera
+8/2/19,Brush Creek,KA,K3,5,1,Bombus bifarius,Delphinium occidentale,Hymenoptera
+8/2/19,Brush Creek,KA,K3,5,2,Other fly,Delphinium occidentale,Raphidioptera
+8/2/19,Virginia Basin,CM,T1,5,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+8/2/19,Virginia Basin,CM,T1,5,1,Other fly,Potentilla pulcherrima,Diptera
+8/2/19,Virginia Basin,CM,T1,5,1,Wasps,Potentilla pulcherrima,Hymenoptera
+8/2/19,Virginia Basin,CM,T1,5,1,Syrphidae,Linum lewisii,Diptera
+8/2/19,Virginia Basin,CM,T1,5,1,Other fly,Senecio crassulus,Diptera
+8/2/19,Virginia Basin,CM,T1,5,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+8/2/19,Virginia Basin,CS,T3,5,1,Other fly,Potentilla pulcherrima,Diptera
+8/7/19,Virginia Basin,AS,T1,1,1,Bombus flavifrons,Castilleja sulphurea,Hymenoptera
+8/7/19,Virginia Basin,AS,T1,1,1,Syrphidae,Linum lewisii,Diptera
+8/7/19,Virginia Basin,CS,T2,1,1,Other fly,Potentilla pulcherrima,Diptera
+8/7/19,Virginia Basin,CS,T2,1,1,Other fly,Senecio crassulus,Diptera
+8/7/19,Virginia Basin,CS,T2,1,1,Other fly,Potentilla pulcherrima,Diptera
+8/7/19,Virginia Basin,CS,T2,1,1,Other fly,Potentilla pulcherrima,Diptera
+8/7/19,Virginia Basin,CS,T2,1,1,Other fly,Potentilla pulcherrima,Diptera
+8/7/19,Virginia Basin,CS,T2,1,1,Other fly,Senecio crassulus,Diptera
+8/7/19,Virginia Basin,CS,T2,1,1,Other fly,Pseudocymopterus montanus,Diptera
+8/7/19,Virginia Basin,CS,T2,1,1,Hemipteran,Senecio crassulus,Hemiptera
+8/7/19,Virginia Basin,CS,T3,1,1,White butterfly,Senecio crassulus,Lepidoptera
+8/7/19,Virginia Basin,CS,T3,1,1,Syrphidae,Senecio crassulus,Diptera
+8/7/19,Virginia Basin,BD,T2,2,1,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+8/7/19,Virginia Basin,AS,T1,3,1,Bombus unknown,Helianthella quinquenervis,Hymenoptera
+8/7/19,Virginia Basin,SP,T3,3,1,Other fly,Potentilla pulcherrima,Diptera
+8/7/19,Virginia Basin,AS,T1,4,1,Bombus frigidus,Castilleja sulphurea,Hymenoptera
+8/7/19,Virginia Basin,AS,T1,4,1,Other fly,Potentilla pulcherrima,Diptera
+8/7/19,Virginia Basin,AS,T1,4,1,Hemipteran,Senecio crassulus,Hemiptera
+8/7/19,Virginia Basin,AS,T1,4,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+8/7/19,Virginia Basin,ES,T2,4,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+8/7/19,Virginia Basin,ES,T2,4,1,Other fly,Potentilla pulcherrima,Diptera
+8/7/19,Virginia Basin,ES,T1,5,1,Bombus sylvicola,Senecio crassulus,Hymenoptera
+8/9/19,Brush Creek,ES,K1,1,1,Hemipteran,Erigeron speciosus,Hemiptera
+8/9/19,Brush Creek,LX,K3,1,1,Hemipteran,Erigeron speciosus,Hemiptera
+8/9/19,Brush Creek,LX,K3,1,1,Other fly,Agastache urticifolia,Diptera
+8/9/19,Brush Creek,ES,K1,2,2,Small black solitary bee,Polygonum douglasii,Hymenoptera
+8/9/19,Brush Creek,ES,K1,2,2,Bombyliidae,Heliomeris multiflora,Diptera
+8/9/19,Brush Creek,KA,K3,2,2,Bombus flavifrons,Agastache urticifolia,Hymenoptera
+8/9/19,Brush Creek,KA,K3,2,2,Bombus californicus,Agastache urticifolia,Hymenoptera
+8/9/19,Brush Creek,KA,K3,2,2,Bombyliidae,Erigeron speciosus,Diptera
+8/9/19,Brush Creek,KA,K2,3,2,Moths,Erigeron speciosus,Lepidoptera
+8/9/19,Brush Creek,ES,K1,4,2,Bombus californicus,Agastache urticifolia,Hymenoptera
+8/9/19,Brush Creek,KA,K2,4,1,Beetles,Chrysothamnus viscidiflorus,Coleoptera
+8/9/19,Brush Creek,KA,K2,4,1,Beetles,Chrysothamnus viscidiflorus,Coleoptera
+8/9/19,Brush Creek,KA,K2,4,1,Beetles,Chrysothamnus viscidiflorus,Coleoptera
+8/9/19,Brush Creek,KA,K2,4,1,Beetles,Chrysothamnus viscidiflorus,Coleoptera
+8/9/19,Brush Creek,KA,K2,4,1,Beetles,Chrysothamnus viscidiflorus,Coleoptera
+8/9/19,Brush Creek,KA,K2,4,1,Beetles,Chrysothamnus viscidiflorus,Coleoptera
+8/9/19,Brush Creek,KA,K2,4,1,Beetles,Chrysothamnus viscidiflorus,Coleoptera
+8/9/19,Brush Creek,KA,K2,4,1,Big solitary bee (non-megachile),Agastache urticifolia,Hymenoptera
+8/9/19,Brush Creek,KA,K2,4,2,Beetles,Chrysothamnus viscidiflorus,Coleoptera
+8/9/19,Brush Creek,KA,K2,4,2,Beetles,Chrysothamnus viscidiflorus,Coleoptera
+8/9/19,Brush Creek,KA,K2,4,2,Beetles,Chrysothamnus viscidiflorus,Coleoptera
+8/9/19,Brush Creek,ES,K1,5,2,Beetles,Heliomeris multiflora,Coleoptera
+8/9/19,Brush Creek,KA,K3,5,2,Syrphidae,Heliomeris multiflora,Diptera
+8/9/19,Brush Creek,KA,K3,5,2,Small black solitary bee,Heliomeris multiflora,Hymenoptera
+8/14/19,Virginia Basin,SP,T2,1,1,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+8/14/19,Virginia Basin,SP,T2,1,1,Bombus bifarius,Helianthella quinquenervis,Hymenoptera
+8/14/19,Virginia Basin,SP,T2,1,1,Bombus frigidus,Helianthella quinquenervis,Hymenoptera
+8/14/19,Virginia Basin,CS,T2,1,1,Bombus mixtus,Helianthella quinquenervis,Hymenoptera
+8/14/19,Virginia Basin,SP,T2,1,1,Syrphidae,Linum lewisii,Diptera
+8/14/19,Virginia Basin,CM,T3,1,1,Other fly,Linum lewisii,Diptera
+8/14/19,Virginia Basin,BD,T2,2,1,Bombus frigidus,Agoseris glauca,Hymenoptera
+8/14/19,Virginia Basin,BD,T2,2,1,Other fly,Potentilla pulcherrima,Diptera
+8/14/19,Virginia Basin,CM,T3,2,1,Other fly,Helianthella quinquenervis,Diptera
+8/14/19,Virginia Basin,CM,T3,2,1,Other fly,Helianthella quinquenervis,Diptera
+8/14/19,Virginia Basin,BD,T3,3,1,Bombus kirbiellus,Castilleja miniata,Hymenoptera
+8/14/19,Virginia Basin,BD,T3,3,1,Bombus kirbiellus,Castilleja miniata,Hymenoptera
+8/14/19,Virginia Basin,SP,T3,4,1,Bombus mixtus,Helianthella quinquenervis,Hymenoptera
+8/14/19,Virginia Basin,SP,T3,4,1,Bombus frigidus,Helianthella quinquenervis,Hymenoptera
+8/14/19,Virginia Basin,SP,T3,4,1,Syrphidae,Potentilla pulcherrima,Diptera
+8/14/19,Virginia Basin,SP,T3,4,1,Other fly,Potentilla pulcherrima,Diptera
+8/14/19,Virginia Basin,SP,T3,4,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+8/14/19,Virginia Basin,SP,T1,5,1,Syrphidae,Linum lewisii,Diptera
+8/14/19,Virginia Basin,CM,T3,5,1,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+8/19/19,Virginia Basin,SP,T1,1,1,Bombus bifarius,Helianthella quinquenervis,Hymenoptera
+8/19/19,Virginia Basin,SP,T1,1,1,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+8/19/19,Virginia Basin,SP,T2,1,1,Bombus unknown,Helianthella quinquenervis,Hymenoptera
+8/19/19,Virginia Basin,SP,T2,1,1,Bombus frigidus,Helianthella quinquenervis,Hymenoptera
+8/19/19,Virginia Basin,AS,T2,1,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+8/19/19,Virginia Basin,SP,T1,2,1,Bombus frigidus,Potentilla pulcherrima,Hymenoptera
+8/19/19,Virginia Basin,SP,T1,2,1,Bombus bifarius,Potentilla pulcherrima,Hymenoptera
+8/19/19,Virginia Basin,SP,T1,2,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+8/19/19,Virginia Basin,SP,T3,2,1,Bombus unknown,Helianthella quinquenervis,Hymenoptera
+8/19/19,Virginia Basin,SP,T3,2,1,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+8/19/19,Virginia Basin,SP,T1,3,1,Bombus unknown,Potentilla pulcherrima,Hymenoptera
+8/19/19,Virginia Basin,SP,T1,3,1,Bombus kirbiellus,Castilleja miniata,Hymenoptera
+8/19/19,Virginia Basin,SP,T3,3,1,Bombus bifarius,Erigeron elatior,Hymenoptera
+8/19/19,Virginia Basin,SP,T1,4,1,Bombus bifarius,Helianthella quinquenervis,Hymenoptera
+8/19/19,Virginia Basin,AS,T1,4,1,Syrphidae,Potentilla pulcherrima,Diptera
+8/19/19,Virginia Basin,SP,T1,4,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+8/19/19,Virginia Basin,SP,T3,4,1,Bombus bifarius,Helianthella quinquenervis,Hymenoptera
+8/19/19,Virginia Basin,SP,T1,5,1,Bombus bifarius,Potentilla pulcherrima,Hymenoptera
+8/19/19,Virginia Basin,SP,T1,5,1,Bombus bifarius,Potentilla pulcherrima,Hymenoptera
+8/19/19,Virginia Basin,SP,T1,5,1,Bombus bifarius,Potentilla pulcherrima,Hymenoptera
+8/19/19,Virginia Basin,SP,T3,5,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+6/24/20,Emerald Lake Hill,KA,T1,1,NA,Hemipteran,Ligusticum porteri,Hemiptera
+6/24/20,Emerald Lake Hill,KA,T1,1,NA,Hemipteran,Ligusticum porteri,Hemiptera
+6/24/20,Emerald Lake Hill,TR,T1,2,NA,Syrphidae,Ligusticum porteri,Diptera
+6/24/20,Emerald Lake Hill,KA,T2,3,NA,Hemipteran,Ligusticum porteri,Hemiptera
+6/24/20,Emerald Lake Hill,TR,T1,4,NA,Syrphidae,Ligusticum porteri,Diptera
+6/24/20,Emerald Lake Hill,KA,T2,4,NA,Hemipteran,Osmorhiza occidentalis,Hemiptera
+6/24/20,Emerald Lake Hill,TR,T3,4,NA,Wasps,Boechera stricta,Hymenoptera
+6/25/20,Virginia Basin,AS,T2,1,1,Other fly,Pseudocymopterus montanus,Diptera
+6/25/20,Virginia Basin,TR,T1,2,1,Small black solitary bee,Draba aurea,Hymenoptera
+6/25/20,Virginia Basin,CS,T1,3,1,Wasps,Draba aurea,Hymenoptera
+6/25/20,Virginia Basin,AS,T3,4,1,Small black solitary bee,Fragaria virginiana,Hymenoptera
+6/25/20,Virginia Basin,TR,T1,5,1,Small black solitary bee,Pseudocymopterus montanus,Hymenoptera
+6/25/20,Virginia Basin,TR,T1,5,1,Small black solitary bee,Pseudocymopterus montanus,Hymenoptera
+6/25/20,Virginia Basin,AS,T2,5,1,Hemipteran,Fragaria virginiana,Hemiptera
+6/25/20,Virginia Basin,AS,T3,5,1,Small black solitary bee,Pseudocymopterus montanus,Hymenoptera
+6/29/20,Ohio Pass High,AS,T1,1,NA,Syrphidae,Galium boreale,Diptera
+6/29/20,Ohio Pass High,AS,T3,1,NA,Bombus flavifrons,Delphinium nuttallianum,Hymenoptera
+6/29/20,Ohio Pass High,TR,T1,3,NA,Syrphidae,Delphinium nuttallianum,Diptera
+6/29/20,Ohio Pass High,TR,T1,4,NA,Other fly,Delphinium nuttallianum,Diptera
+6/30/20,Emerald Lake Hill,AS,T2,2,NA,Hemipteran,Ligusticum porteri,Hemiptera
+6/30/20,Emerald Lake Shore,AL,T2,2,NA,Beetles,Pseudocymopterus montanus,Coleoptera
+6/30/20,Emerald Lake Shore,AL,T2,2,NA,Beetles,Taraxacum officinale,Coleoptera
+6/30/20,Emerald Lake Hill,AS,T2,3,NA,Other fly,Ligusticum porteri,Diptera
+6/30/20,Emerald Lake Hill,AS,T2,3,NA,Other fly,Ligusticum porteri,Diptera
+6/30/20,Emerald Lake Shore,HB,T2,3,NA,Hemipteran,Pseudocymopterus montanus,Hemiptera
+6/30/20,Emerald Lake Shore,HB,T2,3,NA,Hemipteran,Pseudocymopterus montanus,Hemiptera
+6/30/20,Emerald Lake Shore,HB,T2,3,NA,Beetles,Pseudocymopterus montanus,Coleoptera
+6/30/20,Emerald Lake Shore,HB,T2,3,NA,Other fly,Pseudocymopterus montanus,Diptera
+6/30/20,Emerald Lake Shore,AL,T3,3,NA,Hemipteran,Taraxacum officinale,Lepidoptera
+6/30/20,Emerald Lake Hill,TR,T1,4,NA,Other fly,Ligusticum porteri,Diptera
+6/30/20,Emerald Lake Shore,AL,T3,4,NA,Beetles,Taraxacum officinale,Coleoptera
+6/30/20,Emerald Lake Shore,AL,T3,4,NA,Other fly,Taraxacum officinale,Diptera
+6/30/20,Emerald Lake Shore,AL,T3,5,NA,Hemipteran,Pseudocymopterus montanus,Hemiptera
+6/30/20,Emerald Lake Shore,AL,T3,5,NA,Beetles,Potentilla pulcherrima,Coleoptera
+7/2/20,Virginia Basin,CS,T1,1,1,Small metallic solitary bee,Linum lewisii,Hymenoptera
+7/2/20,Virginia Basin,CS,T1,1,1,Small black solitary bee,Linum lewisii,Hymenoptera
+7/2/20,Virginia Basin,CS,T1,1,1,Other fly,Linum lewisii,Diptera
+7/2/20,Pfeiler,KA,T2,1,NA,Syrphidae,Potentilla pulcherrima,Diptera
+7/2/20,Pfeiler,KA,T2,1,NA,Syrphidae,Ligusticum porteri,Diptera
+7/2/20,Pfeiler,KA,T2,1,NA,Hemipteran,Potentilla pulcherrima,Hemiptera
+7/2/20,Pfeiler,KA,T2,1,NA,Hemipteran,Ligusticum porteri,Hemiptera
+7/2/20,Pfeiler,KA,T3,1,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/2/20,Pfeiler,KA,T3,1,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/2/20,Pfeiler,KA,T3,1,NA,Small black solitary bee,Ligusticum porteri,Hymenoptera
+7/2/20,Pfeiler,KA,T3,1,NA,Other fly,Potentilla pulcherrima,Diptera
+7/2/20,Pfeiler,KA,T3,1,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/2/20,Pfeiler,HB,T1,2,NA,Bombus rufocinctus,Senecio crassulus,Hymenoptera
+7/2/20,Pfeiler,HB,T1,2,NA,Bombus bifarius,Senecio crassulus,Hymenoptera
+7/2/20,Pfeiler,HB,T1,2,NA,Syrphidae,Collomia linearis,Diptera
+7/2/20,Pfeiler,HB,T1,2,NA,Hemipteran,Senecio crassulus,Hemiptera
+7/2/20,Virginia Basin,TR,T1,2,1,Small black solitary bee,Draba aurea,Hymenoptera
+7/2/20,Virginia Basin,AS,T2,2,1,Small black solitary bee,Fragaria virginiana,Hymenoptera
+7/2/20,Pfeiler,HB,T3,2,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/2/20,Pfeiler,HB,T3,2,NA,Hemipteran,Ligusticum porteri,Hemiptera
+7/2/20,Pfeiler,HB,T3,2,NA,Syrphidae,Ligusticum porteri,Diptera
+7/2/20,Pfeiler,HB,T3,2,NA,Syrphidae,Ligusticum porteri,Diptera
+7/2/20,Pfeiler,HB,T3,2,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/2/20,Virginia Basin,CS,T3,2,1,Small black solitary bee,Fragaria virginiana,Hymenoptera
+7/2/20,Virginia Basin,CS,T3,2,1,Small black solitary bee,Fragaria virginiana,Hymenoptera
+7/2/20,Virginia Basin,CS,T3,2,1,Small black solitary bee,Draba aurea,Hymenoptera
+7/2/20,Virginia Basin,CS,T3,2,1,Other fly,Senecio crassulus,Diptera
+7/2/20,Pfeiler,KA,T1,3,NA,Bombus bifarius,Senecio crassulus,Hymenoptera
+7/2/20,Virginia Basin,CS,T1,3,1,Small black solitary bee,Draba aurea,Hymenoptera
+7/2/20,Virginia Basin,CS,T1,3,1,Hemipteran,Fragaria virginiana,Hemiptera
+7/2/20,Pfeiler,HB,T2,3,NA,Other fly,Potentilla pulcherrima,Diptera
+7/2/20,Virginia Basin,AS,T2,3,1,Small black solitary bee,Fragaria virginiana,Hymenoptera
+7/2/20,Pfeiler,KA,T3,3,NA,Small black solitary bee,Ligusticum porteri,Hymenoptera
+7/2/20,Pfeiler,KA,T3,3,NA,Small black solitary bee,Linum lewisii,Hymenoptera
+7/2/20,Pfeiler,KA,T3,3,NA,Hemipteran,Ligusticum porteri,Hemiptera
+7/2/20,Pfeiler,KA,T3,3,NA,Other fly,Linum lewisii,Diptera
+7/2/20,Pfeiler,KA,T3,3,NA,Other fly,Linum lewisii,Diptera
+7/2/20,Virginia Basin,CS,T3,3,1,Small black solitary bee,Fragaria virginiana,Hymenoptera
+7/2/20,Virginia Basin,TR,T2,4,1,Small black solitary bee,Fragaria virginiana,Hymenoptera
+7/2/20,Virginia Basin,TR,T2,4,1,Small black solitary bee,Fragaria virginiana,Hymenoptera
+7/2/20,Virginia Basin,TR,T2,4,1,Small black solitary bee,Fragaria virginiana,Hymenoptera
+7/2/20,Pfeiler,HB,T3,4,NA,Other fly,Senecio crassulus,Diptera
+7/2/20,Pfeiler,HB,T3,4,NA,Other fly,Potentilla pulcherrima,Diptera
+7/2/20,Pfeiler,KA,T2,5,NA,Syrphidae,Senecio crassulus,Diptera
+7/2/20,Virginia Basin,TR,T2,5,1,Small black solitary bee,Fragaria virginiana,Hymenoptera
+7/2/20,Pfeiler,HB,T3,5,NA,Other fly,Senecio crassulus,Diptera
+7/2/20,Pfeiler,HB,T3,5,NA,Syrphidae,Senecio crassulus,Diptera
+7/2/20,Pfeiler,HB,T3,5,NA,Moths,Senecio crassulus,Lepidoptera
+7/2/20,Virginia Basin,TR,T3,5,1,Small metallic solitary bee,Fragaria virginiana,Hymenoptera
+7/2/20,Virginia Basin,TR,T3,5,1,Other fly,Pseudocymopterus montanus,Diptera
+7/6/20,Ohio Pass High,TR,T2,1,NA,Other fly,Senecio crassulus,Diptera
+7/6/20,Ohio Pass High,TR,T2,2,NA,Small black solitary bee,Senecio crassulus,Hymenoptera
+7/6/20,Ohio Pass High,TR,T2,2,NA,Bombyliidae,Senecio crassulus,Diptera
+7/6/20,Ohio Pass High,TR,T2,2,NA,Other fly,Senecio crassulus,Diptera
+7/6/20,Ohio Pass High,KA,T1,3,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/6/20,Ohio Pass High,KA,T1,3,NA,Other fly,Potentilla pulcherrima,Diptera
+7/6/20,Ohio Pass High,HB,T2,4,NA,Other fly,Ligusticum porteri,Diptera
+7/6/20,Ohio Pass High,HB,T2,4,NA,Other fly,Ligusticum porteri,Diptera
+7/6/20,Ohio Pass High,CS,T1,5,NA,Other fly,Ligusticum porteri,Diptera
+7/8/20,Emerald Lake Shore,AL,T1,1,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/8/20,Emerald Lake Hill,TR,T2,1,NA,Wasps,Ligusticum porteri,Hymenoptera
+7/8/20,Emerald Lake Shore,TR,T2,1,NA,Syrphidae,Fragaria virginiana,Diptera
+7/8/20,Emerald Lake Shore,TR,T2,1,NA,Bombyliidae,Fragaria virginiana,Diptera
+7/8/20,Emerald Lake Shore,TR,T1,2,NA,Hemipteran,Fragaria virginiana,Hemiptera
+7/8/20,Emerald Lake Shore,TR,T3,2,NA,Other fly,Pseudocymopterus montanus,Diptera
+7/8/20,Emerald Lake Shore,HB,T3,2,NA,Hemipteran,Potentilla pulcherrima,Lepidoptera
+7/8/20,Emerald Lake Shore,TR,T2,3,NA,Hemipteran,Pseudocymopterus montanus,Hemiptera
+7/8/20,Emerald Lake Shore,TR,T2,3,NA,Beetles,Pseudocymopterus montanus,Coleoptera
+7/8/20,Emerald Lake Shore,TR,T2,3,NA,Beetles,Pseudocymopterus montanus,Coleoptera
+7/8/20,Emerald Lake Shore,TR,T2,3,NA,Beetles,Pseudocymopterus montanus,Coleoptera
+7/8/20,Emerald Lake Shore,HB,T1,4,NA,Hemipteran,Pseudocymopterus montanus,Hemiptera
+7/8/20,Emerald Lake Shore,HB,T1,4,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/8/20,Emerald Lake Shore,HB,T1,4,NA,Hemipteran,Taraxacum officinale,Hemiptera
+7/8/20,Emerald Lake Shore,CS,T2,4,NA,Hemipteran,Pseudocymopterus montanus,Hemiptera
+7/8/20,Emerald Lake Shore,CS,T2,4,NA,Beetles,Potentilla pulcherrima,Coleoptera
+7/8/20,Emerald Lake Shore,HB,T3,4,NA,Hemipteran,Pseudocymopterus montanus,Hemiptera
+7/8/20,Emerald Lake Shore,CS,T3,4,NA,Hemipteran,Pseudocymopterus montanus,Hemiptera
+7/8/20,Emerald Lake Shore,HB,T3,4,NA,Small black solitary bee,Linum lewisii,Hymenoptera
+7/8/20,Emerald Lake Shore,HB,T3,4,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/8/20,Emerald Lake Shore,HB,T3,4,NA,Small black solitary bee,Linum lewisii,Hymenoptera
+7/8/20,Emerald Lake Shore,HB,T1,5,NA,Hemipteran,Fragaria virginiana,Hemiptera
+7/8/20,Emerald Lake Shore,HB,T1,5,NA,Hemipteran,Taraxacum officinale,Lepidoptera
+7/8/20,Emerald Lake Shore,CS,T2,5,NA,Beetles,Potentilla pulcherrima,Coleoptera
+7/8/20,Emerald Lake Shore,AL,T3,5,NA,Other fly,Potentilla pulcherrima,Diptera
+7/9/20,Virginia Basin,AS,T1,1,1,Small black solitary bee,Linum lewisii,Hymenoptera
+7/9/20,Virginia Basin,AS,T1,1,1,Syrphidae,Linum lewisii,Diptera
+7/9/20,Virginia Basin,AS,T1,1,1,Small black solitary bee,Linum lewisii,Hymenoptera
+7/9/20,Virginia Basin,AS,T1,1,1,Bombyliidae,Castilleja miniata,Diptera
+7/9/20,Virginia Basin,TR,T2,1,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/9/20,Virginia Basin,CS,T3,1,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/9/20,Virginia Basin,CS,T3,1,1,Other fly,Senecio crassulus,Diptera
+7/9/20,Virginia Basin,TR,T1,2,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/9/20,Virginia Basin,TR,T1,2,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/9/20,Virginia Basin,AS,T2,2,1,Small black solitary bee,Linum lewisii,Hymenoptera
+7/9/20,Virginia Basin,AS,T3,2,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/9/20,Virginia Basin,AS,T3,2,1,Hemipteran,Fragaria virginiana,Hemiptera
+7/9/20,Virginia Basin,AS,T3,2,1,Small black solitary bee,Ligusticum porteri,Hymenoptera
+7/9/20,Virginia Basin,TR,T1,3,1,Wasps,Valeriana edulis,Hymenoptera
+7/9/20,Virginia Basin,AS,T1,4,1,Bombyliidae,Linum lewisii,Diptera
+7/9/20,Virginia Basin,AS,T1,4,1,Other fly,Senecio crassulus,Diptera
+7/9/20,Virginia Basin,AS,T1,4,1,Other fly,Senecio crassulus,Diptera
+7/9/20,Virginia Basin,AS,T1,4,1,Other fly,Ligusticum porteri,Diptera
+7/9/20,Virginia Basin,CS,T2,4,1,Bombyliidae,Fragaria virginiana,Diptera
+7/9/20,Virginia Basin,TR,T3,4,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/9/20,Virginia Basin,TR,T1,5,1,Syrphidae,Linum lewisii,Diptera
+7/9/20,Virginia Basin,TR,T1,5,1,Small black solitary bee,Fragaria virginiana,Hymenoptera
+7/9/20,Virginia Basin,TR,T2,5,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/9/20,Virginia Basin,TR,T2,5,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/9/20,Virginia Basin,TR,T2,5,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/9/20,Virginia Basin,TR,T3,5,1,Small metallic solitary bee,Senecio crassulus,Hymenoptera
+7/10/20,Pfeiler,KA,T2,1,NA,Beetles,Ligusticum porteri,Coleoptera
+7/10/20,Pfeiler,KA,T2,1,NA,Wasps,Ligusticum porteri,Hymenoptera
+7/10/20,Pfeiler,KA,T2,1,NA,Syrphidae,Ligusticum porteri,Diptera
+7/10/20,Pfeiler,KA,T3,1,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/10/20,Pfeiler,KA,T3,1,NA,Big megachile,Senecio crassulus,Hymenoptera
+7/10/20,Pfeiler,KA,T1,2,NA,Wasps,Senecio crassulus,Hymenoptera
+7/10/20,Pfeiler,KA,T3,2,NA,Other fly,Potentilla pulcherrima,Diptera
+7/10/20,Pfeiler,CS,T1,3,NA,Bombus unknown,Helianthella quinquenervis,Hymenoptera
+7/10/20,Pfeiler,CS,T1,3,NA,Moths,Potentilla pulcherrima,Lepidoptera
+7/10/20,Pfeiler,CS,T2,3,NA,Bombus bifarius,Senecio crassulus,Hymenoptera
+7/10/20,Pfeiler,CS,T2,3,NA,Bombus unknown,Senecio crassulus,Hymenoptera
+7/10/20,Pfeiler,CS,T2,3,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/10/20,Pfeiler,CS,T3,3,NA,Other fly,Potentilla pulcherrima,Diptera
+7/10/20,Pfeiler,CS,T3,3,NA,Wasps,Senecio crassulus,Hymenoptera
+7/10/20,Pfeiler,CS,T3,4,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/10/20,Pfeiler,CS,T3,4,NA,Syrphidae,Potentilla pulcherrima,Diptera
+7/10/20,Pfeiler,CS,T3,4,NA,Moths,Senecio crassulus,Lepidoptera
+7/10/20,Pfeiler,KA,T1,5,NA,Other fly,Senecio crassulus,Diptera
+7/10/20,Pfeiler,HB,T2,5,NA,Other fly,Senecio crassulus,Diptera
+7/10/20,Pfeiler,HB,T2,5,NA,Wasps,Senecio crassulus,Hymenoptera
+7/10/20,Pfeiler,HB,T3,5,NA,Small black solitary bee,Linum lewisii,Hymenoptera
+7/10/20,Pfeiler,HB,T3,5,NA,Other fly,Senecio crassulus,Diptera
+7/14/20,Emerald Lake Shore,KA,T1,1,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/14/20,Emerald Lake Shore,CS,T1,2,NA,Syrphidae,Potentilla pulcherrima,Diptera
+7/14/20,Emerald Lake Shore,KA,T3,2,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/14/20,Emerald Lake Shore,KA,T3,2,NA,Moths,Potentilla pulcherrima,Lepidoptera
+7/14/20,Emerald Lake Shore,KA,T3,2,NA,Other fly,Potentilla pulcherrima,Diptera
+7/14/20,Emerald Lake Shore,KA,T3,2,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/14/20,Emerald Lake Shore,CS,T1,3,NA,Hemipteran,Potentilla pulcherrima,Hemiptera
+7/14/20,Emerald Lake Shore,CS,T1,3,NA,Moths,Potentilla pulcherrima,Lepidoptera
+7/14/20,Emerald Lake Shore,KA,T2,3,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/14/20,Emerald Lake Shore,KA,T2,3,NA,Moths,Potentilla pulcherrima,Lepidoptera
+7/14/20,Emerald Lake Shore,AL,T1,4,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/14/20,Emerald Lake Shore,KA,T2,4,NA,Other fly,Potentilla pulcherrima,Diptera
+7/14/20,Emerald Lake Shore,KA,T2,4,NA,Moths,Potentilla pulcherrima,Lepidoptera
+7/14/20,Emerald Lake Shore,AL,T3,4,NA,Wasps,Potentilla pulcherrima,Hymenoptera
+7/14/20,Emerald Lake Shore,AL,T3,4,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/14/20,Emerald Lake Shore,CS,T1,5,NA,Moths,Potentilla pulcherrima,Lepidoptera
+7/14/20,Emerald Lake Shore,CS,T1,5,NA,Moths,Potentilla pulcherrima,Lepidoptera
+7/14/20,Emerald Lake Hill,HB,T2,5,NA,Wasps,Heracleum sphondylium,Hymenoptera
+7/14/20,Emerald Lake Shore,AL,T2,5,NA,Hemipteran,Castilleja miniata,Hemiptera
+7/14/20,Emerald Lake Shore,AL,T2,5,NA,Small megachile,Potentilla pulcherrima,Hymenoptera
+7/14/20,Emerald Lake Shore,AL,T2,5,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/14/20,Emerald Lake Shore,AL,T2,5,NA,Moths,Potentilla pulcherrima,Lepidoptera
+7/14/20,Emerald Lake Shore,AL,T2,5,NA,Wasps,Potentilla pulcherrima,Hymenoptera
+7/14/20,Emerald Lake Shore,AL,T2,5,NA,Other fly,Potentilla pulcherrima,Diptera
+7/14/20,Emerald Lake Shore,AL,T2,5,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/14/20,Emerald Lake Shore,AL,T2,5,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/14/20,Emerald Lake Shore,AL,T2,5,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/14/20,Emerald Lake Shore,CS,T3,5,NA,Hemipteran,Potentilla pulcherrima,Hemiptera
+7/14/20,Emerald Lake Shore,CS,T3,5,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/14/20,Emerald Lake Shore,CS,T3,5,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/15/20,Virginia Basin,CS,T1,1,1,Hemipteran,Linum lewisii,Hemiptera
+7/15/20,Virginia Basin,CS,T3,1,1,Syrphidae,Potentilla pulcherrima,Diptera
+7/15/20,Virginia Basin,TR,T2,2,1,Other fly,Potentilla pulcherrima,Diptera
+7/15/20,Virginia Basin,CS,T1,3,1,Other fly,Potentilla pulcherrima,Diptera
+7/15/20,Virginia Basin,CS,T1,5,1,Other fly,Linum lewisii,Diptera
+7/15/20,Virginia Basin,CS,T2,5,1,Syrphidae,Linum lewisii,Diptera
+7/15/20,Virginia Basin,CS,T2,5,1,Syrphidae,Potentilla pulcherrima,Diptera
+7/15/20,Virginia Basin,CS,T2,5,1,Other fly,Senecio crassulus,Diptera
+7/16/20,Pfeiler,KA,T2,1,NA,Beetles,Erigeron speciosus,Coleoptera
+7/16/20,Pfeiler,KA,T2,1,NA,Wasps,Ligusticum porteri,Hymenoptera
+7/16/20,Pfeiler,KA,T2,1,NA,Other fly,Potentilla pulcherrima,Diptera
+7/16/20,Pfeiler,KA,T2,1,NA,Other fly,Senecio crassulus,Diptera
+7/16/20,Pfeiler,KA,T1,2,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/16/20,Pfeiler,KA,T3,2,NA,Syrphidae,Erigeron speciosus,Diptera
+7/16/20,Pfeiler,KA,T3,2,NA,Syrphidae,Potentilla pulcherrima,Diptera
+7/16/20,Pfeiler,KA,T1,3,NA,Small metallic solitary bee,Hymenoxys hoopesii,Hymenoptera
+7/16/20,Pfeiler,KA,T2,3,NA,Syrphidae,Senecio crassulus,Diptera
+7/16/20,Pfeiler,KA,T3,3,NA,Syrphidae,Erigeron speciosus,Diptera
+7/16/20,Pfeiler,KA,T3,3,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/16/20,Pfeiler,KA,T1,4,NA,Hemipteran,Erigeron speciosus,Hemiptera
+7/16/20,Pfeiler,KA,T2,4,NA,Small black solitary bee,Ipomopsis aggregata,Hymenoptera
+7/16/20,Pfeiler,KA,T2,4,NA,Syrphidae,Ipomopsis aggregata,Diptera
+7/16/20,Pfeiler,KA,T2,4,NA,Other fly,Agoseris glauca,Diptera
+7/16/20,Pfeiler,KA,T3,4,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/16/20,Pfeiler,KA,T3,4,NA,Wasps,Potentilla pulcherrima,Hymenoptera
+7/16/20,Pfeiler,KA,T3,4,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/16/20,Pfeiler,KA,T3,4,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/16/20,Pfeiler,KA,T1,5,NA,Hemipteran,Senecio crassulus,Hemiptera
+7/16/20,Pfeiler,KA,T2,5,NA,Syrphidae,Senecio crassulus,Diptera
+7/16/20,Pfeiler,KA,T3,5,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/16/20,Pfeiler,KA,T3,5,NA,Other fly,Linum lewisii,Diptera
+7/16/20,Pfeiler,KA,T3,5,NA,Other fly,Linum lewisii,Diptera
+7/17/20,Ohio Pass High,TR,T1,1,NA,Syrphidae,Ligusticum porteri,Diptera
+7/17/20,Ohio Pass High,TR,T1,1,NA,Wasps,Ligusticum porteri,Hymenoptera
+7/17/20,Ohio Pass High,KA,T3,1,NA,Bombus bifarius,Helianthella quinquenervis,Hymenoptera
+7/17/20,Ohio Pass High,KA,T3,1,NA,Small metallic solitary bee,Helianthella quinquenervis,Hymenoptera
+7/17/20,Ohio Pass High,KA,T2,2,NA,Syrphidae,Ligusticum porteri,Diptera
+7/17/20,Ohio Pass High,KA,T2,2,NA,Syrphidae,Ligusticum porteri,Diptera
+7/17/20,Ohio Pass High,KA,T2,2,NA,Other fly,Ligusticum porteri,Diptera
+7/17/20,Ohio Pass High,KA,T2,2,NA,Other fly,Ligusticum porteri,Diptera
+7/17/20,Ohio Pass High,KA,T2,2,NA,Syrphidae,Ligusticum porteri,Diptera
+7/17/20,Ohio Pass High,KA,T1,3,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/17/20,Ohio Pass High,KA,T1,3,NA,Syrphidae,Eucephalus engelmannii,Diptera
+7/17/20,Ohio Pass High,KA,T1,3,NA,Other fly,Potentilla pulcherrima,Diptera
+7/17/20,Ohio Pass High,KA,T1,3,NA,Other fly,Eucephalus engelmannii,Diptera
+7/17/20,Ohio Pass High,KA,T1,3,NA,Other fly,Potentilla pulcherrima,Diptera
+7/17/20,Ohio Pass High,KA,T1,3,NA,Syrphidae,Potentilla pulcherrima,Diptera
+7/17/20,Ohio Pass High,KA,T1,3,NA,Syrphidae,Potentilla pulcherrima,Diptera
+7/17/20,Ohio Pass High,KA,T1,3,NA,Other fly,Potentilla pulcherrima,Diptera
+7/17/20,Ohio Pass High,KA,T1,3,NA,Other fly,Potentilla pulcherrima,Diptera
+7/17/20,Ohio Pass High,CS,T2,3,NA,Bombus unknown,Senecio crassulus,Hymenoptera
+7/17/20,Ohio Pass High,CS,T2,3,NA,Other fly,Potentilla pulcherrima,Diptera
+7/17/20,Ohio Pass High,TR,T3,3,NA,Other fly,Ligusticum porteri,Diptera
+7/17/20,Ohio Pass High,CS,T1,4,NA,Other fly,Ligusticum porteri,Diptera
+7/17/20,Ohio Pass High,CS,T1,4,NA,Syrphidae,Ligusticum porteri,Diptera
+7/17/20,Ohio Pass High,CS,T2,4,NA,Other fly,Ligusticum porteri,Diptera
+7/17/20,Ohio Pass High,TR,T3,4,NA,Bombus unknown,Helianthella quinquenervis,Hymenoptera
+7/17/20,Ohio Pass High,TR,T3,4,NA,Syrphidae,Helianthella quinquenervis,Diptera
+7/17/20,Ohio Pass High,TR,T1,5,NA,Syrphidae,Ligusticum porteri,Diptera
+7/17/20,Ohio Pass High,TR,T2,5,NA,Syrphidae,Potentilla pulcherrima,Diptera
+7/17/20,Ohio Pass High,TR,T2,5,NA,Syrphidae,Potentilla pulcherrima,Diptera
+7/17/20,Ohio Pass High,KA,T3,5,NA,Bombus insularis,Helianthella quinquenervis,Hymenoptera
+7/17/20,Ohio Pass High,KA,T3,5,NA,Bombus bifarius,Helianthella quinquenervis,Hymenoptera
+7/17/20,Ohio Pass High,KA,T3,5,NA,Syrphidae,Potentilla pulcherrima,Diptera
+7/23/20,Emerald Lake Shore,KA,T1,1,NA,Syrphidae,Potentilla pulcherrima,Diptera
+7/23/20,Emerald Lake Shore,KA,T1,1,NA,Other fly,Potentilla pulcherrima,Diptera
+7/23/20,Virginia Basin,TR,T1,1,1,Other fly,Linum lewisii,Diptera
+7/23/20,Virginia Basin,TR,T1,1,1,Other fly,Linum lewisii,Diptera
+7/23/20,Emerald Lake Shore,KA,T3,1,NA,Wasps,Potentilla pulcherrima,Hymenoptera
+7/23/20,Pfeiler,KA,T1,2,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/23/20,Pfeiler,KA,T1,2,NA,Wasps,Potentilla pulcherrima,Hymenoptera
+7/23/20,Pfeiler,KA,T1,2,NA,Other fly,Potentilla pulcherrima,Diptera
+7/23/20,Virginia Basin,TR,T1,2,1,Other fly,Potentilla pulcherrima,Diptera
+7/23/20,Virginia Basin,TR,T1,2,1,Wasps,Potentilla pulcherrima,Hymenoptera
+7/23/20,Emerald Lake Shore,KA,T2,2,NA,Other fly,Delphinium barbeyi,Diptera
+7/23/20,Pfeiler,KA,T2,2,NA,Beetles,Hymenoxys hoopesii,Coleoptera
+7/23/20,Pfeiler,KA,T2,2,NA,Other fly,Potentilla pulcherrima,Diptera
+7/23/20,Pfeiler,KA,T2,2,NA,Hemipteran,Heliomeris multiflora,Hemiptera
+7/23/20,Pfeiler,KA,T3,2,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/23/20,Pfeiler,KA,T3,2,NA,Syrphidae,Erigeron speciosus,Diptera
+7/23/20,Virginia Basin,TR,T1,3,1,Other fly,Potentilla pulcherrima,Diptera
+7/23/20,Virginia Basin,TR,T2,3,1,Bombus bifarius,Castilleja sulphurea,Hymenoptera
+7/23/20,Pfeiler,KA,T3,3,NA,Other fly,Erigeron speciosus,Diptera
+7/23/20,Virginia Basin,TR,T3,3,1,Other fly,Potentilla pulcherrima,Diptera
+7/23/20,Emerald Lake Shore,KA,T1,4,NA,Other fly,Potentilla pulcherrima,Diptera
+7/23/20,Emerald Lake Shore,KA,T1,4,NA,Other fly,Potentilla pulcherrima,Diptera
+7/23/20,Emerald Lake Shore,KA,T1,4,NA,Other fly,Potentilla pulcherrima,Diptera
+7/23/20,Emerald Lake Shore,KA,T1,4,NA,Other fly,Potentilla pulcherrima,Diptera
+7/23/20,Pfeiler,KA,T1,4,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/23/20,Pfeiler,KA,T1,4,NA,Syrphidae,Potentilla pulcherrima,Diptera
+7/23/20,Virginia Basin,TR,T2,4,1,Bombus bifarius,Helianthella quinquenervis,Hymenoptera
+7/23/20,Virginia Basin,TR,T2,4,1,Bombus bifarius,Arnica parryi,Hymenoptera
+7/23/20,Emerald Lake Hill,KA,T3,4,NA,Small black solitary bee,Erigeron speciosus,Hymenoptera
+7/23/20,Emerald Lake Hill,KA,T3,4,NA,Other fly,Erigeron speciosus,Diptera
+7/23/20,Emerald Lake Hill,KA,T3,4,NA,Hemipteran,Erigeron speciosus,Hemiptera
+7/23/20,Virginia Basin,TR,T3,4,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/23/20,Virginia Basin,TR,T1,5,1,Other fly,Linum lewisii,Diptera
+7/23/20,Emerald Lake Shore,KA,T2,5,NA,Beetles,Potentilla pulcherrima,Coleoptera
+7/23/20,Pfeiler,KA,T2,5,NA,Moths,Erigeron speciosus,Lepidoptera
+7/23/20,Virginia Basin,TR,T2,5,1,Syrphidae,Potentilla pulcherrima,Diptera
+7/23/20,Virginia Basin,TR,T2,5,1,Other fly,Potentilla pulcherrima,Diptera
+7/23/20,Pfeiler,KA,T3,5,NA,Hemipteran,Erigeron speciosus,Hemiptera
+7/23/20,Pfeiler,KA,T3,5,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/23/20,Pfeiler,KA,T3,5,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/23/20,Pfeiler,KA,T3,5,NA,Other fly,Potentilla pulcherrima,Diptera
+7/23/20,Virginia Basin,TR,T3,5,1,Bombyliidae,Ligusticum porteri,Diptera
+7/27/20,Ohio Pass High,KA,T2,1,NA,Bombyliidae,Erigeron speciosus,Diptera
+7/27/20,Ohio Pass High,TR,T3,1,NA,Bombus bifarius,Erigeron speciosus,Hymenoptera
+7/27/20,Ohio Pass High,TR,T2,2,NA,Syrphidae,Potentilla pulcherrima,Diptera
+7/27/20,Ohio Pass High,KA,T1,3,NA,Syrphidae,Potentilla pulcherrima,Diptera
+7/27/20,Ohio Pass High,KA,T1,3,NA,Other fly,Potentilla pulcherrima,Diptera
+7/27/20,Ohio Pass High,TR,T3,3,NA,Syrphidae,Heliomeris multiflora,Diptera
+7/27/20,Ohio Pass High,TR,T1,4,NA,Syrphidae,Potentilla pulcherrima,Diptera
+7/27/20,Ohio Pass High,TR,T1,4,NA,Syrphidae,Potentilla pulcherrima,Diptera
+7/27/20,Ohio Pass High,TR,T1,4,NA,Syrphidae,Erigeron speciosus,Diptera
+7/27/20,Ohio Pass High,KA,T3,4,NA,Bombus bifarius,Helianthella quinquenervis,Hymenoptera
+7/27/20,Ohio Pass High,KA,T3,4,NA,Bombyliidae,Erigeron speciosus,Diptera
+7/27/20,Ohio Pass High,KA,T3,4,NA,Big megachile,Erigeron speciosus,Hymenoptera
+7/27/20,Ohio Pass High,TR,T1,5,NA,Bombus bifarius,Helianthella quinquenervis,Hymenoptera
+7/27/20,Ohio Pass High,KA,T2,5,NA,Bombyliidae,Heliomeris multiflora,Diptera
+7/27/20,Ohio Pass High,KA,T2,5,NA,Other fly,Potentilla pulcherrima,Diptera
+7/27/20,Ohio Pass High,KA,T2,5,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/27/20,Ohio Pass High,TR,T3,5,NA,Small black solitary bee,Heliomeris multiflora,Hymenoptera
+7/27/20,Ohio Pass High,TR,T3,5,NA,Syrphidae,Potentilla pulcherrima,Diptera
+7/27/20,Ohio Pass High,TR,T3,5,NA,Syrphidae,Erigeron speciosus,Diptera
+7/27/20,Ohio Pass High,TR,T3,5,NA,Big megachile,Helianthella quinquenervis,Hymenoptera
+7/28/20,Pfeiler,TR,T2,1,NA,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+7/28/20,Pfeiler,TR,T3,2,NA,Hemipteran,Erigeron speciosus,Hemiptera
+7/28/20,Pfeiler,KA,T1,3,NA,Other fly,Potentilla pulcherrima,Diptera
+7/28/20,Pfeiler,KA,T1,4,NA,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+7/28/20,Pfeiler,KA,T1,4,NA,Small black solitary bee,Agoseris glauca,Hymenoptera
+7/28/20,Pfeiler,KA,T1,4,NA,Other fly,Erigeron speciosus,Diptera
+7/28/20,Pfeiler,KA,T2,4,NA,Other fly,Erigeron speciosus,Diptera
+7/28/20,Pfeiler,TR,T3,4,NA,Other fly,Erigeron speciosus,Diptera
+7/28/20,Pfeiler,TR,T3,4,NA,Hemipteran,Erigeron speciosus,Hemiptera
+7/28/20,Pfeiler,TR,T3,4,NA,Moths,Erigeron speciosus,Lepidoptera
+7/28/20,Pfeiler,TR,T3,4,NA,Syrphidae,Erigeron speciosus,Diptera
+7/28/20,Pfeiler,KA,T2,5,NA,Hemipteran,Erigeron speciosus,Hemiptera
+7/29/20,Emerald Lake Hill,KA,T2,1,NA,Bombyliidae,Castilleja sulphurea,Diptera
+7/29/20,Emerald Lake Hill,KA,T2,1,NA,Wasps,Castilleja sulphurea,Hymenoptera
+7/29/20,Emerald Lake Shore,KA,T2,1,NA,Other fly,Potentilla pulcherrima,Diptera
+7/29/20,Virginia Basin,TR,T2,1,1,Other fly,Potentilla pulcherrima,Diptera
+7/29/20,Virginia Basin,TR,T1,2,1,Syrphidae,Potentilla pulcherrima,Diptera
+7/29/20,Virginia Basin,TR,T2,2,1,Syrphidae,Linum lewisii,Diptera
+7/29/20,Emerald Lake Shore,KA,T3,2,NA,Moths,Potentilla pulcherrima,Lepidoptera
+7/29/20,Virginia Basin,TR,T3,2,1,Other fly,Achillea millefolium,Diptera
+7/29/20,Emerald Lake Shore,KA,T1,3,NA,Syrphidae,Potentilla pulcherrima,Diptera
+7/29/20,Emerald Lake Shore,KA,T2,3,NA,Syrphidae,Potentilla pulcherrima,Diptera
+7/29/20,Virginia Basin,TR,T2,3,1,Other fly,Potentilla pulcherrima,Diptera
+7/29/20,Emerald Lake Shore,KA,T3,3,NA,Syrphidae,Potentilla pulcherrima,Diptera
+7/29/20,Virginia Basin,TR,T2,4,1,Other fly,Potentilla pulcherrima,Diptera
+7/29/20,Emerald Lake Hill,KA,T3,4,NA,Hemipteran,Erigeron speciosus,Hemiptera
+7/29/20,Virginia Basin,TR,T3,4,1,Bombus bifarius,Arnica parryi,Hymenoptera
+7/29/20,Virginia Basin,TR,T1,5,1,Bombus bifarius,Helianthella quinquenervis,Hymenoptera
+7/29/20,Virginia Basin,TR,T1,5,1,Syrphidae,Linum lewisii,Diptera
+7/29/20,Virginia Basin,TR,T1,5,1,Other fly,Potentilla pulcherrima,Diptera
+7/29/20,Virginia Basin,TR,T2,5,1,Other fly,Arnica parryi,Diptera
+7/29/20,Emerald Lake Shore,KA,T3,5,NA,Bombus insularis,,Hymenoptera
+7/31/20,Ohio Pass High,KA,T2,1,NA,Other fly,Erigeron speciosus,Diptera
+7/31/20,Ohio Pass High,KA,T1,2,NA,Other fly,Erigeron speciosus,Diptera
+7/31/20,Ohio Pass High,KA,T1,3,NA,Syrphidae,Heliomeris multiflora,Diptera
+7/31/20,Ohio Pass High,KA,T1,3,NA,Syrphidae,Erigeron speciosus,Diptera
+7/31/20,Ohio Pass High,TR,T2,3,NA,Other fly,Heliomeris multiflora,Diptera
+7/31/20,Ohio Pass High,TR,T2,3,NA,Syrphidae,Erigeron speciosus,Diptera
+7/31/20,Ohio Pass High,TR,T3,3,NA,Other fly,Heliomeris multiflora,Diptera
+7/31/20,Ohio Pass High,TR,T3,3,NA,Other fly,Agoseris glauca,Diptera
+7/31/20,Ohio Pass High,TR,T1,4,NA,Syrphidae,Heliomeris multiflora,Diptera
+7/31/20,Ohio Pass High,TR,T1,4,NA,Other fly,Heliomeris multiflora,Diptera
+7/31/20,Ohio Pass High,TR,T3,4,NA,Syrphidae,Heliomeris multiflora,Diptera
+6/25/21,Pfeiler,AS,T1,3,NA,Other fly,Potentilla pulcherrima,Diptera
+6/25/21,Pfeiler,AB,T1,4,NA,Other fly,Linum lewisii,Diptera
+6/28/21,Ohio Pass High,SC,T2,1,NA,Syrphidae,Delphinium nuttallianum,Diptera
+6/28/21,Ohio Pass High,KW,T2,4,NA,Other fly,Delphinium nuttallianum,Diptera
+6/28/21,Ohio Pass High,KA,T2,5,NA,Bombus unknown,Delphinium nuttallianum,Hymenoptera
+7/2/21,Virginia Basin,MC,T2,1,1,Other fly,Potentilla pulcherrima,Diptera
+7/2/21,Virginia Basin,MC,T2,1,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/2/21,Pfeiler,MDS,T3,1,NA,Other fly,Ligusticum porteri,Diptera
+7/2/21,Pfeiler,MDS,T3,1,NA,Other fly,Ligusticum porteri,Hymenoptera
+7/2/21,Pfeiler,AS,T2,2,NA,Other fly,Ligusticum porteri,Diptera
+7/2/21,Pfeiler,AS,T2,2,NA,Other fly,Ligusticum porteri,Diptera
+7/2/21,Pfeiler,AS,T2,2,NA,Other fly,Ligusticum porteri,Diptera
+7/2/21,Virginia Basin,KA,T1,3,1,Syrphidae,Ligusticum porteri,Diptera
+7/2/21,Virginia Basin,KA,T1,3,1,Other fly,Ligusticum porteri,Diptera
+7/2/21,Virginia Basin,KA,T1,3,1,Syrphidae,Ligusticum porteri,Diptera
+7/2/21,Pfeiler,SC,T2,3,NA,Small black solitary bee,Senecio crassulus,Hymenoptera
+7/2/21,Pfeiler,AB,T3,3,NA,Syrphidae,Ligusticum porteri,Diptera
+7/2/21,Pfeiler,AS,T1,4,NA,Other fly,Potentilla pulcherrima,Diptera
+7/2/21,Pfeiler,AS,T1,4,NA,Other fly,Ligusticum porteri,Diptera
+7/2/21,Pfeiler,AB,T2,4,NA,Other fly,Linum lewisii,Diptera
+7/2/21,Virginia Basin,KA,T1,5,1,Small black solitary bee,Pseudocymopterus montanus,Hymenoptera
+7/5/21,Ohio Pass High,MDS,T3,2,NA,Syrphidae,Ligusticum porteri,Diptera
+7/5/21,Ohio Pass High,KA,T1,3,NA,Bombus flavifrons,Delphinium nuttallianum,Hymenoptera
+7/5/21,Ohio Pass High,KA,T1,3,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/5/21,Ohio Pass High,KA,T1,3,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/5/21,Ohio Pass High,AS,T2,3,NA,Small metallic solitary bee,Lathyrus leucanthus,Hymenoptera
+7/5/21,Ohio Pass High,AS,T2,3,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/5/21,Ohio Pass High,AS,T2,3,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/5/21,Ohio Pass High,AS,T2,3,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/5/21,Ohio Pass High,AS,T3,3,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/5/21,Ohio Pass High,AS,T3,3,NA,Bombus bifarius,Senecio crassulus,Hymenoptera
+7/5/21,Ohio Pass High,AS,T3,3,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/5/21,Ohio Pass High,KA,T1,4,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/5/21,Ohio Pass High,KA,T1,4,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/5/21,Ohio Pass High,KA,T1,4,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/5/21,Ohio Pass High,KA,T2,4,NA,Bombus flavifrons,Delphinium nuttallianum,Hymenoptera
+7/5/21,Ohio Pass High,KA,T2,4,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/5/21,Ohio Pass High,MDS,T3,4,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/5/21,Ohio Pass High,MDS,T3,4,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/5/21,Ohio Pass High,MDS,T1,5,NA,Other fly,Ligusticum porteri,Diptera
+7/5/21,Ohio Pass High,AS,T2,5,NA,Other fly,Potentilla pulcherrima,Diptera
+7/5/21,Ohio Pass High,AS,T2,5,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/7/21,Virginia Basin,KW,T1,1,1,Syrphidae,Linum lewisii,Diptera
+7/7/21,Virginia Basin,TL,T2,1,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/7/21,Virginia Basin,TL,T2,1,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/7/21,Virginia Basin,TL,T3,1,1,Bombus bifarius,Senecio crassulus,Hymenoptera
+7/7/21,Virginia Basin,KW,T1,2,1,Hemipteran,Senecio crassulus,Hemiptera
+7/7/21,Virginia Basin,KW,T1,2,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/7/21,Virginia Basin,KW,T1,2,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/7/21,Virginia Basin,KW,T1,2,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/7/21,Virginia Basin,KW,T1,2,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/7/21,Virginia Basin,TL,T2,2,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/7/21,Virginia Basin,TL,T2,2,1,Other fly,Senecio crassulus,Diptera
+7/7/21,Virginia Basin,AB,T3,2,1,Syrphidae,Ligusticum porteri,Diptera
+7/7/21,Virginia Basin,AB,T3,2,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/7/21,Virginia Basin,AB,T1,3,1,Bombus sylvicola,Senecio crassulus,Hymenoptera
+7/7/21,Virginia Basin,AB,T1,3,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/7/21,Virginia Basin,AB,T1,3,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/7/21,Virginia Basin,AB,T1,3,1,Other fly,Ligusticum porteri,Diptera
+7/7/21,Virginia Basin,KW,T2,3,1,Unknown,Senecio crassulus,
+7/7/21,Virginia Basin,KW,T2,3,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/7/21,Virginia Basin,AS,T3,3,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/7/21,Virginia Basin,MDS,T1,4,1,Wasps,Linum lewisii,Hymenoptera
+7/7/21,Virginia Basin,RA,T2,4,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/7/21,Virginia Basin,RA,T2,4,1,Syrphidae,Senecio crassulus,Diptera
+7/7/21,Virginia Basin,AB,T3,4,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/7/21,Virginia Basin,AB,T3,4,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/7/21,Virginia Basin,AB,T3,4,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/7/21,Virginia Basin,KW,T1,5,1,Unknown,Linum lewisii,
+7/7/21,Virginia Basin,AB,T2,5,1,Syrphidae,Potentilla pulcherrima,Diptera
+7/12/21,Ohio Pass High,KW,T1,1,NA,Small metallic solitary bee,Senecio crassulus,Hymenoptera
+7/12/21,Ohio Pass High,KW,T1,1,NA,Other fly,Senecio crassulus,Diptera
+7/12/21,Ohio Pass High,KW,T1,1,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/12/21,Ohio Pass High,SD,T2,1,NA,Other fly,Ligusticum porteri,Diptera
+7/12/21,Ohio Pass High,TL,T3,1,NA,Bombus unknown,,Hymenoptera
+7/12/21,Ohio Pass High,TL,T3,1,NA,Other fly,Potentilla pulcherrima,Diptera
+7/12/21,Ohio Pass High,AS,T1,2,NA,Bombus flavifrons,Senecio atratus,Hymenoptera
+7/12/21,Ohio Pass High,AS,T1,2,NA,Bombus unknown,Helianthella quinquenervis,Hymenoptera
+7/12/21,Ohio Pass High,AS,T1,2,NA,Bombus unknown,Helianthella quinquenervis,Hymenoptera
+7/12/21,Ohio Pass High,TL,T2,2,NA,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/12/21,Ohio Pass High,TL,T2,2,NA,Bombus bifarius,Helianthella quinquenervis,Hymenoptera
+7/12/21,Ohio Pass High,TL,T2,2,NA,Bombus bifarius,Helianthella quinquenervis,Hymenoptera
+7/12/21,Ohio Pass High,TL,T2,2,NA,Bombus bifarius,Senecio crassulus,Hymenoptera
+7/12/21,Ohio Pass High,TL,T2,2,NA,Bombus bifarius,Senecio crassulus,Hymenoptera
+7/12/21,Ohio Pass High,TL,T2,2,NA,Other fly,Helianthella quinquenervis,Diptera
+7/12/21,Ohio Pass High,SD,T3,2,NA,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/12/21,Ohio Pass High,SD,T3,2,NA,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/12/21,Ohio Pass High,SD,T3,2,NA,Other fly,Ligusticum porteri,Diptera
+7/12/21,Ohio Pass High,MC,T1,3,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/12/21,Ohio Pass High,MC,T1,3,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/12/21,Ohio Pass High,MC,T1,3,NA,Other fly,Potentilla pulcherrima,Diptera
+7/12/21,Ohio Pass High,MC,T1,3,NA,Other fly,Potentilla pulcherrima,Diptera
+7/12/21,Ohio Pass High,SD,T2,3,NA,Other fly,Potentilla pulcherrima,Diptera
+7/12/21,Ohio Pass High,SD,T2,3,NA,Other fly,Potentilla pulcherrima,Diptera
+7/12/21,Ohio Pass High,TL,T3,3,NA,Wasps,Erigeron elatior,Hymenoptera
+7/12/21,Ohio Pass High,TL,T3,3,NA,Other fly,Ligusticum porteri,Diptera
+7/12/21,Ohio Pass High,TL,T2,4,NA,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/12/21,Ohio Pass High,TL,T2,4,NA,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/12/21,Ohio Pass High,MC,T3,4,NA,Other fly,Potentilla pulcherrima,Diptera
+7/12/21,Ohio Pass High,MC,T3,4,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/12/21,Ohio Pass High,KW,T1,5,NA,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/12/21,Ohio Pass High,KW,T1,5,NA,Moths,Erigeron elatior,Lepidoptera
+7/12/21,Ohio Pass High,KW,T1,5,NA,Other fly,Potentilla pulcherrima,Diptera
+7/12/21,Ohio Pass High,KW,T1,5,NA,Other fly,Potentilla pulcherrima,Diptera
+7/12/21,Ohio Pass High,KW,T1,5,NA,Other fly,Ligusticum porteri,Diptera
+7/15/21,Pfeiler,AS,T2,1,NA,Bombus mixtus,Helianthella quinquenervis,Hymenoptera
+7/15/21,Pfeiler,AS,T3,1,NA,Hemipteran,Ligusticum porteri,Hemiptera
+7/15/21,Pfeiler,AB,T1,2,NA,Hemipteran,Senecio crassulus,Hemiptera
+7/15/21,Pfeiler,DG,T2,2,NA,Beetles,Ligusticum porteri,Coleoptera
+7/15/21,Pfeiler,AS,T3,2,NA,Bombus unknown,Helianthella quinquenervis,Hymenoptera
+7/15/21,Pfeiler,KW,T2,3,NA,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/15/21,Pfeiler,KW,T2,3,NA,Bombus unknown,Senecio crassulus,Hymenoptera
+7/15/21,Pfeiler,KW,T1,4,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/15/21,Pfeiler,AB,T3,4,NA,Bombus unknown,Helianthella quinquenervis,Hymenoptera
+7/15/21,Pfeiler,KW,T3,5,NA,Bombus unknown,Helianthella quinquenervis,Hymenoptera
+7/16/21,Virginia Basin,TL,T1,1,1,Bombus sylvicola,Senecio crassulus,Hymenoptera
+7/16/21,Virginia Basin,TL,T1,1,1,Bombus sylvicola,Helianthella quinquenervis,Hymenoptera
+7/16/21,Virginia Basin,TL,T1,1,1,Bombus sylvicola,Helianthella quinquenervis,Hymenoptera
+7/16/21,Virginia Basin,MC,T2,1,1,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/16/21,Virginia Basin,MC,T2,1,1,Other fly,Ligusticum porteri,Diptera
+7/16/21,Virginia Basin,AB,T3,1,1,Bombus sylvicola,Senecio crassulus,Hymenoptera
+7/16/21,Virginia Basin,KA,T3,2,1,Bombus unknown,Helianthella quinquenervis,Hymenoptera
+7/16/21,Virginia Basin,KA,T3,2,1,Bombus unknown,Helianthella quinquenervis,Hymenoptera
+7/16/21,Virginia Basin,KA,T3,2,1,Bombus unknown,Senecio crassulus,Hymenoptera
+7/16/21,Virginia Basin,KA,T3,2,1,Bombus frigidus,Helianthella quinquenervis,Hymenoptera
+7/16/21,Virginia Basin,KA,T3,2,1,Bombus frigidus,Helianthella quinquenervis,Hymenoptera
+7/16/21,Virginia Basin,KA,T3,2,1,Other fly,Potentilla pulcherrima,Diptera
+7/16/21,Virginia Basin,KA,T1,3,1,Bombus kirbiellus,Senecio crassulus,Hymenoptera
+7/16/21,Virginia Basin,KA,T1,3,1,Other fly,Linum lewisii,Diptera
+7/16/21,Virginia Basin,KA,T1,3,1,Syrphidae,Linum lewisii,Diptera
+7/16/21,Virginia Basin,KA,T2,3,1,Bombus bifarius,Potentilla pulcherrima,Hymenoptera
+7/16/21,Virginia Basin,KA,T2,3,1,Bombus bifarius,Potentilla pulcherrima,Hymenoptera
+7/16/21,Virginia Basin,KA,T2,4,1,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/16/21,Virginia Basin,KA,T3,4,1,Bombus flavifrons,Senecio crassulus,Hymenoptera
+7/16/21,Virginia Basin,KA,T3,4,1,Other fly,Senecio crassulus,Diptera
+7/16/21,Virginia Basin,AB,T1,5,1,Bombus flavifrons,Senecio bigelovii,Hymenoptera
+7/16/21,Virginia Basin,MC,T2,5,1,Bombus bifarius,Helianthella quinquenervis,Hymenoptera
+7/16/21,Virginia Basin,KA,T3,5,1,Other fly,Ligusticum porteri,Diptera
+7/20/21,Ohio Pass High,MC,T2,1,NA,Bombus unknown,Senecio crassulus,Hymenoptera
+7/20/21,Ohio Pass High,MC,T2,1,NA,Bombus flavifrons,Arnica parryi,Hymenoptera
+7/20/21,Ohio Pass High,MC,T2,1,NA,Bombus flavifrons,Arnica parryi,Hymenoptera
+7/20/21,Ohio Pass High,MC,T2,1,NA,Other fly,Senecio crassulus,Diptera
+7/20/21,Ohio Pass High,AS,T3,1,NA,Bombus flavifrons,Erigeron speciosus,Hymenoptera
+7/20/21,Ohio Pass High,AS,T3,1,NA,Bombus flavifrons,Erigeron speciosus,Hymenoptera
+7/20/21,Ohio Pass High,AS,T3,1,NA,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/20/21,Ohio Pass High,AS,T3,1,NA,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/20/21,Ohio Pass High,AS,T3,1,NA,Bombus bifarius,Erigeron speciosus,Hymenoptera
+7/20/21,Ohio Pass High,AS,T3,1,NA,Bombus mixtus,Erigeron speciosus,Hymenoptera
+7/20/21,Ohio Pass High,AS,T3,1,NA,Other fly,Potentilla pulcherrima,Diptera
+7/20/21,Ohio Pass High,MC,T1,2,NA,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/20/21,Ohio Pass High,MC,T1,2,NA,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/20/21,Ohio Pass High,MC,T1,2,NA,Bombus flavifrons,Erigeron speciosus,Hymenoptera
+7/20/21,Ohio Pass High,AS,T2,2,NA,Bombus unknown,Helianthella quinquenervis,Hymenoptera
+7/20/21,Ohio Pass High,AS,T2,2,NA,Bombus unknown,Senecio crassulus,Hymenoptera
+7/20/21,Ohio Pass High,AS,T2,2,NA,Bombus unknown,Senecio crassulus,Hymenoptera
+7/20/21,Ohio Pass High,AS,T2,2,NA,Bombus centralis,Helianthella quinquenervis,Hymenoptera
+7/20/21,Ohio Pass High,AS,T2,2,NA,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/20/21,Ohio Pass High,AS,T2,2,NA,Other fly,Potentilla pulcherrima,Diptera
+7/20/21,Ohio Pass High,AS,T2,2,NA,Other fly,Erigeron speciosus,Diptera
+7/20/21,Ohio Pass High,AS,T2,2,NA,Other fly,Ligusticum porteri,Diptera
+7/20/21,Ohio Pass High,MC,T3,2,NA,Bombus unknown,Helianthella quinquenervis,Hymenoptera
+7/20/21,Ohio Pass High,MC,T3,2,NA,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/20/21,Ohio Pass High,MC,T3,2,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/20/21,Ohio Pass High,MC,T1,3,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/20/21,Ohio Pass High,MC,T2,3,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/20/21,Ohio Pass High,MC,T2,3,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/20/21,Ohio Pass High,MC,T2,3,NA,Bombus flavifrons,Eucephalus engelmannii,Hymenoptera
+7/20/21,Ohio Pass High,AS,T2,4,NA,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/20/21,Ohio Pass High,AS,T2,4,NA,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/20/21,Ohio Pass High,AS,T2,4,NA,Syrphidae,Potentilla pulcherrima,Diptera
+7/20/21,Ohio Pass High,AS,T2,4,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/20/21,Ohio Pass High,MC,T1,5,NA,Bombus unknown,Heliomeris multiflora,Hymenoptera
+7/20/21,Ohio Pass High,MC,T1,5,NA,Bombus bifarius,Erigeron speciosus,Hymenoptera
+7/20/21,Ohio Pass High,MC,T1,5,NA,Small metallic solitary bee,Potentilla pulcherrima,Hymenoptera
+7/20/21,Ohio Pass High,MC,T1,5,NA,Other fly,Potentilla pulcherrima,Diptera
+7/20/21,Ohio Pass High,AS,T2,5,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/20/21,Ohio Pass High,AS,T2,5,NA,Bombyliidae,Potentilla pulcherrima,Diptera
+7/20/21,Ohio Pass High,AS,T2,5,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/20/21,Ohio Pass High,AS,T3,5,NA,Small black solitary bee,Erigeron speciosus,Hymenoptera
+7/20/21,Ohio Pass High,AS,T3,5,NA,Other fly,Achillea millefolium,Diptera
+7/20/21,Ohio Pass High,AS,T3,5,NA,Wasps,Potentilla pulcherrima,Hymenoptera
+7/21/21,Virginia Basin,SD,T2,1,1,Bombus bifarius,Helianthella quinquenervis,Hymenoptera
+7/21/21,Virginia Basin,SD,T2,1,1,Other fly,Potentilla pulcherrima,Diptera
+7/21/21,Virginia Basin,AS,T3,1,1,Other fly,Achillea millefolium,Diptera
+7/21/21,Virginia Basin,AB,T2,2,1,Bombus bifarius,Helianthella quinquenervis,Hymenoptera
+7/21/21,Virginia Basin,AB,T2,2,1,Bombus unknown,Helianthella quinquenervis,Hymenoptera
+7/21/21,Virginia Basin,AS,T3,2,1,Bombus bifarius,Potentilla pulcherrima,Hymenoptera
+7/21/21,Virginia Basin,AS,T3,2,1,Bombus bifarius,Helianthella quinquenervis,Hymenoptera
+7/21/21,Virginia Basin,AS,T3,2,1,Other fly,Achillea millefolium,Diptera
+7/21/21,Virginia Basin,SD,T2,3,1,Bombus bifarius,Helianthella quinquenervis,Hymenoptera
+7/21/21,Virginia Basin,SD,T2,3,1,Other fly,Helianthella quinquenervis,Diptera
+7/21/21,Virginia Basin,KW,T3,3,1,Bombus kirbiellus,Helianthella quinquenervis,Hymenoptera
+7/21/21,Virginia Basin,KW,T3,3,1,Other fly,Ligusticum porteri,Diptera
+7/21/21,Virginia Basin,AS,T2,4,1,Bombus bifarius,Helianthella quinquenervis,Hymenoptera
+7/21/21,Virginia Basin,AS,T2,4,1,Other fly,Ligusticum porteri,Diptera
+7/21/21,Virginia Basin,AS,T2,4,1,Other fly,Potentilla pulcherrima,Diptera
+7/21/21,Virginia Basin,KW,T3,4,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/21/21,Virginia Basin,AS,T1,5,1,Other fly,Ligusticum porteri,Diptera
+7/21/21,Virginia Basin,KW,T3,5,1,Other fly,Ligusticum porteri,Diptera
+7/23/21,Pfeiler,KW,T1,1,NA,Bombus unknown,Hymenoxys hoopesii,Hymenoptera
+7/23/21,Pfeiler,KW,T1,1,NA,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+7/23/21,Pfeiler,MC,T2,2,NA,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+7/23/21,Pfeiler,SD,T3,2,NA,Bombus flavifrons,Heliomeris multiflora,Hymenoptera
+7/23/21,Pfeiler,SD,T3,2,NA,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+7/23/21,Pfeiler,SD,T3,2,NA,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+7/23/21,Pfeiler,SD,T3,2,NA,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+7/23/21,Pfeiler,SD,T3,2,NA,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+7/23/21,Pfeiler,SD,T3,2,NA,Bombus flavifrons,Heliomeris multiflora,Hymenoptera
+7/23/21,Pfeiler,SD,T3,2,NA,Beetles,Hymenoxys hoopesii,Coleoptera
+7/23/21,Pfeiler,SD,T2,3,NA,Bombus sylvicola,Helianthella quinquenervis,Hymenoptera
+7/23/21,Pfeiler,KW,T3,3,NA,Moths,Erigeron speciosus,Lepidoptera
+7/23/21,Pfeiler,KW,T1,4,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/23/21,Pfeiler,KW,T3,4,NA,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+7/23/21,Pfeiler,KW,T3,4,NA,Bombus flavifrons,Heliomeris multiflora,Hymenoptera
+7/23/21,Pfeiler,KW,T3,4,NA,Moths,Erigeron speciosus,Lepidoptera
+7/23/21,Pfeiler,MC,T1,5,NA,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/23/21,Pfeiler,MC,T1,5,NA,Syrphidae,Potentilla pulcherrima,Diptera
+7/23/21,Pfeiler,KA,T2,5,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/23/21,Pfeiler,KA,T2,5,NA,Small black solitary bee,Erigeron speciosus,Hymenoptera
+7/23/21,Pfeiler,MC,T3,5,NA,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/23/21,Pfeiler,MC,T3,5,NA,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/23/21,Pfeiler,MC,T3,5,NA,Other fly,Potentilla pulcherrima,Diptera
+7/26/21,Ohio Pass High,AB,T1,1,NA,Bombus flavifrons,Heliomeris multiflora,Hymenoptera
+7/26/21,Ohio Pass High,KA,T1,2,NA,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+7/26/21,Ohio Pass High,KA,T1,2,NA,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/26/21,Ohio Pass High,KA,T1,2,NA,Other fly,Erigeron speciosus,Diptera
+7/26/21,Ohio Pass High,KA,T1,2,NA,Other fly,Potentilla pulcherrima,Diptera
+7/26/21,Ohio Pass High,KA,T1,2,NA,Moths,Erigeron speciosus,Lepidoptera
+7/26/21,Ohio Pass High,KW,T2,2,NA,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/26/21,Ohio Pass High,KW,T2,2,NA,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/26/21,Ohio Pass High,KW,T2,2,NA,Bombus rufocinctus,Helianthella quinquenervis,Hymenoptera
+7/26/21,Ohio Pass High,KW,T2,2,NA,Other fly,Helianthella quinquenervis,Diptera
+7/26/21,Ohio Pass High,KW,T2,2,NA,Other fly,Ligusticum porteri,Diptera
+7/26/21,Ohio Pass High,SD,T3,2,NA,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/26/21,Ohio Pass High,SD,T3,2,NA,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/26/21,Ohio Pass High,SD,T3,2,NA,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/26/21,Ohio Pass High,SD,T3,2,NA,Bombus bifarius,Helianthella quinquenervis,Hymenoptera
+7/26/21,Ohio Pass High,MC,T1,3,NA,Bombus unknown,Heliomeris multiflora,Hymenoptera
+7/26/21,Ohio Pass High,MC,T1,3,NA,Bombus mixtus,Heliomeris multiflora,Hymenoptera
+7/26/21,Ohio Pass High,SD,T2,3,NA,Bombus flavifrons,Eucephalus engelmannii,Hymenoptera
+7/26/21,Ohio Pass High,AB,T3,3,NA,Bombus flavifrons,Heliomeris multiflora,Hymenoptera
+7/26/21,Ohio Pass High,AB,T3,3,NA,Bombus mixtus,Heliomeris multiflora,Hymenoptera
+7/26/21,Ohio Pass High,AB,T3,3,NA,Syrphidae,Heliomeris multiflora,Diptera
+7/26/21,Ohio Pass High,AB,T3,3,NA,Small black solitary bee,Heliomeris multiflora,Hymenoptera
+7/26/21,Ohio Pass High,KW,T2,4,NA,Bombus unknown,Heliomeris multiflora,Hymenoptera
+7/26/21,Ohio Pass High,MC,T3,4,NA,Bombus unknown,Helianthella quinquenervis,Hymenoptera
+7/26/21,Ohio Pass High,SD,T1,5,NA,Bombus unknown,Heliomeris multiflora,Hymenoptera
+7/26/21,Ohio Pass High,SD,T1,5,NA,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/26/21,Ohio Pass High,MC,T2,5,NA,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+7/26/21,Ohio Pass High,MC,T2,5,NA,Other fly,Heliomeris multiflora,Diptera
+7/26/21,Ohio Pass High,KA,T3,5,NA,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+7/26/21,Ohio Pass High,KA,T3,5,NA,Other fly,Achillea millefolium,Diptera
+7/26/21,Ohio Pass High,KA,T3,5,NA,Beetles,Achillea millefolium,Coleoptera
+7/28/21,Virginia Basin,AS,T1,1,1,Other fly,Potentilla pulcherrima,Diptera
+7/28/21,Virginia Basin,AS,T1,1,1,Other fly,Potentilla pulcherrima,Diptera
+7/28/21,Virginia Basin,AS,T2,1,1,Bombus flavifrons,Arnica parryi,Hymenoptera
+7/28/21,Virginia Basin,AS,T2,1,1,Bombus bifarius,Arnica parryi,Hymenoptera
+7/28/21,Virginia Basin,AS,T2,1,1,Bombus centralis,Arnica parryi,Hymenoptera
+7/28/21,Virginia Basin,AS,T2,1,1,Other fly,Helianthella quinquenervis,Diptera
+7/28/21,Virginia Basin,AS,T2,1,1,Other fly,Potentilla pulcherrima,Diptera
+7/28/21,Virginia Basin,MC,T3,1,1,Bombus kirbiellus,Vicia americana,Hymenoptera
+7/28/21,Virginia Basin,MC,T3,1,1,Bombus flavifrons,Vicia americana,Hymenoptera
+7/28/21,Virginia Basin,MC,T3,1,1,Syrphidae,Potentilla pulcherrima,Diptera
+7/28/21,Virginia Basin,MC,T1,2,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/28/21,Virginia Basin,MC,T1,2,1,Bombus sylvicola,Helianthella quinquenervis,Hymenoptera
+7/28/21,Virginia Basin,MC,T1,2,1,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/28/21,Virginia Basin,MC,T1,2,1,Syrphidae,Potentilla pulcherrima,Diptera
+7/28/21,Virginia Basin,AS,T2,2,1,Other fly,Ligusticum porteri,Diptera
+7/28/21,Virginia Basin,SD,T3,2,1,Bombus unknown,Helianthella quinquenervis,Hymenoptera
+7/28/21,Virginia Basin,SD,T2,3,1,Other fly,Ligusticum porteri,Diptera
+7/28/21,Virginia Basin,MC,T3,3,1,Bombus appositus,Vicia americana,Hymenoptera
+7/28/21,Virginia Basin,SD,T1,4,1,Other fly,Potentilla pulcherrima,Diptera
+7/28/21,Virginia Basin,SD,T1,4,1,Syrphidae,Potentilla pulcherrima,Diptera
+7/28/21,Virginia Basin,KW,T2,4,1,Moths,Helianthella quinquenervis,Lepidoptera
+7/28/21,Virginia Basin,KW,T1,5,1,Bombus unknown,Potentilla pulcherrima,Hymenoptera
+7/28/21,Virginia Basin,KW,T1,5,1,Bombus unknown,Arnica parryi,Hymenoptera
+7/28/21,Virginia Basin,KW,T1,5,1,Bombus unknown,Senecio crassulus,Hymenoptera
+7/28/21,Virginia Basin,KW,T1,5,1,Small metallic solitary bee,Linum lewisii,Hymenoptera
+7/28/21,Virginia Basin,KW,T1,5,1,Bombyliidae,Linum lewisii,Diptera
+7/28/21,Virginia Basin,KW,T1,5,1,Bombyliidae,Linum lewisii,Diptera
+7/28/21,Virginia Basin,KW,T1,5,1,Other fly,Linum lewisii,Diptera
+7/28/21,Virginia Basin,KW,T1,5,1,Other fly,Linum lewisii,Diptera
+7/28/21,Virginia Basin,SD,T2,5,1,Bombus bifarius,Helianthella quinquenervis,Hymenoptera
+7/28/21,Virginia Basin,SD,T2,5,1,Bombus bifarius,Helianthella quinquenervis,Hymenoptera
+7/28/21,Virginia Basin,SD,T2,5,1,Syrphidae,Potentilla pulcherrima,Diptera
+7/28/21,Virginia Basin,SD,T2,5,1,Other fly,Ligusticum porteri,Diptera
+7/28/21,Virginia Basin,SD,T2,5,1,Other fly,Potentilla pulcherrima,Diptera
+7/28/21,Virginia Basin,KW,T3,5,1,Bombus kirbiellus,Arnica parryi,Hymenoptera
+7/28/21,Virginia Basin,KW,T3,5,1,Bombus flavifrons,Arnica parryi,Hymenoptera
+7/28/21,Virginia Basin,KW,T3,5,1,Bombus flavifrons,Arnica parryi,Hymenoptera
+7/28/21,Virginia Basin,KW,T3,5,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/28/21,Virginia Basin,KW,T3,5,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/30/21,Pfeiler,AS,T1,1,NA,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+7/30/21,Pfeiler,AS,T1,1,NA,Syrphidae,Heliomeris multiflora,Diptera
+7/30/21,Pfeiler,AS,T3,1,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/30/21,Pfeiler,AS,T3,1,NA,Bombus unknown,Heliomeris multiflora,Hymenoptera
+7/30/21,Pfeiler,AS,T3,1,NA,Bombus kirbiellus,Heliomeris multiflora,Hymenoptera
+7/30/21,Pfeiler,AS,T3,1,NA,Bombus flavifrons,Heliomeris multiflora,Hymenoptera
+7/30/21,Pfeiler,AS,T1,2,NA,Bombus bifarius,Erigeron speciosus,Hymenoptera
+7/30/21,Pfeiler,AS,T2,2,NA,Bombus unknown,Erigeron speciosus,Hymenoptera
+7/30/21,Pfeiler,AS,T2,2,NA,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+7/30/21,Pfeiler,AS,T2,2,NA,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+7/30/21,Pfeiler,AS,T3,2,NA,Bombus bifarius,Erigeron speciosus,Hymenoptera
+7/30/21,Pfeiler,AS,T3,2,NA,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+7/30/21,Pfeiler,AS,T3,2,NA,Bombus unknown,Heliomeris multiflora,Hymenoptera
+7/30/21,Pfeiler,AS,T3,2,NA,Bombus flavifrons,Heliomeris multiflora,Hymenoptera
+7/30/21,Pfeiler,AS,T3,2,NA,Bombus flavifrons,Heliomeris multiflora,Hymenoptera
+7/30/21,Pfeiler,AS,T1,3,NA,Bombus sylvicola,Hymenoxys hoopesii,Hymenoptera
+7/30/21,Pfeiler,AS,T2,3,NA,Bombus flavifrons,Heliomeris multiflora,Hymenoptera
+7/30/21,Pfeiler,AS,T3,3,NA,Bombus bifarius,Erigeron speciosus,Hymenoptera
+7/30/21,Pfeiler,AS,T3,3,NA,Bombus bifarius,Erigeron speciosus,Hymenoptera
+7/30/21,Pfeiler,AS,T3,3,NA,Bombus bifarius,Erigeron speciosus,Hymenoptera
+7/30/21,Pfeiler,AS,T3,3,NA,Bombus bifarius,Erigeron speciosus,Hymenoptera
+7/30/21,Pfeiler,AS,T3,3,NA,Bombus bifarius,Erigeron speciosus,Hymenoptera
+7/30/21,Pfeiler,AS,T3,3,NA,Bombus flavifrons,Erigeron speciosus,Hymenoptera
+7/30/21,Pfeiler,AS,T3,3,NA,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+7/30/21,Pfeiler,AS,T3,3,NA,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+7/30/21,Pfeiler,AS,T3,3,NA,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+7/30/21,Pfeiler,AS,T1,4,NA,Bombus unknown,Heliomeris multiflora,Hymenoptera
+7/30/21,Pfeiler,AS,T1,4,NA,Syrphidae,Erigeron speciosus,Diptera
+7/30/21,Pfeiler,AS,T2,4,NA,Other fly,Agoseris glauca,Diptera
+7/30/21,Pfeiler,AS,T3,4,NA,Bombus centralis,Heliomeris multiflora,Hymenoptera
+7/30/21,Pfeiler,AS,T3,4,NA,Bombus bifarius,Erigeron speciosus,Hymenoptera
+7/30/21,Pfeiler,AS,T3,4,NA,Syrphidae,Heliomeris multiflora,Diptera
+7/30/21,Pfeiler,AS,T3,4,NA,Syrphidae,Erigeron speciosus,Diptera
+7/30/21,Pfeiler,AS,T3,4,NA,Syrphidae,Erigeron speciosus,Diptera
+7/30/21,Pfeiler,AS,T1,5,NA,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+7/30/21,Pfeiler,AS,T1,5,NA,Other fly,Agoseris glauca,Diptera
+7/30/21,Pfeiler,AS,T2,5,NA,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+7/30/21,Pfeiler,AS,T2,5,NA,Other fly,Agoseris glauca,Diptera
+7/30/21,Pfeiler,AS,T2,5,NA,Moths,Erigeron speciosus,Lepidoptera
+7/30/21,Pfeiler,AS,T2,5,NA,Other fly,Erigeron speciosus,Diptera
+7/30/21,Pfeiler,AS,T3,5,NA,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+7/30/21,Pfeiler,AS,T3,5,NA,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+7/30/21,Pfeiler,AS,T3,5,NA,Bombus flavifrons,Heliomeris multiflora,Hymenoptera
+7/30/21,Pfeiler,AS,T3,5,NA,Bombus flavifrons,Heliomeris multiflora,Hymenoptera
+7/30/21,Pfeiler,AS,T3,5,NA,Bombus unknown,Heliomeris multiflora,Hymenoptera
+7/30/21,Pfeiler,AS,T3,5,NA,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/30/21,Pfeiler,AS,T3,5,NA,Other fly,Agoseris glauca,Diptera
+8/5/21,Virginia Basin,DG,T3,1,NA,Hemipteran,Achillea millefolium,Hemiptera
+8/5/21,Virginia Basin,DG,T3,1,NA,Syrphidae,Achillea millefolium,Diptera
+8/5/21,Virginia Basin,SD,T2,2,NA,Bombus unknown,Achillea millefolium,Hymenoptera
+8/5/21,Virginia Basin,SD,T2,2,NA,Bombus frigidus,Castilleja miniata,Hymenoptera
+8/5/21,Virginia Basin,SD,T2,2,NA,Small black solitary bee,Achillea millefolium,Hymenoptera
+8/5/21,Virginia Basin,SD,T2,2,NA,Other fly,Achillea millefolium,Diptera
+8/5/21,Virginia Basin,KA,T3,2,NA,Bombus unknown,Helianthella quinquenervis,Hymenoptera
+8/5/21,Virginia Basin,DG,T3,2,NA,Other fly,Achillea millefolium,Diptera
+8/5/21,Virginia Basin,DG,T3,2,NA,Other fly,Achillea millefolium,Diptera
+8/5/21,Virginia Basin,KA,T3,2,NA,Other fly,Achillea millefolium,Diptera
+8/5/21,Virginia Basin,SD,T3,3,NA,Bombus frigidus,Vicia americana,Hymenoptera
+8/5/21,Virginia Basin,KA,T1,5,NA,Other fly,Achillea millefolium,Diptera
+8/5/21,Virginia Basin,KA,T2,5,NA,Other fly,Achillea millefolium,Diptera
+8/5/21,Virginia Basin,KA,T2,5,NA,Small black solitary bee,Achillea millefolium,Hymenoptera
+8/5/21,Virginia Basin,AB,T3,5,NA,Bombus mixtus,Heterotheca villosa,Hymenoptera
+8/5/21,Virginia Basin,AB,T3,5,NA,Small black solitary bee,Heterotheca villosa,Hymenoptera
+6/27/22,Virginia Basin,KA,T2,1,1,Syrphidae,Pseudocymopterus montanus,Diptera
+6/27/22,Virginia Basin,KA,T2,1,1,Syrphidae,Pseudocymopterus montanus,Diptera
+6/27/22,Virginia Basin,MC,T1,3,1,Small black solitary bee,Fragaria virginiana,Hymenoptera
+6/27/22,Virginia Basin,MC,T1,3,1,Small black solitary bee,Fragaria virginiana,Hymenoptera
+6/27/22,Virginia Basin,KA,T3,3,1,Other fly,Draba aurea,Diptera
+7/2/22,Ohio Pass High,CA,T1,1,2,Bombus occidentalis,Delphinium nuttallianum,Hymenoptera
+7/2/22,Ohio Pass High,CA,T2,2,1,Bombus flavifrons,Delphinium nuttallianum,Hymenoptera
+7/2/22,Ohio Pass High,CA,T2,2,3,Moths,Boechera stricta,Lepidoptera
+7/2/22,Ohio Pass High,CA,T3,2,2,Bombus flavifrons,Delphinium nuttallianum,Hymenoptera
+7/2/22,Ohio Pass High,CA,T3,2,3,Bombus sylvicola,Delphinium nuttallianum,Hymenoptera
+7/2/22,Ohio Pass High,CA,T1,3,1,Other fly,Potentilla pulcherrima,Diptera
+7/2/22,Ohio Pass High,CA,T2,3,3,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/2/22,Ohio Pass High,CA,T2,3,2,Wasps,Potentilla pulcherrima,Hymenoptera
+7/2/22,Ohio Pass High,CA,T2,4,1,Other fly,Potentilla pulcherrima,Diptera
+7/2/22,Ohio Pass High,CA,T2,4,2,Syrphidae,Delphinium nuttallianum,Diptera
+7/2/22,Ohio Pass High,CA,T1,5,2,Syrphidae,Potentilla pulcherrima,Diptera
+7/2/22,Ohio Pass High,CA,T1,5,2,Other fly,Potentilla pulcherrima,Diptera
+7/2/22,Ohio Pass High,CA,T3,5,3,Bombus sylvicola,Delphinium nuttallianum,Hymenoptera
+7/2/22,Ohio Pass High,CA,T3,5,2,Syrphidae,Ligusticum porteri,Diptera
+7/8/22,Virginia Basin,KA,T1,1,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/8/22,Virginia Basin,KA,T2,1,1,Syrphidae,Androsace septentrionalis,Diptera
+7/8/22,Virginia Basin,KA,T1,2,1,Syrphidae,Potentilla pulcherrima,Diptera
+7/8/22,Virginia Basin,KA,T1,2,1,Other fly,Potentilla pulcherrima,Diptera
+7/8/22,Virginia Basin,KA,T1,2,1,Syrphidae,Potentilla pulcherrima,Diptera
+7/8/22,Virginia Basin,KA,T1,2,1,Beetles,Senecio crassulus,Coleoptera
+7/8/22,Virginia Basin,MC,T2,2,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/8/22,Virginia Basin,MC,T2,2,1,Other fly,Linum lewisii,Diptera
+7/8/22,Virginia Basin,KA,T3,2,1,Syrphidae,Senecio crassulus,Diptera
+7/8/22,Virginia Basin,KA,T3,2,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/8/22,Virginia Basin,KA,T3,2,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/8/22,Virginia Basin,KA,T1,3,1,Bombus kirbiellus,Linum lewisii,Hymenoptera
+7/8/22,Virginia Basin,KA,T1,3,1,Syrphidae,Ligusticum porteri,Diptera
+7/8/22,Virginia Basin,KA,T1,3,1,Syrphidae,Pseudocymopterus montanus,Diptera
+7/8/22,Virginia Basin,KA,T1,3,1,Syrphidae,Ligusticum porteri,Diptera
+7/8/22,Virginia Basin,KA,T1,4,1,Syrphidae,Potentilla pulcherrima,Diptera
+7/8/22,Virginia Basin,KA,T1,4,1,Syrphidae,Senecio crassulus,Diptera
+7/8/22,Virginia Basin,KA,T1,4,1,Small black solitary bee,Linum lewisii,Hymenoptera
+7/8/22,Virginia Basin,KA,T1,4,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/8/22,Virginia Basin,KA,T1,4,1,Syrphidae,Potentilla pulcherrima,Diptera
+7/8/22,Virginia Basin,KA,T1,5,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/8/22,Virginia Basin,KA,T1,5,1,Syrphidae,Linum lewisii,Diptera
+7/8/22,Virginia Basin,MC,T3,5,1,Bombus bifarius,Senecio crassulus,Hymenoptera
+7/11/22,Ohio Pass High,KA,T1,1,3,Bombus unknown,Delphinium nuttallianum,Hymenoptera
+7/11/22,Ohio Pass High,KA,T1,1,1,Syrphidae,Ligusticum porteri,Diptera
+7/11/22,Ohio Pass High,KA,T1,1,1,Syrphidae,Ligusticum porteri,Diptera
+7/11/22,Ohio Pass High,KA,T1,1,3,Syrphidae,Ligusticum porteri,Diptera
+7/11/22,Ohio Pass High,KA,T1,1,1,Syrphidae,Ligusticum porteri,Diptera
+7/11/22,Ohio Pass High,KA,T1,1,3,Syrphidae,Ligusticum porteri,Diptera
+7/11/22,Ohio Pass High,KA,T1,1,1,Syrphidae,Ligusticum porteri,Diptera
+7/11/22,Ohio Pass High,KA,T1,1,1,Other fly,Ligusticum porteri,Diptera
+7/11/22,Ohio Pass High,KA,T1,1,3,Other fly,Ligusticum porteri,Diptera
+7/11/22,Ohio Pass High,KA,T1,1,1,Wasps,Ligusticum porteri,Hymenoptera
+7/11/22,Ohio Pass High,KA,T1,1,1,Wasps,Ligusticum porteri,Hymenoptera
+7/11/22,Ohio Pass High,KA,T1,1,1,Wasps,Ligusticum porteri,Hymenoptera
+7/11/22,Ohio Pass High,KA,T1,1,1,Other fly,Ligusticum porteri,Diptera
+7/11/22,Ohio Pass High,KA,T1,1,3,Other fly,Ligusticum porteri,Diptera
+7/11/22,Ohio Pass High,KA,T1,1,1,Syrphidae,Ligusticum porteri,Diptera
+7/11/22,Ohio Pass High,KA,T2,1,3,Syrphidae,Ligusticum porteri,Diptera
+7/11/22,Ohio Pass High,KA,T2,1,3,Other fly,Ligusticum porteri,Diptera
+7/11/22,Ohio Pass High,BB,T3,1,1,Other fly,Potentilla pulcherrima,Diptera
+7/11/22,Ohio Pass High,BB,T1,2,2,Bombyliidae,Senecio crassulus,Diptera
+7/11/22,Ohio Pass High,KA,T2,2,3,Beetles,Senecio crassulus,Coleoptera
+7/11/22,Ohio Pass High,KA,T2,2,1,Other fly,Senecio crassulus,Diptera
+7/11/22,Ohio Pass High,KA,T2,2,3,Other fly,Potentilla pulcherrima,Diptera
+7/11/22,Ohio Pass High,KA,T2,2,2,Other fly,Potentilla pulcherrima,Diptera
+7/11/22,Ohio Pass High,KA,T2,2,2,Beetles,Senecio crassulus,Coleoptera
+7/11/22,Ohio Pass High,BB,T3,2,2,Small black solitary bee,Erigeron elatior,Hymenoptera
+7/11/22,Ohio Pass High,BB,T3,2,2,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/11/22,Ohio Pass High,KA,T3,2,3,Beetles,Senecio crassulus,Coleoptera
+7/11/22,Ohio Pass High,KA,T1,3,2,Syrphidae,Ligusticum porteri,Diptera
+7/11/22,Ohio Pass High,KA,T1,3,3,Syrphidae,Ligusticum porteri,Diptera
+7/11/22,Ohio Pass High,KA,T1,3,3,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/11/22,Ohio Pass High,BB,T1,3,1,Other fly,Potentilla pulcherrima,Diptera
+7/11/22,Ohio Pass High,KA,T1,3,2,Wasps,Potentilla pulcherrima,Hymenoptera
+7/11/22,Ohio Pass High,KA,T1,3,2,Hemipteran,Potentilla pulcherrima,Hemiptera
+7/11/22,Ohio Pass High,KA,T1,3,3,Hemipteran,Potentilla pulcherrima,Hemiptera
+7/11/22,Ohio Pass High,KA,T1,3,3,Other fly,Ligusticum porteri,Diptera
+7/11/22,Ohio Pass High,BB,T1,3,1,Other fly,Ligusticum porteri,Diptera
+7/11/22,Ohio Pass High,KA,T2,3,1,Syrphidae,Senecio crassulus,Diptera
+7/11/22,Ohio Pass High,BB,T2,3,3,Big megachile,Lathyrus leucanthus,Hymenoptera
+7/11/22,Ohio Pass High,KA,T2,3,2,Beetles,Senecio crassulus,Coleoptera
+7/11/22,Ohio Pass High,KA,T3,3,1,Other fly,Potentilla pulcherrima,Diptera
+7/11/22,Ohio Pass High,BB,T1,4,3,Syrphidae,Ligusticum porteri,Diptera
+7/11/22,Ohio Pass High,BB,T1,4,3,Syrphidae,Ligusticum porteri,Diptera
+7/11/22,Ohio Pass High,BB,T1,4,3,Syrphidae,Ligusticum porteri,Diptera
+7/11/22,Ohio Pass High,BB,T1,4,3,Syrphidae,Ligusticum porteri,Diptera
+7/11/22,Ohio Pass High,KA,T1,4,2,Other fly,Ligusticum porteri,Diptera
+7/11/22,Ohio Pass High,BB,T1,4,3,Other fly,Potentilla pulcherrima,Diptera
+7/11/22,Ohio Pass High,BB,T1,4,3,Other fly,Potentilla pulcherrima,Diptera
+7/11/22,Ohio Pass High,BB,T1,4,3,Other fly,Potentilla pulcherrima,Diptera
+7/11/22,Ohio Pass High,BB,T1,4,3,Hemipteran,Potentilla pulcherrima,Hemiptera
+7/11/22,Ohio Pass High,KA,T2,4,3,Bombus bifarius,Potentilla pulcherrima,Hymenoptera
+7/11/22,Ohio Pass High,BB,T3,4,1,Other fly,Potentilla pulcherrima,Diptera
+7/11/22,Ohio Pass High,BB,T1,5,1,Small metallic solitary bee,Potentilla pulcherrima,Hymenoptera
+7/11/22,Ohio Pass High,BB,T1,5,1,Other fly,Potentilla pulcherrima,Diptera
+7/11/22,Ohio Pass High,BB,T1,5,1,Other fly,Potentilla pulcherrima,Diptera
+7/11/22,Ohio Pass High,BB,T1,5,1,Other fly,Potentilla pulcherrima,Diptera
+7/11/22,Ohio Pass High,BB,T1,5,1,Other fly,Potentilla pulcherrima,Diptera
+7/11/22,Ohio Pass High,KA,T2,5,2,Syrphidae,Potentilla pulcherrima,Diptera
+7/11/22,Ohio Pass High,KA,T2,5,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/11/22,Ohio Pass High,KA,T2,5,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/11/22,Ohio Pass High,KA,T2,5,2,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/11/22,Ohio Pass High,BB,T2,5,3,Other fly,Potentilla pulcherrima,Diptera
+7/11/22,Ohio Pass High,KA,T2,5,1,Other fly,Potentilla pulcherrima,Diptera
+7/11/22,Ohio Pass High,KA,T2,5,2,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/11/22,Ohio Pass High,KA,T3,5,1,Syrphidae,Ligusticum porteri,Diptera
+7/13/22,Virginia Basin,MC,P3,1,1,Other fly,Senecio crassulus,Diptera
+7/13/22,Virginia Basin,MC,P7,1,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/13/22,Virginia Basin,CA,P1,2,1,Bombus bifarius,Senecio crassulus,Hymenoptera
+7/13/22,Virginia Basin,CA,P1,2,1,Hemipteran,Potentilla pulcherrima,Hemiptera
+7/13/22,Virginia Basin,CA,P1,2,1,Wasps,Senecio crassulus,Hymenoptera
+7/13/22,Virginia Basin,MDS,P3,2,1,Bombus bifarius,Senecio crassulus,Hymenoptera
+7/13/22,Virginia Basin,MDS,P3,2,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/13/22,Virginia Basin,MC,P7,2,1,Other fly,Senecio crassulus,Diptera
+7/13/22,Virginia Basin,MC,P7,2,1,Other fly,Senecio crassulus,Diptera
+7/13/22,Virginia Basin,MC,P7,2,1,Other fly,Senecio crassulus,Diptera
+7/13/22,Virginia Basin,MMC,P1,3,1,Syrphidae,Ligusticum porteri,Diptera
+7/13/22,Virginia Basin,MMC,P1,3,1,Other fly,Ligusticum porteri,Diptera
+7/13/22,Virginia Basin,MMC,P1,3,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/13/22,Virginia Basin,MMC,P1,3,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/13/22,Virginia Basin,MC,P3,3,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/13/22,Virginia Basin,MC,P7,3,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/13/22,Virginia Basin,MMC,P1,4,1,Small black solitary bee,Linum lewisii,Hymenoptera
+7/13/22,Virginia Basin,MMC,P1,4,1,Bombyliidae,Senecio crassulus,Diptera
+7/13/22,Virginia Basin,MMC,P1,4,1,Other fly,Linum lewisii,Diptera
+7/13/22,Virginia Basin,MMC,P1,4,1,Syrphidae,Senecio crassulus,Diptera
+7/13/22,Virginia Basin,MMC,P1,4,1,Other fly,Linum lewisii,Diptera
+7/13/22,Virginia Basin,MC,P3,4,1,Syrphidae,Senecio crassulus,Diptera
+7/13/22,Virginia Basin,MDS,P7,4,1,Bombus unknown,Senecio crassulus,Hymenoptera
+7/13/22,Virginia Basin,MMC,P7,4,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/13/22,Virginia Basin,MDS,P7,4,1,Other fly,Senecio crassulus,Diptera
+7/13/22,Virginia Basin,MMC,P3,5,1,Other fly,Potentilla pulcherrima,Diptera
+7/13/22,Virginia Basin,CA,P3,5,1,Small black solitary bee,Senecio crassulus,Hymenoptera
+7/13/22,Virginia Basin,CA,P7,5,1,Other fly,Potentilla pulcherrima,Diptera
+7/13/22,Virginia Basin,CA,P7,5,1,Other fly,Androsace septentrionalis,Diptera
+7/19/22,Virginia Basin,DL,P7,1,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/19/22,Virginia Basin,MC,P1,2,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/19/22,Virginia Basin,MC,P1,2,1,Other fly,Linum lewisii,Diptera
+7/19/22,Virginia Basin,DL,P3,2,1,Syrphidae,Potentilla pulcherrima,Diptera
+7/19/22,Virginia Basin,MDS,P7,2,1,Bombus kirbiellus,Senecio crassulus,Hymenoptera
+7/19/22,Virginia Basin,MDS,P7,2,1,Other fly,Ligusticum porteri,Diptera
+7/19/22,Virginia Basin,MC,P3,3,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/19/22,Virginia Basin,MC,P3,3,1,Other fly,Potentilla pulcherrima,Diptera
+7/19/22,Virginia Basin,MDS,P1,4,1,Small black solitary bee,Linum lewisii,Hymenoptera
+7/19/22,Virginia Basin,MDS,P1,4,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/19/22,Virginia Basin,DL,P3,4,1,Syrphidae,Potentilla pulcherrima,Diptera
+7/19/22,Virginia Basin,DL,P7,4,1,Other fly,Potentilla pulcherrima,Diptera
+7/19/22,Virginia Basin,DL,P7,4,1,Other fly,Senecio crassulus,Diptera
+7/19/22,Virginia Basin,MC,P1,5,1,Bombus flavifrons,Senecio crassulus,Hymenoptera
+7/19/22,Virginia Basin,MC,P1,5,1,Small black solitary bee,Senecio crassulus,Hymenoptera
+7/19/22,Virginia Basin,MC,P1,5,1,Other fly,Linum lewisii,Diptera
+7/19/22,Virginia Basin,MC,P1,5,1,Other fly,Linum lewisii,Diptera
+7/19/22,Virginia Basin,MDS,P3,5,1,Bombus californicus,Senecio crassulus,Hymenoptera
+7/19/22,Virginia Basin,MDS,P7,5,1,Syrphidae,Potentilla pulcherrima,Diptera
+7/20/22,Ohio Pass High,MC,T1,1,1,Syrphidae,Ligusticum porteri,Diptera
+7/20/22,Ohio Pass High,MC,T1,1,1,Syrphidae,Ligusticum porteri,Diptera
+7/20/22,Ohio Pass High,MC,T1,1,3,Syrphidae,Ligusticum porteri,Diptera
+7/20/22,Ohio Pass High,MC,T1,1,1,Syrphidae,Ligusticum porteri,Diptera
+7/20/22,Ohio Pass High,MC,T2,1,2,Bombus flavifrons,Castilleja sulphurea,Hymenoptera
+7/20/22,Ohio Pass High,MC,T2,1,2,Bombus kirbiellus,Castilleja sulphurea,Hymenoptera
+7/20/22,Ohio Pass High,MC,T2,1,1,Syrphidae,Ligusticum porteri,Diptera
+7/20/22,Ohio Pass High,MC,T2,1,1,Syrphidae,Ligusticum porteri,Diptera
+7/20/22,Ohio Pass High,MC,T2,1,1,Syrphidae,Ligusticum porteri,Diptera
+7/20/22,Ohio Pass High,MC,T2,1,1,Syrphidae,Ligusticum porteri,Diptera
+7/20/22,Ohio Pass High,MC,T2,1,1,Syrphidae,Potentilla pulcherrima,Diptera
+7/20/22,Ohio Pass High,MC,T2,1,1,Syrphidae,Ligusticum porteri,Diptera
+7/20/22,Ohio Pass High,DL,T2,1,3,Other fly,Ligusticum porteri,Diptera
+7/20/22,Ohio Pass High,DL,T2,1,3,Other fly,Ligusticum porteri,Diptera
+7/20/22,Ohio Pass High,MC,T3,1,1,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/20/22,Ohio Pass High,MC,T3,1,3,Bombus flavifrons,Heliomeris multiflora,Hymenoptera
+7/20/22,Ohio Pass High,MC,T3,1,3,Wasps,Heliomeris multiflora,Hymenoptera
+7/20/22,Ohio Pass High,DL,T1,2,2,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/20/22,Ohio Pass High,DL,T1,2,3,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/20/22,Ohio Pass High,DL,T2,2,3,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/20/22,Ohio Pass High,DL,T2,2,3,Bombus unknown,Helianthella quinquenervis,Hymenoptera
+7/20/22,Ohio Pass High,DL,T2,2,3,Syrphidae,Potentilla pulcherrima,Diptera
+7/20/22,Ohio Pass High,MC,T2,2,2,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/20/22,Ohio Pass High,DL,T2,2,1,Other fly,Ligusticum porteri,Diptera
+7/20/22,Ohio Pass High,DL,T2,2,1,Other fly,Ligusticum porteri,Diptera
+7/20/22,Ohio Pass High,DL,T3,2,2,Bombus bifarius,Helianthella quinquenervis,Hymenoptera
+7/20/22,Ohio Pass High,DL,T3,2,2,Bombus bifarius,Helianthella quinquenervis,Hymenoptera
+7/20/22,Ohio Pass High,MC,T3,2,3,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/20/22,Ohio Pass High,MC,T3,2,3,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/20/22,Ohio Pass High,DL,T1,3,3,Bombus unknown,Helianthella quinquenervis,Hymenoptera
+7/20/22,Ohio Pass High,DL,T1,3,1,Syrphidae,Ligusticum porteri,Diptera
+7/20/22,Ohio Pass High,DL,T1,3,3,Syrphidae,Ligusticum porteri,Diptera
+7/20/22,Ohio Pass High,DL,T2,3,2,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/20/22,Ohio Pass High,MC,T2,3,3,Syrphidae,Collomia linearis,Diptera
+7/20/22,Ohio Pass High,MC,T2,3,1,Other fly,Potentilla pulcherrima,Diptera
+7/20/22,Ohio Pass High,DL,T2,3,2,Other fly,Potentilla pulcherrima,Diptera
+7/20/22,Ohio Pass High,DL,T2,3,2,Other fly,Senecio crassulus,Diptera
+7/20/22,Ohio Pass High,DL,T3,3,1,Syrphidae,Ligusticum porteri,Diptera
+7/20/22,Ohio Pass High,DL,T3,3,1,Syrphidae,Ligusticum porteri,Diptera
+7/20/22,Ohio Pass High,MC,T3,3,2,Syrphidae,Ligusticum porteri,Diptera
+7/20/22,Ohio Pass High,MC,T3,3,2,Syrphidae,Ligusticum porteri,Diptera
+7/20/22,Ohio Pass High,DL,T3,3,1,Other fly,Ligusticum porteri,Diptera
+7/20/22,Ohio Pass High,DL,T3,3,1,Other fly,Ligusticum porteri,Diptera
+7/20/22,Ohio Pass High,MC,T3,3,2,Syrphidae,Ligusticum porteri,Diptera
+7/20/22,Ohio Pass High,MC,T3,3,2,Syrphidae,Ligusticum porteri,Diptera
+7/20/22,Ohio Pass High,DL,T3,3,3,Syrphidae,Ligusticum porteri,Diptera
+7/20/22,Ohio Pass High,MC,T1,4,1,Bombus kirbiellus,Castilleja sulphurea,Hymenoptera
+7/20/22,Ohio Pass High,MC,T1,4,1,Bombus kirbiellus,Castilleja sulphurea,Hymenoptera
+7/20/22,Ohio Pass High,MC,T1,4,1,Bombus flavifrons,Castilleja sulphurea,Hymenoptera
+7/20/22,Ohio Pass High,MC,T2,4,2,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/20/22,Ohio Pass High,MC,T2,4,2,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/20/22,Ohio Pass High,DL,T3,4,1,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/20/22,Ohio Pass High,MC,T3,4,3,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/20/22,Ohio Pass High,DL,T3,4,2,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/20/22,Ohio Pass High,DL,T3,4,1,Syrphidae,Collomia linearis,Diptera
+7/20/22,Ohio Pass High,DL,T3,4,2,Syrphidae,Collomia linearis,Diptera
+7/20/22,Ohio Pass High,DL,T1,5,2,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/20/22,Ohio Pass High,DL,T1,5,2,Other fly,Potentilla pulcherrima,Diptera
+7/20/22,Ohio Pass High,DL,T1,5,3,Other fly,Potentilla pulcherrima,Diptera
+7/20/22,Ohio Pass High,DL,T2,5,3,Syrphidae,Potentilla pulcherrima,Diptera
+7/20/22,Ohio Pass High,DL,T2,5,1,Small metallic solitary bee,Potentilla pulcherrima,Hymenoptera
+7/20/22,Ohio Pass High,MC,T2,5,2,Syrphidae,Erigeron elatior,Diptera
+7/20/22,Ohio Pass High,DL,T2,5,3,Hemipteran,Potentilla pulcherrima,Hemiptera
+7/20/22,Ohio Pass High,DL,T2,5,1,Syrphidae,Potentilla pulcherrima,Diptera
+7/20/22,Ohio Pass High,MC,T3,5,2,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/26/22,Ohio Pass High,DL,T1,1,1,Syrphidae,Ligusticum porteri,Diptera
+7/26/22,Ohio Pass High,DL,T1,1,1,Syrphidae,Ligusticum porteri,Diptera
+7/26/22,Ohio Pass High,DL,T1,1,2,Small black solitary bee,Erigeron elatior,Hymenoptera
+7/26/22,Ohio Pass High,DL,T2,1,1,Bombus sylvicola,Hymenoxys hoopesii,Hymenoptera
+7/26/22,Ohio Pass High,DL,T2,1,2,Bombus flavifrons,Hymenoxys hoopesii,Hymenoptera
+7/26/22,Ohio Pass High,CA,T2,1,3,Bombus flavifrons,Senecio crassulus,Hymenoptera
+7/26/22,Ohio Pass High,CA,T2,1,3,Bombus appositus,Senecio crassulus,Hymenoptera
+7/26/22,Ohio Pass High,CA,T3,1,2,Bombus flavifrons,Erigeron speciosus,Hymenoptera
+7/26/22,Ohio Pass High,CA,T3,1,3,Bombus flavifrons,Senecio crassulus,Hymenoptera
+7/26/22,Ohio Pass High,CA,T3,1,2,Other fly,Erigeron speciosus,Diptera
+7/26/22,Ohio Pass High,DL,T1,2,1,Bombus flavifrons,Chrysothamnus viscidiflorus,Hymenoptera
+7/26/22,Ohio Pass High,DL,T1,2,1,Bombus frigidus,Castilleja sulphurea,Hymenoptera
+7/26/22,Ohio Pass High,CA,T1,2,2,Bombus sylvicola,Helianthella quinquenervis,Hymenoptera
+7/26/22,Ohio Pass High,CA,T1,2,2,Bombus flavifrons,Erigeron speciosus,Hymenoptera
+7/26/22,Ohio Pass High,DL,T1,2,3,Bombus unknown,Helianthella quinquenervis,Hymenoptera
+7/26/22,Ohio Pass High,DL,T1,2,3,Bombus unknown,Helianthella quinquenervis,Hymenoptera
+7/26/22,Ohio Pass High,DL,T1,2,3,Small black solitary bee,Senecio crassulus,Hymenoptera
+7/26/22,Ohio Pass High,CA,T1,2,2,Other fly,Erigeron speciosus,Diptera
+7/26/22,Ohio Pass High,CA,T1,2,2,Moths,Erigeron speciosus,Lepidoptera
+7/26/22,Ohio Pass High,CA,T2,2,1,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/26/22,Ohio Pass High,CA,T2,2,1,Syrphidae,Ligusticum porteri,Diptera
+7/26/22,Ohio Pass High,CA,T2,2,1,Syrphidae,Ligusticum porteri,Diptera
+7/26/22,Ohio Pass High,CA,T2,2,1,Syrphidae,Erigeron elatior,Diptera
+7/26/22,Ohio Pass High,CA,T2,2,2,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/26/22,Ohio Pass High,CA,T2,2,1,Other fly,Potentilla pulcherrima,Diptera
+7/26/22,Ohio Pass High,CA,T2,2,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/26/22,Ohio Pass High,DL,T3,2,1,Bombus sylvicola,Helianthella quinquenervis,Hymenoptera
+7/26/22,Ohio Pass High,DL,T3,2,2,Bombus bifarius,Hymenoxys hoopesii,Hymenoptera
+7/26/22,Ohio Pass High,DL,T3,2,2,Bombus flavifrons,Hymenoxys hoopesii,Hymenoptera
+7/26/22,Ohio Pass High,CA,T3,2,3,Bombus flavifrons,Erigeron speciosus,Hymenoptera
+7/26/22,Ohio Pass High,CA,T1,3,1,Bombus flavifrons,Senecio crassulus,Hymenoptera
+7/26/22,Ohio Pass High,DL,T1,3,2,Bombus unknown,Helianthella quinquenervis,Hymenoptera
+7/26/22,Ohio Pass High,CA,T1,3,3,Bombus sylvicola,Senecio crassulus,Hymenoptera
+7/26/22,Ohio Pass High,CA,T1,3,3,Syrphidae,Senecio crassulus,Diptera
+7/26/22,Ohio Pass High,CA,T1,3,1,Other fly,Senecio crassulus,Diptera
+7/26/22,Ohio Pass High,CA,T1,3,1,Syrphidae,Ligusticum porteri,Diptera
+7/26/22,Ohio Pass High,CA,T2,3,1,Bombus flavifrons,Senecio crassulus,Hymenoptera
+7/26/22,Ohio Pass High,CA,T2,3,2,Syrphidae,Potentilla pulcherrima,Diptera
+7/26/22,Ohio Pass High,CA,T3,3,1,Syrphidae,Ligusticum porteri,Diptera
+7/26/22,Ohio Pass High,CA,T3,3,2,Syrphidae,Erigeron elatior,Diptera
+7/26/22,Ohio Pass High,CA,T3,3,1,Other fly,Potentilla pulcherrima,Diptera
+7/26/22,Ohio Pass High,CA,T3,3,2,Other fly,Ligusticum porteri,Diptera
+7/26/22,Ohio Pass High,CA,T1,4,3,Bombus sylvicola,Erigeron speciosus,Hymenoptera
+7/26/22,Ohio Pass High,CA,T1,4,3,Bombus sylvicola,Senecio crassulus,Hymenoptera
+7/26/22,Ohio Pass High,CA,T1,4,1,Syrphidae,Senecio crassulus,Diptera
+7/26/22,Ohio Pass High,DL,T2,4,1,Bombus flavifrons,Castilleja sulphurea,Hymenoptera
+7/26/22,Ohio Pass High,DL,T2,4,1,Bombus unknown,Helianthella quinquenervis,Hymenoptera
+7/26/22,Ohio Pass High,DL,T3,4,3,Bombus flavifrons,Helianthella quinquenervis,Hymenoptera
+7/26/22,Ohio Pass High,DL,T3,4,3,Syrphidae,Erigeron speciosus,Diptera
+7/26/22,Ohio Pass High,CA,T3,4,2,Other fly,Erigeron speciosus,Diptera
+7/26/22,Ohio Pass High,DL,T2,5,2,Syrphidae,Potentilla pulcherrima,Diptera
+7/26/22,Ohio Pass High,CA,T2,5,3,Syrphidae,Erigeron elatior,Diptera
+7/26/22,Ohio Pass High,DL,T2,5,2,Other fly,Erigeron speciosus,Diptera
+7/26/22,Ohio Pass High,DL,T2,5,2,Other fly,Erigeron speciosus,Diptera
+7/26/22,Ohio Pass High,CA,T2,5,3,Other fly,Potentilla pulcherrima,Diptera
+7/26/22,Ohio Pass High,DL,T3,5,3,Syrphidae,Erigeron speciosus,Diptera
+7/27/22,Virginia Basin,DL,P1,1,1,Syrphidae,Potentilla pulcherrima,Diptera
+7/27/22,Virginia Basin,MMC,P3,1,1,Other fly,Senecio crassulus,Diptera
+7/27/22,Virginia Basin,CA,P7,1,1,Syrphidae,Potentilla pulcherrima,Diptera
+7/27/22,Virginia Basin,CA,P7,1,1,Syrphidae,Potentilla pulcherrima,Diptera
+7/27/22,Virginia Basin,CA,P7,1,1,Bombyliidae,Linum lewisii,Diptera
+7/27/22,Virginia Basin,DL,P1,2,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/27/22,Virginia Basin,DL,P1,2,1,Beetles,Ligusticum porteri,Coleoptera
+7/27/22,Virginia Basin,DL,P3,2,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/27/22,Virginia Basin,MMC,P1,3,1,Bombus frigidus,Helianthella quinquenervis,Hymenoptera
+7/27/22,Virginia Basin,MMC,P1,3,1,Other fly,Potentilla pulcherrima,Diptera
+7/27/22,Virginia Basin,CA,P1,4,1,Other fly,Achillea millefolium,Diptera
+7/27/22,Virginia Basin,CA,P1,4,1,Wasps,Achillea millefolium,Hymenoptera
+7/27/22,Virginia Basin,MMC,P3,4,1,Syrphidae,Potentilla pulcherrima,Diptera
+7/27/22,Virginia Basin,MMC,P3,4,1,Syrphidae,Potentilla pulcherrima,Diptera
+7/27/22,Virginia Basin,MMC,P3,4,1,Other fly,Potentilla pulcherrima,Diptera
+7/27/22,Virginia Basin,MMC,P3,4,1,Small black solitary bee,Potentilla pulcherrima,Hymenoptera
+7/27/22,Virginia Basin,CA,P7,4,1,Bombus frigidus,Helianthella quinquenervis,Hymenoptera
+7/27/22,Virginia Basin,MMC,P1,5,1,Other fly,Linum lewisii,Diptera
+7/27/22,Virginia Basin,MMC,P1,5,1,Other fly,Potentilla pulcherrima,Diptera
+7/27/22,Virginia Basin,MMC,P1,5,1,Other fly,Linum lewisii,Diptera
+7/27/22,Virginia Basin,CA,P7,5,1,Bombus frigidus,Helianthella quinquenervis,Hymenoptera
+8/3/22,Ohio Pass High,MC,T1,1,2,Syrphidae,Erigeron speciosus,Diptera
+8/3/22,Ohio Pass High,MC,T1,1,2,Other fly,Erigeron speciosus,Diptera
+8/3/22,Ohio Pass High,CA,T2,1,2,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+8/3/22,Ohio Pass High,CA,T2,1,2,Bombus sylvicola,Heliomeris multiflora,Hymenoptera
+8/3/22,Ohio Pass High,CA,T2,1,3,Bombus kirbiellus,Hymenoxys hoopesii,Hymenoptera
+8/3/22,Ohio Pass High,MC,T3,1,3,Bombus sylvicola,Heliomeris multiflora,Hymenoptera
+8/3/22,Ohio Pass High,MC,T3,1,3,Small black solitary bee,Erigeron speciosus,Hymenoptera
+8/3/22,Ohio Pass High,MC,T3,1,2,Syrphidae,Erigeron speciosus,Diptera
+8/3/22,Ohio Pass High,CA,T1,2,2,Syrphidae,Erigeron speciosus,Diptera
+8/3/22,Ohio Pass High,MC,T1,2,3,Small black solitary bee,Heliomeris multiflora,Hymenoptera
+8/3/22,Ohio Pass High,MC,T1,2,3,Wasps,Castilleja sulphurea,Hymenoptera
+8/3/22,Ohio Pass High,CA,T1,3,3,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+8/3/22,Ohio Pass High,CA,T1,3,2,Syrphidae,Heliomeris multiflora,Diptera
+8/3/22,Ohio Pass High,CA,T1,3,3,Bombyliidae,Heliomeris multiflora,Diptera
+8/3/22,Ohio Pass High,CA,T1,3,2,Other fly,Heliomeris multiflora,Diptera
+8/3/22,Ohio Pass High,MC,T2,3,2,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+8/3/22,Ohio Pass High,MC,T2,3,2,Other fly,Heliomeris multiflora,Diptera
+8/3/22,Ohio Pass High,MC,T3,3,2,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+8/3/22,Ohio Pass High,CA,T1,4,2,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+8/3/22,Ohio Pass High,CA,T1,4,2,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+8/3/22,Ohio Pass High,CA,T1,4,2,Bombus sylvicola,Castilleja sulphurea,Hymenoptera
+8/3/22,Ohio Pass High,CA,T1,4,3,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+8/3/22,Ohio Pass High,CA,T1,4,3,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+8/3/22,Ohio Pass High,CA,T1,4,3,Bombus sylvicola,Heliomeris multiflora,Hymenoptera
+8/3/22,Ohio Pass High,MC,T2,4,2,Bombus sylvicola,Heliomeris multiflora,Hymenoptera
+8/3/22,Ohio Pass High,MC,T2,4,2,Bombus rufocinctus,Heliomeris multiflora,Hymenoptera
+8/3/22,Ohio Pass High,MC,T2,4,2,Syrphidae,Heliomeris multiflora,Diptera
+8/3/22,Ohio Pass High,MC,T1,5,3,Small black solitary bee,Erigeron speciosus,Hymenoptera
+8/3/22,Ohio Pass High,MC,T2,5,3,Syrphidae,Heliomeris multiflora,Diptera
+8/3/22,Ohio Pass High,CA,T3,5,2,Bombus bifarius,Heliomeris multiflora,Hymenoptera
+8/3/22,Ohio Pass High,MC,T3,5,3,Bombus unknown,Heliomeris multiflora,Hymenoptera
+8/3/22,Ohio Pass High,MC,T3,5,3,Bombus flavifrons,Heliomeris multiflora,Hymenoptera
+8/9/22,Virginia Basin,MC,P3,4,NA,Bombus unknown,Vicia americana,Hymenoptera
+8/9/22,Virginia Basin,MC,P7,4,NA,Small metallic solitary bee,Vicia americana,Hymenoptera
+8/9/22,Virginia Basin,CA,P1,5,NA,Bombus kirbiellus,Vicia americana,Hymenoptera

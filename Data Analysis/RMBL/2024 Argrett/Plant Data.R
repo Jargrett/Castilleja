@@ -25,9 +25,6 @@ library(labdsv)
 library(emmeans)#post-hoc analysis
 library(indicspecies)
 library(plyr)
-library(statmod)
-library(rstatix)
-library(lme4)
 
 EL.23 <- read.csv("Emerald Lake Plant Data - 2023.csv")
 EL.24 <- read.csv("Emerald Lake Plant Data - 2024.csv")

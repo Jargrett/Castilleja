@@ -1,0 +1,161 @@
+﻿year,site,field_plot,pair,plot,block,litter,removal,rich,delta,max
+2023,Emerald Lake ,1A,1,1,1,Mixed,R,15,0,25
+2023,Emerald Lake ,1B,1,2,1,Mixed,C,13,3,25
+2023,Emerald Lake ,2A,2,3,2,Castilleja,C,9,10,25
+2023,Emerald Lake ,2B,2,4,2,Castilleja,R,13,1,25
+2023,Emerald Lake ,3A,3,5,2,Community,R,13,6,25
+2023,Emerald Lake ,3B,3,6,2,Community,C,16,9,25
+2023,Emerald Lake ,4A,4,7,2,Mixed,R,14,0,25
+2023,Emerald Lake ,4B,4,8,2,Mixed,C,16,6,25
+2023,Emerald Lake ,5A,5,9,3,Mixed,C,10,7,25
+2023,Emerald Lake ,5B,5,10,3,Mixed,R,13,-2,25
+2023,Emerald Lake ,6A,6,11,3,Community,R,14,0,25
+2023,Emerald Lake ,6B,6,12,3,Community,C,15,6,25
+2023,Emerald Lake ,7A,7,13,4,Castilleja,C,12,0,25
+2023,Emerald Lake ,7B,7,14,4,Castilleja,R,15,-2,25
+2023,Emerald Lake ,8A,8,15,4,Control,C,10,5,25
+2023,Emerald Lake ,8B,8,16,4,Control,R,12,0,25
+2023,Emerald Lake ,9A,9,17,5,Mixed,C,12,4,25
+2023,Emerald Lake ,9B,9,18,5,Mixed,R,15,-2,25
+2023,Emerald Lake ,10A,10,19,5,Control,C,13,2,25
+2023,Emerald Lake ,10B,10,20,5,Control,R,15,-2,25
+2023,Emerald Lake ,11A,11,21,3,Castilleja,C,16,0,25
+2023,Emerald Lake ,11B,11,22,3,Castilleja,R,10,10,25
+2023,Emerald Lake ,12A,12,23,3,Control,C,13,4,25
+2023,Emerald Lake ,12B,12,24,3,Control,R,13,3,25
+2023,Emerald Lake ,13A,13,25,1,Control,R,14,-2,25
+2023,Emerald Lake ,13B,13,26,1,Control,C,14,4,25
+2023,Emerald Lake ,14A,14,27,1,Community,C,8,0,25
+2023,Emerald Lake ,14B,14,28,1,Community,R,13,0,25
+2023,Emerald Lake ,15A,15,29,1,Castilleja,C,10,3,25
+2023,Emerald Lake ,15B,15,30,1,Castilleja,R,9,-1,25
+2023,Emerald Lake ,16A,16,31,2,Control,C,9,4,25
+2023,Emerald Lake ,16B,16,32,2,Control,R,9,3,25
+2023,Emerald Lake ,17A,17,33,4,Community,R,15,-2,25
+2023,Emerald Lake ,17B,17,34,4,Community,C,9,7,25
+2023,Emerald Lake ,18A,18,35,5,Community,C,10,6,25
+2023,Emerald Lake ,18B,18,36,5,Community,R,8,5,25
+2023,Emerald Lake ,19A,19,37,5,Castilleja,C,9,5,25
+2023,Emerald Lake ,19B,19,38,5,Castilleja,R,11,3,25
+2023,Emerald Lake ,20A,20,39,4,Mixed,C,12,8,25
+2023,Emerald Lake ,20B,20,40,4,Mixed,R,12,0,25
+2025,Emerald Lake ,1A,1,1,1,Mixed,R,15,0,25
+2025,Emerald Lake ,1B,1,2,1,Mixed,C,16,3,25
+2025,Emerald Lake ,2A,2,3,2,Castilleja,C,19,10,25
+2025,Emerald Lake ,2B,2,4,2,Castilleja,R,14,1,25
+2025,Emerald Lake ,3A,3,5,2,Community,R,19,6,25
+2025,Emerald Lake ,3B,3,6,2,Community,C,25,9,25
+2025,Emerald Lake ,4A,4,7,2,Mixed,R,14,0,25
+2025,Emerald Lake ,4B,4,8,2,Mixed,C,22,6,25
+2025,Emerald Lake ,5A,5,9,3,Mixed,C,17,7,25
+2025,Emerald Lake ,5B,5,10,3,Mixed,R,11,-2,25
+2025,Emerald Lake ,6A,6,11,3,Community,R,14,0,25
+2025,Emerald Lake ,6B,6,12,3,Community,C,21,6,25
+2025,Emerald Lake ,7A,7,13,4,Castilleja,C,12,0,25
+2025,Emerald Lake ,7B,7,14,4,Castilleja,R,13,-2,25
+2025,Emerald Lake ,8A,8,15,4,Control,C,15,5,25
+2025,Emerald Lake ,8B,8,16,4,Control,R,12,0,25
+2025,Emerald Lake ,9A,9,17,5,Mixed,C,16,4,25
+2025,Emerald Lake ,9B,9,18,5,Mixed,R,13,-2,25
+2025,Emerald Lake ,10A,10,19,5,Control,C,15,2,25
+2025,Emerald Lake ,10B,10,20,5,Control,R,13,-2,25
+2025,Emerald Lake ,11A,11,21,3,Castilleja,C,16,0,25
+2025,Emerald Lake ,11B,11,22,3,Castilleja,R,20,10,25
+2025,Emerald Lake ,12A,12,23,3,Control,C,17,4,25
+2025,Emerald Lake ,12B,12,24,3,Control,R,16,3,25
+2025,Emerald Lake ,13A,13,25,1,Control,R,12,-2,25
+2025,Emerald Lake ,13B,13,26,1,Control,C,18,4,25
+2025,Emerald Lake ,14A,14,27,1,Community,C,8,0,25
+2025,Emerald Lake ,14B,14,28,1,Community,R,13,0,25
+2025,Emerald Lake ,15A,15,29,1,Castilleja,C,13,3,25
+2025,Emerald Lake ,15B,15,30,1,Castilleja,R,8,-1,25
+2025,Emerald Lake ,16A,16,31,2,Control,C,13,4,25
+2025,Emerald Lake ,16B,16,32,2,Control,R,12,3,25
+2025,Emerald Lake ,17A,17,33,4,Community,R,13,-2,25
+2025,Emerald Lake ,17B,17,34,4,Community,C,16,7,25
+2025,Emerald Lake ,18A,18,35,5,Community,C,16,6,25
+2025,Emerald Lake ,18B,18,36,5,Community,R,13,5,25
+2025,Emerald Lake ,19A,19,37,5,Castilleja,C,14,5,25
+2025,Emerald Lake ,19B,19,38,5,Castilleja,R,14,3,25
+2025,Emerald Lake ,20A,20,39,4,Mixed,C,20,8,25
+2025,Emerald Lake ,20B,20,40,4,Mixed,R,12,0,25
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+2025,Emerald Lake ,1A,1,1,1,Mixed,R,15,,
+2025,Emerald Lake ,1B,1,2,1,Mixed,C,16,,
+2025,Emerald Lake ,2A,2,3,2,Castilleja,C,19,,
+2025,Emerald Lake ,2B,2,4,2,Castilleja,R,14,,
+2025,Emerald Lake ,3A,3,5,2,Community,R,19,,
+2025,Emerald Lake ,3B,3,6,2,Community,C,25,,
+2025,Emerald Lake ,4A,4,7,2,Mixed,R,14,,
+2025,Emerald Lake ,4B,4,8,2,Mixed,C,22,,
+2025,Emerald Lake ,5A,5,9,3,Mixed,C,17,,
+2025,Emerald Lake ,5B,5,10,3,Mixed,R,11,,
+2025,Emerald Lake ,6A,6,11,3,Community,R,14,,
+2025,Emerald Lake ,6B,6,12,3,Community,C,21,,
+2025,Emerald Lake ,7A,7,13,4,Castilleja,C,12,,
+2025,Emerald Lake ,7B,7,14,4,Castilleja,R,13,,
+2025,Emerald Lake ,8A,8,15,4,Control,C,15,,
+2025,Emerald Lake ,8B,8,16,4,Control,R,12,,
+2025,Emerald Lake ,9A,9,17,5,Mixed,C,16,,
+2025,Emerald Lake ,9B,9,18,5,Mixed,R,13,,
+2025,Emerald Lake ,10A,10,19,5,Control,C,15,,
+2025,Emerald Lake ,10B,10,20,5,Control,R,13,,
+2025,Emerald Lake ,11A,11,21,3,Castilleja,C,16,,
+2025,Emerald Lake ,11B,11,22,3,Castilleja,R,20,,
+2025,Emerald Lake ,12A,12,23,3,Control,C,17,,
+2025,Emerald Lake ,12B,12,24,3,Control,R,16,,
+2025,Emerald Lake ,13A,13,25,1,Control,R,12,,
+2025,Emerald Lake ,13B,13,26,1,Control,C,18,,
+2025,Emerald Lake ,14A,14,27,1,Community,C,8,,
+2025,Emerald Lake ,14B,14,28,1,Community,R,13,,
+2025,Emerald Lake ,15A,15,29,1,Castilleja,C,13,,
+2025,Emerald Lake ,15B,15,30,1,Castilleja,R,8,,
+2025,Emerald Lake ,16A,16,31,2,Control,C,13,,
+2025,Emerald Lake ,16B,16,32,2,Control,R,12,,
+2025,Emerald Lake ,17A,17,33,4,Community,R,13,,
+2025,Emerald Lake ,17B,17,34,4,Community,C,16,,
+2025,Emerald Lake ,18A,18,35,5,Community,C,16,,
+2025,Emerald Lake ,18B,18,36,5,Community,R,13,,
+2025,Emerald Lake ,19A,19,37,5,Castilleja,C,14,,
+2025,Emerald Lake ,19B,19,38,5,Castilleja,R,14,,
+2025,Emerald Lake ,20A,20,39,4,Mixed,C,20,,
+2025,Emerald Lake ,20B,20,40,4,Mixed,R,12,,
