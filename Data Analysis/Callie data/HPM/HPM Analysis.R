@@ -230,7 +230,7 @@ ag.bud <- flower %>%
 #SLA
 ag.sla <- agalinis.sla %>% 
   group_by(treatment, type) %>% 
-  dplyr::summarise(mean= mean(sla),
+  dplyr::summarise(mean = mean(sla),
                    se = sd(sla)/sqrt(n()))
 
 #Heterotheca Final time point calculations

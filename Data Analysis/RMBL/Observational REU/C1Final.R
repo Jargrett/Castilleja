@@ -17,6 +17,7 @@ castilleja.cover <- read.csv("castilleja cover complete.csv")
 castilleja.cover$castilleja[castilleja.cover$castilleja == "Control"] <- "Absent"
 castilleja.cover$castilleja[castilleja.cover$castilleja == "Castilleja"] <- "Present"
 castilleja.cover <- as.data.frame(unclass(castilleja.cover),stringsAsFactors=TRUE)
+
 cover.overview <- read.csv("average cover.csv")
 cover.overview <- as.data.frame(unclass(cover.overview),stringsAsFactors=TRUE)
 castilleja.cover$year = as.factor(castilleja.cover$year)
@@ -153,6 +154,7 @@ ordiplot(nmds, type="text", display="sites")
 nmds.scores <- as.data.frame(vegan::scores(nmds))
 
 NMDS <- cbind(species.env,nmds.scores) #final dataset
+saveRDS(NMDS,"NMDS.rds")
 
 perm <- adonis2(dist ~ castilleja*species + castilleja*year + castilleja*site, data = NMDS, permutations=9999)
 perm
@@ -293,11 +295,12 @@ cacr.nn$year <- factor(cacr.nn$year)
 
 emerald.nn <- filter(case.nn, site == "Emerald Lake")
 emerald.lm <- lm(NN_freq ~ rel_abund_cover, data = emerald.nn)
-
+summary(emerald.lm)
 
 emerald.predict <- as.data.frame(predict(emerald.lm, newdata = emerald.nn, interval = "prediction", level = 0.95))
 
 EL.nn <- cbind(emerald.nn, emerald.predict)
+saveRDS(EL.nn,"EL Nearest Neighbor.rds")
 
 avery.nn <- filter(case.nn, site == "Avery")
 avery.lm <- lm(NN_freq ~ rel_abund_cover, data = avery.nn)
@@ -305,7 +308,8 @@ summary(avery.lm)
 
 avery.predict <- as.data.frame(predict(avery.lm, newdata = avery.nn, interval = "prediction", level = 0.95))
 
-AO.nn <- cbind(avery.nn, avery.predict)
+AP.nn <- cbind(avery.nn, avery.predict)
+saveRDS(AP.nn,"AP Nearest Neighbor.rds")
 
 copper.nn <- filter(case.nn, site == "Copper Creek")
 copper.lm <- lm(NN_freq ~ rel_abund_cover, data = copper.nn)
@@ -314,6 +318,7 @@ summary(copper.lm)
 copper.predict <- as.data.frame(predict(copper.lm, newdata = copper.nn, interval = "prediction", level = 0.95))
 
 CC.nn <- cbind(copper.nn, copper.predict)
+saveRDS(CC.nn,"CC Nearest Neighbor.rds")
 
 emerald.nearest <- ggplot(EL.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
@@ -332,7 +337,7 @@ emerald.nearest <- ggplot(EL.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   theme(plot.title = element_text(hjust = 0.92, vjust= -0.12))
 emerald.nearest
 
-avery.nearest <- ggplot(AO.nn, aes(x = rel_abund_cover, y = NN_freq)) +
+avery.nearest <- ggplot(AP.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
   geom_point(aes(color = year, shape = year), size = 2.3) +
   scale_color_manual( values=c("#e07a5f", "#3d405b")) +
@@ -377,6 +382,7 @@ summary(johnson.lm)
 johnson.predict <- as.data.frame(predict(johnson.lm, newdata = johnson.nn, interval = "prediction", level = 0.95))
 
 JH.nn <- cbind(johnson.nn, johnson.predict)
+saveRDS(JH.nn,"JH Nearest Neighbor.rds")
 
 deer.nn <- filter(cali.nn, site == "Deer Creek")
 deer.lm <- lm(NN_freq ~ rel_abund_cover, data = deer.nn)
@@ -385,6 +391,7 @@ summary(deer.lm)
 deer.predict <- as.data.frame(predict(deer.lm, newdata = deer.nn, interval = "prediction", level = 0.95))
 
 DC.nn <- cbind(deer.nn, deer.predict)
+saveRDS(DC.nn,"DC Nearest Neighbor.rds")
 
 deercreek.nearest <- ggplot(DC.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 
@@ -433,6 +440,7 @@ summary(almont.lm)
 almont.predict <- as.data.frame(predict(almont.lm, newdata = cacr.nn, interval = "prediction", level = 0.95))
 
 AL.nn <- cbind(cacr.nn, almont.predict)
+saveRDS(AL.nn,"AL Nearest Neighbor.rds")
 
 almont.nearest <- ggplot(AL.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_smooth(method=lm , color="darkred", fill = "cornsilk3", se=TRUE) + 

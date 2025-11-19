@@ -1,0 +1,145 @@
+bites,replicate_id,type,treatment,cross-treatment_group,root_type,pot_id,slide_id,views,blue,hyphae,extraradical,vesicle,arbuscule,spore,dse,microsclerotia,col_total,col_hyphae,col_extra,col_vesicle,col_arb,col_spore,col_dse,col_microsclerotia
+32,6,host,innoculated,2,host,6ai,113,49,6,3,1,0,0,0,0,0,0.122,0.061,0.020,0.000,0.000,0.000,0.000,0.000
+20,4,host,innoculated,2,host,4ai,155,67,30,21,2,3,0,4,0,0,0.448,0.313,0.030,0.045,0.000,0.060,0.000,0.000
+2,1,host,innoculated,2,host,1ai,38,72,43,29,9,2,0,0,0,0,0.597,0.403,0.125,0.028,0.000,0.000,0.000,0.000
+26,5,host,innoculated,2,host,5ai,79,78,18,12,2,0,0,0,0,0,0.231,0.154,0.026,0.000,0.000,0.000,0.000,0.000
+8,2,host,innoculated,2,host,2ai,33,86,33,26,6,1,0,1,0,0,0.384,0.302,0.070,0.012,0.000,0.012,0.000,0.000
+14,3,host,innoculated,2,host,3ai,149,94,18,13,5,0,0,0,0,0,0.191,0.138,0.053,0.000,0.000,0.000,0.000,0.000
+62,11,host,innoculated,2,host,11ai,29,100,41,35,6,0,0,0,0,0,0.410,0.350,0.060,0.000,0.000,0.000,0.000,0.000
+38,7,host,innoculated,2,host,7ai,115,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+44,8,host,innoculated,2,host,8ai,75,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+50,9,host,innoculated,2,host,9ai,159,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+56,10,host,innoculated,2,host,10ai,28,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+68,12,host,innoculated,2,host,12ai,70,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+31,6,host,sterilized,1,host,6as,50,65,9,5,0,0,0,1,0,0,0.138,0.077,0.000,0.000,0.000,0.015,0.000,0.000
+37,7,host,sterilized,1,host,7as,63,76,6,1,1,0,0,0,2,0,0.079,0.013,0.013,0.000,0.000,0.000,0.026,0.000
+49,9,host,sterilized,1,host,9as,25,79,8,4,1,0,0,0,0,0,0.101,0.051,0.013,0.000,0.000,0.000,0.000,0.000
+19,4,host,sterilized,1,host,4as,144,81,1,0,0,1,0,0,0,0,0.012,0.000,0.000,0.012,0.000,0.000,0.000,0.000
+25,5,host,sterilized,1,host,5as,90,81,3,0,0,1,0,0,0,0,0.037,0.000,0.000,0.012,0.000,0.000,0.000,0.000
+13,3,host,sterilized,1,host,3as,48,81,7,5,2,0,0,0,1,0,0.086,0.062,0.025,0.000,0.000,0.000,0.012,0.000
+7,2,host,sterilized,1,host,2as,47,88,1,1,0,0,0,0,0,0,0.011,0.011,0.000,0.000,0.000,0.000,0.000,0.000
+1,1,host,sterilized,1,host,1as,96,100,27,9,13,0,0,0,0,0,0.270,0.090,0.130,0.000,0.000,0.000,0.000,0.000
+43,8,host,sterilized,1,host,8as,81,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+55,10,host,sterilized,1,host,10as,108,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+61,11,host,sterilized,1,host,11as,58,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+67,12,host,sterilized,1,host,12as,34,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+10,2,host-parasite,innoculated,4,host,2bi,130,56,18,13,0,4,0,0,0,1,0.321,0.232,0.000,0.071,0.000,0.000,0.000,0.018
+40,7,host-parasite,innoculated,4,host,7bi,82,84,19,10,2,7,0,0,0,0,0.226,0.119,0.024,0.083,0.000,0.000,0.000,0.000
+46,8,host-parasite,innoculated,4,host,8bi,53,85,4,4,0,0,0,0,0,0,0.047,0.047,0.000,0.000,0.000,0.000,0.000,0.000
+34,6,host-parasite,innoculated,4,host,6bi,27,100,21,16,1,2,1,1,0,0,0.210,0.160,0.010,0.020,0.010,0.010,0.000,0.000
+28,5,host-parasite,innoculated,4,host,5bi,116,100,26,13,7,6,0,0,0,0,0.260,0.130,0.070,0.060,0.000,0.000,0.000,0.000
+52,9,host-parasite,innoculated,4,host,9bi,109,100,45,31,5,9,0,0,0,0,0.450,0.310,0.050,0.090,0.000,0.000,0.000,0.000
+16,3,host-parasite,innoculated,4,host,3bi,92,100,46,36,7,8,0,0,0,0,0.460,0.360,0.070,0.080,0.000,0.000,0.000,0.000
+4,1,host-parasite,innoculated,4,host,1bi,126,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+22,4,host-parasite,innoculated,4,host,4bi,111,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+58,10,host-parasite,innoculated,4,host,10bi,71,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+64,11,host-parasite,innoculated,4,host,11bi,23,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+70,12,host-parasite,innoculated,4,host,12bi,141,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+52,9,host-parasite,innoculated,4,host parasite,9bi,46,70,33,25,4,12,0,0,0,1,0.471,0.357,0.057,0.171,0.000,0.000,0.000,0.014
+10,2,host-parasite,innoculated,4,host parasite,2bi,39,77,18,14,2,2,0,0,0,0,0.234,0.182,0.026,0.026,0.000,0.000,0.000,0.000
+10,2,host-parasite,innoculated,4,host parasite,2bi,80,80,21,16,0,5,0,0,0,0,0.263,0.200,0.000,0.063,0.000,0.000,0.000,0.000
+16,3,host-parasite,innoculated,4,host parasite,3bi,117,100,28,10,15,1,1,0,0,0,0.280,0.100,0.150,0.010,0.010,0.000,0.000,0.000
+46,8,host-parasite,innoculated,4,host parasite,8bi,84,100,31,20,9,7,0,0,0,0,0.310,0.200,0.090,0.070,0.000,0.000,0.000,0.000
+28,5,host-parasite,innoculated,4,host parasite,5bi,94,100,34,21,7,5,0,0,0,1,0.340,0.210,0.070,0.050,0.000,0.000,0.000,0.010
+16,3,host-parasite,innoculated,4,host parasite,3bi,151,100,38,29,7,2,1,0,0,1,0.380,0.290,0.070,0.020,0.010,0.000,0.000,0.010
+40,7,host-parasite,innoculated,4,host parasite,7bi,40,100,39,25,10,2,0,1,0,0,0.390,0.250,0.100,0.020,0.000,0.010,0.000,0.000
+52,9,host-parasite,innoculated,4,host parasite,9bi,93,100,40,28,8,5,0,0,0,0,0.400,0.280,0.080,0.050,0.000,0.000,0.000,0.000
+4,1,host-parasite,innoculated,4,host parasite,1bi,104,100,41,30,14,4,0,0,0,0,0.410,0.300,0.140,0.040,0.000,0.000,0.000,0.000
+40,7,host-parasite,innoculated,4,host parasite,7bi,140,100,43,24,19,6,0,1,0,0,0.430,0.240,0.190,0.060,0.000,0.010,0.000,0.000
+4,1,host-parasite,innoculated,4,host parasite,1bi,72,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+22,4,host-parasite,innoculated,4,host parasite,4bi,118,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+22,4,host-parasite,innoculated,4,host parasite,4bi,99,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+28,5,host-parasite,innoculated,4,host parasite,5bi,66,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+34,6,host-parasite,innoculated,4,host parasite,6bi,parasite died,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+34,6,host-parasite,innoculated,4,host parasite,6bi,parasite died,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+46,8,host-parasite,innoculated,4,host parasite,8bi,54,100,66,55,13,10,0,0,,1,0.660,0.550,0.130,0.100,0.000,0.000,0.000,0.010
+58,10,host-parasite,innoculated,4,host parasite,10bi,64,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+58,10,host-parasite,innoculated,4,host parasite,10bi,156,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+64,11,host-parasite,innoculated,4,host parasite,11bi,86,100,45,28,24,0,1,0,0,2,0.450,0.280,0.240,0.000,0.010,0.000,0.000,0.020
+64,11,host-parasite,innoculated,4,host parasite,11bi,129,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+70,12,host-parasite,innoculated,4,host parasite,12bi,102,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+70,12,host-parasite,innoculated,4,host parasite,12bi,43,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+22,4,host-parasite,innoculated,4,parasite,4bi,0,65,6,2,1,0,0,0,0,0,0.092,0.031,0.015,0.000,0.000,0.000,0.000,0.000
+4,1,host-parasite,innoculated,4,parasite,1bi,127,73,5,3,3,0,0,0,0,0,0.068,0.041,0.041,0.000,0.000,0.000,0.000,0.000
+28,5,host-parasite,innoculated,4,parasite,5bi,125,100,5,1,0,1,0,0,0,0,0.050,0.010,0.000,0.010,0.000,0.000,0.000,0.000
+16,3,host-parasite,innoculated,4,parasite,3bi,89,100,10,2,3,0,0,0,0,0,0.100,0.020,0.030,0.000,0.000,0.000,0.000,0.000
+10,2,host-parasite,innoculated,4,parasite,2bi,142,100,37,29,6,3,0,0,0,0,0.370,0.290,0.060,0.030,0.000,0.000,0.000,0.000
+34,6,host-parasite,innoculated,4,parasite,6bi,parasite died,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+40,7,host-parasite,innoculated,4,parasite,7bi,44,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+46,8,host-parasite,innoculated,4,parasite,8bi,139,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+52,9,host-parasite,innoculated,4,parasite,9bi,59,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+58,10,host-parasite,innoculated,4,parasite,10bi,41,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+64,11,host-parasite,innoculated,4,parasite,11bi,112,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+70,12,host-parasite,innoculated,4,parasite,12bi,91,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+3,1,host-parasite,sterilized,3,host,1bs,157,54,3,2,0,0,0,0,0,0,0.056,0.037,0.000,0.000,0.000,0.000,0.000,0.000
+45,8,host-parasite,sterilized,3,host,8bs,69,71,4,2,0,0,0,0,0,0,0.056,0.028,0.000,0.000,0.000,0.000,0.000,0.000
+39,7,host-parasite,sterilized,3,host,7bs,32,71,10,6,4,0,0,0,0,0,0.141,0.085,0.056,0.000,0.000,0.000,0.000,0.000
+57,10,host-parasite,sterilized,3,host,10bs,52,89,20,12,1,1,0,0,0,2,0.225,0.135,0.011,0.011,0.000,0.000,0.000,0.022
+33,6,host-parasite,sterilized,3,host,6bs,65,97,16,4,5,0,1,0,0,0,0.165,0.041,0.052,0.000,0.010,0.000,0.000,0.000
+15,3,host-parasite,sterilized,3,host,3bs,36,98,10,4,4,0,0,0,0,1,0.102,0.041,0.041,0.000,0.000,0.000,0.000,0.010
+51,9,host-parasite,sterilized,3,host,9bs,21,100,7,3,1,1,0,0,0,0,0.070,0.030,0.010,0.010,0.000,0.000,0.000,0.000
+27,5,host-parasite,sterilized,3,host,5bs,161,100,18,0,10,0,0,0,0,0,0.180,0.000,0.100,0.000,0.000,0.000,0.000,0.000
+9,2,host-parasite,sterilized,3,host,2bs,57,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+21,4,host-parasite,sterilized,3,host,4bs,162,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+63,11,host-parasite,sterilized,3,host,11bs,143,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+69,12,host-parasite,sterilized,3,host,12bs,20,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+21,4,host-parasite,sterilized,3,host parasite,4bs,158,67,10,6,5,0,0,0,1,0,0.149,0.090,0.075,0.000,0.000,0.000,0.015,0.000
+39,7,host-parasite,sterilized,3,host parasite,7bs,45,69,15,8,4,0,0,0,1,,0.217,0.116,0.058,0.000,0.000,0.000,0.014,0.000
+39,7,host-parasite,sterilized,3,host parasite,7bs,30,81,31,9,9,1,0,0,0,0,0.383,0.111,0.111,0.012,0.000,0.000,0.000,0.000
+15,3,host-parasite,sterilized,3,host parasite,3bs,60,90,27,17,7,2,0,0,0,0,0.300,0.189,0.078,0.022,0.000,0.000,0.000,0.000
+33,6,host-parasite,sterilized,3,host parasite,6bs,164,100,5,2,3,0,0,0,0,0,0.050,0.020,0.030,0.000,0.000,0.000,0.000,0.000
+45,8,host-parasite,sterilized,3,host parasite,8bs,24,100,7,3,2,1,0,0,0,0,0.070,0.030,0.020,0.010,0.000,0.000,0.000,0.000
+9,2,host-parasite,sterilized,3,host parasite,2bs,57,100,8,3,3,0,0,0,0,0,0.080,0.030,0.030,0.000,0.000,0.000,0.000,0.000
+9,2,host-parasite,sterilized,3,host parasite,2bs,148,100,10,2,6,0,0,0,0,0,0.100,0.020,0.060,0.000,0.000,0.000,0.000,0.000
+15,3,host-parasite,sterilized,3,host parasite,3bs,153,100,12,2,4,0,0,0,0,0,0.120,0.020,0.040,0.000,0.000,0.000,0.000,0.000
+33,6,host-parasite,sterilized,3,host parasite,6bs,74,100,18,11,5,0,0,0,0,0,0.180,0.110,0.050,0.000,0.000,0.000,0.000,0.000
+27,5,host-parasite,sterilized,3,host parasite,5bs,97,100,20,7,8,1,0,0,0,0,0.200,0.070,0.080,0.010,0.000,0.000,0.000,0.000
+3,1,host-parasite,sterilized,3,host parasite,1bs,62,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+3,1,host-parasite,sterilized,3,host parasite,1bs,98,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+21,4,host-parasite,sterilized,3,host parasite,4bs,147,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+27,5,host-parasite,sterilized,3,host parasite,5bs,150,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+45,8,host-parasite,sterilized,3,host parasite,8bs,110,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+51,9,host-parasite,sterilized,3,host parasite,9bs,95,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+51,9,host-parasite,sterilized,3,host parasite,9bs,77,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+57,10,host-parasite,sterilized,3,host parasite,10bs,78,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+57,10,host-parasite,sterilized,3,host parasite,10bs,146,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+63,11,host-parasite,sterilized,3,host parasite,11bs,131,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+63,11,host-parasite,sterilized,3,host parasite,11bs,132,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+69,12,host-parasite,sterilized,3,host parasite,12bs,55,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+69,12,host-parasite,sterilized,3,host parasite,12bs,124,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+33,6,host-parasite,sterilized,3,parasite,6bs,154,72,0,0,0,0,0,0,0,0,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000
+15,3,host-parasite,sterilized,3,parasite,3bs,122,100,2,0,0,0,0,0,0,0,0.020,0.000,0.000,0.000,0.000,0.000,0.000,0.000
+21,4,host-parasite,sterilized,3,parasite,4bs,133,100,5,2,0,0,0,0,0,1,0.050,0.020,0.000,0.000,0.000,0.000,0.000,0.010
+27,5,host-parasite,sterilized,3,parasite,5bs,145,100,7,0,0,0,0,0,0,0,0.070,0.000,0.000,0.000,0.000,0.000,0.000,0.000
+57,10,host-parasite,sterilized,3,parasite,10bs,0,100,9,1,2,0,0,0,0,,0.090,0.010,0.020,0.000,0.000,0.000,0.000,0.000
+3,1,host-parasite,sterilized,3,parasite,1bs,68,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+9,2,host-parasite,sterilized,3,parasite,2bs,152,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+39,7,host-parasite,sterilized,3,parasite,7bs,136,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+45,8,host-parasite,sterilized,3,parasite,8bs,101,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+51,9,host-parasite,sterilized,3,parasite,9bs,121,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+63,11,host-parasite,sterilized,3,parasite,11bs,134,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+69,12,host-parasite,sterilized,3,parasite,12bs,26,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+36,6,parasite,innoculated,6,parasite,6ci,61,78,1,0,0,0,0,0,0,1,0.013,0.000,0.000,0.000,0.000,0.000,0.000,0.013
+6,1,parasite,innoculated,6,parasite,1ci,49,100,0,0,0,0,0,0,0,0,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000
+12,2,parasite,innoculated,6,parasite,2ci,107,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+18,3,parasite,innoculated,6,parasite,3ci,103,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+24,4,parasite,innoculated,6,parasite,4ci,76,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+30,5,parasite,innoculated,6,parasite,5ci,88,82,0,0,0,0,0,0,0,0,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000
+42,7,parasite,innoculated,6,parasite,7ci,83,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+48,8,parasite,innoculated,6,parasite,8ci,119,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+54,9,parasite,innoculated,6,parasite,9ci,135,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+60,10,parasite,innoculated,6,parasite,10ci,106,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+66,11,parasite,innoculated,6,parasite,11ci,87,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+72,12,parasite,innoculated,6,parasite,12ci,120,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+35,6,parasite,sterilized,5,parasite,6cs,100,100,1,0,0,1,0,0,0,0,0.010,0.000,0.000,0.010,0.000,0.000,0.000,0.000
+5,1,parasite,sterilized,5,parasite,1cs,123,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+11,2,parasite,sterilized,5,parasite,2cs,138,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+17,3,parasite,sterilized,5,parasite,3cs,51,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+23,4,parasite,sterilized,5,parasite,4cs,163,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+29,5,parasite,sterilized,5,parasite,5cs,67,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+41,7,parasite,sterilized,5,parasite,7cs,105,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+47,8,parasite,sterilized,5,parasite,8cs,42,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+53,9,parasite,sterilized,5,parasite,9cs,56,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+59,10,parasite,sterilized,5,parasite,10cs,31,75,0,0,0,0,0,0,4,5,0.000,0.000,0.000,0.000,0.000,0.000,0.053,0.067
+65,11,parasite,sterilized,5,parasite,11cs,85,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!
+71,12,parasite,sterilized,5,parasite,12cs,73,,,,,,,,,,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!,#DIV/0!

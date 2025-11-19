@@ -1,3 +1,4 @@
+setwd("~/Desktop/Castilleja/Data Analysis/RMBL/Emerald Lake/Plant Data")
 #---------------Data importing, cleaning, and resctructuring---------------#
 library(tidyverse)#for data wrangling and restructuring
 library(magrittr)#for data wrangling and restructuring
@@ -40,6 +41,11 @@ emerald.23.matrix <- matrify(emerald.23)
 emerald.24.matrix <- matrify(emerald.24)
 emerald.25.matrix <- matrify(emerald.25)
 
+m = list(emerald.23.matrix, emerald.24.matrix, emerald.25.matrix)
+emerald.matrix <- bind_rows(m)
+emerald.matrix %<>%  replace(is.na(.), 0)
+
+
 #-------------------------Multivariate analysis-------------------------#
 library(ggrepel)
 library(vegan)
@@ -49,30 +55,31 @@ setwd("~/Desktop/Castilleja/Data Analysis/RMBL/Emerald Lake")
 plot <- read.csv("Emerald Lake Plot Data - Info.csv") #importing metadata
 setwd("~/Desktop/Castilleja/Data Analysis/RMBL/Emerald Lake/Plant Data")
 #calculate distance matrix
-dist <-vegdist(emerald.23.matrix, method="bray")
+dist.23 <-vegdist(emerald.23.matrix, method="bray")
+beta.23 <- betadisper(dist.23, plot$removal)
+dist.25 <-vegdist(emerald.25.matrix, method="bray")
+beta.25 <- betadisper(dist.25, plot$removal)
 set.seed(20)
+
 #Run NMDS on distance matrix
-nmds <- metaMDS(dist, distance="bray", #use bray-curtis distance
+nmds.23 <- metaMDS(dist.23, distance="bray", #use bray-curtis distance
                 k=3, #2 dimensions
                 try=500) #for publication I recommend 500)
+nmds.23#stress value 0.14 which is below .2 so we need to investigate
 
 
-nmds#stress value 0.15 which is below .2 so we need to investigate
+ordiplot(nmds.23, type="text", display="sites")
 
-ordiplot(nmds, type="text", display="sites")
-
-nmds.scores <- as.data.frame(vegan::scores(nmds))
+nmds.scores <- as.data.frame(vegan::scores(nmds.23))
 
 NMDS <- cbind(plot,nmds.scores) #final dataset
 
-
-perm <- adonis2(dist ~ litter*removal, data = NMDS, permutations=9999)
+perm <- adonis2(dist ~ removal*litter, data = NMDS, permutations=9999)
 perm
 
-
 ggplot(NMDS, aes(NMDS1, NMDS2)) +
-  geom_point(aes(color=litter , shape=removal), size = 3, alpha = 0.8) +
-  scale_color_manual( values=c("#B308F6", "#35978f","#E1BE6A","#000000")) +
+  geom_point(aes(color=removal , shape = litter), size = 2.2, alpha = 0.8) +
+  scale_color_manual(values=c("#dda15e", "#606c38")) +
   coord_equal() +
   theme_bw()
 
