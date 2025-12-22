@@ -39,7 +39,7 @@ site <- hline(site, i = 6, border = thin)
 # site <- set_caption(site, site.title)
 site
 
-#Create Site Data Table
+#Create indicator Data Table
 ind.main <-  read.csv("Processed Data/Castilleja Observational Project Tables - Indicator.csv",check.names = FALSE)
 ind <- flextable(ind.main) %>% 
   italic(j = "Castilleja species", part = "body") %>% 

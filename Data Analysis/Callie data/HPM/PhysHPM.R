@@ -90,6 +90,7 @@ sto.graph <- ggplot(sto.phys, aes(x = plant_id, y = mean, color = plant_id)) +
   facet_wrap(~treatment) +
   ylim(0,1)
 
+
 sto.graph
 
 phys.plots <- ggarrange(ass.graph, trans.graph, sto.graph,

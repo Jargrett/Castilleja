@@ -310,9 +310,7 @@ year,date,site,fieldplot,pair,plot,block,collection,litter,removal,family,genus,
 2023,8/1/23,Emerald Lake,10B,10,20,5,Post,Control,R,Onagraceae,Chamaenuerion,angustifolium,CHAN,forb,perennial,1,1,0,0.01
 2023,8/1/23,Emerald Lake,10B,10,20,5,Post,Control,R,Asteraceae,Erigeron,coulteri,ERCO,forb,perennial,1,2,0,0.01
 2023,8/1/23,Emerald Lake,10B,10,20,5,Post,Control,R,Liliaceae,Erythronium,grandiflorum,ERGR,forb,perennial,2,4,0,0.02
-2023,8/1/23,Emerald Lake,10B,10,20,5,Post,Control,R,Liliaceae,Erythronium,grandiflorum,ERGR,forb,perennial,2,4,0,0.02
 2023,8/1/23,Emerald Lake,10B,10,20,5,Post,Control,R,Rosaceae,Fragaria,virginiana,FRVI,forb,perennial,1,5,0,0.01
-2023,8/1/23,Emerald Lake,10B,10,20,5,Post,Control,R,Asteraceae,Hymenoxys,hoopesii,HYHO,forb,perennial,0.5,1,0,0.005
 2023,8/1/23,Emerald Lake,10B,10,20,5,Post,Control,R,Asteraceae,Hymenoxys,hoopesii,HYHO,forb,perennial,1.5,1,0,0.015
 2023,8/1/23,Emerald Lake,10B,10,20,5,Post,Control,R,Rosaceae,Potentilla,gracilis,POGR,forb,perennial,15,8,0,0.15
 2023,8/1/23,Emerald Lake,10B,10,20,5,Post,Control,R,Crassulaceae,Rhodiola,integrifolia,RHIN,forb,perennial,2,5,0,0.02
@@ -419,7 +417,6 @@ year,date,site,fieldplot,pair,plot,block,collection,litter,removal,family,genus,
 2023,8/1/23,Emerald Lake,14A,14,27,1,Post,Community,C,,,,bare,environmental,,60,0,0,0.6
 2023,8/1/23,Emerald Lake,14A,14,27,1,Post,Community,C,Asteraceae,Erigeron,speciosus,ERSP,forb,perennial,1,1,0,0.01
 2023,8/1/23,Emerald Lake,14A,14,27,1,Post,Community,C,Geraniaceae,Geranium,richardsonii,GERI,forb,perennial,1,1,0,0.01
-2023,8/1/23,Emerald Lake,14A,14,27,1,Post,Community,C,Asteraceae,Hymenoxys,hoopesii,HYHO,forb,perennial,4,5,0,0.04
 2023,8/1/23,Emerald Lake,14A,14,27,1,Post,Community,C,Asteraceae,Hymenoxys,hoopesii,HYHO,forb,perennial,5,3,1,0.05
 2023,8/1/23,Emerald Lake,14A,14,27,1,Post,Community,C,Apiaceae,Ligusticum,porteri,LIPO,forb,perennial,3,2,0,0.03
 2023,8/1/23,Emerald Lake,14A,14,27,1,Post,Community,C,Rosaceae,Potentilla,gracilis,POGR,forb,perennial,1,1,0,0.01
@@ -445,7 +442,6 @@ year,date,site,fieldplot,pair,plot,block,collection,litter,removal,family,genus,
 2023,8/1/23,Emerald Lake,14B,14,28,1,Post,Community,R,Grossulariaceae,Ribes,montigenum,RIMO,shrub,perennial,30,1,0,0.3
 2023,8/1/23,Emerald Lake,15A,15,29,1,Post,Castilleja,C,,,,bare,environmental,,70,0,0,0.7
 2023,8/1/23,Emerald Lake,15A,15,29,1,Post,Castilleja,C,Primulaceae,Androsace,septentrionalis,ANSE,forb,annual,0.4,1,0,0.004
-2023,8/1/23,Emerald Lake,15A,15,29,1,Post,Castilleja,C,Liliaceae,Erythronium,grandiflorum,ERGR,forb,perennial,1,3,0,0.01
 2023,8/1/23,Emerald Lake,15A,15,29,1,Post,Castilleja,C,Liliaceae,Erythronium,grandiflorum,ERGR,forb,perennial,2,4,1,0.02
 2023,8/1/23,Emerald Lake,15A,15,29,1,Post,Castilleja,C,Geraniaceae,Geranium,richardsonii,GERI,forb,perennial,1,1,0,0.01
 2023,8/1/23,Emerald Lake,15A,15,29,1,Post,Castilleja,C,Asteraceae,Helianthella,quinquenervis,HEQU,forb,perennial,4,2,0,0.04

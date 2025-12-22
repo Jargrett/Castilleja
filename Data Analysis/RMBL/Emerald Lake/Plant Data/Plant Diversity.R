@@ -67,7 +67,7 @@ rich.25 <- specnumber(emerald.25.matrix)
 even.pre <- diversity(emerald.pre.matrix, index = "shannon") / log(specnumber(emerald.pre.matrix))
 even.23 <- diversity(emerald.23.matrix, index = "shannon") / log(specnumber(emerald.23.matrix))
 even.24 <- diversity(emerald.24.matrix, index = "shannon") / log(specnumber(emerald.24.matrix))
-even.25 <- diversity(emerald.25.matrix, index = "shannon") / log(specnumber(emerald.25.matrix)) 
+even.25 <- diversity(emerald.25.matrix, index = "shannon") / log(specnumber(emerald.25.matrix))
 
 #---------------Combining results and exporting---------------#
 setwd("~/Desktop/Castilleja/Data Analysis/RMBL/Emerald Lake")
@@ -117,7 +117,7 @@ div.lmm <- lmer(delta_rich ~ litter*removal + (1|block) + (1|pair), data = delta
 summary(div.lmm)
 Anova(div.lmm)
 emmip(div.lmm, litter~removal)
-emmeans(div.lmm, pairwise ~ removal|litter)
+emmeans(div.lmm, pairwise ~ litter|removal)
 
 max.div <- diversity %>% 
   filter(year != "2024")%>% 

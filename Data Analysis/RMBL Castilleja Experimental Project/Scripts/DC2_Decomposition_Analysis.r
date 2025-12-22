@@ -1,0 +1,97 @@
+setwd("~/Desktop/Castilleja/Data Analysis/RMBL Castilleja Experimental Project")
+#----------Data import, cleaning, and restructuring----------#
+library(tidyverse)#for data wrangling and restructuring
+library(magrittr)#for data wrangling and restructuring
+library(plyr)#for data wrangling and restructuring
+library(conflicted)#helps reslove errors for similar functions between packages
+library(car)
+library(litterfitter)#for k-curve fitting
+
+
+
+#load-in the data
+within1 <- read.csv("Raw Data/Litter Decomposition - 2024 Within Season.csv")
+within2 <- read.csv("Raw Data/Litter Decomposition - 2025 Within Season.csv")
+overwinter1 <- read.csv("Raw Data/Litter Decomposition - 2024 Overwinter.csv")
+overwinter2 <- read.csv("Raw Data/Litter Decomposition - 2025 Overwinter.csv")
+year1 <- read.csv("Raw Data/Litter Decomposition - 2024 Full Year.csv")
+year2 <- read.csv("Raw Data/Litter Decomposition - 2025 Full Year.csv")
+twoyear <- read.csv("Raw Data/Litter Decomposition - 2023-2025 Two Year.csv")
+found <- read.csv("Raw Data/Litter Decomposition - Found Bags.csv")
+
+#Data Cleaning and Restructuring
+ within1 %<>% 
+  filter(missing != "Yes") %>% 
+  dplyr::select(-c((missing)))
+
+ within2 %<>% 
+   dplyr::select(-c((missing)))
+ 
+overwinter1 %<>% 
+  filter(missing != "Yes") %>% 
+  dplyr::select(-c((missing))) %>%
+  dplyr::select(-c((redo_coin_litter_dry_weight))) %>% 
+  dplyr::select(-c((diff))) 
+
+overwinter2 %<>% 
+  filter(ups_missing != "yes") %>% 
+  dplyr::select(-c((ups_missing))) %>% 
+  filter(missing != "yes") %>% 
+  dplyr::select(-c((missing)))
+
+year1 %<>% 
+  filter(missing != "Yes") %>%
+  dplyr::select(-c((redo_coin_litter_dry_weight))) %>% 
+  dplyr::select(-c((missing)))
+
+year2 %<>% 
+  filter(missing != "yes") %>% 
+  dplyr::select(-c((missing)))
+
+twoyear %<>% 
+  filter(missing != "yes") %>% 
+  dplyr::select(-c((missing)))
+
+#Combine datasets
+decomp <- rbind.fill(within1, within2 , overwinter1, overwinter2, year1, year2, twoyear)
+decomp <- as.data.frame(unclass(decomp),stringsAsFactors=TRUE)
+#Calculate Mass Remaining and time
+o <- 0.91
+decomp %<>% mutate(mass_remaining = final_dry_weight/initial_dry_weight) %>% 
+  mutate(time = deployment_duration/365) %>% 
+  drop_na(time) %>% 
+  filter(mass_remaining <= o)
+
+decomp.mixed <- filter(decomp, litter == "Mixed")
+decomp.castilleja <- filter(decomp, litter == "Castilleja")
+decomp.community <- filter(decomp, deployment_period == "Community")
+
+
+litter <- fit_litter(time = decomp$time,
+                     mass.remaining = decomp$mass_remaining,
+                     model = "weibull",
+                     iters=5000)
+
+summary(litter)
+plot(litter)
+coef(litter)
+
+
+
+
+mixed.litter <- fit_litter(time = decomp.mixed$time,
+                     mass.remaining = decomp$mass_remaining,
+                     model = "weibull",
+                     iters=5000)
+
+castilleja.litter <- fit_litter(time = decomp.castilleja$time,
+                           mass.remaining = decomp$mass_remaining,
+                           model = "weibull",
+                           iters=1000)
+
+community.litter <- fit_litter(time = decomp.castilleja$time,
+                           mass.remaining = decomp$mass_remaining,
+                           model = "weibull",
+                           iters=1000)
+
+

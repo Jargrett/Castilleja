@@ -1,0 +1,49 @@
+field_pot,pot type,species,height,replicate,light
+H,alone,parasite,2.9,5,ambient 
+H,alone,parasite,2.9,12,ambient 
+H,alone,parasite,5.7,2,ambient 
+H,alone,parasite,5.1,1,ambient 
+H,alone,parasite,4,8,ambient 
+H,alone,parasite,3,7,ambient 
+RH,alone,host,23.1,5,ambient 
+RH,alone,host,11.6,11,ambient 
+RH,alone,host,44,10,ambient 
+RH,alone,host,44.6,8,ambient 
+RH,alone,host,28.8,9,ambient 
+RH,alone,host,18.7,1,ambient 
+HP - H,together,host,14.3,4,ambient 
+HP - H,together,host,6.2,1,ambient 
+HP - H,together,host,20.1,9,ambient 
+HP - H,together,host,17.1,2,ambient 
+HP - H,together,host,18.5,3,ambient 
+HP - H,together,host,4.7,12,ambient 
+HP - P,together,parasite,3.7,4,ambient 
+HP - P,together,parasite,4.3,1,ambient 
+HP - P,together,parasite,2.6,9,ambient 
+HP - P,together,parasite,,2,ambient 
+HP - P,together,parasite,2.5,3,ambient 
+HP - P,together,parasite,2,12,ambient 
+H,alone,parasite,3.7,4,low
+H,alone,parasite,5.3,2,low
+H,alone,parasite,1.8,11,low
+H,alone,parasite,5,3,low
+H,alone,parasite,4.8,10,low
+H,alone,parasite,4.4,9,low
+RH,alone,host,30.3,4,low
+RH,alone,host,35.5,7,low
+RH,alone,host,7.6,12,low
+RH,alone,host,29.8,3,low
+RH,alone,host,23.9,2,low
+RH,alone,host,27.8,6,low
+HP - H,together,host,26.5,8,low
+HP - H,together,host,24.1,5,low
+HP - H,together,host,26.5,10,low
+HP - H,together,host,10.9,7,low
+HP - H,together,host,32.7,6,low
+HP - H,together,host,14.1,4,low
+HP - P,together,parasite,2.6,8,low
+HP - P,together,parasite,1.9,5,low
+HP - P,together,parasite,1.9,10,low
+HP - P,together,parasite,1.5,7,low
+HP - P,together,parasite,4,6,low
+HP - P,together,parasite,2.1,4,low

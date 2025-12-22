@@ -700,7 +700,7 @@ emmip(he.trans.lm, ~ type ~ treatment)
 #Stomotal conductance
 he.sto.lm <- lmer(gsw ~ treatment*type + (1|replicate_id), data = hetero.physiology)
 summary(he.sto.lm)
-Anova(he.sto.lm) 
+Anova(he.sto.lm) #no significance
 emmeans(he.sto.lm, pairwise ~ type|treatment)
 emmip(he.sto.lm, ~ type ~ treatment)
 
@@ -811,6 +811,12 @@ ag.sto.plot <- ggplot(ag.sto.phys, aes(x = treatment, y = mean, color = type)) +
 
 ag.sto.plot
 
+ag.phys.plots <- ggarrange(ag.carb.plot, ag.trans.plot, ag.sto.plot,
+                           labels = c("A", "B","C"), 
+                           nrow = 1,
+                           common.legend = TRUE)
+ag.phys.plots  
+
 he.carb.plot <- ggplot(he.carb.phys, aes(x = treatment, y = mean, color = type)) +
   geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
                 position =  position_dodge(width = 0.5), linewidth = 1, width = 0.09) +
@@ -858,6 +864,12 @@ he.sto.plot <- ggplot(he.sto.phys, aes(x = treatment, y = mean, color = type)) +
   ylim(0,1)
 
 he.sto.plot
+
+he.phys.plots <- ggarrange(he.carb.plot, he.trans.plot, he.sto.plot,
+                        labels = c("A", "B","C"), 
+                        nrow = 1,
+                        common.legend = TRUE)
+he.phys.plots  
 #---------------------HAUSTORIA----------------------#
 
 #Haustoria: import, clean and rename
@@ -873,7 +885,31 @@ haustoria <- as.data.frame(unclass(haustoria),stringsAsFactors=TRUE)
 #Proportion of Haustoria Attached
 haustoria.lm <- lmer(prop_attached ~ root_type*treatment + (1|replicate_id), data = haustoria)
 summary(haustoria.lm)
-Anova(haustoria.lm) # 
+Anova(haustoria.lm) # root_type:treatment p = 0.002
 emmeans(haustoria.lm, pairwise ~ treatment|root_type)
 emmip(haustoria.lm, ~ root_type ~ treatment)
+
+#Standard error calculations
+haus <- haustoria %>% drop_na()
+
+attached <- haus %>% 
+  group_by(treatment, root_type) %>% 
+  dplyr::summarise(mean = mean(prop_attached),
+                   se = sd(prop_attached)/sqrt(n()))
+#------ graphs ------#
+haustoria.plot <- ggplot(attached, aes(x = treatment, y = mean, color = root_type)) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.5), linewidth = 1, width = 0.09) +
+  geom_point(aes(shape = root_type), size = 7, position =  position_dodge(width = 0.5)) +
+  labs(x = "Fungi", y = "Proportion of Attached Haustoria") +
+  scale_color_manual(values=c("#71A4A0", "#E1BE6A","#E26688")) +
+  scale_shape_manual(values=c(18,18,18)) +
+  theme_pubr() +
+  theme(strip.text = element_text(size = 15),
+        strip.background = element_blank(),
+        panel.border = element_rect(fill = "transparent", 
+                                    color = "gray23", linewidth = 0.12)) +
+  ylim(0,1)
+
+haustoria.plot
 

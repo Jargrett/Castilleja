@@ -104,3 +104,26 @@ emmip(dse.lmm, ~ type ~ treatment)
 
 dse.plot <- ggbetweenstats(data = micro, x = treatment, y = col_dse) 
 dse.plot
+
+
+#Standard error calculations
+total.col <- micro %>% 
+  group_by(treatment, type) %>% 
+  dplyr::summarise(mean = mean(col_total),
+                   se = sd(col_total)/sqrt(n()))
+
+#graphs
+colonization.plot <- ggplot(total.col, aes(x = treatment, y = mean, color = type)) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.5), linewidth = 1, width = 0.09) +
+  geom_point(aes(shape = type), size = 7, position =  position_dodge(width = 0.5)) +
+  labs(x = "Fungi", y = "Total Colonization") +
+  scale_color_manual( values=c("#994F00", "#7C99B3")) +
+  scale_shape_manual(values=c(18,18)) +
+  theme_pubr() +
+  theme(strip.text = element_text(size = 15),
+        strip.background = element_blank(),
+        panel.border = element_rect(fill = "transparent", 
+                                    color = "gray23", linewidth = 0.12)) +
+  ylim(0,0.5)
+colonization.plot

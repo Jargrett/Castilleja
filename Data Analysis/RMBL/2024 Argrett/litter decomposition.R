@@ -25,7 +25,6 @@ yearlong <- read.csv("Litter Decomposition - 2024 Full Year.csv")
 
 
 #bind
-
 winter1 <- winter1 %>% 
   filter(missing != "Yes") %>% 
   dplyr::select(-c((missing))) %>%
