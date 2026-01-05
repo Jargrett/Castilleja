@@ -1,0 +1,66 @@
+family,genus,species,code,functional_group,growth_form,life_history
+Asteraceae,Agoseris,glauca,AGGL,forb,rossette,perennial
+Primulaceae,Androsace,septentrionalis,ANSE,forb,rossette,annual
+Ranunculaceae,Aquilegia,coerulea,AQCO,forb,"bushy, clump",perennial
+Brassicaceae,Barbarea,vulgaris,BAVU,forb,"rossette, erect",biennial
+Brassicaceae,Boechera,stricta,BOST,forb,rossette,biennial
+Poaceae,Bromus,pumpellianus,BRPU,grass,"cespitose, rhizome",perennial
+Poaceae,Calamagrostis,canadensis,CACA,grass,"cespitose, rhizome",perennial
+Campanulaceae,Campanula,petiolata,CAPE,forb,rossette,perennial
+Cyperaceae,Carex,Hoodii,CAHO,sedge,"rhizome, stolon",perennial
+Orobanchaceae,Castilleja,miniata,CAMI,hemiparasite,"erect, clump",perennial
+Orobanchaceae,Castilleja,septentrionalis,CASE,hemiparasite,"erect, clump",perennial
+Onagraceae,Chamaenuerion,angustifolium,CHAN,forb,rhizome,perennial
+Portulacaceae,Claytonia,lanceolata,CLLA,forb,tuber,perennial
+Ranunculaceae,Delphinium,barbeyi,DEBA,forb,"erect, clump",perennial
+Brassicaceae,Descurainia,sophia,DESO,forb,erect,perennial
+Asteraceae,Doellingeria,engelmannii,DOEN,forb,"caudex, rhizome",perennial
+Brassicaceae ,Draba,spectabilis,DRSP,forb,rossette,perennial
+Poaceae,Elymus,glaucus,ELGL,grass,erect,perennial
+Onagraceae,Epilobium,ciliatum,EPCI,forb,rossette,perennial
+Asteraceae,Erigeron,coulteri,ERCO,forb,rhizome,perennial
+Asteraceae,Erigeron,elatior,EREL,forb,"rhizome, clump",perennial
+Asteraceae,Erigeron,speciosus,ERSP,forb,"rhizome, clump",perennial
+Liliaceae,Erythronium,grandiflorum,ERGR,forb,rhizome,perennial
+Poaceae,Festuca,earlei,FEEA,grass,"cespitose, rhizome",perennial
+Rosaceae,Fragaria,virginiana,FRVI,forb,"rhizome, stolon",perennial
+Rubiaceae,Galium,bifolium,GABI,forb,erect,perennial
+Gentianaceae,Gentiana,parryi,GEPA,forb,erect,perennial
+Geraniaceae,Geranium,richardsonii,GERI,forb,rhizome,perennial
+Asteraceae,Helianthella,quinquenervis,HEQU,forb,clump,perennial
+Asteraceae,Heliomeris,multiflora,HEMU,forb,"erect, clump",perennial
+Apiaceae,Heracleum,maximum,HEMA,forb,erect,perennial
+Boraginaceae,Hydrophyllum,capitatum,HYCA,forb,erect,perennial
+Asteraceae,Hymenoxys,hoopesii,HYHO,forb,erect,perennial
+Fabaceae,Lathyrus,lanszwertii,LALA,legume,vine,perennial
+Apiaceae,Ligusticum,porteri,LIPO,forb,"erect, clump",perennial
+Fabaceae,Lupinus,argenteus,LUAR,legume,"erect, clump",perennial
+Poaceae,Melica,spectabilis,MESP,grass,"cespitose, rhizome",perennial
+Boraginaceae,Mertensia,ciliata,MECI,forb,"erect, clump",perennial
+Ericaceae,Moneses,uniflora,MOUN,forb,rossette,perennial
+Brassicaceae,Noccaea,fendleri,NOFE,forb,"erect, clump",perennial
+Apiaceae,Osmorhiza,depauperata,OSDE,forb,erect,perennial
+Orobanchaceae,Pedicularis,bracteosa,PEBR,hemiparasite,parasite,perennial
+Poaceae,Phleum,alpinum,PHAL,grass,"cespitose, rhizome",perennial
+Poaceae,Phleum,pratense,PHPR,grass,"erect, clump",perennial
+Plantaginaceae,Plantago,eripoda,PLER,forb,rossette,perennial
+Plantaginaceae,Plantago,tweedyi,PLTW,forb,rossette,perennial
+Poaceae,Poa,pratensis,POPR,grass,"tiller, clump",perennial
+Poaceae,Poa,stenantha,POST,grass,cespitose,perennial
+Polemoniaceae,Polemonium,pulcherrimum var. delicatum ,POPU,forb,"erect, clump",perennial
+Rosaceae,Potentilla,gracilis,POGR,forb,"caudex, rhizome",perennial
+Ranunculaceae,Ranunculus,inamoenus,RAIN,forb,corm,perennial
+Crassulaceae,Rhodiola,integrifolia,RHIN,forb,erect,perennial
+Grossulariaceae,Ribes,montigenum,RIMO,shrub,shrub,perennial
+Polygonaceae,Rumex,salicifolius,RUSA,forb,erect,perennial
+Asteraceae,Senecio,crassulus,SECR,forb,rhizome,perennial
+Asteraceae,Senecio,triangularis,SETR,forb,rhizome,perennial
+Caryophyllaceae,Silene,acaulis,SEAC,forb,matt,perennial
+Caryophyllaceae,Silene,drummondii,SIDR,forb,erect,perennial
+Asteraceae,Taraxicum,officinale,TAOF,forb,rossette,perennial
+Thalictraceae,Thalictrum,fendleri,THFE,forb,erect,perennial
+Fabaceae,Trifolium,hybridum,TRHY,legume,"erect, clump",perennial
+Poaceae,Trisetum,spicatum,TRSP,grass,cespitose,perennial
+Caprifoliaceae,Valeriana,occidentalis,VAOC,forb,rhizome,perennial
+Melanthiaceae,Veratrum,californicum,VECA,forb,rhizome,perennial
+Violaceae,Viola,nuttallii,VINU,forb,rhizome,perennial
