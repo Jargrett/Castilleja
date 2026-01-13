@@ -24,10 +24,12 @@ cover.comb %<>%
   mutate(removal = recode(removal,
                           "C" = "Control",
                           "R" = "Removal"))
+
 #remove castilleja and environmental rows for analysis
 cover.comb.clean <- cover.comb[!(cover.comb$functional_group %in% "environmental"),]
 cover.comb.clean <- cover.comb.clean[!(cover.comb.clean$code %in% "CASE"),]
 comb.cov <- subset(cover.comb.clean, select = c('year','plot','code','percent_cover'))
+
 #filter for year/pre and calculate
 emerald.pre <- comb.cov %>% 
   filter(year == "Pre") %>%
@@ -141,107 +143,103 @@ cs <- community_stability(rac.cover,
                     time.var = "year",
                     abundance.var = "percent_cover",
                     replicate.var = "plot")
-turn <- turnover(
+app_turn <- turnover(
   df = rac.cover,
   time.var = "year",
   species.var = "code",
   abundance.var = "percent_cover",
   replicate.var = "plot",
-  metric = "total")
+  metric = "appearance")
 
+diss_turn <- turnover(
+  df = rac.cover,
+  time.var = "year",
+  species.var = "code",
+  abundance.var = "percent_cover",
+  replicate.var = "plot",
+  metric = "disappearance")
 
-#-----Assessing species Dominance---------#
-#Importing Species Data
-species_info <- read.csv("Raw Data/EL Species List - EL.csv")
+#---------delta diversity Analysis---------#
+library(statmod)
+library(lme4)
+library(emmeans) # for comparison of means
+library(ggcharts)
+library(ggthemes)
+delta.div <- read.csv("Site Level Data - delta.csv")
+conflicts_prefer(lme4::lmer)
+conflicts_prefer(dplyr::mutate)
+conflicts_prefer(dplyr::arrange)
 
-species_code <- species_info %>%
-  distinct(code, functional_group)
+div.lmm <- lmer(delta_rich ~ litter*removal + (1|block) + (1|pair), data = delta.div)
+summary(div.lmm)
+Anova(div.lmm)
+emmip(div.lmm, litter~removal)
+emmeans(div.lmm, pairwise ~ litter|removal)
 
-rac.cover.full <- rac.cover %>%
-  group_by(year, plot, pair, block, removal, litter) %>%
-  complete(
-    code = unique(species_info$code),
-    fill = list(percent_cover = 0, count = 0)
-  ) %>%
-  ungroup() %>%
-  left_join(species_code, by = "code") %>% 
-  mutate(functional_group = coalesce(functional_group.y, functional_group.x)) %>%
-  select(-functional_group.x, -functional_group.y)
+max.div <- diversity %>% 
+  filter(year != "2024")%>% 
+  group_by(plot,pair,removal) %>% 
+  reframe(max = max(rich))
+delta <- merge(max.div,diversity, by =c('plot'))
 
+delta %<>% 
+  filter(year != "2024")%>% 
+  select(-c(pair.y,removal.y)) %>% 
+  dplyr::rename(pair = pair.x,
+                removal = removal.x)
+nudge_value=.6
 
-#Calculate relative cover and dominance per plot-year
-plot_dom <- rac.cover.full %>%
-  group_by(plot, year) %>%
+arrow_info <- delta %>%
+  arrange(plot,year) %>%
+  group_by(plot) %>%
+  mutate(rich_lag = lag(rich),
+         rich_diff = rich - rich_lag) %>%
+  select(plot,rich_diff) %>%
+  filter(!is.na(rich_diff)) %>%
+  mutate(arrow_draw = ifelse(rich_diff==0,"no arrow","arrow"))
+
+delta <- merge(delta,arrow_info,by="plot")
+
+delta_plot <- delta %>%
+  arrange(plot, year) %>%
+  group_by(plot) %>%
   mutate(
-    total_cover = sum(percent_cover[percent_cover > 0], na.rm = TRUE),
-    rel_cover = if_else(
-      percent_cover > 0 & total_cover > 0,
-      percent_cover / total_cover * 100,
-      0),
-    q66 = quantile(rel_cover[rel_cover > 0], 0.66, na.rm = TRUE),
-    q33 = quantile(rel_cover[rel_cover > 0], 0.33, na.rm = TRUE),
-    dominance_class = case_when(
-      percent_cover == 0 ~ NA_character_,
-      rel_cover >= q66 | rel_cover >= 0.10 ~ "dominant",   
-      rel_cover <= q33 | rel_cover <= 0.01  ~ "rare",
-      percent_cover == 0 ~ NA_character_,
-      TRUE ~ "intermediate"
-    )
+    field_plot2 = as.numeric(gsub("A|B", "", field_plot)),
+    rich_max = max(rich),
+    rich_2023 = lag(rich)
   ) %>%
   ungroup() %>%
-  group_by(plot, code) %>%
-  summarise(
-    mean_percent_cover_plot = mean(percent_cover, na.rm = TRUE),
-    se_percent_cover_plot = sd(percent_cover, na.rm = TRUE) /
-      sqrt(sum(!is.na(percent_cover))),
-    mean_rel_cover_plot = mean(rel_cover, na.rm = TRUE),
-    prop_dom_plot = mean(dominance_class == "dominant", na.rm = TRUE),
-    prop_rare_plot = mean(dominance_class == "rare", na.rm = TRUE),
-    prop_int_plot = mean(dominance_class == "intermediate", na.rm = TRUE),
-    occur = mean(percent_cover > 0),
-    .groups = "drop"
+  mutate(
+    text_nudge_x = case_when(rich == rich_max ~ 0.7,
+                             rich <= rich_max ~ -0.7,
+                             rich >= rich_max ~ 0.7)
   )
 
-site_dom <- plot_dom %>%
-  group_by(code) %>%
-  summarise(
-    freq = mean(occur),
-    mean_rel_cover_site = mean(mean_rel_cover_plot, na.rm = TRUE),
-    se_percent_cover_site = sd(mean_rel_cover_plot, na.rm = TRUE) /
-      sqrt(sum(!is.na(mean_rel_cover_plot))),
-    prop_dom_site = mean(prop_dom_plot, na.rm = TRUE),
-    prop_rare_site = mean(prop_rare_plot, na.rm = TRUE),
-    prop_int_site = mean(prop_int_plot, na.rm = TRUE),
-    Dominance = case_when(
-      #Commonly occuring and most often of a specific class
-      freq >= 0.50 & prop_dom_site > 0.5 ~ "DC",
-      freq >= 0.50 & prop_rare_site > 0.5 ~ "RC",
-      #less commonly occurring but most often of a specific class
-      freq < 0.50 & prop_dom_site > 0.5 ~ "DU",
-      freq < 0.50 & prop_rare_site > 0.5 ~ "RU",
-      #Intermediate speices that are more often dominant 
-      freq >= 0.50 & prop_int_site > 0.10 ~ "IC",
-      freq < 0.50  & prop_int_site > 0.10 ~ "IR",
-      TRUE ~ "I" ), 
-    .groups = "drop"
-  ) %>%
-  filter(freq > 0)
+delta_plot %>% 
+  ggplot(aes(x = rich,y = field_plot2)) +
+  geom_path(aes(group = plot), color = "#b7b7a4", linewidth = 0.5) +
+  geom_segment(
+    data = . %>% filter(year == 2025 & arrow_draw == "arrow"),
+    aes(x = rich_2023, xend = ifelse(rich_diff > 0, rich - 0.25, rich + 0.25 )),
+    arrow = arrow(angle = 20, type = "closed", length = unit(0.40, "cm")),
+    color = "#b7b7a4") +
+  geom_point(aes(color=as.factor(year)), size=3.5) +
+  geom_text(
+    aes(label = rich),
+    size = 3.25,
+    nudge_x = delta_plot$text_nudge_x) +
+  scale_color_manual(values=c("#dda15e", "#606c38")) +
+  theme_classic() +
+  theme(strip.text = element_text(size = 15),
+        strip.background = element_blank(),
+        panel.border = element_rect(fill = "transparent", 
+                                    color = "gray23", linewidth = 0.12)) +
+  xlim(7,26) +
+  scale_y_continuous(breaks=seq(1,20,by=1))+
+  facet_wrap(~removal)+
+  labs(x = "Species Richness", y = "Paired Plot")
 
-ggplot(site_dom, aes(x = rel_cover, y = reorder(code, rel_cover), fill = Dominance)) +
-  geom_col() +                       # horizontal bar
-  scale_fill_brewer(palette = "Set2") +  # nice colors for dominance
-  labs(
-    x = "Relative Percent Cover",
-    y = "Species",
-    fill = "Dominance Class"
-  ) +
-  theme_minimal() +
-  theme(
-    axis.text.y = element_text(size = 10),
-    axis.title = element_text(size = 12),
-    legend.title = element_text(size = 12),
-    legend.text = element_text(size = 10)
-  )
+
 #----------RAC Analysis----------#
 library(statmod)
 library(lme4)
@@ -254,12 +252,9 @@ Anova(rank.lm)
 emmip(rank.lm, litter ~ removal)
 emmeans(rank.lm, pairwise ~ removal|litter)
 
-hist(rac.cover$percent_cover, breaks = 50,
-     main = "Histogram of Percent Cover", xlab = "Percent Cover")
-summary(rac.cover$percent_cover)
-
-quantile(rac.cover$percent_cover, probs = c(0.25, 0.5, 0.75, 0.90))
-
 #----------Nearest Neighbor Analysis----------#
-comb.cov.NN <- subset(cover.comb, select = c('year','plot','code','functional_group','percent_cover','nearest_neighbor'))
+comb.cov.NN <- subset(cover.comb.clean, select = c('year','plot','code','functional_group',
+                                             'percent_cover','nearest_neighbor'))
+write.csv(comb.cov.NN, "Processed Data/Neighbor Cover.csv", row.names=FALSE)
+  
 

@@ -9,6 +9,9 @@ library(statmod)
 library(lme4)
 library(emmeans) # for comparison of means
 library(betareg)
+library(ggplot2)
+library(ggpubr)#extended functions for plottinglibrary(remotes)
+library(ggpattern)
 
 
 #Specifying conflicts
@@ -76,7 +79,7 @@ emmeans(shurb.lmm, pairwise ~ litter|removal)
 #Shrub Biomass Proportion
 shrub.prop.lmm <- lmer(shrub_prop ~ litter*removal + (1|block) + (1|pair), data = biomass)
 summary(shrub.prop.lmm)
-Anova(shrub.prop.lmm)# No significance
+Anova(shrub.prop.lmm)#Litter p = 0.020
 emmeans(shrub.prop.lmm, pairwise ~ litter|removal)
 
 
@@ -96,11 +99,25 @@ func.biomass <- biomass.long %>%
   dplyr::summarise(mean = mean(biomass_prop),
                    se = sd(biomass_prop)/sqrt(n()))
 
-ggplot(func.biomass, aes(x=removal, y=mean, fill=func)) + 
-  geom_bar(position="stack", stat="identity") +
-  labs(x = "Castilleja", y = "Proportion of Total Biomass") +
-  scale_fill_manual(values=c("#582f0e", "#936639","#b6ad90","#656d4a","#414833" )) +
-  theme_pubr()
-  
-  
+total.biomass <- biomass %>% 
+  group_by(removal) %>% 
+  dplyr::summarise(mean = mean(total_no_cas),
+                   se = sd(total_no_cas)/sqrt(n()))
+
+total.biomass %<>% 
+  dplyr::mutate(
+    pat = ifelse(removal == "R", "stripe", "none")
+  )
+
+ggplot(total.biomass, aes(x = removal, y = mean, fill = removal, pattern = pat)) +
+  geom_bar_pattern(stat = "identity", color = "black", alpha = 0.8, width = 0.92, 
+                   pattern_angle = 45, pattern_density = 0.12, 
+                   pattern_spacing = 0.02, pattern_fill = '#333d29', pattern_colour = NA) +
+  geom_errorbar(aes(ymin = mean, ymax = mean + se), width = 0.2) +
+  scale_fill_manual(values = c("#333d29", "#b6ad90")) +
+  scale_pattern_manual(values = c("none", "stripe")) +
+  theme_pubr() +
+  theme(legend.position = "none",panel.grid = element_blank()) +
+  labs(x = "Parasite", y = "Total Biomass (No Castilleja)")
+
 

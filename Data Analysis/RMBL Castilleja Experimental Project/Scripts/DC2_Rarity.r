@@ -1,9 +1,11 @@
+setwd("/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL Castilleja Experimental Project")
 #----------Data importing, cleaning, and restructuring----------#
 library(tidyverse)#for data wrangling and restructuring
 library(magrittr)#for data wrangling and restructuring
 library(plyr)#for data wrangling and restructuring
 library(conflicted)#helps reslove errors for similar functions between packages
 library(car)
+library(forcats) 
 
 #-----Assessing species Dominance---------#
 #Importing Species Data
@@ -28,17 +30,17 @@ rac.cover.full <- rac.cover %>%
 #Calculate relative cover and dominance per plot-year
 plot_dom <- rac.cover.full %>%
   group_by(plot, year) %>%
-  mutate(
-    total_cover = sum(percent_cover[percent_cover > 0], na.rm = TRUE),
+  dplyr::mutate(
+    total_cover = sum(percent_cover, na.rm = TRUE),
     rel_cover = if_else(
       percent_cover > 0 & total_cover > 0,
-      percent_cover / total_cover * 100,
+      percent_cover / total_cover,
       0),
     q66 = quantile(rel_cover[rel_cover > 0], 0.66, na.rm = TRUE),
     q33 = quantile(rel_cover[rel_cover > 0], 0.33, na.rm = TRUE),
     dominance_class = case_when(
       percent_cover == 0 ~ NA_character_,
-      rel_cover >= q66 | rel_cover >= 0.10 ~ "dominant",   
+      rel_cover >= q66 | rel_cover >= 0.10 ~ "dominant",
       rel_cover <= q33 | rel_cover <= 0.01  ~ "rare",
       percent_cover == 0 ~ NA_character_,
       TRUE ~ "intermediate"
@@ -62,39 +64,41 @@ site_dom <- plot_dom %>%
   group_by(code) %>%
   summarise(
     freq = mean(occur),
-    mean_rel_cover_site = mean(mean_rel_cover_plot, na.rm = TRUE),
-    se_percent_cover_site = sd(mean_rel_cover_plot, na.rm = TRUE) /
-      sqrt(sum(!is.na(mean_rel_cover_plot))),
+    mean_rel_cover_site = mean(mean_rel_cover_plot[mean_rel_cover_plot > 0], na.rm = TRUE),
+    se_percent_cover_site = sd(mean_rel_cover_plot[mean_rel_cover_plot > 0], na.rm = TRUE) /
+      sqrt(sum(!is.na(mean_rel_cover_plot[mean_rel_cover_plot > 0]))),
     prop_dom_site = mean(prop_dom_plot, na.rm = TRUE),
     prop_rare_site = mean(prop_rare_plot, na.rm = TRUE),
     prop_int_site = mean(prop_int_plot, na.rm = TRUE),
-    Dominance = case_when(
-      #Commonly occuring and most often of a specific class
-      freq >= 0.50 & prop_dom_site > 0.5 ~ "DC",
-      freq >= 0.50 & prop_rare_site > 0.5 ~ "RC",
-      #less commonly occurring but most often of a specific class
-      freq < 0.50 & prop_dom_site > 0.5 ~ "DU",
-      freq < 0.50 & prop_rare_site > 0.5 ~ "RU",
-      #Intermediate speices that are more often dominant 
-      freq >= 0.50 & prop_int_site > 0.10 ~ "IC",
-      freq < 0.50  & prop_int_site > 0.10 ~ "IR",
-      TRUE ~ "I" ), 
+    rarity = case_when( #The proportion of times that a given species occurs as one of the most abundant species in a give plot-year
+      prop_dom_site > 0.5 ~ "Dominant",
+      prop_rare_site > 0.5 ~ "Rare",
+      prop_int_site > 0.10 ~ "Intermediate",
+      TRUE ~ "Intermediate" ),
+    occurance = case_when(
+      freq > 0.66 ~ "Frequent",
+      freq <=0.66 & freq >= 0.33 ~ "Intermediate",
+      freq < 0.33 ~ "Infrequent",
+      TRUE ~ "Intermediate" ),
     .groups = "drop"
   ) %>%
   filter(freq > 0)
 
-ggplot(site_dom, aes(x = rel_cover, y = reorder(code, rel_cover), fill = Dominance)) +
-  geom_col() +                       # horizontal bar
-  scale_fill_brewer(palette = "Set2") +  # nice colors for dominance
-  labs(
-    x = "Relative Percent Cover",
-    y = "Species",
-    fill = "Dominance Class"
-  ) +
-  theme_minimal() +
-  theme(
-    axis.text.y = element_text(size = 10),
-    axis.title = element_text(size = 12),
-    legend.title = element_text(size = 12),
-    legend.text = element_text(size = 10)
-  )
+
+species.rarity <- full_join(species_info, site_dom, by = "code") %>% 
+  mutate_if(is.numeric, ~replace_na(., 0)) %>% 
+  mutate(across(where(is.numeric), ~ round(.x, 5))) %>% 
+  drop_na()
+
+species.rarity <- as.data.frame(unclass(species.rarity),stringsAsFactors=TRUE)
+write.csv(species.rarity, "Processed Data/Species Rarity.csv", row.names=FALSE)
+
+library(webr)
+species.pie <- species.rarity %>%
+  group_by(rarity, occurance) %>%
+  mutate(count = n()) %>% 
+  summarise(count = n(), .groups = 'drop')
+
+PieDonut(species.pie, aes(occurance, rarity, count=count, fill = occurance )) +
+  scale_fill_manual(values=c("#582f0e","#7f4f24", "#a68a64","#b6ad90","#c2c5aa", "#656d4a","#414833", "#333d29" ))
+

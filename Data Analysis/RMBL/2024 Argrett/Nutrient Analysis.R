@@ -32,7 +32,7 @@ nitrate
 nitrate.lme <- lmer(K ~ litter*removal + (1|block) + (1|pair), data = soil.full)
 summary(nitrate.lme)
 Anova(nitrate.lme)
-emmip(nitrate.lme, litter ~ removal)
+emmip(nitrate.lme, litter ~ burial)
 emmeans(nitrate.lme, pairwise ~  removal|litter)
 
 soil.NO3 <- soil.full %>% 
@@ -44,9 +44,16 @@ NO3.plot <- ggplot(data = soil.NO3, aes(x = litter, y = mean, fill = removal, pa
   geom_bar(stat="identity", color="black",position=position_dodge2(preserve="single", padding=0), alpha=0.5) +
   geom_errorbar(aes(ymin=mean, ymax=mean+se), alpha=1, width=.2,position=position_dodge(.9)) +
   theme(panel.grid = element_blank(),legend.position = "bottom") +
-  labs(x="Litter Type", y="Nitrate (micro grams/10cm2/burial length)", pattern="") + scale_fill_manual(values=cols)+
+  labs(x="Litter Type", y="Potassium (micro grams/10cm2/burial length)", pattern="") + 
+  scale_fill_manual(values=cols) +
   geom_bar_pattern(stat="identity", position = "dodge", color = "black", pattern_angle = 45, pattern_density = 0.1, pattern_spacing = 0.025, pattern_key_scale_factor = 0.6) +
-  scale_fill_manual( values=c("#004D40", "#FFC107"))
+  scale_fill_manual(values=c("#414833","#b6ad90")) +
+  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
+        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
+        legend.background = element_rect(fill='transparent'), #transparent legend bg
+        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
+  theme_pubr()
+  
 NO3.plot
 
 a<-ggplot(COroots, aes(x = Invasion, y = mean, fill = grp, pattern=Treatment, alpha=alfa)) +

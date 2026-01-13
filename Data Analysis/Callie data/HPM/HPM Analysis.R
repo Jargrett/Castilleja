@@ -658,7 +658,7 @@ hetero.physiology$type[hetero.physiology$type == "host"] <- "Alone"
 physiology <- as.data.frame(unclass(physiology),stringsAsFactors=TRUE)
 hetero.physiology <- as.data.frame(unclass(hetero.physiology),stringsAsFactors=TRUE)
 agalinis.physiology <- as.data.frame(unclass(agalinis.physiology),stringsAsFactors=TRUE)
-
+physiology <- physiology %>%  na.omit()
 #------Phys Data Analysis------#
 #Agalinis
 #Carbon assimilation (photosynthesis)
@@ -706,21 +706,21 @@ emmip(he.sto.lm, ~ type ~ treatment)
 
 #Comparative Work
 #Carbon assimilation (photosynthesis)
-comp.carb.lm <- lmer(A ~ species*type + species*treatment + (1|replicate_id), data = physiology)
+comp.carb.lm <- lmer(A ~ species*treatment + (1|replicate_id), data = physiology)
 summary(comp.carb.lm)
-Anova(comp.carb.lm) # species: chisq: 5.982, p = 0.0146
+Anova(comp.carb.lm) # species: chisq = 5.982, p = 0.0146, speices:treatment: chisq = 4.7498,  p = 0.0293
 emmeans(comp.carb.lm, pairwise ~ treatment|species)
 emmip(comp.carb.lm, ~ species ~ treatment)
 
 #Transpiration
-comp.trans.lm <- lmer(E ~ species*type + species*treatment + (1|replicate_id), data = physiology)
+comp.trans.lm <- lmer(E ~ species*type*treatment + (1|replicate_id), data = physiology)
 summary(comp.trans.lm)
 Anova(comp.trans.lm) 
-emmeans(comp.trans.lm, pairwise ~ type|treatment)
-emmip(comp.trans.lm, ~ type ~ treatment)
+emmeans(comp.trans.lm, pairwise ~ species|treatment)
+emmip(comp.trans.lm, ~ species ~ treatment)
 
 #Stomotal conductance
-comp.sto.lm <- lmer(gsw ~ species*type + species*treatment + (1|replicate_id), data = physiology)
+comp.sto.lm <- lmer(gsw ~ species*type*treatment+ (1|replicate_id), data = physiology)
 summary(comp.sto.lm)
 Anova(comp.sto.lm) 
 emmeans(comp.sto.lm, pairwise ~ type|treatment)
@@ -869,7 +869,13 @@ he.phys.plots <- ggarrange(he.carb.plot, he.trans.plot, he.sto.plot,
                         labels = c("A", "B","C"), 
                         nrow = 1,
                         common.legend = TRUE)
-he.phys.plots  
+he.phys.plots 
+
+phys.plots <- ggarrange(he.phys.plots, ag.phys.plots,
+                        labels = c("Host", "Parasite"), 
+                        nrow = 2,
+                        common.legend = TRUE)
+phys.plots
 #---------------------HAUSTORIA----------------------#
 
 #Haustoria: import, clean and rename
@@ -883,7 +889,7 @@ haustoria <- as.data.frame(unclass(haustoria),stringsAsFactors=TRUE)
 #---------Haustoria data analysis--------#
 
 #Proportion of Haustoria Attached
-haustoria.lm <- lmer(prop_attached ~ root_type*treatment + (1|replicate_id), data = haustoria)
+haustoria.lm <- lmer(prop_attached ~ root_type*treatment + (1|replicate_id) + (1|pot_id), data = haustoria)
 summary(haustoria.lm)
 Anova(haustoria.lm) # root_type:treatment p = 0.002
 emmeans(haustoria.lm, pairwise ~ treatment|root_type)

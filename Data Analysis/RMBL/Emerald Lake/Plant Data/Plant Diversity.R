@@ -131,29 +131,57 @@ delta %<>%
   dplyr::rename(pair = pair.x,
                 removal = removal.x)
 nudge_value=.6
-d.m <- delta %>% 
-  mutate(field_plot2 = as.numeric(gsub("A|B","",field_plot))) %>% 
-ggplot(aes(x = rich,y = field_plot2)) +
-  geom_path(aes(group = plot), color="#b7b7a4", linewidth=0.5, arrow = 
-              j(angle=10, type="closed",length=unit(0.5,"cm"))) + 
-  geom_point(aes(color=year), size=3) +
+
+arrow_info <- delta %>%
+  arrange(plot,year) %>%
+  group_by(plot) %>%
+  mutate(rich_lag = lag(rich),
+         rich_diff = rich - rich_lag) %>%
+  select(plot,rich_diff) %>%
+  filter(!is.na(rich_diff)) %>%
+  mutate(arrow_draw = ifelse(rich_diff==0,"no arrow","arrow"))
+
+delta <- merge(delta,arrow_info,by="plot")
+
+delta_plot <- delta %>%
+  arrange(plot, year) %>%
+  group_by(plot) %>%
+  mutate(
+    field_plot2 = as.numeric(gsub("A|B", "", field_plot)),
+    rich_max = max(rich),
+    rich_2023 = lag(rich)
+  ) %>%
+  ungroup() %>%
+  mutate(
+    text_nudge_x = case_when(rich == rich_max ~ 0.6,
+                             rich <= rich_max ~ -0.6,
+                             rich >= rich_max ~ 0.6)
+  )
+
+delta_plot %>% 
+  ggplot(aes(x = rich,y = field_plot2)) +
+  geom_path(aes(group = plot), color = "#b7b7a4", linewidth = 0.5) +
+  geom_segment(
+    data = . %>% filter(year == 2025 & arrow_draw == "arrow"),
+    aes(x = rich_2023, xend = rich),
+    arrow = arrow(angle = 15, type = "closed", length = unit(0.35, "cm")),
+    color = "#b7b7a4") +
+  geom_point(aes(color=as.factor(year)), size=3.5) +
+  geom_text(
+    aes(label = rich),
+    size = 3.25,
+    nudge_x = delta_plot$text_nudge_x) +
   scale_color_manual(values=c("#dda15e", "#606c38")) +
-  #theme_pubr() +
-  theme_par()+
+  theme_classic() +
   theme(strip.text = element_text(size = 15),
         strip.background = element_blank(),
         panel.border = element_rect(fill = "transparent", 
                                     color = "gray23", linewidth = 0.12)) +
-  geom_text(aes(label=rich), size = 3.25,
-            nudge_x=if_else(
-              delta$rich==delta$max, nudge_value, -nudge_value), 
-            hjust=if_else(delta$rich==delta$max,0,1)) +
-
   xlim(7,26) +
   scale_y_continuous(breaks=seq(1,20,by=1))+
   facet_wrap(~removal)+
   labs(x = "Species Richness", y = "Paired Plot")
-d.m
+
 
 #----------------Functional diversity Analysis----------------#
 conflicts_prefer(dplyr::summarize)

@@ -87,15 +87,15 @@ summary(k.tissue.lm)
 Anova(k.tissue.lm)
 
 #statplotting
-install.packages('ggstatsplot')
 library(ggstatsplot)
 
-litter.plot <- ggbetweenstats(data = litter, x = litter_bag, y = p) 
+litter.plot <- ggbetweenstats(data = litter, x = litter_bag, y = k) 
 litter.plot
 
-tissue.plot <- ggbetweenstats(data = tissue, x = organ, y = p)
+tissue.plot <- ggbetweenstats(data = tissue, x = organ, y = k)
 tissue.plot
-senescence.plot <- ggbetweenstats(data = senescence, x = treatment, y = cn_ratio)
+
+senescence.plot <- ggbetweenstats(data = senescence, x = treatment, y = k)
 senescence.plot
 
 
