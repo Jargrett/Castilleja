@@ -1,4 +1,4 @@
-lab_id,sample_id,treatment,replicate,n,c,p,k,cn
+lab_id,sample_id,senescence,replicate,n,c,p,k,cn
 406556,1_SEN PRE,pre,1,1.06,42.28,0.212,2.27,39.887
 406557,2_SEN PRE,pre,2,0.85,42.26,0.222,3.83,49.718
 406558,3_SEN PRE,pre,3,0.85,43.51,0.213,2.70,51.188

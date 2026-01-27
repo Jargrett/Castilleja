@@ -9,6 +9,7 @@ library(forcats)
 
 #-----Assessing species Dominance---------#
 #Importing Species Data
+
 rac.cover <- read.csv("Processed Data/Subset.csv")
 species_info <- read.csv("Raw Data/EL Species List - EL.csv")
 
@@ -28,7 +29,7 @@ rac.cover.full <- rac.cover %>%
 
 
 #Calculate relative cover and dominance per plot-year
-plot_dom <- rac.cover.full %>%
+plot_dom_removal <- rac.cover.full %>%
   group_by(plot, year) %>%
   dplyr::mutate(
     total_cover = sum(percent_cover, na.rm = TRUE),
@@ -47,7 +48,7 @@ plot_dom <- rac.cover.full %>%
     )
   ) %>%
   ungroup() %>%
-  group_by(plot, code) %>%
+  group_by(plot, code, removal) %>%
   summarise(
     mean_percent_cover_plot = mean(percent_cover, na.rm = TRUE),
     se_percent_cover_plot = sd(percent_cover, na.rm = TRUE) /
@@ -60,8 +61,8 @@ plot_dom <- rac.cover.full %>%
     .groups = "drop"
   )
 
-site_dom <- plot_dom %>%
-  group_by(code) %>%
+site_dom_removal <- plot_dom_removal %>%
+  group_by(code, removal) %>%
   summarise(
     freq = mean(occur),
     mean_rel_cover_site = mean(mean_rel_cover_plot[mean_rel_cover_plot > 0], na.rm = TRUE),
@@ -70,27 +71,88 @@ site_dom <- plot_dom %>%
     prop_dom_site = mean(prop_dom_plot, na.rm = TRUE),
     prop_rare_site = mean(prop_rare_plot, na.rm = TRUE),
     prop_int_site = mean(prop_int_plot, na.rm = TRUE),
-    rarity = case_when( #The proportion of times that a given species occurs as one of the most abundant species in a give plot-year
-      prop_dom_site > 0.5 ~ "Dominant",
-      prop_rare_site > 0.5 ~ "Rare",
-      prop_int_site > 0.10 ~ "Intermediate",
-      TRUE ~ "Intermediate" ),
+    dominance = case_when( #The proportion of times that a given species occurs as one of the most abundant species in a give plot-year
+      prop_dom_site > 0.5 ~ "dominant",
+      prop_rare_site > 0.5 ~ "subordinate",
+      prop_int_site > 0.10 ~ "intermediate",
+      TRUE ~ "intermediate" ),
     occurance = case_when(
-      freq > 0.66 ~ "Frequent",
-      freq <=0.66 & freq >= 0.33 ~ "Intermediate",
-      freq < 0.33 ~ "Infrequent",
-      TRUE ~ "Intermediate" ),
+      freq > 0.66 ~ "common",
+      freq <=0.66 & freq >= 0.33 ~ "intermediate",
+      freq < 0.33 ~ "rare",
+      TRUE ~ "intermediate" ),
     .groups = "drop"
   ) %>%
   filter(freq > 0)
 
+saveRDS(site_dom_removal, "Processed Data/Dominance total.rds")
+
+#This is just year one data
+plot_dom_year <- rac.cover.full %>%
+  filter (year == '1') %>% 
+  group_by(plot, year) %>%
+  dplyr::mutate(
+    total_cover = sum(percent_cover, na.rm = TRUE),
+    rel_cover = if_else(
+      percent_cover > 0 & total_cover > 0,
+      percent_cover / total_cover,
+      0),
+    q66 = quantile(rel_cover[rel_cover > 0], 0.66, na.rm = TRUE),
+    q33 = quantile(rel_cover[rel_cover > 0], 0.33, na.rm = TRUE),
+    dominance_class = case_when(
+      percent_cover == 0 ~ NA_character_,
+      rel_cover >= q66 | rel_cover >= 0.10 ~ "dominant",
+      rel_cover <= q33 | rel_cover <= 0.01  ~ "rare",
+      percent_cover == 0 ~ NA_character_,
+      TRUE ~ "intermediate"
+    )
+  ) %>%
+  ungroup() %>%
+  group_by(plot, code, removal) %>%
+  summarise(
+    mean_percent_cover_plot = mean(percent_cover, na.rm = TRUE),
+    se_percent_cover_plot = sd(percent_cover, na.rm = TRUE) /
+      sqrt(sum(!is.na(percent_cover))),
+    mean_rel_cover_plot = mean(rel_cover, na.rm = TRUE),
+    prop_dom_plot = mean(dominance_class == "dominant", na.rm = TRUE),
+    prop_rare_plot = mean(dominance_class == "rare", na.rm = TRUE),
+    prop_int_plot = mean(dominance_class == "intermediate", na.rm = TRUE),
+    occur = mean(percent_cover > 0),
+    .groups = "drop"
+  )
+
+site_dom_year <- plot_dom_year %>%
+  group_by(code, removal) %>%
+  summarise(
+    freq = mean(occur),
+    mean_rel_cover_site = mean(mean_rel_cover_plot[mean_rel_cover_plot > 0], na.rm = TRUE),
+    se_percent_cover_site = sd(mean_rel_cover_plot[mean_rel_cover_plot > 0], na.rm = TRUE) /
+      sqrt(sum(!is.na(mean_rel_cover_plot[mean_rel_cover_plot > 0]))),
+    prop_dom_site = mean(prop_dom_plot, na.rm = TRUE),
+    prop_rare_site = mean(prop_rare_plot, na.rm = TRUE),
+    prop_int_site = mean(prop_int_plot, na.rm = TRUE),
+    dominance = case_when( #The proportion of times that a given species occurs as one of the most abundant species in a give plot-year
+      prop_dom_site > 0.5 ~ "dominant",
+      prop_rare_site > 0.5 ~ "subordinate",
+      prop_int_site > 0.10 ~ "intermediate",
+      TRUE ~ "intermediate" ),
+    occurance = case_when(
+      freq > 0.66 ~ "common",
+      freq <=0.66 & freq >= 0.33 ~ "intermediate",
+      freq < 0.33 ~ "rare",
+      TRUE ~ "intermediate" ),
+    .groups = "drop"
+  ) %>%
+  filter(freq > 0)
+
+saveRDS(site_dom_year, "Processed Data/Dominance y1.rds")
 
 species.rarity <- full_join(species_info, site_dom, by = "code") %>% 
   mutate_if(is.numeric, ~replace_na(., 0)) %>% 
   mutate(across(where(is.numeric), ~ round(.x, 5))) %>% 
   drop_na()
 
-species.rarity <- as.data.frame(unclass(species.rarity),stringsAsFactors=TRUE)
+species.rarity <- as.data.frame(unclass(site_dom_removal),stringsAsFactors=TRUE)
 write.csv(species.rarity, "Processed Data/Species Rarity.csv", row.names=FALSE)
 
 library(webr)

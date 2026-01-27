@@ -110,14 +110,26 @@ total.biomass %<>%
   )
 
 ggplot(total.biomass, aes(x = removal, y = mean, fill = removal, pattern = pat)) +
-  geom_bar_pattern(stat = "identity", color = "black", alpha = 0.8, width = 0.92, 
+  geom_bar_pattern(stat = "identity", color = "black", alpha = 0.8, width = 0.8, 
                    pattern_angle = 45, pattern_density = 0.12, 
                    pattern_spacing = 0.02, pattern_fill = '#333d29', pattern_colour = NA) +
-  geom_errorbar(aes(ymin = mean, ymax = mean + se), width = 0.2) +
+  geom_errorbar(aes(ymin = mean - se, ymax = mean + se),color = "black", width = 0.2) +
   scale_fill_manual(values = c("#333d29", "#b6ad90")) +
   scale_pattern_manual(values = c("none", "stripe")) +
   theme_pubr() +
   theme(legend.position = "none",panel.grid = element_blank()) +
   labs(x = "Parasite", y = "Total Biomass (No Castilleja)")
 
-
+ggplot(biomass, aes(x = removal, y = total_no_cas,fill = removal, color = removal)) +
+  geom_boxplot( lwd = 0.7, outlier.shape = NA,
+              position = position_dodge(width = 0.6)) +
+  geom_point(position = position_jitterdodge(
+                                      jitter.width = 0.15,
+                                      dodge.width = 0.10),
+                                      alpha = 0.8, size = 1.6) +
+  scale_color_manual(values = c("#333d29", "#4A3D21")) +
+  scale_fill_manual(values = c("#c5c6af", "#D3BC8D")) +
+  theme_pubr() +
+  theme(legend.position = "none",panel.grid = element_blank()) +
+  ylim(0,425) +
+  labs(x = "Parasite", y = "Total Biomass (No Castilleja)")

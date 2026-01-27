@@ -3,7 +3,7 @@ setwd("~/Desktop/Castilleja/Data Analysis/RMBL Castilleja Experimental Project")
 library(tidyverse)#for data wrangling and restructuring
 library(magrittr)#for data wrangling and restructuring
 library(plyr)#for data wrangling and restructuring
-library(conflicted)#helps reslove errors for similar functions between packages
+library(conflicted)#helps resolve errors for similar functions between packages
 library(car)
 
 #Specifying conflicts
@@ -50,7 +50,6 @@ emerald.pre.matrix <- matrify(emerald.pre)
 emerald.23.matrix <- matrify(emerald.23)
 emerald.24.matrix <- matrify(emerald.24)
 emerald.25.matrix <- matrify(emerald.25)
-
 #---------------Diversity Calculations---------------#
 library(vegan)#for calculating diversity
 # Calculating Shannon diversity for plots
@@ -101,63 +100,145 @@ diversity.pre <- rbind.fill(el.pre,el.23,el.24,el.25)
 diversity <- rbind.fill(el.23,el.24,el.25)
 write.csv(diversity, "Processed Data/Plant Diversity.csv", row.names=FALSE)
 
-#----------Rank Abundance Curve Analysis----------#
-library(codyn)
-rac.cover <- cover.comb.clean %>% 
-  filter (year != "Pre") %>% 
-  subset(select = c('year','plot','pair','block','removal','litter','functional_group', 'code','count', 'percent_cover'))
-rac.cover$year <- as.integer(rac.cover$year)
-write.csv(rac.cover, "Processed Data/Subset.csv", row.names=FALSE)
+diversity.pre %<>% 
+  mutate(year = recode(year,
+                       "pre" = "0",
+                       "2023" = "1",
+                       "2024" = "2",
+                       "2025" = "3",)) %>% 
+  mutate(removal = recode(removal,
+                          Control = "Present",
+                          Removal = "Removed"))
 
-rac.diff <- RAC_difference(
-  df = rac.cover,
-  time.var = "year",
-  species.var = "code",
-  abundance.var = "percent_cover",
-  replicate.var = "plot",
-  treatment.var = "removal",
-  block.var = "pair")
+#richness
+rich.lmm <- lmer(rich ~ removal*year + (1|block) + (1|pair), data = diversity.pre)
+summary(rich.lmm)
+Anova(rich.lmm)#:removal:year p = 0.0008, Chisq = 16.8171, df = 3
+emmeans(rich.lmm, pairwise ~ removal|year)
+emmip(rich.lmm, removal ~ year)
+library(ggeffects)
 
-rac.change <- RAC_change(
-  df = rac.cover,
-  time.var = "year",
-  species.var = "code",
-  abundance.var = "percent_cover",
-  replicate.var = "plot",
-  reference.time = "1")
+div.mean <- diversity.pre %>% 
+  group_by(year,removal) %>% 
+  dplyr::summarise(mean = mean(div),
+                   se = sd(div)/sqrt(n()))
 
-rac.change %<>% 
-  filter (year2 != "2")
+rich.mean <- diversity.pre %>% 
+  group_by(year,removal) %>% 
+  dplyr::summarise(mean = mean(rich),
+                   se = sd(rich)/sqrt(n()))
 
-merged.rac.change <- left_join(plot, rac.change, by = "plot")
+even.mean <- diversity.pre %>% 
+  group_by(year,removal) %>% 
+  dplyr::summarise(mean = mean(even),
+                   se = sd(even)/sqrt(n()))
 
-rs <- rank_shift(
-  df = rac.cover,
-  time.var = "year",
-  species.var = "code",
-  abundance.var = "percent_cover",
-  replicate.var = "plot")
+div.plot <- ggplot(data = rich.mean, aes(x = year, y = mean, color = removal, group = removal)) +
+  geom_point(shape=18, size = 4,position =  position_dodge(width = 0.5)) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.5), width = 0.07) +
+  geom_line(position =  position_dodge(width = 0.5)) +
+  theme_pubr() +
+  scale_color_manual(values = c("#333d29", "#b6ad90")) +
+  theme(strip.text = element_text(size = 15),
+        strip.background = element_blank(),
+        panel.border = element_rect(fill = "transparent", 
+                                    color = "gray", linewidth = 0.12)) +
+  labs(x = "Growing Season", y = "Species Richness") 
+div.plot
+
+#-------Bare Ground Analysis------#
+envi.cover <- cover.comb %>% 
+  filter(functional_group == 'environmental') %>% 
+  subset(select = c('year','plot','pair','block','removal','litter','code','percent_cover')) %>% 
+  mutate(year = recode(year,
+                       "Pre" = "0",
+                       "2023" = "1",
+                       "2024" = "2",
+                       "2025" = "3",))
+envi.cover$pair <- as.factor(envi.cover$pair)
+envi.cover$plot <- as.factor(envi.cover$plot)
+envi.cover$block <- as.factor(envi.cover$block)
+
+split_and_name <- function(df, column) {
+  # Get the dataframe name as a string
+  df_name <- deparse(substitute(df))
+  # Ensure column exists
+  if (!column %in% colnames(df)) {
+    stop("Column not found in dataframe")
+  }
+  # Split the dataframe by the column
+  df_list <- split(df, df[[column]])
+  # Remove dataframes with 0 rows
+  df_list <- df_list[sapply(df_list, nrow) > 0]
+  # If nothing remains, stop gracefully
+  if (length(df_list) == 0) {
+    warning("All split dataframes have 0 rows; nothing to assign.")
+    return(invisible(NULL))
+  }
+  # Make valid R names for safety
+  names(df_list) <- paste0(df_name, "_", make.names(names(df_list)))
+  # Assign each dataframe into the global environment
+  list2env(df_list, envir = .GlobalEnv)
+  # Return the list invisibly
+  invisible(df_list)
+}
+split_and_name(envi.cover, "code")
+
+total.envi <- envi.cover %>%
+  group_by(year,plot,pair,block,removal,litter) %>%
+  summarise(
+    total_cover = sum(percent_cover, na.rm = TRUE)
+  )
+
+#bare ground
+bare.lmm <- lmer(percent_cover ~ litter*removal + (1|block) + (1|pair), data = envi.cover_bare_X2025)
+summary(bare.lmm)
+Anova(bare.lmm)#(Higher in Removal): p = 0.0032, Chisq = 8.6926, df = 1
+emmeans(bare.lmm, pairwise ~ litter|removal)
+emmip(bare.lmm, litter ~ removal)
+
+#litter ground
+litter.lmm <- lmer(percent_cover ~ litter*removal + (1|block) + (1|pair), data = envi.cover_litter)
+summary(litter.lmm)
+Anova(litter.lmm)#No significant difference
+emmeans(litter.lmm, pairwise ~ litter|removal)
+emmip(litter.lmm, litter ~ removal)
+#rock
+rock.lmm <- lmer(percent_cover ~ litter*removal + (1|block) + (1|pair), data = envi.cover_rock)
+summary(rock.lmm)
+Anova(rock.lmm)#No significant difference
+emmeans(rock.lmm, pairwise ~ litter|removal)
+emmip(litter.lmm, litter ~ removal)
+
+#Total Environment
+total.lmm <- lmer(total_cover ~ year*removal + (1|year) + (1|block) + (1|pair), data = total.envi)
+summary(total.lmm)
+Anova(total.lmm)# removal = 
+emmeans(total.lmm, pairwise ~ year|removal)
+emmip(total.lmm, year ~ removal)
 
 
-cs <- community_stability(rac.cover,
-                    time.var = "year",
-                    abundance.var = "percent_cover",
-                    replicate.var = "plot")
-app_turn <- turnover(
-  df = rac.cover,
-  time.var = "year",
-  species.var = "code",
-  abundance.var = "percent_cover",
-  replicate.var = "plot",
-  metric = "appearance")
+envi.total <- total.envi %>% 
+  group_by(year,removal) %>% 
+  dplyr::summarise(mean = mean(total_cover),
+                   se = sd(total_cover)/sqrt(n()))
 
-diss_turn <- turnover(
-  df = rac.cover,
-  time.var = "year",
-  species.var = "code",
-  abundance.var = "percent_cover",
-  replicate.var = "plot",
-  metric = "disappearance")
+envi.total %<>% 
+  dplyr::mutate(
+    pat = ifelse(removal == "Removal", "stripe", "none")
+  )
+
+ggplot(envi.total, aes(x = removal, y = mean, fill = removal, pattern = pat)) +
+  geom_bar_pattern(stat = "identity", color = "black", alpha = 0.8, width = 0.92, 
+                   pattern_angle = 45, pattern_density = 0.12, 
+                   pattern_spacing = 0.02, pattern_fill = '#333d29', pattern_colour = NA) +
+  geom_errorbar(aes(ymin = mean, ymax = mean + se), width = 0.2) +
+  scale_fill_manual(values = c("#333d29", "#b6ad90")) +
+  scale_pattern_manual(values = c("none", "stripe")) +
+  theme_pubr() +
+  theme(legend.position = "none",panel.grid = element_blank()) +
+  labs(x = "Parasite", y = "Environmental Cover (Bareground + Litter + Rock)")
 
 #---------delta diversity Analysis---------#
 library(statmod)
@@ -165,7 +246,7 @@ library(lme4)
 library(emmeans) # for comparison of means
 library(ggcharts)
 library(ggthemes)
-delta.div <- read.csv("Site Level Data - delta.csv")
+delta.div <- read.csv("Processed Data/Site Level Data - delta.csv")
 conflicts_prefer(lme4::lmer)
 conflicts_prefer(dplyr::mutate)
 conflicts_prefer(dplyr::arrange)
@@ -210,9 +291,9 @@ delta_plot <- delta %>%
   ) %>%
   ungroup() %>%
   mutate(
-    text_nudge_x = case_when(rich == rich_max ~ 0.7,
-                             rich <= rich_max ~ -0.7,
-                             rich >= rich_max ~ 0.7)
+    text_nudge_x = case_when(rich == rich_max ~ 1.2,
+                             rich <= rich_max ~ -1.2,
+                             rich >= rich_max ~ 1.2)
   )
 
 delta_plot %>% 
@@ -220,37 +301,22 @@ delta_plot %>%
   geom_path(aes(group = plot), color = "#b7b7a4", linewidth = 0.5) +
   geom_segment(
     data = . %>% filter(year == 2025 & arrow_draw == "arrow"),
-    aes(x = rich_2023, xend = ifelse(rich_diff > 0, rich - 0.25, rich + 0.25 )),
-    arrow = arrow(angle = 20, type = "closed", length = unit(0.40, "cm")),
-    color = "#b7b7a4") +
+    aes(x = rich_2023, xend = ifelse(rich_diff > 0, rich - 0.55, rich + 0.55)),
+    arrow = arrow(angle = 25, type = "closed", length = unit(0.24, "cm")),
+    color = "gray55") +
   geom_point(aes(color=as.factor(year)), size=3.5) +
-  geom_text(
-    aes(label = rich),
-    size = 3.25,
-    nudge_x = delta_plot$text_nudge_x) +
-  scale_color_manual(values=c("#dda15e", "#606c38")) +
+  geom_text(aes(label = rich), size = 3.25, nudge_x = delta_plot$text_nudge_x) +
+  scale_color_manual(values = c("#b6ad90", "#656d4a")) +
   theme_classic() +
+  labs_pubr() + 
   theme(strip.text = element_text(size = 15),
         strip.background = element_blank(),
         panel.border = element_rect(fill = "transparent", 
                                     color = "gray23", linewidth = 0.12)) +
-  xlim(7,26) +
+  xlim(6,26) +
   scale_y_continuous(breaks=seq(1,20,by=1))+
   facet_wrap(~removal)+
   labs(x = "Species Richness", y = "Paired Plot")
-
-
-#----------RAC Analysis----------#
-library(statmod)
-library(lme4)
-library(emmeans)#post-hoc analysis
-library(car)#for regression analysis
-
-rank.lm<- lmer(rank_change ~ litter*removal + (1|block), data = merged.rac.change)
-summary(rank.lm)
-Anova(rank.lm)
-emmip(rank.lm, litter ~ removal)
-emmeans(rank.lm, pairwise ~ removal|litter)
 
 #----------Nearest Neighbor Analysis----------#
 comb.cov.NN <- subset(cover.comb.clean, select = c('year','plot','code','functional_group',

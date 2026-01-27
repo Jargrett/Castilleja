@@ -6,7 +6,6 @@ setwd("/Users/jargrett/Desktop/Castilleja/Data Analysis/Callie Data/HPM")
 #Question (3): Does gas exchange differ between Host and parasites, both alone and within the same pot?
 
 #load in relevant packages
-library(plyr)#for data wrangling and restructuring
 library(tidyverse)#for data wrangling and restructuring
 library(statmod)
 library(lme4)
