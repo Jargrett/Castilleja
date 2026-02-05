@@ -5,7 +5,10 @@ library(magrittr)#for data wrangling and restructuring
 library(conflicted)#helps reslove errors for similar functions between packages
 library(car)
 library(litterfitter)#for k-curve fitting
-
+library(ggplot2)
+library(ggpubr)#extended functions for plottinglibrary(remotes)
+library(ggpattern)
+library(purrr)
 
 conflicted::conflicts_prefer(dplyr::filter)
 
@@ -20,13 +23,13 @@ twoyear <- read.csv("Raw Data/Litter Decomposition - 2023-2025 Two Year.csv")
 found <- read.csv("Raw Data/Litter Decomposition - Found Bags.csv")
 
 #Data Cleaning and Restructuring
- within1 %<>% 
+within1 %<>% 
   filter(missing != "Yes") %>% 
   dplyr::select(-c((missing)))
 
- within2 %<>% 
-   dplyr::select(-c((missing)))
- 
+within2 %<>% 
+  dplyr::select(-c((missing)))
+
 overwinter1 %<>% 
   filter(missing != "Yes") %>% 
   dplyr::select(-c((missing))) %>%
@@ -60,35 +63,12 @@ o <- 0.91
 decomp %<>% mutate(mass_remaining = final_dry_weight/initial_dry_weight) %>% 
   mutate(time = deployment_duration/365) %>% 
   drop_na(time) %>% 
-  filter(mass_remaining <= o)
+  filter(mass_remaining <= o) %>% 
+  mutate(across(c("time"), ~ round(.x, 2)))
 
-#Filter by litter type
-#Mixed
-decomp.mixed <- filter(decomp, litter == "Mixed")
-decomp.mixed.removal <- filter(decomp, litter == "Mixed") %>% 
-  filter(removal == "R")
-decomp.mixed.control <- filter(decomp, litter == "Mixed") %>% 
-  filter(removal == "C")
-
-#Castilleja
-decomp.castilleja <- filter(decomp, litter == "Castilleja")
-decomp.castilleja.removal <- filter(decomp, litter == "Castilleja") %>% 
-  filter(removal == "R")
-decomp.castilleja.control <- filter(decomp, litter == "Castilleja") %>% 
-  filter(removal == "C")
-
-#Community
-decomp.community <- filter(decomp, litter == "Community")
-decomp.community.removal <- filter(decomp, litter == "Community") %>% 
-  filter(removal == "R")
-decomp.community.control <- filter(decomp, litter == "Community") %>% 
-  filter(removal == "C")
-
-#Originally from Melanie
-#This is from Cornwell and Weedon, 2013 supplement. 
-#Weibull fitting function, half-life and mrt calculation.
+#function to fit weibull
 fit.weibull.nls = function(time_data, mass_data){
-  fit = nls(mass_data ~ exp(- (time_data/beta)ˆalpha), 
+  fit = nls(mass_data ~ exp(- (time_data/beta)^alpha), 
             start = list(beta = 1, alpha = 1), 
             algorithm = "port", 
             lower = c(0.0001, 0.0001))
@@ -96,15 +76,16 @@ fit.weibull.nls = function(time_data, mass_data){
 }
 
 #create dataframe to add predictions of models (for plotting)
-s <-expand.grid(time_dat = seq(0, 2.5, 0.1))
+t <- expand.grid(time_data = seq(0, 2.5, 0.01))
 
 #half-life calculation:
 half.life.calc = function(nls.mod){
   pars= coef(nls.mod)
-  hl=pars[1] * (log(2))ˆ(1/pars[2])
+  hl=pars[1] * (log(2))^(1/pars[2])
   names(hl) ="half.life"
   return(hl)
 }
+
 #mean residence time calculation:
 mrt.calc = function(nls.mod){
   pars= coef(nls.mod)
@@ -113,53 +94,99 @@ mrt.calc = function(nls.mod){
   return(mrt)
 }
 
-#Subset data into plot/litter type combinations () and fit Weibull.
-#Take a look at fit for each. Calculate halflife and mrt.
+#funtion to fit all data within the dataframe
+fit_extract_predict <- function(df, t) {
+  mod <- fit.weibull.nls(
+    time_data = df$time,
+    mass_data = df$mass_remaining)
+  hl  <- half.life.calc(nls.mod = mod)
+  mrt <- mrt.calc(nls.mod = mod)
+  pred <- predict(mod, t)
+  list(half_life = hl, mrt = mrt, pred = pred)
+}
 
-#Mixed Control
-mxd.control <- fit.weibull.nls(time_data = decomp.mixed.control$mass_remaining,
-                                mass_data = decomp.mixed.control$proportion_remaining)
-summary(mxd.control)
+#create a results dataframe for each plot as well as a list object for predicitive line
+weibull_results <- decomp %>%
+  group_by(plot, litter, removal) %>%
+  group_modify(~{
+    out <- fit_extract_predict(.x, t)
+    tibble(
+      half_life = out$half_life,
+      mrt = out$mrt,
+      pred = list(out$pred)
+    )
+  }) %>%
+  ungroup()
 
-#Mixed removal
-mxd.removal <- fit.weibull.nls(time_data = decomp.mixed.removal$mass_remaining,
-                                  mass_data = decomp.mixed.removal$proportion_remaining)
-summary(mxd.removal)
+#create a new dataframe in long for for the predictive lines
+pred_weibull<- weibull_results %>%
+  select(plot, litter, removal, pred) %>%
+  tidyr::unnest(pred) %>%
+  mutate(time_data = rep(t$time_data, times = nrow(weibull_results))) %>%
+  select(plot, litter, removal, time_data, pred)
+write.csv(pred_weibull, "Processed Data/Weibull Predictions.csv", row.names=FALSE)
 
-#Castilleja Control
-cst.control <- fit.weibull.nls(time_data = decomp.castilleja.control$mass_remaining,
-                               mass_data = decomp.castilleja.control$proportion_remaining)
-summary(cst.control)
+#remove predictive lines to create final dataset
+#cleaned dataframe for mrt and half_life plotting
+summary_decomp <- weibull_results %>%
+  select(plot, litter, removal, half_life, mrt)
+write.csv(summary_decomp, "Processed Data/Litter Decomp Values.csv", row.names=FALSE)
 
-#Mixed removal
-cst.removal <- fit.weibull.nls(time_data = decomp.castilleja.removal$mass_remaining,
-                               mass_data = decomp.castilleja.removal$proportion_remaining)
-summary(cst.removal)
-
-#Mixed Control
-com.control <- fit.weibull.nls(time_data = decomp.community.control$mass_remaining,
-                               mass_data = decomp.community.control$proportion_remaining)
-summary(com.control)
-
-#Mixed removal
-com.removal <- fit.weibull.nls(time_data = decomp.community.removal$mass_remaining,
-                               mass_data = decomp.community.removal$proportion_remaining)
-summary(com.removal)
-
+#Analysis
 
 
-s$pred_AM1B1<-predict(AM1B1_weibull, s)
+#plotting
+decomp_mrt <- summary_decomp %>% 
+  group_by(litter, removal) %>% 
+  dplyr::summarise(mean = mean(mrt),
+                   se = sd(mrt)/sqrt(n())) %>% 
+  mutate(pat = ifelse(removal == "R", "stripe", "none"))
 
 
+decomp_hl <- summary_decomp %>% 
+  group_by(litter, removal) %>% 
+  dplyr::summarise(mean = mean(half_life),
+                   se = sd(half_life)/sqrt(n())) %>% 
+  mutate(pat = ifelse(removal == "R", "stripe", "none"))
 
-ggplot(AM1B1, mapping= aes(x=years_deployed, y= proportion_remaining)) +
-  theme_bw() +
-  theme(panel.border = element_rect(colour="black", size=.7),
-        panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(), axis.line =
-          element_line(colour = "black", size=.4)) +
-  xlab("Years deployed")+
-  ylab(expression(proportion~litter~remaining)) +
-  geom_point(shape = 1) +
-  geom_line(data = s, aes(x= time_data, y = pred_AM1B1), color = "blue") +
-  ggtitle("1B1 AM")
+
+#Mean Residence Time
+ggplot(decomp_mrt, aes(x = litter , y = mean, fill = removal, pattern = pat)) +
+  geom_bar_pattern(stat = "identity", color = "black", alpha = 0.8, width = 0.92,
+                   position = position_dodge(width = 0.92),
+                   pattern_angle = 45, pattern_density = 0.12, 
+                   pattern_spacing = 0.02, pattern_fill = '#333d29', pattern_colour = NA) +
+  geom_errorbar(aes(ymin = mean - se, ymax = mean + se), width = 0.2, position = position_dodge(width = 0.92)) +
+  scale_fill_manual(values = c("#333d29", "#b6ad90")) +
+  scale_pattern_manual(values = c("none", "stripe")) +
+  theme_pubr() +
+  theme(legend.position = "none",panel.grid = element_blank()) +
+  ylim(0, 2.5) +
+  labs(x = "Litter Type", y = "Mean Resdience Time (yrs)")
+
+
+#Half Life
+ggplot(decomp_hl, aes(x = litter , y = mean, fill = removal, pattern = pat)) +
+  geom_bar_pattern(stat = "identity", color = "black", alpha = 0.8, width = 0.92,
+                   position = position_dodge(width = 0.92),
+                   pattern_angle = 45, pattern_density = 0.12, 
+                   pattern_spacing = 0.02, pattern_fill = '#333d29', pattern_colour = NA) +
+  geom_errorbar(aes(ymin = mean - se, ymax = mean + se), width = 0.2, position = position_dodge(width = 0.92)) +
+  scale_fill_manual(values = c("#333d29", "#b6ad90")) +
+  scale_pattern_manual(values = c("none", "stripe")) +
+  theme_pubr() +
+  theme(legend.position = "top", panel.grid = element_blank()) +
+  guides(pattern = "none") +
+  ylim(0, 0.5) +
+  labs(x = "Litter Type", y = "Half Life (yrs)")
+
+
+#Analysis
+hl.lme <- lm(half_life ~ litter*removal, data = summary_decomp)
+summary(hl.lme)
+Anova(hl.lme) #No significance
+
+mrt.lme <- lm(mrt ~ litter*removal, data = summary_decomp)
+summary(hl.lme)
+Anova(hl.lme) #No significance
+

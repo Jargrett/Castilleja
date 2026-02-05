@@ -123,8 +123,7 @@ ggplot(total.biomass, aes(x = removal, y = mean, fill = removal, pattern = pat))
 ggplot(biomass, aes(x = removal, y = total_no_cas,fill = removal, color = removal)) +
   geom_boxplot( lwd = 0.7, outlier.shape = NA,
               position = position_dodge(width = 0.6)) +
-  geom_point(position = position_jitterdodge(
-                                      jitter.width = 0.15,
+  geom_point(position = position_jitterdodge(jitter.width = 0.15,
                                       dodge.width = 0.10),
                                       alpha = 0.8, size = 1.6) +
   scale_color_manual(values = c("#333d29", "#4A3D21")) +

@@ -9,6 +9,10 @@ library(lme4)
 library(emmeans)#post-hoc analysis
 library(codyn)#compositional analysis
 library(labdsv)#enables restructuring for ecological analysis
+library(ggeffects)
+library(ggcharts)
+library(ggthemes)
+
 
 #Specifying conflicts
 conflicted::conflicts_prefer(dplyr::recode)
@@ -22,6 +26,8 @@ cover.pre <- read.csv("Raw Data/Emerald Lake Plant Data - pre.csv")
 cover.23 <- read.csv("Raw Data/Emerald Lake Plant Data - 2023.csv")
 cover.24 <- read.csv("Raw Data/Emerald Lake Plant Data - 2024.csv")
 cover.25 <- read.csv("Raw Data/Emerald Lake Plant Data - 2025.csv")
+
+
 
 #combine datasets
 cover.comb <- rbind.fill(cover.pre,cover.23,cover.24,cover.25)
@@ -43,6 +49,7 @@ cover.comb.clean$plot <- as.factor(cover.comb.clean$plot)
 cover.comb.clean$pair <- as.factor(cover.comb.clean$pair)
 cover.comb.clean$block <- as.factor(cover.comb.clean$block)
 saveRDS(cover.comb.clean, "Processed Data/Cleaned Cover.rds")
+
 
 #import plot data
 plot_data <- read.csv("Raw Data/Emerald Lake Plot Data - Info.csv")
@@ -136,6 +143,7 @@ total_turn <- left_join(total_turn, diss_turn, by = "plot")
 
 total_turn %<>% select(-c("year.x", "year.y", "year"))
 
+
 turn.lmm <- lmer(total ~ litter*removal + (1|block) + (1|pair), data = total_turn)
 summary(turn.lmm)
 Anova(turn.lmm)#No significance 
@@ -150,7 +158,7 @@ emmip(gain.lmm, removal ~ litter)
 
 loss.lmm <- lmer(disappearance ~ litter*removal + (1|block) + (1|pair), data = total_turn)
 summary(loss.lmm)
-Anova(loss.lmm)#litter:removal: Chisq = 12.6935, Df= 1, p = 0.0003669***
+Anova(loss.lmm)#removal: Chisq = 12.6935, Df= 1, p = 0.0003669***
 emmeans(loss.lmm, pairwise ~ removal|litter)
 emmip(loss.lmm, removal ~ litter)
 
@@ -222,28 +230,100 @@ turnover.plots <- ggarrange(turn.plot, gain.plot, loss.plot,
                           nrow = 1, ncol = 3)
 turnover.plots
 
+#---species identity changes---#
+pa_cover <- clean_cover %>%
+  complete(plot, year, code, fill = list(cover = 0)) %>%
+  mutate(present = ifelse(cover > 0, 1, 0)) %>% 
+  select(year, plot, code, present) %>% 
+  filter(code != "bare") %>% 
+  filter(code != "litter") %>% 
+  filter(code != "rock") %>% 
+  filter(code != "CASE") %>% 
+  filter(year != "2") %>% 
+  pivot_wider(names_from = year, values_from = present) %>% 
+  rename("y1" = "1", "y3" = "3")
+
+
+persist <- pa_cover %>%
+  mutate(change = case_when(
+    y1 == 0 & y3 == 1 ~ "gain",
+    y1 == 1 & y3 == 0 ~ "loss",
+    y1 == 1 & y3 == 1 ~ "persist",
+    TRUE ~ "absent")) %>%
+    filter(change != "absent")
+
+persist %<>%
+  left_join(meta, by = "plot")
+
+species_prop <- persist %>%
+  filter(change %in% c("gain", "loss")) %>%
+  group_by(removal, code, change) %>%
+  summarise(n_plots = n(), .groups = "drop") %>%
+  left_join(plots_per_treatment, by = "removal") %>%
+  mutate(prop = n_plots / n_plots.y) %>%  # proportion of plots in that treatment
+  select(removal, code, change, prop) %>%
+  arrange(removal, change, desc(prop))
+
 
 #-----species abundance changes----#
-abund <- abundance_change(clean_cover,
+meta <- plot_data %>% 
+  select(plot,removal)
+
+abund.cover <- abundance_change(clean_cover,
                      time.var = "year",
                      species.var = "code",
                      abundance.var = "percent_cover",
                      replicate.var = "plot",
                      reference.time = "1")
 
-meta <- plot_data %>% 
-  select(plot,removal)
-
-abund %<>%
+abund.cover %<>%
   filter(year2 != "2") %>% 
-  select(plot, code, change)
+  select(plot, code, change) %>% 
+  rename(percent_change = change)
 
-abund_merge <- merge(abund, meta, by = "plot")
-  
-abund_mean <- abund_merge %>% 
+
+abund_merge_cover <- merge(abund.cover, meta, by = "plot")
+
+abund_mean_cover <- abund_merge_cover %>% 
   group_by(code, removal) %>%
-  summarise(mean_change = mean(change),
-            se_change = sd(change)/sqrt(n()))
+  summarise(mean_change_cover = mean(percent_change),
+            se_change_cover = sd(percent_change)/sqrt(n()))
+
+
+abund.count <- abundance_change(clean_cover,
+                                time.var = "year",
+                                species.var = "code",
+                                abundance.var = "count",
+                                replicate.var = "plot",
+                                reference.time = "1")
+
+abund.count %<>%
+  filter(year2 != "2") %>% 
+  select(plot, code, change) %>% 
+  rename(count_change = change)
+  
+
+abund_merge_count <- merge(abund.count, meta, by = "plot")
+  
+abund_mean_cover <- abund_merge_cover %>% 
+  group_by(code, removal) %>%
+  summarise(mean_change_cover = mean(percent_change),
+            se_change_cover = sd(percent_change)/sqrt(n()))
+
+abund_mean_count <- abund_merge_count %>% 
+  group_by(code, removal) %>%
+  summarise(mean_change_count = mean(count_change),
+            se_change_count = sd(count_change)/sqrt(n()))
+
+abund_full <- inner_join(abund_mean_cover, abund_mean_count, by = c("code", 'removal'))
+
+
+abund.species <- abundance_change(clean_cover,
+                                time.var = "year",
+                                species.var = "code",
+                                abundance.var = "count",
+                                replicate.var = "plot",
+                                reference.time = "1")
 
 
 #importing dominance data
@@ -257,7 +337,7 @@ dom_year %<>%
                                  "Control" = "Present",
                                  "Removal" = "Removed")) 
 
-abund_merge_year <- merge(dom_year, abund_mean,
+abund_merge_year <- merge(dom_year, abund_full,
                           by = c("code","removal"),
                           all.x = T, all.y = T) %>% 
   drop_na(freq)
@@ -273,28 +353,64 @@ dom_total %<>%
                           "Control" = "Present",
                           "Removal" = "Removed")) 
 
-abund_merge_total <- merge(dom_total, abund_mean,
+abund_merge_total <- merge(dom_total, abund_full,
                            by = c("code","removal"),
                            all.x = T, all.y = T)
 
 total.rarity <- full_join(species_code, abund_merge_total, by = "code") %>% 
   drop_na(removal) %>% 
-  drop_na(mean_change)
+  drop_na(mean_change_cover)
+
+ggplot(total.rarity, aes(x = growth_form, y = mean_change_cover, color = dominance)) +
+  geom_point() +
+  ylim(-0.3, 0.3) +
+  geom_smooth(method = "lm") +
+  facet_wrap(~removal)
 
 #-------Abundance change Analysis-----#
 #year 1 abund only data
-ac.lm <- lm(mean_change ~ removal*dominance, data = yearly.rarity)
+ac.lm <- lm(mean_change_count ~ removal*dominance, data = yearly.rarity)
 summary(ac.lm)
 Anova(ac.lm)#No significance 
+
+#Functional Group Change
+ac.lm <- lm(mean_change_cover ~ growth_form, data = total.rarity)
+summary(ac.lm)
+Anova(ac.lm)
 
 #Full data
-ac.lm <- lm(mean_change ~ removal*dominance, data = total.rarity)
+ac.lm <- lm(mean_change_cover ~ functional_group, data = total.rarity)
 summary(ac.lm)
-Anova(ac.lm)#No significance 
+Anova(ac.lm)
 
+
+pa_data <- plant_data %>%
+  mutate(present = ifelse(cover > 0, 1, 0))
+
+species_change <- pa_data %>%
+  group_by(species, year) %>%
+  summarise(present = sum(present)>0) %>%
+  arrange(species, year) %>%
+  group_by(species) %>%
+  mutate(change = present - lag(present))
 
 #convert to matrix format for diversity calculations
 library(labdsv)#enables restructuring for ecological analysis
+comb.cov <- subset(cover.comb.clean, select = c('year','plot','code','percent_cover'))
+#filter for year/pre and calculate
+emerald.pre <- comb.cov %>% 
+  filter(year == "0") %>%
+  select(-c(year))
+emerald.23 <- comb.cov %>% 
+  filter (year == "1") %>%
+  select(-c(year))
+emerald.24 <- comb.cov %>% 
+  filter (year == "2") %>%
+  select(-c(year))
+emerald.25 <- comb.cov %>% 
+  filter (year == "3") %>%
+  select(-c(year))
+
 emerald.pre.matrix <- matrify(emerald.pre)
 emerald.23.matrix <- matrify(emerald.23)
 emerald.24.matrix <- matrify(emerald.24)
@@ -313,7 +429,7 @@ beta.25 <- betadisper(dist.25, plot$removal)
 set.seed(20)
 
 #Run NMDS on distance matrix
-nmds.25 <- metaMDS(dist.23, distance="bray", #use bray-curtis distance
+nmds.25 <- metaMDS(dist.25, distance="bray", #use bray-curtis distance
                    k=3, #2 dimensions
                    try=1000) #for publication I recommend 500)
 nmds.25#stress value 0.14 which is below .2 so we need to investigate

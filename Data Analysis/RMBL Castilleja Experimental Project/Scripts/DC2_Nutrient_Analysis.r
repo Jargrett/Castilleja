@@ -153,7 +153,7 @@ nitrate <- ggplot(soil.mean_NO3, aes(x = litter, y = mean, fill = removal, patte
                    position = position_dodge(width = 0.92),
                    pattern_angle = 45, pattern_density = 0.12, 
                    pattern_spacing = 0.02, pattern_fill = '#333d29', pattern_colour = NA) +
-  geom_errorbar(aes(ymin = mean, ymax = mean + se), width = 0.2, position = position_dodge(width = 0.92)) +
+  geom_errorbar(aes(ymin = mean - se, ymax = mean + se), width = 0.2, position = position_dodge(width = 0.92)) +
   scale_fill_manual(values = c("#333d29","#b6ad90")) +
   scale_pattern_manual(values = c("none", "stripe")) +
   theme_pubr() +
@@ -166,7 +166,7 @@ ammonium <- ggplot(soil.mean_NH4, aes(x = litter, y = mean, fill = removal, patt
                    position = position_dodge(width = 0.92),
                    pattern_angle = 45, pattern_density = 0.12, 
                    pattern_spacing = 0.02, pattern_fill = '#333d29', pattern_colour = NA) +
-  geom_errorbar(aes(ymin = mean, ymax = mean + se), width = 0.2, position = position_dodge(width = 0.92)) +
+  geom_errorbar(aes(ymin = mean - se, ymax = mean + se), width = 0.2, position = position_dodge(width = 0.92)) +
   scale_fill_manual(values = c("#333d29","#b6ad90")) +
   scale_pattern_manual(values = c("none", "stripe")) +
   theme_pubr() +
@@ -179,7 +179,7 @@ phosphorus <- ggplot(soil.mean_P, aes(x = litter, y = mean, fill = removal, patt
                    position = position_dodge(width = 0.92),
                    pattern_angle = 45, pattern_density = 0.12, 
                    pattern_spacing = 0.02, pattern_fill = '#333d29', pattern_colour = NA) +
-  geom_errorbar(aes(ymin = mean, ymax = mean + se), width = 0.2, position = position_dodge(width = 0.92)) +
+  geom_errorbar(aes(ymin = mean - se, ymax = mean + se), width = 0.2, position = position_dodge(width = 0.92)) +
   scale_fill_manual(values = c("#333d29","#b6ad90")) +
   scale_pattern_manual(values = c("none", "stripe")) +
   theme_pubr() +
@@ -192,7 +192,7 @@ potassium <- ggplot(soil.mean_K, aes(x = litter, y = mean, fill = removal, patte
                    position = position_dodge(width = 0.92),
                    pattern_angle = 45, pattern_density = 0.12, 
                    pattern_spacing = 0.02, pattern_fill = '#333d29', pattern_colour = NA) +
-  geom_errorbar(aes(ymin = mean, ymax = mean + se), width = 0.2, position = position_dodge(width = 0.92)) +
+  geom_errorbar(aes(ymin = mean - se, ymax = mean + se), width = 0.2, position = position_dodge(width = 0.92)) +
   scale_fill_manual(values = c("#333d29","#b6ad90")) +
   scale_pattern_manual(values = c("none", "stripe")) +
   theme_pubr() +
