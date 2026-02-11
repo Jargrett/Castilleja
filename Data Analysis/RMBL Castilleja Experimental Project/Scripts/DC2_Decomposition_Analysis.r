@@ -119,12 +119,28 @@ weibull_results <- decomp %>%
   ungroup()
 
 #create a new dataframe in long for for the predictive lines
-pred_weibull<- weibull_results %>%
+pred_weibull <- weibull_results %>%
   select(plot, litter, removal, pred) %>%
   tidyr::unnest(pred) %>%
   mutate(time_data = rep(t$time_data, times = nrow(weibull_results))) %>%
   select(plot, litter, removal, time_data, pred)
 write.csv(pred_weibull, "Processed Data/Weibull Predictions.csv", row.names=FALSE)
+
+#subset for plotting
+pred_cas <- pred_weibull %>% 
+  filter(litter == "Castilleja") %>% 
+  group_by(time_data, removal) %>% 
+  summarise(mean = mean(pred), se = sd(pred)/sqrt(n()))
+  
+pred_com <- pred_weibull %>% 
+  filter(litter == "Community") %>% 
+  group_by(time_data, removal) %>% 
+  summarise(mean = mean(pred), se = sd(pred)/sqrt(n()))
+
+pred_mix <- pred_weibull %>% 
+  filter(litter == "Mixed") %>% 
+  group_by(time_data, removal) %>% 
+  summarise(mean = mean(pred), se = sd(pred)/sqrt(n()))
 
 #remove predictive lines to create final dataset
 #cleaned dataframe for mrt and half_life plotting
@@ -138,7 +154,7 @@ write.csv(summary_decomp, "Processed Data/Litter Decomp Values.csv", row.names=F
 #plotting
 decomp_mrt <- summary_decomp %>% 
   group_by(litter, removal) %>% 
-  dplyr::summarise(mean = mean(mrt),
+  summarise(mean = mean(mrt),
                    se = sd(mrt)/sqrt(n())) %>% 
   mutate(pat = ifelse(removal == "R", "stripe", "none"))
 
@@ -148,6 +164,16 @@ decomp_hl <- summary_decomp %>%
   dplyr::summarise(mean = mean(half_life),
                    se = sd(half_life)/sqrt(n())) %>% 
   mutate(pat = ifelse(removal == "R", "stripe", "none"))
+
+#
+ggplot() +
+  geom_line(data = pred_cas, aes(time_data, mean), color = "#4b3b40") +
+  geom_line(data = pred_com, aes(time_data, mean), color = "#9b7e46") +
+  geom_line(data = pred_mix, aes(time_data, mean), color = "#808f87") +
+  facet_wrap(~ removal) +
+  theme_pubr() +
+  labs(x = "time since deployment", y = "proportion of litter mass remaining")
+
 
 
 #Mean Residence Time
@@ -179,6 +205,8 @@ ggplot(decomp_hl, aes(x = litter , y = mean, fill = removal, pattern = pat)) +
   guides(pattern = "none") +
   ylim(0, 0.5) +
   labs(x = "Litter Type", y = "Half Life (yrs)")
+
+
 
 
 #Analysis

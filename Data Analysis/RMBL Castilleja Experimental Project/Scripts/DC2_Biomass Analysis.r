@@ -74,12 +74,12 @@ emmeans(leg.prop.lmm, pairwise ~ litter|removal)
 shurb.lmm <- lmer(shrub_final ~ litter*removal + (1|block) + (1|pair), data = biomass)
 summary(shurb.lmm)
 Anova(shurb.lmm)# Litter p = 0.027
-emmeans(shurb.lmm, pairwise ~ litter|removal)
+emmeans(shurb.lmm, pairwise ~ removal|litter)
 
 #Shrub Biomass Proportion
 shrub.prop.lmm <- lmer(shrub_prop ~ litter*removal + (1|block) + (1|pair), data = biomass)
 summary(shrub.prop.lmm)
-Anova(shrub.prop.lmm)#Litter p = 0.020
+Anova(shrub.prop.lmm)# Litter p = 0.020
 emmeans(shrub.prop.lmm, pairwise ~ litter|removal)
 
 

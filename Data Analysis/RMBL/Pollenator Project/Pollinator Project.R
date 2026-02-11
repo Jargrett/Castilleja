@@ -13,6 +13,7 @@ library(patchwork)
 library(ggpubr)
 library(rstatix)
 library(magrittr)
+library(rsthemes)
 
 community <- read.csv("plantsurvey_castilleja - plantsurvey_Raw.csv")
 network <- read.csv("network_castilleja - network_castilleja.csv")
