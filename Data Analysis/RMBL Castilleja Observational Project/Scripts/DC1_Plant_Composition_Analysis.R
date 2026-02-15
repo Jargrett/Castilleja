@@ -18,8 +18,9 @@ library(lmerTest)
 library(patchwork)
 library(ggpubr)
 library(rstatix)
+library(permute)
 
-castilleja.cover <- readRDS("Processed Data/Total Castilleja Cover.csv")
+castilleja.cover <- readRDS("Processed Data/Total Castilleja Cover.rds")
 species.matrix <- castilleja.cover[ -c(1:16)]
 species.env <- subset(castilleja.cover, select=c(1:8))
 
@@ -41,5 +42,16 @@ nmds.scores <- as.data.frame(vegan::scores(nmds))
 NMDS <- cbind(species.env,nmds.scores) #final dataset
 saveRDS(NMDS,"NMDS.rds")
 
-perm <- adonis2(dist ~ castilleja*species + castilleja*year + castilleja*site, data = NMDS, permutations=9999)
+perm <- adonis2(dist ~ castilleja*species + castilleja*year + castilleja*site, 
+                data = NMDS, permutations = 9999)
 perm
+
+
+cap.mod <- capscale(dist ~ castilleja*species + castilleja*year + castilleja*site + Condition(pair), 
+                    data = NMDS)
+
+perm <- how(blocks = NMDS$pair, nperm = 9999)
+
+anova(cap.mod, permutations = perm, by = "terms")
+
+

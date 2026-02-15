@@ -5,7 +5,7 @@ library(ggplot2)
 library(ggpubr)
 library(hrbrthemes)
 
-castilleja.cover <- readRDS("Processed Data/Total Castilleja Cover.csv")
+castilleja.cover <- readRDS("Processed Data/Total Castilleja Cover.rds")
 
 #Diversity Graphs
 #Standard error calculations

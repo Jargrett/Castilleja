@@ -13,6 +13,7 @@ castilleja.cover <- read.csv("Processed Data/castilleja cover complete.csv")
 castilleja.cover$castilleja[castilleja.cover$castilleja == "Control"] <- "Absent"
 castilleja.cover$castilleja[castilleja.cover$castilleja == "Castilleja"] <- "Present"
 castilleja.cover <- as.data.frame(unclass(castilleja.cover),stringsAsFactors=TRUE)
+saveRDS(castilleja.cover,"Processed Data/Total Castilleja Cover.rds")
 
 #Diversity calculations
 #Import Datasets: We will be using the 23_24 Combined dataset for our analysis
