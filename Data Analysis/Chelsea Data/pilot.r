@@ -1,11 +1,10 @@
 setwd("~/Desktop/Castilleja/Data Analysis/Chelsea Data")
-#----------Data importing, cleaning, and resctructuring----------#
+
+#----------Data importing, cleaning, and restructuring----------#
 library(tidyverse)#for data wrangling and restructuring
 library(magrittr)#for data wrangling and restructuring
-library(plyr)#for data wrangling and restructuring
-library(conflicted)#helps reslove errors for similar functions between packages
+library(conflicted)#helps resolve errors for similar functions between packages
 library(car)
-library(statmod)
 library(lme4)
 library(emmeans) # for comparison of means
 library(ggpubr)

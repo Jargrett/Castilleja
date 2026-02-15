@@ -5,10 +5,7 @@ library(ggplot2)
 library(ggpubr)
 library(hrbrthemes)
 
-castilleja.cover <- read.csv("Processed Data/castilleja cover complete.csv")
-castilleja.cover$castilleja[castilleja.cover$castilleja == "Control"] <- "Absent"
-castilleja.cover$castilleja[castilleja.cover$castilleja == "Castilleja"] <- "Present"
-castilleja.cover <- as.data.frame(unclass(castilleja.cover),stringsAsFactors=TRUE)
+castilleja.cover <- readRDS("Processed Data/Total Castilleja Cover.csv")
 
 #Diversity Graphs
 #Standard error calculations
