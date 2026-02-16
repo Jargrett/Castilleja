@@ -54,4 +54,3 @@ perm <- how(blocks = NMDS$pair, nperm = 9999)
 
 anova(cap.mod, permutations = perm, by = "terms")
 
-
