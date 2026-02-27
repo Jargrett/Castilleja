@@ -43,14 +43,14 @@ NMDS <- cbind(species.env,nmds.scores) #final dataset
 saveRDS(NMDS,"NMDS.rds")
 
 perm <- adonis2(dist ~ castilleja*species + castilleja*year + castilleja*site, 
-                data = NMDS, permutations = 9999)
+                data = NMDS, permutations = 9999, by = "terms")
 perm
 
 
 cap.mod <- capscale(dist ~ castilleja*species + castilleja*year + castilleja*site + Condition(pair), 
                     data = NMDS)
 
-perm <- how(blocks = NMDS$pair, nperm = 9999)
+permy <- how(blocks = NMDS$pair, nperm = 9999)
 
-anova(cap.mod, permutations = perm, by = "terms")
+anova(cap.mod, permutations = permy, by = "terms")
 

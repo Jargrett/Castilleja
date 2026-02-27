@@ -32,8 +32,15 @@ scsc_data <- filter(full_data, plant == "SCSC")#host data
 scsc_data %<>% mutate(pot_type = recode(pot_type,
                                         "HP" = "with parasite",
                                         "H" = "alone"))
-cain_above <- filter(cain_data, bio_type == "AGB")#parasite data
-cain_below <- filter(cain_data, bio_type == "BGB")#parasite data
+
+  
+plant_root_shoot <- cain_data %>% 
+  group_by(light, pot_type, =, replicate) %>% 
+  pivot_wider(names_from = bio_type, values_from = biomass, id_cols = identity) %>% 
+  #mutate(root_shoot = BGB / AGB) %>% 
+  summarise(total_biomass = sum(biomass, na.rm = TRUE), .groups = 'drop')
+
+  
 
 
 #remove NA values from rows and columns
@@ -49,6 +56,10 @@ cain_above_mean <- cain_above %>%
   group_by(light, pot_type) %>% 
   summarise(mean = mean(biomass), se = sd(biomass)/sqrt(n()))
 
+cain_height_mean <- cain_above %>% 
+  group_by(light, pot_type) %>% 
+  summarise(mean = mean(final_height), se = sd(final_height)/sqrt(n()))
+
 cain_below_mean <- cain_below %>% 
   group_by(light, pot_type) %>% 
   summarise(mean = mean(biomass), se = sd(biomass)/sqrt(n()))
@@ -57,9 +68,21 @@ scsc_above_mean <- scsc_above %>%
   group_by(light, pot_type) %>% 
   summarise(mean = mean(biomass), se = sd(biomass)/sqrt(n()))
 
+scsc_height_mean <- scsc_above %>% 
+  group_by(light, pot_type) %>% 
+  summarise(mean = mean(final_height), se = sd(final_height)/sqrt(n()))
+
 scsc_below_mean <- scsc_below %>% 
   group_by(light, pot_type) %>% 
   summarise(mean = mean(biomass), se = sd(biomass)/sqrt(n()))
+
+
+ggplot(data = cain_above, aes(x = pot_type, y = biomass, color = light)) + 
+  geom_point() +
+  scale_color_manual(values=c("#4b3b40","#b6ad90")) +
+  labs(x = "Pot combination", y = "Parasite Aboveground Biomass") +
+  ylim(0,0.6)
+  
 
 #We will graph Paraite biomass by our two treatments (pot_type & light)
 cain.above <- ggplot(cain_above_mean, aes(x=pot_type, y=mean, fill=light)) + 
@@ -72,7 +95,8 @@ cain.above <- ggplot(cain_above_mean, aes(x=pot_type, y=mean, fill=light)) +
         plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
         legend.background = element_rect(fill='transparent'), #transparent legend bg
         legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
-  theme_pubr()
+  theme_pubr() +
+  ylim(0,0.4)
 cain.above
 
 cain.below <- ggplot(cain_below_mean, aes(x=pot_type, y=mean, fill=light)) + 
@@ -85,7 +109,8 @@ cain.below <- ggplot(cain_below_mean, aes(x=pot_type, y=mean, fill=light)) +
         plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
         legend.background = element_rect(fill='transparent'), #transparent legend bg
         legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
-  theme_pubr()
+  theme_pubr() +
+  ylim(0,0.4)
 cain.below
 
 scsc.above <- ggplot(scsc_above_mean, aes(x=pot_type, y=mean, fill=light)) + 
@@ -98,7 +123,8 @@ scsc.above <- ggplot(scsc_above_mean, aes(x=pot_type, y=mean, fill=light)) +
         plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
         legend.background = element_rect(fill='transparent'), #transparent legend bg
         legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
-  theme_pubr()
+  theme_pubr() +
+  ylim(0,0.75)
 scsc.above
 
 scsc.below <- ggplot(scsc_below_mean, aes(x=pot_type, y=mean, fill=light)) + 
@@ -111,10 +137,46 @@ scsc.below <- ggplot(scsc_below_mean, aes(x=pot_type, y=mean, fill=light)) +
         plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
         legend.background = element_rect(fill='transparent'), #transparent legend bg
         legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
-  theme_pubr()
+  theme_pubr() +
+  ylim(0,0.75)
 scsc.below
 
 biomass.plots <- ggarrange(cain.above, scsc.above, cain.below, scsc.below,
                            labels = c("A", "B","C", "D"), 
                            nrow = 2, ncol = 2)
 biomass.plots
+
+#---------Height----------#
+cain.height <- ggplot(cain_height_mean, aes(x=pot_type, y=mean, fill=light)) + 
+  geom_col(position = position_dodge(0.7), width = .6, linewidth = 0.75, alpha = 0.9, size = 0.1) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.7), width = 0.15) +
+  labs(x = "Pot combination", y = "Parasite Height") +
+  scale_fill_manual(values=c("#4b3b40","#b6ad90")) +
+  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
+        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
+        legend.background = element_rect(fill='transparent'), #transparent legend bg
+        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
+  theme_pubr() +
+  ylim(0,10)
+cain.height
+
+scsc.height <- ggplot(scsc_height_mean, aes(x=pot_type, y=mean, fill=light)) + 
+  geom_col(position = position_dodge(0.7), width = .6, linewidth = 0.75, alpha = 0.9, size = 0.1) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.7), width = 0.15) +
+  labs(x = "Pot combination", y = "Host Height") +
+  scale_fill_manual(values=c("#45463e","#b3b1be")) +
+  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
+        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
+        legend.background = element_rect(fill='transparent'), #transparent legend bg
+        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
+  theme_pubr() +
+  ylim(0,50)
+scsc.height
+
+
+height.plots <- ggarrange(cain.height, scsc.height,
+                           labels = c("A", "B"), 
+                           nrow = 1, ncol = 2)
+height.plots

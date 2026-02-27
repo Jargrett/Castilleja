@@ -19,8 +19,10 @@ castilleja.cover$castilleja[castilleja.cover$castilleja == "Castilleja"] <- "Pre
 castilleja.cover <- as.data.frame(unclass(castilleja.cover),stringsAsFactors=TRUE)
 
 #Diversity Analysis
-div <- lmer(div ~ castilleja*species + castilleja*year + (1|pair) + (1|site), data = castilleja.cover)
-summary(div)
+div1 <- lmer(div ~ castilleja*species + castilleja*year + (1|pair) + (1|site), data = castilleja.cover)
+summary(div1)
+div2 <- lmer(div ~ castilleja*species + castilleja*year + (1|site/pair), data = castilleja.cover)
+summary(div2)
 Anova(div)
 emmip(div, ~ castilleja ~ year)
 emmeans(div, pairwise ~ castilleja|year)

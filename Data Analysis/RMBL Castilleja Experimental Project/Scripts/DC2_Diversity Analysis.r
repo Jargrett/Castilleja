@@ -1,15 +1,24 @@
 setwd("~/Desktop/Castilleja/Data Analysis/RMBL Castilleja Experimental Project")
 #----------Data importing, cleaning, and restructuring----------#
 library(tidyverse)#for data wrangling and restructuring
+library(statmod)
+library(lme4)#for modeling linear mixed effect models
+library(emmeans)#post-hoc analysis
+library(car)#for regression analysis
+library(performance)#this is new
+library(see)#this is new
+library(lmerTest)
+library(patchwork)
+library(ggpubr)
+library(rstatix)
 library(magrittr)#for data wrangling and restructuring
-library(plyr)#for data wrangling and restructuring
-library(conflicted)#helps resolve errors for similar functions between packages
-library(car)
-
+library(plyr)
+library(ggnewscale)
 #Specifying conflicts
 conflicted::conflicts_prefer(dplyr::recode)
-conflicts_prefer(plyr::mutate)
-conflicts_prefer(dplyr::filter)
+conflicted::conflicts_prefer(plyr::mutate)
+conflicted::conflicts_prefer(dplyr::filter)
+conflicted::conflicts_prefer(dplyr::summarise)
 
 #important cover data (raw)
 cover.pre <- read.csv("Raw Data/Emerald Lake Plant Data - pre.csv")
@@ -29,6 +38,15 @@ cover.comb %<>%
 cover.comb.clean <- cover.comb[!(cover.comb$functional_group %in% "environmental"),]
 cover.comb.clean <- cover.comb.clean[!(cover.comb.clean$code %in% "CASE"),]
 comb.cov <- subset(cover.comb.clean, select = c('year','plot','code','percent_cover'))
+
+cover_total <- cover.comb %>% 
+  group_by(year, plot) %>% 
+  filter(year != "Pre") %>%
+  mutate(year = recode(year, "2025" = "last", "2023" = "first")) %>% 
+  summarise(plant_cover = sum(percent_cover),.groups = "drop") %>% 
+  pivot_wider(names_from = year, values_from = plant_cover) %>% 
+  mutate(delta = last - first)
+  
 
 #filter for year/pre and calculate
 emerald.pre <- comb.cov %>% 
@@ -110,42 +128,81 @@ diversity.pre %<>%
                           Control = "Present",
                           Removal = "Removed"))
 
+diversity %<>% 
+  mutate(year = recode(year,
+                       "2023" = "1",
+                       "2024" = "2",
+                       "2025" = "3",)) %>% 
+  mutate(removal = recode(removal,
+                          Control = "Present",
+                          Removal = "Removed")) %>% 
+  mutate(year = as.numeric(as.character(year)))
+
 #richness
-rich.lmm <- lmer(rich ~ removal*year + (1|block) + (1|pair), data = diversity.pre)
+rich.lmm <- lmer(rich ~ removal*litter*year + (1|block) + (1|pair), data = diversity)
 summary(rich.lmm)
 Anova(rich.lmm)#:removal:year p = 0.0008, Chisq = 16.8171, df = 3
 emmeans(rich.lmm, pairwise ~ removal|year)
 emmip(rich.lmm, removal ~ year)
+
 library(ggeffects)
 
-div.mean <- diversity.pre %>% 
+div.mean <- diversity %>% 
   group_by(year,removal) %>% 
   dplyr::summarise(mean = mean(div),
                    se = sd(div)/sqrt(n()))
 
-rich.mean <- diversity.pre %>% 
+rich.mean <- diversity %>% 
   group_by(year,removal) %>% 
   dplyr::summarise(mean = mean(rich),
                    se = sd(rich)/sqrt(n()))
 
-even.mean <- diversity.pre %>% 
+even.mean <- diversity %>% 
   group_by(year,removal) %>% 
   dplyr::summarise(mean = mean(even),
                    se = sd(even)/sqrt(n()))
 
-div.plot <- ggplot(data = rich.mean, aes(x = year, y = mean, color = removal, group = removal)) +
-  geom_point(shape=18, size = 4,position =  position_dodge(width = 0.5)) +
-  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
-                position =  position_dodge(width = 0.5), width = 0.07) +
-  geom_line(position =  position_dodge(width = 0.5)) +
+div.plot <- ggplot(data = rich.mean, aes(x = year, y = mean)) +
+  geom_point(data = diversity, aes(x = year, y = rich, color = removal),
+             position = position_jitterdodge(0.2, dodge.width = .3), size = 2, alpha = 0.5) +
+  scale_color_manual(values = c("#909256", "#C1A575")) +
+  ggnewscale::new_scale_color() +
+  geom_point(aes(shape = removal, color = removal), shape = 18, size = 4.5, 
+             position = position_dodge(width = 0.2)) +
+  geom_errorbar(aes(ymin = mean - se, ymax = mean + se, color = removal),
+                position = position_dodge(width = 0.2), width = 0.07) +
+  geom_line(aes(color = removal), 
+            position = position_dodge(width = 0.2)) +
+  scale_color_manual(values = c("#333d29", "#A17D5D")) +  # ← your new colors here
   theme_pubr() +
-  scale_color_manual(values = c("#333d29", "#b6ad90")) +
   theme(strip.text = element_text(size = 15),
         strip.background = element_blank(),
-        panel.border = element_rect(fill = "transparent", 
+        panel.border = element_rect(fill = "transparent",
                                     color = "gray", linewidth = 0.12)) +
-  labs(x = "Growing Season", y = "Species Richness") 
+  xlim(0.8, 3.2) +
+  ylim(5, 25) +
+  labs(x = "Growing Season", y = "Species Richness")
+
 div.plot
+
+div.line.plot <- ggplot(data = diversity, aes(x = year, y = div, color = removal)) +
+  geom_point() +
+  geom_smooth(method='lm') +
+  theme_pubr() +
+  scale_color_manual(values = c("#333d29", "#b6ad90")) +
+  labs(x = "Growing Season", y = "Shannon Diversity") 
+div.line.plot
+
+
+#richness linear graph
+ggplot(diversity, aes(x = year, y = div, color = removal, group = removal)) +
+  geom_smooth(method = "lm", se = TRUE, alpha = 0.2, linewidth = 0.8) +
+  geom_jitter(size = 2, width = 0.1, height = 0, alpha = 0.7) +
+  scale_color_manual(values = c("#333d29", "#b6ad90")) +
+  theme_pubr() +
+  xlim(0.8,3.2) +
+  ylim(5,25) +
+  labs(x = "Growing Season", y = "Species Richness") 
 
 #-------Bare Ground Analysis------#
 envi.cover <- cover.comb %>% 
@@ -246,6 +303,15 @@ library(lme4)
 library(emmeans) # for comparison of means
 library(ggcharts)
 library(ggthemes)
+
+merged_delta <- merge(cover_total, delta.div, by = "plot")
+
+delta.cover <- lmer(delta ~ litter*removal + (1|block) + (1|pair), data = merged_delta)
+summary(delta.cover)
+Anova(delta.cover)
+emmip(delta.cover, litter~removal)
+emmeans(delta.cover, pairwise ~ litter|removal)
+
 delta.div <- read.csv("Processed Data/Site Level Data - delta.csv")
 conflicts_prefer(lme4::lmer)
 conflicts_prefer(dplyr::mutate)
@@ -304,18 +370,18 @@ delta_plot %>%
     aes(x = rich_2023, xend = ifelse(rich_diff > 0, rich - 0.55, rich + 0.55)),
     arrow = arrow(angle = 25, type = "closed", length = unit(0.24, "cm")),
     color = "gray55") +
-  geom_point(aes(color=as.factor(year)), size=3.5) +
+  geom_point(aes(color = year), size = 3.5,) +
   geom_text(aes(label = rich), size = 3.25, nudge_x = delta_plot$text_nudge_x) +
-  scale_color_manual(values = c("#b6ad90", "#656d4a")) +
+  scale_color_manual(values = c("#cbbbaa", "#45463e")) +
   theme_classic() +
   labs_pubr() + 
   theme(strip.text = element_text(size = 15),
         strip.background = element_blank(),
         panel.border = element_rect(fill = "transparent", 
-                                    color = "gray23", linewidth = 0.12)) +
-  xlim(6,26) +
-  scale_y_continuous(breaks=seq(1,20,by=1))+
-  facet_wrap(~removal)+
+                                    color = "gray23", linewidth = 0.05)) +
+  xlim(6,28) +
+  scale_y_continuous(breaks = seq(1, 20, by = 1)) +
+  facet_wrap(~removal) +
   labs(x = "Species Richness", y = "Paired Plot")
 
 #----------Nearest Neighbor Analysis----------#

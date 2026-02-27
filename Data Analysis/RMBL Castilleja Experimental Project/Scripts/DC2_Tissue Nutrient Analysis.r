@@ -128,8 +128,8 @@ litter.scores <- as.data.frame(vegan::scores(litter.nmds))
 
 litter.NMDS <- cbind(litter,litter.scores) #final dataset
 
-perm <- adonis2(dist.litter ~ litter, data = NMDS, permutations=9999)
-perm
+perm <- adonis2(dist.litter ~ litter_bag, data = litter.NMDS, permutations=9999, by = "terms")
+perm # df = 2, R2 = 0.74, f = 37.38, p < 001
 
 ggplot(litter.NMDS, aes(NMDS1, NMDS2)) +
   geom_point(aes(color=litter_bag , shape = litter_bag), size = 2.2, alpha = 1) +
@@ -137,7 +137,8 @@ ggplot(litter.NMDS, aes(NMDS1, NMDS2)) +
   stat_ellipse(geom = "polygon", segments = 20, linetype = 2, alpha = 0.1, aes(group = litter_bag)) +
   stat_ellipse(segments = 20, linetype = 2, alpha = 0.5, aes(group = litter_bag)) +
   coord_equal() +
-  theme_bw()
+  theme_bw() +
+  theme(legend.position = "top")
 
 #-------Tissue Type------#
 tissue.matrix <- tissue %>%
@@ -172,6 +173,8 @@ ggplot(tissue.NMDS, aes(NMDS1, NMDS2)) +
   stat_ellipse(segments = 20, linetype = 2, alpha = 0.5, aes(group = organ)) +
   coord_equal() +
   theme_bw()
+
+
 #-------Senescence------#
 senesc.matrix <- senescence %>%
 mutate(lab_id = as.factor(lab_id)) %>% 
