@@ -28,19 +28,61 @@ cain_data <- filter(full_data, plant == "CAIN")#parasite data
 cain_data %<>% mutate(pot_type = recode(pot_type,
                           "HP" = "with host",
                           "P" = "alone"))
+cain_above <- filter(cain_data, bio_type == "AGB")#parasite data
+cain_below <- filter(cain_data, bio_type == "BGB")#parasite data
+
+
 scsc_data <- filter(full_data, plant == "SCSC")#host data
 scsc_data %<>% mutate(pot_type = recode(pot_type,
                                         "HP" = "with parasite",
                                         "H" = "alone"))
-
+scsc_above <- filter(scsc_data, bio_type == "AGB")#parasite data
+scsc_below <- filter(scsc_data, bio_type == "BGB")#parasite data
   
-plant_root_shoot <- cain_data %>% 
-  group_by(light, pot_type, =, replicate) %>% 
-  pivot_wider(names_from = bio_type, values_from = biomass, id_cols = identity) %>% 
-  #mutate(root_shoot = BGB / AGB) %>% 
-  summarise(total_biomass = sum(biomass, na.rm = TRUE), .groups = 'drop')
 
-  
+#------Analysis-------#
+#SCSC Final Height
+scsc.height.lm <- lmer(final_height ~ light*pot_type + (1|replicate), data = scsc_data)
+summary(scsc.height.lm)
+Anova(scsc.height.lm) #pot_type p < 0.001
+emmeans(scsc.height.lm, pairwise ~ light*pot.type)
+emmip(scsc.height.lm, ~ light ~ pot.type)
+
+#CAIN Final Height
+cain.height.lm <- lmer(final_height ~ light*pot_type + (1|replicate), data = cain_data)
+summary(cain.height.lm)
+Anova(cain.height.lm) #pot_type p < 0.001
+emmeans(cain.height.lm, pairwise ~ light*pot.type)
+emmip(cain.height.lm, ~ light ~ pot.type)
+
+
+#SCSC Above
+scsc.above.lm <- lmer(biomass ~ light*pot_type + (1|replicate), data = scsc_above)
+summary(scsc.above.lm)
+Anova(scsc.above.lm) #light p = 0.03, pot_type p < 0.001
+emmeans(scsc.above.lm, pairwise ~ light*pot_type)
+emmip(scsc.above.lm, ~ light ~ pot_type)
+
+#SCSC Below
+scsc.below.lm <- lmer(biomass ~ light*pot_type + (1|replicate), data = scsc_below)
+summary(scsc.below.lm)
+Anova(scsc.below.lm) #light:pot_type p < 0.0001
+emmeans(scsc.below.lm, pairwise ~ light*pot_type)
+emmip(scsc.below.lm, ~ light ~ pot_type)
+
+#CAIN Above
+cain.above.lm <- lmer(biomass ~ light*pot_type + (1|replicate), data = cain_above)
+summary(cain.above.lm)
+Anova(cain.above.lm) #light p < 0.001, pot_type p < 0.001
+emmeans(cain.above.lm, pairwise ~ light*pot_type)
+emmip(cain.above.lm, ~ light ~ pot_type)
+
+#CAIN Below
+cain.below.lm <- lmer(biomass ~ light*pot_type + (1|replicate), data = cain_below)
+summary(cain.below.lm)
+Anova(cain.below.lm) #light:pot_type p < 0.035
+emmeans(cain.below.lm, pairwise ~ light*pot_type)
+emmip(cain.below.lm, ~ light ~ pot_type)
 
 
 #remove NA values from rows and columns
