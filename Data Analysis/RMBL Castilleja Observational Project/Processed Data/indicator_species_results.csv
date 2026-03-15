@@ -1,0 +1,19 @@
+"site","species","treatment_group","stat","p.value"
+"Avery","Thalictrum.fendleri","Present",0.297675497837434,0.0045
+"Avery","Campanula.petiolata","Present",0.275663881148874,0.0304
+"Avery","Cymopterus.lemmonii","Absent",0.270203708859149,0.0753
+"Copper Creek","Fragaria.virginiana","Present",0.228275844639619,0.0053
+"Copper Creek","Erigeron.coulteri","Present",0.209927636113027,0.0268
+"Copper Creek","Viola.adunca","Present",0.179114240815181,0.0757
+"Emerald Lake","Heliomerus.multiflora","Absent",0.196837404096315,0.0812
+"Deer Creek 1","Eremogone.congesta","Present",0.160002961442713,0.0471
+"Deer Creek 1","Ipomopsis.aggregatta","Absent",0.219852504018247,0.0687
+"Deer Creek 1","Elymus.elymoides","Absent",0.205549227724949,0.0782
+"Deer Creek 2","Delphinum.nuttalliianum","Present",0.262500677946841,0.0019
+"Deer Creek 2","Eremogone.congesta","Present",0.158598061343925,0.0182
+"Deer Creek 2","Koeleria.macrantha","Present",0.228001458460982,0.0441
+"Deer Creek 2","Gayophytum.sp.","Absent",0.241312014077273,0.0575
+"Deer Creek 2","Erigeron.speciosus","Absent",0.206724840757188,0.085
+"Johnson Hill","Chrysothamnus.vaseyi","Present",0.222131531360864,0.0522
+"Johnson Hill","Crepis.sp.","Present",0.135219599713844,0.0806
+"Almont","Elymus.lanceolatus","Absent",0.172536192167621,0.0636

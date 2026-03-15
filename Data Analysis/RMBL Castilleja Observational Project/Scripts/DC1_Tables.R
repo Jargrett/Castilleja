@@ -5,6 +5,9 @@ library(flextable)#table creation and formatting
 library(conflicted)#settle package conflicts
 library(gtsummary)#to make summary tables for models
 
+conflicts_prefer(flextable::font)
+conflicts_prefer(plyr::mutate)
+
 #Create theme for All Tables
 my_theme <- function(x, ...) {
   x <- colformat_double(x, big.mark = "'", decimal.mark = ".", digits = 3)
@@ -22,6 +25,7 @@ my_theme <- function(x, ...) {
 }
 thin <- fp_border_default(width = 0.5)
 thick <- fp_border_default(width = 1.5)
+
 #Create Site Data Table
 site.main <- read.csv("Processed Data/Castilleja Observational Project Tables - Site.csv",check.names = FALSE)
 site <- flextable(site.main) %>% 
@@ -39,22 +43,44 @@ site <- hline(site, i = 6, border = thin)
 # site <- set_caption(site, site.title)
 site
 
-#Create indicator Data Table
-ind.main <-  read.csv("Processed Data/Castilleja Observational Project Tables - Indicator.csv",check.names = FALSE)
-ind <- flextable(ind.main) %>% 
+#Indicator Data Table
+ind.main <-  read.csv("Processed Data/Castilleja Observational Project Tables - Indicator real.csv",check.names = FALSE)
+ind.main <- ind.main %>%
+  mutate(
+    pval_numeric = `P-value`,  # keep numeric copy for conditions
+    `P-value` = case_when(
+      pval_numeric < 0.001 ~ paste0(round(pval_numeric, 3), "***"),
+      pval_numeric < 0.01  ~ paste0(round(pval_numeric, 3), "**"),
+      pval_numeric < 0.05  ~ paste0(round(pval_numeric, 3), "*"),
+      pval_numeric < 0.1   ~ paste0(round(pval_numeric, 3), "."),
+      TRUE                 ~ as.character(round(pval_numeric, 3))
+    )
+  )
+
+ind <- flextable(ind.main) %>%  
   italic(j = "Castilleja species", part = "body") %>% 
   italic(j = "Indicator species", part = "body") %>% 
-  merge_at(i = 1:5, j = 1) %>% 
-  merge_at(i = 6:12, j = 1) %>% 
-  merge_at(i = 1:2, j = 2) %>% 
-  merge_at(i = 3:5, j = 2) %>% 
-  merge_at(i = 6:9, j = 2) %>% 
-  merge_at(i = 10:12, j = 2) %>% 
   my_theme(site)
-ind <- bold(ind, i = ~ `P-value` < 0.05, j = "P-value")
-ind <- hline(ind, i = 5, border = thin)
-ind <- hline(ind, i = 2, border = thin)
-ind <- hline(ind, i = 9, border = thin)
+
+ind <- bold(ind, i = ~ pval_numeric < 0.05, j = "Indicator species")  
+ind <- bold(ind, i = ~ pval_numeric < 0.05, j = "P-value")
+
+ind <- delete_columns(ind, j = "pval_numeric")
+
+ind <- merge_at(ind, i = 1:6, j = 1) %>% 
+  merge_at(i = 7:14, j = 1) %>%
+  merge_at(i = 15:16, j = 1) %>% 
+  merge_at(i = 2:4, j = 2) %>% 
+  merge_at(i = 5:6, j = 2) %>% 
+  merge_at(i = 7:8, j = 2) %>%
+  merge_at(i = 9:13, j = 2) %>% 
+  merge_at(i = 15:16, j = 2) %>% 
+  hline(i = 6, border = thick) %>%
+  hline(i = 14, border = thick) %>%
+  hline(i = 1, border = thin) %>%
+  hline(i = 4, border = thin) %>%
+  hline(i = 8, border = thin) %>%
+  hline(i = 13, border = thin)
 ind
 
 #Host Data Table

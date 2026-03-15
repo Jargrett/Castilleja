@@ -3,7 +3,8 @@ setwd("/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL Castilleja Observat
 #Packages
 library(ggplot2)
 library(ggpubr)
-library(hrbrthemes)
+library(dplyr)
+
 
 castilleja.cover <- readRDS("Processed Data/Total Castilleja Cover.rds")
 
@@ -26,6 +27,7 @@ castilleja.even <- castilleja.cover %>%
 castilleja.div$colcast = castilleja.div$castilleja
 castilleja.rich$colcast = castilleja.rich$castilleja
 castilleja.even$colcast = castilleja.even$castilleja
+
 #Diveristy
 div.plot <- ggplot(data = castilleja.div, aes(x = reorder(castilleja, -mean), y = mean, color = castilleja)) +
   geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
@@ -151,6 +153,150 @@ ordination.plot
 
 ggsave(plot = ordination.plot, filename = 'Figures and Tables/Ordination.png',
        width = 10 ,height = 10, units = "in", dpi = 600, 
+       bg = "transparent")
+
+#Site level
+avery.NMDS <- filter(NMDS, site == "Avery")
+
+avery.ordination.plot <- ggplot(avery.NMDS, aes(NMDS1, NMDS2)) +
+  geom_point(aes(color= castilleja , shape = castilleja), size = 2.2, alpha = 0.8) +
+  scale_color_manual( values=c("#D6A839", "#71A4A0")) +
+  stat_ellipse(segments = 20, linetype = 2, alpha = 0.5, aes(group = castilleja)) +
+  coord_equal() +
+  ggtitle("Avery") +
+  theme(strip.text = element_text(size = 15),
+        strip.background = element_blank(),
+        panel.border = element_rect(fill = "transparent", 
+                                    color = "gray23", linewidth = 0.12)) +
+  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
+        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
+        legend.background = element_rect(fill='transparent'), #transparent legend bg
+        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
+  theme_bw()
+avery.ordination.plot
+
+emerald.NMDS <- filter(NMDS, site == "Emerald Lake")
+
+emerald.ordination.plot <- ggplot(emerald.NMDS, aes(NMDS1, NMDS2)) +
+  geom_point(aes(color= castilleja , shape = castilleja), size = 2.2, alpha = 0.8) +
+  scale_color_manual( values=c("#D6A839", "#71A4A0")) +
+  stat_ellipse(segments = 20, linetype = 2, alpha = 0.5, aes(group = castilleja)) +
+  coord_equal() +
+  ggtitle("Emerald Lake") +
+  theme(strip.text = element_text(size = 15),
+        strip.background = element_blank(),
+        panel.border = element_rect(fill = "transparent", 
+                                    color = "gray23", linewidth = 0.12)) +
+  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
+        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
+        legend.background = element_rect(fill='transparent'), #transparent legend bg
+        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
+  theme_bw()
+emerald.ordination.plot
+
+copper.NMDS <- filter(NMDS, site == "Copper Creek")
+
+copper.ordination.plot <- ggplot(copper.NMDS, aes(NMDS1, NMDS2)) +
+  geom_point(aes(color= castilleja , shape = castilleja), size = 2.2, alpha = 0.8) +
+  scale_color_manual( values=c("#D6A839", "#71A4A0")) +
+  stat_ellipse(segments = 20, linetype = 2, alpha = 0.5, aes(group = castilleja)) +
+  coord_equal() +
+  ggtitle("Copper Creek") +
+  theme(strip.text = element_text(size = 15),
+        strip.background = element_blank(),
+        panel.border = element_rect(fill = "transparent", 
+                                    color = "gray23", linewidth = 0.12)) +
+  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
+        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
+        legend.background = element_rect(fill='transparent'), #transparent legend bg
+        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
+  theme_bw()
+copper.ordination.plot
+
+dc1.NMDS <- filter(NMDS, site == "Deer Creek 1")
+
+dc1.ordination.plot <- ggplot(dc1.NMDS, aes(NMDS1, NMDS2)) +
+  geom_point(aes(color= castilleja , shape = castilleja), size = 2.2, alpha = 0.8) +
+  scale_color_manual( values=c("#D6A839", "#71A4A0")) +
+  stat_ellipse(segments = 20, linetype = 2, alpha = 0.5, aes(group = castilleja)) +
+  coord_equal() +
+  ggtitle("Deer Creek 1") +
+  theme(strip.text = element_text(size = 15),
+        strip.background = element_blank(),
+        panel.border = element_rect(fill = "transparent", 
+                                    color = "gray23", linewidth = 0.12)) +
+  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
+        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
+        legend.background = element_rect(fill='transparent'), #transparent legend bg
+        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
+  theme_bw()
+dc1.ordination.plot
+
+dc2.NMDS <- filter(NMDS, site == "Deer Creek 2")
+
+dc2.ordination.plot <- ggplot(dc2.NMDS, aes(NMDS1, NMDS2)) +
+  geom_point(aes(color= castilleja , shape = castilleja), size = 2.2, alpha = 0.8) +
+  scale_color_manual( values=c("#D6A839", "#71A4A0")) +
+  stat_ellipse(segments = 20, linetype = 2, alpha = 0.5, aes(group = castilleja)) +
+  coord_equal() +
+  ggtitle("Deer Creek 2") +
+  theme(strip.text = element_text(size = 15),
+        strip.background = element_blank(),
+        panel.border = element_rect(fill = "transparent", 
+                                    color = "gray23", linewidth = 0.12)) +
+  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
+        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
+        legend.background = element_rect(fill='transparent'), #transparent legend bg
+        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
+  theme_bw()
+dc2.ordination.plot
+
+johnson.NMDS <- filter(NMDS, site == "Johnson Hill")
+
+jh.ordination.plot <- ggplot(johnson.NMDS, aes(NMDS1, NMDS2)) +
+  geom_point(aes(color= castilleja , shape = castilleja), size = 2.2, alpha = 0.8) +
+  scale_color_manual( values=c("#D6A839", "#71A4A0")) +
+  stat_ellipse(segments = 20, linetype = 2, alpha = 0.5, aes(group = castilleja)) +
+  coord_equal() +
+  ggtitle("Johnson Hill") +
+  theme(strip.text = element_text(size = 15),
+        strip.background = element_blank(),
+        panel.border = element_rect(fill = "transparent", 
+                                    color = "gray23", linewidth = 0.12)) +
+  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
+        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
+        legend.background = element_rect(fill='transparent'), #transparent legend bg
+        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
+  theme_bw()
+jh.ordination.plot
+
+
+almont.NMDS <- filter(NMDS, site == "Almont")
+
+al.ordination.plot <- ggplot(almont.NMDS, aes(NMDS1, NMDS2)) +
+  geom_point(aes(color= castilleja , shape = castilleja), size = 2.2, alpha = 0.8) +
+  scale_color_manual( values=c("#D6A839", "#71A4A0")) +
+  stat_ellipse(segments = 20, linetype = 2, alpha = 0.5, aes(group = castilleja)) +
+  coord_equal() +
+  ggtitle("Almont") +
+  theme(strip.text = element_text(size = 15),
+        strip.background = element_blank(),
+        panel.border = element_rect(fill = "transparent", 
+                                    color = "gray23", linewidth = 0.12)) +
+  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
+        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
+        legend.background = element_rect(fill='transparent'), #transparent legend bg
+        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
+  theme_bw()
+al.ordination.plot
+
+nmds.plots <- ggarrange(emerald.ordination.plot, avery.ordination.plot, dc2.ordination.plot, dc2.ordination.plot, jh.ordination.plot, al.ordination.plot,
+                          labels = c("A", "B", "C", "D", "E", "F"), 
+                          nrow = 2, ncol = 3, common.legend = TRUE, legend = "top")
+nmds.plots
+
+ggsave(plot = nmds.plots, filename = 'Figures and Tables/Site level NMDS.png',
+       width = 15 ,height = 10, units = "in", dpi = 600, 
        bg = "transparent")
 
 #Nearest Neighbor

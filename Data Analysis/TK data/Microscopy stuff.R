@@ -10,6 +10,7 @@ library(ggplot2)
 library(magrittr)#for data wrangling and restructuring
 library(conflicted)#helps resolve errors for similar functions between packages
 
+
 microscopy <- read.csv("HPM Microscopy - AMF.csv")
 microscopy <- as.data.frame(unclass(microscopy),stringsAsFactors = TRUE)
 str(microscopy)

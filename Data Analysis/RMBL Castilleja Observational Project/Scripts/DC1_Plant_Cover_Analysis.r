@@ -11,6 +11,7 @@ library(lmerTest)
 library(patchwork)
 library(rstatix)
 library(sjPlot)
+library(ggpmisc)
 
 #Diversity and Cover data file (combined in excel)
 castilleja.cover <- read.csv("Processed Data/castilleja cover complete.csv")
@@ -19,10 +20,8 @@ castilleja.cover$castilleja[castilleja.cover$castilleja == "Castilleja"] <- "Pre
 castilleja.cover <- as.data.frame(unclass(castilleja.cover),stringsAsFactors=TRUE)
 
 #Diversity Analysis
-div1 <- lmer(div ~ castilleja*species + castilleja*year + (1|pair) + (1|site), data = castilleja.cover)
-summary(div1)
-div2 <- lmer(div ~ castilleja*species + castilleja*year + (1|site/pair), data = castilleja.cover)
-summary(div2)
+div <- lmer(div ~ castilleja*species + castilleja*year + (1|pair) + (1|site), data = castilleja.cover)
+summary(div)
 Anova(div)
 emmip(div, ~ castilleja ~ year)
 emmeans(div, pairwise ~ castilleja|year)
@@ -38,6 +37,28 @@ summary(even)
 Anova(even) 
 emmip(even, castilleja ~ year)
 emmeans(even, pairwise ~ castilleja|year)
+
+
+#abundance analysis
+presence_data <- filter(castilleja.cover, castilleja == "Present")
+cast.div <- lmer(div ~ cast_cover*species + (1|pair) + (1|site), data = presence_data)
+summary(cast.div)
+Anova(cast.div)
+emmip(cast.div, ~ species ~ cast_cover)
+emmeans(cast.div, pairwise ~ cast_cover|species)
+
+
+ggplot(presence_data, aes(x = cast_cover, y = div, color = species)) +
+  geom_point(alpha = 0.7, size = 2) +
+  geom_smooth(method = "lm", se = TRUE, aes(fill = species), alpha = 0.15) +
+  stat_poly_eq(aes(label = after_stat(rr.label), group = species),
+               formula = y ~ x,
+               parse   = TRUE,
+               size    = 3) +
+  theme_classic() +
+  facet_wrap(~species) +
+  theme(legend.position  = "bottom",
+        legend.text      = element_text(face = "italic"))
 
 #Summary Output
 tab_model(div, p.val = "kr", show.df = TRUE)

@@ -37,7 +37,7 @@ hetero.height.long <- hetero.height %>% pivot_longer(cols=8:15, names_to = "week
 height.long <- rbind(agalinis.height.long, hetero.height.long)
 
 #Height over time MLE logistic fitting
-height.long$week <- as.numeric(gsub("t","",height.long$week))
+height.long$week <- as.numeric(gsub("t","", height.long$week))
 
 fit_logistic_model <- function(height.long) {
   time <- height.long$week
@@ -101,6 +101,8 @@ results_height2 %>%
   labs(x="Week",y="Height") +
   theme_classic()
 
+
+
 #Leaf Number: import, clean and rename height data
 leaf <- read.csv("HPM Growth - Leaf_Number.csv")
 str(leaf)
@@ -160,7 +162,7 @@ emmip(ag.height.lm, ~ type ~ treatment)
 #AGPU Final Leaf Number
 ag.leaf.lm <- lmer(t8 ~ treatment*type + (1|replicate_id), data = agalinis.leaf)
 summary(ag.leaf.lm)
-Anova(ag.leaf.lm) #treatment:type  Chisq = 3.847, p = 0.049
+Anova(ag.leaf.lm) 
 emmeans(ag.leaf.lm, pairwise ~ type|treatment)
 emmip(ag.leaf.lm, ~ type ~ treatment)
 
@@ -332,7 +334,7 @@ t8.ag.leaf.graph <- ggplot(agpu.leaf, aes(x = treatment, y = mean, color = type)
 
 t8.ag.leaf.graph
 
-t8.he.leaf.graph <- ggplot(hesu.leaf, aes(x = treatment, y = mean, color = type)) +
+t8.he.leaf.graph <- ggplot(hesu.Leaf, aes(x = treatment, y = mean, color = type)) +
   geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
                 position =  position_dodge(width = 0.5), linewidth = 1, width = 0.09) +
   geom_point(aes(shape = type), size = 6, position =  position_dodge(width = 0.5)) +
@@ -459,7 +461,7 @@ emmip(ag.bg.lm, ~ type ~ treatment)
 #Total
 ag.tb.lm <- lmer(total_biomass ~ treatment*type + (1|replicate_id), data = agalinis.biomass)
 summary(ag.tb.lm)
-Anova(ag.tb.lm)
+Anova(ag.tb.lm) #Treatment:type Chisq = 41.3350, p < 0.0001
 emmeans(ag.tb.lm, pairwise ~ type|treatment)
 emmip(ag.tb.lm, ~ type ~ treatment)
 
@@ -481,21 +483,21 @@ emmip(he.ag.lm, ~ type ~ treatment)
 #belowground
 he.bg.lm <- lmer(below_total ~ treatment*type + (1|replicate_id), data = hetero.biomass)
 summary(he.bg.lm)
-Anova(he.bg.lm)
+Anova(he.bg.lm) #type Chisq = 18.4559, p < 0.0001
 emmeans(he.bg.lm, pairwise ~ type|treatment)
 emmip(he.bg.lm, ~ type ~ treatment)
 
 #total
 he.tb.lm <- lmer(total_biomass ~ treatment*type + (1|replicate_id), data = hetero.biomass)
 summary(he.tb.lm)
-Anova(he.tb.lm)
+Anova(he.tb.lm) #type Chisq = 12.9238, p < 0.0001
 emmeans(he.tb.lm, pairwise ~ type|treatment)
 emmip(he.tb.lm, ~ type ~ treatment)
 
 #Root:shoot
 he.rs.lm <- lmer(root_shoot ~ treatment*type + (1|replicate_id), data = hetero.biomass)
 summary(he.rs.lm)
-Anova(he.rs.lm)
+Anova(he.rs.lm) #type Chisq = 11.6842, p < 0.0001
 emmeans(he.rs.lm, pairwise ~ type|treatment)
 emmip(he.rs.lm, ~ type ~ treatment)
 
@@ -644,6 +646,53 @@ ggsave(plot = biomass.plots, filename = 'biomass.png',
        width = 10 ,height = 8, units = "in", dpi = 600, 
        bg = "transparent")
 
+agalinis.total <- ggplot(data = sd.ag.total, aes(x = treatment, y = mean, fill = type)) +
+  geom_col(position = position_dodge(0.7), width = .6, linewidth = 0.75, alpha = 0.9, size = 0.1) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.7), width = 0.15) +
+  theme_pubr() +
+  scale_fill_manual( values=c("#71A4A0", "#D6A839")) +
+  labs(x = "Fungi", y = "Total Biomass (g)") +
+  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
+        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
+        legend.background = element_rect(fill='transparent'), #transparent legend bg
+        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
+  ylim(0,4)
+agalinis.total 
+
+hetero.total <- ggplot(data = sd.he.total, aes(x = treatment, y = mean, fill = type)) +
+  geom_col(position = position_dodge(0.7), width = .6, linewidth = 0.75, alpha = 0.9, size = 0.1) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.7), width = 0.15) +
+  theme_pubr() +
+  scale_fill_manual( values=c("#3d405b", "#e07a5f")) +
+  labs(x = "Fungi", y = "Total Biomass (g)") +
+  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
+        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
+        legend.background = element_rect(fill='transparent'), #transparent legend bg
+        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
+  ylim(0,3)
+hetero.total 
+
+hetero.rs.plot <- ggplot(data = sd.he.rootshoot, aes(x = treatment, y = mean, fill = type)) +
+  geom_col(position = position_dodge(0.7), width = .6, linewidth = 0.75, alpha = 0.9, size = 0.1) +
+  geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
+                position =  position_dodge(width = 0.7), width = 0.15) +
+  theme_pubr() +
+  scale_fill_manual( values=c("#3d405b", "#e07a5f")) +
+  
+  labs(x = "Fungi", y = "Root:Shoot Ratio") +
+  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
+        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
+        legend.background = element_rect(fill='transparent'), #transparent legend bg
+        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
+  ylim(0,4)
+hetero.rs.plot 
+
+rs.plots <- ggarrange(agalinis.rs.plot, hetero.rs.plot,
+                              labels = c("A","B"), 
+                              nrow = 1, ncol = 2, common.legend = TRUE)
+rs.plots
 #-------------------------PHYSIOLOGY----------------------------------#
 library(gasanalyzer)
 physiology <- read.csv("HPM Physiology - Phys.csv")
@@ -694,7 +743,7 @@ emmip(he.carb.lm, ~ type ~ treatment)
 #Transpiration
 he.trans.lm <- lmer(E ~ treatment*type + (1|replicate_id), data = hetero.physiology)
 summary(he.trans.lm)
-Anova(he.trans.lm) #type: chisq = 3.578, p = 0.059. treatment:type: chisq = 2.829, p = 0.0926.
+Anova(he.trans.lm) #type: chisq = 3.578, p = 0.059. 
 emmeans(he.trans.lm, pairwise ~ type|treatment)
 emmip(he.trans.lm, ~ type ~ treatment)
 
@@ -707,21 +756,21 @@ emmip(he.sto.lm, ~ type ~ treatment)
 
 #Comparative Work
 #Carbon assimilation (photosynthesis)
-comp.carb.lm <- lmer(A ~ species*treatment + (1|replicate_id), data = physiology)
+comp.carb.lm <- lmer(A ~ species*treatment + species*type + (1|replicate_id), data = physiology)
 summary(comp.carb.lm)
-Anova(comp.carb.lm) # species: chisq = 5.982, p = 0.0146, speices:treatment: chisq = 4.7498,  p = 0.0293
+Anova(comp.carb.lm) # species: chisq = 5.9824, p = 0.01445, type: chisq = 5.6848, p = 0.05829, 
 emmeans(comp.carb.lm, pairwise ~ treatment|species)
 emmip(comp.carb.lm, ~ species ~ treatment)
 
 #Transpiration
-comp.trans.lm <- lmer(E ~ species*type*treatment + (1|replicate_id), data = physiology)
+comp.trans.lm <- lmer(E ~ species*treatment + species*type + (1|replicate_id), data = physiology)
 summary(comp.trans.lm)
 Anova(comp.trans.lm) 
 emmeans(comp.trans.lm, pairwise ~ species|treatment)
 emmip(comp.trans.lm, ~ species ~ treatment)
 
 #Stomotal conductance
-comp.sto.lm <- lmer(gsw ~ species*type*treatment+ (1|replicate_id), data = physiology)
+comp.sto.lm <- lmer(gsw ~ species*treatment + species*type + (1|replicate_id), data = physiology)
 summary(comp.sto.lm)
 Anova(comp.sto.lm) 
 emmeans(comp.sto.lm, pairwise ~ type|treatment)
@@ -887,27 +936,41 @@ haustoria$treatment[haustoria$treatment == "sterilized"] <- "Control"
 haustoria <- as.data.frame(unclass(haustoria),stringsAsFactors=TRUE)
 #Pallette: Host: #E1BE6A, Parasite: #40B0A6, HP: #7D0050
 
+haustoria.hp <- haustoria %>% 
+  filter(type == 'host-parasite') %>% 
+  filter(root_type == 'host parasite')
+  
+haustoria.p <- haustoria %>% 
+  filter(root_type != 'host')
+
 #---------Haustoria data analysis--------#
 
 #Proportion of Haustoria Attached
-haustoria.lm <- lmer(prop_attached ~ root_type*treatment + (1|replicate_id) + (1|pot_id), data = haustoria)
+haustoria.lm <- lmer(prop_attached ~ type*treatment + (1|replicate_id) + (1|pot_id), data = haustoria.p)
 summary(haustoria.lm)
-Anova(haustoria.lm) # root_type:treatment p = 0.002
-emmeans(haustoria.lm, pairwise ~ treatment|root_type)
-emmip(haustoria.lm, ~ root_type ~ treatment)
+Anova(haustoria.lm) 
+emmeans(haustoria.lm, pairwise ~ treatment|type)
+emmip(haustoria.lm, ~ type ~ treatment)
 
 #Standard error calculations
-haus <- haustoria %>% drop_na()
 
-attached <- haus %>% 
-  group_by(treatment, root_type) %>% 
+attached.hp <- haustoria.hp %>% 
+  group_by(treatment) %>% 
+  drop_na(prop_attached) %>% 
+  dplyr::summarise(mean = mean(prop_attached),
+                   se = sd(prop_attached)/sqrt(n()))
+
+
+attached.p <- haustoria.p %>% 
+  drop_na(prop_attached) %>% 
+  group_by(treatment,type) %>% 
   dplyr::summarise(mean = mean(prop_attached),
                    se = sd(prop_attached)/sqrt(n()))
 #------ graphs ------#
-haustoria.plot <- ggplot(attached, aes(x = treatment, y = mean, color = root_type)) +
+haustoria.plot <- ggplot(attached.p, aes(x = treatment, y = mean, color = type)) +
   geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
                 position =  position_dodge(width = 0.5), linewidth = 1, width = 0.09) +
-  geom_point(aes(shape = root_type), size = 7, position =  position_dodge(width = 0.5)) +
+  geom_point(aes(shape = type), size = 7, position =  position_dodge(width = 0.5)) +
   labs(x = "Fungi", y = "Proportion of Attached Haustoria") +
   scale_color_manual(values=c("#71A4A0", "#E1BE6A","#E26688")) +
   scale_shape_manual(values=c(18,18,18)) +

@@ -22,10 +22,11 @@ library(permute)
 
 castilleja.cover <- readRDS("Processed Data/Total Castilleja Cover.rds")
 species.matrix <- castilleja.cover[ -c(1:16)]
+write.csv(species.matrix,"Processed Data/Species Matrix.csv", row.names = FALSE)
 species.env <- subset(castilleja.cover, select=c(1:8))
-
+write.csv(species.env,"Processed Data/Environmental Matrix.csv", row.names = FALSE)
 #First calculate distance matrix
-dist <-vegdist(species.matrix, method="bray")
+dist <-vegdist(species.matrix, method = "bray")
 
 set.seed(20)
 #Run NMDS on distance matrix
@@ -47,10 +48,25 @@ perm <- adonis2(dist ~ castilleja*species + castilleja*year + castilleja*site,
 perm
 
 
-cap.mod <- capscale(dist ~ castilleja*species + castilleja*year + castilleja*site + Condition(pair), 
+cap.mod <- capscale( dist ~ castilleja*species + castilleja*year + castilleja*site + Condition(pair), 
                     data = NMDS)
 
-permy <- how(blocks = NMDS$pair, nperm = 9999)
+perms <- how(blocks = NMDS$pair, nperm = 9999)
 
 anova(cap.mod, permutations = permy, by = "terms")
 
+sites <- unique(NMDS$site)
+
+results <- lapply(sites, function(s) {
+  sub_data <- NMDS[NMDS$site == s, ]
+  sub_dist <- as.dist(as.matrix(dist)[NMDS$site == s, NMDS$site == s])
+  perms_sub <- how(blocks = sub_data$pair, nperm = 9999)
+  cap_site <- capscale(sub_dist ~ castilleja + Condition(pair), data = sub_data)
+  anov <- anova(cap_site, permutations = permy_sub)
+  data.frame(site    = s, F_value = anov$F[1], p_value = anov$`Pr(>F)`[1])})
+
+site_posthoc <- do.call(rbind, results)
+site_posthoc$p_adj_BH  <- p.adjust(posthoc_df$p_value, method = "BH")
+site_posthoc$p_adj_bon <- p.adjust(posthoc_df$p_value, method = "bonferroni")
+
+print(posthoc_df)

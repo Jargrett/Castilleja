@@ -36,6 +36,11 @@ nocacr.cover.matrix <- cacr.cover[ -c(1:11,30)]
 case.cover.matrix <- case.cover[ -c(1:10)]
 cali.cover.matrix <- cali.cover[ -c(1:10)]
 cacr.cover.matrix <- cacr.cover[ -c(1:11)]
+
+case.cast.cover <- case.cover$Castilleja.septentrionalis
+cali.cast.cover <- cali.cover$Castilleja.linariifolia
+cacr.cast.cover <- cacr.cover$Castilleja.chromosa
+
 #--------------------Calculating Diversity Values--------------------#
 #Using the vegan package we will calculate Shannon Diversity, Species Richness, and Pielou's evenness
 #We are using our cover data for this analysis, we will use the conservative no Castilleja matrix 
