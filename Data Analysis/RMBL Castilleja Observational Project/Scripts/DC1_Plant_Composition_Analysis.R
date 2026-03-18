@@ -19,6 +19,8 @@ library(patchwork)
 library(ggpubr)
 library(rstatix)
 library(permute)
+library(sjPlot)
+library(ggpmisc)
 
 castilleja.cover <- readRDS("Processed Data/Total Castilleja Cover.rds")
 species.matrix <- castilleja.cover[ -c(1:16)]
@@ -53,8 +55,29 @@ cap.mod <- capscale( dist ~ castilleja*species + castilleja*year + castilleja*si
 
 perms <- how(blocks = NMDS$pair, nperm = 9999)
 
-anova(cap.mod, permutations = permy, by = "terms")
+anova_res <- anova(cap.mod, permutations = perms, by = "terms")
 
+capscale_table <- function(model, perms){
+  
+  a <- anova(model, permutations = perms, by = "terms")
+  
+  df <- data.frame(term = rownames(a), as.data.frame(a), 
+                   row.names = NULL, check.names = FALSE)
+  
+  total_SS <- sum(df$SumOfSqs, na.rm = TRUE)
+  df$R2 <- df$SumOfSqs / total_SS
+  names(df)[names(df) == "Df"] <- "df"
+  names(df)[names(df) == "SumOfSqs"] <- "SS"
+  names(df)[names(df) == "F"] <- "F_value"
+  names(df)[names(df) == "Pr(>F)"] <- "p_value"
+  
+  df
+}
+
+cap.table <- capscale_table(cap.mod, perms)
+write.csv(cap.table, "Processed Data/Capscale Summary Output.csv", row.names=FALSE)
+
+#
 sites <- unique(NMDS$site)
 
 results <- lapply(sites, function(s) {
@@ -62,11 +85,11 @@ results <- lapply(sites, function(s) {
   sub_dist <- as.dist(as.matrix(dist)[NMDS$site == s, NMDS$site == s])
   perms_sub <- how(blocks = sub_data$pair, nperm = 9999)
   cap_site <- capscale(sub_dist ~ castilleja + Condition(pair), data = sub_data)
-  anov <- anova(cap_site, permutations = permy_sub)
+  anov <- anova(cap_site, permutations = perms_sub)
   data.frame(site    = s, F_value = anov$F[1], p_value = anov$`Pr(>F)`[1])})
 
 site_posthoc <- do.call(rbind, results)
-site_posthoc$p_adj_BH  <- p.adjust(posthoc_df$p_value, method = "BH")
-site_posthoc$p_adj_bon <- p.adjust(posthoc_df$p_value, method = "bonferroni")
+site_posthoc$p_adj_bon <- p.adjust(site_posthoc$p_value, method = "bonferroni")
+write.csv(site_posthoc, "Processed Data/Capscale Posthoc.csv", row.names=FALSE)
 
-print(posthoc_df)
+

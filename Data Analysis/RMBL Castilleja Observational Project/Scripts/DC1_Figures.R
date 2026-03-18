@@ -4,9 +4,25 @@ setwd("/Users/jargrett/Desktop/Castilleja/Data Analysis/RMBL Castilleja Observat
 library(ggplot2)
 library(ggpubr)
 library(dplyr)
+library(tidyverse)#for data wrangling and restructuring
+library(statmod)
+library(lme4)#for modeling linear mixed effect models
+library(emmeans)#post-hoc analysis
+library(car)#for regression analysis
+library(performance)#this is new
+library(see)#this is new
+library(lmerTest)
+library(patchwork)
+library(rstatix)
+library(sjPlot)
+library(ggpmisc)
 
 
 castilleja.cover <- readRDS("Processed Data/Total Castilleja Cover.rds")
+castilleja.cover2 <- read.csv("Processed Data/castilleja cover complete.csv")
+castilleja.cover2$castilleja[castilleja.cover2$castilleja == "Control"] <- "Absent"
+castilleja.cover2$castilleja[castilleja.cover2$castilleja == "Castilleja"] <- "Present"
+castilleja.cover2 <- as.data.frame(unclass(castilleja.cover2),stringsAsFactors=TRUE)
 
 #Diversity Graphs
 #Standard error calculations
@@ -290,13 +306,13 @@ al.ordination.plot <- ggplot(almont.NMDS, aes(NMDS1, NMDS2)) +
   theme_bw()
 al.ordination.plot
 
-nmds.plots <- ggarrange(emerald.ordination.plot, avery.ordination.plot, dc2.ordination.plot, dc2.ordination.plot, jh.ordination.plot, al.ordination.plot,
-                          labels = c("A", "B", "C", "D", "E", "F"), 
-                          nrow = 2, ncol = 3, common.legend = TRUE, legend = "top")
+nmds.plots <- ggarrange(emerald.ordination.plot, avery.ordination.plot, copper.ordination.plot, dc1.ordination.plot, dc2.ordination.plot, jh.ordination.plot, al.ordination.plot,
+                          labels = c("A", "B", "C", "D", "E", "F", "G"), 
+                          nrow = 3, ncol = 3, common.legend = TRUE, legend = "bottom")
 nmds.plots
 
 ggsave(plot = nmds.plots, filename = 'Figures and Tables/Site level NMDS.png',
-       width = 15 ,height = 10, units = "in", dpi = 600, 
+       width = 20 ,height = 10, units = "in", dpi = 600, 
        bg = "transparent")
 
 #Nearest Neighbor
@@ -467,5 +483,48 @@ nearestplots <- ggarrange(emerald.nearest, avery.nearest, copper.nearest, deercr
 nearestplots
 
 ggsave(plot = nearestplots, filename = 'Figures and Tables/Nearest Neighbor.png',
+       width = 15 ,height = 10, units = "in", dpi = 600, 
+       bg = "transparent")
+
+#abundance figures
+presence_data <- dplyr::filter(castilleja.cover2, castilleja == "Present")
+
+pres_23 <- filter(presence_data, year == "2023")
+cast_pres_23 <- ggplot(pres_23, aes(x = cast_cover, y = rich)) +
+  geom_point(aes(color = species),alpha = 0.7, size = 2) +
+  geom_smooth(method=lm , color="#472d30", fill = "cornsilk3", se = TRUE) + 
+  stat_poly_eq(aes(label = after_stat(rr.label), group = year),
+               formula = y ~ x,
+               parse   = TRUE,
+               size    = 3) +
+  scale_color_manual(values = c("#9e2a2b", "#b6ad90")) +
+  labs(x = "Hemiparasite abundance (cover)", y = "Species Richness") +
+  theme_pubr()+
+  theme(legend.position  = "bottom",
+        legend.text      = element_text(face = "italic"))
+cast_pres_23
+pres_24 <- filter(presence_data, year == "2024")
+cast_pres_24 <- ggplot(pres_24, aes(x = cast_cover, y = rich)) +
+  geom_point(aes(color = species),alpha = 0.7, size = 2) +
+  geom_smooth(method=lm , color="#472d30", fill = "cornsilk3", se = TRUE) + 
+  stat_poly_eq(aes(label = after_stat(rr.label), group = year),
+               formula = y ~ x,
+               parse   = TRUE,
+               size    = 3) +
+  labs(x = "Hemiparasite abundance (cover)", y = "Species Richness") +
+  scale_color_manual(values = c("#472d30","#9e2a2b", "#b6ad90")) +
+  theme_pubr()+
+  theme(legend.position  = "bottom",
+        legend.text      = element_text(face = "italic"))
+cast_pres_24
+
+
+
+abund.plots <- ggarrange(cast_pres_23, cast_pres_24,
+                         labels = c("A", "B"), 
+                         nrow = 1, common.legend = TRUE)
+abund.plots
+
+ggsave(plot = abund.plots, filename = 'Figures and Tables/Abundance.png',
        width = 15 ,height = 10, units = "in", dpi = 600, 
        bg = "transparent")

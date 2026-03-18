@@ -129,10 +129,65 @@ envi <- vline(envi, j = 7, part = "header", border = thick)
 envi <- vline(envi, j = 9, part = "header", border = thick)
 envi
 
-#Diversity stats output Table
+#Capscale output 
+cap.sup <- read.csv("Processed Data/Capscale Summary Output.csv",check.names = FALSE)
+cap.sup <- relocate(cap.sup, p_value, .after = R2)
+cap.sup <- cap.sup %>%
+  mutate(
+    pval_numeric = `p_value`,  # keep numeric copy for conditions
+    `p_value` = case_when(
+      pval_numeric < 0.001 ~ paste0(round(pval_numeric, 3), "***"),
+      pval_numeric < 0.01  ~ paste0(round(pval_numeric, 3), "**"),
+      pval_numeric < 0.05  ~ paste0(round(pval_numeric, 3), "*"),
+      pval_numeric < 0.1   ~ paste0(round(pval_numeric, 3), "."),
+      TRUE                 ~ as.character(round(pval_numeric, 3))
+    )
+  )
+capscale <- flextable(cap.sup) %>% 
+  my_theme(host)
+
+capscale <- bold(capscale, i = ~ pval_numeric < 0.05, j = "p_value")
+capscale <- delete_columns(capscale, j = "pval_numeric")
+capscale
+
+#Capscale post-hoc
+cap.hoc <- read.csv("Processed Data/Capscale Posthoc.csv",check.names = FALSE)
+cap.hoc <- cap.hoc %>%
+  mutate(
+    pval_numeric = `p_adj_bon`,  # keep numeric copy for conditions
+    `p_adj_bon` = case_when(
+      pval_numeric < 0.001 ~ paste0(round(pval_numeric, 3), "***"),
+      pval_numeric < 0.01  ~ paste0(round(pval_numeric, 3), "**"),
+      pval_numeric < 0.05  ~ paste0(round(pval_numeric, 3), "*"),
+      pval_numeric < 0.1   ~ paste0(round(pval_numeric, 3), "."),
+      TRUE                 ~ as.character(round(pval_numeric, 3))
+    )
+  )
+
+caphoc <- flextable(cap.hoc) %>% 
+  my_theme(host)
+caphoc <- bold(caphoc, i = ~ pval_numeric < 0.05, j = "p_adj_bon")
+caphoc <- delete_columns(caphoc, j = "pval_numeric")
+caphoc
+
+#Site abundance
+abund.site <- read.csv("Processed Data/Castilleja Observational Project Tables - Castilleja Abundance.csv",check.names = FALSE)
+abund.site$`year` <- as.factor(abund.site$`year`)
+abund <- flextable(abund.site) %>% 
+  italic(j = "species", part = "body") %>% 
+  merge_at(i = 1:5, j = 1) %>% 
+  merge_at(i = 6:10, j = 1) %>% 
+  merge_at(i = 1:2, j = 2) %>% 
+  merge_at(i = 4:5, j = 2) %>%
+  merge_at(i = 6:7, j = 2) %>%
+  merge_at(i = 8:9, j = 2) %>%
+  my_theme(host)
+abund <- hline(abund, i = 5, border = thin)
+abund <- hline(abund, i = 10, border = thin)
+abund 
+
 
 #Exporting Tables
-
 #Main tables
 save_as_image(x = site, path = "Figures and Tables/Site Table.png", res = 600)
 save_as_image(x = ind, path = "Figures and Tables/Indicator Species Table.png", res = 600)
@@ -140,3 +195,6 @@ save_as_image(x = ind, path = "Figures and Tables/Indicator Species Table.png", 
 save_as_image(x = envi, path = "Figures and Tables/Environmental Table.png", res = 600)
 save_as_image(x = host, path = "Figures and Tables/Excavation Specimen Table.png", width = 8, height = 11, res = 600)
 save_as_image(x = diversity.model, path = "Figures and Tables/Diversity LMM Table.png", res = 600)
+save_as_image(x = capscale, path = "Figures and Tables/Capscale Summary.png", res = 600)
+save_as_image(x = caphoc, path = "Figures and Tables/Capscale Posthoc.png", res = 600)
+save_as_image(x = abund, path = "Figures and Tables/Site Abundance.png", res = 600)
