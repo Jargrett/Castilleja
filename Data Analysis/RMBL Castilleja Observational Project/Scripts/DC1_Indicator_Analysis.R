@@ -27,6 +27,7 @@ case.avery <- filter(castilleja.cover, site == "Avery")#filtering for a specific
 case.avery.matrix <- case.avery %>%#this segment selects just our species matrix and removes castilleja
   select(17:158)
 
+
 case.avery.cast = case.avery$castilleja
 case.avery.pair = case.avery$pair
 
