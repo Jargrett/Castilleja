@@ -156,20 +156,11 @@ ordination.plot <- ggplot(NMDS, aes(NMDS1, NMDS2)) +
   geom_text(aes(0.23,0), label = "DC2", color = "grey22", size = 3.5) +
   geom_text(aes(-0.14,-0.5), label = "JH", color = "grey22", size = 3.5) +
   coord_equal() +
-  theme(strip.text = element_text(size = 15),
-        strip.background = element_blank(),
-        panel.border = element_rect(fill = "transparent", 
-                                    color = "gray23", linewidth = 0.12)) +
-  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
-        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
-        legend.background = element_rect(fill='transparent'), #transparent legend bg
-        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
   theme_bw()
 ordination.plot
 
 ggsave(plot = ordination.plot, filename = 'Figures and Tables/Ordination.png',
-       width = 10 ,height = 10, units = "in", dpi = 600, 
-       bg = "transparent")
+       width = 10 ,height = 10, units = "in", dpi = 600)
 
 #Site level
 avery.NMDS <- filter(NMDS, site == "Avery")
@@ -180,14 +171,6 @@ avery.ordination.plot <- ggplot(avery.NMDS, aes(NMDS1, NMDS2)) +
   stat_ellipse(segments = 20, linetype = 2, alpha = 0.5, aes(group = castilleja)) +
   coord_equal() +
   ggtitle("Avery") +
-  theme(strip.text = element_text(size = 15),
-        strip.background = element_blank(),
-        panel.border = element_rect(fill = "transparent", 
-                                    color = "gray23", linewidth = 0.12)) +
-  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
-        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
-        legend.background = element_rect(fill='transparent'), #transparent legend bg
-        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
   theme_bw()
 avery.ordination.plot
 
@@ -199,14 +182,6 @@ emerald.ordination.plot <- ggplot(emerald.NMDS, aes(NMDS1, NMDS2)) +
   stat_ellipse(segments = 20, linetype = 2, alpha = 0.5, aes(group = castilleja)) +
   coord_equal() +
   ggtitle("Emerald Lake") +
-  theme(strip.text = element_text(size = 15),
-        strip.background = element_blank(),
-        panel.border = element_rect(fill = "transparent", 
-                                    color = "gray23", linewidth = 0.12)) +
-  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
-        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
-        legend.background = element_rect(fill='transparent'), #transparent legend bg
-        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
   theme_bw()
 emerald.ordination.plot
 
@@ -218,14 +193,6 @@ copper.ordination.plot <- ggplot(copper.NMDS, aes(NMDS1, NMDS2)) +
   stat_ellipse(segments = 20, linetype = 2, alpha = 0.5, aes(group = castilleja)) +
   coord_equal() +
   ggtitle("Copper Creek") +
-  theme(strip.text = element_text(size = 15),
-        strip.background = element_blank(),
-        panel.border = element_rect(fill = "transparent", 
-                                    color = "gray23", linewidth = 0.12)) +
-  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
-        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
-        legend.background = element_rect(fill='transparent'), #transparent legend bg
-        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
   theme_bw()
 copper.ordination.plot
 
@@ -237,14 +204,6 @@ dc1.ordination.plot <- ggplot(dc1.NMDS, aes(NMDS1, NMDS2)) +
   stat_ellipse(segments = 20, linetype = 2, alpha = 0.5, aes(group = castilleja)) +
   coord_equal() +
   ggtitle("Deer Creek 1") +
-  theme(strip.text = element_text(size = 15),
-        strip.background = element_blank(),
-        panel.border = element_rect(fill = "transparent", 
-                                    color = "gray23", linewidth = 0.12)) +
-  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
-        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
-        legend.background = element_rect(fill='transparent'), #transparent legend bg
-        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
   theme_bw()
 dc1.ordination.plot
 
@@ -256,14 +215,6 @@ dc2.ordination.plot <- ggplot(dc2.NMDS, aes(NMDS1, NMDS2)) +
   stat_ellipse(segments = 20, linetype = 2, alpha = 0.5, aes(group = castilleja)) +
   coord_equal() +
   ggtitle("Deer Creek 2") +
-  theme(strip.text = element_text(size = 15),
-        strip.background = element_blank(),
-        panel.border = element_rect(fill = "transparent", 
-                                    color = "gray23", linewidth = 0.12)) +
-  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
-        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
-        legend.background = element_rect(fill='transparent'), #transparent legend bg
-        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
   theme_bw()
 dc2.ordination.plot
 
@@ -275,14 +226,6 @@ jh.ordination.plot <- ggplot(johnson.NMDS, aes(NMDS1, NMDS2)) +
   stat_ellipse(segments = 20, linetype = 2, alpha = 0.5, aes(group = castilleja)) +
   coord_equal() +
   ggtitle("Johnson Hill") +
-  theme(strip.text = element_text(size = 15),
-        strip.background = element_blank(),
-        panel.border = element_rect(fill = "transparent", 
-                                    color = "gray23", linewidth = 0.12)) +
-  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
-        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
-        legend.background = element_rect(fill='transparent'), #transparent legend bg
-        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
   theme_bw()
 jh.ordination.plot
 
@@ -295,25 +238,16 @@ al.ordination.plot <- ggplot(almont.NMDS, aes(NMDS1, NMDS2)) +
   stat_ellipse(segments = 20, linetype = 2, alpha = 0.5, aes(group = castilleja)) +
   coord_equal() +
   ggtitle("Almont") +
-  theme(strip.text = element_text(size = 15),
-        strip.background = element_blank(),
-        panel.border = element_rect(fill = "transparent", 
-                                    color = "gray23", linewidth = 0.12)) +
-  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
-        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
-        legend.background = element_rect(fill='transparent'), #transparent legend bg
-        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
   theme_bw()
 al.ordination.plot
 
 nmds.plots <- ggarrange(emerald.ordination.plot, avery.ordination.plot, copper.ordination.plot, dc1.ordination.plot, dc2.ordination.plot, jh.ordination.plot, al.ordination.plot,
                           labels = c("A", "B", "C", "D", "E", "F", "G"), 
-                          nrow = 3, ncol = 3, common.legend = TRUE, legend = "bottom")
+                          nrow = 3, ncol = 3, common.legend = TRUE, legend = "right")
 nmds.plots
 
 ggsave(plot = nmds.plots, filename = 'Figures and Tables/Site level NMDS.png',
-       width = 20 ,height = 10, units = "in", dpi = 600, 
-       bg = "transparent")
+       width = 10 ,height = 10, units = "in", dpi = 600)
 
 #Nearest Neighbor
 #Case
