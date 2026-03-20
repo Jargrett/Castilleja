@@ -65,10 +65,6 @@ div.plot <- ggplot(data = castilleja.div, aes(x = reorder(castilleja, -mean), y 
         strip.background = element_blank(),
         panel.border = element_rect(fill = "transparent", 
                                     color = "gray23", linewidth = 0.12)) +
-  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
-        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
-        legend.background = element_rect(fill='transparent'), #transparent legend bg
-        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
   ylim(1.4,2)
 
 div.plot
@@ -94,10 +90,6 @@ rich.plot <- ggplot(data = castilleja.rich, aes(x = reorder(castilleja, -mean), 
         strip.background = element_blank(),
         panel.border = element_rect(fill = "transparent", 
                                     color = "gray23", linewidth = 0.12)) +
-  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
-        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
-        legend.background = element_rect(fill='transparent'), #transparent legend bg
-        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
   ylim(6,12)
 
 rich.plot
@@ -123,10 +115,6 @@ even.plot <- ggplot(data = castilleja.even, aes(x = reorder(castilleja, -mean), 
         strip.background = element_blank(),
         panel.border = element_rect(fill = "transparent", 
                                     color = "gray23", linewidth = 0.12)) +
-  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
-        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
-        legend.background = element_rect(fill='transparent'), #transparent legend bg
-        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
   ylim(0.6,1)
 
 even.plot
@@ -137,8 +125,7 @@ diversity.plots <- ggarrange(div.plot, rich.plot, even.plot,
 diversity.plots  
 
 ggsave(plot = diversity.plots, filename = 'Figures and Tables/Diversity.png',
-       width = 12 ,height = 5, units = "in", dpi = 600, 
-       bg = "transparent")
+       width = 12 ,height = 5, units = "in", dpi = 600)
 
 #Composition
 NMDS <- read_rds("Processed Data/NMDS.rds") 
@@ -269,14 +256,6 @@ emerald.nearest <- ggplot(EL.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   labs(x = "Relative Abundance", y = "Nearest Neighbor Frequency") +
   theme_minimal() +
   ggtitle("Castilleja septentrionalis") +
-  theme(strip.text = element_text(size = 15),
-        strip.background = element_blank(),
-        panel.border = element_rect(fill = "transparent", 
-                                    color = "gray23", linewidth = 0.12)) +
-  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
-        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
-        legend.background = element_rect(fill='transparent'), #transparent legend bg
-        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
   theme(plot.title = element_text(hjust = 0.92, vjust= -0.12))
 emerald.nearest
 
@@ -292,14 +271,6 @@ avery.nearest <- ggplot(AP.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   labs(x = "Relative Abundance", y = "Nearest Neighbor Frequency") +
   theme_minimal() +
   ggtitle("Castilleja septentrionalis") +
-  theme(strip.text = element_text(size = 15),
-        strip.background = element_blank(),
-        panel.border = element_rect(fill = "transparent", 
-                                    color = "gray23", linewidth = 0.12)) +
-  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
-        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
-        legend.background = element_rect(fill='transparent'), #transparent legend bg
-        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
   theme(plot.title = element_text(hjust = 0.92, vjust= -0.12))
 avery.nearest
 
@@ -316,14 +287,6 @@ copper.nearest <- ggplot(CC.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_text(aes(0.0234589564, 0.06666667), label = "Mertensia brevistyla", color = "grey22", nudge_y = 0.01, size = 3.5) +
   theme_minimal() +
   ggtitle("Castilleja septentrionalis") +
-  theme(strip.text = element_text(size = 15),
-        strip.background = element_blank(),
-        panel.border = element_rect(fill = "transparent", 
-                                    color = "gray23", linewidth = 0.12)) +
-  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
-        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
-        legend.background = element_rect(fill='transparent'), #transparent legend bg
-        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
   theme(plot.title = element_text(hjust = 0.92, vjust= -0.12))
 copper.nearest
 
@@ -347,14 +310,6 @@ deercreek.nearest <- ggplot(DC.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_text(aes(0.0463176575, 0.085271318), label = "Carex sp.", color = "grey22", nudge_y = -0.005, size = 3.5) +
   theme_minimal() +
   ggtitle("Castilleja linariifolia") +
-  theme(strip.text = element_text(size = 15),
-        strip.background = element_blank(),
-        panel.border = element_rect(fill = "transparent", 
-                                    color = "gray23", linewidth = 0.12)) +
-  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
-        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
-        legend.background = element_rect(fill='transparent'), #transparent legend bg
-        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
   theme(plot.title = element_text(hjust = 0.92, vjust= -0.12))
 deercreek.nearest
 
@@ -371,14 +326,6 @@ johnson.nearest <- ggplot(JH.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   labs(x = "Relative Abundance", y = "Nearest Neighbor Frequency") +
   theme_minimal() +
   ggtitle("Castilleja linariifolia") +
-  theme(strip.text = element_text(size = 15),
-        strip.background = element_blank(),
-        panel.border = element_rect(fill = "transparent", 
-                                    color = "gray23", linewidth = 0.12)) +
-  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
-        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
-        legend.background = element_rect(fill='transparent'), #transparent legend bg
-        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
   theme(plot.title = element_text(hjust = 0.92, vjust= -0.12))
 johnson.nearest
 
@@ -399,21 +346,13 @@ almont.nearest <- ggplot(AL.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   labs(x = "Relative Abundance", y = "Nearest Neighbor Frequency") +
   theme_minimal() +
   ggtitle("Castilleja chromosa") +
-  theme(strip.text = element_text(size = 15),
-        strip.background = element_blank(),
-        panel.border = element_rect(fill = "transparent", 
-                                    color = "gray23", linewidth = 0.12)) +
-  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
-        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
-        legend.background = element_rect(fill='transparent'), #transparent legend bg
-        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
   theme(plot.title = element_text(hjust = 0.92, vjust= -0.12))
 almont.nearest
 
 #complete
 nearestplots <- ggarrange(emerald.nearest, avery.nearest, copper.nearest, deercreek.nearest, johnson.nearest, almont.nearest,
                           labels = c("A", "B", "C", "D", "E", "F"), 
-                          nrow = 2, ncol = 3, common.legend = TRUE, legend = "top")
+                          nrow = 2, ncol = 3, common.legend = TRUE, legend = "right")
 nearestplots
 
 ggsave(plot = nearestplots, filename = 'Figures and Tables/Nearest Neighbor.png',
@@ -433,9 +372,7 @@ cast_pres_23 <- ggplot(pres_23, aes(x = cast_cover, y = rich)) +
                size    = 3) +
   scale_color_manual(values = c("#9e2a2b", "#b6ad90")) +
   labs(x = "Hemiparasite abundance (cover)", y = "Species Richness") +
-  theme_pubr()+
-  theme(legend.position  = "bottom",
-        legend.text      = element_text(face = "italic"))
+  theme_pubr()
 cast_pres_23
 pres_24 <- filter(presence_data, year == "2024")
 cast_pres_24 <- ggplot(pres_24, aes(x = cast_cover, y = rich)) +
@@ -447,18 +384,14 @@ cast_pres_24 <- ggplot(pres_24, aes(x = cast_cover, y = rich)) +
                size    = 3) +
   labs(x = "Hemiparasite abundance (cover)", y = "Species Richness") +
   scale_color_manual(values = c("#472d30","#9e2a2b", "#b6ad90")) +
-  theme_pubr()+
-  theme(legend.position  = "bottom",
-        legend.text      = element_text(face = "italic"))
+  theme_pubr()
 cast_pres_24
-
 
 
 abund.plots <- ggarrange(cast_pres_23, cast_pres_24,
                          labels = c("A", "B"), 
-                         nrow = 1, common.legend = TRUE)
+                         nrow = 1, common.legend = FALSE,legend = "top")
 abund.plots
 
 ggsave(plot = abund.plots, filename = 'Figures and Tables/Abundance.png',
-       width = 15 ,height = 10, units = "in", dpi = 600, 
-       bg = "transparent")
+       width = 15 ,height = 10, units = "in", dpi = 600)
