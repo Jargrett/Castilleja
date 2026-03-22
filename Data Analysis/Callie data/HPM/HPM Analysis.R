@@ -462,7 +462,7 @@ emmip(ag.bg.lm, ~ type ~ treatment)
 ag.tb.lm <- lmer(total_biomass ~ treatment*type + (1|replicate_id), data = agalinis.biomass)
 summary(ag.tb.lm)
 Anova(ag.tb.lm) #Treatment:type Chisq = 41.3350, p < 0.0001
-emmeans(ag.tb.lm, pairwise ~ type|treatment)
+emmeans(ag.tb.lm, pairwise ~ treatment|type)
 emmip(ag.tb.lm, ~ type ~ treatment)
 
 #Root:shoot
