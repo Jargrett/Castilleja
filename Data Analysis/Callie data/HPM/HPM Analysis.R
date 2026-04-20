@@ -561,10 +561,7 @@ hetero.above.plot <- ggplot(data = sd.he.above, aes(x = treatment, y = mean, fil
   theme_pubr() +
   scale_fill_manual( values=c("#3d405b", "#e07a5f")) +
   labs(x = "Fungi", y = "Aboveground Biomass (g)") +
-  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
-        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
-        legend.background = element_rect(fill='transparent'), #transparent legend bg
-        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
+  theme(axis.text=element_text(size = 12), axis.title = element_text(size = 15))+
   ylim(0,2.5)
 hetero.above.plot 
 
@@ -576,10 +573,7 @@ hetero.below.plot <- ggplot(data = sd.he.below, aes(x = treatment, y = mean, fil
   scale_fill_manual( values=c("#3d405b", "#e07a5f")) +
   
   labs(x = "Fungi", y = "Belowground Biomass (g)") +
-  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
-        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
-        legend.background = element_rect(fill='transparent'), #transparent legend bg
-        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
+  theme(axis.text=element_text(size = 12), axis.title = element_text(size = 15))+
   ylim(0,2.5)
 hetero.below.plot 
 
@@ -605,10 +599,7 @@ agalinis.above.plot <- ggplot(data = sd.ag.above, aes(x = treatment, y = mean, f
   theme_pubr() +
   scale_fill_manual( values=c("#71A4A0", "#D6A839")) +
   labs(x = "Fungi", y = "Aboveground Biomass (g)") +
-  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
-        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
-        legend.background = element_rect(fill='transparent'), #transparent legend bg
-        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
+  theme(axis.text=element_text(size = 12), axis.title = element_text(size = 15))+
   ylim(0,2.5)
 agalinis.above.plot 
 
@@ -619,10 +610,7 @@ agalinis.below.plot <- ggplot(data = sd.ag.below, aes(x = treatment, y = mean, f
   theme_pubr() +
   scale_fill_manual( values=c("#71A4A0", "#D6A839")) +
   labs(x = "Fungi", y = "Belowground Biomass (g)") +
-  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
-        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
-        legend.background = element_rect(fill='transparent'), #transparent legend bg
-        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
+  theme(axis.text=element_text(size = 12), axis.title = element_text(size = 15))+
   ylim(0,2.5)
 agalinis.below.plot 
 
@@ -643,8 +631,7 @@ biomass.plots <- ggarrange(ag.biomass.plots, he.biomass.plots,
 
 biomass.plots
 ggsave(plot = biomass.plots, filename = 'biomass.png',
-       width = 10 ,height = 8, units = "in", dpi = 600, 
-       bg = "transparent")
+       width = 10 ,height = 8, units = "in", dpi = 600)
 
 agalinis.total <- ggplot(data = sd.ag.total, aes(x = treatment, y = mean, fill = type)) +
   geom_col(position = position_dodge(0.7), width = .6, linewidth = 0.75, alpha = 0.9, size = 0.1) +

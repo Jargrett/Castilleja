@@ -46,26 +46,20 @@ parasite_innoc <- ggplot(parasite_mean, aes(x = type, y = mean, fill = treatment
   geom_col(position = position_dodge(0.7), width = .6, linewidth = 0.75, alpha = 0.9, size = 0.1) +
   geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
                 position =  position_dodge(width = 0.7), width = 0.15) +
-  labs(x = "Pot combination", y = "Prop colonized") +
+  labs(x = "Pot combination", y = "Root Colonization (%)") +
   scale_fill_manual(values = c("#4b3b40","#b6ad90")) +
-  theme(panel.background = element_rect(fill = 'transparent'), #transparent panel bg
-        plot.background = element_rect(fill = 'transparent', color = NA), #transparent plot bg
-        legend.background = element_rect(fill = 'transparent'), #transparent legend bg
-        legend.box.background = element_rect(fill = 'transparent')) + #transparent legend pane
-  theme_pubr()
+  theme_pubr() +
+  theme(axis.text=element_text(size = 17), axis.title = element_text(size = 24))
 parasite_innoc
 
 host_innoc <- ggplot(host_mean, aes(x = type, y = mean, fill = treatment)) + 
   geom_col(position = position_dodge(0.7), width = .6, linewidth = 0.75, alpha = 0.9, size = 0.1) +
   geom_errorbar(aes(ymin = mean-se, ymax = mean+se),
                 position =  position_dodge(width = 0.7), width = 0.15) +
-  labs(x = "Pot combination", y = "Prop colonized") +
+  labs(x = "Pot combination", y = "Root Colonization (%)") +
   scale_fill_manual(values = c("#45463e","#c6ac8f")) +
-  theme(panel.background = element_rect(fill = 'transparent'), #transparent panel bg
-        plot.background = element_rect(fill = 'transparent', color = NA), #transparent plot bg
-        legend.background = element_rect(fill = 'transparent'), #transparent legend bg
-        legend.box.background = element_rect(fill = 'transparent')) + #transparent legend pane
-  theme_pubr()
+  theme_pubr() +
+  theme(axis.text=element_text(size = 17), axis.title = element_text(size = 24))
 host_innoc
 
 #combines plots together
@@ -73,6 +67,10 @@ colonization.plots <- ggarrange(parasite_innoc, host_innoc,
                            labels = c("A", "B"), 
                            nrow = 1, ncol = 2)
 colonization.plots
+
+ggsave(plot = colonization.plots, filename = 'percent colonization.png',
+       width = 12 ,height = 8, units = "in", dpi = 600)
+
 
 
 #Biomass by colonization plot
@@ -103,7 +101,11 @@ parasite_scatter <- ggplot(parasite_bio_myc, aes(x = prop_hyphae, y = total_biom
                formula = y ~ x,
                parse   = TRUE,
                size    = 3) +
-  theme_pubr()
+  theme_pubr() +
+  theme(strip.text = element_text(size = 15),
+        strip.background = element_blank(),
+        panel.border = element_rect(fill = "transparent", 
+                                    color = "gray23", linewidth = 0.12)) 
 parasite_scatter
 
 
@@ -116,14 +118,20 @@ host_scatter <- ggplot(host_bio_myc, aes(x = prop_hyphae, y = total_biomass, col
                formula = y ~ x,
                parse   = TRUE,
                size    = 3) +
-  theme_pubr()
+theme_pubr() +
+  theme(strip.text = element_text(size = 15),
+        strip.background = element_blank(),
+        panel.border = element_rect(fill = "transparent", 
+                                    color = "gray23", linewidth = 0.12)) 
 host_scatter
 
 
 #combines plots together
 biomyc.plots <- ggarrange(parasite_scatter, host_scatter,
                                 labels = c("A", "B"), 
-                                nrow = 1, ncol = 2)
+                                nrow = 1, ncol = 2, common.legend = TRUE)
 biomyc.plots
 
+ggsave(plot = biomyc.plots, filename = 'Figures and Tables/percent colonization.png',
+       width = 12 ,height = 10, units = "in", dpi = 600)
   

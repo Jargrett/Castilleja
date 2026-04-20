@@ -12,6 +12,7 @@ library(lme4)
 library(emmeans)# for comparison of means
 library(ggpubr)
 library(ggplot2)
+library(ggpattern)
 
 #conflicts
 conflicts_prefer(dplyr::summarise)
@@ -195,11 +196,8 @@ cain.height <- ggplot(cain_height_mean, aes(x=pot_type, y=mean, fill=light)) +
                 position =  position_dodge(width = 0.7), width = 0.15) +
   labs(x = "Pot combination", y = "Parasite Height") +
   scale_fill_manual(values=c("#4b3b40","#b6ad90")) +
-  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
-        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
-        legend.background = element_rect(fill='transparent'), #transparent legend bg
-        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
   theme_pubr() +
+  theme(axis.text=element_text(size = 12), axis.title = element_text(size = 15))+
   ylim(0,10)
 cain.height
 
@@ -209,11 +207,8 @@ scsc.height <- ggplot(scsc_height_mean, aes(x=pot_type, y=mean, fill=light)) +
                 position =  position_dodge(width = 0.7), width = 0.15) +
   labs(x = "Pot combination", y = "Host Height") +
   scale_fill_manual(values=c("#45463e","#b3b1be")) +
-  theme(panel.background = element_rect(fill='transparent'), #transparent panel bg
-        plot.background = element_rect(fill='transparent', color=NA), #transparent plot bg
-        legend.background = element_rect(fill='transparent'), #transparent legend bg
-        legend.box.background = element_rect(fill='transparent')) + #transparent legend pane
   theme_pubr() +
+  theme(axis.text=element_text(size = 12), axis.title = element_text(size = 15))+
   ylim(0,50)
 scsc.height
 
@@ -222,3 +217,173 @@ height.plots <- ggarrange(cain.height, scsc.height,
                            labels = c("A", "B"), 
                            nrow = 1, ncol = 2)
 height.plots
+
+ggsave(plot = height.plots, filename = 'height pilot.png',
+       width = 10 , height = 8, units = "in", dpi = 600)
+
+# ---------------------------------------------------------------------------
+# Colors
+# ---------------------------------------------------------------------------
+fill_colors <- c(
+  "Host.Alone"     = "#45463e",
+  "Host.HP"        = "#b3b1be",
+  "Parasite.Alone" = "#4b3b40",
+  "Parasite.HP"    = "#b6ad90"
+)
+
+# ---------------------------------------------------------------------------
+# Shared y limits so zero lines align
+# ---------------------------------------------------------------------------
+both <- full_data %>%
+  filter((plant == "SCSC" & pot_type %in% c("H",  "HP")) | 
+           (plant == "CAIN" & pot_type %in% c("P",  "HP"))) %>%
+  group_by(plant, light, pot_type, bio_type) %>%
+  summarise(mean_mass = mean(biomass, na.rm = TRUE),
+            se = sd(biomass,   na.rm = TRUE) / sqrt(n()),
+            .groups   = "drop") %>%
+  mutate(mean_mass = ifelse(bio_type == "BGB", -mean_mass, mean_mass))
+
+y_max <- max(both$mean_mass + both$se, na.rm = TRUE) * 1.1
+y_min <- min(both$mean_mass - both$se, na.rm = TRUE) * 1.1
+
+
+# ---------------------------------------------------------------------------
+# CAIN (Parasite) — summarize
+# ---------------------------------------------------------------------------
+cain_pd <- full_data %>%
+  filter(plant == "CAIN", pot_type %in% c("P", "HP")) %>%
+  group_by(light, pot_type, bio_type) %>%
+  summarise(mean_mass = mean(biomass, na.rm = TRUE),
+    se        = sd(biomass,   na.rm = TRUE) / sqrt(n()),
+    .groups   = "drop"
+  ) %>%
+  mutate(mean_mass = ifelse(bio_type == "BGB", -mean_mass, mean_mass),
+    tissue = factor(ifelse(bio_type == "AGB", "Shoot", "Root"),
+                         levels = c("Shoot", "Root")),
+    light = factor(light, levels = c("ambient", "low"),
+                         labels = c("Ambient", "Low")),
+    pot_label   = factor(ifelse(pot_type == "P", "Alone", "HP"),
+                         levels = c("Alone", "HP")),
+    color_group = interaction("Parasite", pot_label),
+    bar_fill    = fill_colors[as.character(color_group)],
+    x_num = case_when(
+      light == "Ambient" & pot_label == "Alone" ~ 1.0,
+      light == "Ambient" & pot_label == "HP"    ~ 1.5,
+      light == "Low"     & pot_label == "Alone" ~ 2.2,
+      light == "Low"     & pot_label == "HP"    ~ 2.7
+    )
+  )
+
+cain_shoot <- cain_pd %>% filter(tissue == "Shoot")
+cain_root  <- cain_pd %>% filter(tissue == "Root")
+
+# ---------------------------------------------------------------------------
+# CAIN (Parasite) — plot
+# ---------------------------------------------------------------------------
+cain.biomass <- ggplot(cain_pd, aes(x = x_num, y = mean_mass,
+                                    fill = bar_fill, pattern = tissue)) +
+  geom_col_pattern(position = "stack", width = 0.45, color = "black",
+                   linewidth = 0.3, pattern_fill = "transparent",
+                   pattern_colour = "white", pattern_angle = 45,
+                   pattern_density  = 0.06, pattern_spacing  = 0.018,
+                   pattern_key_scale_factor = 0.4) +
+  geom_errorbar(data = cain_shoot, 
+                aes(x = x_num, ymin = mean_mass - se, ymax = mean_mass + se), 
+                width = 0.12, linewidth = 0.35) +
+  geom_errorbar(data = cain_root, 
+                aes(x = x_num, ymin = mean_mass - se, ymax = mean_mass + se), 
+                width = 0.12, linewidth = 0.35) +
+  geom_hline(yintercept = 0, linewidth = 0.5) +
+  scale_fill_identity() +
+  scale_pattern_manual(name = "Tissue", 
+                       values = c("Shoot" = "none", "Root" = "stripe"),
+                       guide  = guide_legend(override.aes = list(fill = "grey60", 
+                                            pattern_colour = "white"))) +
+  scale_fill_identity(name = "Pot type", 
+                      guide  = guide_legend(override.aes = list(fill = c("#4b3b40", "#b6ad90"),
+                      pattern = c("none", "none"))), labels = c("P", "HP"), breaks = c("#4b3b40", "#b6ad90")) +
+  scale_x_continuous(breaks = c(1.25, 2.45), labels = c("Ambient", "Low"),limits = c(0.6, 3.1)) +
+  scale_y_continuous(labels = abs, limits = c(y_min, y_max)) +
+  labs(title = "Parasite", x = "Light", y = "Plant dry mass (g)") +
+  theme_pubr() +
+  theme(axis.text=element_text(size = 12), axis.title = element_text(size = 20)) +
+  theme(plot.title = element_text(size = 13, hjust = 0.5), legend.position = "top")
+
+cain.biomass
+# ---------------------------------------------------------------------------
+# SCSC (Host) — summarize
+# ---------------------------------------------------------------------------
+scsc_pd <- full_data %>%
+  filter(plant == "SCSC", pot_type %in% c("H", "HP")) %>%
+  group_by(light, pot_type, bio_type) %>%
+  summarise(
+    mean_mass = mean(biomass, na.rm = TRUE),
+    se        = sd(biomass,   na.rm = TRUE) / sqrt(n()),
+    .groups   = "drop"
+  ) %>%
+  mutate(
+    mean_mass   = ifelse(bio_type == "BGB", -mean_mass, mean_mass),
+    tissue      = factor(ifelse(bio_type == "AGB", "Shoot", "Root"),
+                         levels = c("Shoot", "Root")),
+    light       = factor(light, levels = c("ambient", "low"),
+                         labels = c("Ambient", "Low")),
+    pot_label   = factor(ifelse(pot_type == "H", "Alone", "HP"),
+                         levels = c("Alone", "HP")),
+    color_group = interaction("Host", pot_label),
+    bar_fill    = fill_colors[as.character(color_group)],
+    x_num = case_when(
+      light == "Ambient" & pot_label == "Alone" ~ 1.0,
+      light == "Ambient" & pot_label == "HP"    ~ 1.5,
+      light == "Low"     & pot_label == "Alone" ~ 2.2,
+      light == "Low"     & pot_label == "HP"    ~ 2.7))
+
+scsc_shoot <- scsc_pd %>% filter(tissue == "Shoot")
+scsc_root  <- scsc_pd %>% filter(tissue == "Root")
+
+# ---------------------------------------------------------------------------
+# SCSC (Host) — plot
+# ---------------------------------------------------------------------------
+scsc.biomass <- ggplot(scsc_pd, aes(x = x_num, y = mean_mass,
+                                    fill = bar_fill, pattern = tissue)) +
+  geom_col_pattern(position = "stack", width = 0.45, color = "black", 
+                   linewidth = 0.3, pattern_fill = "transparent", pattern_colour = "white",
+                   pattern_angle = 45, pattern_density = 0.06, pattern_spacing = 0.018,
+                   pattern_key_scale_factor = 0.4) +
+  geom_errorbar(data = scsc_shoot, aes(x = x_num, ymin = mean_mass - se, ymax = mean_mass + se),
+                width = 0.12, linewidth = 0.35) +
+  geom_errorbar(data = scsc_root, aes(x = x_num, ymin = mean_mass - se, ymax = mean_mass + se),
+                width     = 0.12, linewidth = 0.35) +
+  geom_hline(yintercept = 0, linewidth = 0.5) +
+  scale_fill_identity(name = "Pot type", 
+                      guide  = guide_legend(override.aes = list(fill = c("#45463e", "#b3b1be"),
+        pattern = c("none", "none"))), labels = c("H", "HP"), breaks = c("#45463e", "#b3b1be")) +
+  scale_pattern_manual(
+    name   = "Tissue",
+    values = c("Shoot" = "none", "Root" = "stripe"),
+    guide  = guide_legend(override.aes = list(fill = "grey60", pattern_colour = "white"))) +
+  scale_x_continuous(breaks = c(1.25, 2.45), labels = c("Ambient", "Low"), limits = c(0.6, 3.1)) +
+  scale_y_continuous(labels = abs, limits = c(y_min, y_max)) +
+  labs(title = "Host", x = "Light", y = "Plant dry mass (g)") +
+  theme_pubr() +
+  theme(axis.text=element_text(size = 12), axis.title = element_text(size = 20)) +
+  theme(plot.title = element_text(size = 13, hjust = 0.5), legend.position = "top")
+
+scsc.biomass
+# ---------------------------------------------------------------------------
+# Combine — legend pulled from scsc.biomass
+# ---------------------------------------------------------------------------
+shared_legend <- get_legend(scsc.biomass)
+
+biomass.plots <- ggarrange(cain.biomass, scsc.biomass,
+  labels  = c("A", "B"),
+  nrow    = 1,
+  ncol    = 2,
+  widths  = c(1, 1, 0.3), common.legend = T)
+
+biomass.plots
+
+
+
+ggsave(plot = biomass.plots, filename = 'AGBBGB final3.png',
+       width = 10, height = 10, units = "in", dpi = 600)
+

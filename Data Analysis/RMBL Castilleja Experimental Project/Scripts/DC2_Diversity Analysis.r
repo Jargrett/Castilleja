@@ -14,6 +14,7 @@ library(rstatix)
 library(magrittr)#for data wrangling and restructuring
 library(plyr)
 library(ggnewscale)
+
 #Specifying conflicts
 conflicted::conflicts_prefer(dplyr::recode)
 conflicted::conflicts_prefer(plyr::mutate)
@@ -139,7 +140,7 @@ diversity %<>%
   mutate(year = as.numeric(as.character(year)))
 
 #richness
-rich.lmm <- lmer(rich ~ removal*litter*year + (1|block) + (1|pair), data = diversity)
+rich.lmm <- lmer(even ~ removal*litter*year + (1|block) + (1|pair), data = diversity)
 summary(rich.lmm)
 Anova(rich.lmm)#:removal:year p = 0.0008, Chisq = 16.8171, df = 3
 emmeans(rich.lmm, pairwise ~ removal|year)
@@ -162,7 +163,7 @@ even.mean <- diversity %>%
   dplyr::summarise(mean = mean(even),
                    se = sd(even)/sqrt(n()))
 
-div.plot <- ggplot(data = rich.mean, aes(x = year, y = mean)) +
+rich.plot <- ggplot(data = rich.mean, aes(x = year, y = mean)) +
   geom_point(data = diversity, aes(x = year, y = rich, color = removal),
              position = position_jitterdodge(0.2, dodge.width = .3), size = 2, alpha = 0.5) +
   scale_color_manual(values = c("#909256", "#C1A575")) +
@@ -183,26 +184,64 @@ div.plot <- ggplot(data = rich.mean, aes(x = year, y = mean)) +
   ylim(5, 25) +
   labs(x = "Growing Season", y = "Species Richness")
 
+rich.plot
+
+even.plot <- ggplot(data = even.mean, aes(x = year, y = mean)) +
+  geom_point(data = diversity, aes(x = year, y = even, color = removal),
+             position = position_jitterdodge(0.2, dodge.width = .3), size = 2, alpha = 0.5) +
+  scale_color_manual(values = c("#909256", "#C1A575")) +
+  ggnewscale::new_scale_color() +
+  geom_point(aes(shape = removal, color = removal), shape = 18, size = 4.5, 
+             position = position_dodge(width = 0.2)) +
+  geom_errorbar(aes(ymin = mean - se, ymax = mean + se, color = removal),
+                position = position_dodge(width = 0.2), width = 0.07) +
+  geom_line(aes(color = removal), 
+            position = position_dodge(width = 0.2)) +
+  scale_color_manual(values = c("#333d29", "#A17D5D")) +  # ← your new colors here
+  theme_pubr() +
+  theme(strip.text = element_text(size = 15),
+        strip.background = element_blank(),
+        panel.border = element_rect(fill = "transparent",
+                                    color = "gray", linewidth = 0.12)) +
+  xlim(0.8, 3.2) +
+  ylim(0.5, 1) +
+  labs(x = "Growing Season", y = "Species Eveness")
+
+even.plot
+
+div.plot <- ggplot(data = div.mean, aes(x = year, y = mean)) +
+  geom_point(data = diversity, aes(x = year, y = div, color = removal),
+             position = position_jitterdodge(0.2, dodge.width = .3), size = 2, alpha = 0.5) +
+  scale_color_manual(values = c("#909256", "#C1A575")) +
+  ggnewscale::new_scale_color() +
+  geom_point(aes(shape = removal, color = removal), shape = 18, size = 4.5, 
+             position = position_dodge(width = 0.2)) +
+  geom_errorbar(aes(ymin = mean - se, ymax = mean + se, color = removal),
+                position = position_dodge(width = 0.2), width = 0.07) +
+  geom_line(aes(color = removal), 
+            position = position_dodge(width = 0.2)) +
+  scale_color_manual(values = c("#333d29", "#A17D5D")) +  # ← your new colors here
+  theme_pubr() +
+  theme(strip.text = element_text(size = 15),
+        strip.background = element_blank(),
+        panel.border = element_rect(fill = "transparent",
+                                    color = "gray", linewidth = 0.12)) +
+  xlim(0.8, 3.2) +
+  ylim(1, 3) +
+  labs(x = "Growing Season", y = "Shannon Diversity")
+
 div.plot
 
-div.line.plot <- ggplot(data = diversity, aes(x = year, y = div, color = removal)) +
-  geom_point() +
-  geom_smooth(method='lm') +
-  theme_pubr() +
-  scale_color_manual(values = c("#333d29", "#b6ad90")) +
-  labs(x = "Growing Season", y = "Shannon Diversity") 
-div.line.plot
+div.time.plots <- ggarrange(div.plot, rich.plot, even.plot,
+                           labels = c("A", "B","C"), 
+                           nrow = 1, ncol = 3,
+                           common.legend = TRUE)
+
+div.time.plots 
 
 
 #richness linear graph
-ggplot(diversity, aes(x = year, y = div, color = removal, group = removal)) +
-  geom_smooth(method = "lm", se = TRUE, alpha = 0.2, linewidth = 0.8) +
-  geom_jitter(size = 2, width = 0.1, height = 0, alpha = 0.7) +
-  scale_color_manual(values = c("#333d29", "#b6ad90")) +
-  theme_pubr() +
-  xlim(0.8,3.2) +
-  ylim(5,25) +
-  labs(x = "Growing Season", y = "Species Richness") 
+
 
 #-------Bare Ground Analysis------#
 envi.cover <- cover.comb %>% 
@@ -388,5 +427,16 @@ delta_plot %>%
 comb.cov.NN <- subset(cover.comb.clean, select = c('year','plot','code','functional_group',
                                              'percent_cover','nearest_neighbor'))
 write.csv(comb.cov.NN, "Processed Data/Neighbor Cover.csv", row.names=FALSE)
+
+#----------Indicator Analysis----------#
+library(indicspecies)
+
+EL.25.rem = $removal
+EL.25.pair = $pair
+
+EL.25.ind = multipatt(emerald.25.matrix, EL.25.rem, func = "r.g",
+                           control = how(blocks = EL.25.pair, nperm = 9999))
+
+summary(EL.25.ind, alpha = 0.1)
   
 

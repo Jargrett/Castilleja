@@ -1,5 +1,6 @@
 setwd("~/Desktop/Castilleja/Data Analysis/RMBL Castilleja Experimental Project")
 #----------Data importing, cleaning, and restructuring----------#
+library(plyr)
 library(tidyverse)#for data wrangling and restructuring
 library(magrittr)#for data wrangling and restructuring
 library(conflicted)#helps resolve errors for similar functions between packages
@@ -12,6 +13,9 @@ library(labdsv)#enables restructuring for ecological analysis
 library(ggeffects)
 library(ggcharts)
 library(ggthemes)
+library(plyr)
+library(tidytext)
+
 
 
 #Specifying conflicts
@@ -249,24 +253,110 @@ persist <- pa_cover %>%
     y1 == 0 & y3 == 1 ~ "gain",
     y1 == 1 & y3 == 0 ~ "loss",
     y1 == 1 & y3 == 1 ~ "persist",
-    TRUE ~ "absent")) %>%
-    filter(change != "absent")
+    TRUE ~ "absent")) %>% 
+  filter(change != "absent")
+
+meta <- plot_data %>% 
+  select(plot, pair, block, removal)
 
 persist %<>%
-  left_join(meta, by = "plot")
+  left_join(meta, by = "plot") 
 
-species_prop <- persist %>%
-  filter(change %in% c("gain", "loss")) %>%
-  group_by(removal, code, change) %>%
-  summarise(n_plots = n(), .groups = "drop") %>%
-  left_join(plots_per_treatment, by = "removal") %>%
-  mutate(prop = n_plots / n_plots.y) %>%  # proportion of plots in that treatment
-  select(removal, code, change, prop) %>%
-  arrange(removal, change, desc(prop))
+# Step 1: plots per treatment as denominator
+n_plots <- meta %>%
+  group_by(removal) %>%
+  summarise(total_plots = n_distinct(plot))
+
+# Step 2: rate of gain/loss per species per treatment
+rate <- persist %>%
+  group_by(code, removal, change) %>%
+  summarise(n = n(), .groups = "drop") %>%
+  left_join(n_plots, by = "removal") %>%
+  mutate(rate = n / total_plots) %>%
+  select(-n, -total_plots) %>%
+  pivot_wider(names_from = change, values_from = rate, values_fill = 0)
+
+# Step 3: calculate difference between treatments
+diff <- rate %>%
+  pivot_longer(cols = c(gain, loss, persist), names_to = "change", values_to = "rate") %>%
+  pivot_wider(names_from = removal, values_from = rate, values_fill = 0) %>%
+  mutate(diff = Removed - Present) %>%  # positive = more common in Removed
+  arrange(desc(abs(diff)))
+
+# How many plots does each species appear in at all?
+species_frequency <- persist %>%
+  group_by(code) %>%
+  summarise(
+    n_plots = n_distinct(plot),
+    n_gains = sum(change == "gain"),
+    n_losses = sum(change == "loss"),
+    n_persist = sum(change == "persist")
+  ) %>%
+  arrange(n_plots)
+
+
+# Only keep species present in at least 5 plots
+common_species <- species_frequency %>%
+  filter(n_plots >= 5) %>%
+  pull(code)
+
+# Total gain/loss events per treatment and change type
+total_changes <- persist %>%
+  group_by(removal, change) %>%
+  summarise(total_change = n(), .groups = "drop")
+
+summary_df <- persist %>%
+  group_by(code, removal, change) %>%
+  summarise(n = n(), .groups = "drop") %>%
+  left_join(total_changes, by = c("removal", "change")) %>%
+  mutate(proportion = n / total_change) %>%
+  select(-n, -total_change) %>%
+  pivot_wider(names_from = change, values_from = proportion, values_fill = 0)
+
+species_data <- read.csv("Raw Data/EL Species List - EL.csv")
+
+affinity <- diff %>%
+  filter(change != "persist") %>%
+  select(code, change, diff) %>%
+  pivot_wider(names_from = change, values_from = diff, values_fill = 0) %>%
+  rename(gain_diff = gain, loss_diff = loss) %>%  # rename to make clear these are already differences
+  mutate(
+    affinity = gain_diff - loss_diff,
+    abs_affinity = abs(affinity)
+  ) %>%
+  left_join(species_data %>% select(code, functional_group), by = "code") %>%
+  arrange(desc(abs_affinity))%>% 
+  mutate_if(is.numeric, round, digits = 3) 
+
+common_affinity <- affinity %>% filter(code %in% common_species)
+
+# join functional group info
+#gain — the difference in gain rates between treatments (Removed - Present). 
+#A positive value means that species colonized a greater proportion of plots under parasite removal than in the control.
+#loss — the difference in loss rates between treatments (Removed - Present). 
+#A positive value means that species disappeared from a greater proportion of plots under parasite removal.
+#affinity — calculated as gain - loss. This combines both dynamics into a single value:
+  
+#Positive affinity means the species colonized more and was lost less when CASE was removed
+#A negative affinity would mean the species is associated with parasite presence
+# Near zero means treatment had little net effect on that species
+#gain_diff (0.05) = colonized 5% more plots under parasite removal
+#loss_diff = -0.10 → lost from 10% fewer plots under parasite removal
 
 
 #-----species abundance changes----#
-meta <- plot_data %>% 
+
+#import plot data
+plot_data <- read.csv("Raw Data/Emerald Lake Plot Data - Info.csv")
+plot_data$plot <- as.factor(plot_data$plot)
+plot_data$pair <- as.factor(plot_data$pair)
+plot_data$block <- as.factor(plot_data$block)
+plot_data %<>%
+  mutate(removal = recode(removal,
+                          "C" = "Present",
+                          "R" = "Removed"))
+
+plot_d <- plot_data %>% 
   select(plot,removal)
 
 abund.cover <- abundance_change(clean_cover,
@@ -282,7 +372,7 @@ abund.cover %<>%
   rename(percent_change = change)
 
 
-abund_merge_cover <- merge(abund.cover, meta, by = "plot")
+abund_merge_cover <- merge(abund.cover, plot_d, by = "plot")
 
 abund_mean_cover <- abund_merge_cover %>% 
   group_by(code, removal) %>%
@@ -396,6 +486,7 @@ species_change <- pa_data %>%
 
 #convert to matrix format for diversity calculations
 library(labdsv)#enables restructuring for ecological analysis
+library(vegan)
 comb.cov <- subset(cover.comb.clean, select = c('year','plot','code','percent_cover'))
 #filter for year/pre and calculate
 emerald.pre <- comb.cov %>% 
@@ -416,6 +507,18 @@ emerald.23.matrix <- matrify(emerald.23)
 emerald.24.matrix <- matrify(emerald.24)
 emerald.25.matrix <- matrify(emerald.25)
 plot <- read.csv("Raw Data/Site Level Data - EL.csv") #importing metadata
+plot.25 <- plot %>% 
+  filter(Year == "2025") %>%
+  select(-c(Year))
+plot.23 <- plot %>% 
+  filter(Year == "2023") %>%
+  select(-c(Year))
+plot.24 <- plot %>% 
+  filter(Year == "2024") %>%
+  select(-c(Year))
+plot.pre <- plot %>% 
+  filter(Year == "pre") %>%
+  select(-c(Year))
 
 #calculate distance matrix
 dist.pre <-vegdist(emerald.pre.matrix, method="bray")
@@ -439,7 +542,14 @@ ordiplot(nmds.25, type="text", display="sites")
 
 nmds.scores <- as.data.frame(vegan::scores(nmds.25))
 
-NMDS <- cbind(plot,nmds.scores) #final dataset
+NMDS <- cbind(plot.25, nmds.scores) #final dataset
+
+cap.mod <- capscale(dist.25 ~ removal*litter + Condition(block), 
+                     data = NMDS)
+
+perms <- how(blocks = NMDS$block, nperm = 9999)
+
+anova_res <- anova(cap.mod, permutations = perms, by = "terms")
 
 perm <- adonis2(dist ~ removal*litter, data = NMDS, permutations=9999)
 perm

@@ -66,6 +66,8 @@ fviz_pca_biplot(full.pca, label = "var",
   theme_minimal()
 
 
+
+
 #------ NPKCa Analysis-------#
 #Nitrate
 NO3.lme <- lmer(NO3 ~ litter*removal + (1|block) + (1|pair), data = soil.full)
