@@ -8,6 +8,8 @@ library(ggrepel)
 library(car)
 library(indicspecies)
 library(FUNGuildR)
+
+devtools::install_github("brendanf/FUNGuildR")
 library(lme4)
 library(lmerTest)  # provides p-values for lmer objects
 
@@ -123,13 +125,13 @@ summary(mean.avg.dist)
 hist(mean.avg.dist)
 
 fungi.nmds <- metaMDS(mean.avg.dist, k = 3, try = 500)
-fungi.nmds
+fungi.nmds # stress at k = 3: 0.15
 stressplot(fungi.nmds)
 
 nmds.scores <- as.data.frame(scores(fungi.nmds))
 nmds.scores <- tibble::rownames_to_column(nmds.scores, "sample_id")
 
-NMDS<- metadata %>% 
+NMDS <- metadata %>% 
   left_join(nmds.scores, by = "sample_id")
 
 # NMDS plot -- colored by litter, shaped by removal
@@ -165,7 +167,7 @@ nmds.fungi
 NMDS <- NMDS[match(rownames(mean.avg.dist), NMDS$sample_id), ]
   
 cap.mod <- capscale(mean.avg.dist ~ removal*litter*year + Condition(block), 
-                    data = NMDS)
+                    data = NMDS, )
 
 perms <- how(blocks = NMDS$block, nperm = 9999)
 

@@ -65,6 +65,7 @@ plot_data %<>%
                           "C" = "Present",
                           "R" = "Removed"))
 
+saveRDS(plot_data, "Processed Data/Plot Data.rds")
 #----Codyn Work-----#
 clean_cover <- readRDS("Processed Data/Cleaned Cover.rds")
 clean_cover %<>% filter (year != "0")
@@ -327,6 +328,8 @@ affinity <- diff %>%
   left_join(species_data %>% select(code, functional_group), by = "code") %>%
   arrange(desc(abs_affinity))%>% 
   mutate_if(is.numeric, round, digits = 3) 
+
+saveRDS(affinity, "Processed Data/Removal Affinity.rds")
 
 common_affinity <- affinity %>% filter(code %in% common_species)
 

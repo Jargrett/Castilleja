@@ -149,7 +149,23 @@ summary_decomp <- weibull_results %>%
 write.csv(summary_decomp, "Processed Data/Litter Decomp Values.csv", row.names=FALSE)
 
 #Analysis
+plot <- readRDS("Processed Data/Plot Data.rds")
+summary_decomp$plot <- as.factor(summary_decomp$plot)
+plot_decomp <- summary_decomp %>% 
+  left_join(plot, by = "plot") 
 
+#Analysis
+hl.lme <- lmer(half_life ~ litter.x*removal.x + (1|block) + (1|pair), data = plot_decomp)
+summary(hl.lme)
+Anova(hl.lme) #No significance
+emmip(hl.lme, litter ~ removal)
+emmeans(hl.lme, pairwise ~  removal|litter)
+
+mrt.lme <- lmer(mrt ~ litter.x*removal.x + (1|block) + (1|pair), data = plot_decomp)
+summary(mrt.lme)
+Anova(mrt.lme) #No significance
+emmip(mrt.lme, litter ~ removal)
+emmeans(mrt.lme, pairwise ~  removal|litter)
 
 #plotting
 decomp_mrt <- summary_decomp %>% 
@@ -209,12 +225,5 @@ ggplot(decomp_hl, aes(x = litter , y = mean, fill = removal, pattern = pat)) +
 
 
 
-#Analysis
-hl.lme <- lm(half_life ~ litter*removal, data = summary_decomp)
-summary(hl.lme)
-Anova(hl.lme) #No significance
 
-mrt.lme <- lm(mrt ~ litter*removal, data = summary_decomp)
-summary(hl.lme)
-Anova(hl.lme) #No significance
 
