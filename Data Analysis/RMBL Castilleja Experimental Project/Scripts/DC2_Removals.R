@@ -98,3 +98,13 @@ ggplot(rem_mean, aes(x = year, y = rich_mean)) +
   geom_errorbar(aes(ymin = rich_mean - rich_se, ymax = rich_mean + rich_se),
               position = position_dodge(width = 0.2), width = 0.07)
 
+
+# Mean change in richness for R plots 2024 to 2025
+r_change <- rem_div %>%
+  pivot_wider(id_cols = plot, names_from = year, values_from = rich) %>%
+  mutate(rich_change = `2025` - `2024`) %>%
+  summarise(mean_change = mean(rich_change),
+            sd_change   = sd(rich_change))
+
+# Compare to mean change in your main removal plots over the same window
+

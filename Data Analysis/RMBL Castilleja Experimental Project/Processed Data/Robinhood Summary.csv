@@ -1,0 +1,56 @@
+"code","family","genus","species","functional_group","life_history","growth_form","spatial_rarity","temporal_rarity","response_ratio","dominance_class","occupancy_shift","indicator","turnover_class","turnover_magnitude"
+"RIMO","Grossulariaceae","Ribes","montigenum","shrub","perennial","shrub",0,0,-0.130215748548899,"CP",-0.0875,TRUE,"Control colonizer",1
+"BAVU","Brassicaceae","Barbarea","vulgaris","forb","biennial","rossette, erect",0.862745098039216,0,-0.27007299270073,"SP",-0.075,TRUE,"No clear response",1
+"HYCA","Boraginaceae","Hydrophyllum","capitatum","forb","perennial","erect",0.686274509803922,0,-0.839080459770115,"SP",-0.075,TRUE,"No clear response",2
+"AGGL","Asteraceae","Agoseris","glauca","forb","perennial","rossette",0.705882352941176,0.333333333333333,-0.142857142857143,"SP",-0.075,TRUE,"No clear response",3
+"LIPO","Apiaceae","Ligusticum","porteri","forb","perennial","erect, clump",0.0392156862745098,0,-0.148936170212766,"CP",-0.05,TRUE,"No clear response",0
+"MESP","Poaceae","Melica","spectabilis","grass","perennial","cespitose, rhizome",0.274509803921569,0,0.214096304924289,"SP",0.0375,FALSE,"No clear response",2
+"THFE","Thalictraceae","Thalictrum","fendleri","forb","perennial","erect",0.0980392156862745,0,-0.625,"CP",-0.05,FALSE,"No clear response",0
+"RUSA","Polygonaceae","Rumex","salicifolius","forb","perennial","erect",0.235294117647059,0,-0.148091603053435,"CP",-0.0625,FALSE,"No clear response",2
+"EREL","Asteraceae","Erigeron","elatior","forb","perennial","rhizome, clump",0.411764705882353,0.333333333333333,-0.123298327499028,"SP",-0.05,FALSE,"No clear response",4
+"HEMA","Apiaceae","Heracleum","maximum","forb","perennial","erect",0.137254901960784,0,0.145631067961165,"CP",-0.0375,FALSE,"Control extirpation",-2
+"FRVI","Rosaceae","Fragaria","virginiana","forb","perennial","rhizome, stolon",0.509803921568627,0,0.0950683986665134,"SP",0.125,FALSE,"Control colonizer",3
+"CAHO","Cyperaceae","Carex","Hoodii","sedge","perennial","rhizome, stolon",0.568627450980392,0,0.250766400980993,"SP",0.0125,FALSE,"No clear response",0
+"POST","Poaceae","Poa","stenantha","grass","perennial","cespitose",0.490196078431373,0.666666666666667,-0.411764705882353,"SI",-0.025,FALSE,"No clear response",2
+"LUAR","Fabaceae","Lupinus","argenteus","legume","perennial","erect, clump",0.117647058823529,0,-0.069264904495466,"CP",-0.075,FALSE,"No clear response",1
+"TRSP","Poaceae","Trisetum","spicatum","grass","perennial","cespitose",0.294117647058823,0.333333333333333,-0.6,"SP",-0.025,FALSE,"No clear response",0
+"VINU","Violaceae","Viola","nuttallii","forb","perennial","rhizome",0.92156862745098,0,0.18413262285376,"SP",0.0375,FALSE,"No clear response",6
+"POPR","Poaceae","Poa","pratensis","grass","perennial","tiller, clump",0.196078431372549,0,-0.0818455011490189,"CP",-0.0125,FALSE,"Removal extirpation",1
+"POGR","Rosaceae","Potentilla","gracilis","forb","perennial","caudex, rhizome",0.313725490196078,0,0.167566833880974,"SP",-0.0625,FALSE,"No clear response",0
+"DEBA","Ranunculaceae","Delphinium","barbeyi","forb","perennial","erect, clump",0.254901960784314,0,-0.12867530825166,"SP",-0.0625,FALSE,"Removal extirpation",2
+"DESO","Brassicaceae","Descurainia","sophia","forb","perennial","erect",0.88235294117647,0.666666666666667,-0.574803149606299,"SI",0.025,FALSE,"No clear response",-2
+"RAIN","Ranunculaceae","Ranunculus","inamoenus","forb","perennial","corm",0.803921568627451,0.666666666666667,-0.818181818181818,"SI",-0.0125,FALSE,"No clear response",1
+"GEPA","Gentianaceae","Gentiana","parryi","forb","perennial","erect",NA,NA,NA,NA,NA,FALSE,"No clear response",0
+"TAOF","Asteraceae","Taraxicum","officinale","forb","perennial","rossette",0.666666666666667,0.333333333333333,-0.111111111111111,"SP",-0.0375,FALSE,"No clear response",2
+"ERGR","Liliaceae","Erythronium","grandiflorum","forb","perennial","rhizome",0.725490196078431,0.333333333333333,-0.134728033472803,"SP",0.0125,FALSE,"No clear response",6
+"VAOC","Caprifoliaceae","Valeriana","occidentalis","forb","perennial","rhizome",0.372549019607843,0,0.0706061264392787,"SP",0.0375,FALSE,"Control colonizer",7
+"HYHO","Asteraceae","Hymenoxys","hoopesii","forb","perennial","erect",0.176470588235294,0,-0.0640247150314264,"CP",-0.0375,FALSE,"No clear response",5
+"AQCO","Ranunculaceae","Aquilegia","coerulea","forb","perennial","bushy, clump",0.450980392156863,0,0.0173913043478261,"SP",-0.075,FALSE,"Removal extirpation",2
+"MOUN","Ericaceae","Moneses","uniflora","forb","perennial","rossette",0.627450980392157,0.666666666666667,0.121495327102804,"SI",-0.025,FALSE,NA,NA
+"ERSP","Asteraceae","Erigeron","speciosus","forb","perennial","rhizome, clump",0.333333333333333,0,0.0429447852760737,"SP",-0.0375,FALSE,"No clear response",-2
+"MECI","Boraginaceae","Mertensia","ciliata","forb","perennial","erect, clump",0.470588235294118,0,-0.0499080036798528,"SP",0.075,FALSE,"Control colonizer",7
+"BOST","Brassicaceae","Boechera","stricta","forb","biennial","rossette",0.901960784313726,0.666666666666667,-0.0588235294117647,"SI",-0.0125,FALSE,NA,NA
+"NOFE","Brassicaceae","Noccaea","fendleri","forb","perennial","erect, clump",0.980392156862745,0.666666666666667,0.454545454545455,"SI",0.0125,FALSE,"No clear response",1
+"ELGL","Poaceae","Elymus","glaucus","grass","perennial","erect",0.215686274509804,0,-0.00449456429016926,"CP",-0.0125,FALSE,"No clear response",0
+"ANSE","Primulaceae","Androsace","septentrionalis","forb","annual","rossette",0.96078431372549,0,0.231051906293064,"SP",-0.025,FALSE,"Control colonizer",8
+"BRPU","Poaceae","Bromus","pumpellianus","grass","perennial","cespitose, rhizome",0.647058823529412,0,0.0403354396740093,"SP",0.0125,FALSE,"No clear response",3
+"ERCO","Asteraceae","Erigeron","coulteri","forb","perennial","rhizome",0.549019607843137,0,0.00940438871473355,"SP",0.05,FALSE,"No clear response",1
+"DRSP","Brassicaceae ","Draba","spectabilis","forb","perennial","rossette",0.843137254901961,0.666666666666667,0.138353765323993,"SI",0.0125,FALSE,"No clear response",0
+"CHAN","Onagraceae","Chamaenuerion","angustifolium","forb","perennial","rhizome",0.0588235294117647,0,-0.0546691667695901,"CP",0.0375,FALSE,"No clear response",5
+"GABI","Rubiaceae","Galium","bifolium","forb","perennial","erect",0.823529411764706,0.333333333333333,0.135371179039301,"SP",0.025,FALSE,"No clear response",2
+"GERI","Geraniaceae","Geranium","richardsonii","forb","perennial","rhizome",0.431372549019608,0,-0.145522388059702,"SP",0,FALSE,"No clear response",3
+"SECR","Asteraceae","Senecio","crassulus","forb","perennial","rhizome",0.352941176470588,0,-0.00907344537205954,"SP",0.025,FALSE,"No clear response",3
+"HEQU","Asteraceae","Helianthella","quinquenervis","forb","perennial","clump",0.0784313725490197,0,0.117114572231995,"CP",-0.0625,FALSE,"No clear response",2
+"PHAL","Poaceae","Phleum","alpinum","grass","perennial","cespitose, rhizome",0.588235294117647,0,0.0718954248366013,"SP",-0.025,FALSE,"Removal colonizer",-3
+"CACA","Poaceae","Calamagrostis","canadensis","grass","perennial","cespitose, rhizome",0.156862745098039,0.666666666666667,-0.172413793103448,"CI",0,FALSE,"Removal colonizer",-1
+"DOEN","Asteraceae","Doellingeria","engelmannii","forb","perennial","caudex, rhizome",NA,NA,NA,NA,NA,FALSE,NA,NA
+"PHPR","Poaceae","Phleum","pratense","grass","perennial","erect, clump",NA,NA,NA,NA,NA,FALSE,"Control extirpation",-1
+"RHIN","Crassulaceae","Rhodiola","integrifolia","forb","perennial","erect",0.529411764705882,0,0.25,"SP",-0.0375,FALSE,"No clear response",0
+"CAPE","Campanulaceae","Campanula","petiolata","forb","perennial","rossette",NA,NA,NA,NA,NA,FALSE,"Removal colonizer",-1
+"HEMU","Asteraceae","Heliomeris","multiflora","forb","perennial","erect, clump",0.803921568627451,0.666666666666667,0.2,"SI",0,FALSE,"No clear response",0
+"FEEA","Poaceae","Festuca","earlei","grass","perennial","cespitose, rhizome",NA,NA,NA,NA,NA,FALSE,NA,NA
+"VECA","Melanthiaceae","Veratrum","californicum","forb","perennial","rhizome",0.0196078431372549,0,-0.617834394904459,"CP",-0.025,FALSE,"Removal colonizer",-1
+"SIDR","Caryophyllaceae","Silene","drummondii","forb","perennial","erect",NA,NA,NA,NA,NA,FALSE,"Removal colonizer",-1
+"EPCI","Onagraceae","Epilobium","ciliatum","forb","perennial","rossette",NA,NA,NA,NA,NA,FALSE,"Control extirpation",-1
+"PLTW","Plantaginaceae","Plantago","tweedyi","forb","perennial","rossette",NA,NA,NA,NA,NA,FALSE,"Control colonizer",1
+"TRHY","Fabaceae","Trifolium","hybridum","legume","perennial","erect, clump",NA,NA,NA,NA,NA,FALSE,"Control colonizer",1
