@@ -68,7 +68,7 @@ capscale_table <- function(model, perms){
   df$R2 <- df$SumOfSqs / total_SS
   names(df)[names(df) == "Df"] <- "df"
   names(df)[names(df) == "SumOfSqs"] <- "SS"
-  names(df)[names(df) == "F"] <- "F_value"
+  names(df)[names(df) == "F"] <- "pseudo-F"
   names(df)[names(df) == "Pr(>F)"] <- "p_value"
   
   df

@@ -1,0 +1,2 @@
+load("/Users/jargrett/Desktop/Castilleja/Data Analysis/Castilleja Mechanistic Aboveground/Processed Data/Cleaned Cover.rds")
+load("/Users/jargrett/Desktop/Castilleja/Data Analysis/Castilleja Mechanistic Aboveground/Processed Data/Dirty Cover.rds")

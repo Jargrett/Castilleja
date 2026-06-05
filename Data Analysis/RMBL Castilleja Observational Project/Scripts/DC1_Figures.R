@@ -256,6 +256,7 @@ emerald.nearest <- ggplot(EL.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   labs(x = "Relative Abundance", y = "Nearest Neighbor Frequency") +
   theme_minimal() +
   ggtitle("Castilleja septentrionalis") +
+  ylim(-0.001,0.5) +
   theme(plot.title = element_text(hjust = 0.92, vjust= -0.12))
 emerald.nearest
 
@@ -271,6 +272,7 @@ avery.nearest <- ggplot(AP.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   labs(x = "Relative Abundance", y = "Nearest Neighbor Frequency") +
   theme_minimal() +
   ggtitle("Castilleja septentrionalis") +
+  ylim(-0.001,0.5) +
   theme(plot.title = element_text(hjust = 0.92, vjust= -0.12))
 avery.nearest
 
@@ -287,6 +289,7 @@ copper.nearest <- ggplot(CC.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_text(aes(0.0234589564, 0.06666667), label = "Mertensia brevistyla", color = "grey22", nudge_y = 0.01, size = 3.5) +
   theme_minimal() +
   ggtitle("Castilleja septentrionalis") +
+  ylim(-0.001,0.5) +
   theme(plot.title = element_text(hjust = 0.92, vjust= -0.12))
 copper.nearest
 
@@ -310,6 +313,7 @@ deercreek.nearest <- ggplot(DC.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   geom_text(aes(0.0463176575, 0.085271318), label = "Carex sp.", color = "grey22", nudge_y = -0.005, size = 3.5) +
   theme_minimal() +
   ggtitle("Castilleja linariifolia") +
+  ylim(-0.001,0.3) +
   theme(plot.title = element_text(hjust = 0.92, vjust= -0.12))
 deercreek.nearest
 
@@ -326,6 +330,7 @@ johnson.nearest <- ggplot(JH.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   labs(x = "Relative Abundance", y = "Nearest Neighbor Frequency") +
   theme_minimal() +
   ggtitle("Castilleja linariifolia") +
+  ylim(-0.001,0.3) +
   theme(plot.title = element_text(hjust = 0.92, vjust= -0.12))
 johnson.nearest
 
@@ -346,6 +351,7 @@ almont.nearest <- ggplot(AL.nn, aes(x = rel_abund_cover, y = NN_freq)) +
   labs(x = "Relative Abundance", y = "Nearest Neighbor Frequency") +
   theme_minimal() +
   ggtitle("Castilleja chromosa") +
+  ylim(-0.001,0.3) +
   theme(plot.title = element_text(hjust = 0.92, vjust= -0.12))
 almont.nearest
 
