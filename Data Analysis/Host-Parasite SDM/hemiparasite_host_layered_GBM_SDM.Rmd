@@ -1,0 +1,413 @@
+---
+title: "Host-layered GBM species distribution models for hemiparasite restoration suitability"
+author: "Jordan"
+date: "`r Sys.Date()`"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This workflow adapts Victor Felix's CEID "Machine learning SDM in R: Zero to
+Pro(blems)" workshop into a **host-layered, two-stage** pipeline:
+
+- **Stage 1 — Host SDMs:** model each host on bioclimatic + land-cover predictors.
+- **Stage 2 — Hemiparasite SDMs:** model each parasite on the same environmental
+  predictors **plus** the host suitability layer(s) from Stage 1.
+
+It is written to run for **one focal parasite by default**, but every step is
+list-driven, so adding more parasites (or more hosts per parasite) is just a
+matter of adding entries in the configuration block below.
+
+---
+
+# 0. Libraries
+
+```{r libraries, message=FALSE, warning=FALSE}
+library(readr)     # read GBIF download files
+library(pROC)      # ROC / AUC
+library(gbm)       # gradient boosting machine
+library(dismo)
+library(reshape2)
+library(dplyr)
+library(geodata)   # WorldClim + land cover
+library(terra)     # raster / vector handling
+library(tigris)    # US boundaries
+library(sf)
+library(ggplot2)
+library(caret)     # train() wrapper for GBM
+
+# Output folders (created if missing)
+for (d in c("data", "data/species_data", "figures", "forecasts")) {
+  if (!dir.exists(d)) dir.create(d, recursive = TRUE)
+}
+```
+
+---
+
+# 1. Project configuration  *(SKELETON — fill in once species are chosen)*
+
+> **You have not yet identified hosts or parasites, so leave these as placeholders
+> for now.** When you are ready, uncomment one parasite (and its host[s]) to run
+> the single-species case, then add more list entries to scale up. The loops in
+> Stages 1–2 iterate over whatever you define here — no other code needs to change.
+
+```{r config-species}
+# ---- FOCAL PARASITE(S): name -> path to its GBIF occurrence download ----
+# Start with ONE entry. Add more lines to model additional parasites.
+parasite_species <- list(
+  # "<parasite_species_1>" = "data/species_data/<parasite_1_gbif>.csv"
+  # , "<parasite_species_2>" = "data/species_data/<parasite_2_gbif>.csv"
+)
+
+# ---- HOST(S) PER PARASITE: parasite -> named vector of host -> GBIF path ----
+# Each parasite maps to one or more hosts. Hosts shared across parasites are
+# only modeled once (Stage 1 caches them).
+host_species <- list(
+  # "<parasite_species_1>" = c(
+  #   "<host_species_a>" = "data/species_data/<host_a_gbif>.csv"
+  #   # , "<host_species_b>" = "data/species_data/<host_b_gbif>.csv"
+  # )
+)
+```
+
+```{r config-model}
+# ---- GBM hyperparameters (from the workshop) ----
+# NOTE: the workshop slides list n.trees = 360; the workshop code used 380.
+# Adjust as needed for your data.
+gbm_tune_grid <- expand.grid(
+  interaction.depth = 2:3,   # tree depth
+  n.trees           = 380,   # number of trees
+  shrinkage         = 0.01,  # learning rate
+  n.minobsinnode    = 50     # minimum observations per leaf
+)
+
+# Land-cover classes to include as predictors (ESA WorldCover fractions).
+# Options: "trees","grassland","shrubs","cropland","built","bare",
+#          "snow","water","wetland","mangroves","moss".
+# Defaults below are sensible for Midwest grassland hemiparasites.
+landcover_vars <- c("grassland", "cropland", "trees", "shrubs", "wetland")
+
+# Reproducibility + train/test split
+random_seed    <- 30
+train_fraction <- 0.70
+```
+
+---
+
+# 2. Study region
+
+The workshop modeled the contiguous U.S. Your project targets the Midwest; the
+contiguous-U.S. boundary is built first, with an **optional** Midwest filter you
+can switch on once your extent is finalized.
+
+```{r study-region}
+# US states with geometries
+us_states      <- tigris::states(year = 2023, cb = TRUE)
+us_states_vect <- terra::vect(us_states)
+
+# Drop non-contiguous states/territories
+drop_codes    <- c("AK", "HI", "PR", "GU", "VI", "MP", "AS")
+contiguous_us <- us_states_vect[!us_states_vect$STUSPS %in% drop_codes, ]
+
+# ---- OPTION: restrict to Midwest states (uncomment to use) ----
+# midwest_codes <- c("IL","IN","IA","KS","MI","MN","MO","NE","ND","OH","SD","WI")
+# contiguous_us <- contiguous_us[contiguous_us$STUSPS %in% midwest_codes, ]
+
+# Dissolve to a single study-region geometry
+study_region_vect <- terra::aggregate(contiguous_us)
+
+plot(study_region_vect, main = "Study region")
+```
+
+---
+
+# 3. Environmental predictors (bioclimatic + land cover)
+
+```{r worldclim}
+# Bioclimatic rasters (~81 km² / 5 arc-min)
+worldclim_rasters <- geodata::worldclim_global(var = "bio", res = 5, path = "data/")
+
+# Simplified bioclim names (WorldClim BIO1–BIO19)
+new_names <- c(
+  "AnnMeanTemp", "MeanDiurnalRange", "Isotherm", "TempSeasonality",
+  "MaxTempWarmM", "MinTempColdM", "TempAnnRange", "MeanTempWetQ",
+  "MeanTempDryQ", "MeanTempWarmQ", "MeanTempColdQ", "AnnPrecip",
+  "PrecipWetM", "PrecipDryM", "PrecipSeasonality", "PrecipWetQ",
+  "PrecipDryQ", "PrecipWarmQ", "PrecipColdQ"
+)
+names(worldclim_rasters) <- new_names
+
+# Crop + mask to the study region
+worldclim_region <- terra::crop(worldclim_rasters, study_region_vect) |>
+  terra::mask(study_region_vect)
+```
+
+```{r landcover}
+# Land-cover fractions (geodata::landcover, per Victor's email).
+# Each layer is the fraction of that class per cell; downloaded at 30 arc-sec
+# and resampled onto the WorldClim grid so the stacks align.
+landcover_list  <- lapply(landcover_vars, function(v) geodata::landcover(var = v, path = "data/"))
+landcover_stack <- terra::rast(landcover_list)
+names(landcover_stack) <- paste0("lc_", landcover_vars)
+
+landcover_region <- terra::crop(landcover_stack, study_region_vect) |>
+  terra::resample(worldclim_region) |>   # match resolution/grid of climate layers
+  terra::mask(study_region_vect)
+
+# Final predictor stack shared by every model (Stage 2 appends host layers to this)
+env_predictors <- c(worldclim_region, landcover_region)
+names(env_predictors)
+```
+
+---
+
+# 4. Reusable pipeline function
+
+`run_gbm_sdm()` encapsulates the entire per-species workshop workflow:
+load GBIF occurrences → reduce to binary presence per grid cell → sample
+background → 70/30 split → train a 3-fold cross-validated GBM → evaluate with
+AUC → forecast a suitability raster. It accepts **any** predictor stack, so the
+same function serves both the host stage and the host-layered parasite stage.
+
+```{r pipeline-function}
+run_gbm_sdm <- function(species_name,
+                        occurrence_path,
+                        predictors,
+                        region_vect,
+                        hyperparams    = gbm_tune_grid,
+                        bg_multiplier  = 1,      # background points = bg_multiplier * presence
+                        train_frac     = train_fraction,
+                        seed           = random_seed,
+                        save_figures   = TRUE,
+                        out_dir        = "forecasts") {
+
+  message("=== GBM SDM: ", species_name, " ===")
+  safe_name <- gsub("[^A-Za-z0-9]+", "_", species_name)
+
+  ## --- 1. Load GBIF occurrences (standard tab-delimited GBIF export) ---
+  occ_raw <- readr::read_delim(occurrence_path, delim = "\t",
+                               escape_double = FALSE, col_names = TRUE,
+                               na = c("", "NA"), show_col_types = FALSE)
+
+  occ <- data.frame(longitude = occ_raw$decimalLongitude,
+                    latitude  = occ_raw$decimalLatitude,
+                    id        = 1) |>
+    stats::na.omit()
+
+  occ_vect <- terra::vect(occ, geom = c("longitude", "latitude"), crs = "EPSG:4326")
+  occ_vect <- terra::crop(occ_vect, region_vect)
+
+  ## --- 2. Rasterize to the predictor grid; reduce to BINARY presence per pixel ---
+  ref_layer  <- predictors[[1]]
+  occ_raster <- terra::rasterize(occ_vect, ref_layer, field = "id",
+                                 fun = "count", background = 0)
+  occ_raster[occ_raster > 0] <- 1
+
+  presence_df <- terra::as.data.frame(occ_raster, xy = TRUE)
+  colnames(presence_df) <- c("longitude", "latitude", "Label")
+  presence_df <- dplyr::filter(presence_df, Label == 1)
+  presence_pts <- terra::vect(presence_df, geom = c("longitude", "latitude"),
+                              crs = "EPSG:4326")
+
+  ## --- 3. Extract predictors at presence points ---
+  presence_env <- terra::extract(predictors, presence_pts)
+  presence_env <- subset(presence_env, select = -c(ID))
+  presence_env$Label <- 1
+  presence_env <- stats::na.omit(presence_env)
+
+  ## --- 4. Random background points (same count as presences by default) ---
+  set.seed(seed)
+  n_bg <- round(bg_multiplier * nrow(presence_env))
+  bg_xy <- terra::spatSample(predictors, size = n_bg, method = "random",
+                             na.rm = TRUE, xy = TRUE) |>
+    dplyr::mutate(Label = 0)
+  background_env <- subset(bg_xy, select = -c(x, y))
+  background_env <- stats::na.omit(background_env)
+
+  ## --- 5. 70/30 train-test split (presence and background split separately) ---
+  set.seed(seed)
+  p_idx <- sample(seq_len(nrow(presence_env)),   size = floor(train_frac * nrow(presence_env)))
+  b_idx <- sample(seq_len(nrow(background_env)), size = floor(train_frac * nrow(background_env)))
+
+  train_data <- rbind(presence_env[p_idx, ],  background_env[b_idx, ])
+  test_data  <- rbind(presence_env[-p_idx, ], background_env[-b_idx, ])
+
+  # Target as a factor with caret-friendly level names
+  to_factor <- function(df) {
+    df$Label <- factor(df$Label, levels = c(0, 1), labels = c("Background", "Presence"))
+    df
+  }
+  train_data <- to_factor(train_data)
+  test_data  <- to_factor(test_data)
+
+  feature_cols <- setdiff(names(train_data), "Label")  # works for any # of predictors
+
+  ## --- 6. Train GBM (3-fold CV, ROC-selected) ---
+  set.seed(11)
+  gbm_model <- caret::train(
+    x = train_data[, feature_cols],
+    y = train_data$Label,
+    method   = "gbm",
+    metric   = "ROC",
+    trControl = caret::trainControl(
+      method          = "cv",
+      number          = 3,
+      classProbs      = TRUE,
+      summaryFunction = caret::twoClassSummary
+    ),
+    tuneGrid = hyperparams,
+    verbose  = FALSE
+  )
+  train_auc <- mean(gbm_model$resample$ROC)
+
+  ## --- 7. Test-set AUC ---
+  test_probs <- predict(gbm_model, test_data[, feature_cols], type = "prob")[, "Presence"]
+  test_roc   <- pROC::roc(test_data$Label, test_probs, quiet = TRUE)
+  test_auc   <- as.numeric(pROC::auc(test_roc))
+  message(sprintf("  train AUC = %.3f | test AUC = %.3f", train_auc, test_auc))
+
+  if (save_figures) {
+    roc_df <- data.frame(fpr = 1 - test_roc$specificities, tpr = test_roc$sensitivities)
+    test_plot <- ggplot(roc_df, aes(fpr, tpr)) +
+      geom_line(color = "blue", linewidth = 1.1) +
+      geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "gray") +
+      labs(title = paste("GBM Testing ROC:", species_name),
+           subtitle = paste("AUC =", round(test_auc, 3)),
+           x = "1 - Specificity", y = "Sensitivity") +
+      theme_minimal(base_size = 13)
+    ggsave(file.path("figures", paste0(safe_name, "_test_ROC.jpg")),
+           test_plot, width = 4, height = 4, dpi = 300)
+
+    # Feature importance
+    imp <- caret::varImp(gbm_model)$importance
+    imp$Percentage <- 100 * imp$Overall / sum(imp$Overall)
+    imp$Variable   <- rownames(imp)
+    imp_plot <- ggplot(imp, aes(reorder(Variable, Percentage), Percentage)) +
+      geom_segment(aes(xend = Variable, y = 0, yend = Percentage), color = "blue") +
+      geom_point(color = "blue", size = 2.5) + coord_flip() +
+      labs(title = paste("GBM feature importance:", species_name),
+           x = "Model features", y = "Percentage (%)") +
+      theme_minimal(base_size = 12)
+    ggsave(file.path("figures", paste0(safe_name, "_importance.jpg")),
+           imp_plot, width = 5, height = 5, dpi = 300)
+  }
+
+  ## --- 8. Forecast a suitability raster over the study region ---
+  suitability <- terra::predict(predictors, gbm_model, type = "prob", na.rm = TRUE)
+  suitability <- suitability[["Presence"]]
+  names(suitability) <- safe_name
+  suitability <- terra::mask(suitability, region_vect)
+  terra::writeRaster(suitability,
+                     filename = file.path(out_dir, paste0(safe_name, "_SDM.tif")),
+                     overwrite = TRUE)
+
+  ## --- Return everything the next stage needs ---
+  list(species     = species_name,
+       model       = gbm_model,
+       train_auc   = train_auc,
+       test_auc    = test_auc,
+       suitability = suitability)
+}
+```
+
+---
+
+# 5. Stage 1 — Host SDMs  *(skeleton; set `eval=TRUE` once hosts are defined)*
+
+Models each host once and stores its suitability layer for use in Stage 2.
+
+```{r stage1-hosts, eval=FALSE}
+host_models      <- list()  # fitted host GBMs
+host_suitability <- list()  # host -> suitability SpatRaster
+
+for (parasite in names(host_species)) {
+  for (host in names(host_species[[parasite]])) {
+    if (!is.null(host_suitability[[host]])) next  # already modeled (shared host)
+
+    res <- run_gbm_sdm(
+      species_name    = host,
+      occurrence_path = host_species[[parasite]][[host]],
+      predictors      = env_predictors,        # climate + land cover
+      region_vect     = study_region_vect,
+      hyperparams     = gbm_tune_grid
+    )
+
+    host_models[[host]]      <- res$model
+    host_suitability[[host]] <- res$suitability
+  }
+}
+```
+
+---
+
+# 6. Stage 2 — Hemiparasite SDMs (host-layered)  *(skeleton; set `eval=TRUE` to run)*
+
+For each parasite, the predictor stack = environmental predictors **+** a single
+**averaged host suitability** layer (the cell-wise mean of its host suitability
+rasters from Stage 1). This matches the one-pager methodology and is the
+host-layered step that distinguishes the model from a climate-only SDM. With one
+host the mean is just that host's layer; with several it collapses them into one
+combined "host availability" predictor.
+
+```{r stage2-parasites, eval=FALSE}
+parasite_models      <- list()
+parasite_suitability <- list()
+
+for (parasite in names(parasite_species)) {
+
+  # Gather this parasite's host suitability layers (one raster per host)
+  hosts       <- names(host_species[[parasite]])
+  host_layers <- terra::rast(host_suitability[hosts])
+
+  # Average across hosts into a SINGLE combined host-suitability predictor,
+  # matching the one-pager ("averaged host suitability layers").
+  # (Cell-wise mean across host layers; with one host this is just that layer.)
+  host_suit_mean <- terra::app(host_layers, fun = "mean", na.rm = TRUE)
+  names(host_suit_mean) <- "hostsuit_mean"
+
+  # Host-layered predictor stack: climate + land cover + averaged host suitability
+  predictors_stage2 <- c(env_predictors, host_suit_mean)
+
+  res <- run_gbm_sdm(
+    species_name    = parasite,
+    occurrence_path = parasite_species[[parasite]],
+    predictors      = predictors_stage2,       # climate + land cover + host suitability
+    region_vect     = study_region_vect,
+    hyperparams     = gbm_tune_grid
+  )
+
+  parasite_models[[parasite]]      <- res$model
+  parasite_suitability[[parasite]] <- res$suitability
+
+  # Quick map
+  plot(res$suitability,
+       main = paste0(parasite, " suitability (test AUC = ", round(res$test_auc, 3), ")"),
+       col  = colorRampPalette(c("white", "darkgreen"))(100), range = c(0, 1))
+  plot(study_region_vect, add = TRUE)
+}
+```
+
+---
+
+# 7. Restoration suitability overlay  *(placeholder for Aim 3)*
+
+Once parasite suitability rasters exist, overlay them with restoration-site
+coordinates to rank candidate sites. Fill in your sites table when ready.
+
+```{r restoration-overlay, eval=FALSE}
+# restoration_sites <- readr::read_csv("data/restoration_sites.csv")  # site, longitude, latitude, ...
+# sites_vect <- terra::vect(restoration_sites, geom = c("longitude", "latitude"), crs = "EPSG:4326")
+#
+# for (parasite in names(parasite_suitability)) {
+#   restoration_sites[[paste0("suit_", parasite)]] <-
+#     terra::extract(parasite_suitability[[parasite]], sites_vect)[, 2]
+# }
+#
+# # Rank sites by predicted suitability (and, if desired, host suitability)
+# ranked_sites <- dplyr::arrange(restoration_sites, dplyr::desc(.data[[paste0("suit_", names(parasite_suitability)[1])]]))
+# head(ranked_sites)
+```

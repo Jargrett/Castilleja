@@ -1,6 +1,7 @@
 setwd("~/Desktop/Castilleja/Data Analysis/Castilleja Mechanistic Aboveground")
 
 #packages
+library(tidyverse)#for data wrangling and restructuring
 library(ggeffects)
 library(patchwork)
 library(ggpubr)
@@ -9,6 +10,35 @@ library(ggnewscale)
 library(ggthemes)
 library(ggcharts)
 library(ggpattern)
+library(ggpmisc)
+library(magrittr)#for data wrangling and restructuring
+library(showtext)
+library(ggrepel)
+library(ggstar)
+library(sysfonts)
+library(sf)
+library(ggspatial)
+
+
+
+#graph themes
+font_add(family = "Times", regular = "Times New Roman.ttf",
+         bold = "Times New Roman Bold.ttf",
+         italic = "Times New Roman Italic.ttf")
+showtext_auto()
+
+theme_pub <- theme_bw(base_size = 12, base_family = "Times") +
+  theme(
+    panel.grid = element_blank(),
+    panel.border = element_rect(colour = "black", fill = NA, linewidth = 0.6),
+    axis.ticks = element_line(colour = "black", linewidth = 0.4),
+    axis.ticks.length = unit(-1.4, "mm"),                    # ticks point INWARD
+    axis.text.x  = element_text(colour = "black", margin = margin(t = 4)),
+    axis.text.y = element_text(colour = "black", margin = margin(r = 4)),
+    axis.title = element_text(colour = "black"),
+    legend.key = element_blank(),
+    legend.background = element_blank()
+  )
 
 #----------------------------------------------------------#
 #---------------------DIVERSITY PLOTS----------------------#
@@ -30,88 +60,92 @@ even.mean <- diversity %>%
   group_by(year,removal) %>% 
   summarise(mean = mean(even), se = sd(even)/sqrt(n()))
 
-
-rich.plot <- ggplot(data = rich.mean, aes(x = year, y = mean)) +
-  geom_point(data = diversity, aes(x = year, y = rich, color = removal),
-             position = position_jitterdodge(0.2, dodge.width = .3), size = 2, alpha = 0.5) +
-  scale_color_manual(values = c("#909256", "#C1A575")) +
-  ggnewscale::new_scale_color() +
-  geom_point(aes(shape = removal, color = removal), shape = 18, size = 4.5, 
-             position = position_dodge(width = 0.2)) +
-  geom_errorbar(aes(ymin = mean - se, ymax = mean + se, color = removal),
-                position = position_dodge(width = 0.2), width = 0.07) +
-  geom_line(aes(color = removal, group = removal), 
-            position = position_dodge(width = 0.2)) +
-  scale_color_manual(values = c("#333d29", "#A17D5D")) +  # ← your new colors here
-  theme_pubr() +
-  theme(strip.text = element_text(size = 15),
-        strip.background = element_blank(),
-        panel.border = element_rect(fill = "transparent",
-                                    color = "gray", linewidth = 0.12)) +
-  ylim(5, 25) +
-  labs(x = "Growing Season", y = "Species Richness")
-
-rich.plot
-
-even.plot <- ggplot(data = even.mean, aes(x = year, y = mean)) +
-  geom_point(data = diversity, aes(x = year, y = even, color = removal),
-             position = position_jitterdodge(0.2, dodge.width = .3), size = 2, alpha = 0.5) +
-  scale_color_manual(values = c("#909256", "#C1A575")) +
-  ggnewscale::new_scale_color() +
-  geom_point(aes(shape = removal, color = removal), shape = 18, size = 4.5, 
-             position = position_dodge(width = 0.2)) +
-  geom_errorbar(aes(ymin = mean - se, ymax = mean + se, color = removal),
-                position = position_dodge(width = 0.2), width = 0.07) +
-  geom_line(aes(color = removal, group = removal), 
-            position = position_dodge(width = 0.2)) +
-  scale_color_manual(values = c("#333d29", "#A17D5D")) +  # ← your new colors here
-  theme_pubr() +
-  theme(strip.text = element_text(size = 15),
-        strip.background = element_blank(),
-        panel.border = element_rect(fill = "transparent",
-                                    color = "gray", linewidth = 0.12)) +
-  ylim(0.5, 1) +
-  labs(x = "Growing Season", y = "Species Eveness")
-
-even.plot
-
 div.plot <- ggplot(data = div.mean, aes(x = year, y = mean)) +
-  geom_point(data = diversity, aes(x = year, y = div, color = removal),
-             position = position_jitterdodge(0.2, dodge.width = .3), size = 2, alpha = 0.5) +
-  scale_color_manual(values = c("#909256", "#C1A575")) +
-  ggnewscale::new_scale_color() +
-  geom_point(aes(shape = removal, color = removal), shape = 18, size = 4.5, 
-             position = position_dodge(width = 0.2)) +
-  geom_errorbar(aes(ymin = mean - se, ymax = mean + se, color = removal),
-                position = position_dodge(width = 0.2), width = 0.07) +
-  geom_line(aes(color = removal, group = removal), 
-            position = position_dodge(width = 0.2)) +
-  scale_color_manual(values = c("#333d29", "#A17D5D")) +  # ← your new colors here
-  theme_pubr() +
-  theme(strip.text = element_text(size = 15),
-        strip.background = element_blank(),
-        panel.border = element_rect(fill = "transparent",
-                                    color = "gray", linewidth = 0.12)) +
-  ylim(1, 3) +
-  labs(x = "Growing Season", y = "Shannon Diversity")
-
+  geom_line(aes(group = removal), position = position_dodge(width = 0.15),
+            colour = "black", linewidth = 0.5) +
+  geom_errorbar(aes(ymin = mean - se, ymax = mean + se, group = removal),
+                position = position_dodge(width = 0.15), width = 0.1,
+                colour = "black", linewidth = 0.5) +
+  geom_point(aes(fill = removal), shape = 21, size = 2, stroke = 0.6,
+             colour = "black", position = position_dodge(width = 0.15)) +
+  scale_fill_manual(values = c("Present" = "black", "Removed" = "white")) +
+  ylim(1.5, 2.5) +
+  labs(x = "Growing season", y = "Shannon diversity", fill = "Castilleja") +
+  theme_pub +
+  theme(legend.position = c(0.05, 0.94),
+        legend.justification = c(0, 1),
+        legend.background = element_rect(fill = "white", colour = "black", linewidth = 0.3),
+        legend.margin = margin(3, 4, 3, 4),
+        legend.title = element_text(size = 10, family = "Times", hjust = 0.5),
+        legend.text = element_text(size = 9, family = "Times"),
+        legend.key = element_blank(),
+        legend.key.size = unit(4, "mm"),
+        text = element_text(size = 10, family = "Times"),
+        axis.title = element_text(size = 11, family = "Times"),
+        axis.title.x = element_blank(),
+        strip.text = element_text(size = 10, family = "Times"),
+        strip.background = element_blank())
 div.plot
 
-div.time.plots <- ggarrange(div.plot, rich.plot, even.plot,
-                            labels = c("A", "B","C"), 
-                            nrow = 3, ncol = 1,
-                            common.legend = TRUE)
 
+rich.plot <- ggplot(data = rich.mean, aes(x = year, y = mean)) +
+  geom_line(aes(group = removal), position = position_dodge(width = 0.15),
+            colour = "black", linewidth = 0.5) +
+  geom_errorbar(aes(ymin = mean - se, ymax = mean + se, group = removal),
+                position = position_dodge(width = 0.15), width = 0.1,
+                colour = "black", linewidth = 0.5) +
+  geom_point(aes(fill = removal), shape = 21, size = 2, stroke = 0.6,
+             colour = "black", position = position_dodge(width = 0.15)) +
+  scale_fill_manual(values = c("Present" = "black", "Removed" = "white")) +
+  ylim(10,18) +
+  labs(x = "Growing season", y = "Species richness", fill = "Castilleja") +
+  theme_pub +
+  theme(legend.position = "none",
+        text = element_text(size = 10, family = "Times"),
+        axis.title = element_text(size = 11, family = "Times"),
+        axis.title.x = element_blank(),
+        strip.text = element_text(size = 10, family = "Times"),
+        strip.background = element_blank())
+rich.plot
+
+
+even.plot <- ggplot(data = even.mean, aes(x = year, y = mean)) +
+  geom_line(aes(group = removal), position = position_dodge(width = 0.15),
+            colour = "black", linewidth = 0.5) +
+  geom_errorbar(aes(ymin = mean - se, ymax = mean + se, group = removal),
+                position = position_dodge(width = 0.15), width = 0.1,
+                colour = "black", linewidth = 0.5) +
+  geom_point(aes(fill = removal), shape = 21, size = 2, stroke = 0.6,
+             colour = "black", position = position_dodge(width = 0.15)) +
+  scale_fill_manual(values = c("Present" = "black", "Removed" = "white")) +
+  ylim(0.7, 0.9) +
+  labs(x = "Growing season", y = "Species evenness", fill = "Castilleja") +
+  theme_pub +
+  theme(legend.position = "none",
+        text = element_text(size = 10, family = "Times"),
+        axis.title = element_text(size = 11, family = "Times"),
+        strip.text = element_text(size = 10, family = "Times"),
+        strip.background = element_blank())
+even.plot
+
+
+div.time.plots <- ggarrange(div.plot, rich.plot, even.plot,
+                            labels = c("A", "B", "C"),
+                            font.label = list(family = "Times", size = 12),
+                            nrow = 3, ncol = 1)
 div.time.plots
 
+showtext_opts(dpi = 800)
 ggsave(plot = div.time.plots, filename = 'Figures and Tables/Diversity_Season.png',
-       width = 5, height = 12, units = "in", dpi = 800)
+       width = 3, height = 6.5, units = "in", dpi = 800)
+
+ggsave(plot = div.time.plots, filename = 'Figures and Tables/Diversity_Season.pdf',
+       width = 3, height = 6.5, units = "in", device = cairo_pdf)
 
 
 #---------------Delta Diversity---------------#
 delta_diversity <- readRDS("Processed Data/Delta Diversity.rds")
-
-nudge_value <- 0.6 
+nudge_value <- 0.6
 
 delta_long <- delta_diversity %>%
   mutate(
@@ -132,72 +166,163 @@ delta_long <- delta_diversity %>%
 delta.graph <- delta_long %>%
   ggplot(aes(x = rich, y = field_plot2)) +
   geom_segment(data = . %>% filter(year == "Year 3" & arrow_draw == "arrow"),
-    aes(x = ifelse(delta_rich > 0, rich_before + 0.35, rich_before - 0.35),
-        xend = ifelse(delta_rich > 0, rich - 0.35,         rich + 0.35)),
-    arrow = arrow(angle = 25, type = "closed", length = unit(0.24, "cm")),
-    color = "gray55") +
-  geom_point(aes(color = year), size = 3.5) +
-  geom_text(aes(label = rich, x = rich + text_nudge_x), size = 3.25) +
-  scale_color_manual(values = c("#cbbbaa", "#45463e")) +
-  theme_classic() +
-  labs_pubr() +
-  theme(strip.text = element_text(size = 15),
-        strip.background = element_blank(),
-        panel.border = element_rect(fill = "transparent",
-                                    color = "gray23", linewidth = 0.05)) +
-  xlim(6, 28) +
+               aes(x = ifelse(delta_rich > 0, rich_before + 0.4, rich_before - 0.4),
+                   xend = ifelse(delta_rich > 0, rich - 0.4, rich + 0.4)),
+               arrow = arrow(angle = 28, type = "open", length = unit(0.15, "cm")),
+               color = "black",
+               linewidth = 0.5,
+               lineend = "round") +
+  geom_point(aes(fill = year), shape = 21, size = 2, stroke = 0.5, colour = "black") +
+  geom_text(aes(label = rich, x = rich + text_nudge_x -0.05), size = 2.5, family = "Times") +
+  scale_fill_manual(values = c("Year 1" = "white", "Year 3" = "black")) +
+  scale_x_continuous(breaks = seq(0, 25, by = 5)) +
   scale_y_continuous(breaks = seq(1, 20, by = 1)) +
   facet_wrap(~ removal) +
-  labs(x = "Species Richness", y = "Paired Plot")
+  labs(x = "Species richness", y = "Paired plot", fill = "Year") +
+  theme_pub +
+  theme(legend.position = c(0.985, 0.97),
+        legend.justification = c(1, 1),
+        legend.background = element_rect(fill = "white", colour = "black", linewidth = 0.3),
+        legend.margin = margin(4, 5, 4, 5),
+        legend.title = element_text(size = 11,hjust = 0.5, family = "Times"),
+        legend.text = element_text(size = 9, family = "Times"),
+        legend.key = element_blank(),
+        legend.key.size = unit(5, "mm"),
+        text = element_text(size = 10, family = "Times"),
+        axis.text = element_text(size = 11, family = "Times"),
+        axis.title = element_text(size = 15, family = "Times"),
+        axis.ticks.length = unit(1.4, "mm"),
+        strip.text = element_text(size = 11, family = "Times"),
+        strip.background = element_blank())
 
+delta.graph
+
+showtext_opts(dpi = 800)
 ggsave(plot = delta.graph, filename = 'Figures and Tables/Delta_Diversity.png',
-       width = 10, height = 12, units = "in", dpi = 600)
+       width = 4.5, height = 5, units = "in", dpi = 800)
+ggsave(plot = delta.graph, filename = 'Figures and Tables/Delta_Diversity.pdf',
+       width = 4.5, height = 5, units = "in", device = cairo_pdf)
 
 #----------------------------------------------------------#
-#---------------PHYSICAL STRUCTURE PLOTS-------------------#
+#-----------------------COMPOSITION------------------------#
 #----------------------------------------------------------#
+NMDS <- readRDS("Processed Data/Community NMDS.rds")
+NMDS %<>% mutate(removal = recode(removal,
+                                  C = "Present",
+                                  R = "Removed"))
 
-envi <- readRDS("Processed Data/Environmental Cover.rds")
-envi %<>% filter(year != "0")
+sig_labels <- data.frame(
+  litter = c("Castilleja", "Mixed", "Community", "Control"))
 
-envi.total <- envi %>% 
-  group_by(year,removal) %>% 
-  summarise(mean = mean(total_cover),
-                   se = sd(total_cover)/sqrt(n()))
+community.comp <- ggplot(NMDS, aes(NMDS1, NMDS2, fill = removal)) +
+  geom_point(shape = 21, size = 2, stroke = 0.6, colour = "black") +
+  xlim(-1, 1) +
+  scale_fill_manual(values = c(Present = "black", Removed = "white")) +
+  theme_bw(base_size = 10, base_family = "Times") +
+  facet_wrap(~litter) +
+  labs(fill = "Parasite") +
+  theme(panel.grid = element_blank(),
+        panel.border = element_rect(colour = "black", fill = NA, linewidth = 0.6),
+        axis.ticks = element_line(colour = "black", linewidth = 0.4),
+        axis.ticks.length = unit(-1.4, "mm"),
+        axis.text.x = element_text(colour = "black", family = "Times", margin = margin(t = 4)),
+        axis.text.y = element_text(colour = "black", family = "Times", margin = margin(r = 4)),
+        axis.title = element_text(colour = "black", family = "Times"),
+        strip.text = element_text(size = 10, family = "Times"),
+        strip.background = element_blank(),
+        legend.position = c(0.99, 0.99),
+        legend.justification = c(1, 1),
+        legend.background = element_rect(fill = "white", colour = "black", linewidth = 0.3),
+        legend.margin = margin(4, 5, 4, 5),
+        legend.title = element_blank(),
+        legend.text = element_text(size = 9, family = "Times"),
+        legend.key = element_blank(),
+        legend.key.size = unit(4, "mm"))
+community.comp
 
-envi.total %<>% mutate(pat = ifelse(removal == "Removal", "stripe", "none"))
+showtext_opts(dpi = 800)
+ggsave(plot = community.comp, filename = 'Figures and Tables/Composition.png',
+       width = 5.5, height = 5.5, units = "in", dpi = 800)
 
-ggplot(envi.total, aes(x = removal, y = mean, fill = removal, pattern = pat)) +
-  geom_bar_pattern(stat = "identity", color = "black", alpha = 0.8, width = 0.92, 
-                   pattern_angle = 45, pattern_density = 0.12, 
-                   pattern_spacing = 0.02, pattern_fill = '#333d29', pattern_colour = NA) +
-  geom_errorbar(aes(ymin = mean, ymax = mean + se), width = 0.2) +
-  scale_fill_manual(values = c("#333d29", "#b6ad90")) +
-  scale_pattern_manual(values = c("none", "stripe")) +
-  facet_wrap(~year) +
-  theme_pubr() +
-  theme(legend.position = "none",panel.grid = element_blank()) +
-  labs(x = "Parasite", y = "Environmental Cover (Bareground + Litter + Rock)")
-
+ggsave(plot = community.comp, filename = 'Figures and Tables/Composition.pdf',
+       width = 5.5, height = 5.5, units = "in", device = cairo_pdf)
 
 #----------------------------------------------------------#
 #------------------PRODUCTIVITY PLOTS----------------------#
 #----------------------------------------------------------#
 biomass <- readRDS("Processed Data/Plant Biomass.rds")
+cast    <- readRDS("Processed Data/Castilleja Summary.rds")
 
-ggplot(biomass, aes(x = removal, y = total_no_cas,fill = removal, color = removal)) +
-  geom_boxplot( lwd = 0.7, outlier.shape = NA,
-                position = position_dodge(width = 0.6)) +
-  geom_point(position = position_jitterdodge(jitter.width = 0.15,
-                                             dodge.width = 0.10),
-             alpha = 0.8, size = 1.6) +
-  scale_color_manual(values = c("#333d29", "#4A3D21")) +
-  scale_fill_manual(values = c("#c5c6af", "#D3BC8D")) +
-  theme_pubr() +
-  theme(legend.position = "none",panel.grid = element_blank()) +
-  ylim(0,425) +
-  labs(x = "Parasite", y = "Total Biomass (No Castilleja)")
+# Panel A: total biomass
+bio_sum <- biomass %>%
+  group_by(removal) %>%
+  dplyr::summarise(mean = mean(total_no_cas, na.rm = TRUE),
+                   se   = sd(total_no_cas, na.rm = TRUE) / sqrt(sum(!is.na(total_no_cas))),
+                   .groups = "drop")
 
+# Panel B: total plant cover, 2025 only
+cov_sum <- cast %>%
+  filter(Year == 2025) %>%
+  mutate(removal = recode(removal, "C" = "Present", "R" = "Removed"),
+         removal = factor(removal, levels = c("Present", "Removed"))) %>%
+  group_by(removal) %>%
+  dplyr::summarise(mean = mean(plant_cover, na.rm = TRUE),
+                   se   = sd(plant_cover, na.rm = TRUE) / sqrt(sum(!is.na(plant_cover))),
+                   .groups = "drop")
+
+bar_theme <- theme_pub +
+  theme(panel.border = element_blank(),
+        axis.line = element_line(colour = "black", linewidth = 0.5),
+        axis.ticks.length = unit(-1.4, "mm"),
+        axis.ticks.x = element_blank(),
+        axis.text.x = element_text(margin = margin(t = 4)),
+        axis.text.y = element_text(margin = margin(r = 4)),
+        legend.position = "none",
+        text = element_text(size = 10, family = "Times"),
+        axis.title = element_text(size = 12, family = "Times"),
+        strip.background = element_blank(),
+        plot.margin = margin(2, 4, 2, 2))
+
+prod <- ggplot(bio_sum, aes(x = removal, y = mean, fill = removal)) +
+  geom_col(colour = "black", width = 0.6) +
+  geom_errorbar(aes(ymin = mean - se, ymax = mean + se), width = 0.2) +
+  scale_fill_manual(values = c("Present" = "white", "Removed" = "black")) +
+  scale_x_discrete(expand = expansion(add = 0.6)) +
+  scale_y_continuous(limits = c(0, 250), expand = expansion(mult = c(0, 0.05))) +
+  labs(x = "Castilleja", y = "Total biomass (g)") +
+  bar_theme
+
+cover.plot <- ggplot(cov_sum, aes(x = removal, y = mean, fill = removal)) +
+  geom_col(colour = "black", width = 0.6) +
+  geom_errorbar(aes(ymin = mean - se, ymax = mean + se), width = 0.2) +
+  scale_fill_manual(values = c("Present" = "white", "Removed" = "black")) +
+  scale_x_discrete(expand = expansion(add = 0.6)) +
+  scale_y_continuous(limits = c(0, 118), expand = expansion(mult = c(0, 0.05))) +
+  labs(x = "Castilleja", y = "Plant cover (%)") +
+  bar_theme +
+  theme(legend.position = c(0.98, 0.98),
+        legend.justification = c(1, 1),
+        legend.margin = margin(4, 5, 4, 5),
+        legend.text = element_text(size = 9, family = "Times"),
+        legend.key.spacing.y = unit(4, "pt"),
+        legend.key = element_blank(),
+        legend.title = element_blank(),
+        legend.key.size = unit(5, "mm"))
+cover.plot
+
+biomass.cover <- ggarrange(prod, cover.plot,
+                           labels = c("A", "B"),
+                           font.label = list(family = "Times", size = 12),
+                           align = "h",
+                           ncol = 2, nrow = 1)
+biomass.cover
+
+showtext_opts(dpi = 800)
+ggsave(plot = biomass.cover, filename = 'Figures and Tables/Biomass_Cover.png',
+       width = 5, height = 3, units = "in", dpi = 800)
+
+ggsave(plot = biomass.cover, filename = 'Figures and Tables/Biomass_Cover.pdf',
+       width = 5, height = 3, units = "in", device = cairo_pdf)
 #----------------------------------------------------------#
 #--------------------TURNOVER PLOTS------------------------#
 #----------------------------------------------------------#
@@ -228,195 +353,496 @@ turn_loss %<>%
   dplyr::mutate(
     pat = ifelse(removal == "Removed", "stripe", "none"))
 
-
-turn.plot <- ggplot(turn_total, aes(x = removal, y = mean, fill = removal, pattern = pat)) +
-  geom_bar_pattern(stat = "identity", color = "black", alpha = 0.8, width = 0.75, 
-                   pattern_angle = 45, pattern_density = 0.12, 
-                   pattern_spacing = 0.02, pattern_fill = '#333d29', pattern_colour = NA) +
+turn.plot <- ggplot(turn_total, aes(x = removal, y = mean, fill = removal)) +
+  geom_col(colour = "black", width = 0.85) +
   geom_errorbar(aes(ymin = mean - se, ymax = mean + se), width = 0.2) +
-  scale_fill_manual(values = c("#333d29", "#b6ad90")) +
-  scale_pattern_manual(values = c("none", "stripe")) +
-  theme_pubr() +
-  theme(legend.position = "none",panel.grid = element_blank()) +
-  labs(x = "Parasite", y = "Total species turnover") +
-  ylim(0,0.75)
+  scale_fill_manual(values = c("Present" = "black", "Removed" = "white")) +
+  scale_x_discrete(expand = expansion(add = 0.6)) +
+  scale_y_continuous(limits = c(0, 0.6), breaks = seq(0, 0.6, 0.2),
+                     expand = expansion(mult = c(0, 0.05))) +
+  guides(fill = "none") +
+  labs(x = "Castilleja", y = "Total species turnover") +
+  theme_pub +
+  theme(panel.border = element_blank(),
+        axis.line = element_line(colour = "black", linewidth = 0.5),
+        axis.ticks.length = unit(-1.4, "mm"),
+        axis.ticks.x = element_blank(),
+        axis.text.x = element_text(margin = margin(t = 4)),
+        axis.text.y = element_text(margin = margin(r = 4)),
+        legend.position = "none",
+        text = element_text(size = 10, family = "Times"),
+        axis.title = element_text(size = 12, family = "Times"),
+        axis.title.x = element_blank(),
+        strip.background = element_blank(),
+        plot.margin = margin(2, 1, 2, 1))
 
-gain.plot <- ggplot(turn_gain, aes(x = removal, y = mean, fill = removal, pattern = pat)) +
-  geom_bar_pattern(stat = "identity", color = "black", alpha = 0.8, width = 0.75, 
-                   pattern_angle = 45, pattern_density = 0.12, 
-                   pattern_spacing = 0.02, pattern_fill = '#333d29', pattern_colour = NA) +
+gain.plot <- ggplot(turn_gain, aes(x = removal, y = mean, fill = removal)) +
+  geom_col(colour = "black", width = 0.85) +
   geom_errorbar(aes(ymin = mean - se, ymax = mean + se), width = 0.2) +
-  scale_fill_manual(values = c("#333d29", "#b6ad90")) +
-  scale_pattern_manual(values = c("none", "stripe")) +
-  theme_pubr() +
-  theme(legend.position = "none",panel.grid = element_blank()) +
-  labs(x = "Parasite", y = "Proportion of species gained") +
-  ylim(0,0.75)
+  scale_fill_manual(values = c("Present" = "black", "Removed" = "white")) +
+  scale_x_discrete(expand = expansion(add = 0.6)) +
+  scale_y_continuous(limits = c(0, 0.6), breaks = seq(0, 0.6, 0.2),
+                     expand = expansion(mult = c(0, 0.05))) +
+  guides(fill = "none") +
+  labs(x = "Castilleja", y = "Species gained") +
+  theme_pub +
+  theme(panel.border = element_blank(),
+        axis.line = element_line(colour = "black", linewidth = 0.5),
+        axis.ticks.length = unit(-1.4, "mm"),
+        axis.ticks.x = element_blank(),
+        axis.text.x = element_text(margin = margin(t = 4)),
+        axis.text.y = element_text(margin = margin(r = 4)),
+        legend.position = "none",
+        text = element_text(size = 10, family = "Times"),
+        axis.title = element_text(size = 12, family = "Times"),
+        axis.title.x = element_blank(),
+        strip.background = element_blank(),
+        plot.margin = margin(2, 1, 2, 1))
 
-loss.plot <- ggplot(turn_loss, aes(x = removal, y = mean, fill = removal, pattern = pat)) +
-  geom_bar_pattern(stat = "identity", color = "black", alpha = 0.8, width = 0.75, 
-                   pattern_angle = 45, pattern_density = 0.12, 
-                   pattern_spacing = 0.02, pattern_fill = '#333d29', pattern_colour = NA) +
+loss.plot <- ggplot(turn_loss, aes(x = removal, y = mean, fill = removal)) +
+  geom_col(colour = "black", width = 0.85) +
   geom_errorbar(aes(ymin = mean - se, ymax = mean + se), width = 0.2) +
-  scale_fill_manual(values = c("#333d29", "#b6ad90")) +
-  scale_pattern_manual(values = c("none", "stripe")) +
-  theme_pubr() +
-  theme(legend.position = "none",panel.grid = element_blank()) +
-  labs(x = "Parasite", y = "Proportion of species lost") +
-  ylim(0,0.75)
-
+  scale_fill_manual(values = c("Present" = "black", "Removed" = "white")) +
+  scale_x_discrete(expand = expansion(add = 0.6)) +
+  scale_y_continuous(limits = c(0, 0.6), breaks = seq(0, 0.6, 0.2),
+                     expand = expansion(mult = c(0, 0.05))) +
+  guides(fill = guide_legend(title = NULL)) +
+  labs(x = "Castilleja", y = "Species lost") +
+  theme_pub +
+  theme(panel.border = element_blank(),
+        axis.line = element_line(colour = "black", linewidth = 0.5),
+        axis.ticks.length = unit(-1.4, "mm"),
+        axis.ticks.x = element_blank(),
+        axis.text.x = element_text(margin = margin(t = 4)),
+        axis.text.y = element_text(margin = margin(r = 4)),
+        legend.position = c(0.98, 0.98),
+        legend.justification = c(1, 1),
+        legend.margin = margin(4, 5, 4, 5),
+        legend.text = element_text(size = 9, family = "Times"),
+        legend.key.spacing.y = unit(4, "pt"),
+        legend.key = element_blank(),
+        legend.key.size = unit(5, "mm"),
+        text = element_text(size = 10, family = "Times"),
+        axis.title = element_text(size = 12, family = "Times"),
+        axis.title.x = element_blank(),
+        strip.background = element_blank(),
+        plot.margin = margin(2, 0, 2, 0))
 
 turnover.plots <- ggarrange(turn.plot, gain.plot, loss.plot,
-                            labels = c("A", "B", "C"), 
+                            labels = c("A", "B", "C"),
+                            font.label = list(family = "Times", size = 12),
                             nrow = 1, ncol = 3)
+
+turnover.plots <- annotate_figure(turnover.plots,
+                                  bottom = text_grob("Castilleja",
+                                                     family = "Times", size = 12))
 turnover.plots
 
-#----------------------------------------------------------#
-#-------------COMMUNITY COMPOSITION PLOTS------------------#
-#----------------------------------------------------------#
-NMDS <- readRDS("Processed Data/Community NMDS.rds")
-NMDS %<>% mutate(removal = recode(removal,
-                        C = "Present",
-                        R = "Removed"))
+showtext_opts(dpi = 800)
+ggsave(plot = turnover.plots, filename = 'Figures and Tables/Turnover.png',
+       width = 5.5, height = 3, units = "in", dpi = 800)
 
-sig_labels <- data.frame(
-  litter = c("Castilleja", "Mixed", "Community", "Control"),
-  label  = c("p = 0.048", "p = 0.081", "n.s.", "n.s."))
-
-ggplot(NMDS, aes(NMDS1, NMDS2, color = removal, fill = removal)) +
-  stat_ellipse(geom = "polygon", alpha = 0.12, color = NA) +
-  stat_ellipse(linewidth = 0.4) +
-  geom_point(size = 2, alpha = 0.8) +
-  facet_wrap(~ litter) +
-  geom_text(data = sig_labels, aes(x = Inf, y = Inf, label = label),
-            inherit.aes = FALSE, hjust = 1.1, vjust = 1.5, size = 3.2) +
-  scale_color_manual(values = c(Present = "#333d29", Removed = "#b6ad90")) +
-  scale_fill_manual(values  = c(Present = "#333d29", Removed = "#b6ad90")) +
-  coord_equal() + 
-   stheme_bw() +
-  labs(color = "Parasite", fill = "Parasite")
-
+ggsave(plot = turnover.plots, filename = 'Figures and Tables/Turnover.pdf',
+       width = 5.5, height = 3, units = "in", device = cairo_pdf)
 #----------------------------------------------------------#
 #------------------NEAREST NEIGHBOR PLOTS------------------#
 #----------------------------------------------------------#
 
 nn_yearly_Pre <- readRDS("Processed Data/NN Pre.rds")
-
-pre.nearest <- ggplot(nn_yearly_Pre, aes(x = rel_abund_cover, y = nn_freq)) +
-  geom_smooth(method=lm , color="#582f0e", fill = "cornsilk3", se=TRUE) + 
-  geom_point(aes(color = year, shape = year), size = 2.3) +
-  scale_color_manual( values=c("#936639")) +
-  scale_shape_manual(values = c(20)) +
-  geom_line(aes(y = fit)) +
-  geom_line(aes(y = lwr), linetype = "dashed", col = "black") +
-  geom_line(aes(y = upr), linetype = "dashed", col = "black") +
-  labs(x = "Relative Abundance (Cover)", y = "Nearest Neighbor Frequency") +
-  geom_text(aes(0.101, 0.188811189), label = "ELGL", color = "grey22", nudge_y = - 0.007, size = 3) +
-  geom_text(aes(0.107, 0.020979021), label = "LIPO", color = "grey22", nudge_y = - 0.007, size = 3) +
-  theme_minimal() +
-  ggtitle("2023 Pre") +
-  theme(legend.position = "none") +
-  theme(strip.text = element_text(size = 15),
-        strip.background = element_blank(),
-        panel.border = element_rect(fill = "transparent", 
-                                    color = "gray23", linewidth = 0.12)) +
-  theme(plot.title = element_text(hjust = 0.92, vjust= -0.12))
-pre.nearest
-
 nn_yearly_X2023 <- readRDS("Processed Data/NN 23.rds")
-
-y1.nearest <- ggplot(nn_yearly_X2023, aes(x = rel_abund_cover, y = nn_freq)) +
-  geom_smooth(method=lm , color="#582f0e", fill = "cornsilk3", se=TRUE) + 
-  geom_point(aes(color = year, shape = year), size = 2.3) +
-  scale_color_manual( values=c("#936639")) +
-  scale_shape_manual(values = c(20)) +
-  geom_line(aes(y = fit)) +
-  geom_line(aes(y = lwr), linetype = "dashed", col = "black") +
-  geom_line(aes(y = upr), linetype = "dashed", col = "black") +
-  labs(x = "Relative Abundance (Cover)", y = "Nearest Neighbor Frequency") +
-  theme_minimal() +
-  geom_text(aes(0.0985, 0.24590164), label = "ELGL", color = "grey22", nudge_y = - 0.0075, size = 3) +
-  geom_text(aes(0.0475, 0.16393443), label = "LUAR", color = "grey22", nudge_y = - 0.0075, size = 3) +
-  ggtitle("2023 Post") +
-  theme(legend.position = "none") +
-  theme(strip.text = element_text(size = 15),
-        strip.background = element_blank(),
-        panel.border = element_rect(fill = "transparent", 
-                                    color = "gray23", linewidth = 0.12)) +
-  theme(plot.title = element_text(hjust = 0.92, vjust= -0.12))
-y1.nearest
-
 nn_yearly_X2024 <- readRDS("Processed Data/NN 24.rds")
-
-y2.nearest <- ggplot(nn_yearly_X2024, aes(x = rel_abund_cover, y = nn_freq)) +
-  geom_smooth(method=lm , color="#582f0e", fill = "cornsilk3", se=TRUE) + 
-  geom_point(aes(color = year, shape = year), size = 2.3) +
-  scale_color_manual( values=c("#936639")) +
-  scale_shape_manual(values = c(20)) +
-  geom_line(aes(y = fit)) +
-  geom_line(aes(y = lwr), linetype = "dashed", col = "black") +
-  geom_line(aes(y = upr), linetype = "dashed", col = "black") +
-  labs(x = "Relative Abundance (Cover)", y = "Nearest Neighbor Frequency") +
-  theme_minimal() +
-  ggtitle("2024") +
-  theme(legend.position = "none") +
-  geom_text(aes(0.0435, 0.13253012), label = "ELGL", color = "grey22", nudge_y = - 0.005, size = 3) +
-  geom_text(aes(0.058, 0.09638554), label = "MESP", color = "grey22", nudge_y = 0.005, size = 3) +
-  theme(strip.text = element_text(size = 15),
-        strip.background = element_blank(),
-        panel.border = element_rect(fill = "transparent", 
-                                    color = "gray23", linewidth = 0.12)) +
-  theme(plot.title = element_text(hjust = 0.92, vjust= -0.12))
-
-y2.nearest
-
 nn_yearly_X2025 <- readRDS("Processed Data/NN 25.rds")
 
+# --- one editable label table per panel (adjust nx/ny to place each) ------
+lab_pre <- data.frame(code = c("ELGL","LIPO"),
+                      nx = c(-0.01, -0.006), 
+                      ny = c(-0.000, -0.015))
+lab_y1  <- data.frame(code = c("ELGL","LUAR"),
+                      nx = c(-0.011, -0.011), 
+                      ny = c(-0.000, 0.000))
+lab_y2  <- data.frame(code = c("ELGL","MESP"),
+                      nx = c(0.01, 0.00), 
+                      ny = c(-0.000, 0.012))
+lab_y3  <- data.frame(code = c("HEQU","ELGL","POGR"),
+                      nx = c(-0.006, -0.01, -0.01), 
+                      ny = c(-0.015, 0.000, -0.000))
+
+pre_lab <- merge(nn_yearly_Pre,   lab_pre, by = "code")
+y1_lab  <- merge(nn_yearly_X2023, lab_y1,  by = "code")
+y2_lab  <- merge(nn_yearly_X2024, lab_y2,  by = "code")
+y3_lab  <- merge(nn_yearly_X2025, lab_y3,  by = "code")
+
+pre.nearest <- ggplot(nn_yearly_Pre, aes(x = rel_abund_cover, y = nn_freq)) +
+  geom_smooth(method = lm, color = "black", fill = "grey85", se = FALSE, linewidth = 0.6) +
+  geom_point(shape = 16, size = 1, colour = "black") +
+  geom_line(aes(y = lwr), linetype = "dashed", col = "black", linewidth = 0.35) +
+  geom_line(aes(y = upr), linetype = "dashed", col = "black", linewidth = 0.35) +
+  scale_x_continuous(expand = expansion(mult = 0.05),
+                     breaks = scales::breaks_pretty(n = 5)) +
+  scale_y_continuous(limits = c(-0.05, 0.25),
+                     breaks = seq(0, 0.2, length.out = 3),
+                     expand = expansion(mult = 0.05)) +
+  labs(x = "Relative abundance", y = "Neighbor frequency") +
+  geom_text_repel(data = pre_lab, aes(label = code),
+                  family = "Times", fontface = "italic", size = 2,
+                  nudge_x = pre_lab$nx, nudge_y = pre_lab$ny,
+                  box.padding = 0, point.padding = 0.2,
+                  force = 0, force_pull = 0,
+                  min.segment.length = 0, max.overlaps = Inf,
+                  segment.colour = "black", segment.size = 0.3, seed = 1) +
+  annotate("text", x = -Inf, y = Inf, label = "2023 Pre",
+           family = "Times", fontface = "bold", size = 3,
+           hjust = -0.15, vjust = 1.6) +
+  theme_pub +
+  theme(legend.position = "none",
+        aspect.ratio = 0.7,
+        text = element_text(size = 8, family = "Times"),
+        axis.title = element_text(size = 9, family = "Times"),
+        axis.title.x = element_blank(),
+        plot.margin = margin(t = 8, r = 8, b = 8, l = 8),
+        strip.background = element_blank())
+pre.nearest
+
+y1.nearest <- ggplot(nn_yearly_X2023, aes(x = rel_abund_cover, y = nn_freq)) +
+  geom_smooth(method = lm, color = "black", fill = "grey85", se = FALSE, linewidth = 0.6) +
+  geom_point(shape = 16, size = 1, colour = "black") +
+  geom_line(aes(y = lwr), linetype = "dashed", col = "black", linewidth = 0.35) +
+  geom_line(aes(y = upr), linetype = "dashed", col = "black", linewidth = 0.35) +
+  scale_x_continuous(expand = expansion(mult = 0.05),
+                     breaks = scales::breaks_pretty(n = 5)) +
+  scale_y_continuous(limits = c(-0.06, 0.3),
+                     breaks = seq(0, 0.25, length.out = 3),
+                     expand = expansion(mult = 0.05)) +
+  labs(x = "Relative abundance", y = "Neighbor frequency") +
+  geom_text_repel(data = y1_lab, aes(label = code),
+                  family = "Times", fontface = "italic", size = 2,
+                  nudge_x = y1_lab$nx, nudge_y = y1_lab$ny,
+                  box.padding = 0, point.padding = 0.2,
+                  force = 0, force_pull = 0,
+                  min.segment.length = 0, max.overlaps = Inf,
+                  segment.colour = "black", segment.size = 0.3, seed = 1) +
+  annotate("text", x = -Inf, y = Inf, label = "2023",
+           family = "Times", fontface = "bold", size = 3,
+           hjust = -0.15, vjust = 1.6) +
+  theme_pub +
+  theme(legend.position = "none",
+        aspect.ratio = 0.7,
+        text = element_text(size = 8, family = "Times"),
+        axis.title = element_text(size = 9, family = "Times"),
+        axis.title.x = element_blank(),
+        plot.margin = margin(t = 8, r = 8, b = 8, l = 8),
+        axis.title.y = element_blank(),
+        strip.background = element_blank())
+y1.nearest
+
+y2.nearest <- ggplot(nn_yearly_X2024, aes(x = rel_abund_cover, y = nn_freq)) +
+  geom_smooth(method = lm, color = "black", fill = "grey85", se = FALSE, linewidth = 0.6) +
+  geom_point(shape = 16, size = 1, colour = "black") +
+  geom_line(aes(y = lwr), linetype = "dashed", col = "black", linewidth = 0.35) +
+  geom_line(aes(y = upr), linetype = "dashed", col = "black", linewidth = 0.35) +
+  scale_x_continuous(expand = expansion(mult = 0.05),
+                     breaks = scales::breaks_pretty(n = 5)) +
+  scale_y_continuous(limits = c(-0.05, 0.2),
+                     breaks = seq(0, 0.15, length.out = 3),
+                     expand = expansion(mult = 0.05)) +
+  labs(x = "Relative abundance", y = "Neighbor frequency") +
+  geom_text_repel(data = y2_lab, aes(label = code),
+                  family = "Times", fontface = "italic", size = 2,
+                  nudge_x = y2_lab$nx, nudge_y = y2_lab$ny,
+                  box.padding = 0, point.padding = 0.2,
+                  force = 0, force_pull = 0,
+                  min.segment.length = 0, max.overlaps = Inf,
+                  segment.colour = "black", segment.size = 0.3, seed = 1) +
+  annotate("text", x = -Inf, y = Inf, label = "2024",
+           family = "Times", fontface = "bold", size = 3,
+           hjust = -0.15, vjust = 1.6) +
+  theme_pub +
+  theme(legend.position = "none",
+        aspect.ratio = 0.7,
+        text = element_text(size = 8, family = "Times"),
+        axis.title = element_text(size = 10, family = "Times"),
+        plot.margin = margin(t = 8, r = 8, b = 8, l = 8),
+        strip.background = element_blank())
+y2.nearest
+
 y3.nearest <- ggplot(nn_yearly_X2025, aes(x = rel_abund_cover, y = nn_freq)) +
-  geom_smooth(method=lm , color="#582f0e", fill = "cornsilk3", se=TRUE) + 
-  geom_point(aes(color = year, shape = year), size = 2.3) +
-  scale_color_manual( values=c("#936639")) +
-  scale_shape_manual(values = c(20)) +
-  geom_line(aes(y = fit)) +
-  geom_line(aes(y = lwr), linetype = "dashed", col = "black") +
-  geom_line(aes(y = upr), linetype = "dashed", col = "black") +
-  labs(x = "Relative Abundance (Cover)", y = "Nearest Neighbor Frequency") +
-  theme_minimal() +
-  geom_text(aes(0.1069609991, 0.04210526), label = "HEQU", color = "grey22", nudge_y = - 0.004, size = 3) +
-  geom_text(aes(0.0668506244, 0.11578947), label = "ELGL", color = "grey22", nudge_y = - 0.004, size = 3) +
-  geom_text(aes(0.0391147271, 0.08421053), label = "POGR", color = "grey22", nudge_y = - 0.004, size = 3) +
-  ggtitle("2025") +
-  theme(legend.position = "none") +
-  theme(strip.text = element_text(size = 15),
-        strip.background = element_blank(),
-        panel.border = element_rect(fill = "transparent", 
-                                    color = "gray23", linewidth = 0.12)) +
-  theme(plot.title = element_text(hjust = 0.92, vjust= -0.12))
+  geom_smooth(method = lm, color = "black", fill = "grey85", se = FALSE, linewidth = 0.6) +
+  geom_point(shape = 16, size = 1, colour = "black") +
+  geom_line(aes(y = lwr), linetype = "dashed", col = "black", linewidth = 0.35) +
+  geom_line(aes(y = upr), linetype = "dashed", col = "black", linewidth = 0.35) +
+  scale_x_continuous(expand = expansion(mult = 0.05),
+                     breaks = scales::breaks_pretty(n = 5)) +
+  scale_y_continuous(limits = c(-0.06, 0.2),
+                     breaks = seq(0, 0.15, length.out = 3),
+                     expand = expansion(mult = 0.05)) +
+  labs(x = "Relative abundance", y = "Neighbor frequency") +
+  geom_text_repel(data = y3_lab, aes(label = code),
+                  family = "Times", fontface = "italic", size = 2,
+                  nudge_x = y3_lab$nx, nudge_y = y3_lab$ny,
+                  box.padding = 0, point.padding = 0.2,
+                  force = 0, force_pull = 0,
+                  min.segment.length = 0, max.overlaps = Inf,
+                  segment.colour = "black", segment.size = 0.3, seed = 1) +
+  annotate("text", x = -Inf, y = Inf, label = "2025",
+           family = "Times", fontface = "bold", size = 3,
+           hjust = -0.15, vjust = 1.6) +
+  theme_pub +
+  theme(legend.position = "none",
+        aspect.ratio = 0.7,
+        text = element_text(size = 8, family = "Times"),
+        axis.title = element_text(size = 9, family = "Times"),
+        plot.margin = margin(t = 8, r = 8, b = 8, l = 8),
+        axis.title.y = element_blank(),
+        strip.background = element_blank())
 y3.nearest
 
+nearestplots <- (pre.nearest | y1.nearest) / (y2.nearest | y3.nearest) +
+  plot_annotation(tag_levels = 'A') &
+  theme(plot.tag = element_text(family = "Times", size = 12, face = "bold"))
+nearestplots
 
-nearestplots <- ggarrange(pre.nearest, y1.nearest, y2.nearest, y3.nearest,
-                          labels = c("A", "B","C", "D"), 
-                          nrow = 2, ncol = 2)
-
-nearestplots 
-
+showtext_opts(dpi = 800)
 ggsave(plot = nearestplots, filename = 'Figures and Tables/Nearest Neighbor.png',
-       width = 12, height = 8, units = "in", dpi = 800)
+       width = 6, height = 4, units = "in", dpi = 800)
+
+ggsave(plot = nearestplots, filename = 'Figures and Tables/Nearest Neighbor.pdf',
+       width = 6, height = 4, units = "in", device = cairo_pdf)
 
 #----------------------------------------------------------#
 #----------------------CASTILLEJA DATA---------------------#
 #----------------------------------------------------------#
 cast <- readRDS("Processed Data/Castilleja Summary.rds")
-
 cast_rem <- cast %>% filter(removal == "C")
 
-ggplot(cast_rem, aes(cas_cover, plant_cover, color = year)) +
-  geom_point(aes(color = factor(year)), alpha = 0.8, size = 2) +
-  geom_smooth(method = "lm", color = "black", se = TRUE) +
-  scale_color_manual( values=c("#335c67", "#e09f3e","#540b0e")) +
-  labs(x = "Castilleja cover (%)", y = "Co-occurring plant cover (%)", color = "Year") +
-  theme_bw()
+cas.cover <- ggplot(cast_rem, aes(cas_cover, plant_cover)) +
+  geom_smooth(method = "lm", color = "black", fill = "grey85", se = TRUE, linewidth = 0.6) +
+  geom_point(aes(shape = factor(year), fill = factor(year)),
+             size = 2, stroke = 0.5, colour = "black") +
+  scale_shape_manual(values = c(21, 22, 24)) +
+  scale_fill_manual(values = c("white", "grey55", "black")) +
+  scale_x_continuous(expand = expansion(mult = 0.05)) +
+  scale_y_continuous(expand = expansion(mult = 0.04)) +
+  labs(x = "Castilleja cover (%)", y = "Co-occurring plant cover (%)",
+       shape = "Year", fill = "Year") +
+  theme_pub +
+  theme(legend.position = c(0.94, 0.98),
+        legend.justification = c(1, 1),
+        legend.background = element_rect(fill = "white", colour = "black", linewidth = 0.3),
+        legend.margin = margin(4, 6, 4, 6),
+        legend.text = element_text(size = 9, family = "Times"),
+        legend.key = element_blank(),
+        legend.key.spacing.y = unit(4, "pt"),
+        legend.key.size = unit(3, "mm"),
+        text = element_text(size = 10, family = "Times"),
+        axis.title = element_text(size = 13, family = "Times"))
+
+cas.count <- ggplot(cast_rem, aes(cas_count, plant_cover)) +
+  geom_smooth(method = "lm", color = "black", fill = "grey85", se = TRUE, linewidth = 0.6) +
+  geom_point(aes(shape = factor(year), fill = factor(year)),
+             size = 2, stroke = 0.5, colour = "black") +
+  scale_shape_manual(values = c(21, 22, 24)) +
+  scale_fill_manual(values = c("white", "grey55", "black")) +
+  scale_x_continuous(expand = expansion(mult = 0.05)) +
+  scale_y_continuous(expand = expansion(mult = 0.04)) +
+  labs(x = "Castilleja Count", y = "Co-occurring plant cover (%)",
+       shape = "Year", fill = "Year") +
+  theme_pub +
+theme(legend.position = "none",
+      axis.title.y = element_blank())
+
+cas.plots <- ggarrange(cas.cover, cas.count,
+                          labels = c("A", "B"),
+                          font.label = list(family = "Times", size = 12),
+                          nrow = 1, ncol = 2)
+
+cas.plots
+showtext_opts(dpi = 800)
+ggsave(plot = cas.plots, filename = 'Figures and Tables/Castilleja metrics.pdf',
+       width = 8, height = 4, units = "in", device = cairo_pdf)
+ggsave(plot = cas.plots, filename = 'Figures and Tables/Castilleja metrics.pdf',
+       width = 8, height = 4, units = "in", device = cairo_pdf)
+
+#----------------------------------------------------------#
+#---------------------SPECIES RESPONSE---------------------#
+#----------------------------------------------------------#
+robinhood <- readRDS("Processed Data/Robinhood Summary.rds")
+robinhood %<>% filter(!is.na(occupancy_shift), !is.na(response_ratio))
+
+robinhood$tr_cats <- factor(round(robinhood$temporal_rarity, 2), 
+                           levels = c(0, 0.33, 0.67), 
+                           labels = c("low (0)", "med (0.33)", "high (0.67)"))
+ind_labels <- data.frame(
+  code  = c("RIMO", "AGGL", "BAVU", "LIPO", "HYCA"),
+  label = c("RIMO", "AGGL", "BAVU", "LIPO", "HYCA"),
+  nx = c(-0.015, -0.012, -0.015,  0.000, -0.005),
+  ny = c( 0.09,  0.000, -0.080, -0.120,  0.100))
+
+ind <- merge(subset(robinhood, indicator == TRUE), ind_labels, by = "code", all.x = TRUE)
+
+species <- ggplot(robinhood, aes(x = occupancy_shift, y = response_ratio)) +
+  geom_hline(yintercept = 0, linetype = "dashed", colour = "grey45") +
+  geom_vline(xintercept = 0, linetype = "dashed", colour = "grey45") +
+  geom_star(aes(starshape = functional_group, fill = tr_cats),
+             size = 2.5, starstroke = 0.7, colour = "black") +
+  scale_starshape_manual(values = c("forb" = 15, "grass" = 28, "legume" = 13,
+                                    "sedge" = 11, "shrub" = 5)) +
+  scale_fill_manual(values  = c("low (0)" = "white", "med (0.33)" = "grey55",
+                                "high (0.67)" = "black")) +
+  geom_text_repel(data = ind, aes(label = label), family = "Times", size = 3,
+                  nudge_x = ind$nx, nudge_y = ind$ny,
+                  box.padding = 0.5, point.padding = 0.4,
+                  min.segment.length = 0, max.overlaps = Inf,
+                  segment.colour = "grey40", segment.size = 0.3, seed = 1) +
+  guides(shape = guide_legend(position = "top", nrow = 1, order = 1,
+                              override.aes = list(fill = "white")),
+         fill  = guide_legend(position = "top", nrow = 1, order = 2,
+                              override.aes = list(starshape = 15)),) +
+  annotate("text", x =  0.055, y =  1, hjust = 0.5, vjust = 1, size = 3.5,
+           fontface = "bold", colour = "grey15", family = "Times", lineheight = 0.9,
+           label = "Suppressed,\nlost") +
+  annotate("text", x = -0.055, y =  1, hjust = 0.5, vjust = 1, size = 3.5,
+           fontface = "bold", colour = "grey15", family = "Times", lineheight = 0.9,
+           label = "Suppressed,\ngained") +
+  annotate("text", x = -0.055, y = -1, hjust = 0.5, vjust = 0, size = 3.5,
+           fontface = "bold", colour = "grey15", family = "Times", lineheight = 0.9,
+           label = "Facilitated,\ngained") +
+  annotate("text", x =  0.055, y = -1, hjust = 0.5, vjust = 0, size = 3.5,
+           fontface = "bold", colour = "grey15", family = "Times", lineheight = 0.9,
+           label = "Facilitated,\nlost") +
+  labs(x = "Change in occupancy", y = "Response ratio (Removal)", 
+       starshape = "Functional group", fill = "Temporal rarity") +
+  coord_fixed(ratio = 0.1, xlim = c(-0.1, 0.1), ylim = c(-1, 1)) +
+  theme_pub +
+  theme(legend.position = "top", legend.box = "vertical", legend.key = element_blank(),
+        legend.key.width = unit(10, "pt"), legend.background = element_blank(),
+        legend.spacing.y = unit(0, "pt"), legend.key.spacing.x = unit(2, "pt"),
+        legend.margin = margin(0, 0, 0, 0), legend.title = element_text(margin = margin(r = 13)),
+        legend.box.spacing = unit(2, "pt"))
+
+species
+
+showtext_opts(dpi = 800)
+ggsave(plot = species, filename = 'Figures and Tables/Species Response.png',
+       width = 5, height = 5, units = "in", dpi = 800)
+
+ggsave(plot = species, filename = 'Figures and Tables/Species Response.pdf',
+       width = 5, height = 5, units = "in", device = cairo_pdf)
+
+#----------------------------------------------------------#
+#-------------------DRIVERS OF DIVERSITY-------------------#
+#----------------------------------------------------------#
+
+coefs<- readRDS( "Processed Data/Drivers Coefficients.rds")
+
+envi_div_z$litter <- relevel(factor(envi_div_z$litter), ref = "Control")
+
+effect.plot <- ggplot(coefs, aes(x = estimate, y = term)) +
+  geom_vline(xintercept = 0, linetype = "dashed", colour = "grey45", linewidth = 0.4) +
+  geom_errorbarh(aes(xmin = conf.low, xmax = conf.high),
+                 height = 0.15, colour = "black", linewidth = 0.45) +
+  geom_point(aes(fill = type), shape = 21, size = 2.2, stroke = 0.6, colour = "black") +
+  scale_fill_manual(values = c("Experimental" = "black", "Environmental" = "white")) +
+  guides(fill = "none") +
+  facet_wrap(~ panel, nrow = 1) +
+  labs(x = "Standardized effect on species richness", y = NULL) +
+  theme_pub +
+  theme(legend.position = "none",
+        text = element_text(size = 10, family = "Times"),
+        axis.title = element_text(size = 12, family = "Times"),
+        axis.text.y = element_text(size = 9, family = "Times"),
+        strip.text = element_text(size = 10, family = "Times", face = "bold"),
+        strip.background = element_blank(),
+        panel.spacing = unit(6, "pt"))
+effect.plot
+showtext_opts(dpi = 800)
+ggsave(plot = effect.plot, filename = 'Figures and Tables/Effect_Sizes.png',
+       width = 9, height = 3.5, units = "in", dpi = 800)
+
+ggsave(plot = effect.plot, filename = 'Figures and Tables/Effect_Sizes.pdf',
+       width = 9, height = 3.5, units = "in", device = cairo_pdf)
 
 
+#----------------------------------------------------------#
+#-------------------------SITE MAP-------------------------#
+#----------------------------------------------------------#
 
+# --- read GPS points -------------------------------------------------------
+gps <- read.csv("Raw Data/GPS.csv", fileEncoding = "UTF-8-BOM") %>%
+  filter(Label_of_F != "casu") %>%                 # drop the off-site point
+  select(field_plot = Label_of_F,
+         lon = XCurrentMa, lat = YCurrentMa, elev = FeatureHei) %>%
+  mutate(field_plot = toupper(sub("^p", "", field_plot)),   # p1a -> 1A
+         pair = as.numeric(gsub("[AB]", "", field_plot)))
+
+site <- read.csv("Raw Data/Site Level Data - EL.csv")
+
+site %<>% rename(year_raw = Year) %>%
+  mutate(year = recode(year_raw, `2023` = 1, `2024` = 2, `2025` = 3),
+         removal = recode(removal, "C" = "Present", "R" = "Removed"),
+         removal = factor(removal, levels = c("Present", "Removed")))
+
+# --- join treatment / edge metadata ---------------------------------------
+meta <- site %>%
+  filter(year == 1) %>%                          # one row per plot
+  select(field_plot, removal, litter, disturbance_type, disturbance_distance)
+
+pts <- gps %>%
+  left_join(meta, by = "field_plot") %>%
+  st_as_sf(coords = c("lon", "lat"), crs = 4326) %>%
+  st_transform(32613)                               # UTM 13N — metres
+# --- pair lines (connect the two plots in each pair) -----------------------
+pair_lines <- pts %>%
+  group_by(pair) %>%
+  filter(n() == 2) %>%
+  summarise(do_union = FALSE, .groups = "drop") %>%
+  st_cast("LINESTRING")
+
+# --- block hulls -----------------------------------------------------------
+block_hulls <- pts %>%
+  group_by(block) %>%
+  summarise(do_union = FALSE, .groups = "drop") %>%
+  st_convex_hull() %>%
+  st_buffer(3)                       # 3 m padding around each block
+# --- map -------------------------------------------------------------------
+site.map <- ggplot() +
+  geom_sf(data = block_hulls, fill = "grey94", colour = "grey55",
+          linetype = "dashed", linewidth = 0.35) +
+  geom_sf(data = pair_lines, colour = "black", linewidth = 0.4) +
+  geom_sf(data = pts, aes(shape = removal, fill = disturbance_type),
+          size = 2.6, stroke = 0.6, colour = "black") +
+  geom_sf_text(data = pts %>% filter(grepl("A$", field_plot)),
+               aes(label = pair), family = "Times", size = 2.2,
+               colour = "grey25", nudge_y = 5) +
+  scale_shape_manual(values = c("Present" = 21, "Removed" = 24)) +
+  scale_fill_manual(values = c("Treeline" = "black",
+                               "Trail"    = "grey60",
+                               "Creek"    = "white")) +
+  annotation_scale(location = "bl", width_hint = 0.28,
+                   line_width = 0.5, height = unit(0.15, "cm")) +
+  annotation_north_arrow(location = "tl",
+                         style = north_arrow_orienteering(
+                           fill = c("white", "black"), line_col = "black"),
+                         height = unit(1, "cm"), width = unit(0.8, "cm")) +
+  guides(shape = guide_legend(title = "Castilleja", order = 1,
+                              override.aes = list(fill = "grey70")),
+         fill  = guide_legend(title = "Nearest edge", order = 2,
+                              override.aes = list(shape = 21))) +
+  theme_pub +
+  theme(legend.position = "right",
+        legend.key = element_blank(),
+        legend.background = element_blank(),
+        legend.title = element_text(size = 9, family = "Times"),
+        legend.text = element_text(size = 8, family = "Times"),
+        legend.key.size = unit(4, "mm"),
+        text = element_text(size = 9, family = "Times"),
+        axis.title = element_blank(),
+        axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid = element_blank())
+site.map
+
+showtext_opts(dpi = 800)
+ggsave(plot = site.map, filename = 'Figures and Tables/Site_Map.png',
+       width = 5.5, height = 6.5, units = "in", dpi = 800)
+ggsave(plot = site.map, filename = 'Figures and Tables/Site_Map.pdf',
+       width = 5.5, height = 6.5, units = "in", device = cairo_pdf)

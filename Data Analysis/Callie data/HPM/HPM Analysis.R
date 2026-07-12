@@ -2,7 +2,6 @@
 setwd("/Users/jargrett/Desktop/Castilleja/Data Analysis/Callie Data/HPM")
 
 #load in relevant packages
-library(plyr)#for data wrangling and restructuring
 library(tidyverse)#for data wrangling and restructuring
 library(statmod)
 library(lme4)

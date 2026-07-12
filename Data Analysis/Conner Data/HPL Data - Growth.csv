@@ -1,0 +1,76 @@
+pot_num,pot_id,sample_id,replicate,pot_treatment,light,species,focal_species,focal_code,t1,t2,t6,t6,t7,t8,t9
+1,L_1_P1,L_1_P1_AGPU,1,alone,Low,P1,A. purpurea,AGPU,3.9,3.9,12.1,12.5,12.7,13.2,13.5
+2,L_2_P1,L_2_P1_AGPU,2,alone,Low,P1,A. purpurea,AGPU,3,3.3,9.8,11.1,12.6,11.3,11.6
+3,L_3_P1,L_3_P1_AGPU,3,alone,Low,P1,A. purpurea,AGPU,3.2,3.2,9,8.9,9.4,8.2,8.9
+4,L_4_P1,L_4_P1_AGPU,4,alone,Low,P1,A. purpurea,AGPU,3.2,3.5,7.5,,,,
+5,L_5_P1,L_5_P1_AGPU,5,alone,Low,P1,A. purpurea,AGPU,3.7,3.6,8.3,7.5,8.2,9.3,9.7
+11,A_1_P1,A_1_P1_AGPU,1,alone,Ambient,P1,A. purpurea,AGPU,2.4,,,,,,
+12,A_2_P1,A_2_P1_AGPU,2,alone,Ambient,P1,A. purpurea,AGPU,4.4,4,12/7,14.4,15,15.2,16.1
+13,A_3_P1,A_3_P1_AGPU,3,alone,Ambient,P1,A. purpurea,AGPU,3,2.6,8.6,9.8,10.1,10.1,10.2
+14,A_4_P1,A_4_P1_AGPU,4,alone,Ambient,P1,A. purpurea,AGPU,4.5,4.7,11.6,12.7,13.1,13.2,13.6
+15,A_5_P1,A_5_P1_AGPU,5,alone,Ambient,P1,A. purpurea,AGPU,1.4,,,,,,
+41,L_1_H1,L_1_H1_SCSC,1,alone,Low,H1,S. scoparium,SCSC,10.1,9.7,16.9,27.2,28.7,33.8,41.1
+42,L_2_H1,L_2_H1_SCSC,2,alone,Low,H1,S. scoparium,SCSC,13.1,12.5,22.7,51.4,49,54.5,59
+43,L_3_H1,L_3_H1_SCSC,3,alone,Low,H1,S. scoparium,SCSC,14.2,14.3,25.7,25.6,28.3,37.6,48.7
+44,L_4_H1,L_4_H1_SCSC,4,alone,Low,H1,S. scoparium,SCSC,9.1,9.3,28.6,41.5,40.6,38.8,47.5
+45,L_5_H1,L_5_H1_SCSC,5,alone,Low,H1,S. scoparium,SCSC,18.8,17.6,33,48.7,51.8,69.6,69.6
+51,A_1_H1,A_1_H1_SCSC,1,alone,Ambient,H1,S. scoparium,SCSC,12,10.6,23.5,23.5,23.3,25.6,25.7
+52,A_2_H1,A_2_H1_SCSC,2,alone,Ambient,H1,S. scoparium,SCSC,7.3,6,21.2,24.4,26.1,28,29.7
+53,A_3_H1,A_3_H1_SCSC,3,alone,Ambient,H1,S. scoparium,SCSC,18.9,11.4,23.4,24.6,25.3,27.7,29.9
+54,A_4_H1,A_4_H1_SCSC,4,alone,Ambient,H1,S. scoparium,SCSC,8,6,12.9,13.8,13.9,17,17
+55,A_5_H1,A_5_H1_SCSC,5,alone,Ambient,H1,S. scoparium,SCSC,7.9,8.3,19.4,19.6,19.1,21.6,22.6
+61,L_1_H2,L_1_H2_SYRA,1,alone,Low,H2,S. racemosum,SYRA,2.7,3.5,28.6,33.6,35.4,39.4,43.9
+62,L_2_H2,L_2_H2_SYRA,2,alone,Low,H2,S. racemosum,SYRA,3.9,3.2,38.1,47.6,46.9,59.6,64.9
+63,L_3_H2,L_3_H2_SYRA,3,alone,Low,H2,S. racemosum,SYRA,2.5,2.7,33.7,52.2,49.4,73.1,77.9
+64,L_4_H2,L_4_H2_SYRA,4,alone,Low,H2,S. racemosum,SYRA,4.9,3,16.5,20.3,24.2,28,32.7
+65,L_5_H2,L_5_H2_SYRA,5,alone,Low,H2,S. racemosum,SYRA,4,4.2,21.8,27.4,28.1,36.5,41.3
+71,A_1_H2,A_1_H2_SYRA,1,alone,Ambient,H2,S. racemosum,SYRA,4.6,4.5,22.1,23.2,23.8,25,26.1
+72,A_2_H2,A_2_H2_SYRA,2,alone,Ambient,H2,S. racemosum,SYRA,5.3,5.2,27.3,29.5,31.9,32.7,32.2
+73,A_3_H2,A_3_H2_SYRA,3,alone,Ambient,H2,S. racemosum,SYRA,6.7,5.5,11.2,11.7,14.6,18.3,21.4
+74,A_4_H2,A_4_H2_SYRA,4,alone,Ambient,H2,S. racemosum,SYRA,4.7,5,24.1,27.9,30.2,34.2,35.4
+75,A_5_H2,A_5_H2_SYRA,5,alone,Ambient,H2,S. racemosum,SYRA,3.1,3.7,16.4,18.5,19.7,21,22.7
+81,L_1_P1H1,L_1_P1H1_AGPU,1,Together,Low,P1H1,A. purpurea,AGPU,3.2,2.8,4.9,2.8,2.9,2.6,2.6
+81,L_1_P1H1,L_1_P1H1_SCSC,1,Together,Low,P1H1,S. scoparium,SCSC,17.3,13.8,28.5,34.2,36.9,61.2,63.6
+82,L_2_P1H1,L_2_P1H1_AGPU,2,Together,Low,P1H1,A. purpurea,AGPU,3.8,3.1,9.8,10.4,11.5,12.1,13.1
+82,L_2_P1H1,L_2_P1H1_SCSC,2,Together,Low,P1H1,S. scoparium,SCSC,9.1,9,26,26.8,28.4,32.4,35
+83,L_3_P1H1,L_3_P1H1_AGPU,3,Together,Low,P1H1,A. purpurea,AGPU,2.4,1.8,0.9,1,0.9,,
+83,L_3_P1H1,L_3_P1H1_SCSC,3,Together,Low,P1H1,S. scoparium,SCSC,7.1,6.3,16.1,17.8,18.8,28.2,28.2
+84,L_4_P1H1,L_4_P1H1_AGPU,4,Together,Low,P1H1,A. purpurea,AGPU,2.1,2,5.1,4.9,5.1,5.9,6.1
+84,L_4_P1H1,L_4_P1H1_SCSC,4,Together,Low,P1H1,S. scoparium,SCSC,10.7,9.6,30,34.3,27.1,31.8,40
+85,L_5_P1H1,L_5_P1H1_AGPU,5,Together,Low,P1H1,A. purpurea,AGPU,1.3,,,,,,
+85,L_5_P1H1,L_5_P1H1_SCSC,5,Together,Low,P1H1,S. scoparium,SCSC,9.2,,22.9,25,26,32.4,40.6
+91,A_1_P1H1,A_1_P1H1_AGPU,1,Together,Ambient,P1H1,A. purpurea,AGPU,1.5,1.6,1.8,2.4,3.1,3,3
+91,A_1_P1H1,A_1_P1H1_SCSC,1,Together,Ambient,P1H1,S. scoparium,SCSC,6,4.3,14.9,18,19.3,19.3,19.1
+92,A_2_P1H1,A_2_P1H1_AGPU,2,Together,Ambient,P1H1,A. purpurea,AGPU,1.3,,,,,,
+92,A_2_P1H1,A_2_P1H1_SCSC,2,Together,Ambient,P1H1,S. scoparium,SCSC,9.8,9.7,29.3,35,36.8,32.5,40.1
+93,A_3_P1H1,A_3_P1H1_AGPU,3,Together,Ambient,P1H1,A. purpurea,AGPU,3,4.8,9.3,10.1,11.4,11.6,13
+93,A_3_P1H1,A_3_P1H1_SCSC,3,Together,Ambient,P1H1,S. scoparium,SCSC,10,8.7,18.1,20.6,21,21.4,21.5
+94,A_4_P1H1,A_4_P1H1_AGPU,4,Together,Ambient,P1H1,A. purpurea,AGPU,2.2,1.6,,,,,
+94,A_4_P1H1,A_4_P1H1_SCSC,4,Together,Ambient,P1H1,S. scoparium,SCSC,9.8,10,27.8,30.3,32.7,35.9,36
+95,A_5_P1H1,A_5_P1H1_AGPU,5,Together,Ambient,P1H1,A. purpurea,AGPU,2,2.9,5.5,5.5,6.5,6.7,7.9
+95,A_5_P1H1,A_5_P1H1_SCSC,5,Together,Ambient,P1H1,S. scoparium,SCSC,7.3,6.4,14,13.5,16.8,16.8,16.4
+101,L_1_P1H2,L_1_P1H2_AGPU,1,Together,Low,P1H2,A. purpurea,AGPU,3.5,3.1,16.6,19.5,22.1,25.3,27.3
+101,L_1_P1H2,L_1_P1H2_SYRA,1,Together,Low,P1H2,S. racemosum,SYRA,3.5,3.2,24.6,28.1,30.7,38.5,41.6
+102,L_2_P1H2,L_2_P1H2_AGPU,2,Together,Low,P1H2,A. purpurea,AGPU,2.2,1.4,,,,,
+102,L_2_P1H2,L_2_P1H2_SYRA,2,Together,Low,P1H2,S. racemosum,SYRA,4.9,4.5,26.8,37.6,40.3,50.2,55.8
+103,L_3_P1H2,L_3_P1H2_AGPU,3,Together,Low,P1H2,A. purpurea,AGPU,2.1,1.5,,,,,
+103,L_3_P1H2,L_3_P1H2_SYRA,3,Together,Low,P1H2,S. racemosum,SYRA,5,3.1,42.2,45.3,42.2,52.3,58.6
+104,L_4_P1H2,L_4_P1H2_AGPU,4,Together,Low,P1H2,A. purpurea,AGPU,2.7,3.2,13,15.3,16.2,21.9,22.9
+104,L_4_P1H2,L_4_P1H2_SYRA,4,Together,Low,P1H2,S. racemosum,SYRA,4.3,3.7,17.9,18.9,20.1,20.2,19.5
+105,L_5_P1H2,L_5_P1H2_AGPU,5,Together,Low,P1H2,A. purpurea,AGPU,2.3,2.3,,11.3,12,13,14.8
+105,L_5_P1H2,L_5_P1H2_SYRA,5,Together,Low,P1H2,S. racemosum,SYRA,4.7,3.6,24.2,24.1,27.2,31.8,33.7
+111,A_1_P1H2,A_1_P1H2_AGPU,1,Together,Ambient,P1H2,A. purpurea,AGPU,2,,,,,,
+111,A_1_P1H2,A_1_P1H2_SYRA,1,Together,Ambient,P1H2,S. racemosum,SYRA,4.9,4,29.2,36.1,42,45.9,48.8
+112,A_2_P1H2,A_2_P1H2_AGPU,2,Together,Ambient,P1H2,A. purpurea,AGPU,4.6,4.4,17,20.4,21.3,25.4,27.6
+112,A_2_P1H2,A_2_P1H2_SYRA,2,Together,Ambient,P1H2,S. racemosum,SYRA,4.8,3,11,10.8,12.4,11,9.7
+113,A_3_P1H2,A_3_P1H2_AGPU,3,Together,Ambient,P1H2,A. purpurea,AGPU,2.7,2.3,8.1,11.9,14.6,17,18.5
+113,A_3_P1H2,A_3_P1H2_SYRA,3,Together,Ambient,P1H2,S. racemosum,SYRA,4.1,4.2,14.8,15,15,14.7,15
+114,A_4_P1H2,A_4_P1H2_AGPU,4,Together,Ambient,P1H2,A. purpurea,AGPU,3.3,2.5,14.4,,16.5,17.6,18.6
+114,A_4_P1H2,A_4_P1H2_SYRA,4,Together,Ambient,P1H2,S. racemosum,SYRA,3.5,3.7,9.6,,9.8,9.8,9.6
+115,A_5_P1H2,A_5_P1H2_AGPU,5,Together,Ambient,P1H2,A. purpurea,AGPU,2.4,2,,,,,
+115,A_5_P1H2,A_5_P1H2_SYRA,5,Together,Ambient,P1H2,S. racemosum,SYRA,4.2,4.6,32.3,38.3,42.6,46.9,49.5
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,3
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,DEAD,,

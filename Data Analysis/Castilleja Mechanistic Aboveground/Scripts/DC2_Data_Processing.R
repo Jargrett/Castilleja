@@ -1,6 +1,7 @@
 setwd("~/Desktop/Castilleja/Data Analysis/Castilleja Mechanistic Aboveground")
 
 #packages
+library(plyr)
 library(tidyverse)#for data wrangling and restructuring
 library(magrittr)#for data wrangling and restructuring
 library(vegan)#for calculating diversity
@@ -10,6 +11,10 @@ library(pwr)
 library(MuMIn)
 library(car)
 library(indicspecies)
+library(codyn)
+library(broom)
+library(broom.mixed)
+library(forcats)
 
 #Specifying conflicts
 conflicted::conflicts_prefer(dplyr::recode)
@@ -207,11 +212,42 @@ total.envi <- envi.cover %>%
 saveRDS(total.envi, "Processed Data/Environmental Cover.rds")
 
 #----------------------------------------------------------#
+#-------------------DRIVERS OF DIVERSITY-------------------#
+#----------------------------------------------------------#
+
+site <- read.csv("Raw Data/Site Level Data - EL.csv")
+
+site %<>% rename(year_raw = Year) %>%
+  mutate(year = recode(year_raw, `2023` = 1, `2024` = 2, `2025` = 3),
+         removal = recode(removal, "C" = "Present", "R" = "Removed"),
+         removal = factor(removal, levels = c("Present", "Removed")))
+
+diverse <- readRDS("Processed Data/Plant Diversity Full.rds")
+
+envi_div <- diverse %>%
+  filter(year != "0") %>%
+  mutate(year = as.numeric(as.character(year)),
+         plot = as.character(plot)) %>%
+  select(year, plot, rich, div, even) %>%
+  left_join(site %>%
+              mutate(plot = as.character(plot)) %>%
+              select(year, plot, block, pair, removal, litter, elevation,
+                     disturbance_distance, disturbance_type, soil_moisture),
+            by = c("year", "plot")) %>%
+  na.omit()
+
+envi_div_z <- envi_div %>%
+  mutate(across(c(elevation, soil_moisture, disturbance_distance),
+                ~ as.numeric(scale(.))))
+
+saveRDS(envi_div_z, "Processed Data/Drivers.rds")
+#----------------------------------------------------------#
 #--------------------PLANT BIOMASS DATA--------------------#
 #----------------------------------------------------------#
 #import and restructure  biomass data (raw) 
 biomass <- read.csv("Raw Data/EL Biomass - Biomass.csv")
 biomass <- as.data.frame(unclass(biomass),stringsAsFactors=TRUE)
+biomass %<>% mutate(removal = recode(removal,"C" = "Present","R" = "Removed"))
 biomass$pair <- as.factor(biomass$pair)
 biomass$plot <- as.factor(biomass$plot)
 biomass$block <- as.factor(biomass$block)
@@ -372,13 +408,13 @@ cover_metrics <- cover_sum %>%
               values_from = c(cas_cover, cas_count, plant_cover, envi_cover),
               names_sep   = "_yr") %>%
   mutate(
-    cas_cover_mean = rowMeans(across(c(cas_cover_yr1, cas_cover_yr2, cas_cover_yr3)),       na.rm = TRUE),
+    cas_cover_mean = rowMeans(across(c(cas_cover_yr1, cas_cover_yr2, cas_cover_yr3)), na.rm = TRUE),
     cas_cover_delta = cas_cover_yr3   - cas_cover_yr1,
-    cas_count_mean = rowMeans(across(c(cas_count_yr1, cas_count_yr2, cas_count_yr3)),       na.rm = TRUE),
+    cas_count_mean = rowMeans(across(c(cas_count_yr1, cas_count_yr2, cas_count_yr3)), na.rm = TRUE),
     cas_count_delta = cas_count_yr3   - cas_count_yr1,
     plant_cover_mean = rowMeans(across(c(plant_cover_yr1, plant_cover_yr2, plant_cover_yr3)), na.rm = TRUE),
     plant_cover_delta = plant_cover_yr3 - plant_cover_yr1,
-    envi_cover_mean = rowMeans(across(c(envi_cover_yr1, envi_cover_yr2, envi_cover_yr3)),    na.rm = TRUE),
+    envi_cover_mean = rowMeans(across(c(envi_cover_yr1, envi_cover_yr2, envi_cover_yr3)), na.rm = TRUE),
     envi_cover_delta = envi_cover_yr3  - envi_cover_yr1
   )
 
@@ -456,12 +492,12 @@ temp_rarity <- rac_cover %>%
 rarity <- spatial_rarity %>%
   left_join(temp_rarity, by = "code") %>%
   mutate(
-    spatial  = if_else(SR >= 0.25, "Sparse",        "Common"),
-    temporal = if_else(TR >= 0.50, "Intermittent",  "Persistent"),
+    spatial  = if_else(SR >= 0.25, "Sparse", "Common"),
+    temporal = if_else(TR >= 0.50, "Intermittent", "Persistent"),
     class = case_when(
-      spatial == "Common" & temporal == "Persistent"   ~ "CP",
+      spatial == "Common" & temporal == "Persistent" ~ "CP",
       spatial == "Common" & temporal == "Intermittent" ~ "CI",
-      spatial == "Sparse" & temporal == "Persistent"   ~ "SP",
+      spatial == "Sparse" & temporal == "Persistent" ~ "SP",
       spatial == "Sparse" & temporal == "Intermittent" ~ "SI"
     )
   )
@@ -670,8 +706,13 @@ robin_turnover <- indval_rarity %>%
   select(code, change_control, change_removal, turnover_magnitude, turnover_class) %>%
   arrange(turnover_class, desc(abs(turnover_magnitude)))
 
-saveRDS(robin_turnover, "Processed Data/Species Turnover.rds")
+saveRDS(robin_turnover, "Processed Data/Robinhood Turnover.rds")
 
 
 
+
+#----------------------------------------------------------#
+#-----------------------SPECIES TRAITS---------------------#
+#----------------------------------------------------------#
+species <- readRDS("Processed Data/Robinhood Summary.rds")
 

@@ -78,4 +78,48 @@ Anova(delta.even)#litter:removal chisq = 6.5534, df = 3, p = 0.088
 emmip(delta.even, litter~removal)
 emmeans(delta.even, pairwise ~ litter|removal)
 
+#----------------------------------------------------------#
+  #-------RICHNESS: CONTROLLING FOR SAMPLING EFFORT----------#
+  #----------------------------------------------------------#
+  # Pre-empts the critique that higher richness in Castilleja-present plots is a
+  # sampling artifact of greater total plant cover. If the removal effect holds
+  # with total cover in the model, the richness difference is not a cover artifact.
+  #
+  # NOTE: counts in the raw data represent ramets rather than genets for clonal
+  # species, so individual-based rarefaction is not appropriate here; cover is
+  # used as the abundance measure throughout.
+  
+  cover <- readRDS("Processed Data/Plant Cover.rds") %>% filter(year != "0")
+  drivers <- readRDS("Processed Data/Drivers.rds")
+cover_tot <- cover %>%
+  group_by(year, plot) %>%
+  dplyr::summarise(total_cover = sum(percent_cover, na.rm = TRUE), .groups = "drop") %>%
+  mutate(year = as.numeric(as.character(year)),
+         plot = as.character(plot))
+
+# envi_div_z is built in the figures/analysis script (rich + predictors, z-scaled)
+check_df <- drivers %>%
+  mutate(plot = as.character(plot)) %>%
+  left_join(cover_tot, by = c("year", "plot")) %>%
+  mutate(total_cover_z = as.numeric(scale(total_cover)))
+
+# richness ~ removal, WITHOUT cover
+mod_nocov <- lmer(rich ~ removal + factor(year) + (1|block/pair/plot),
+                  data = check_df)
+
+# richness ~ removal, CONTROLLING for total plot cover
+mod_cov <- lmer(rich ~ removal + total_cover_z + factor(year) + (1|block/pair/plot),
+                data = check_df)
+
+summary(mod_nocov)
+summary(mod_cov)
+anova(mod_cov)
+
+# side-by-side comparison of the removal coefficient
+rbind(
+  broom.mixed::tidy(mod_nocov, effects = "fixed", conf.int = TRUE) %>%
+    filter(grepl("removal", term)) %>% mutate(model = "Without cover"),
+  broom.mixed::tidy(mod_cov, effects = "fixed", conf.int = TRUE) %>%
+    filter(grepl("removal", term)) %>% mutate(model = "With cover")
+)
 

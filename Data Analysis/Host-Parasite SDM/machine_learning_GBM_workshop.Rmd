@@ -1,0 +1,562 @@
+---
+title: "Machine learning species distribution models in R: Zero to pro(blems)"
+author: "Victor Felix (victorfelix@uga.edu)"
+date: "2026-04-07"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Let's start loading some libraries
+
+```{r}
+#install.packages("pROC") 
+library(pROC)
+#install.packages("gbm") 
+library(gbm)
+#install.packages("dismo") 
+library(dismo)
+#install.packages("reshape2") 
+library(reshape2)
+#install.packages("dplyr") 
+library(dplyr)
+#install.packages("geodata") 
+library(geodata)
+#install.packages("terra") 
+library(terra)
+#install.packages("tigris") 
+library(tigris)
+#install.packages("sf") 
+library(sf)
+#install.packages("ggplot2") 
+library(ggplot2)
+#install.packages("caret") 
+library(caret)
+```
+
+Here I get the shapefile of the contiguous U.S.
+
+```{r}
+# US states dataframe with geometries 
+us_states <- tigris::states(year = 2023, cb = TRUE)
+
+# Convert to terra SpatVector
+us_states_vect <- terra::vect(us_states)
+
+# Select only the contiguous US
+contiguous_us <- us_states_vect[!us_states_vect$STUSPS %in% c("AK", "HI", "PR", "GU", "VI", "MP", "AS"), ]
+
+# AK:	Alaska, HI:	Hawaii, PR:	Puerto Rico, GU:	Guam, VI:	U.S. Virgin Islands, MP:	Northern Mariana Islands, AS:	American Samoa
+
+# Dissolve all states into one geometry
+contiguous_us_vect <- terra::aggregate(contiguous_us)
+
+# Save figure for the presentation
+png("figures/contiguous_us_map.png", width = 1000, height = 800, res = 250)
+plot(contiguous_us_vect, main="Contiguous United States")
+dev.off()
+
+# Plot contiguous US
+plot(contiguous_us_vect)
+
+```
+
+# Downloading WorldClim rasters
+
+```{r}
+# Downloading WorldClim rasters
+worldclim_rasters<-geodata::worldclim_global(var = "bio", # variables to download
+                                 res = 5, # 5 arc-minute or ~81 km²
+                                 path = "data/") # path were data is saved
+# Plot rasters
+plot(worldclim_rasters)
+```
+Renaming WorldClim data based on simplified variables names.
+
+https://www.worldclim.org/data/bioclim.html#google_vignette
+
+```{r}
+# New simplified names
+new_names <- c(
+  "AnnMeanTemp", "MeanDiurnalRange", "Isotherm", "TempSeasonality",
+  "MaxTempWarmM", "MinTempColdM", "TempAnnRange", "MeanTempWetQ",
+  "MeanTempDryQ", "MeanTempWarmQ", "MeanTempColdQ", "AnnPrecip",
+  "PrecipWetM", "PrecipDryM", "PrecipSeasonality", "PrecipWetQ",
+  "PrecipDryQ", "PrecipWarmQ", "PrecipColdQ"
+)
+
+# Rename rasters
+base::names(worldclim_rasters) <- new_names
+
+plot(worldclim_rasters)
+
+```
+Cropping and masking the stacked raster to the size of the contiguous U.S.
+
+```{r}
+# Defining some coordinates for contiguous US
+us_extent <- ext(-125, -66.5, 24.5, 49.5)  # approximate lat/lon 
+
+# Cropping and masking the rasters
+worldclim_rasters_us <- terra::crop(worldclim_rasters, contiguous_us_vect)%>%
+  mask(contiguous_us_vect)
+
+# Save figure for the presentation
+png("figures/worldclim_rasters.png", width = 1000, height = 600, res = 150)
+plot(worldclim_rasters_us)
+dev.off()
+
+# Plot
+plot(worldclim_rasters_us)
+```
+
+Download American Green Treefrog data.
+
+https://www.gbif.org/species/10810025
+
+Dryophytes cinereus (Schneider, 1799)
+
+GBIF.org (11 December 2025) GBIF Occurrence Download https://doi.org/10.15468/dl.kg3eax
+
+```{r }
+# Loading the dataset - this is standard for GBIF data on this format
+
+AGTF_raw <- readr::read_delim("data/species_data/american_green_tree_frog.csv", delim = "\t", escape_double = FALSE, 
+    col_names = TRUE, na = c("", "NA"))
+
+head(AGTF_raw)
+```
+
+Getting the coordinates from the GBIF occurrences.
+
+```{r}
+# Create a data frame using latitudes and longitudes
+# id == 1 means presence
+AGTF_occurences <- base::data.frame("latitude" = AGTF_raw$decimalLatitude, 
+                            "longitude" = AGTF_raw$decimalLongitude,
+                            "id"=1)
+
+# Remove NAs - places without Latitude or Longitude data
+AGTF_occurences <- stats::na.omit(AGTF_occurences)
+
+head(AGTF_occurences)
+```
+
+Plotting these occurrences in a map so we can see.
+We will use the contiguous US vector to select only occurrences in the study region. 
+
+```{r}
+# Create a vector with these locations (shapefile points)
+AGTF_occurences <- terra::vect(AGTF_occurences, geom = c("longitude", "latitude"))
+
+# Plotting data and contiguous US
+plot(AGTF_occurences, main="Green Treefrog occurences from GBIF")
+plot(contiguous_us_vect, add=TRUE)
+```
+
+Keep only occurrences in the contiguous U.S.
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# this step take some time to run  
+# time for 1 or 2 questions
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+```{r}
+# Crop the raster using the contiguous U.S. area
+AGTF_occurences_US <- terra::crop(AGTF_occurences, contiguous_us_vect)
+
+# Saving figure for presentation
+png("figures/occurrences_points.png", width = 1000, height = 600, res = 150)
+plot(AGTF_occurences_US, main="Green Treefrog occurrences")
+plot(contiguous_us_vect ,add=TRUE)
+dev.off()
+
+plot(AGTF_occurences_US, main="Green Treefrog occurrences")
+plot(contiguous_us_vect ,add=TRUE)
+```
+
+Transforming the occurrences (points in a vector format) to a raster format.
+For this, we use a WorldClim raster as reference and create a new raster based on it. 
+The new raster will have on each pixel cell the sum of Green Treefrog occurrences in that area.
+
+```{r}
+# Creating the new raster based on a WorldClim raster and
+# Counting the number of occurrences in each raster cell
+# Empty pixels are set to 0.
+AGTF_occurences_raster <- terra::rasterize(AGTF_occurences_US, field="id", worldclim_rasters_us$AnnMeanTemp, fun = "count", background = 0, filename="data/AGTF_count.tif", overwrite=TRUE)
+
+# Save figure for presentation
+png("figures/occurrences_raster.png", width = 1000, height = 650, res = 150)
+
+plot(AGTF_occurences_raster,
+     main = "Green Treefrog: Number of occurrences per raster pixel ~81 km²",
+     sub = "Number of occurrences per raster cell ~81 km²")
+
+plot(contiguous_us_vect, border = "white", add = TRUE)
+
+dev.off()
+
+# Plot figure
+plot(AGTF_occurences_raster,
+     main = "Green Treefrog: Number of occurrences per raster pixel ~81 km²",
+     sub = "Number of occurrences per raster pixel ~81 km²")
+
+plot(contiguous_us_vect, border = "white", add = TRUE)
+
+```
+
+It is better to transform this raster to a dataframe and plot with ggplot
+This will help us to visualize the number of Green Treefrogs occurrences
+
+```{r}
+# Convert raster to data frame to plot with ggplot
+AGTF_occurences_df <- base::as.data.frame(AGTF_occurences_raster, xy = TRUE)
+colnames(AGTF_occurences_df) <- c("x", "y", "value")
+
+# Filter dataframe to keep only values > 0
+AGTF_occurences_df <- AGTF_occurences_df[AGTF_occurences_df$value > 0, ]
+
+
+AGTF_occurences_plot<-ggplot() +
+  geom_sf(data = sf::st_as_sf(contiguous_us_vect), # convert to sf to plot
+          fill = "white", color = "black", linewidth = 0.2) +
+  geom_point(
+    data = AGTF_occurences_df,
+    aes(x = x, y = y, size = value, color = value),
+    alpha = 0.6
+  ) +
+  scale_size_continuous(
+  range = c(1, 10),
+  name = "",
+  breaks = c(1, 50, 100, 200, 300)
+) +
+  scale_color_gradient(low = "lightgreen", high = "darkgreen", name = "") +
+  labs(
+    title = "Green Treefrog occurrences",
+    subtitle = "Number of occurences per ~81 km² (raster pixel size)",
+    x = NULL,
+    y = NULL
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(size = 19),
+    plot.subtitle = element_text(size = 14),
+    legend.position = "bottom"
+  )
+
+AGTF_occurences_plot
+
+ggsave("figures/density_plot.jpg", AGTF_occurences_plot, width = 8,
+  height = 6,  dpi = 300)
+
+# visualize the dataframe
+head(AGTF_occurences_df)
+```
+
+Now, for modelling purposes, we will assume that locations with at least one occurrence per pixel represent a presence point of the Green Treefrog species.
+
+
+```{r}
+
+# Set pixels values with at least one occurrence to 1 (presence)
+AGTF_occurences_final_raster <- AGTF_occurences_raster
+AGTF_occurences_final_raster[AGTF_occurences_final_raster > 0] <- 1
+
+# Convert raster to dataframe
+AGTF_occurences_final_df <- base::as.data.frame(AGTF_occurences_final_raster, xy = TRUE)
+
+# rename columns
+colnames(AGTF_occurences_final_df) <- c("longitude", "latitude", "Label")
+
+# filter only Label == 1 (presence points)
+AGTF_presence_df <- AGTF_occurences_final_df %>%
+  filter(Label == 1)
+
+# Transform to vector of points
+AGTF_presence_points <- terra::vect(
+  AGTF_presence_df,
+  geom = c("longitude", "latitude"),
+  crs = "EPSG:4326"
+)
+
+
+```
+
+Let's plot for easier visualization. 
+
+```{r}
+# Save the figure for presentation
+png("figures/presence_points.png", width = 1000, height = 600, res = 150)
+plot(contiguous_us_vect,
+     xlab = "Longitude", ylab = "Latitude",
+     main = "Presence points")
+points(AGTF_presence_df$longitude, AGTF_presence_df$latitude,
+       pch = 16, cex = 0.2, col = "darkgreen")
+dev.off()
+
+# plotting presence points
+plot(contiguous_us_vect,
+     xlab = "Longitude", ylab = "Latitude",
+     main = "Presence points")
+points(AGTF_presence_points,
+       pch = 16, cex = 0.2, col = "darkgreen")
+
+```
+
+######
+Back to slides
+#####
+
+Now we will use the vector of points to extract the climatic data for each presence point.
+
+```{r}
+presence_points <- terra::extract(worldclim_rasters_us, AGTF_presence_points)
+
+# Drop ID column
+presence_points <- base::subset(presence_points, select = -c(ID))
+# Create a Label column with 1 as presence
+presence_points$Label <- 1
+
+# visulize dataframe
+head(presence_points)
+
+# numbr of rows
+NROW(presence_points)
+```
+
+Now we randomly select the same number of background points as presence points, and sample the climate data from each of these points.
+
+```{r}
+set.seed(30)
+# Sampling random background points 
+x_y_background_points <- spatSample(worldclim_rasters_us, size = NROW(presence_points), method = "random", na.rm = TRUE, xy=TRUE)%>%
+  mutate(Label = 0)
+
+# save the plot
+png("figures/background_points.png", width = 1000, height = 600, res = 150)
+plot(x_y_background_points$x, x_y_background_points$y,
+     pch = 16, cex = 0.3,
+     xlab = "Longitude", ylab = "Latitude",
+     main = "Background points")
+plot(contiguous_us_vect,add=TRUE)
+dev.off()
+
+#Plot 
+plot(x_y_background_points$x, x_y_background_points$y,
+     pch = 16, cex = 0.4,
+     xlab = "Longitude", ylab = "Latitude",
+     main = "Background points")
+plot(contiguous_us_vect,add=TRUE)
+
+# sample climate data from these points
+background_points <- subset(x_y_background_points, select = -c(x, y))
+
+head(background_points)
+```
+
+Get 70% of the data for training and 30% for testing.
+
+```{r}
+# Randomly sample 70% of the background indices
+sample_indices <- base::sample(seq_len(nrow(background_points)), size = 0.7 * nrow(background_points))
+# Create a sampled dataframe with 70% of the data
+bg_70 <- background_points[sample_indices, ]
+
+# Randomly sample 70% of the presence row indices
+sample_indices <- base::sample(seq_len(nrow(presence_points)), size = 0.7 * nrow(presence_points))
+# Create a sampled dataframe with 70% of the data
+presence_70 <- presence_points[sample_indices, ]
+
+#rbind 70% of presence and background for training data
+train.data.70<-base::rbind(presence_70,bg_70)
+
+# Get the 30% data left for presence and background data 
+test_presence_30 <- presence_points[-sample_indices, ]
+test_bg_30 <- background_points[-sample_indices, ]
+
+#rbind the 30% left of presence and background for testing
+test.data.30<-rbind(test_bg_30,test_presence_30)
+
+```
+
+Model setup and tuning
+
+```{r}
+############
+set.seed(11)
+
+# Choosing training data
+train.data <- train.data.70
+train.data$Label <- as.factor(train.data$Label) # Define target column as a factor
+levels(train.data$Label) <- c("Background", "Presence") # rename 0s and 1s 
+
+#################
+# GBM model setup
+#################
+
+gbm_model <- train(
+  x = train.data[, 1:19], # 19 first columns with climate data
+  y = train.data[, 20], # presence or background points
+  method = "gbm", # Gradient boosting machine
+  metric = "ROC", # ROC for model selection
+  trControl = trainControl(
+    method = "cv", # cross-validation
+    number = 3, # three folds
+    classProbs = TRUE, # compute predicted probabilities 
+    summaryFunction = twoClassSummary # computes ROC, sensitivity and specificity
+  ),
+  tuneGrid = expand.grid(
+    interaction.depth = 2:3, # trees depth
+    n.trees = 380, # Total number of trees
+    shrinkage = 0.01, # learning rate
+    n.minobsinnode = 50 # min observations in a leaf
+  ),
+  verbose = TRUE # show models
+)
+
+# Print the mean cross-validation AUC
+cat("AUC:", mean(gbm_model$resample$ROC), "\n")
+
+```
+
+Plotting GBM training ROC
+
+```{r}
+# Get predicted probabilities 
+pred_probs <- predict(gbm_model, newdata = train.data[, 1:20], type = "prob")[, "Presence"]
+
+# Compute ROC curve
+roc_obj <- roc(response = train.data$Label, predictor = pred_probs)
+
+# Create a data frame for plotting
+roc_df <- data.frame(
+  tpr = roc_obj$sensitivities,
+  fpr = 1 - roc_obj$specificities
+)
+
+# Plot 
+train_plot <- ggplot(roc_df, aes(x = fpr, y = tpr)) +
+  geom_line(color = "blue", size = 1.2) +
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "gray") +
+  labs(
+    title = paste("GBM Training ROC"),
+    subtitle = paste("AUC =", round(mean(gbm_model$resample$ROC), 3)),
+    x = "1 - Specificity",
+    y = "Sensitivity"
+  ) +
+  theme_minimal(base_size = 14)
+
+#####
+ggsave("figures/train_ROC.jpg", plot = train_plot, width = 3, height = 3, dpi = 300)
+
+print(train_plot)
+```
+
+GBM testing ROC
+
+```{r}
+# Loading test data and transforming labels to factor
+test.data <- test.data.30
+test.data$Label <- as.factor(test.data$Label) # set as a factor
+levels(test.data$Label) <- c("Background", "Presence") # rename 0s and 1s
+
+# Forecasts for test data using our trained model
+predictions <- predict(gbm_model, test.data[, 1:20], type = "prob")
+
+# Extract probabilities
+prob_positive <- predictions$Presence
+
+# Run the ROC curve calculation
+roc_curve <- roc(test.data$Label, prob_positive)
+
+# Calculate the AUC
+auc_value <- auc(roc_curve)
+
+# Create dataframe for plotting
+roc_df <- data.frame(
+  fpr = 1 - roc_curve$specificities,
+  tpr = roc_curve$sensitivities
+)
+
+# Plot
+test_plot <- ggplot(roc_df, aes(x = fpr, y = tpr)) +
+  geom_line(color = "blue", size = 1.2) +
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "gray") +
+  labs(
+    title = paste("GBM Testing ROC"),
+    subtitle = paste("AUC =", round(auc(roc_curve), 3)),
+    x = "1 - Specificity",
+    y = "Sensitivity"
+  ) +
+  theme_minimal(base_size = 14)
+
+test_plot
+
+# Save the ggplot
+ggsave("figures/test_ROC.jpg", plot = test_plot, width = 3, height = 3, dpi = 300)
+```
+
+Plotting GBM variable importance.
+
+```{r}
+set.seed(11)
+# Calculate variable importance
+importance <- varImp(gbm_model)
+# Extract the importance values as a data frame
+feature_importance <- as.data.frame(importance$importance)
+# Add a column for the percentage importance
+feature_importance$Percentage <- (feature_importance$Overall / sum(feature_importance$Overall)) * 100
+# Sort by percentage importance 
+feature_importance <- feature_importance[order(-feature_importance$Percentage), ]
+# Convert rownames to a column for easier plotting
+feature_importance$Variable <- rownames(feature_importance)
+
+# Plot
+importance_plot <- ggplot(feature_importance, aes(x = reorder(Variable, Percentage), y = Percentage)) +
+  geom_segment(aes(xend = Variable, y = 0, yend = Percentage), color = "blue") +
+  geom_point(color = "blue", size = 3) +
+  coord_flip() +
+  labs(
+    title = "GBM Feature importance",
+    x = "Model features",
+    y = "Percentage (%)"
+  ) +
+  theme_minimal()
+
+importance_plot
+
+# Save the ggplot
+ggsave("figures/feature_importance.jpg", plot = importance_plot, width = 4, height = 4, dpi = 300)
+```
+
+Forecasting the contiguous U.S.
+
+```{r}
+
+map_pred <- terra::predict(object=worldclim_rasters_us, model=gbm_model,filename= "forecasts/US_SDM.tif",overwrite=TRUE,type = "prob")
+
+# load the forecasts
+model_pred<-rast("forecasts/US_SDM.tif")
+# mask the forecasts
+model_pred_masked<-mask(model_pred,contiguous_us_vect)
+
+
+# save plot for presentation
+png("figures/GreenTreefrogSDM.png", width = 1000, height = 600, res = 150)
+plot(model_pred_masked$Presence, main="Green Treefrog Species Distribution Model", xlab="",
+     col = colorRampPalette(c("white", "darkgreen"))(100),
+     range = c(0, 1))
+plot(contiguous_us_vect, add=TRUE)
+dev.off()
+
+# plot figure
+plot(model_pred_masked$Presence, main="Green Treefrog Species Distribution Model", xlab="",
+     col = colorRampPalette(c("white", "darkgreen"))(100),
+     range = c(0, 1))
+plot(contiguous_us_vect, add=TRUE)
+
+```
