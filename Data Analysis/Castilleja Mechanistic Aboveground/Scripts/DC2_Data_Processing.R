@@ -15,6 +15,7 @@ library(codyn)
 library(broom)
 library(broom.mixed)
 library(forcats)
+library(purrr)
 
 #Specifying conflicts
 conflicted::conflicts_prefer(dplyr::recode)
@@ -26,6 +27,31 @@ conflicts_prefer(dplyr::arrange)
 conflicts_prefer(purrr::set_names)
 conflict_prefer("select","dplyr")
 conflict_prefer("count","dplyr")
+
+#Functions
+split_and_name <- function(df, column) {
+  # Get the dataframe name as a string
+  df_name <- deparse(substitute(df))
+  # Ensure column exists
+  if (!column %in% colnames(df)) {
+    stop("Column not found in dataframe")
+  }
+  # Split the dataframe by the column
+  df_list <- split(df, df[[column]])
+  # Remove dataframes with 0 rows
+  df_list <- df_list[sapply(df_list, nrow) > 0]
+  # If nothing remains, stop
+  if (length(df_list) == 0) {
+    warning("All split dataframes have 0 rows; nothing to assign.")
+    return(invisible(NULL))
+  }
+  # Make valid R names for safety
+  names(df_list) <- paste0(df_name, "_", make.names(names(df_list)))
+  # Assign each dataframe into the global environment
+  list2env(df_list, envir = .GlobalEnv)
+  # Return the list invisibly
+  invisible(df_list)
+}
 
 #----------------------------------------------------------#
 #-------------------PLOT DATA PROCESSING-------------------#
@@ -178,29 +204,6 @@ envi.cover$pair <- as.factor(envi.cover$pair)
 envi.cover$plot <- as.factor(envi.cover$plot)
 envi.cover$block <- as.factor(envi.cover$block)
 
-split_and_name <- function(df, column) {
-  # Get the dataframe name as a string
-  df_name <- deparse(substitute(df))
-  # Ensure column exists
-  if (!column %in% colnames(df)) {
-    stop("Column not found in dataframe")
-  }
-  # Split the dataframe by the column
-  df_list <- split(df, df[[column]])
-  # Remove dataframes with 0 rows
-  df_list <- df_list[sapply(df_list, nrow) > 0]
-  # If nothing remains, stop
-  if (length(df_list) == 0) {
-    warning("All split dataframes have 0 rows; nothing to assign.")
-    return(invisible(NULL))
-  }
-  # Make valid R names for safety
-  names(df_list) <- paste0(df_name, "_", make.names(names(df_list)))
-  # Assign each dataframe into the global environment
-  list2env(df_list, envir = .GlobalEnv)
-  # Return the list invisibly
-  invisible(df_list)
-}
 split_and_name(envi.cover, "code")
 
 total.envi <- envi.cover %>%
@@ -341,46 +344,6 @@ NMDS <- cbind(plot_meta, nmds.scores)
 saveRDS(NMDS, "Processed Data/Community NMDS.rds")
 
 #----------------------------------------------------------#
-#--------------------NEAREST NEIGHBOR----------------------#
-#----------------------------------------------------------#
-plant <- readRDS("Processed Data/Plant Cover.rds")
-cover <- subset(plant, select = c('year','plot','code','percent_cover', 'nearest_neighbor'))
-
-#Sum for each species the number of times they appear as a NN
-nearest <- cover %>%
-  group_by(code, year) %>%
-  summarise(
-    total_cover = sum(percent_cover, na.rm = TRUE),
-    nn_count    = sum(nearest_neighbor, na.rm = TRUE),
-    .groups = "drop") %>%
-  group_by(year) %>%
-  mutate(rel_abund_cover = total_cover / sum(total_cover, na.rm = TRUE),
-    nn_freq = nn_count/sum(nn_count, na.rm = TRUE)) %>%
-  ungroup()
-
-nn_yearly <- nearest %>%
-  group_by(year) %>%
-  nest() %>%
-  mutate(model = map(data, ~ lm(nn_freq ~ rel_abund_cover, data = .x)),
-    results = map2(model, data, ~ {bind_cols(.y, as.data.frame(
-          predict(.x, newdata = .y, interval = "prediction", level = 0.95)) 
-      ) %>%
-        mutate(NN_association = case_when(
-            nn_freq > upr ~ "Frequent Neighbor",
-            nn_freq < lwr ~ "Infrequent Neighbor",
-            TRUE ~ "As expected"))
-      })) %>%
-  select(year, results) %>%
-  unnest(results)
-
-split_and_name(nn_yearly, "year")
-
-saveRDS(nn_yearly_X0, "Processed Data/NN Pre.rds")
-saveRDS(nn_yearly_X1, "Processed Data/NN 23.rds")
-saveRDS(nn_yearly_X2, "Processed Data/NN 24.rds")
-saveRDS(nn_yearly_X3, "Processed Data/NN 25.rds")
-
-#----------------------------------------------------------#
 #----------------CASTILLEJA SUMMARY DATA-------------------#
 #----------------------------------------------------------#
 dirty_cover <- readRDS("Processed Data/Dirty Cover.rds")
@@ -449,131 +412,130 @@ saveRDS(site_cover_pre, "Processed Data/Castilleja Cover Pre.rds")
 #----------------------------------------------------------#
 #-------------SPECIES RESPONSE TO TREATMENT----------------#
 #----------------------------------------------------------#
-#----------Importing Data----------#
-plant_data <- readRDS("Processed Data/Plant Cover.rds")
-rac_cover <- subset(plant_data, select = c('year','plot','pair', 'removal',
-                                           'litter','code','count',
-                                           'functional_group', 'percent_cover'))
-rac_cover %<>% filter (year != "0")
+  # All rarity and response metrics are calculated from COVER only, following
+  # the approach in Watkins et al. (2026). Metrics:
+  #   SR   - spatial rarity   (baseline cover rank in parasite-present plots)
+  #   TR   - temporal rarity  (years present in any parasite-present plot)
+  #   RR   - response ratio   (cover change under removal)
+  #   dOcc - occupancy change (proportion of plot-years present)
+  #   NN   - nearest-neighbour association (frequent / infrequent neighbour)
+  #
+  # Rarity metrics use parasite-present plots only, so they describe the
+  # baseline community independent of treatment. Trait-based predictors of
+  # species response are deferred to a separate analysis using external trait
 
-rac_cover <- as.data.frame(unclass(rac_cover),stringsAsFactors=TRUE)
+
+#----------Importing Data----------#
+plant_data   <- readRDS("Processed Data/Plant Cover.rds")
 species_info <- read.csv("Raw Data/EL Species List - EL.csv")
-species_info <- as.data.frame(unclass(species_info),stringsAsFactors=TRUE)
-cover <- readRDS("Processed Data/Plant Cover.rds")
-plot_meta <- readRDS("Processed Data/Plot Data.rds")
+species_info <- as.data.frame(unclass(species_info), stringsAsFactors = TRUE)
+
+#---- taxonomic corrections (apply to species_info so they propagate) -------
+species_info <- species_info %>%
+  mutate(
+    genus   = recode(as.character(genus),
+                     "Taraxicum"     = "Taraxacum",
+                     "Chamaenuerion" = "Chamaenerion"),
+    species = recode(as.character(species),
+                     "Hoodii" = "hoodii"),
+    family  = recode(as.character(family),
+                     "Thalictraceae" = "Ranunculaceae")
+  )
+
+#---- build cover working frame (records only; absences are missing rows) ---
+rac_cover <- plant_data %>%
+  select(year, plot, pair, removal, litter, code, count,
+         functional_group, percent_cover) %>%
+  filter(year != "0") %>%
+  mutate(across(c(plot, pair, removal, litter, code, functional_group), as.factor))
+
+# numeric year kept in a SEPARATE column (never overwrite the factor 'year')
+rac_cover   <- rac_cover %>% mutate(year_num = as.integer(as.character(year)))
+total_years <- n_distinct(rac_cover$year)
 
 #----------Spatial Rarity (SR)----------#
-# Proportional rank of mean cover across all control plots and years
-# SR near 1 = rare, SR near 0 = dominant
+# 1 - proportional cover rank in parasite-present plots. Near 1 = rare.
 spatial_rarity <- rac_cover %>%
-  filter(removal == "Present") %>%
+  filter(removal == "Present", percent_cover > 0) %>%
   group_by(code) %>%
   summarize(mean_cover_control = mean(percent_cover, na.rm = TRUE), .groups = "drop") %>%
   mutate(SR = 1 - percent_rank(mean_cover_control))
 
 #----------Temporal Rarity (TR)----------#
-# Proportion of years absent from control plots
-# TR near 1 = temporally rare, TR near 0 = temporally persistent
-
-total_years <- rac_cover %>%
-  summarize(n = n_distinct(year)) %>%
-  pull(n)
-
+# 1 - (years present in ANY parasite-present plot / total years). Near 1 = rare.
 temp_rarity <- rac_cover %>%
-  filter(removal == "Present") %>%
+  filter(removal == "Present", percent_cover > 0) %>%
   group_by(code) %>%
   summarize(present = n_distinct(year), .groups = "drop") %>%
   mutate(TR = 1 - (present / total_years))
 
-#----------Abundance group----------#
-# Spatial:  SR >= 0.25 = Sparse,       SR < 0.25 = Common
-# Temporal: TR >= 0.50 = Intermittent, TR < 0.50 = Persistent
-
+#----------Abundance class----------#
 rarity <- spatial_rarity %>%
   left_join(temp_rarity, by = "code") %>%
   mutate(
     spatial  = if_else(SR >= 0.25, "Sparse", "Common"),
     temporal = if_else(TR >= 0.50, "Intermittent", "Persistent"),
     class = case_when(
-      spatial == "Common" & temporal == "Persistent" ~ "CP",
+      spatial == "Common" & temporal == "Persistent"   ~ "CP",
       spatial == "Common" & temporal == "Intermittent" ~ "CI",
-      spatial == "Sparse" & temporal == "Persistent" ~ "SP",
-      spatial == "Sparse" & temporal == "Intermittent" ~ "SI"
-    )
-  )
+      spatial == "Sparse" & temporal == "Persistent"   ~ "SP",
+      spatial == "Sparse" & temporal == "Intermittent" ~ "SI"))
 
-#----------Response Ratio (RR)----------#
-# RR,i = (C_removal - C_control) / (C_removal + C_control)
-# Pooled across all years and plots — one value per species
-# Species absent from control plots excluded
-
+#----------Response Ratio (RR) — cover----------#
+# RR = (C_removal - C_present) / (C_removal + C_present), pooled over plots/years.
+# Only species present in BOTH treatments retained.
 response_ratio <- rac_cover %>%
   group_by(code, removal) %>%
   summarize(mean_cover = mean(percent_cover, na.rm = TRUE), .groups = "drop") %>%
   pivot_wider(names_from = removal, values_from = mean_cover) %>%
   filter(!is.na(Removed) & !is.na(Present)) %>%
-  mutate(RR = (Removed - Present) / (Removed + Present))
+  mutate(RR = (Removed - Present) / (Removed + Present)) %>%
+  rename(mean_cover_control = Present, mean_cover_removal = Removed)
 
-#----------Merge RR with Rarity and Species Info----------#
+#----------Merge RR with rarity + species info----------#
 rarity_response <- response_ratio %>%
-  rename(mean_cover_control = Present,
-         mean_cover_removal = Removed) %>%
   left_join(rarity, by = "code") %>%
-  left_join(species_info %>% select(code, functional_group, life_history, growth_form), by = "code") %>%
+  left_join(species_info %>% select(code, functional_group, life_history, growth_form),
+            by = "code") %>%
   filter(!is.na(SR) & !is.na(TR))
 
-#----------Sensitivity Check — type Cutoffs ± 0.10----------#
+#----------Predictors of the cover response----------#
+Anova(lm(RR ~ SR, data = rarity_response), type = "II")
+Anova(lm(RR ~ TR, data = rarity_response), type = "II")
+summary(lm(RR ~ SR, data = rarity_response))
+summary(lm(RR ~ TR, data = rarity_response))
+Anova(lm(RR ~ functional_group, data = rarity_response), type = "II")
+Anova(lm(RR ~ life_history,      data = rarity_response), type = "II")
+
+#----------Sensitivity — class cutoffs +/- 0.10----------#
 make_rarity <- function(sr_cut, tr_cut) {
   spatial_rarity %>%
     left_join(temp_rarity, by = "code") %>%
-    mutate(
-      spatial  = if_else(SR >= sr_cut, "Sparse",       "Common"),
-      temporal = if_else(TR >= tr_cut, "Intermittent", "Persistent"),
-      class = case_when(
-        spatial == "Common" & temporal == "Persistent"   ~ "CP",
-        spatial == "Common" & temporal == "Intermittent" ~ "CI",
-        spatial == "Sparse" & temporal == "Persistent"   ~ "SP",
-        spatial == "Sparse" & temporal == "Intermittent" ~ "SI"
-      ))}
-rarity_low  <- make_rarity(0.15, 0.40)
-rarity_high <- make_rarity(0.35, 0.60)
-
-sensitivity_check <- function(rarity_df, label) {
-  df   <- response_ratio %>%
-    left_join(rarity_df %>% select(code, SR, TR, class), by = "code") %>%
-    filter(!is.na(SR) & !is.na(TR))
-  m.SR <- lm(RR ~ SR, data = df)
-  m.TR <- lm(RR ~ TR, data = df)
-  cat("\n---", label, "---\n")
-  cat("SR p:", coef(summary(m.SR))["SR", "Pr(>|t|)"], "\n")
-  cat("TR p:", coef(summary(m.TR))["TR", "Pr(>|t|)"], "\n")
+    mutate(spatial  = if_else(SR >= sr_cut, "Sparse", "Common"),
+           temporal = if_else(TR >= tr_cut, "Intermittent", "Persistent"))
 }
-sensitivity_check(rarity_low,  "Cutoffs - 0.10")
-sensitivity_check(rarity_high, "Cutoffs + 0.10")
+sensitivity_check <- function(rarity_df, label) {
+  df <- response_ratio %>%
+    left_join(rarity_df %>% select(code, SR, TR), by = "code") %>%
+    filter(!is.na(SR) & !is.na(TR))
+  cat("\n---", label, "---\n")
+  cat("SR p:", coef(summary(lm(RR ~ SR, data = df)))["SR", "Pr(>|t|)"], "\n")
+  cat("TR p:", coef(summary(lm(RR ~ TR, data = df)))["TR", "Pr(>|t|)"], "\n")
+}
+sensitivity_check(make_rarity(0.15, 0.40), "Cutoffs - 0.10")
+sensitivity_check(make_rarity(0.35, 0.60), "Cutoffs + 0.10")
 
-#----------Sensitivity Check — Exclude Transients----------#
-# Transient = not present in year 1 of control plots
-rac_cover$year <- as.integer(rac_cover$year)
-year_one <- rac_cover %>% filter(removal == "Present", year == min(year)) %>% distinct(code)
-
+#----------Sensitivity — exclude transients (present in year 1)----------#
+year_one <- rac_cover %>%
+  filter(removal == "Present", year_num == min(year_num), percent_cover > 0) %>%
+  distinct(code)
 no_transients <- rarity_response %>% filter(code %in% year_one$code)
+summary(lm(RR ~ SR, data = no_transients)); Anova(lm(RR ~ SR, data = no_transients), type = "II")
+summary(lm(RR ~ TR, data = no_transients)); Anova(lm(RR ~ TR, data = no_transients), type = "II")
 
-model.SR.nt <- lm(RR ~ SR, data = no_transients)
-model.TR.nt <- lm(RR ~ TR, data = no_transients)
-model.nt    <- lm(RR ~ SR * TR, data = no_transients)
-
-summary(model.SR.nt); Anova(model.SR.nt, type = "II"); confint(model.SR.nt)
-summary(model.TR.nt); Anova(model.TR.nt, type = "II"); confint(model.TR.nt)
-summary(model.nt)
-
-pwr.f2.test(u = 1, v = 32, f2 = 0.096 / (1 - 0.096), sig.level = 0.05)# current power 0.45
-pwr.f2.test(u = 1, f2 = 0.096 / (1 - 0.096), sig.level = 0.05, power = 0.80) #calulating number of species needed
-
-#----------Delta Occurrence (ΔOcc)----------#
-# Proportion of plot-year combinations present per treatment
-# ΔOcc = Removed - Present (positive = more common in removal)
-
-delta_occ <- cover %>%
+#----------Delta Occurrence (dOcc)----------#
+# Proportion of plot-years present per treatment; absences are true zeros.
+delta_occ <- plant_data %>%
   filter(year != "0") %>%
   complete(plot, year, code, fill = list(cover = 0, removal = NA)) %>%
   group_by(plot) %>%
@@ -591,11 +553,13 @@ delta_rarity <- delta_occ %>%
   left_join(rarity_response %>% select(code, SR, TR, RR, class), by = "code") %>%
   filter(!is.na(SR))
 
-#----------Indicator Species Analysis----------#
-# Mean cover per plot averaged across years to avoid pseudoreplication
-# Permutations constrained within paired plot blocks
+Anova(lm(delta_occ ~ SR, data = delta_rarity), type = "II")
+Anova(lm(delta_occ ~ TR, data = delta_rarity), type = "II")
 
-ind_pooled_mean <- cover %>%
+#----------Indicator Species Analysis----------#
+# Mean cover per plot across years (avoids pseudoreplication); permutations
+# constrained within paired-plot blocks.
+ind_pooled_mean <- plant_data %>%
   filter(year != "0", !code %in% c("bare", "litter", "rock", "CASE")) %>%
   group_by(plot, code) %>%
   summarise(cover = mean(cover, na.rm = TRUE), .groups = "drop")
@@ -604,18 +568,12 @@ pooled_matrix <- ind_pooled_mean %>%
   pivot_wider(names_from = code, values_from = cover, values_fill = 0) %>%
   column_to_rownames("plot")
 
-ind_meta <- cover %>%
+ind_meta <- plant_data %>%
   filter(year != "0", !code %in% c("bare", "litter", "rock", "CASE")) %>%
-  group_by(plot) %>%
-  slice(1) %>%
-  arrange(plot)
+  group_by(plot) %>% slice(1) %>% arrange(plot)
 
-case.removal_pooled <- ind_meta %>% pull(removal)
-case.pair_pooled    <- ind_meta %>% pull(pair)
-
-pooled_inv <- multipatt(pooled_matrix, case.removal_pooled, func = "r.g",
-                        control = how(blocks = case.pair_pooled, nperm = 9999))
-
+pooled_inv <- multipatt(pooled_matrix, ind_meta$removal, func = "r.g",
+                        control = how(blocks = ind_meta$pair, nperm = 9999))
 summary(pooled_inv, alpha = 0.1)
 
 pooled_ind_results <- as.data.frame(pooled_inv$sign) %>%
@@ -625,17 +583,59 @@ pooled_ind_results <- as.data.frame(pooled_inv$sign) %>%
   mutate(significant = p.value < 0.1) %>%
   arrange(p.value)
 
-sig_species <- pooled_ind_results %>% filter(significant) %>% pull(code) %>% as.character()
-
 indval_rarity <- pooled_ind_results %>%
   left_join(delta_rarity %>% select(code, SR, TR, RR, delta_occ, class), by = "code")
 
-#----------Plot-Level Response Classification----------#
-# Identifies species that gained or lost plots in one treatment relative to the other
-# Combines colonizer and extirpation analyses into a single asymmetry-based classification
-# Threshold: response in one treatment must be at least 1 plot AND at least 2x the response in the other
+#----------Nearest Neighbour----------#
+# Computed on ALL years (year 0 retained for the figure objects); the summary
+# column for robinhood uses post-treatment years only.
+nn_cover <- plant_data %>%
+  select(year, plot, code, percent_cover, nearest_neighbor)   # no year filter
 
-plot_changes <- cover %>%
+nearest <- nn_cover %>%
+  group_by(code, year) %>%
+  summarise(total_cover = sum(percent_cover, na.rm = TRUE),
+            nn_count    = sum(nearest_neighbor, na.rm = TRUE),
+            .groups = "drop") %>%
+  group_by(year) %>%
+  mutate(rel_abund_cover = total_cover / sum(total_cover, na.rm = TRUE),
+         nn_freq         = nn_count / sum(nn_count, na.rm = TRUE)) %>%
+  ungroup()
+
+nn_yearly <- nearest %>%
+  group_by(year) %>%
+  nest() %>%
+  mutate(model = map(data, ~ lm(nn_freq ~ rel_abund_cover, data = .x)),
+         results = map2(model, data, ~ bind_cols(.y, as.data.frame(
+           predict(.x, newdata = .y, interval = "prediction", level = 0.95))) %>%
+             mutate(NN_association = case_when(
+               nn_freq > upr ~ "Frequent Neighbor",
+               nn_freq < lwr ~ "Infrequent Neighbor",
+               TRUE          ~ "As expected")))) %>%
+  select(year, results) %>%
+  unnest(results)
+
+# per-year figure objects (year 0 included)
+split_and_name(nn_yearly, "year")
+saveRDS(nn_yearly_X0, "Processed Data/NN Pre.rds")
+saveRDS(nn_yearly_X1, "Processed Data/NN 23.rds")
+saveRDS(nn_yearly_X2, "Processed Data/NN 24.rds")
+saveRDS(nn_yearly_X3, "Processed Data/NN 25.rds")
+
+# summary column for robinhood — POST-TREATMENT years only
+nn_summary <- nn_yearly %>%
+  filter(year != "0") %>%
+  group_by(code) %>%
+  summarise(nn_freq_years   = sum(NN_association == "Frequent Neighbor"),
+            nn_infreq_years = sum(NN_association == "Infrequent Neighbor"),
+            .groups = "drop") %>%
+  mutate(nn_association = case_when(
+    nn_freq_years > 0 & nn_infreq_years > 0 ~ "Mixed",
+    nn_freq_years > 0                        ~ "Frequent Neighbor",
+    nn_infreq_years > 0                      ~ "Infrequent Neighbor",
+    TRUE                                     ~ "As expected"))
+#----------Plot-level colonizer / extirpation classification----------#
+plot_changes <- plant_data %>%
   filter(year %in% c(1, 3), !code %in% c("bare", "litter", "rock", "CASE")) %>%
   mutate(present = ifelse(cover > 0, 1, 0)) %>%
   group_by(code, removal, year) %>%
@@ -650,69 +650,93 @@ plot_changes <- cover %>%
     turnover_class = case_when(
       change_control >=  1 & change_control >=  2 * abs(change_removal) & change_removal <= 0 ~ "Control colonizer",
       change_removal >=  1 & change_removal >=  2 * abs(change_control) & change_control <= 0 ~ "Removal colonizer",
-      change_control <= -1 & abs(change_control) >=  2 * abs(change_removal) & change_removal >= 0 ~ "Control extirpation",
-      change_removal <= -1 & abs(change_removal) >=  2 * abs(change_control) & change_control >= 0 ~ "Removal extirpation",
-      TRUE                                                                                          ~ "No clear response"
-    )
-  )
-# Tag species in indval_rarity with their response type and plot-level changes
-indval_rarity <- indval_rarity %>%
-  left_join(
-    plot_changes %>% select(code, change_control, change_removal,
-                            turnover_magnitude, turnover_class),
-    by = "code"
-  )
+      change_control <= -1 & abs(change_control) >= 2 * abs(change_removal) & change_removal >= 0 ~ "Control extirpation",
+      change_removal <= -1 & abs(change_removal) >= 2 * abs(change_control) & change_control >= 0 ~ "Removal extirpation",
+      TRUE ~ "No clear response"))
 
-#---------Summary Dataframe---------#
+indval_rarity <- indval_rarity %>%
+  left_join(plot_changes %>% select(code, change_control, change_removal,
+                                    turnover_magnitude, turnover_class),
+            by = "code")
+
+#----------Summary dataframe (robinhood)----------#
+# growth_form retained as raw reference data for later merging with database
+# traits; no derived groupings computed here.
 robinhood <- indval_rarity %>%
-  left_join(
-    species_info %>% select(code, family, genus, species,
-                            functional_group, life_history, growth_form),
-    by = "code"
-  ) %>%
-  select(code, family, genus, species, functional_group, life_history, growth_form,
-         spatial_rarity = SR, temporal_rarity = TR, response_ratio = RR, dominance_class = class, occupancy_shift = delta_occ,
-         indicator = significant,
+  left_join(species_info %>% select(code, family, genus, species,
+                                    functional_group, life_history, growth_form),
+            by = "code") %>%
+  left_join(nn_summary, by = "code") %>%
+  select(code, family, genus, species,
+         functional_group, life_history, growth_form,
+         spatial_rarity = SR, temporal_rarity = TR,
+         response_ratio = RR, occupancy_shift = delta_occ,
+         dominance_class = class, indicator = significant,
+         nn_association, nn_freq_years, nn_infreq_years,
          turnover_class, turnover_magnitude)
+
 saveRDS(robinhood, "Processed Data/Robinhood Summary.rds")
 write.csv(robinhood, "Processed Data/Robinhood Summary.csv", row.names = FALSE)
 
-# 1 — Rarity and Response Ratio
-robin_rr <- robinhood %>%
-  select(code, spatial_rarity, temporal_rarity, response_ratio, dominance_class) %>%
-  filter(!is.na(spatial_rarity) & !is.na(temporal_rarity) & !is.na(response_ratio)) %>%
-  arrange(spatial_rarity)
-
-saveRDS(robin_rr, "Processed Data/Species Response Ratio.rds")
-
-# 2 — Delta Occurrence
-robin_delta <- delta_occ %>%
-  filter(!is.na(delta_occ)) %>%
-  select(code, occ_present = Present, occ_removed = Removed, delta_occ) %>%
-  arrange(delta_occ)
-
-saveRDS(robin_delta, "Processed Data/Species Change in Occurance.rds")
-
-# 3 — Indicator Species
-robin_indicator <- indval_rarity %>%
-  select(code, indval, p.value) %>%
-  arrange(p.value)
-
-saveRDS(robin_indicator,  "Processed Data/Indicator Species Mean.rds")
-
-# 4 — Turnover (colonizers and extirpated species combined)
-robin_turnover <- indval_rarity %>%
-  filter(turnover_class != "No clear response") %>%
-  select(code, change_control, change_removal, turnover_magnitude, turnover_class) %>%
-  arrange(turnover_class, desc(abs(turnover_magnitude)))
-
-saveRDS(robin_turnover, "Processed Data/Robinhood Turnover.rds")
-
-
-
+robinhood <- readRDS("Processed Data/Robinhood Summary.rds")
 
 #----------------------------------------------------------#
-#-----------------------SPECIES TRAITS---------------------#
+#---------------------SIZE OR NUMBER-----------------------#
 #----------------------------------------------------------#
-species <- readRDS("Processed Data/Robinhood Summary.rds")
+# Cover conflates the number of plant units with their size. Decomposing it
+# tests whether Castilleja alters community structure through establishment/
+# persistence (density) or growth (size).
+#
+# NOTE: counts are ramets/stems, not genets (many species are clonal), so
+# "density" = stem density and "size" = cover per counted unit.
 
+library(dplyr); library(lme4); library(lmerTest); library(car); library(emmeans)
+
+cover_all <- readRDS("Processed Data/Plant Cover.rds")
+
+plot_meta <- site %>%
+  mutate(plot = as.character(plot)) %>%
+  select(plot, block, pair, litter, removal) %>%
+  distinct(plot, .keep_all = TRUE)
+
+struct_all <- cover_all %>%
+  group_by(year, plot) %>%
+  dplyr::summarise(total_cover = sum(percent_cover, na.rm = TRUE),
+                   total_count = sum(count, na.rm = TRUE),
+                   .groups = "drop") %>%
+  mutate(mean_size = total_cover / total_count,
+         plot = as.character(plot)) %>%
+  left_join(plot_meta, by = "plot")
+
+#---- baseline equivalence (pre-treatment, year 0) -------------------------
+pre <- struct_all %>% filter(year == "0")
+
+Anova(lmer(total_cover    ~ removal + (1|block) + (1|pair), data = pre))
+Anova(glmer(total_count   ~ removal + (1|block) + (1|pair), data = pre, family = poisson))
+Anova(lmer(log(mean_size) ~ removal + (1|block) + (1|pair), data = pre))
+
+#---- treatment years ------------------------------------------------------
+struct_df <- struct_all %>% filter(year != "0")
+
+cover.lmm <- lmer(total_cover ~ removal*litter*year + (1|block) + (1|pair),
+                  data = struct_df)
+count.glmm <- glmer(total_count ~ removal*litter*year + (1|block) + (1|pair),
+                    data = struct_df, family = poisson)
+size.lmm <- lmer(log(mean_size) ~ removal*litter*year + (1|block) + (1|pair),
+                 data = struct_df)
+
+# diagnostics
+qqnorm(resid(cover.lmm)); qqline(resid(cover.lmm)); plot(cover.lmm)
+qqnorm(resid(size.lmm));  qqline(resid(size.lmm));  plot(size.lmm)
+
+Anova(cover.lmm)
+Anova(count.glmm)
+Anova(size.lmm)
+
+# removal contrast within each year
+emmeans(cover.lmm,  pairwise ~ removal|year)
+emmeans(count.glmm, pairwise ~ removal|year, type = "response")
+emmeans(size.lmm,   pairwise ~ removal|year)
+
+emmip(cover.lmm,  removal ~ year)
+emmip(count.glmm, removal ~ year)

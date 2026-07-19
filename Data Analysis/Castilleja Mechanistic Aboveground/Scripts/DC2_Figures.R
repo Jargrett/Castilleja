@@ -20,6 +20,7 @@ library(sf)
 library(ggspatial)
 
 
+conflicts_prefer(ggplot2::annotate)
 
 #graph themes
 font_add(family = "Times", regular = "Times New Roman.ttf",
@@ -210,7 +211,7 @@ NMDS <- readRDS("Processed Data/Community NMDS.rds")
 NMDS %<>% mutate(removal = recode(removal,
                                   C = "Present",
                                   R = "Removed"))
-
+#--------per litter--------#
 sig_labels <- data.frame(
   litter = c("Castilleja", "Mixed", "Community", "Control"))
 
@@ -246,6 +247,40 @@ ggsave(plot = community.comp, filename = 'Figures and Tables/Composition.png',
 
 ggsave(plot = community.comp, filename = 'Figures and Tables/Composition.pdf',
        width = 5.5, height = 5.5, units = "in", device = cairo_pdf)
+
+#--------total------#
+NMDS <- readRDS("Processed Data/Community NMDS.rds")
+NMDS <- readRDS("Processed Data/Community NMDS.rds") %>%
+  mutate(removal = recode(removal, "C" = "Present", "R" = "Removed"),
+         removal = factor(removal, levels = c("Present", "Removed")))
+
+community.comp <- ggplot(NMDS, aes(NMDS1, NMDS2, fill = removal, linetype = removal)) +
+  stat_ellipse(aes(colour = removal), type = "t", level = 0.95,
+               linewidth = 0.5, show.legend = FALSE) +
+  geom_point(shape = 21, size = 2, stroke = 0.6, colour = "black") +
+  scale_fill_manual(values = c(Present = "black", Removed = "white")) +
+  scale_colour_manual(values = c(Present = "black", Removed = "grey45")) +
+  scale_linetype_manual(values = c(Present = "solid", Removed = "dashed")) +
+  labs(x = "NMDS1", y = "NMDS2") +
+  guides(fill = guide_legend(title = NULL, override.aes = list(linetype = 0)),
+         linetype = "none") +
+  theme_pub +
+  theme(legend.position = c(0.97, 0.97),
+        legend.justification = c(1, 1),
+        legend.background = element_rect(fill = "white", colour = "black", linewidth = 0.3),
+        legend.margin = margin(4, 5, 4, 5),
+        legend.key = element_blank(),
+        legend.text = element_text(size = 9, family = "Times"),
+        legend.key.size = unit(4, "mm"),
+        text = element_text(size = 10, family = "Times"),
+        axis.title = element_text(size = 12, family = "Times"))
+community.comp
+
+showtext_opts(dpi = 800)
+ggsave(plot = community.comp, filename = 'Figures and Tables/Full Composition.png',
+       width = 4.5, height = 4.5, units = "in", dpi = 800)
+ggsave(plot = community.comp, filename = 'Figures and Tables/Full Composition.pdf',
+       width = 4.5, height = 4.5, units = "in", device = cairo_pdf)
 
 #----------------------------------------------------------#
 #------------------PRODUCTIVITY PLOTS----------------------#
@@ -668,35 +703,37 @@ ggsave(plot = cas.plots, filename = 'Figures and Tables/Castilleja metrics.pdf',
 robinhood <- readRDS("Processed Data/Robinhood Summary.rds")
 robinhood %<>% filter(!is.na(occupancy_shift), !is.na(response_ratio))
 
-robinhood$tr_cats <- factor(round(robinhood$temporal_rarity, 2), 
-                           levels = c(0, 0.33, 0.67), 
-                           labels = c("low (0)", "med (0.33)", "high (0.67)"))
+# --- fill: indicator status (open = indicator, filled = non-indicator) -----
+robinhood %<>%
+  mutate(ind_fill = factor(ifelse(indicator, "Indicator", "Non-indicator"),
+                           levels = c("Indicator", "Non-indicator")))
+
+# --- labels: indicators only -----------------------------------------------
+lab_codes <- c("RIMO", "AGGL", "BAVU", "LIPO", "HYCA")
 ind_labels <- data.frame(
-  code  = c("RIMO", "AGGL", "BAVU", "LIPO", "HYCA"),
-  label = c("RIMO", "AGGL", "BAVU", "LIPO", "HYCA"),
+  code = c("RIMO", "AGGL", "BAVU", "LIPO", "HYCA"),
   nx = c(-0.015, -0.012, -0.015,  0.000, -0.005),
   ny = c( 0.09,  0.000, -0.080, -0.120,  0.100))
 
-ind <- merge(subset(robinhood, indicator == TRUE), ind_labels, by = "code", all.x = TRUE)
+robinhood %<>%
+  left_join(ind_labels, by = "code") %>%
+  mutate(lab = ifelse(code %in% lab_codes, code, NA),
+         nx = ifelse(is.na(nx), 0, nx),
+         ny = ifelse(is.na(ny), 0, ny))
 
 species <- ggplot(robinhood, aes(x = occupancy_shift, y = response_ratio)) +
   geom_hline(yintercept = 0, linetype = "dashed", colour = "grey45") +
   geom_vline(xintercept = 0, linetype = "dashed", colour = "grey45") +
-  geom_star(aes(starshape = functional_group, fill = tr_cats),
-             size = 2.5, starstroke = 0.7, colour = "black") +
-  scale_starshape_manual(values = c("forb" = 15, "grass" = 28, "legume" = 13,
-                                    "sedge" = 11, "shrub" = 5)) +
-  scale_fill_manual(values  = c("low (0)" = "white", "med (0.33)" = "grey55",
-                                "high (0.67)" = "black")) +
-  geom_text_repel(data = ind, aes(label = label), family = "Times", size = 3,
-                  nudge_x = ind$nx, nudge_y = ind$ny,
+  geom_star(aes(fill = ind_fill), starshape = 15,
+            size = 2.6, starstroke = 0.7, colour = "black") +
+  scale_fill_manual(values = c("Indicator" = "white", "Non-indicator" = "black")) +
+  geom_text_repel(aes(label = lab), family = "Times", size = 3,
+                  nudge_x = robinhood$nx, nudge_y = robinhood$ny,
                   box.padding = 0.5, point.padding = 0.4,
                   min.segment.length = 0, max.overlaps = Inf,
                   segment.colour = "grey40", segment.size = 0.3, seed = 1) +
-  guides(shape = guide_legend(position = "top", nrow = 1, order = 1,
-                              override.aes = list(fill = "white")),
-         fill  = guide_legend(position = "top", nrow = 1, order = 2,
-                              override.aes = list(starshape = 15)),) +
+  guides(fill = guide_legend(position = "top", nrow = 1,
+                             override.aes = list(starshape = 15))) +
   annotate("text", x =  0.055, y =  1, hjust = 0.5, vjust = 1, size = 3.5,
            fontface = "bold", colour = "grey15", family = "Times", lineheight = 0.9,
            label = "Suppressed,\nlost") +
@@ -709,22 +746,20 @@ species <- ggplot(robinhood, aes(x = occupancy_shift, y = response_ratio)) +
   annotate("text", x =  0.055, y = -1, hjust = 0.5, vjust = 0, size = 3.5,
            fontface = "bold", colour = "grey15", family = "Times", lineheight = 0.9,
            label = "Facilitated,\nlost") +
-  labs(x = "Change in occupancy", y = "Response ratio (Removal)", 
-       starshape = "Functional group", fill = "Temporal rarity") +
+  labs(x = "Change in occupancy", y = "Response ratio (Removal)", fill = NULL) +
   coord_fixed(ratio = 0.1, xlim = c(-0.1, 0.1), ylim = c(-1, 1)) +
   theme_pub +
-  theme(legend.position = "top", legend.box = "vertical", legend.key = element_blank(),
+  theme(legend.position = "top", legend.key = element_blank(),
         legend.key.width = unit(10, "pt"), legend.background = element_blank(),
-        legend.spacing.y = unit(0, "pt"), legend.key.spacing.x = unit(2, "pt"),
-        legend.margin = margin(0, 0, 0, 0), legend.title = element_text(margin = margin(r = 13)),
-        legend.box.spacing = unit(2, "pt"))
-
+        legend.key.spacing.x = unit(2, "pt"), legend.margin = margin(0, 0, 0, 0),
+        legend.box.spacing = unit(2, "pt"),
+        text = element_text(family = "Times"),
+        axis.title = element_text(size = 12, family = "Times"))
 species
 
 showtext_opts(dpi = 800)
 ggsave(plot = species, filename = 'Figures and Tables/Species Response.png',
        width = 5, height = 5, units = "in", dpi = 800)
-
 ggsave(plot = species, filename = 'Figures and Tables/Species Response.pdf',
        width = 5, height = 5, units = "in", device = cairo_pdf)
 
@@ -760,89 +795,3 @@ ggsave(plot = effect.plot, filename = 'Figures and Tables/Effect_Sizes.png',
 
 ggsave(plot = effect.plot, filename = 'Figures and Tables/Effect_Sizes.pdf',
        width = 9, height = 3.5, units = "in", device = cairo_pdf)
-
-
-#----------------------------------------------------------#
-#-------------------------SITE MAP-------------------------#
-#----------------------------------------------------------#
-
-# --- read GPS points -------------------------------------------------------
-gps <- read.csv("Raw Data/GPS.csv", fileEncoding = "UTF-8-BOM") %>%
-  filter(Label_of_F != "casu") %>%                 # drop the off-site point
-  select(field_plot = Label_of_F,
-         lon = XCurrentMa, lat = YCurrentMa, elev = FeatureHei) %>%
-  mutate(field_plot = toupper(sub("^p", "", field_plot)),   # p1a -> 1A
-         pair = as.numeric(gsub("[AB]", "", field_plot)))
-
-site <- read.csv("Raw Data/Site Level Data - EL.csv")
-
-site %<>% rename(year_raw = Year) %>%
-  mutate(year = recode(year_raw, `2023` = 1, `2024` = 2, `2025` = 3),
-         removal = recode(removal, "C" = "Present", "R" = "Removed"),
-         removal = factor(removal, levels = c("Present", "Removed")))
-
-# --- join treatment / edge metadata ---------------------------------------
-meta <- site %>%
-  filter(year == 1) %>%                          # one row per plot
-  select(field_plot, removal, litter, disturbance_type, disturbance_distance)
-
-pts <- gps %>%
-  left_join(meta, by = "field_plot") %>%
-  st_as_sf(coords = c("lon", "lat"), crs = 4326) %>%
-  st_transform(32613)                               # UTM 13N — metres
-# --- pair lines (connect the two plots in each pair) -----------------------
-pair_lines <- pts %>%
-  group_by(pair) %>%
-  filter(n() == 2) %>%
-  summarise(do_union = FALSE, .groups = "drop") %>%
-  st_cast("LINESTRING")
-
-# --- block hulls -----------------------------------------------------------
-block_hulls <- pts %>%
-  group_by(block) %>%
-  summarise(do_union = FALSE, .groups = "drop") %>%
-  st_convex_hull() %>%
-  st_buffer(3)                       # 3 m padding around each block
-# --- map -------------------------------------------------------------------
-site.map <- ggplot() +
-  geom_sf(data = block_hulls, fill = "grey94", colour = "grey55",
-          linetype = "dashed", linewidth = 0.35) +
-  geom_sf(data = pair_lines, colour = "black", linewidth = 0.4) +
-  geom_sf(data = pts, aes(shape = removal, fill = disturbance_type),
-          size = 2.6, stroke = 0.6, colour = "black") +
-  geom_sf_text(data = pts %>% filter(grepl("A$", field_plot)),
-               aes(label = pair), family = "Times", size = 2.2,
-               colour = "grey25", nudge_y = 5) +
-  scale_shape_manual(values = c("Present" = 21, "Removed" = 24)) +
-  scale_fill_manual(values = c("Treeline" = "black",
-                               "Trail"    = "grey60",
-                               "Creek"    = "white")) +
-  annotation_scale(location = "bl", width_hint = 0.28,
-                   line_width = 0.5, height = unit(0.15, "cm")) +
-  annotation_north_arrow(location = "tl",
-                         style = north_arrow_orienteering(
-                           fill = c("white", "black"), line_col = "black"),
-                         height = unit(1, "cm"), width = unit(0.8, "cm")) +
-  guides(shape = guide_legend(title = "Castilleja", order = 1,
-                              override.aes = list(fill = "grey70")),
-         fill  = guide_legend(title = "Nearest edge", order = 2,
-                              override.aes = list(shape = 21))) +
-  theme_pub +
-  theme(legend.position = "right",
-        legend.key = element_blank(),
-        legend.background = element_blank(),
-        legend.title = element_text(size = 9, family = "Times"),
-        legend.text = element_text(size = 8, family = "Times"),
-        legend.key.size = unit(4, "mm"),
-        text = element_text(size = 9, family = "Times"),
-        axis.title = element_blank(),
-        axis.text = element_blank(),
-        axis.ticks = element_blank(),
-        panel.grid = element_blank())
-site.map
-
-showtext_opts(dpi = 800)
-ggsave(plot = site.map, filename = 'Figures and Tables/Site_Map.png',
-       width = 5.5, height = 6.5, units = "in", dpi = 800)
-ggsave(plot = site.map, filename = 'Figures and Tables/Site_Map.pdf',
-       width = 5.5, height = 6.5, units = "in", device = cairo_pdf)
